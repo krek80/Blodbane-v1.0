@@ -100,6 +100,12 @@
     <Compile Include="pålogging.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="velkommen.Designer.vb">
+      <DependentUpon>velkommen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="velkommen.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pålogging.resx">
       <DependentUpon>pålogging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="velkommen.resx">
+      <DependentUpon>velkommen.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
