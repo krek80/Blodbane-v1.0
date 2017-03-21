@@ -31,7 +31,7 @@ Partial Class pålogging
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(50, 131)
+        Me.Button1.Location = New System.Drawing.Point(44, 160)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(195, 47)
         Me.Button1.TabIndex = 0
@@ -40,14 +40,14 @@ Partial Class pålogging
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(120, 69)
+        Me.TextBox1.Location = New System.Drawing.Point(114, 98)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(125, 20)
         Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(120, 96)
+        Me.TextBox2.Location = New System.Drawing.Point(114, 125)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(125, 20)
         Me.TextBox2.TabIndex = 2
@@ -55,7 +55,7 @@ Partial Class pålogging
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 72)
+        Me.Label1.Location = New System.Drawing.Point(41, 101)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 13)
         Me.Label1.TabIndex = 3
@@ -64,7 +64,7 @@ Partial Class pålogging
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 99)
+        Me.Label2.Location = New System.Drawing.Point(41, 128)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 4
@@ -81,7 +81,9 @@ Partial Class pålogging
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "pålogging"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Logg på"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

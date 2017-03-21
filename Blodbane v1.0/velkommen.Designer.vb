@@ -22,16 +22,21 @@ Partial Class velkommen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(12, 72)
+        Me.ProgressBar1.MarqueeAnimationSpeed = 1000
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(345, 44)
+        Me.ProgressBar1.Step = 1
+        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.ProgressBar1.TabIndex = 0
         '
         'Label1
@@ -58,6 +63,10 @@ Partial Class velkommen
         Me.RichTextBox1.Text = "Versjon: 1.0" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "Lisens: 000000000000001" & Global.Microsoft.VisualBasic.ChrW(10) & "Lisenseier: Blodbanken" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "Utviklet av: Team 2" &
     ""
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'velkommen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -69,6 +78,7 @@ Partial Class velkommen
         Me.Name = "velkommen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Velkommen til Blodbane"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -77,4 +87,5 @@ Partial Class velkommen
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label1 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Timer1 As Timer
 End Class
