@@ -32,11 +32,9 @@ Partial Class velkommen
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(12, 72)
-        Me.ProgressBar1.MarqueeAnimationSpeed = 1000
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(345, 44)
         Me.ProgressBar1.Step = 1
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.ProgressBar1.TabIndex = 0
         '
         'Label1
@@ -65,7 +63,7 @@ Partial Class velkommen
         '
         'Timer1
         '
-        Me.Timer1.Interval = 1000
+        Me.Timer1.Interval = 30
         '
         'velkommen
         '

@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        fremdrift = fremdrift + 20
+        fremdrift = fremdrift + 1
         ProgressBar1.Value = fremdrift
         If ProgressBar1.Value >= 100 Then
             Timer1.Stop()
