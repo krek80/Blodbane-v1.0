@@ -50,4 +50,5 @@
         LoggPåansattToolStripMenuItem.Visible = True
         LoggAvToolStripMenuItem.Visible = False
     End Sub
+
 End Class
