@@ -1333,7 +1333,7 @@ For registrerte givere</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PanelPåmelding.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <metadata name="PanelGiver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1384,7 +1384,7 @@ For registrerte givere</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PanelGiver.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;TabPage4.Name" xml:space="preserve">
     <value>TabPage4</value>
@@ -11631,7 +11631,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -13436,16 +13436,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;Label119.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;Button4.Name" xml:space="preserve">
-    <value>Button4</value>
+  <data name="&gt;&gt;BttnSøkGiver.Name" xml:space="preserve">
+    <value>BttnSøkGiver</value>
   </data>
-  <data name="&gt;&gt;Button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;BttnSøkGiver.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BttnSøkGiver.Parent" xml:space="preserve">
     <value>GroupBox4</value>
   </data>
-  <data name="&gt;&gt;Button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BttnSøkGiver.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="&gt;&gt;ComboBox2.Name" xml:space="preserve">
@@ -13593,22 +13593,28 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="ComboBox5.Items" xml:space="preserve">
-    <value>A</value>
+    <value>A +</value>
   </data>
   <data name="ComboBox5.Items1" xml:space="preserve">
-    <value>B</value>
+    <value>A -</value>
   </data>
   <data name="ComboBox5.Items2" xml:space="preserve">
-    <value>O</value>
+    <value>B +</value>
   </data>
   <data name="ComboBox5.Items3" xml:space="preserve">
-    <value>AB</value>
+    <value>B -</value>
   </data>
   <data name="ComboBox5.Items4" xml:space="preserve">
-    <value>Rh+</value>
+    <value>O +</value>
   </data>
   <data name="ComboBox5.Items5" xml:space="preserve">
-    <value>Rh-</value>
+    <value>O -</value>
+  </data>
+  <data name="ComboBox5.Items6" xml:space="preserve">
+    <value>AB +</value>
+  </data>
+  <data name="ComboBox5.Items7" xml:space="preserve">
+    <value>AB -</value>
   </data>
   <data name="ComboBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>389, 32</value>
@@ -13664,29 +13670,56 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;Label119.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Button4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BttnSøkGiver.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 137</value>
   </data>
-  <data name="Button4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BttnSøkGiver.Size" type="System.Drawing.Size, System.Drawing">
     <value>462, 49</value>
   </data>
-  <data name="Button4.TabIndex" type="System.Int32, mscorlib">
+  <data name="BttnSøkGiver.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="Button4.Text" xml:space="preserve">
+  <data name="BttnSøkGiver.Text" xml:space="preserve">
     <value>SØK</value>
   </data>
-  <data name="&gt;&gt;Button4.Name" xml:space="preserve">
-    <value>Button4</value>
+  <data name="&gt;&gt;BttnSøkGiver.Name" xml:space="preserve">
+    <value>BttnSøkGiver</value>
   </data>
-  <data name="&gt;&gt;Button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;BttnSøkGiver.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BttnSøkGiver.Parent" xml:space="preserve">
     <value>GroupBox4</value>
   </data>
-  <data name="&gt;&gt;Button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BttnSøkGiver.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="ComboBox2.Items" xml:space="preserve">
+    <value>Registrert</value>
+  </data>
+  <data name="ComboBox2.Items1" xml:space="preserve">
+    <value>Innkalt undersøkelse</value>
+  </data>
+  <data name="ComboBox2.Items2" xml:space="preserve">
+    <value>Godkjent giver</value>
+  </data>
+  <data name="ComboBox2.Items3" xml:space="preserve">
+    <value>Innkalt tapping</value>
+  </data>
+  <data name="ComboBox2.Items4" xml:space="preserve">
+    <value>Egenerklæring utfylt</value>
+  </data>
+  <data name="ComboBox2.Items5" xml:space="preserve">
+    <value>Klar for tapping</value>
+  </data>
+  <data name="ComboBox2.Items6" xml:space="preserve">
+    <value>Karantene</value>
+  </data>
+  <data name="ComboBox2.Items7" xml:space="preserve">
+    <value>Innaktiv giver</value>
+  </data>
+  <data name="ComboBox2.Items8" xml:space="preserve">
+    <value>Ikke godkjent giver</value>
   </data>
   <data name="ComboBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 110</value>

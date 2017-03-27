@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea13 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend13 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -346,7 +346,7 @@ Partial Class Blodbane
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Label119 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.BttnSøkGiver = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label99 = New System.Windows.Forms.Label()
         Me.Label98 = New System.Windows.Forms.Label()
@@ -2615,7 +2615,7 @@ Partial Class Blodbane
         '
         Me.GroupBox4.Controls.Add(Me.ComboBox5)
         Me.GroupBox4.Controls.Add(Me.Label119)
-        Me.GroupBox4.Controls.Add(Me.Button4)
+        Me.GroupBox4.Controls.Add(Me.BttnSøkGiver)
         Me.GroupBox4.Controls.Add(Me.ComboBox2)
         Me.GroupBox4.Controls.Add(Me.Label99)
         Me.GroupBox4.Controls.Add(Me.Label98)
@@ -2633,7 +2633,7 @@ Partial Class Blodbane
         'ComboBox5
         '
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {resources.GetString("ComboBox5.Items"), resources.GetString("ComboBox5.Items1"), resources.GetString("ComboBox5.Items2"), resources.GetString("ComboBox5.Items3"), resources.GetString("ComboBox5.Items4"), resources.GetString("ComboBox5.Items5")})
+        Me.ComboBox5.Items.AddRange(New Object() {resources.GetString("ComboBox5.Items"), resources.GetString("ComboBox5.Items1"), resources.GetString("ComboBox5.Items2"), resources.GetString("ComboBox5.Items3"), resources.GetString("ComboBox5.Items4"), resources.GetString("ComboBox5.Items5"), resources.GetString("ComboBox5.Items6"), resources.GetString("ComboBox5.Items7")})
         resources.ApplyResources(Me.ComboBox5, "ComboBox5")
         Me.ComboBox5.Name = "ComboBox5"
         '
@@ -2642,15 +2642,16 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label119, "Label119")
         Me.Label119.Name = "Label119"
         '
-        'Button4
+        'BttnSøkGiver
         '
-        resources.ApplyResources(Me.Button4, "Button4")
-        Me.Button4.Name = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.BttnSøkGiver, "BttnSøkGiver")
+        Me.BttnSøkGiver.Name = "BttnSøkGiver"
+        Me.BttnSøkGiver.UseVisualStyleBackColor = True
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {resources.GetString("ComboBox2.Items"), resources.GetString("ComboBox2.Items1"), resources.GetString("ComboBox2.Items2"), resources.GetString("ComboBox2.Items3"), resources.GetString("ComboBox2.Items4"), resources.GetString("ComboBox2.Items5"), resources.GetString("ComboBox2.Items6"), resources.GetString("ComboBox2.Items7"), resources.GetString("ComboBox2.Items8")})
         resources.ApplyResources(Me.ComboBox2, "ComboBox2")
         Me.ComboBox2.Name = "ComboBox2"
         '
@@ -2778,17 +2779,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea13.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea13)
-        Legend13.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend13)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series13.ChartArea = "ChartArea1"
-        Series13.Legend = "Legend1"
-        Series13.Name = "Series1"
-        Me.Chart1.Series.Add(Series13)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -2815,9 +2816,9 @@ Partial Class Blodbane
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
-        Me.Controls.Add(Me.PanelPåmelding)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -3190,7 +3191,7 @@ Partial Class Blodbane
     Friend WithEvents Label101 As Label
     Friend WithEvents TextBox22 As TextBox
     Friend WithEvents Label100 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents BttnSøkGiver As Button
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents Label112 As Label
     Friend WithEvents LagreToolStripMenuItem As ToolStripMenuItem
