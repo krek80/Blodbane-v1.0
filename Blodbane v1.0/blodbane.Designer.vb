@@ -24,11 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoggPåansattToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoggAvToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AvsluttToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,7 +44,6 @@ Partial Class Blodbane
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -53,6 +53,7 @@ Partial Class Blodbane
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.BttnSendSkjema = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.BttnLoggpåGiver = New System.Windows.Forms.Button()
@@ -65,7 +66,10 @@ Partial Class Blodbane
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -73,6 +77,10 @@ Partial Class Blodbane
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label122 = New System.Windows.Forms.Label()
+        Me.TextBox37 = New System.Windows.Forms.TextBox()
+        Me.Label121 = New System.Windows.Forms.Label()
+        Me.TextBox36 = New System.Windows.Forms.TextBox()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
@@ -87,6 +95,7 @@ Partial Class Blodbane
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label88 = New System.Windows.Forms.Label()
@@ -211,7 +220,6 @@ Partial Class Blodbane
         Me.RadioButton117 = New System.Windows.Forms.RadioButton()
         Me.RadioButton118 = New System.Windows.Forms.RadioButton()
         Me.RadioButton119 = New System.Windows.Forms.RadioButton()
-        Me.Label26 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.RadioButton40 = New System.Windows.Forms.RadioButton()
@@ -292,7 +300,53 @@ Partial Class Blodbane
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.Label115 = New System.Windows.Forms.Label()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.Label120 = New System.Windows.Forms.Label()
+        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.Label118 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label112 = New System.Windows.Forms.Label()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.Label110 = New System.Windows.Forms.Label()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.Label109 = New System.Windows.Forms.Label()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.Label108 = New System.Windows.Forms.Label()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.Label106 = New System.Windows.Forms.Label()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.Label107 = New System.Windows.Forms.Label()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.Label104 = New System.Windows.Forms.Label()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.Label105 = New System.Windows.Forms.Label()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.Label103 = New System.Windows.Forms.Label()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.Label102 = New System.Windows.Forms.Label()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.Label111 = New System.Windows.Forms.Label()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.Label101 = New System.Windows.Forms.Label()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.Label100 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label119 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label99 = New System.Windows.Forms.Label()
         Me.Label98 = New System.Windows.Forms.Label()
@@ -305,72 +359,18 @@ Partial Class Blodbane
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.ListBox6 = New System.Windows.Forms.ListBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.ListBox5 = New System.Windows.Forms.ListBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label100 = New System.Windows.Forms.Label()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.Label101 = New System.Windows.Forms.Label()
-        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.Label102 = New System.Windows.Forms.Label()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.Label103 = New System.Windows.Forms.Label()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.Label104 = New System.Windows.Forms.Label()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
-        Me.Label105 = New System.Windows.Forms.Label()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.Label106 = New System.Windows.Forms.Label()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.Label107 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.Label108 = New System.Windows.Forms.Label()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
-        Me.Label109 = New System.Windows.Forms.Label()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.Label110 = New System.Windows.Forms.Label()
-        Me.Label111 = New System.Windows.Forms.Label()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.Label112 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
-        Me.Label113 = New System.Windows.Forms.Label()
-        Me.Label114 = New System.Windows.Forms.Label()
-        Me.Label115 = New System.Windows.Forms.Label()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.Label116 = New System.Windows.Forms.Label()
-        Me.Label117 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.Label118 = New System.Windows.Forms.Label()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.Label119 = New System.Windows.Forms.Label()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
-        Me.Label120 = New System.Windows.Forms.Label()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.ListBox5 = New System.Windows.Forms.ListBox()
-        Me.ListBox6 = New System.Windows.Forms.ListBox()
-        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.Label121 = New System.Windows.Forms.Label()
-        Me.TextBox36 = New System.Windows.Forms.TextBox()
-        Me.Label122 = New System.Windows.Forms.Label()
-        Me.TextBox37 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -394,6 +394,9 @@ Partial Class Blodbane
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -402,9 +405,6 @@ Partial Class Blodbane
         Me.TabPage2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox10.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
-        Me.GroupBox12.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -418,6 +418,11 @@ Partial Class Blodbane
         Me.FilToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LagreToolStripMenuItem, Me.LoggPåansattToolStripMenuItem, Me.LoggAvToolStripMenuItem, Me.AvsluttToolStripMenuItem})
         Me.FilToolStripMenuItem.Name = "FilToolStripMenuItem"
         resources.ApplyResources(Me.FilToolStripMenuItem, "FilToolStripMenuItem")
+        '
+        'LagreToolStripMenuItem
+        '
+        Me.LagreToolStripMenuItem.Name = "LagreToolStripMenuItem"
+        resources.ApplyResources(Me.LagreToolStripMenuItem, "LagreToolStripMenuItem")
         '
         'LoggPåansattToolStripMenuItem
         '
@@ -511,11 +516,6 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox1, 2)
         Me.TextBox1.Name = "TextBox1"
         '
-        'TextBox8
-        '
-        resources.ApplyResources(Me.TextBox8, "TextBox8")
-        Me.TextBox8.Name = "TextBox8"
-        '
         'TextBox2
         '
         resources.ApplyResources(Me.TextBox2, "TextBox2")
@@ -571,6 +571,11 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.SetColumnSpan(Me.Label13, 3)
         Me.Label13.Name = "Label13"
         '
+        'TextBox8
+        '
+        resources.ApplyResources(Me.TextBox8, "TextBox8")
+        Me.TextBox8.Name = "TextBox8"
+        '
         'TableLayoutPanel3
         '
         resources.ApplyResources(Me.TableLayoutPanel3, "TableLayoutPanel3")
@@ -621,6 +626,7 @@ Partial Class Blodbane
         '
         Me.PanelPåmelding.Controls.Add(Me.TableLayoutPanel3)
         Me.PanelPåmelding.Controls.Add(Me.TableLayoutPanel2)
+        Me.PanelPåmelding.Controls.Add(Me.Label1)
         resources.ApplyResources(Me.PanelPåmelding, "PanelPåmelding")
         Me.PanelPåmelding.Name = "PanelPåmelding"
         '
@@ -659,6 +665,16 @@ Partial Class Blodbane
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
+        'Label19
+        '
+        resources.ApplyResources(Me.Label19, "Label19")
+        Me.Label19.Name = "Label19"
+        '
+        'RichTextBox5
+        '
+        resources.ApplyResources(Me.RichTextBox5, "RichTextBox5")
+        Me.RichTextBox5.Name = "RichTextBox5"
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
@@ -668,6 +684,11 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
+        '
+        'DateTimePicker1
+        '
+        resources.ApplyResources(Me.DateTimePicker1, "DateTimePicker1")
+        Me.DateTimePicker1.Name = "DateTimePicker1"
         '
         'Button3
         '
@@ -705,7 +726,9 @@ Partial Class Blodbane
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label20)
         Me.GroupBox2.Controls.Add(Me.Label122)
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.TextBox37)
         Me.GroupBox2.Controls.Add(Me.Label121)
         Me.GroupBox2.Controls.Add(Me.TextBox36)
@@ -725,6 +748,28 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
+        '
+        'Label122
+        '
+        resources.ApplyResources(Me.Label122, "Label122")
+        Me.Label122.Name = "Label122"
+        '
+        'TextBox37
+        '
+        Me.TextBox37.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TextBox37, "TextBox37")
+        Me.TextBox37.Name = "TextBox37"
+        '
+        'Label121
+        '
+        resources.ApplyResources(Me.Label121, "Label121")
+        Me.Label121.Name = "Label121"
+        '
+        'TextBox36
+        '
+        Me.TextBox36.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TextBox36, "TextBox36")
+        Me.TextBox36.Name = "TextBox36"
         '
         'TextBox17
         '
@@ -797,7 +842,6 @@ Partial Class Blodbane
         'TabPage5
         '
         Me.TabPage5.Controls.Add(Me.Button5)
-        Me.TabPage5.Controls.Add(Me.ComboBox1)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel11)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel10)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel9)
@@ -805,13 +849,18 @@ Partial Class Blodbane
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel6)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel4)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel7)
-        Me.TabPage5.Controls.Add(Me.Label26)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel5)
         Me.TabPage5.Controls.Add(Me.TableLayoutPanel1)
         Me.TabPage5.Controls.Add(Me.RichTextBox1)
         resources.ApplyResources(Me.TabPage5, "TabPage5")
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        resources.ApplyResources(Me.Button5, "Button5")
+        Me.Button5.Name = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -1711,11 +1760,6 @@ Partial Class Blodbane
         Me.RadioButton119.TabStop = True
         Me.RadioButton119.UseVisualStyleBackColor = True
         '
-        'Label26
-        '
-        resources.ApplyResources(Me.Label26, "Label26")
-        Me.Label26.Name = "Label26"
-        '
         'TableLayoutPanel5
         '
         Me.TableLayoutPanel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
@@ -2299,6 +2343,272 @@ Partial Class Blodbane
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         '
+        'GroupBox12
+        '
+        Me.GroupBox12.Controls.Add(Me.Label116)
+        Me.GroupBox12.Controls.Add(Me.RichTextBox3)
+        Me.GroupBox12.Controls.Add(Me.ComboBox3)
+        Me.GroupBox12.Controls.Add(Me.TextBox34)
+        Me.GroupBox12.Controls.Add(Me.TextBox33)
+        Me.GroupBox12.Controls.Add(Me.Label115)
+        Me.GroupBox12.Controls.Add(Me.Label113)
+        Me.GroupBox12.Controls.Add(Me.Label114)
+        resources.ApplyResources(Me.GroupBox12, "GroupBox12")
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.TabStop = False
+        '
+        'Label116
+        '
+        resources.ApplyResources(Me.Label116, "Label116")
+        Me.Label116.Name = "Label116"
+        '
+        'RichTextBox3
+        '
+        resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
+        Me.RichTextBox3.Name = "RichTextBox3"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {resources.GetString("ComboBox3.Items"), resources.GetString("ComboBox3.Items1"), resources.GetString("ComboBox3.Items2")})
+        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
+        Me.ComboBox3.Name = "ComboBox3"
+        '
+        'TextBox34
+        '
+        resources.ApplyResources(Me.TextBox34, "TextBox34")
+        Me.TextBox34.Name = "TextBox34"
+        '
+        'TextBox33
+        '
+        resources.ApplyResources(Me.TextBox33, "TextBox33")
+        Me.TextBox33.Name = "TextBox33"
+        '
+        'Label115
+        '
+        resources.ApplyResources(Me.Label115, "Label115")
+        Me.Label115.Name = "Label115"
+        '
+        'Label113
+        '
+        resources.ApplyResources(Me.Label113, "Label113")
+        Me.Label113.Name = "Label113"
+        '
+        'Label114
+        '
+        resources.ApplyResources(Me.Label114, "Label114")
+        Me.Label114.Name = "Label114"
+        '
+        'GroupBox11
+        '
+        Me.GroupBox11.Controls.Add(Me.TextBox35)
+        Me.GroupBox11.Controls.Add(Me.Label120)
+        Me.GroupBox11.Controls.Add(Me.RichTextBox4)
+        Me.GroupBox11.Controls.Add(Me.Label118)
+        Me.GroupBox11.Controls.Add(Me.ComboBox4)
+        Me.GroupBox11.Controls.Add(Me.Label117)
+        Me.GroupBox11.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox11.Controls.Add(Me.Label112)
+        Me.GroupBox11.Controls.Add(Me.TextBox32)
+        Me.GroupBox11.Controls.Add(Me.Label110)
+        Me.GroupBox11.Controls.Add(Me.TextBox31)
+        Me.GroupBox11.Controls.Add(Me.Label109)
+        Me.GroupBox11.Controls.Add(Me.TextBox30)
+        Me.GroupBox11.Controls.Add(Me.Label108)
+        Me.GroupBox11.Controls.Add(Me.TextBox28)
+        Me.GroupBox11.Controls.Add(Me.Label106)
+        Me.GroupBox11.Controls.Add(Me.TextBox29)
+        Me.GroupBox11.Controls.Add(Me.Label107)
+        Me.GroupBox11.Controls.Add(Me.TextBox26)
+        Me.GroupBox11.Controls.Add(Me.Label104)
+        Me.GroupBox11.Controls.Add(Me.TextBox27)
+        Me.GroupBox11.Controls.Add(Me.Label105)
+        Me.GroupBox11.Controls.Add(Me.TextBox25)
+        Me.GroupBox11.Controls.Add(Me.Label103)
+        Me.GroupBox11.Controls.Add(Me.TextBox24)
+        Me.GroupBox11.Controls.Add(Me.Label102)
+        resources.ApplyResources(Me.GroupBox11, "GroupBox11")
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.TabStop = False
+        '
+        'TextBox35
+        '
+        Me.TextBox35.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox35, "TextBox35")
+        Me.TextBox35.Name = "TextBox35"
+        '
+        'Label120
+        '
+        resources.ApplyResources(Me.Label120, "Label120")
+        Me.Label120.Name = "Label120"
+        '
+        'RichTextBox4
+        '
+        resources.ApplyResources(Me.RichTextBox4, "RichTextBox4")
+        Me.RichTextBox4.Name = "RichTextBox4"
+        '
+        'Label118
+        '
+        resources.ApplyResources(Me.Label118, "Label118")
+        Me.Label118.Name = "Label118"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBox4, "ComboBox4")
+        Me.ComboBox4.Name = "ComboBox4"
+        '
+        'Label117
+        '
+        resources.ApplyResources(Me.Label117, "Label117")
+        Me.Label117.Name = "Label117"
+        '
+        'RichTextBox2
+        '
+        resources.ApplyResources(Me.RichTextBox2, "RichTextBox2")
+        Me.RichTextBox2.Name = "RichTextBox2"
+        '
+        'Label112
+        '
+        resources.ApplyResources(Me.Label112, "Label112")
+        Me.Label112.Name = "Label112"
+        '
+        'TextBox32
+        '
+        resources.ApplyResources(Me.TextBox32, "TextBox32")
+        Me.TextBox32.Name = "TextBox32"
+        '
+        'Label110
+        '
+        resources.ApplyResources(Me.Label110, "Label110")
+        Me.Label110.Name = "Label110"
+        '
+        'TextBox31
+        '
+        resources.ApplyResources(Me.TextBox31, "TextBox31")
+        Me.TextBox31.Name = "TextBox31"
+        '
+        'Label109
+        '
+        resources.ApplyResources(Me.Label109, "Label109")
+        Me.Label109.Name = "Label109"
+        '
+        'TextBox30
+        '
+        resources.ApplyResources(Me.TextBox30, "TextBox30")
+        Me.TextBox30.Name = "TextBox30"
+        '
+        'Label108
+        '
+        resources.ApplyResources(Me.Label108, "Label108")
+        Me.Label108.Name = "Label108"
+        '
+        'TextBox28
+        '
+        resources.ApplyResources(Me.TextBox28, "TextBox28")
+        Me.TextBox28.Name = "TextBox28"
+        '
+        'Label106
+        '
+        resources.ApplyResources(Me.Label106, "Label106")
+        Me.Label106.Name = "Label106"
+        '
+        'TextBox29
+        '
+        resources.ApplyResources(Me.TextBox29, "TextBox29")
+        Me.TextBox29.Name = "TextBox29"
+        '
+        'Label107
+        '
+        resources.ApplyResources(Me.Label107, "Label107")
+        Me.Label107.Name = "Label107"
+        '
+        'TextBox26
+        '
+        resources.ApplyResources(Me.TextBox26, "TextBox26")
+        Me.TextBox26.Name = "TextBox26"
+        '
+        'Label104
+        '
+        resources.ApplyResources(Me.Label104, "Label104")
+        Me.Label104.Name = "Label104"
+        '
+        'TextBox27
+        '
+        resources.ApplyResources(Me.TextBox27, "TextBox27")
+        Me.TextBox27.Name = "TextBox27"
+        '
+        'Label105
+        '
+        resources.ApplyResources(Me.Label105, "Label105")
+        Me.Label105.Name = "Label105"
+        '
+        'TextBox25
+        '
+        resources.ApplyResources(Me.TextBox25, "TextBox25")
+        Me.TextBox25.Name = "TextBox25"
+        '
+        'Label103
+        '
+        resources.ApplyResources(Me.Label103, "Label103")
+        Me.Label103.Name = "Label103"
+        '
+        'TextBox24
+        '
+        resources.ApplyResources(Me.TextBox24, "TextBox24")
+        Me.TextBox24.Name = "TextBox24"
+        '
+        'Label102
+        '
+        resources.ApplyResources(Me.Label102, "Label102")
+        Me.Label102.Name = "Label102"
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.Controls.Add(Me.ListBox3)
+        Me.GroupBox10.Controls.Add(Me.Label111)
+        Me.GroupBox10.Controls.Add(Me.TextBox23)
+        Me.GroupBox10.Controls.Add(Me.Label101)
+        Me.GroupBox10.Controls.Add(Me.TextBox22)
+        Me.GroupBox10.Controls.Add(Me.Label100)
+        resources.ApplyResources(Me.GroupBox10, "GroupBox10")
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.TabStop = False
+        '
+        'ListBox3
+        '
+        Me.ListBox3.BackColor = System.Drawing.SystemColors.Info
+        Me.ListBox3.FormattingEnabled = True
+        resources.ApplyResources(Me.ListBox3, "ListBox3")
+        Me.ListBox3.Name = "ListBox3"
+        '
+        'Label111
+        '
+        resources.ApplyResources(Me.Label111, "Label111")
+        Me.Label111.Name = "Label111"
+        '
+        'TextBox23
+        '
+        Me.TextBox23.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox23, "TextBox23")
+        Me.TextBox23.Name = "TextBox23"
+        '
+        'Label101
+        '
+        resources.ApplyResources(Me.Label101, "Label101")
+        Me.Label101.Name = "Label101"
+        '
+        'TextBox22
+        '
+        Me.TextBox22.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox22, "TextBox22")
+        Me.TextBox22.Name = "TextBox22"
+        '
+        'Label100
+        '
+        resources.ApplyResources(Me.Label100, "Label100")
+        Me.Label100.Name = "Label100"
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.ComboBox5)
@@ -2317,6 +2627,24 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {resources.GetString("ComboBox5.Items"), resources.GetString("ComboBox5.Items1"), resources.GetString("ComboBox5.Items2"), resources.GetString("ComboBox5.Items3"), resources.GetString("ComboBox5.Items4"), resources.GetString("ComboBox5.Items5")})
+        resources.ApplyResources(Me.ComboBox5, "ComboBox5")
+        Me.ComboBox5.Name = "ComboBox5"
+        '
+        'Label119
+        '
+        resources.ApplyResources(Me.Label119, "Label119")
+        Me.Label119.Name = "Label119"
+        '
+        'Button4
+        '
+        resources.ApplyResources(Me.Button4, "Button4")
+        Me.Button4.Name = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'ComboBox2
         '
@@ -2386,6 +2714,12 @@ Partial Class Blodbane
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
+        'ListBox6
+        '
+        Me.ListBox6.FormattingEnabled = True
+        resources.ApplyResources(Me.ListBox6, "ListBox6")
+        Me.ListBox6.Name = "ListBox6"
+        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.ListBox5)
@@ -2393,12 +2727,24 @@ Partial Class Blodbane
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.TabStop = False
         '
+        'ListBox5
+        '
+        Me.ListBox5.FormattingEnabled = True
+        resources.ApplyResources(Me.ListBox5, "ListBox5")
+        Me.ListBox5.Name = "ListBox5"
+        '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.ListBox4)
         resources.ApplyResources(Me.GroupBox5, "GroupBox5")
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.TabStop = False
+        '
+        'ListBox4
+        '
+        Me.ListBox4.FormattingEnabled = True
+        resources.ApplyResources(Me.ListBox4, "ListBox4")
+        Me.ListBox4.Name = "ListBox4"
         '
         'TabPage2
         '
@@ -2409,6 +2755,18 @@ Partial Class Blodbane
         resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
         '
+        'GroupBox14
+        '
+        resources.ApplyResources(Me.GroupBox14, "GroupBox14")
+        Me.GroupBox14.Name = "GroupBox14"
+        Me.GroupBox14.TabStop = False
+        '
+        'GroupBox13
+        '
+        resources.ApplyResources(Me.GroupBox13, "GroupBox13")
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.TabStop = False
+        '
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.Chart1)
@@ -2418,17 +2776,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        ChartArea7.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea7)
+        Legend7.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend7)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series7.ChartArea = "ChartArea1"
+        Series7.Legend = "Legend1"
+        Series7.Name = "Series1"
+        Me.Chart1.Series.Add(Series7)
         '
         'ToolTip1
         '
@@ -2438,366 +2796,10 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
-        'GroupBox10
+        'Label20
         '
-        Me.GroupBox10.Controls.Add(Me.ListBox3)
-        Me.GroupBox10.Controls.Add(Me.Label111)
-        Me.GroupBox10.Controls.Add(Me.TextBox23)
-        Me.GroupBox10.Controls.Add(Me.Label101)
-        Me.GroupBox10.Controls.Add(Me.TextBox22)
-        Me.GroupBox10.Controls.Add(Me.Label100)
-        resources.ApplyResources(Me.GroupBox10, "GroupBox10")
-        Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.TabStop = False
-        '
-        'Button4
-        '
-        resources.ApplyResources(Me.Button4, "Button4")
-        Me.Button4.Name = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Label100
-        '
-        resources.ApplyResources(Me.Label100, "Label100")
-        Me.Label100.Name = "Label100"
-        '
-        'TextBox22
-        '
-        Me.TextBox22.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox22, "TextBox22")
-        Me.TextBox22.Name = "TextBox22"
-        '
-        'TextBox23
-        '
-        Me.TextBox23.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox23, "TextBox23")
-        Me.TextBox23.Name = "TextBox23"
-        '
-        'Label101
-        '
-        resources.ApplyResources(Me.Label101, "Label101")
-        Me.Label101.Name = "Label101"
-        '
-        'GroupBox11
-        '
-        Me.GroupBox11.Controls.Add(Me.TextBox35)
-        Me.GroupBox11.Controls.Add(Me.Label120)
-        Me.GroupBox11.Controls.Add(Me.RichTextBox4)
-        Me.GroupBox11.Controls.Add(Me.Label118)
-        Me.GroupBox11.Controls.Add(Me.ComboBox4)
-        Me.GroupBox11.Controls.Add(Me.Label117)
-        Me.GroupBox11.Controls.Add(Me.RichTextBox2)
-        Me.GroupBox11.Controls.Add(Me.Label112)
-        Me.GroupBox11.Controls.Add(Me.TextBox32)
-        Me.GroupBox11.Controls.Add(Me.Label110)
-        Me.GroupBox11.Controls.Add(Me.TextBox31)
-        Me.GroupBox11.Controls.Add(Me.Label109)
-        Me.GroupBox11.Controls.Add(Me.TextBox30)
-        Me.GroupBox11.Controls.Add(Me.Label108)
-        Me.GroupBox11.Controls.Add(Me.TextBox28)
-        Me.GroupBox11.Controls.Add(Me.Label106)
-        Me.GroupBox11.Controls.Add(Me.TextBox29)
-        Me.GroupBox11.Controls.Add(Me.Label107)
-        Me.GroupBox11.Controls.Add(Me.TextBox26)
-        Me.GroupBox11.Controls.Add(Me.Label104)
-        Me.GroupBox11.Controls.Add(Me.TextBox27)
-        Me.GroupBox11.Controls.Add(Me.Label105)
-        Me.GroupBox11.Controls.Add(Me.TextBox25)
-        Me.GroupBox11.Controls.Add(Me.Label103)
-        Me.GroupBox11.Controls.Add(Me.TextBox24)
-        Me.GroupBox11.Controls.Add(Me.Label102)
-        resources.ApplyResources(Me.GroupBox11, "GroupBox11")
-        Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.TabStop = False
-        '
-        'Label102
-        '
-        resources.ApplyResources(Me.Label102, "Label102")
-        Me.Label102.Name = "Label102"
-        '
-        'TextBox24
-        '
-        resources.ApplyResources(Me.TextBox24, "TextBox24")
-        Me.TextBox24.Name = "TextBox24"
-        '
-        'TextBox25
-        '
-        resources.ApplyResources(Me.TextBox25, "TextBox25")
-        Me.TextBox25.Name = "TextBox25"
-        '
-        'Label103
-        '
-        resources.ApplyResources(Me.Label103, "Label103")
-        Me.Label103.Name = "Label103"
-        '
-        'TextBox26
-        '
-        resources.ApplyResources(Me.TextBox26, "TextBox26")
-        Me.TextBox26.Name = "TextBox26"
-        '
-        'Label104
-        '
-        resources.ApplyResources(Me.Label104, "Label104")
-        Me.Label104.Name = "Label104"
-        '
-        'TextBox27
-        '
-        resources.ApplyResources(Me.TextBox27, "TextBox27")
-        Me.TextBox27.Name = "TextBox27"
-        '
-        'Label105
-        '
-        resources.ApplyResources(Me.Label105, "Label105")
-        Me.Label105.Name = "Label105"
-        '
-        'TextBox28
-        '
-        resources.ApplyResources(Me.TextBox28, "TextBox28")
-        Me.TextBox28.Name = "TextBox28"
-        '
-        'Label106
-        '
-        resources.ApplyResources(Me.Label106, "Label106")
-        Me.Label106.Name = "Label106"
-        '
-        'TextBox29
-        '
-        resources.ApplyResources(Me.TextBox29, "TextBox29")
-        Me.TextBox29.Name = "TextBox29"
-        '
-        'Label107
-        '
-        resources.ApplyResources(Me.Label107, "Label107")
-        Me.Label107.Name = "Label107"
-        '
-        'TextBox30
-        '
-        resources.ApplyResources(Me.TextBox30, "TextBox30")
-        Me.TextBox30.Name = "TextBox30"
-        '
-        'Label108
-        '
-        resources.ApplyResources(Me.Label108, "Label108")
-        Me.Label108.Name = "Label108"
-        '
-        'TextBox31
-        '
-        resources.ApplyResources(Me.TextBox31, "TextBox31")
-        Me.TextBox31.Name = "TextBox31"
-        '
-        'Label109
-        '
-        resources.ApplyResources(Me.Label109, "Label109")
-        Me.Label109.Name = "Label109"
-        '
-        'TextBox32
-        '
-        resources.ApplyResources(Me.TextBox32, "TextBox32")
-        Me.TextBox32.Name = "TextBox32"
-        '
-        'Label110
-        '
-        resources.ApplyResources(Me.Label110, "Label110")
-        Me.Label110.Name = "Label110"
-        '
-        'Label111
-        '
-        resources.ApplyResources(Me.Label111, "Label111")
-        Me.Label111.Name = "Label111"
-        '
-        'ListBox3
-        '
-        Me.ListBox3.BackColor = System.Drawing.SystemColors.Info
-        Me.ListBox3.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox3, "ListBox3")
-        Me.ListBox3.Name = "ListBox3"
-        '
-        'Label112
-        '
-        resources.ApplyResources(Me.Label112, "Label112")
-        Me.Label112.Name = "Label112"
-        '
-        'RichTextBox2
-        '
-        resources.ApplyResources(Me.RichTextBox2, "RichTextBox2")
-        Me.RichTextBox2.Name = "RichTextBox2"
-        '
-        'LagreToolStripMenuItem
-        '
-        Me.LagreToolStripMenuItem.Name = "LagreToolStripMenuItem"
-        resources.ApplyResources(Me.LagreToolStripMenuItem, "LagreToolStripMenuItem")
-        '
-        'GroupBox12
-        '
-        Me.GroupBox12.Controls.Add(Me.Label116)
-        Me.GroupBox12.Controls.Add(Me.RichTextBox3)
-        Me.GroupBox12.Controls.Add(Me.ComboBox3)
-        Me.GroupBox12.Controls.Add(Me.TextBox34)
-        Me.GroupBox12.Controls.Add(Me.TextBox33)
-        Me.GroupBox12.Controls.Add(Me.Label115)
-        Me.GroupBox12.Controls.Add(Me.Label113)
-        Me.GroupBox12.Controls.Add(Me.Label114)
-        resources.ApplyResources(Me.GroupBox12, "GroupBox12")
-        Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.TabStop = False
-        '
-        'Label113
-        '
-        resources.ApplyResources(Me.Label113, "Label113")
-        Me.Label113.Name = "Label113"
-        '
-        'Label114
-        '
-        resources.ApplyResources(Me.Label114, "Label114")
-        Me.Label114.Name = "Label114"
-        '
-        'Label115
-        '
-        resources.ApplyResources(Me.Label115, "Label115")
-        Me.Label115.Name = "Label115"
-        '
-        'TextBox33
-        '
-        resources.ApplyResources(Me.TextBox33, "TextBox33")
-        Me.TextBox33.Name = "TextBox33"
-        '
-        'TextBox34
-        '
-        resources.ApplyResources(Me.TextBox34, "TextBox34")
-        Me.TextBox34.Name = "TextBox34"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {resources.GetString("ComboBox3.Items"), resources.GetString("ComboBox3.Items1"), resources.GetString("ComboBox3.Items2")})
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
-        '
-        'RichTextBox3
-        '
-        resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
-        Me.RichTextBox3.Name = "RichTextBox3"
-        '
-        'Label116
-        '
-        resources.ApplyResources(Me.Label116, "Label116")
-        Me.Label116.Name = "Label116"
-        '
-        'Label117
-        '
-        resources.ApplyResources(Me.Label117, "Label117")
-        Me.Label117.Name = "Label117"
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox4, "ComboBox4")
-        Me.ComboBox4.Name = "ComboBox4"
-        '
-        'Label118
-        '
-        resources.ApplyResources(Me.Label118, "Label118")
-        Me.Label118.Name = "Label118"
-        '
-        'RichTextBox4
-        '
-        resources.ApplyResources(Me.RichTextBox4, "RichTextBox4")
-        Me.RichTextBox4.Name = "RichTextBox4"
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox5, "ComboBox5")
-        Me.ComboBox5.Name = "ComboBox5"
-        '
-        'Label119
-        '
-        resources.ApplyResources(Me.Label119, "Label119")
-        Me.Label119.Name = "Label119"
-        '
-        'TextBox35
-        '
-        Me.TextBox35.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox35, "TextBox35")
-        Me.TextBox35.Name = "TextBox35"
-        '
-        'Label120
-        '
-        resources.ApplyResources(Me.Label120, "Label120")
-        Me.Label120.Name = "Label120"
-        '
-        'ListBox4
-        '
-        Me.ListBox4.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox4, "ListBox4")
-        Me.ListBox4.Name = "ListBox4"
-        '
-        'ListBox5
-        '
-        Me.ListBox5.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox5, "ListBox5")
-        Me.ListBox5.Name = "ListBox5"
-        '
-        'ListBox6
-        '
-        Me.ListBox6.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox6, "ListBox6")
-        Me.ListBox6.Name = "ListBox6"
-        '
-        'GroupBox13
-        '
-        resources.ApplyResources(Me.GroupBox13, "GroupBox13")
-        Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.TabStop = False
-        '
-        'GroupBox14
-        '
-        resources.ApplyResources(Me.GroupBox14, "GroupBox14")
-        Me.GroupBox14.Name = "GroupBox14"
-        Me.GroupBox14.TabStop = False
-        '
-        'Label121
-        '
-        resources.ApplyResources(Me.Label121, "Label121")
-        Me.Label121.Name = "Label121"
-        '
-        'TextBox36
-        '
-        Me.TextBox36.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox36, "TextBox36")
-        Me.TextBox36.Name = "TextBox36"
-        '
-        'Label122
-        '
-        resources.ApplyResources(Me.Label122, "Label122")
-        Me.Label122.Name = "Label122"
-        '
-        'TextBox37
-        '
-        Me.TextBox37.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox37, "TextBox37")
-        Me.TextBox37.Name = "TextBox37"
-        '
-        'DateTimePicker1
-        '
-        resources.ApplyResources(Me.DateTimePicker1, "DateTimePicker1")
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        '
-        'RichTextBox5
-        '
-        resources.ApplyResources(Me.RichTextBox5, "RichTextBox5")
-        Me.RichTextBox5.Name = "RichTextBox5"
-        '
-        'Label19
-        '
-        resources.ApplyResources(Me.Label19, "Label19")
-        Me.Label19.Name = "Label19"
-        '
-        'Button5
-        '
-        resources.ApplyResources(Me.Button5, "Button5")
-        Me.Button5.Name = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.Label20, "Label20")
+        Me.Label20.Name = "Label20"
         '
         'Blodbane
         '
@@ -2805,10 +2807,9 @@ Partial Class Blodbane
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelPåmelding)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -2830,7 +2831,6 @@ Partial Class Blodbane
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
         Me.TableLayoutPanel11.ResumeLayout(False)
         Me.TableLayoutPanel11.PerformLayout()
         Me.TableLayoutPanel10.ResumeLayout(False)
@@ -2853,6 +2853,12 @@ Partial Class Blodbane
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox12.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox11.PerformLayout()
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -2862,12 +2868,6 @@ Partial Class Blodbane
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox10.ResumeLayout(False)
-        Me.GroupBox10.PerformLayout()
-        Me.GroupBox11.ResumeLayout(False)
-        Me.GroupBox11.PerformLayout()
-        Me.GroupBox12.ResumeLayout(False)
-        Me.GroupBox12.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2934,7 +2934,6 @@ Partial Class Blodbane
     Friend WithEvents Button3 As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Label26 As Label
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label25 As Label
     Friend WithEvents TextBox16 As TextBox
@@ -3217,4 +3216,5 @@ Partial Class Blodbane
     Friend WithEvents Label121 As Label
     Friend WithEvents TextBox36 As TextBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Label20 As Label
 End Class
