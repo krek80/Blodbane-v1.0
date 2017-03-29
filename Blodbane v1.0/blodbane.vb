@@ -75,7 +75,7 @@
                 sql = sql & parameterListe(i)
             End If
         Next
-        MsgBox("Søkestreng:"sql)
+        MsgBox("Søkestreng: " & sql)
 
     End Sub
 
