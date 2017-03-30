@@ -67,7 +67,7 @@
         Dim sql As String
         parameterListe(0) = pnr : parameterListe(1) = telefon : parameterListe(2) = epost : parameterListe(3) = status : parameterListe(4) = blodtype
 
-        sql = "SELECT *  FROM giver WHERE"
+        sql = "SELECT *  FROM blodgiver WHERE"
         For i = 0 To 4
             If parameterListe(i) = 0 Then
                 sql = sql
@@ -78,5 +78,4 @@
         MsgBox("Søkestreng: " & sql)
 
     End Sub
-
 End Class
