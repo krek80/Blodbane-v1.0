@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,8 +64,157 @@ Partial Class Blodbane
         Me.PanelPåmelding = New System.Windows.Forms.Panel()
         Me.PanelGiver = New System.Windows.Forms.Panel()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Label127 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.Label93 = New System.Windows.Forms.Label()
+        Me.Label94 = New System.Windows.Forms.Label()
+        Me.Label95 = New System.Windows.Forms.Label()
+        Me.Label96 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.CheckBox26 = New System.Windows.Forms.CheckBox()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.CheckBox25 = New System.Windows.Forms.CheckBox()
+        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label90 = New System.Windows.Forms.Label()
+        Me.Label91 = New System.Windows.Forms.Label()
+        Me.Label92 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label126 = New System.Windows.Forms.Label()
+        Me.Label125 = New System.Windows.Forms.Label()
+        Me.CheckBox24 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox23 = New System.Windows.Forms.CheckBox()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label124 = New System.Windows.Forms.Label()
+        Me.Label123 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox16 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox17 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox21 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox19 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox22 = New System.Windows.Forms.CheckBox()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.CheckBox29 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox27 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox28 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox30 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox33 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox31 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox34 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox37 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox35 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox39 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox38 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox42 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox41 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox45 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox44 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox48 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox47 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox50 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox32 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox36 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox40 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox43 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox46 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox49 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox51 = New System.Windows.Forms.CheckBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.CheckBox52 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox53 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox54 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox55 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox56 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox57 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox58 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox59 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox60 = New System.Windows.Forms.CheckBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.BttnLoggavGiver = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
@@ -97,206 +246,6 @@ Partial Class Blodbane
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label88 = New System.Windows.Forms.Label()
-        Me.RadioButton75 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton76 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton77 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton78 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton79 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton80 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton81 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton82 = New System.Windows.Forms.RadioButton()
-        Me.Label93 = New System.Windows.Forms.Label()
-        Me.Label94 = New System.Windows.Forms.Label()
-        Me.Label95 = New System.Windows.Forms.Label()
-        Me.Label96 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.Label86 = New System.Windows.Forms.Label()
-        Me.RadioButton71 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton72 = New System.Windows.Forms.RadioButton()
-        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label85 = New System.Windows.Forms.Label()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RadioButton122 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton121 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton120 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton57 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton58 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton59 = New System.Windows.Forms.RadioButton()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.RadioButton60 = New System.Windows.Forms.RadioButton()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label79 = New System.Windows.Forms.Label()
-        Me.RadioButton61 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton62 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton63 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton64 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton65 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton66 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton67 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton68 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton69 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton70 = New System.Windows.Forms.RadioButton()
-        Me.Label80 = New System.Windows.Forms.Label()
-        Me.Label81 = New System.Windows.Forms.Label()
-        Me.Label82 = New System.Windows.Forms.Label()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.Label84 = New System.Windows.Forms.Label()
-        Me.Label90 = New System.Windows.Forms.Label()
-        Me.Label91 = New System.Windows.Forms.Label()
-        Me.Label92 = New System.Windows.Forms.Label()
-        Me.RadioButton101 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton102 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton103 = New System.Windows.Forms.RadioButton()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.RadioButton49 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton50 = New System.Windows.Forms.RadioButton()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.RadioButton19 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton20 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton21 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton22 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton23 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton24 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton25 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton26 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton27 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton28 = New System.Windows.Forms.RadioButton()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RadioButton41 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton42 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton43 = New System.Windows.Forms.RadioButton()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.RadioButton44 = New System.Windows.Forms.RadioButton()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.RadioButton45 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton46 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton47 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton48 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton51 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton52 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton53 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton54 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton55 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton56 = New System.Windows.Forms.RadioButton()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.Label78 = New System.Windows.Forms.Label()
-        Me.RadioButton104 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton105 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton106 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton107 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton108 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton109 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton110 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton111 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton112 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton113 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton114 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton115 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton116 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton117 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton118 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton119 = New System.Windows.Forms.RadioButton()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.RadioButton40 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton39 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton38 = New System.Windows.Forms.RadioButton()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.RadioButton37 = New System.Windows.Forms.RadioButton()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.RadioButton17 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton18 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton29 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton30 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton31 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton32 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton33 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton34 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton35 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton36 = New System.Windows.Forms.RadioButton()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label56 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.RadioButton73 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton74 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton83 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton84 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton85 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton86 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton87 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton88 = New System.Windows.Forms.RadioButton()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.RadioButton89 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton90 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton91 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton92 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton93 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton94 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton95 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton96 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton97 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton98 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton99 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton100 = New System.Windows.Forms.RadioButton()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.RadioButton11 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton16 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton15 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton10 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton9 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton14 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton13 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton12 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.BttnLoggavGiver = New System.Windows.Forms.Button()
         Me.PanelAnsatt = New System.Windows.Forms.Panel()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
@@ -372,16 +321,79 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label128 = New System.Windows.Forms.Label()
+        Me.Label129 = New System.Windows.Forms.Label()
+        Me.Label130 = New System.Windows.Forms.Label()
+        Me.Label131 = New System.Windows.Forms.Label()
+        Me.Label132 = New System.Windows.Forms.Label()
+        Me.Label133 = New System.Windows.Forms.Label()
+        Me.Label134 = New System.Windows.Forms.Label()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.Label136 = New System.Windows.Forms.Label()
+        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox63 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox64 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox65 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox66 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox67 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox68 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox69 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox70 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox71 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox72 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox73 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox74 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox75 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox76 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox77 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox78 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox79 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox80 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox81 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox82 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox83 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox84 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox85 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox86 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox87 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox88 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox89 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox90 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox91 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox92 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox93 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox94 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox95 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox96 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox97 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox98 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox99 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox100 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox101 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox102 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox103 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox104 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox105 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox106 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox107 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox108 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox109 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox110 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox111 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox112 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox113 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox114 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox115 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox116 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox117 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox118 = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.PanelPåmelding.SuspendLayout()
         Me.PanelGiver.SuspendLayout()
         Me.TabControl2.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TableLayoutPanel11.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
@@ -392,6 +404,10 @@ Partial Class Blodbane
         Me.TableLayoutPanel7.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -626,17 +642,16 @@ Partial Class Blodbane
         '
         'PanelPåmelding
         '
+        resources.ApplyResources(Me.PanelPåmelding, "PanelPåmelding")
         Me.PanelPåmelding.Controls.Add(Me.TableLayoutPanel3)
         Me.PanelPåmelding.Controls.Add(Me.TableLayoutPanel2)
         Me.PanelPåmelding.Controls.Add(Me.Label1)
-        resources.ApplyResources(Me.PanelPåmelding, "PanelPåmelding")
         Me.PanelPåmelding.Name = "PanelPåmelding"
         '
         'PanelGiver
         '
-        Me.PanelGiver.Controls.Add(Me.TabControl2)
-        Me.PanelGiver.Controls.Add(Me.BttnLoggavGiver)
         resources.ApplyResources(Me.PanelGiver, "PanelGiver")
+        Me.PanelGiver.Controls.Add(Me.TabControl2)
         Me.PanelGiver.Name = "PanelGiver"
         '
         'TabControl2
@@ -647,10 +662,1041 @@ Partial Class Blodbane
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
         '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.Button5)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel11)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel10)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel9)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel8)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel6)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel4)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel7)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel5)
+        Me.TabPage5.Controls.Add(Me.TableLayoutPanel1)
+        Me.TabPage5.Controls.Add(Me.RichTextBox1)
+        resources.ApplyResources(Me.TabPage5, "TabPage5")
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'Label127
+        '
+        resources.ApplyResources(Me.Label127, "Label127")
+        Me.Label127.Name = "Label127"
+        '
+        'Button5
+        '
+        resources.ApplyResources(Me.Button5, "Button5")
+        Me.Button5.Name = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel11
+        '
+        Me.TableLayoutPanel11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel11, "TableLayoutPanel11")
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox118, 2, 4)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox117, 1, 4)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox116, 2, 3)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox115, 1, 3)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox114, 2, 2)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox113, 1, 2)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox112, 2, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.CheckBox111, 1, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label88, 0, 0)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label93, 0, 4)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label94, 0, 3)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label95, 0, 2)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label96, 0, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label135, 1, 0)
+        Me.TableLayoutPanel11.Controls.Add(Me.Label136, 2, 0)
+        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
+        '
+        'Label88
+        '
+        resources.ApplyResources(Me.Label88, "Label88")
+        Me.Label88.Name = "Label88"
+        '
+        'Label93
+        '
+        resources.ApplyResources(Me.Label93, "Label93")
+        Me.Label93.Name = "Label93"
+        '
+        'Label94
+        '
+        resources.ApplyResources(Me.Label94, "Label94")
+        Me.Label94.Name = "Label94"
+        '
+        'Label95
+        '
+        resources.ApplyResources(Me.Label95, "Label95")
+        Me.Label95.Name = "Label95"
+        '
+        'Label96
+        '
+        resources.ApplyResources(Me.Label96, "Label96")
+        Me.Label96.Name = "Label96"
+        '
+        'TableLayoutPanel10
+        '
+        Me.TableLayoutPanel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel10, "TableLayoutPanel10")
+        Me.TableLayoutPanel10.Controls.Add(Me.Label128, 2, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.Label127, 1, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.Label86, 0, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.CheckBox26, 0, 1)
+        Me.TableLayoutPanel10.Controls.Add(Me.Label87, 0, 1)
+        Me.TableLayoutPanel10.Controls.Add(Me.CheckBox25, 1, 1)
+        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
+        '
+        'Label86
+        '
+        resources.ApplyResources(Me.Label86, "Label86")
+        Me.Label86.Name = "Label86"
+        '
+        'CheckBox26
+        '
+        resources.ApplyResources(Me.CheckBox26, "CheckBox26")
+        Me.CheckBox26.Name = "CheckBox26"
+        Me.CheckBox26.UseVisualStyleBackColor = True
+        '
+        'Label87
+        '
+        resources.ApplyResources(Me.Label87, "Label87")
+        Me.Label87.Name = "Label87"
+        '
+        'CheckBox25
+        '
+        resources.ApplyResources(Me.CheckBox25, "CheckBox25")
+        Me.CheckBox25.Name = "CheckBox25"
+        Me.CheckBox25.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel9
+        '
+        Me.TableLayoutPanel9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel9, "TableLayoutPanel9")
+        Me.TableLayoutPanel9.Controls.Add(Me.Label85, 0, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.TextBox18, 0, 1)
+        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
+        '
+        'Label85
+        '
+        resources.ApplyResources(Me.Label85, "Label85")
+        Me.TableLayoutPanel9.SetColumnSpan(Me.Label85, 3)
+        Me.Label85.Name = "Label85"
+        '
+        'TextBox18
+        '
+        resources.ApplyResources(Me.TextBox18, "TextBox18")
+        Me.TableLayoutPanel9.SetColumnSpan(Me.TextBox18, 3)
+        Me.TextBox18.Name = "TextBox18"
+        '
+        'TableLayoutPanel8
+        '
+        Me.TableLayoutPanel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel8, "TableLayoutPanel8")
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox110, 2, 10)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox109, 1, 10)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox108, 2, 9)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox107, 1, 9)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox106, 2, 8)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox105, 1, 8)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox104, 2, 7)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox103, 1, 7)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox102, 2, 6)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox101, 1, 6)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox100, 2, 5)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox99, 1, 5)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox98, 2, 4)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox97, 1, 4)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox96, 2, 3)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox95, 1, 3)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox94, 2, 2)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox93, 1, 2)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox92, 2, 1)
+        Me.TableLayoutPanel8.Controls.Add(Me.CheckBox91, 1, 1)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label60, 0, 7)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label70, 0, 6)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label79, 0, 0)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label80, 0, 5)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label81, 0, 4)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label82, 0, 3)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label83, 0, 2)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label84, 0, 1)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label90, 0, 10)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label91, 0, 9)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label92, 0, 8)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label133, 1, 0)
+        Me.TableLayoutPanel8.Controls.Add(Me.Label134, 2, 0)
+        Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
+        '
+        'Label60
+        '
+        resources.ApplyResources(Me.Label60, "Label60")
+        Me.Label60.Name = "Label60"
+        '
+        'Label70
+        '
+        resources.ApplyResources(Me.Label70, "Label70")
+        Me.Label70.Name = "Label70"
+        '
+        'Label79
+        '
+        resources.ApplyResources(Me.Label79, "Label79")
+        Me.Label79.Name = "Label79"
+        '
+        'Label80
+        '
+        resources.ApplyResources(Me.Label80, "Label80")
+        Me.Label80.Name = "Label80"
+        '
+        'Label81
+        '
+        resources.ApplyResources(Me.Label81, "Label81")
+        Me.Label81.Name = "Label81"
+        '
+        'Label82
+        '
+        resources.ApplyResources(Me.Label82, "Label82")
+        Me.Label82.Name = "Label82"
+        '
+        'Label83
+        '
+        resources.ApplyResources(Me.Label83, "Label83")
+        Me.Label83.Name = "Label83"
+        '
+        'Label84
+        '
+        resources.ApplyResources(Me.Label84, "Label84")
+        Me.Label84.Name = "Label84"
+        '
+        'Label90
+        '
+        resources.ApplyResources(Me.Label90, "Label90")
+        Me.Label90.Name = "Label90"
+        '
+        'Label91
+        '
+        resources.ApplyResources(Me.Label91, "Label91")
+        Me.Label91.Name = "Label91"
+        '
+        'Label92
+        '
+        resources.ApplyResources(Me.Label92, "Label92")
+        Me.Label92.Name = "Label92"
+        Me.ToolTip1.SetToolTip(Me.Label92, resources.GetString("Label92.ToolTip"))
+        '
+        'TableLayoutPanel6
+        '
+        Me.TableLayoutPanel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel6, "TableLayoutPanel6")
+        Me.TableLayoutPanel6.Controls.Add(Me.Label126, 2, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label125, 1, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.CheckBox24, 0, 1)
+        Me.TableLayoutPanel6.Controls.Add(Me.CheckBox23, 0, 1)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label59, 0, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label64, 0, 1)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        '
+        'Label126
+        '
+        resources.ApplyResources(Me.Label126, "Label126")
+        Me.Label126.Name = "Label126"
+        '
+        'Label125
+        '
+        resources.ApplyResources(Me.Label125, "Label125")
+        Me.Label125.Name = "Label125"
+        '
+        'CheckBox24
+        '
+        resources.ApplyResources(Me.CheckBox24, "CheckBox24")
+        Me.CheckBox24.Name = "CheckBox24"
+        Me.CheckBox24.UseVisualStyleBackColor = True
+        '
+        'CheckBox23
+        '
+        resources.ApplyResources(Me.CheckBox23, "CheckBox23")
+        Me.CheckBox23.Name = "CheckBox23"
+        Me.CheckBox23.UseVisualStyleBackColor = True
+        '
+        'Label59
+        '
+        resources.ApplyResources(Me.Label59, "Label59")
+        Me.Label59.Name = "Label59"
+        '
+        'Label64
+        '
+        resources.ApplyResources(Me.Label64, "Label64")
+        Me.Label64.Name = "Label64"
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel4, "TableLayoutPanel4")
+        Me.TableLayoutPanel4.Controls.Add(Me.Label124, 2, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label123, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label41, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label35, 0, 5)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label36, 0, 4)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label37, 0, 3)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label38, 0, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label39, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox13, 1, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox14, 2, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox15, 1, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox16, 2, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox17, 2, 3)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox20, 1, 3)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox18, 1, 4)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox21, 2, 4)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox19, 2, 5)
+        Me.TableLayoutPanel4.Controls.Add(Me.CheckBox22, 1, 5)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        '
+        'Label124
+        '
+        resources.ApplyResources(Me.Label124, "Label124")
+        Me.Label124.Name = "Label124"
+        '
+        'Label123
+        '
+        resources.ApplyResources(Me.Label123, "Label123")
+        Me.Label123.Name = "Label123"
+        '
+        'Label41
+        '
+        resources.ApplyResources(Me.Label41, "Label41")
+        Me.Label41.Name = "Label41"
+        '
+        'Label35
+        '
+        resources.ApplyResources(Me.Label35, "Label35")
+        Me.Label35.Name = "Label35"
+        '
+        'Label36
+        '
+        resources.ApplyResources(Me.Label36, "Label36")
+        Me.Label36.Name = "Label36"
+        '
+        'Label37
+        '
+        resources.ApplyResources(Me.Label37, "Label37")
+        Me.Label37.Name = "Label37"
+        '
+        'Label38
+        '
+        resources.ApplyResources(Me.Label38, "Label38")
+        Me.Label38.Name = "Label38"
+        '
+        'Label39
+        '
+        resources.ApplyResources(Me.Label39, "Label39")
+        Me.Label39.Name = "Label39"
+        '
+        'CheckBox13
+        '
+        resources.ApplyResources(Me.CheckBox13, "CheckBox13")
+        Me.CheckBox13.Name = "CheckBox13"
+        Me.CheckBox13.UseVisualStyleBackColor = True
+        '
+        'CheckBox14
+        '
+        resources.ApplyResources(Me.CheckBox14, "CheckBox14")
+        Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.UseVisualStyleBackColor = True
+        '
+        'CheckBox15
+        '
+        resources.ApplyResources(Me.CheckBox15, "CheckBox15")
+        Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.UseVisualStyleBackColor = True
+        '
+        'CheckBox16
+        '
+        resources.ApplyResources(Me.CheckBox16, "CheckBox16")
+        Me.CheckBox16.Name = "CheckBox16"
+        Me.CheckBox16.UseVisualStyleBackColor = True
+        '
+        'CheckBox17
+        '
+        resources.ApplyResources(Me.CheckBox17, "CheckBox17")
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.UseVisualStyleBackColor = True
+        '
+        'CheckBox20
+        '
+        resources.ApplyResources(Me.CheckBox20, "CheckBox20")
+        Me.CheckBox20.Name = "CheckBox20"
+        Me.CheckBox20.UseVisualStyleBackColor = True
+        '
+        'CheckBox18
+        '
+        resources.ApplyResources(Me.CheckBox18, "CheckBox18")
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
+        'CheckBox21
+        '
+        resources.ApplyResources(Me.CheckBox21, "CheckBox21")
+        Me.CheckBox21.Name = "CheckBox21"
+        Me.CheckBox21.UseVisualStyleBackColor = True
+        '
+        'CheckBox19
+        '
+        resources.ApplyResources(Me.CheckBox19, "CheckBox19")
+        Me.CheckBox19.Name = "CheckBox19"
+        Me.CheckBox19.UseVisualStyleBackColor = True
+        '
+        'CheckBox22
+        '
+        resources.ApplyResources(Me.CheckBox22, "CheckBox22")
+        Me.CheckBox22.Name = "CheckBox22"
+        Me.CheckBox22.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel7
+        '
+        Me.TableLayoutPanel7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel7, "TableLayoutPanel7")
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox90, 2, 15)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox89, 1, 15)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox88, 2, 14)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox87, 1, 14)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox86, 2, 13)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox85, 1, 13)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox84, 2, 12)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox83, 1, 12)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox82, 2, 11)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox81, 1, 11)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox80, 2, 10)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox79, 1, 10)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox78, 2, 9)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox77, 1, 9)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox76, 2, 8)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox75, 1, 8)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox74, 2, 7)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox73, 1, 7)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox72, 2, 6)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label61, 0, 7)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label62, 0, 6)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label63, 0, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label65, 0, 5)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label66, 0, 4)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label67, 0, 3)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label68, 0, 2)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label69, 0, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label71, 0, 15)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label72, 0, 14)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label73, 0, 13)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label74, 0, 12)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label75, 0, 11)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label76, 0, 10)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label77, 0, 9)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label78, 0, 8)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label129, 1, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.Label132, 2, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox61, 1, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox62, 2, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox63, 1, 2)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox64, 2, 2)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox65, 1, 3)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox66, 2, 3)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox67, 1, 4)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox68, 2, 4)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox69, 1, 5)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox70, 2, 5)
+        Me.TableLayoutPanel7.Controls.Add(Me.CheckBox71, 1, 6)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        '
+        'Label63
+        '
+        resources.ApplyResources(Me.Label63, "Label63")
+        Me.Label63.Name = "Label63"
+        '
+        'Label61
+        '
+        resources.ApplyResources(Me.Label61, "Label61")
+        Me.Label61.Name = "Label61"
+        '
+        'Label62
+        '
+        resources.ApplyResources(Me.Label62, "Label62")
+        Me.Label62.Name = "Label62"
+        '
+        'Label65
+        '
+        resources.ApplyResources(Me.Label65, "Label65")
+        Me.Label65.Name = "Label65"
+        '
+        'Label66
+        '
+        resources.ApplyResources(Me.Label66, "Label66")
+        Me.Label66.Name = "Label66"
+        '
+        'Label67
+        '
+        resources.ApplyResources(Me.Label67, "Label67")
+        Me.Label67.Name = "Label67"
+        '
+        'Label68
+        '
+        resources.ApplyResources(Me.Label68, "Label68")
+        Me.Label68.Name = "Label68"
+        '
+        'Label69
+        '
+        resources.ApplyResources(Me.Label69, "Label69")
+        Me.Label69.Name = "Label69"
+        '
+        'Label71
+        '
+        resources.ApplyResources(Me.Label71, "Label71")
+        Me.Label71.Name = "Label71"
+        '
+        'Label72
+        '
+        resources.ApplyResources(Me.Label72, "Label72")
+        Me.Label72.Name = "Label72"
+        '
+        'Label73
+        '
+        resources.ApplyResources(Me.Label73, "Label73")
+        Me.Label73.Name = "Label73"
+        '
+        'Label74
+        '
+        resources.ApplyResources(Me.Label74, "Label74")
+        Me.Label74.Name = "Label74"
+        '
+        'Label75
+        '
+        resources.ApplyResources(Me.Label75, "Label75")
+        Me.Label75.Name = "Label75"
+        '
+        'Label76
+        '
+        resources.ApplyResources(Me.Label76, "Label76")
+        Me.Label76.Name = "Label76"
+        '
+        'Label77
+        '
+        resources.ApplyResources(Me.Label77, "Label77")
+        Me.Label77.Name = "Label77"
+        '
+        'Label78
+        '
+        resources.ApplyResources(Me.Label78, "Label78")
+        Me.Label78.Name = "Label78"
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel5, "TableLayoutPanel5")
+        Me.TableLayoutPanel5.Controls.Add(Me.Label48, 0, 7)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label47, 0, 6)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label34, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label42, 0, 5)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label43, 0, 4)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label44, 0, 3)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label45, 0, 2)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label46, 0, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label50, 0, 16)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label49, 0, 15)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label52, 0, 14)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label53, 0, 12)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label54, 0, 11)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label55, 0, 10)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label56, 0, 9)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label57, 0, 8)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label51, 0, 13)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox29, 1, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox27, 2, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox28, 1, 2)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox30, 2, 2)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox33, 1, 3)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox31, 2, 3)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox34, 2, 4)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox37, 1, 4)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox35, 1, 5)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox39, 2, 5)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox38, 2, 6)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox42, 1, 6)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox41, 1, 7)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox45, 1, 8)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox44, 2, 7)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox48, 1, 9)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox47, 2, 8)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox50, 2, 9)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox32, 1, 10)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox36, 2, 10)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox40, 2, 11)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox43, 1, 11)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox46, 1, 12)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox49, 2, 12)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox51, 1, 13)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label21, 0, 17)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox52, 2, 13)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox53, 1, 14)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox54, 1, 15)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox55, 1, 16)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox56, 1, 17)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox57, 2, 14)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox58, 2, 15)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox59, 2, 16)
+        Me.TableLayoutPanel5.Controls.Add(Me.CheckBox60, 2, 17)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label130, 1, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label131, 2, 0)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        '
+        'Label48
+        '
+        resources.ApplyResources(Me.Label48, "Label48")
+        Me.Label48.Name = "Label48"
+        '
+        'Label47
+        '
+        resources.ApplyResources(Me.Label47, "Label47")
+        Me.Label47.Name = "Label47"
+        '
+        'Label34
+        '
+        resources.ApplyResources(Me.Label34, "Label34")
+        Me.Label34.Name = "Label34"
+        '
+        'Label42
+        '
+        resources.ApplyResources(Me.Label42, "Label42")
+        Me.Label42.Name = "Label42"
+        '
+        'Label43
+        '
+        resources.ApplyResources(Me.Label43, "Label43")
+        Me.Label43.Name = "Label43"
+        '
+        'Label44
+        '
+        resources.ApplyResources(Me.Label44, "Label44")
+        Me.Label44.Name = "Label44"
+        '
+        'Label45
+        '
+        resources.ApplyResources(Me.Label45, "Label45")
+        Me.Label45.Name = "Label45"
+        '
+        'Label46
+        '
+        resources.ApplyResources(Me.Label46, "Label46")
+        Me.Label46.Name = "Label46"
+        '
+        'Label50
+        '
+        resources.ApplyResources(Me.Label50, "Label50")
+        Me.Label50.Name = "Label50"
+        '
+        'Label49
+        '
+        resources.ApplyResources(Me.Label49, "Label49")
+        Me.Label49.Name = "Label49"
+        '
+        'Label52
+        '
+        resources.ApplyResources(Me.Label52, "Label52")
+        Me.Label52.Name = "Label52"
+        '
+        'Label53
+        '
+        resources.ApplyResources(Me.Label53, "Label53")
+        Me.Label53.Name = "Label53"
+        '
+        'Label54
+        '
+        resources.ApplyResources(Me.Label54, "Label54")
+        Me.Label54.Name = "Label54"
+        '
+        'Label55
+        '
+        resources.ApplyResources(Me.Label55, "Label55")
+        Me.Label55.Name = "Label55"
+        '
+        'Label56
+        '
+        resources.ApplyResources(Me.Label56, "Label56")
+        Me.Label56.Name = "Label56"
+        '
+        'Label57
+        '
+        resources.ApplyResources(Me.Label57, "Label57")
+        Me.Label57.Name = "Label57"
+        '
+        'Label51
+        '
+        resources.ApplyResources(Me.Label51, "Label51")
+        Me.Label51.Name = "Label51"
+        '
+        'CheckBox29
+        '
+        resources.ApplyResources(Me.CheckBox29, "CheckBox29")
+        Me.CheckBox29.Name = "CheckBox29"
+        Me.CheckBox29.UseVisualStyleBackColor = True
+        '
+        'CheckBox27
+        '
+        resources.ApplyResources(Me.CheckBox27, "CheckBox27")
+        Me.CheckBox27.Name = "CheckBox27"
+        Me.CheckBox27.UseVisualStyleBackColor = True
+        '
+        'CheckBox28
+        '
+        resources.ApplyResources(Me.CheckBox28, "CheckBox28")
+        Me.CheckBox28.Name = "CheckBox28"
+        Me.CheckBox28.UseVisualStyleBackColor = True
+        '
+        'CheckBox30
+        '
+        resources.ApplyResources(Me.CheckBox30, "CheckBox30")
+        Me.CheckBox30.Name = "CheckBox30"
+        Me.CheckBox30.UseVisualStyleBackColor = True
+        '
+        'CheckBox33
+        '
+        resources.ApplyResources(Me.CheckBox33, "CheckBox33")
+        Me.CheckBox33.Name = "CheckBox33"
+        Me.CheckBox33.UseVisualStyleBackColor = True
+        '
+        'CheckBox31
+        '
+        resources.ApplyResources(Me.CheckBox31, "CheckBox31")
+        Me.CheckBox31.Name = "CheckBox31"
+        Me.CheckBox31.UseVisualStyleBackColor = True
+        '
+        'CheckBox34
+        '
+        resources.ApplyResources(Me.CheckBox34, "CheckBox34")
+        Me.CheckBox34.Name = "CheckBox34"
+        Me.CheckBox34.UseVisualStyleBackColor = True
+        '
+        'CheckBox37
+        '
+        resources.ApplyResources(Me.CheckBox37, "CheckBox37")
+        Me.CheckBox37.Name = "CheckBox37"
+        Me.CheckBox37.UseVisualStyleBackColor = True
+        '
+        'CheckBox35
+        '
+        resources.ApplyResources(Me.CheckBox35, "CheckBox35")
+        Me.CheckBox35.Name = "CheckBox35"
+        Me.CheckBox35.UseVisualStyleBackColor = True
+        '
+        'CheckBox39
+        '
+        resources.ApplyResources(Me.CheckBox39, "CheckBox39")
+        Me.CheckBox39.Name = "CheckBox39"
+        Me.CheckBox39.UseVisualStyleBackColor = True
+        '
+        'CheckBox38
+        '
+        resources.ApplyResources(Me.CheckBox38, "CheckBox38")
+        Me.CheckBox38.Name = "CheckBox38"
+        Me.CheckBox38.UseVisualStyleBackColor = True
+        '
+        'CheckBox42
+        '
+        resources.ApplyResources(Me.CheckBox42, "CheckBox42")
+        Me.CheckBox42.Name = "CheckBox42"
+        Me.CheckBox42.UseVisualStyleBackColor = True
+        '
+        'CheckBox41
+        '
+        resources.ApplyResources(Me.CheckBox41, "CheckBox41")
+        Me.CheckBox41.Name = "CheckBox41"
+        Me.CheckBox41.UseVisualStyleBackColor = True
+        '
+        'CheckBox45
+        '
+        resources.ApplyResources(Me.CheckBox45, "CheckBox45")
+        Me.CheckBox45.Name = "CheckBox45"
+        Me.CheckBox45.UseVisualStyleBackColor = True
+        '
+        'CheckBox44
+        '
+        resources.ApplyResources(Me.CheckBox44, "CheckBox44")
+        Me.CheckBox44.Name = "CheckBox44"
+        Me.CheckBox44.UseVisualStyleBackColor = True
+        '
+        'CheckBox48
+        '
+        resources.ApplyResources(Me.CheckBox48, "CheckBox48")
+        Me.CheckBox48.Name = "CheckBox48"
+        Me.CheckBox48.UseVisualStyleBackColor = True
+        '
+        'CheckBox47
+        '
+        resources.ApplyResources(Me.CheckBox47, "CheckBox47")
+        Me.CheckBox47.Name = "CheckBox47"
+        Me.CheckBox47.UseVisualStyleBackColor = True
+        '
+        'CheckBox50
+        '
+        resources.ApplyResources(Me.CheckBox50, "CheckBox50")
+        Me.CheckBox50.Name = "CheckBox50"
+        Me.CheckBox50.UseVisualStyleBackColor = True
+        '
+        'CheckBox32
+        '
+        resources.ApplyResources(Me.CheckBox32, "CheckBox32")
+        Me.CheckBox32.Name = "CheckBox32"
+        Me.CheckBox32.UseVisualStyleBackColor = True
+        '
+        'CheckBox36
+        '
+        resources.ApplyResources(Me.CheckBox36, "CheckBox36")
+        Me.CheckBox36.Name = "CheckBox36"
+        Me.CheckBox36.UseVisualStyleBackColor = True
+        '
+        'CheckBox40
+        '
+        resources.ApplyResources(Me.CheckBox40, "CheckBox40")
+        Me.CheckBox40.Name = "CheckBox40"
+        Me.CheckBox40.UseVisualStyleBackColor = True
+        '
+        'CheckBox43
+        '
+        resources.ApplyResources(Me.CheckBox43, "CheckBox43")
+        Me.CheckBox43.Name = "CheckBox43"
+        Me.CheckBox43.UseVisualStyleBackColor = True
+        '
+        'CheckBox46
+        '
+        resources.ApplyResources(Me.CheckBox46, "CheckBox46")
+        Me.CheckBox46.Name = "CheckBox46"
+        Me.CheckBox46.UseVisualStyleBackColor = True
+        '
+        'CheckBox49
+        '
+        resources.ApplyResources(Me.CheckBox49, "CheckBox49")
+        Me.CheckBox49.Name = "CheckBox49"
+        Me.CheckBox49.UseVisualStyleBackColor = True
+        '
+        'CheckBox51
+        '
+        resources.ApplyResources(Me.CheckBox51, "CheckBox51")
+        Me.CheckBox51.Name = "CheckBox51"
+        Me.CheckBox51.UseVisualStyleBackColor = True
+        '
+        'Label21
+        '
+        resources.ApplyResources(Me.Label21, "Label21")
+        Me.Label21.Name = "Label21"
+        '
+        'CheckBox52
+        '
+        resources.ApplyResources(Me.CheckBox52, "CheckBox52")
+        Me.CheckBox52.Name = "CheckBox52"
+        Me.CheckBox52.UseVisualStyleBackColor = True
+        '
+        'CheckBox53
+        '
+        resources.ApplyResources(Me.CheckBox53, "CheckBox53")
+        Me.CheckBox53.Name = "CheckBox53"
+        Me.CheckBox53.UseVisualStyleBackColor = True
+        '
+        'CheckBox54
+        '
+        resources.ApplyResources(Me.CheckBox54, "CheckBox54")
+        Me.CheckBox54.Name = "CheckBox54"
+        Me.CheckBox54.UseVisualStyleBackColor = True
+        '
+        'CheckBox55
+        '
+        resources.ApplyResources(Me.CheckBox55, "CheckBox55")
+        Me.CheckBox55.Name = "CheckBox55"
+        Me.CheckBox55.UseVisualStyleBackColor = True
+        '
+        'CheckBox56
+        '
+        resources.ApplyResources(Me.CheckBox56, "CheckBox56")
+        Me.CheckBox56.Name = "CheckBox56"
+        Me.CheckBox56.UseVisualStyleBackColor = True
+        '
+        'CheckBox57
+        '
+        resources.ApplyResources(Me.CheckBox57, "CheckBox57")
+        Me.CheckBox57.Name = "CheckBox57"
+        Me.CheckBox57.UseVisualStyleBackColor = True
+        '
+        'CheckBox58
+        '
+        resources.ApplyResources(Me.CheckBox58, "CheckBox58")
+        Me.CheckBox58.Name = "CheckBox58"
+        Me.CheckBox58.UseVisualStyleBackColor = True
+        '
+        'CheckBox59
+        '
+        resources.ApplyResources(Me.CheckBox59, "CheckBox59")
+        Me.CheckBox59.Name = "CheckBox59"
+        Me.CheckBox59.UseVisualStyleBackColor = True
+        '
+        'CheckBox60
+        '
+        resources.ApplyResources(Me.CheckBox60, "CheckBox60")
+        Me.CheckBox60.Name = "CheckBox60"
+        Me.CheckBox60.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
+        Me.TableLayoutPanel1.Controls.Add(Me.Label58, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label26, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox12, 2, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox11, 1, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox10, 2, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox9, 1, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox8, 2, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox7, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox6, 2, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox5, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox4, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox3, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox2, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label33, 0, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label32, 0, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label31, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label30, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label29, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label28, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label40, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox1, 1, 1)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        '
+        'Label58
+        '
+        resources.ApplyResources(Me.Label58, "Label58")
+        Me.Label58.Name = "Label58"
+        '
+        'Label26
+        '
+        resources.ApplyResources(Me.Label26, "Label26")
+        Me.Label26.Name = "Label26"
+        '
+        'CheckBox12
+        '
+        resources.ApplyResources(Me.CheckBox12, "CheckBox12")
+        Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.UseVisualStyleBackColor = True
+        '
+        'CheckBox11
+        '
+        resources.ApplyResources(Me.CheckBox11, "CheckBox11")
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.UseVisualStyleBackColor = True
+        '
+        'CheckBox10
+        '
+        resources.ApplyResources(Me.CheckBox10, "CheckBox10")
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.UseVisualStyleBackColor = True
+        '
+        'CheckBox9
+        '
+        resources.ApplyResources(Me.CheckBox9, "CheckBox9")
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        resources.ApplyResources(Me.CheckBox8, "CheckBox8")
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        resources.ApplyResources(Me.CheckBox7, "CheckBox7")
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        resources.ApplyResources(Me.CheckBox6, "CheckBox6")
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        resources.ApplyResources(Me.CheckBox5, "CheckBox5")
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        resources.ApplyResources(Me.CheckBox4, "CheckBox4")
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        resources.ApplyResources(Me.CheckBox3, "CheckBox3")
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        resources.ApplyResources(Me.CheckBox2, "CheckBox2")
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Label33
+        '
+        resources.ApplyResources(Me.Label33, "Label33")
+        Me.Label33.Name = "Label33"
+        '
+        'Label32
+        '
+        resources.ApplyResources(Me.Label32, "Label32")
+        Me.Label32.Name = "Label32"
+        '
+        'Label31
+        '
+        resources.ApplyResources(Me.Label31, "Label31")
+        Me.Label31.Name = "Label31"
+        '
+        'Label30
+        '
+        resources.ApplyResources(Me.Label30, "Label30")
+        Me.Label30.Name = "Label30"
+        '
+        'Label29
+        '
+        resources.ApplyResources(Me.Label29, "Label29")
+        Me.Label29.Name = "Label29"
+        '
+        'Label28
+        '
+        resources.ApplyResources(Me.Label28, "Label28")
+        Me.Label28.Name = "Label28"
+        '
+        'Label40
+        '
+        resources.ApplyResources(Me.Label40, "Label40")
+        Me.Label40.Name = "Label40"
+        '
+        'CheckBox1
+        '
+        resources.ApplyResources(Me.CheckBox1, "CheckBox1")
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Info
+        resources.ApplyResources(Me.RichTextBox1, "RichTextBox1")
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage4.Controls.Add(Me.GroupBox9)
+        Me.TabPage4.Controls.Add(Me.BttnLoggavGiver)
         Me.TabPage4.Controls.Add(Me.GroupBox1)
         Me.TabPage4.Controls.Add(Me.GroupBox2)
         resources.ApplyResources(Me.TabPage4, "TabPage4")
@@ -661,6 +1707,12 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox9, "GroupBox9")
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.TabStop = False
+        '
+        'BttnLoggavGiver
+        '
+        resources.ApplyResources(Me.BttnLoggavGiver, "BttnLoggavGiver")
+        Me.BttnLoggavGiver.Name = "BttnLoggavGiver"
+        Me.BttnLoggavGiver.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -860,1471 +1912,12 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label16, "Label16")
         Me.Label16.Name = "Label16"
         '
-        'TabPage5
-        '
-        Me.TabPage5.Controls.Add(Me.Button5)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel11)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel10)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel9)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel8)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel6)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel4)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel7)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel5)
-        Me.TabPage5.Controls.Add(Me.TableLayoutPanel1)
-        Me.TabPage5.Controls.Add(Me.RichTextBox1)
-        resources.ApplyResources(Me.TabPage5, "TabPage5")
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        resources.ApplyResources(Me.Button5, "Button5")
-        Me.Button5.Name = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel11
-        '
-        Me.TableLayoutPanel11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel11, "TableLayoutPanel11")
-        Me.TableLayoutPanel11.Controls.Add(Me.Label88, 0, 0)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton75, 1, 4)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton76, 2, 4)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton77, 1, 3)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton78, 2, 3)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton79, 1, 2)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton80, 2, 2)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton81, 1, 1)
-        Me.TableLayoutPanel11.Controls.Add(Me.RadioButton82, 2, 1)
-        Me.TableLayoutPanel11.Controls.Add(Me.Label93, 0, 4)
-        Me.TableLayoutPanel11.Controls.Add(Me.Label94, 0, 3)
-        Me.TableLayoutPanel11.Controls.Add(Me.Label95, 0, 2)
-        Me.TableLayoutPanel11.Controls.Add(Me.Label96, 0, 1)
-        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
-        '
-        'Label88
-        '
-        resources.ApplyResources(Me.Label88, "Label88")
-        Me.TableLayoutPanel11.SetColumnSpan(Me.Label88, 3)
-        Me.Label88.Name = "Label88"
-        '
-        'RadioButton75
-        '
-        resources.ApplyResources(Me.RadioButton75, "RadioButton75")
-        Me.RadioButton75.Name = "RadioButton75"
-        Me.RadioButton75.TabStop = True
-        Me.RadioButton75.UseVisualStyleBackColor = True
-        '
-        'RadioButton76
-        '
-        resources.ApplyResources(Me.RadioButton76, "RadioButton76")
-        Me.RadioButton76.Name = "RadioButton76"
-        Me.RadioButton76.TabStop = True
-        Me.RadioButton76.UseVisualStyleBackColor = True
-        '
-        'RadioButton77
-        '
-        resources.ApplyResources(Me.RadioButton77, "RadioButton77")
-        Me.RadioButton77.Name = "RadioButton77"
-        Me.RadioButton77.TabStop = True
-        Me.RadioButton77.UseVisualStyleBackColor = True
-        '
-        'RadioButton78
-        '
-        resources.ApplyResources(Me.RadioButton78, "RadioButton78")
-        Me.RadioButton78.Name = "RadioButton78"
-        Me.RadioButton78.TabStop = True
-        Me.RadioButton78.UseVisualStyleBackColor = True
-        '
-        'RadioButton79
-        '
-        resources.ApplyResources(Me.RadioButton79, "RadioButton79")
-        Me.RadioButton79.Name = "RadioButton79"
-        Me.RadioButton79.TabStop = True
-        Me.RadioButton79.UseVisualStyleBackColor = True
-        '
-        'RadioButton80
-        '
-        resources.ApplyResources(Me.RadioButton80, "RadioButton80")
-        Me.RadioButton80.Name = "RadioButton80"
-        Me.RadioButton80.TabStop = True
-        Me.RadioButton80.UseVisualStyleBackColor = True
-        '
-        'RadioButton81
-        '
-        resources.ApplyResources(Me.RadioButton81, "RadioButton81")
-        Me.RadioButton81.Name = "RadioButton81"
-        Me.RadioButton81.TabStop = True
-        Me.RadioButton81.UseVisualStyleBackColor = True
-        '
-        'RadioButton82
-        '
-        resources.ApplyResources(Me.RadioButton82, "RadioButton82")
-        Me.RadioButton82.Name = "RadioButton82"
-        Me.RadioButton82.TabStop = True
-        Me.RadioButton82.UseVisualStyleBackColor = True
-        '
-        'Label93
-        '
-        resources.ApplyResources(Me.Label93, "Label93")
-        Me.Label93.Name = "Label93"
-        '
-        'Label94
-        '
-        resources.ApplyResources(Me.Label94, "Label94")
-        Me.Label94.Name = "Label94"
-        '
-        'Label95
-        '
-        resources.ApplyResources(Me.Label95, "Label95")
-        Me.Label95.Name = "Label95"
-        '
-        'Label96
-        '
-        resources.ApplyResources(Me.Label96, "Label96")
-        Me.Label96.Name = "Label96"
-        '
-        'TableLayoutPanel10
-        '
-        Me.TableLayoutPanel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel10, "TableLayoutPanel10")
-        Me.TableLayoutPanel10.Controls.Add(Me.Label87, 0, 1)
-        Me.TableLayoutPanel10.Controls.Add(Me.Label86, 0, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.RadioButton71, 1, 1)
-        Me.TableLayoutPanel10.Controls.Add(Me.RadioButton72, 2, 1)
-        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
-        '
-        'Label87
-        '
-        resources.ApplyResources(Me.Label87, "Label87")
-        Me.Label87.Name = "Label87"
-        '
-        'Label86
-        '
-        resources.ApplyResources(Me.Label86, "Label86")
-        Me.TableLayoutPanel10.SetColumnSpan(Me.Label86, 3)
-        Me.Label86.Name = "Label86"
-        '
-        'RadioButton71
-        '
-        resources.ApplyResources(Me.RadioButton71, "RadioButton71")
-        Me.RadioButton71.Name = "RadioButton71"
-        Me.RadioButton71.TabStop = True
-        Me.RadioButton71.UseVisualStyleBackColor = True
-        '
-        'RadioButton72
-        '
-        resources.ApplyResources(Me.RadioButton72, "RadioButton72")
-        Me.RadioButton72.Name = "RadioButton72"
-        Me.RadioButton72.TabStop = True
-        Me.RadioButton72.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel9
-        '
-        Me.TableLayoutPanel9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel9, "TableLayoutPanel9")
-        Me.TableLayoutPanel9.Controls.Add(Me.Label85, 0, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.TextBox18, 0, 1)
-        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
-        '
-        'Label85
-        '
-        resources.ApplyResources(Me.Label85, "Label85")
-        Me.TableLayoutPanel9.SetColumnSpan(Me.Label85, 3)
-        Me.Label85.Name = "Label85"
-        '
-        'TextBox18
-        '
-        resources.ApplyResources(Me.TextBox18, "TextBox18")
-        Me.TableLayoutPanel9.SetColumnSpan(Me.TextBox18, 3)
-        Me.TextBox18.Name = "TextBox18"
-        '
-        'TableLayoutPanel8
-        '
-        Me.TableLayoutPanel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel8, "TableLayoutPanel8")
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton122, 1, 10)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton121, 1, 9)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton120, 1, 8)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton57, 2, 7)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton58, 2, 6)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton59, 1, 7)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label60, 0, 7)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton60, 1, 6)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label70, 0, 6)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label79, 0, 0)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton61, 2, 5)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton62, 1, 5)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton63, 1, 4)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton64, 2, 4)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton65, 1, 3)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton66, 2, 3)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton67, 1, 2)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton68, 2, 2)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton69, 1, 1)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton70, 2, 1)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label80, 0, 5)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label81, 0, 4)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label82, 0, 3)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label83, 0, 2)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label84, 0, 1)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label90, 0, 10)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label91, 0, 9)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label92, 0, 8)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton101, 2, 8)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton102, 2, 9)
-        Me.TableLayoutPanel8.Controls.Add(Me.RadioButton103, 2, 10)
-        Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
-        '
-        'RadioButton122
-        '
-        resources.ApplyResources(Me.RadioButton122, "RadioButton122")
-        Me.RadioButton122.Name = "RadioButton122"
-        Me.RadioButton122.TabStop = True
-        Me.RadioButton122.UseVisualStyleBackColor = True
-        '
-        'RadioButton121
-        '
-        resources.ApplyResources(Me.RadioButton121, "RadioButton121")
-        Me.RadioButton121.Name = "RadioButton121"
-        Me.RadioButton121.TabStop = True
-        Me.RadioButton121.UseVisualStyleBackColor = True
-        '
-        'RadioButton120
-        '
-        resources.ApplyResources(Me.RadioButton120, "RadioButton120")
-        Me.RadioButton120.Name = "RadioButton120"
-        Me.RadioButton120.TabStop = True
-        Me.RadioButton120.UseVisualStyleBackColor = True
-        '
-        'RadioButton57
-        '
-        resources.ApplyResources(Me.RadioButton57, "RadioButton57")
-        Me.RadioButton57.Name = "RadioButton57"
-        Me.RadioButton57.TabStop = True
-        Me.RadioButton57.UseVisualStyleBackColor = True
-        '
-        'RadioButton58
-        '
-        resources.ApplyResources(Me.RadioButton58, "RadioButton58")
-        Me.RadioButton58.Name = "RadioButton58"
-        Me.RadioButton58.TabStop = True
-        Me.RadioButton58.UseVisualStyleBackColor = True
-        '
-        'RadioButton59
-        '
-        resources.ApplyResources(Me.RadioButton59, "RadioButton59")
-        Me.RadioButton59.Name = "RadioButton59"
-        Me.RadioButton59.TabStop = True
-        Me.RadioButton59.UseVisualStyleBackColor = True
-        '
-        'Label60
-        '
-        resources.ApplyResources(Me.Label60, "Label60")
-        Me.Label60.Name = "Label60"
-        '
-        'RadioButton60
-        '
-        resources.ApplyResources(Me.RadioButton60, "RadioButton60")
-        Me.RadioButton60.Name = "RadioButton60"
-        Me.RadioButton60.TabStop = True
-        Me.RadioButton60.UseVisualStyleBackColor = True
-        '
-        'Label70
-        '
-        resources.ApplyResources(Me.Label70, "Label70")
-        Me.Label70.Name = "Label70"
-        '
-        'Label79
-        '
-        resources.ApplyResources(Me.Label79, "Label79")
-        Me.TableLayoutPanel8.SetColumnSpan(Me.Label79, 3)
-        Me.Label79.Name = "Label79"
-        '
-        'RadioButton61
-        '
-        resources.ApplyResources(Me.RadioButton61, "RadioButton61")
-        Me.RadioButton61.Name = "RadioButton61"
-        Me.RadioButton61.TabStop = True
-        Me.RadioButton61.UseVisualStyleBackColor = True
-        '
-        'RadioButton62
-        '
-        resources.ApplyResources(Me.RadioButton62, "RadioButton62")
-        Me.RadioButton62.Name = "RadioButton62"
-        Me.RadioButton62.TabStop = True
-        Me.RadioButton62.UseVisualStyleBackColor = True
-        '
-        'RadioButton63
-        '
-        resources.ApplyResources(Me.RadioButton63, "RadioButton63")
-        Me.RadioButton63.Name = "RadioButton63"
-        Me.RadioButton63.TabStop = True
-        Me.RadioButton63.UseVisualStyleBackColor = True
-        '
-        'RadioButton64
-        '
-        resources.ApplyResources(Me.RadioButton64, "RadioButton64")
-        Me.RadioButton64.Name = "RadioButton64"
-        Me.RadioButton64.TabStop = True
-        Me.RadioButton64.UseVisualStyleBackColor = True
-        '
-        'RadioButton65
-        '
-        resources.ApplyResources(Me.RadioButton65, "RadioButton65")
-        Me.RadioButton65.Name = "RadioButton65"
-        Me.RadioButton65.TabStop = True
-        Me.RadioButton65.UseVisualStyleBackColor = True
-        '
-        'RadioButton66
-        '
-        resources.ApplyResources(Me.RadioButton66, "RadioButton66")
-        Me.RadioButton66.Name = "RadioButton66"
-        Me.RadioButton66.TabStop = True
-        Me.RadioButton66.UseVisualStyleBackColor = True
-        '
-        'RadioButton67
-        '
-        resources.ApplyResources(Me.RadioButton67, "RadioButton67")
-        Me.RadioButton67.Name = "RadioButton67"
-        Me.RadioButton67.TabStop = True
-        Me.RadioButton67.UseVisualStyleBackColor = True
-        '
-        'RadioButton68
-        '
-        resources.ApplyResources(Me.RadioButton68, "RadioButton68")
-        Me.RadioButton68.Name = "RadioButton68"
-        Me.RadioButton68.TabStop = True
-        Me.RadioButton68.UseVisualStyleBackColor = True
-        '
-        'RadioButton69
-        '
-        resources.ApplyResources(Me.RadioButton69, "RadioButton69")
-        Me.RadioButton69.Name = "RadioButton69"
-        Me.RadioButton69.TabStop = True
-        Me.RadioButton69.UseVisualStyleBackColor = True
-        '
-        'RadioButton70
-        '
-        resources.ApplyResources(Me.RadioButton70, "RadioButton70")
-        Me.RadioButton70.Name = "RadioButton70"
-        Me.RadioButton70.TabStop = True
-        Me.RadioButton70.UseVisualStyleBackColor = True
-        '
-        'Label80
-        '
-        resources.ApplyResources(Me.Label80, "Label80")
-        Me.Label80.Name = "Label80"
-        '
-        'Label81
-        '
-        resources.ApplyResources(Me.Label81, "Label81")
-        Me.Label81.Name = "Label81"
-        '
-        'Label82
-        '
-        resources.ApplyResources(Me.Label82, "Label82")
-        Me.Label82.Name = "Label82"
-        '
-        'Label83
-        '
-        resources.ApplyResources(Me.Label83, "Label83")
-        Me.Label83.Name = "Label83"
-        '
-        'Label84
-        '
-        resources.ApplyResources(Me.Label84, "Label84")
-        Me.Label84.Name = "Label84"
-        '
-        'Label90
-        '
-        resources.ApplyResources(Me.Label90, "Label90")
-        Me.Label90.Name = "Label90"
-        '
-        'Label91
-        '
-        resources.ApplyResources(Me.Label91, "Label91")
-        Me.Label91.Name = "Label91"
-        '
-        'Label92
-        '
-        resources.ApplyResources(Me.Label92, "Label92")
-        Me.Label92.Name = "Label92"
-        Me.ToolTip1.SetToolTip(Me.Label92, resources.GetString("Label92.ToolTip"))
-        '
-        'RadioButton101
-        '
-        resources.ApplyResources(Me.RadioButton101, "RadioButton101")
-        Me.RadioButton101.Name = "RadioButton101"
-        Me.RadioButton101.TabStop = True
-        Me.RadioButton101.UseVisualStyleBackColor = True
-        '
-        'RadioButton102
-        '
-        resources.ApplyResources(Me.RadioButton102, "RadioButton102")
-        Me.RadioButton102.Name = "RadioButton102"
-        Me.RadioButton102.TabStop = True
-        Me.RadioButton102.UseVisualStyleBackColor = True
-        '
-        'RadioButton103
-        '
-        resources.ApplyResources(Me.RadioButton103, "RadioButton103")
-        Me.RadioButton103.Name = "RadioButton103"
-        Me.RadioButton103.TabStop = True
-        Me.RadioButton103.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel6
-        '
-        Me.TableLayoutPanel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel6, "TableLayoutPanel6")
-        Me.TableLayoutPanel6.Controls.Add(Me.Label59, 0, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.RadioButton49, 1, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.RadioButton50, 2, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label64, 0, 1)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        '
-        'Label59
-        '
-        resources.ApplyResources(Me.Label59, "Label59")
-        Me.TableLayoutPanel6.SetColumnSpan(Me.Label59, 3)
-        Me.Label59.Name = "Label59"
-        '
-        'RadioButton49
-        '
-        resources.ApplyResources(Me.RadioButton49, "RadioButton49")
-        Me.RadioButton49.Name = "RadioButton49"
-        Me.RadioButton49.TabStop = True
-        Me.RadioButton49.UseVisualStyleBackColor = True
-        '
-        'RadioButton50
-        '
-        resources.ApplyResources(Me.RadioButton50, "RadioButton50")
-        Me.RadioButton50.Name = "RadioButton50"
-        Me.RadioButton50.TabStop = True
-        Me.RadioButton50.UseVisualStyleBackColor = True
-        '
-        'Label64
-        '
-        resources.ApplyResources(Me.Label64, "Label64")
-        Me.Label64.Name = "Label64"
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel4, "TableLayoutPanel4")
-        Me.TableLayoutPanel4.Controls.Add(Me.Label41, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton19, 2, 5)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton20, 1, 5)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton21, 1, 4)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton22, 2, 4)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton23, 1, 3)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton24, 2, 3)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton25, 1, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton26, 2, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton27, 1, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.RadioButton28, 2, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Label35, 0, 5)
-        Me.TableLayoutPanel4.Controls.Add(Me.Label36, 0, 4)
-        Me.TableLayoutPanel4.Controls.Add(Me.Label37, 0, 3)
-        Me.TableLayoutPanel4.Controls.Add(Me.Label38, 0, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.Label39, 0, 1)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        '
-        'Label41
-        '
-        resources.ApplyResources(Me.Label41, "Label41")
-        Me.TableLayoutPanel4.SetColumnSpan(Me.Label41, 3)
-        Me.Label41.Name = "Label41"
-        '
-        'RadioButton19
-        '
-        resources.ApplyResources(Me.RadioButton19, "RadioButton19")
-        Me.RadioButton19.Name = "RadioButton19"
-        Me.RadioButton19.TabStop = True
-        Me.RadioButton19.UseVisualStyleBackColor = True
-        '
-        'RadioButton20
-        '
-        resources.ApplyResources(Me.RadioButton20, "RadioButton20")
-        Me.RadioButton20.Name = "RadioButton20"
-        Me.RadioButton20.TabStop = True
-        Me.RadioButton20.UseVisualStyleBackColor = True
-        '
-        'RadioButton21
-        '
-        resources.ApplyResources(Me.RadioButton21, "RadioButton21")
-        Me.RadioButton21.Name = "RadioButton21"
-        Me.RadioButton21.TabStop = True
-        Me.RadioButton21.UseVisualStyleBackColor = True
-        '
-        'RadioButton22
-        '
-        resources.ApplyResources(Me.RadioButton22, "RadioButton22")
-        Me.RadioButton22.Name = "RadioButton22"
-        Me.RadioButton22.TabStop = True
-        Me.RadioButton22.UseVisualStyleBackColor = True
-        '
-        'RadioButton23
-        '
-        resources.ApplyResources(Me.RadioButton23, "RadioButton23")
-        Me.RadioButton23.Name = "RadioButton23"
-        Me.RadioButton23.TabStop = True
-        Me.RadioButton23.UseVisualStyleBackColor = True
-        '
-        'RadioButton24
-        '
-        resources.ApplyResources(Me.RadioButton24, "RadioButton24")
-        Me.RadioButton24.Name = "RadioButton24"
-        Me.RadioButton24.TabStop = True
-        Me.RadioButton24.UseVisualStyleBackColor = True
-        '
-        'RadioButton25
-        '
-        resources.ApplyResources(Me.RadioButton25, "RadioButton25")
-        Me.RadioButton25.Name = "RadioButton25"
-        Me.RadioButton25.TabStop = True
-        Me.RadioButton25.UseVisualStyleBackColor = True
-        '
-        'RadioButton26
-        '
-        resources.ApplyResources(Me.RadioButton26, "RadioButton26")
-        Me.RadioButton26.Name = "RadioButton26"
-        Me.RadioButton26.TabStop = True
-        Me.RadioButton26.UseVisualStyleBackColor = True
-        '
-        'RadioButton27
-        '
-        resources.ApplyResources(Me.RadioButton27, "RadioButton27")
-        Me.RadioButton27.Name = "RadioButton27"
-        Me.RadioButton27.TabStop = True
-        Me.RadioButton27.UseVisualStyleBackColor = True
-        '
-        'RadioButton28
-        '
-        resources.ApplyResources(Me.RadioButton28, "RadioButton28")
-        Me.RadioButton28.Name = "RadioButton28"
-        Me.RadioButton28.TabStop = True
-        Me.RadioButton28.UseVisualStyleBackColor = True
-        '
-        'Label35
-        '
-        resources.ApplyResources(Me.Label35, "Label35")
-        Me.Label35.Name = "Label35"
-        '
-        'Label36
-        '
-        resources.ApplyResources(Me.Label36, "Label36")
-        Me.Label36.Name = "Label36"
-        '
-        'Label37
-        '
-        resources.ApplyResources(Me.Label37, "Label37")
-        Me.Label37.Name = "Label37"
-        '
-        'Label38
-        '
-        resources.ApplyResources(Me.Label38, "Label38")
-        Me.Label38.Name = "Label38"
-        '
-        'Label39
-        '
-        resources.ApplyResources(Me.Label39, "Label39")
-        Me.Label39.Name = "Label39"
-        '
-        'TableLayoutPanel7
-        '
-        Me.TableLayoutPanel7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel7, "TableLayoutPanel7")
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton41, 2, 7)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton42, 2, 6)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton43, 1, 7)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label61, 0, 7)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton44, 1, 6)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label62, 0, 6)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label63, 0, 0)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton45, 2, 5)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton46, 1, 5)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton47, 1, 4)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton48, 2, 4)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton51, 1, 3)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton52, 2, 3)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton53, 1, 2)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton54, 2, 2)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton55, 1, 1)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton56, 2, 1)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label65, 0, 5)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label66, 0, 4)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label67, 0, 3)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label68, 0, 2)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label69, 0, 1)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label71, 0, 15)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label72, 0, 14)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label73, 0, 13)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label74, 0, 12)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label75, 0, 11)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label76, 0, 10)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label77, 0, 9)
-        Me.TableLayoutPanel7.Controls.Add(Me.Label78, 0, 8)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton104, 2, 8)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton105, 2, 9)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton106, 2, 10)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton107, 2, 11)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton108, 2, 12)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton109, 2, 13)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton110, 2, 14)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton111, 2, 15)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton112, 1, 8)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton113, 1, 9)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton114, 1, 10)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton115, 1, 11)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton116, 1, 12)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton117, 1, 13)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton118, 1, 14)
-        Me.TableLayoutPanel7.Controls.Add(Me.RadioButton119, 1, 15)
-        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
-        '
-        'RadioButton41
-        '
-        resources.ApplyResources(Me.RadioButton41, "RadioButton41")
-        Me.RadioButton41.Name = "RadioButton41"
-        Me.RadioButton41.TabStop = True
-        Me.RadioButton41.UseVisualStyleBackColor = True
-        '
-        'RadioButton42
-        '
-        resources.ApplyResources(Me.RadioButton42, "RadioButton42")
-        Me.RadioButton42.Name = "RadioButton42"
-        Me.RadioButton42.TabStop = True
-        Me.RadioButton42.UseVisualStyleBackColor = True
-        '
-        'RadioButton43
-        '
-        resources.ApplyResources(Me.RadioButton43, "RadioButton43")
-        Me.RadioButton43.Name = "RadioButton43"
-        Me.RadioButton43.TabStop = True
-        Me.RadioButton43.UseVisualStyleBackColor = True
-        '
-        'Label61
-        '
-        resources.ApplyResources(Me.Label61, "Label61")
-        Me.Label61.Name = "Label61"
-        '
-        'RadioButton44
-        '
-        resources.ApplyResources(Me.RadioButton44, "RadioButton44")
-        Me.RadioButton44.Name = "RadioButton44"
-        Me.RadioButton44.TabStop = True
-        Me.RadioButton44.UseVisualStyleBackColor = True
-        '
-        'Label62
-        '
-        resources.ApplyResources(Me.Label62, "Label62")
-        Me.Label62.Name = "Label62"
-        '
-        'Label63
-        '
-        resources.ApplyResources(Me.Label63, "Label63")
-        Me.TableLayoutPanel7.SetColumnSpan(Me.Label63, 3)
-        Me.Label63.Name = "Label63"
-        '
-        'RadioButton45
-        '
-        resources.ApplyResources(Me.RadioButton45, "RadioButton45")
-        Me.RadioButton45.Name = "RadioButton45"
-        Me.RadioButton45.TabStop = True
-        Me.RadioButton45.UseVisualStyleBackColor = True
-        '
-        'RadioButton46
-        '
-        resources.ApplyResources(Me.RadioButton46, "RadioButton46")
-        Me.RadioButton46.Name = "RadioButton46"
-        Me.RadioButton46.TabStop = True
-        Me.RadioButton46.UseVisualStyleBackColor = True
-        '
-        'RadioButton47
-        '
-        resources.ApplyResources(Me.RadioButton47, "RadioButton47")
-        Me.RadioButton47.Name = "RadioButton47"
-        Me.RadioButton47.TabStop = True
-        Me.RadioButton47.UseVisualStyleBackColor = True
-        '
-        'RadioButton48
-        '
-        resources.ApplyResources(Me.RadioButton48, "RadioButton48")
-        Me.RadioButton48.Name = "RadioButton48"
-        Me.RadioButton48.TabStop = True
-        Me.RadioButton48.UseVisualStyleBackColor = True
-        '
-        'RadioButton51
-        '
-        resources.ApplyResources(Me.RadioButton51, "RadioButton51")
-        Me.RadioButton51.Name = "RadioButton51"
-        Me.RadioButton51.TabStop = True
-        Me.RadioButton51.UseVisualStyleBackColor = True
-        '
-        'RadioButton52
-        '
-        resources.ApplyResources(Me.RadioButton52, "RadioButton52")
-        Me.RadioButton52.Name = "RadioButton52"
-        Me.RadioButton52.TabStop = True
-        Me.RadioButton52.UseVisualStyleBackColor = True
-        '
-        'RadioButton53
-        '
-        resources.ApplyResources(Me.RadioButton53, "RadioButton53")
-        Me.RadioButton53.Name = "RadioButton53"
-        Me.RadioButton53.TabStop = True
-        Me.RadioButton53.UseVisualStyleBackColor = True
-        '
-        'RadioButton54
-        '
-        resources.ApplyResources(Me.RadioButton54, "RadioButton54")
-        Me.RadioButton54.Name = "RadioButton54"
-        Me.RadioButton54.TabStop = True
-        Me.RadioButton54.UseVisualStyleBackColor = True
-        '
-        'RadioButton55
-        '
-        resources.ApplyResources(Me.RadioButton55, "RadioButton55")
-        Me.RadioButton55.Name = "RadioButton55"
-        Me.RadioButton55.TabStop = True
-        Me.RadioButton55.UseVisualStyleBackColor = True
-        '
-        'RadioButton56
-        '
-        resources.ApplyResources(Me.RadioButton56, "RadioButton56")
-        Me.RadioButton56.Name = "RadioButton56"
-        Me.RadioButton56.TabStop = True
-        Me.RadioButton56.UseVisualStyleBackColor = True
-        '
-        'Label65
-        '
-        resources.ApplyResources(Me.Label65, "Label65")
-        Me.Label65.Name = "Label65"
-        '
-        'Label66
-        '
-        resources.ApplyResources(Me.Label66, "Label66")
-        Me.Label66.Name = "Label66"
-        '
-        'Label67
-        '
-        resources.ApplyResources(Me.Label67, "Label67")
-        Me.Label67.Name = "Label67"
-        '
-        'Label68
-        '
-        resources.ApplyResources(Me.Label68, "Label68")
-        Me.Label68.Name = "Label68"
-        '
-        'Label69
-        '
-        resources.ApplyResources(Me.Label69, "Label69")
-        Me.Label69.Name = "Label69"
-        '
-        'Label71
-        '
-        resources.ApplyResources(Me.Label71, "Label71")
-        Me.Label71.Name = "Label71"
-        '
-        'Label72
-        '
-        resources.ApplyResources(Me.Label72, "Label72")
-        Me.Label72.Name = "Label72"
-        '
-        'Label73
-        '
-        resources.ApplyResources(Me.Label73, "Label73")
-        Me.Label73.Name = "Label73"
-        '
-        'Label74
-        '
-        resources.ApplyResources(Me.Label74, "Label74")
-        Me.Label74.Name = "Label74"
-        '
-        'Label75
-        '
-        resources.ApplyResources(Me.Label75, "Label75")
-        Me.Label75.Name = "Label75"
-        '
-        'Label76
-        '
-        resources.ApplyResources(Me.Label76, "Label76")
-        Me.Label76.Name = "Label76"
-        '
-        'Label77
-        '
-        resources.ApplyResources(Me.Label77, "Label77")
-        Me.Label77.Name = "Label77"
-        '
-        'Label78
-        '
-        resources.ApplyResources(Me.Label78, "Label78")
-        Me.Label78.Name = "Label78"
-        '
-        'RadioButton104
-        '
-        resources.ApplyResources(Me.RadioButton104, "RadioButton104")
-        Me.RadioButton104.Name = "RadioButton104"
-        Me.RadioButton104.TabStop = True
-        Me.RadioButton104.UseVisualStyleBackColor = True
-        '
-        'RadioButton105
-        '
-        resources.ApplyResources(Me.RadioButton105, "RadioButton105")
-        Me.RadioButton105.Name = "RadioButton105"
-        Me.RadioButton105.TabStop = True
-        Me.RadioButton105.UseVisualStyleBackColor = True
-        '
-        'RadioButton106
-        '
-        resources.ApplyResources(Me.RadioButton106, "RadioButton106")
-        Me.RadioButton106.Name = "RadioButton106"
-        Me.RadioButton106.TabStop = True
-        Me.RadioButton106.UseVisualStyleBackColor = True
-        '
-        'RadioButton107
-        '
-        resources.ApplyResources(Me.RadioButton107, "RadioButton107")
-        Me.RadioButton107.Name = "RadioButton107"
-        Me.RadioButton107.TabStop = True
-        Me.RadioButton107.UseVisualStyleBackColor = True
-        '
-        'RadioButton108
-        '
-        resources.ApplyResources(Me.RadioButton108, "RadioButton108")
-        Me.RadioButton108.Name = "RadioButton108"
-        Me.RadioButton108.TabStop = True
-        Me.RadioButton108.UseVisualStyleBackColor = True
-        '
-        'RadioButton109
-        '
-        resources.ApplyResources(Me.RadioButton109, "RadioButton109")
-        Me.RadioButton109.Name = "RadioButton109"
-        Me.RadioButton109.TabStop = True
-        Me.RadioButton109.UseVisualStyleBackColor = True
-        '
-        'RadioButton110
-        '
-        resources.ApplyResources(Me.RadioButton110, "RadioButton110")
-        Me.RadioButton110.Name = "RadioButton110"
-        Me.RadioButton110.TabStop = True
-        Me.RadioButton110.UseVisualStyleBackColor = True
-        '
-        'RadioButton111
-        '
-        resources.ApplyResources(Me.RadioButton111, "RadioButton111")
-        Me.RadioButton111.Name = "RadioButton111"
-        Me.RadioButton111.TabStop = True
-        Me.RadioButton111.UseVisualStyleBackColor = True
-        '
-        'RadioButton112
-        '
-        resources.ApplyResources(Me.RadioButton112, "RadioButton112")
-        Me.RadioButton112.Name = "RadioButton112"
-        Me.RadioButton112.TabStop = True
-        Me.RadioButton112.UseVisualStyleBackColor = True
-        '
-        'RadioButton113
-        '
-        resources.ApplyResources(Me.RadioButton113, "RadioButton113")
-        Me.RadioButton113.Name = "RadioButton113"
-        Me.RadioButton113.TabStop = True
-        Me.RadioButton113.UseVisualStyleBackColor = True
-        '
-        'RadioButton114
-        '
-        resources.ApplyResources(Me.RadioButton114, "RadioButton114")
-        Me.RadioButton114.Name = "RadioButton114"
-        Me.RadioButton114.TabStop = True
-        Me.RadioButton114.UseVisualStyleBackColor = True
-        '
-        'RadioButton115
-        '
-        resources.ApplyResources(Me.RadioButton115, "RadioButton115")
-        Me.RadioButton115.Name = "RadioButton115"
-        Me.RadioButton115.TabStop = True
-        Me.RadioButton115.UseVisualStyleBackColor = True
-        '
-        'RadioButton116
-        '
-        resources.ApplyResources(Me.RadioButton116, "RadioButton116")
-        Me.RadioButton116.Name = "RadioButton116"
-        Me.RadioButton116.TabStop = True
-        Me.RadioButton116.UseVisualStyleBackColor = True
-        '
-        'RadioButton117
-        '
-        resources.ApplyResources(Me.RadioButton117, "RadioButton117")
-        Me.RadioButton117.Name = "RadioButton117"
-        Me.RadioButton117.TabStop = True
-        Me.RadioButton117.UseVisualStyleBackColor = True
-        '
-        'RadioButton118
-        '
-        resources.ApplyResources(Me.RadioButton118, "RadioButton118")
-        Me.RadioButton118.Name = "RadioButton118"
-        Me.RadioButton118.TabStop = True
-        Me.RadioButton118.UseVisualStyleBackColor = True
-        '
-        'RadioButton119
-        '
-        resources.ApplyResources(Me.RadioButton119, "RadioButton119")
-        Me.RadioButton119.Name = "RadioButton119"
-        Me.RadioButton119.TabStop = True
-        Me.RadioButton119.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel5, "TableLayoutPanel5")
-        Me.TableLayoutPanel5.Controls.Add(Me.Label58, 0, 17)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton40, 2, 7)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton39, 2, 6)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton38, 1, 7)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label48, 0, 7)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton37, 1, 6)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label47, 0, 6)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label34, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton17, 2, 5)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton18, 1, 5)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton29, 1, 4)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton30, 2, 4)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton31, 1, 3)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton32, 2, 3)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton33, 1, 2)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton34, 2, 2)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton35, 1, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton36, 2, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label42, 0, 5)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label43, 0, 4)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label44, 0, 3)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label45, 0, 2)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label46, 0, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label50, 0, 16)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label49, 0, 15)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label52, 0, 14)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label53, 0, 12)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label54, 0, 11)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label55, 0, 10)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label56, 0, 9)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label57, 0, 8)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton73, 1, 8)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton74, 1, 9)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton83, 1, 10)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton84, 1, 11)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton85, 1, 12)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton86, 1, 13)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton87, 1, 14)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton88, 1, 15)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label51, 0, 13)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton89, 1, 16)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton90, 1, 17)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton91, 2, 8)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton92, 2, 9)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton93, 2, 10)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton94, 2, 11)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton95, 2, 12)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton96, 2, 13)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton97, 2, 14)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton98, 2, 15)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton99, 2, 16)
-        Me.TableLayoutPanel5.Controls.Add(Me.RadioButton100, 2, 17)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        '
-        'Label58
-        '
-        resources.ApplyResources(Me.Label58, "Label58")
-        Me.Label58.Name = "Label58"
-        '
-        'RadioButton40
-        '
-        resources.ApplyResources(Me.RadioButton40, "RadioButton40")
-        Me.RadioButton40.Name = "RadioButton40"
-        Me.RadioButton40.TabStop = True
-        Me.RadioButton40.UseVisualStyleBackColor = True
-        '
-        'RadioButton39
-        '
-        resources.ApplyResources(Me.RadioButton39, "RadioButton39")
-        Me.RadioButton39.Name = "RadioButton39"
-        Me.RadioButton39.TabStop = True
-        Me.RadioButton39.UseVisualStyleBackColor = True
-        '
-        'RadioButton38
-        '
-        resources.ApplyResources(Me.RadioButton38, "RadioButton38")
-        Me.RadioButton38.Name = "RadioButton38"
-        Me.RadioButton38.TabStop = True
-        Me.RadioButton38.UseVisualStyleBackColor = True
-        '
-        'Label48
-        '
-        resources.ApplyResources(Me.Label48, "Label48")
-        Me.Label48.Name = "Label48"
-        '
-        'RadioButton37
-        '
-        resources.ApplyResources(Me.RadioButton37, "RadioButton37")
-        Me.RadioButton37.Name = "RadioButton37"
-        Me.RadioButton37.TabStop = True
-        Me.RadioButton37.UseVisualStyleBackColor = True
-        '
-        'Label47
-        '
-        resources.ApplyResources(Me.Label47, "Label47")
-        Me.Label47.Name = "Label47"
-        '
-        'Label34
-        '
-        resources.ApplyResources(Me.Label34, "Label34")
-        Me.TableLayoutPanel5.SetColumnSpan(Me.Label34, 3)
-        Me.Label34.Name = "Label34"
-        '
-        'RadioButton17
-        '
-        resources.ApplyResources(Me.RadioButton17, "RadioButton17")
-        Me.RadioButton17.Name = "RadioButton17"
-        Me.RadioButton17.TabStop = True
-        Me.RadioButton17.UseVisualStyleBackColor = True
-        '
-        'RadioButton18
-        '
-        resources.ApplyResources(Me.RadioButton18, "RadioButton18")
-        Me.RadioButton18.Name = "RadioButton18"
-        Me.RadioButton18.TabStop = True
-        Me.RadioButton18.UseVisualStyleBackColor = True
-        '
-        'RadioButton29
-        '
-        resources.ApplyResources(Me.RadioButton29, "RadioButton29")
-        Me.RadioButton29.Name = "RadioButton29"
-        Me.RadioButton29.TabStop = True
-        Me.RadioButton29.UseVisualStyleBackColor = True
-        '
-        'RadioButton30
-        '
-        resources.ApplyResources(Me.RadioButton30, "RadioButton30")
-        Me.RadioButton30.Name = "RadioButton30"
-        Me.RadioButton30.TabStop = True
-        Me.RadioButton30.UseVisualStyleBackColor = True
-        '
-        'RadioButton31
-        '
-        resources.ApplyResources(Me.RadioButton31, "RadioButton31")
-        Me.RadioButton31.Name = "RadioButton31"
-        Me.RadioButton31.TabStop = True
-        Me.RadioButton31.UseVisualStyleBackColor = True
-        '
-        'RadioButton32
-        '
-        resources.ApplyResources(Me.RadioButton32, "RadioButton32")
-        Me.RadioButton32.Name = "RadioButton32"
-        Me.RadioButton32.TabStop = True
-        Me.RadioButton32.UseVisualStyleBackColor = True
-        '
-        'RadioButton33
-        '
-        resources.ApplyResources(Me.RadioButton33, "RadioButton33")
-        Me.RadioButton33.Name = "RadioButton33"
-        Me.RadioButton33.TabStop = True
-        Me.RadioButton33.UseVisualStyleBackColor = True
-        '
-        'RadioButton34
-        '
-        resources.ApplyResources(Me.RadioButton34, "RadioButton34")
-        Me.RadioButton34.Name = "RadioButton34"
-        Me.RadioButton34.TabStop = True
-        Me.RadioButton34.UseVisualStyleBackColor = True
-        '
-        'RadioButton35
-        '
-        resources.ApplyResources(Me.RadioButton35, "RadioButton35")
-        Me.RadioButton35.Name = "RadioButton35"
-        Me.RadioButton35.TabStop = True
-        Me.RadioButton35.UseVisualStyleBackColor = True
-        '
-        'RadioButton36
-        '
-        resources.ApplyResources(Me.RadioButton36, "RadioButton36")
-        Me.RadioButton36.Name = "RadioButton36"
-        Me.RadioButton36.TabStop = True
-        Me.RadioButton36.UseVisualStyleBackColor = True
-        '
-        'Label42
-        '
-        resources.ApplyResources(Me.Label42, "Label42")
-        Me.Label42.Name = "Label42"
-        '
-        'Label43
-        '
-        resources.ApplyResources(Me.Label43, "Label43")
-        Me.Label43.Name = "Label43"
-        '
-        'Label44
-        '
-        resources.ApplyResources(Me.Label44, "Label44")
-        Me.Label44.Name = "Label44"
-        '
-        'Label45
-        '
-        resources.ApplyResources(Me.Label45, "Label45")
-        Me.Label45.Name = "Label45"
-        '
-        'Label46
-        '
-        resources.ApplyResources(Me.Label46, "Label46")
-        Me.Label46.Name = "Label46"
-        '
-        'Label50
-        '
-        resources.ApplyResources(Me.Label50, "Label50")
-        Me.Label50.Name = "Label50"
-        '
-        'Label49
-        '
-        resources.ApplyResources(Me.Label49, "Label49")
-        Me.Label49.Name = "Label49"
-        '
-        'Label52
-        '
-        resources.ApplyResources(Me.Label52, "Label52")
-        Me.Label52.Name = "Label52"
-        '
-        'Label53
-        '
-        resources.ApplyResources(Me.Label53, "Label53")
-        Me.Label53.Name = "Label53"
-        '
-        'Label54
-        '
-        resources.ApplyResources(Me.Label54, "Label54")
-        Me.Label54.Name = "Label54"
-        '
-        'Label55
-        '
-        resources.ApplyResources(Me.Label55, "Label55")
-        Me.Label55.Name = "Label55"
-        '
-        'Label56
-        '
-        resources.ApplyResources(Me.Label56, "Label56")
-        Me.Label56.Name = "Label56"
-        '
-        'Label57
-        '
-        resources.ApplyResources(Me.Label57, "Label57")
-        Me.Label57.Name = "Label57"
-        '
-        'RadioButton73
-        '
-        resources.ApplyResources(Me.RadioButton73, "RadioButton73")
-        Me.RadioButton73.Name = "RadioButton73"
-        Me.RadioButton73.TabStop = True
-        Me.RadioButton73.UseVisualStyleBackColor = True
-        '
-        'RadioButton74
-        '
-        resources.ApplyResources(Me.RadioButton74, "RadioButton74")
-        Me.RadioButton74.Name = "RadioButton74"
-        Me.RadioButton74.TabStop = True
-        Me.RadioButton74.UseVisualStyleBackColor = True
-        '
-        'RadioButton83
-        '
-        resources.ApplyResources(Me.RadioButton83, "RadioButton83")
-        Me.RadioButton83.Name = "RadioButton83"
-        Me.RadioButton83.TabStop = True
-        Me.RadioButton83.UseVisualStyleBackColor = True
-        '
-        'RadioButton84
-        '
-        resources.ApplyResources(Me.RadioButton84, "RadioButton84")
-        Me.RadioButton84.Name = "RadioButton84"
-        Me.RadioButton84.TabStop = True
-        Me.RadioButton84.UseVisualStyleBackColor = True
-        '
-        'RadioButton85
-        '
-        resources.ApplyResources(Me.RadioButton85, "RadioButton85")
-        Me.RadioButton85.Name = "RadioButton85"
-        Me.RadioButton85.TabStop = True
-        Me.RadioButton85.UseVisualStyleBackColor = True
-        '
-        'RadioButton86
-        '
-        resources.ApplyResources(Me.RadioButton86, "RadioButton86")
-        Me.RadioButton86.Name = "RadioButton86"
-        Me.RadioButton86.TabStop = True
-        Me.RadioButton86.UseVisualStyleBackColor = True
-        '
-        'RadioButton87
-        '
-        resources.ApplyResources(Me.RadioButton87, "RadioButton87")
-        Me.RadioButton87.Name = "RadioButton87"
-        Me.RadioButton87.TabStop = True
-        Me.RadioButton87.UseVisualStyleBackColor = True
-        '
-        'RadioButton88
-        '
-        resources.ApplyResources(Me.RadioButton88, "RadioButton88")
-        Me.RadioButton88.Name = "RadioButton88"
-        Me.RadioButton88.TabStop = True
-        Me.RadioButton88.UseVisualStyleBackColor = True
-        '
-        'Label51
-        '
-        resources.ApplyResources(Me.Label51, "Label51")
-        Me.Label51.Name = "Label51"
-        '
-        'RadioButton89
-        '
-        resources.ApplyResources(Me.RadioButton89, "RadioButton89")
-        Me.RadioButton89.Name = "RadioButton89"
-        Me.RadioButton89.TabStop = True
-        Me.RadioButton89.UseVisualStyleBackColor = True
-        '
-        'RadioButton90
-        '
-        resources.ApplyResources(Me.RadioButton90, "RadioButton90")
-        Me.RadioButton90.Name = "RadioButton90"
-        Me.RadioButton90.TabStop = True
-        Me.RadioButton90.UseVisualStyleBackColor = True
-        '
-        'RadioButton91
-        '
-        resources.ApplyResources(Me.RadioButton91, "RadioButton91")
-        Me.RadioButton91.Name = "RadioButton91"
-        Me.RadioButton91.TabStop = True
-        Me.RadioButton91.UseVisualStyleBackColor = True
-        '
-        'RadioButton92
-        '
-        resources.ApplyResources(Me.RadioButton92, "RadioButton92")
-        Me.RadioButton92.Name = "RadioButton92"
-        Me.RadioButton92.TabStop = True
-        Me.RadioButton92.UseVisualStyleBackColor = True
-        '
-        'RadioButton93
-        '
-        resources.ApplyResources(Me.RadioButton93, "RadioButton93")
-        Me.RadioButton93.Name = "RadioButton93"
-        Me.RadioButton93.TabStop = True
-        Me.RadioButton93.UseVisualStyleBackColor = True
-        '
-        'RadioButton94
-        '
-        resources.ApplyResources(Me.RadioButton94, "RadioButton94")
-        Me.RadioButton94.Name = "RadioButton94"
-        Me.RadioButton94.TabStop = True
-        Me.RadioButton94.UseVisualStyleBackColor = True
-        '
-        'RadioButton95
-        '
-        resources.ApplyResources(Me.RadioButton95, "RadioButton95")
-        Me.RadioButton95.Name = "RadioButton95"
-        Me.RadioButton95.TabStop = True
-        Me.RadioButton95.UseVisualStyleBackColor = True
-        '
-        'RadioButton96
-        '
-        resources.ApplyResources(Me.RadioButton96, "RadioButton96")
-        Me.RadioButton96.Name = "RadioButton96"
-        Me.RadioButton96.TabStop = True
-        Me.RadioButton96.UseVisualStyleBackColor = True
-        '
-        'RadioButton97
-        '
-        resources.ApplyResources(Me.RadioButton97, "RadioButton97")
-        Me.RadioButton97.Name = "RadioButton97"
-        Me.RadioButton97.TabStop = True
-        Me.RadioButton97.UseVisualStyleBackColor = True
-        '
-        'RadioButton98
-        '
-        resources.ApplyResources(Me.RadioButton98, "RadioButton98")
-        Me.RadioButton98.Name = "RadioButton98"
-        Me.RadioButton98.TabStop = True
-        Me.RadioButton98.UseVisualStyleBackColor = True
-        '
-        'RadioButton99
-        '
-        resources.ApplyResources(Me.RadioButton99, "RadioButton99")
-        Me.RadioButton99.Name = "RadioButton99"
-        Me.RadioButton99.TabStop = True
-        Me.RadioButton99.UseVisualStyleBackColor = True
-        '
-        'RadioButton100
-        '
-        resources.ApplyResources(Me.RadioButton100, "RadioButton100")
-        Me.RadioButton100.Name = "RadioButton100"
-        Me.RadioButton100.TabStop = True
-        Me.RadioButton100.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
-        Me.TableLayoutPanel1.Controls.Add(Me.Label33, 0, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton11, 1, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton16, 2, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton15, 2, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton10, 1, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton9, 1, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton14, 2, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton8, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton13, 2, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton7, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton12, 2, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton5, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton6, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label32, 0, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label31, 0, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label30, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label29, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label28, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label40, 0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        '
-        'Label33
-        '
-        resources.ApplyResources(Me.Label33, "Label33")
-        Me.Label33.Name = "Label33"
-        '
-        'RadioButton11
-        '
-        resources.ApplyResources(Me.RadioButton11, "RadioButton11")
-        Me.RadioButton11.Name = "RadioButton11"
-        Me.RadioButton11.TabStop = True
-        Me.RadioButton11.UseVisualStyleBackColor = True
-        '
-        'RadioButton16
-        '
-        resources.ApplyResources(Me.RadioButton16, "RadioButton16")
-        Me.RadioButton16.Name = "RadioButton16"
-        Me.RadioButton16.TabStop = True
-        Me.RadioButton16.UseVisualStyleBackColor = True
-        '
-        'RadioButton15
-        '
-        resources.ApplyResources(Me.RadioButton15, "RadioButton15")
-        Me.RadioButton15.Name = "RadioButton15"
-        Me.RadioButton15.TabStop = True
-        Me.RadioButton15.UseVisualStyleBackColor = True
-        '
-        'RadioButton10
-        '
-        resources.ApplyResources(Me.RadioButton10, "RadioButton10")
-        Me.RadioButton10.Name = "RadioButton10"
-        Me.RadioButton10.TabStop = True
-        Me.RadioButton10.UseVisualStyleBackColor = True
-        '
-        'RadioButton9
-        '
-        resources.ApplyResources(Me.RadioButton9, "RadioButton9")
-        Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.TabStop = True
-        Me.RadioButton9.UseVisualStyleBackColor = True
-        '
-        'RadioButton14
-        '
-        resources.ApplyResources(Me.RadioButton14, "RadioButton14")
-        Me.RadioButton14.Name = "RadioButton14"
-        Me.RadioButton14.TabStop = True
-        Me.RadioButton14.UseVisualStyleBackColor = True
-        '
-        'RadioButton8
-        '
-        resources.ApplyResources(Me.RadioButton8, "RadioButton8")
-        Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.TabStop = True
-        Me.RadioButton8.UseVisualStyleBackColor = True
-        '
-        'RadioButton13
-        '
-        resources.ApplyResources(Me.RadioButton13, "RadioButton13")
-        Me.RadioButton13.Name = "RadioButton13"
-        Me.RadioButton13.TabStop = True
-        Me.RadioButton13.UseVisualStyleBackColor = True
-        '
-        'RadioButton7
-        '
-        resources.ApplyResources(Me.RadioButton7, "RadioButton7")
-        Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.TabStop = True
-        Me.RadioButton7.UseVisualStyleBackColor = True
-        '
-        'RadioButton12
-        '
-        resources.ApplyResources(Me.RadioButton12, "RadioButton12")
-        Me.RadioButton12.Name = "RadioButton12"
-        Me.RadioButton12.TabStop = True
-        Me.RadioButton12.UseVisualStyleBackColor = True
-        '
-        'RadioButton5
-        '
-        resources.ApplyResources(Me.RadioButton5, "RadioButton5")
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'RadioButton6
-        '
-        resources.ApplyResources(Me.RadioButton6, "RadioButton6")
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.UseVisualStyleBackColor = True
-        '
-        'Label32
-        '
-        resources.ApplyResources(Me.Label32, "Label32")
-        Me.Label32.Name = "Label32"
-        '
-        'Label31
-        '
-        resources.ApplyResources(Me.Label31, "Label31")
-        Me.Label31.Name = "Label31"
-        '
-        'Label30
-        '
-        resources.ApplyResources(Me.Label30, "Label30")
-        Me.Label30.Name = "Label30"
-        '
-        'Label29
-        '
-        resources.ApplyResources(Me.Label29, "Label29")
-        Me.Label29.Name = "Label29"
-        '
-        'Label28
-        '
-        resources.ApplyResources(Me.Label28, "Label28")
-        Me.Label28.Name = "Label28"
-        '
-        'Label40
-        '
-        resources.ApplyResources(Me.Label40, "Label40")
-        Me.TableLayoutPanel1.SetColumnSpan(Me.Label40, 3)
-        Me.Label40.Name = "Label40"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Info
-        resources.ApplyResources(Me.RichTextBox1, "RichTextBox1")
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        '
-        'BttnLoggavGiver
-        '
-        resources.ApplyResources(Me.BttnLoggavGiver, "BttnLoggavGiver")
-        Me.BttnLoggavGiver.Name = "BttnLoggavGiver"
-        Me.BttnLoggavGiver.UseVisualStyleBackColor = True
-        '
         'PanelAnsatt
         '
+        resources.ApplyResources(Me.PanelAnsatt, "PanelAnsatt")
         Me.PanelAnsatt.Controls.Add(Me.Label23)
         Me.PanelAnsatt.Controls.Add(Me.BttnLoggavAnsatt)
         Me.PanelAnsatt.Controls.Add(Me.TabControl1)
-        resources.ApplyResources(Me.PanelAnsatt, "PanelAnsatt")
         Me.PanelAnsatt.Name = "PanelAnsatt"
         '
         'Label23
@@ -2791,17 +2384,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend3)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart1.Series.Add(Series3)
         '
         'ToolTip1
         '
@@ -2811,17 +2404,411 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
+        'Label128
+        '
+        resources.ApplyResources(Me.Label128, "Label128")
+        Me.Label128.Name = "Label128"
+        '
+        'Label129
+        '
+        resources.ApplyResources(Me.Label129, "Label129")
+        Me.Label129.Name = "Label129"
+        '
+        'Label130
+        '
+        resources.ApplyResources(Me.Label130, "Label130")
+        Me.Label130.Name = "Label130"
+        '
+        'Label131
+        '
+        resources.ApplyResources(Me.Label131, "Label131")
+        Me.Label131.Name = "Label131"
+        '
+        'Label132
+        '
+        resources.ApplyResources(Me.Label132, "Label132")
+        Me.Label132.Name = "Label132"
+        '
+        'Label133
+        '
+        resources.ApplyResources(Me.Label133, "Label133")
+        Me.Label133.Name = "Label133"
+        '
+        'Label134
+        '
+        resources.ApplyResources(Me.Label134, "Label134")
+        Me.Label134.Name = "Label134"
+        '
+        'Label135
+        '
+        resources.ApplyResources(Me.Label135, "Label135")
+        Me.Label135.Name = "Label135"
+        '
+        'Label136
+        '
+        resources.ApplyResources(Me.Label136, "Label136")
+        Me.Label136.Name = "Label136"
+        '
+        'CheckBox61
+        '
+        resources.ApplyResources(Me.CheckBox61, "CheckBox61")
+        Me.CheckBox61.Name = "CheckBox61"
+        Me.CheckBox61.UseVisualStyleBackColor = True
+        '
+        'CheckBox62
+        '
+        resources.ApplyResources(Me.CheckBox62, "CheckBox62")
+        Me.CheckBox62.Name = "CheckBox62"
+        Me.CheckBox62.UseVisualStyleBackColor = True
+        '
+        'CheckBox63
+        '
+        resources.ApplyResources(Me.CheckBox63, "CheckBox63")
+        Me.CheckBox63.Name = "CheckBox63"
+        Me.CheckBox63.UseVisualStyleBackColor = True
+        '
+        'CheckBox64
+        '
+        resources.ApplyResources(Me.CheckBox64, "CheckBox64")
+        Me.CheckBox64.Name = "CheckBox64"
+        Me.CheckBox64.UseVisualStyleBackColor = True
+        '
+        'CheckBox65
+        '
+        resources.ApplyResources(Me.CheckBox65, "CheckBox65")
+        Me.CheckBox65.Name = "CheckBox65"
+        Me.CheckBox65.UseVisualStyleBackColor = True
+        '
+        'CheckBox66
+        '
+        resources.ApplyResources(Me.CheckBox66, "CheckBox66")
+        Me.CheckBox66.Name = "CheckBox66"
+        Me.CheckBox66.UseVisualStyleBackColor = True
+        '
+        'CheckBox67
+        '
+        resources.ApplyResources(Me.CheckBox67, "CheckBox67")
+        Me.CheckBox67.Name = "CheckBox67"
+        Me.CheckBox67.UseVisualStyleBackColor = True
+        '
+        'CheckBox68
+        '
+        resources.ApplyResources(Me.CheckBox68, "CheckBox68")
+        Me.CheckBox68.Name = "CheckBox68"
+        Me.CheckBox68.UseVisualStyleBackColor = True
+        '
+        'CheckBox69
+        '
+        resources.ApplyResources(Me.CheckBox69, "CheckBox69")
+        Me.CheckBox69.Name = "CheckBox69"
+        Me.CheckBox69.UseVisualStyleBackColor = True
+        '
+        'CheckBox70
+        '
+        resources.ApplyResources(Me.CheckBox70, "CheckBox70")
+        Me.CheckBox70.Name = "CheckBox70"
+        Me.CheckBox70.UseVisualStyleBackColor = True
+        '
+        'CheckBox71
+        '
+        resources.ApplyResources(Me.CheckBox71, "CheckBox71")
+        Me.CheckBox71.Name = "CheckBox71"
+        Me.CheckBox71.UseVisualStyleBackColor = True
+        '
+        'CheckBox72
+        '
+        resources.ApplyResources(Me.CheckBox72, "CheckBox72")
+        Me.CheckBox72.Name = "CheckBox72"
+        Me.CheckBox72.UseVisualStyleBackColor = True
+        '
+        'CheckBox73
+        '
+        resources.ApplyResources(Me.CheckBox73, "CheckBox73")
+        Me.CheckBox73.Name = "CheckBox73"
+        Me.CheckBox73.UseVisualStyleBackColor = True
+        '
+        'CheckBox74
+        '
+        resources.ApplyResources(Me.CheckBox74, "CheckBox74")
+        Me.CheckBox74.Name = "CheckBox74"
+        Me.CheckBox74.UseVisualStyleBackColor = True
+        '
+        'CheckBox75
+        '
+        resources.ApplyResources(Me.CheckBox75, "CheckBox75")
+        Me.CheckBox75.Name = "CheckBox75"
+        Me.CheckBox75.UseVisualStyleBackColor = True
+        '
+        'CheckBox76
+        '
+        resources.ApplyResources(Me.CheckBox76, "CheckBox76")
+        Me.CheckBox76.Name = "CheckBox76"
+        Me.CheckBox76.UseVisualStyleBackColor = True
+        '
+        'CheckBox77
+        '
+        resources.ApplyResources(Me.CheckBox77, "CheckBox77")
+        Me.CheckBox77.Name = "CheckBox77"
+        Me.CheckBox77.UseVisualStyleBackColor = True
+        '
+        'CheckBox78
+        '
+        resources.ApplyResources(Me.CheckBox78, "CheckBox78")
+        Me.CheckBox78.Name = "CheckBox78"
+        Me.CheckBox78.UseVisualStyleBackColor = True
+        '
+        'CheckBox79
+        '
+        resources.ApplyResources(Me.CheckBox79, "CheckBox79")
+        Me.CheckBox79.Name = "CheckBox79"
+        Me.CheckBox79.UseVisualStyleBackColor = True
+        '
+        'CheckBox80
+        '
+        resources.ApplyResources(Me.CheckBox80, "CheckBox80")
+        Me.CheckBox80.Name = "CheckBox80"
+        Me.CheckBox80.UseVisualStyleBackColor = True
+        '
+        'CheckBox81
+        '
+        resources.ApplyResources(Me.CheckBox81, "CheckBox81")
+        Me.CheckBox81.Name = "CheckBox81"
+        Me.CheckBox81.UseVisualStyleBackColor = True
+        '
+        'CheckBox82
+        '
+        resources.ApplyResources(Me.CheckBox82, "CheckBox82")
+        Me.CheckBox82.Name = "CheckBox82"
+        Me.CheckBox82.UseVisualStyleBackColor = True
+        '
+        'CheckBox83
+        '
+        resources.ApplyResources(Me.CheckBox83, "CheckBox83")
+        Me.CheckBox83.Name = "CheckBox83"
+        Me.CheckBox83.UseVisualStyleBackColor = True
+        '
+        'CheckBox84
+        '
+        resources.ApplyResources(Me.CheckBox84, "CheckBox84")
+        Me.CheckBox84.Name = "CheckBox84"
+        Me.CheckBox84.UseVisualStyleBackColor = True
+        '
+        'CheckBox85
+        '
+        resources.ApplyResources(Me.CheckBox85, "CheckBox85")
+        Me.CheckBox85.Name = "CheckBox85"
+        Me.CheckBox85.UseVisualStyleBackColor = True
+        '
+        'CheckBox86
+        '
+        resources.ApplyResources(Me.CheckBox86, "CheckBox86")
+        Me.CheckBox86.Name = "CheckBox86"
+        Me.CheckBox86.UseVisualStyleBackColor = True
+        '
+        'CheckBox87
+        '
+        resources.ApplyResources(Me.CheckBox87, "CheckBox87")
+        Me.CheckBox87.Name = "CheckBox87"
+        Me.CheckBox87.UseVisualStyleBackColor = True
+        '
+        'CheckBox88
+        '
+        resources.ApplyResources(Me.CheckBox88, "CheckBox88")
+        Me.CheckBox88.Name = "CheckBox88"
+        Me.CheckBox88.UseVisualStyleBackColor = True
+        '
+        'CheckBox89
+        '
+        resources.ApplyResources(Me.CheckBox89, "CheckBox89")
+        Me.CheckBox89.Name = "CheckBox89"
+        Me.CheckBox89.UseVisualStyleBackColor = True
+        '
+        'CheckBox90
+        '
+        resources.ApplyResources(Me.CheckBox90, "CheckBox90")
+        Me.CheckBox90.Name = "CheckBox90"
+        Me.CheckBox90.UseVisualStyleBackColor = True
+        '
+        'CheckBox91
+        '
+        resources.ApplyResources(Me.CheckBox91, "CheckBox91")
+        Me.CheckBox91.Name = "CheckBox91"
+        Me.CheckBox91.UseVisualStyleBackColor = True
+        '
+        'CheckBox92
+        '
+        resources.ApplyResources(Me.CheckBox92, "CheckBox92")
+        Me.CheckBox92.Name = "CheckBox92"
+        Me.CheckBox92.UseVisualStyleBackColor = True
+        '
+        'CheckBox93
+        '
+        resources.ApplyResources(Me.CheckBox93, "CheckBox93")
+        Me.CheckBox93.Name = "CheckBox93"
+        Me.CheckBox93.UseVisualStyleBackColor = True
+        '
+        'CheckBox94
+        '
+        resources.ApplyResources(Me.CheckBox94, "CheckBox94")
+        Me.CheckBox94.Name = "CheckBox94"
+        Me.CheckBox94.UseVisualStyleBackColor = True
+        '
+        'CheckBox95
+        '
+        resources.ApplyResources(Me.CheckBox95, "CheckBox95")
+        Me.CheckBox95.Name = "CheckBox95"
+        Me.CheckBox95.UseVisualStyleBackColor = True
+        '
+        'CheckBox96
+        '
+        resources.ApplyResources(Me.CheckBox96, "CheckBox96")
+        Me.CheckBox96.Name = "CheckBox96"
+        Me.CheckBox96.UseVisualStyleBackColor = True
+        '
+        'CheckBox97
+        '
+        resources.ApplyResources(Me.CheckBox97, "CheckBox97")
+        Me.CheckBox97.Name = "CheckBox97"
+        Me.CheckBox97.UseVisualStyleBackColor = True
+        '
+        'CheckBox98
+        '
+        resources.ApplyResources(Me.CheckBox98, "CheckBox98")
+        Me.CheckBox98.Name = "CheckBox98"
+        Me.CheckBox98.UseVisualStyleBackColor = True
+        '
+        'CheckBox99
+        '
+        resources.ApplyResources(Me.CheckBox99, "CheckBox99")
+        Me.CheckBox99.Name = "CheckBox99"
+        Me.CheckBox99.UseVisualStyleBackColor = True
+        '
+        'CheckBox100
+        '
+        resources.ApplyResources(Me.CheckBox100, "CheckBox100")
+        Me.CheckBox100.Name = "CheckBox100"
+        Me.CheckBox100.UseVisualStyleBackColor = True
+        '
+        'CheckBox101
+        '
+        resources.ApplyResources(Me.CheckBox101, "CheckBox101")
+        Me.CheckBox101.Name = "CheckBox101"
+        Me.CheckBox101.UseVisualStyleBackColor = True
+        '
+        'CheckBox102
+        '
+        resources.ApplyResources(Me.CheckBox102, "CheckBox102")
+        Me.CheckBox102.Name = "CheckBox102"
+        Me.CheckBox102.UseVisualStyleBackColor = True
+        '
+        'CheckBox103
+        '
+        resources.ApplyResources(Me.CheckBox103, "CheckBox103")
+        Me.CheckBox103.Name = "CheckBox103"
+        Me.CheckBox103.UseVisualStyleBackColor = True
+        '
+        'CheckBox104
+        '
+        resources.ApplyResources(Me.CheckBox104, "CheckBox104")
+        Me.CheckBox104.Name = "CheckBox104"
+        Me.CheckBox104.UseVisualStyleBackColor = True
+        '
+        'CheckBox105
+        '
+        resources.ApplyResources(Me.CheckBox105, "CheckBox105")
+        Me.CheckBox105.Name = "CheckBox105"
+        Me.CheckBox105.UseVisualStyleBackColor = True
+        '
+        'CheckBox106
+        '
+        resources.ApplyResources(Me.CheckBox106, "CheckBox106")
+        Me.CheckBox106.Name = "CheckBox106"
+        Me.CheckBox106.UseVisualStyleBackColor = True
+        '
+        'CheckBox107
+        '
+        resources.ApplyResources(Me.CheckBox107, "CheckBox107")
+        Me.CheckBox107.Name = "CheckBox107"
+        Me.CheckBox107.UseVisualStyleBackColor = True
+        '
+        'CheckBox108
+        '
+        resources.ApplyResources(Me.CheckBox108, "CheckBox108")
+        Me.CheckBox108.Name = "CheckBox108"
+        Me.CheckBox108.UseVisualStyleBackColor = True
+        '
+        'CheckBox109
+        '
+        resources.ApplyResources(Me.CheckBox109, "CheckBox109")
+        Me.CheckBox109.Name = "CheckBox109"
+        Me.CheckBox109.UseVisualStyleBackColor = True
+        '
+        'CheckBox110
+        '
+        resources.ApplyResources(Me.CheckBox110, "CheckBox110")
+        Me.CheckBox110.Name = "CheckBox110"
+        Me.CheckBox110.UseVisualStyleBackColor = True
+        '
+        'CheckBox111
+        '
+        resources.ApplyResources(Me.CheckBox111, "CheckBox111")
+        Me.CheckBox111.Name = "CheckBox111"
+        Me.CheckBox111.UseVisualStyleBackColor = True
+        '
+        'CheckBox112
+        '
+        resources.ApplyResources(Me.CheckBox112, "CheckBox112")
+        Me.CheckBox112.Name = "CheckBox112"
+        Me.CheckBox112.UseVisualStyleBackColor = True
+        '
+        'CheckBox113
+        '
+        resources.ApplyResources(Me.CheckBox113, "CheckBox113")
+        Me.CheckBox113.Name = "CheckBox113"
+        Me.CheckBox113.UseVisualStyleBackColor = True
+        '
+        'CheckBox114
+        '
+        resources.ApplyResources(Me.CheckBox114, "CheckBox114")
+        Me.CheckBox114.Name = "CheckBox114"
+        Me.CheckBox114.UseVisualStyleBackColor = True
+        '
+        'CheckBox115
+        '
+        resources.ApplyResources(Me.CheckBox115, "CheckBox115")
+        Me.CheckBox115.Name = "CheckBox115"
+        Me.CheckBox115.UseVisualStyleBackColor = True
+        '
+        'CheckBox116
+        '
+        resources.ApplyResources(Me.CheckBox116, "CheckBox116")
+        Me.CheckBox116.Name = "CheckBox116"
+        Me.CheckBox116.UseVisualStyleBackColor = True
+        '
+        'CheckBox117
+        '
+        resources.ApplyResources(Me.CheckBox117, "CheckBox117")
+        Me.CheckBox117.Name = "CheckBox117"
+        Me.CheckBox117.UseVisualStyleBackColor = True
+        '
+        'CheckBox118
+        '
+        resources.ApplyResources(Me.CheckBox118, "CheckBox118")
+        Me.CheckBox118.Name = "CheckBox118"
+        Me.CheckBox118.UseVisualStyleBackColor = True
+        '
         'Blodbane
         '
         Me.AcceptButton = Me.BttnSendSkjema
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelPåmelding)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
+        Me.Controls.Add(Me.PanelAnsatt)
+        Me.Controls.Add(Me.PanelPåmelding)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -2831,15 +2818,7 @@ Partial Class Blodbane
         Me.TableLayoutPanel3.PerformLayout()
         Me.PanelPåmelding.ResumeLayout(False)
         Me.PanelGiver.ResumeLayout(False)
-        Me.PanelGiver.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.TableLayoutPanel11.ResumeLayout(False)
         Me.TableLayoutPanel11.PerformLayout()
@@ -2859,6 +2838,14 @@ Partial Class Blodbane
         Me.TableLayoutPanel5.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.PanelAnsatt.ResumeLayout(False)
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -2950,66 +2937,22 @@ Partial Class Blodbane
     Friend WithEvents Label24 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents RadioButton16 As RadioButton
-    Friend WithEvents RadioButton15 As RadioButton
-    Friend WithEvents RadioButton14 As RadioButton
-    Friend WithEvents RadioButton13 As RadioButton
-    Friend WithEvents RadioButton12 As RadioButton
-    Friend WithEvents RadioButton7 As RadioButton
-    Friend WithEvents RadioButton6 As RadioButton
-    Friend WithEvents RadioButton5 As RadioButton
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
-    Friend WithEvents RadioButton8 As RadioButton
-    Friend WithEvents RadioButton9 As RadioButton
-    Friend WithEvents RadioButton10 As RadioButton
-    Friend WithEvents RadioButton11 As RadioButton
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Label41 As Label
-    Friend WithEvents RadioButton19 As RadioButton
-    Friend WithEvents RadioButton20 As RadioButton
-    Friend WithEvents RadioButton21 As RadioButton
-    Friend WithEvents RadioButton22 As RadioButton
-    Friend WithEvents RadioButton23 As RadioButton
-    Friend WithEvents RadioButton24 As RadioButton
-    Friend WithEvents RadioButton25 As RadioButton
-    Friend WithEvents RadioButton26 As RadioButton
-    Friend WithEvents RadioButton27 As RadioButton
-    Friend WithEvents RadioButton28 As RadioButton
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents RadioButton40 As RadioButton
-    Friend WithEvents RadioButton39 As RadioButton
-    Friend WithEvents RadioButton38 As RadioButton
     Friend WithEvents Label48 As Label
-    Friend WithEvents RadioButton37 As RadioButton
     Friend WithEvents Label47 As Label
     Friend WithEvents Label34 As Label
-    Friend WithEvents RadioButton17 As RadioButton
-    Friend WithEvents RadioButton18 As RadioButton
-    Friend WithEvents RadioButton29 As RadioButton
-    Friend WithEvents RadioButton30 As RadioButton
-    Friend WithEvents RadioButton31 As RadioButton
-    Friend WithEvents RadioButton32 As RadioButton
-    Friend WithEvents RadioButton33 As RadioButton
-    Friend WithEvents RadioButton34 As RadioButton
-    Friend WithEvents RadioButton35 As RadioButton
-    Friend WithEvents RadioButton36 As RadioButton
     Friend WithEvents Label42 As Label
     Friend WithEvents Label43 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label46 As Label
-    Friend WithEvents Label58 As Label
     Friend WithEvents Label50 As Label
     Friend WithEvents Label49 As Label
     Friend WithEvents Label52 As Label
@@ -3019,63 +2962,16 @@ Partial Class Blodbane
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
     Friend WithEvents Label57 As Label
-    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
-    Friend WithEvents RadioButton41 As RadioButton
-    Friend WithEvents RadioButton42 As RadioButton
-    Friend WithEvents RadioButton43 As RadioButton
-    Friend WithEvents Label61 As Label
-    Friend WithEvents RadioButton44 As RadioButton
-    Friend WithEvents Label62 As Label
-    Friend WithEvents Label63 As Label
-    Friend WithEvents RadioButton45 As RadioButton
-    Friend WithEvents RadioButton46 As RadioButton
-    Friend WithEvents RadioButton47 As RadioButton
-    Friend WithEvents RadioButton48 As RadioButton
-    Friend WithEvents RadioButton51 As RadioButton
-    Friend WithEvents RadioButton52 As RadioButton
-    Friend WithEvents RadioButton53 As RadioButton
-    Friend WithEvents RadioButton54 As RadioButton
-    Friend WithEvents RadioButton55 As RadioButton
-    Friend WithEvents RadioButton56 As RadioButton
-    Friend WithEvents Label65 As Label
-    Friend WithEvents Label66 As Label
-    Friend WithEvents Label67 As Label
-    Friend WithEvents Label68 As Label
-    Friend WithEvents Label69 As Label
-    Friend WithEvents Label71 As Label
-    Friend WithEvents Label72 As Label
-    Friend WithEvents Label73 As Label
-    Friend WithEvents Label74 As Label
-    Friend WithEvents Label75 As Label
-    Friend WithEvents Label76 As Label
-    Friend WithEvents Label77 As Label
-    Friend WithEvents Label78 As Label
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label59 As Label
-    Friend WithEvents RadioButton49 As RadioButton
-    Friend WithEvents RadioButton50 As RadioButton
     Friend WithEvents Label64 As Label
     Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
-    Friend WithEvents RadioButton57 As RadioButton
-    Friend WithEvents RadioButton58 As RadioButton
-    Friend WithEvents RadioButton59 As RadioButton
     Friend WithEvents Label60 As Label
-    Friend WithEvents RadioButton60 As RadioButton
     Friend WithEvents Label70 As Label
     Friend WithEvents Label79 As Label
-    Friend WithEvents RadioButton61 As RadioButton
-    Friend WithEvents RadioButton62 As RadioButton
-    Friend WithEvents RadioButton63 As RadioButton
-    Friend WithEvents RadioButton64 As RadioButton
-    Friend WithEvents RadioButton65 As RadioButton
-    Friend WithEvents RadioButton66 As RadioButton
-    Friend WithEvents RadioButton67 As RadioButton
-    Friend WithEvents RadioButton68 As RadioButton
-    Friend WithEvents RadioButton69 As RadioButton
-    Friend WithEvents RadioButton70 As RadioButton
     Friend WithEvents Label80 As Label
     Friend WithEvents Label81 As Label
     Friend WithEvents Label82 As Label
@@ -3090,65 +2986,12 @@ Partial Class Blodbane
     Friend WithEvents TextBox18 As TextBox
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents Label87 As Label
-    Friend WithEvents Label86 As Label
-    Friend WithEvents RadioButton71 As RadioButton
-    Friend WithEvents RadioButton72 As RadioButton
     Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
     Friend WithEvents Label88 As Label
-    Friend WithEvents RadioButton75 As RadioButton
-    Friend WithEvents RadioButton76 As RadioButton
-    Friend WithEvents RadioButton77 As RadioButton
-    Friend WithEvents RadioButton78 As RadioButton
-    Friend WithEvents RadioButton79 As RadioButton
-    Friend WithEvents RadioButton80 As RadioButton
-    Friend WithEvents RadioButton81 As RadioButton
-    Friend WithEvents RadioButton82 As RadioButton
     Friend WithEvents Label93 As Label
     Friend WithEvents Label94 As Label
     Friend WithEvents Label95 As Label
     Friend WithEvents Label96 As Label
-    Friend WithEvents RadioButton73 As RadioButton
-    Friend WithEvents RadioButton74 As RadioButton
-    Friend WithEvents RadioButton83 As RadioButton
-    Friend WithEvents RadioButton84 As RadioButton
-    Friend WithEvents RadioButton85 As RadioButton
-    Friend WithEvents RadioButton86 As RadioButton
-    Friend WithEvents RadioButton87 As RadioButton
-    Friend WithEvents RadioButton88 As RadioButton
-    Friend WithEvents RadioButton89 As RadioButton
-    Friend WithEvents RadioButton90 As RadioButton
-    Friend WithEvents RadioButton91 As RadioButton
-    Friend WithEvents RadioButton92 As RadioButton
-    Friend WithEvents RadioButton93 As RadioButton
-    Friend WithEvents RadioButton94 As RadioButton
-    Friend WithEvents RadioButton95 As RadioButton
-    Friend WithEvents RadioButton96 As RadioButton
-    Friend WithEvents RadioButton97 As RadioButton
-    Friend WithEvents RadioButton98 As RadioButton
-    Friend WithEvents RadioButton99 As RadioButton
-    Friend WithEvents RadioButton100 As RadioButton
-    Friend WithEvents RadioButton122 As RadioButton
-    Friend WithEvents RadioButton121 As RadioButton
-    Friend WithEvents RadioButton120 As RadioButton
-    Friend WithEvents RadioButton101 As RadioButton
-    Friend WithEvents RadioButton102 As RadioButton
-    Friend WithEvents RadioButton103 As RadioButton
-    Friend WithEvents RadioButton104 As RadioButton
-    Friend WithEvents RadioButton105 As RadioButton
-    Friend WithEvents RadioButton106 As RadioButton
-    Friend WithEvents RadioButton107 As RadioButton
-    Friend WithEvents RadioButton108 As RadioButton
-    Friend WithEvents RadioButton109 As RadioButton
-    Friend WithEvents RadioButton110 As RadioButton
-    Friend WithEvents RadioButton111 As RadioButton
-    Friend WithEvents RadioButton112 As RadioButton
-    Friend WithEvents RadioButton113 As RadioButton
-    Friend WithEvents RadioButton114 As RadioButton
-    Friend WithEvents RadioButton115 As RadioButton
-    Friend WithEvents RadioButton116 As RadioButton
-    Friend WithEvents RadioButton117 As RadioButton
-    Friend WithEvents RadioButton118 As RadioButton
-    Friend WithEvents RadioButton119 As RadioButton
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents ComboBox2 As ComboBox
@@ -3228,4 +3071,164 @@ Partial Class Blodbane
     Friend WithEvents Button5 As Button
     Friend WithEvents Label20 As Label
     Friend WithEvents GroupBox9 As GroupBox
+    Friend WithEvents Label127 As Label
+    Friend WithEvents Label86 As Label
+    Friend WithEvents CheckBox26 As CheckBox
+    Friend WithEvents CheckBox25 As CheckBox
+    Friend WithEvents Label126 As Label
+    Friend WithEvents Label125 As Label
+    Friend WithEvents CheckBox24 As CheckBox
+    Friend WithEvents CheckBox23 As CheckBox
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents Label124 As Label
+    Friend WithEvents Label123 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents CheckBox13 As CheckBox
+    Friend WithEvents CheckBox14 As CheckBox
+    Friend WithEvents CheckBox15 As CheckBox
+    Friend WithEvents CheckBox16 As CheckBox
+    Friend WithEvents CheckBox17 As CheckBox
+    Friend WithEvents CheckBox20 As CheckBox
+    Friend WithEvents CheckBox18 As CheckBox
+    Friend WithEvents CheckBox21 As CheckBox
+    Friend WithEvents CheckBox19 As CheckBox
+    Friend WithEvents CheckBox22 As CheckBox
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents Label61 As Label
+    Friend WithEvents Label62 As Label
+    Friend WithEvents Label63 As Label
+    Friend WithEvents Label65 As Label
+    Friend WithEvents Label66 As Label
+    Friend WithEvents Label67 As Label
+    Friend WithEvents Label68 As Label
+    Friend WithEvents Label69 As Label
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Label72 As Label
+    Friend WithEvents Label73 As Label
+    Friend WithEvents Label74 As Label
+    Friend WithEvents Label75 As Label
+    Friend WithEvents Label76 As Label
+    Friend WithEvents Label77 As Label
+    Friend WithEvents Label78 As Label
+    Friend WithEvents CheckBox29 As CheckBox
+    Friend WithEvents CheckBox27 As CheckBox
+    Friend WithEvents CheckBox28 As CheckBox
+    Friend WithEvents CheckBox30 As CheckBox
+    Friend WithEvents CheckBox33 As CheckBox
+    Friend WithEvents CheckBox31 As CheckBox
+    Friend WithEvents CheckBox34 As CheckBox
+    Friend WithEvents CheckBox37 As CheckBox
+    Friend WithEvents CheckBox35 As CheckBox
+    Friend WithEvents CheckBox39 As CheckBox
+    Friend WithEvents CheckBox38 As CheckBox
+    Friend WithEvents CheckBox42 As CheckBox
+    Friend WithEvents CheckBox41 As CheckBox
+    Friend WithEvents CheckBox45 As CheckBox
+    Friend WithEvents CheckBox44 As CheckBox
+    Friend WithEvents CheckBox48 As CheckBox
+    Friend WithEvents CheckBox47 As CheckBox
+    Friend WithEvents CheckBox50 As CheckBox
+    Friend WithEvents CheckBox32 As CheckBox
+    Friend WithEvents CheckBox36 As CheckBox
+    Friend WithEvents CheckBox40 As CheckBox
+    Friend WithEvents CheckBox43 As CheckBox
+    Friend WithEvents CheckBox46 As CheckBox
+    Friend WithEvents CheckBox49 As CheckBox
+    Friend WithEvents CheckBox51 As CheckBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents CheckBox52 As CheckBox
+    Friend WithEvents CheckBox53 As CheckBox
+    Friend WithEvents CheckBox54 As CheckBox
+    Friend WithEvents CheckBox55 As CheckBox
+    Friend WithEvents CheckBox56 As CheckBox
+    Friend WithEvents CheckBox57 As CheckBox
+    Friend WithEvents CheckBox58 As CheckBox
+    Friend WithEvents CheckBox59 As CheckBox
+    Friend WithEvents CheckBox60 As CheckBox
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents CheckBox12 As CheckBox
+    Friend WithEvents CheckBox11 As CheckBox
+    Friend WithEvents CheckBox10 As CheckBox
+    Friend WithEvents CheckBox9 As CheckBox
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label128 As Label
+    Friend WithEvents CheckBox118 As CheckBox
+    Friend WithEvents CheckBox117 As CheckBox
+    Friend WithEvents CheckBox116 As CheckBox
+    Friend WithEvents CheckBox115 As CheckBox
+    Friend WithEvents CheckBox114 As CheckBox
+    Friend WithEvents CheckBox113 As CheckBox
+    Friend WithEvents CheckBox112 As CheckBox
+    Friend WithEvents CheckBox111 As CheckBox
+    Friend WithEvents Label135 As Label
+    Friend WithEvents Label136 As Label
+    Friend WithEvents CheckBox110 As CheckBox
+    Friend WithEvents CheckBox109 As CheckBox
+    Friend WithEvents CheckBox108 As CheckBox
+    Friend WithEvents CheckBox107 As CheckBox
+    Friend WithEvents CheckBox106 As CheckBox
+    Friend WithEvents CheckBox105 As CheckBox
+    Friend WithEvents CheckBox104 As CheckBox
+    Friend WithEvents CheckBox103 As CheckBox
+    Friend WithEvents CheckBox102 As CheckBox
+    Friend WithEvents CheckBox101 As CheckBox
+    Friend WithEvents CheckBox100 As CheckBox
+    Friend WithEvents CheckBox99 As CheckBox
+    Friend WithEvents CheckBox98 As CheckBox
+    Friend WithEvents CheckBox97 As CheckBox
+    Friend WithEvents CheckBox96 As CheckBox
+    Friend WithEvents CheckBox95 As CheckBox
+    Friend WithEvents CheckBox94 As CheckBox
+    Friend WithEvents CheckBox93 As CheckBox
+    Friend WithEvents CheckBox92 As CheckBox
+    Friend WithEvents CheckBox91 As CheckBox
+    Friend WithEvents Label133 As Label
+    Friend WithEvents Label134 As Label
+    Friend WithEvents CheckBox90 As CheckBox
+    Friend WithEvents CheckBox89 As CheckBox
+    Friend WithEvents CheckBox88 As CheckBox
+    Friend WithEvents CheckBox87 As CheckBox
+    Friend WithEvents CheckBox86 As CheckBox
+    Friend WithEvents CheckBox85 As CheckBox
+    Friend WithEvents CheckBox84 As CheckBox
+    Friend WithEvents CheckBox83 As CheckBox
+    Friend WithEvents CheckBox82 As CheckBox
+    Friend WithEvents CheckBox81 As CheckBox
+    Friend WithEvents CheckBox80 As CheckBox
+    Friend WithEvents CheckBox79 As CheckBox
+    Friend WithEvents CheckBox78 As CheckBox
+    Friend WithEvents CheckBox77 As CheckBox
+    Friend WithEvents CheckBox76 As CheckBox
+    Friend WithEvents CheckBox75 As CheckBox
+    Friend WithEvents CheckBox74 As CheckBox
+    Friend WithEvents CheckBox73 As CheckBox
+    Friend WithEvents CheckBox72 As CheckBox
+    Friend WithEvents Label129 As Label
+    Friend WithEvents Label132 As Label
+    Friend WithEvents CheckBox61 As CheckBox
+    Friend WithEvents CheckBox62 As CheckBox
+    Friend WithEvents CheckBox63 As CheckBox
+    Friend WithEvents CheckBox64 As CheckBox
+    Friend WithEvents CheckBox65 As CheckBox
+    Friend WithEvents CheckBox66 As CheckBox
+    Friend WithEvents CheckBox67 As CheckBox
+    Friend WithEvents CheckBox68 As CheckBox
+    Friend WithEvents CheckBox69 As CheckBox
+    Friend WithEvents CheckBox70 As CheckBox
+    Friend WithEvents CheckBox71 As CheckBox
+    Friend WithEvents Label130 As Label
+    Friend WithEvents Label131 As Label
 End Class
