@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,15 +65,26 @@ Partial Class Blodbane
         Me.PanelGiver = New System.Windows.Forms.Panel()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Label127 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CheckBox118 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox117 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox116 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox115 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox114 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox113 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox112 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox111 = New System.Windows.Forms.CheckBox()
         Me.Label88 = New System.Windows.Forms.Label()
         Me.Label93 = New System.Windows.Forms.Label()
         Me.Label94 = New System.Windows.Forms.Label()
         Me.Label95 = New System.Windows.Forms.Label()
         Me.Label96 = New System.Windows.Forms.Label()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.Label136 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label128 = New System.Windows.Forms.Label()
+        Me.Label127 = New System.Windows.Forms.Label()
         Me.Label86 = New System.Windows.Forms.Label()
         Me.CheckBox26 = New System.Windows.Forms.CheckBox()
         Me.Label87 = New System.Windows.Forms.Label()
@@ -82,6 +93,26 @@ Partial Class Blodbane
         Me.Label85 = New System.Windows.Forms.Label()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CheckBox110 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox109 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox108 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox107 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox106 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox105 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox104 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox103 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox102 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox101 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox100 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox99 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox98 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox97 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox96 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox95 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox94 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox93 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox92 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox91 = New System.Windows.Forms.CheckBox()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
@@ -93,6 +124,8 @@ Partial Class Blodbane
         Me.Label90 = New System.Windows.Forms.Label()
         Me.Label91 = New System.Windows.Forms.Label()
         Me.Label92 = New System.Windows.Forms.Label()
+        Me.Label133 = New System.Windows.Forms.Label()
+        Me.Label134 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label126 = New System.Windows.Forms.Label()
         Me.Label125 = New System.Windows.Forms.Label()
@@ -120,9 +153,28 @@ Partial Class Blodbane
         Me.CheckBox19 = New System.Windows.Forms.CheckBox()
         Me.CheckBox22 = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label63 = New System.Windows.Forms.Label()
+        Me.CheckBox90 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox89 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox88 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox87 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox86 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox85 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox84 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox83 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox82 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox81 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox80 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox79 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox78 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox77 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox76 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox75 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox74 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox73 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox72 = New System.Windows.Forms.CheckBox()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
@@ -136,6 +188,19 @@ Partial Class Blodbane
         Me.Label76 = New System.Windows.Forms.Label()
         Me.Label77 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label129 = New System.Windows.Forms.Label()
+        Me.Label132 = New System.Windows.Forms.Label()
+        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox63 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox64 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox65 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox66 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox67 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox68 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox69 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox70 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox71 = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
@@ -189,6 +254,8 @@ Partial Class Blodbane
         Me.CheckBox58 = New System.Windows.Forms.CheckBox()
         Me.CheckBox59 = New System.Windows.Forms.CheckBox()
         Me.CheckBox60 = New System.Windows.Forms.CheckBox()
+        Me.Label130 = New System.Windows.Forms.Label()
+        Me.Label131 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -302,10 +369,6 @@ Partial Class Blodbane
         Me.Label99 = New System.Windows.Forms.Label()
         Me.Label98 = New System.Windows.Forms.Label()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.Label97 = New System.Windows.Forms.Label()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.Label89 = New System.Windows.Forms.Label()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -321,73 +384,7 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label128 = New System.Windows.Forms.Label()
-        Me.Label129 = New System.Windows.Forms.Label()
-        Me.Label130 = New System.Windows.Forms.Label()
-        Me.Label131 = New System.Windows.Forms.Label()
-        Me.Label132 = New System.Windows.Forms.Label()
-        Me.Label133 = New System.Windows.Forms.Label()
-        Me.Label134 = New System.Windows.Forms.Label()
-        Me.Label135 = New System.Windows.Forms.Label()
-        Me.Label136 = New System.Windows.Forms.Label()
-        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox63 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox64 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox65 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox66 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox67 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox68 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox69 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox70 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox71 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox72 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox73 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox74 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox75 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox76 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox77 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox78 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox79 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox80 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox81 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox82 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox83 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox84 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox85 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox86 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox87 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox88 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox89 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox90 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox91 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox92 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox93 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox94 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox95 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox96 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox97 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox98 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox99 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox100 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox101 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox102 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox103 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox104 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox105 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox106 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox107 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox108 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox109 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox110 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox111 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox112 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox113 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox114 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox115 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox116 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox117 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox118 = New System.Windows.Forms.CheckBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -679,11 +676,6 @@ Partial Class Blodbane
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'Label127
-        '
-        resources.ApplyResources(Me.Label127, "Label127")
-        Me.Label127.Name = "Label127"
-        '
         'Button5
         '
         resources.ApplyResources(Me.Button5, "Button5")
@@ -711,6 +703,54 @@ Partial Class Blodbane
         Me.TableLayoutPanel11.Controls.Add(Me.Label136, 2, 0)
         Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
         '
+        'CheckBox118
+        '
+        resources.ApplyResources(Me.CheckBox118, "CheckBox118")
+        Me.CheckBox118.Name = "CheckBox118"
+        Me.CheckBox118.UseVisualStyleBackColor = True
+        '
+        'CheckBox117
+        '
+        resources.ApplyResources(Me.CheckBox117, "CheckBox117")
+        Me.CheckBox117.Name = "CheckBox117"
+        Me.CheckBox117.UseVisualStyleBackColor = True
+        '
+        'CheckBox116
+        '
+        resources.ApplyResources(Me.CheckBox116, "CheckBox116")
+        Me.CheckBox116.Name = "CheckBox116"
+        Me.CheckBox116.UseVisualStyleBackColor = True
+        '
+        'CheckBox115
+        '
+        resources.ApplyResources(Me.CheckBox115, "CheckBox115")
+        Me.CheckBox115.Name = "CheckBox115"
+        Me.CheckBox115.UseVisualStyleBackColor = True
+        '
+        'CheckBox114
+        '
+        resources.ApplyResources(Me.CheckBox114, "CheckBox114")
+        Me.CheckBox114.Name = "CheckBox114"
+        Me.CheckBox114.UseVisualStyleBackColor = True
+        '
+        'CheckBox113
+        '
+        resources.ApplyResources(Me.CheckBox113, "CheckBox113")
+        Me.CheckBox113.Name = "CheckBox113"
+        Me.CheckBox113.UseVisualStyleBackColor = True
+        '
+        'CheckBox112
+        '
+        resources.ApplyResources(Me.CheckBox112, "CheckBox112")
+        Me.CheckBox112.Name = "CheckBox112"
+        Me.CheckBox112.UseVisualStyleBackColor = True
+        '
+        'CheckBox111
+        '
+        resources.ApplyResources(Me.CheckBox111, "CheckBox111")
+        Me.CheckBox111.Name = "CheckBox111"
+        Me.CheckBox111.UseVisualStyleBackColor = True
+        '
         'Label88
         '
         resources.ApplyResources(Me.Label88, "Label88")
@@ -736,6 +776,16 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label96, "Label96")
         Me.Label96.Name = "Label96"
         '
+        'Label135
+        '
+        resources.ApplyResources(Me.Label135, "Label135")
+        Me.Label135.Name = "Label135"
+        '
+        'Label136
+        '
+        resources.ApplyResources(Me.Label136, "Label136")
+        Me.Label136.Name = "Label136"
+        '
         'TableLayoutPanel10
         '
         Me.TableLayoutPanel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
@@ -747,6 +797,16 @@ Partial Class Blodbane
         Me.TableLayoutPanel10.Controls.Add(Me.Label87, 0, 1)
         Me.TableLayoutPanel10.Controls.Add(Me.CheckBox25, 1, 1)
         Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
+        '
+        'Label128
+        '
+        resources.ApplyResources(Me.Label128, "Label128")
+        Me.Label128.Name = "Label128"
+        '
+        'Label127
+        '
+        resources.ApplyResources(Me.Label127, "Label127")
+        Me.Label127.Name = "Label127"
         '
         'Label86
         '
@@ -829,6 +889,126 @@ Partial Class Blodbane
         Me.TableLayoutPanel8.Controls.Add(Me.Label134, 2, 0)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         '
+        'CheckBox110
+        '
+        resources.ApplyResources(Me.CheckBox110, "CheckBox110")
+        Me.CheckBox110.Name = "CheckBox110"
+        Me.CheckBox110.UseVisualStyleBackColor = True
+        '
+        'CheckBox109
+        '
+        resources.ApplyResources(Me.CheckBox109, "CheckBox109")
+        Me.CheckBox109.Name = "CheckBox109"
+        Me.CheckBox109.UseVisualStyleBackColor = True
+        '
+        'CheckBox108
+        '
+        resources.ApplyResources(Me.CheckBox108, "CheckBox108")
+        Me.CheckBox108.Name = "CheckBox108"
+        Me.CheckBox108.UseVisualStyleBackColor = True
+        '
+        'CheckBox107
+        '
+        resources.ApplyResources(Me.CheckBox107, "CheckBox107")
+        Me.CheckBox107.Name = "CheckBox107"
+        Me.CheckBox107.UseVisualStyleBackColor = True
+        '
+        'CheckBox106
+        '
+        resources.ApplyResources(Me.CheckBox106, "CheckBox106")
+        Me.CheckBox106.Name = "CheckBox106"
+        Me.CheckBox106.UseVisualStyleBackColor = True
+        '
+        'CheckBox105
+        '
+        resources.ApplyResources(Me.CheckBox105, "CheckBox105")
+        Me.CheckBox105.Name = "CheckBox105"
+        Me.CheckBox105.UseVisualStyleBackColor = True
+        '
+        'CheckBox104
+        '
+        resources.ApplyResources(Me.CheckBox104, "CheckBox104")
+        Me.CheckBox104.Name = "CheckBox104"
+        Me.CheckBox104.UseVisualStyleBackColor = True
+        '
+        'CheckBox103
+        '
+        resources.ApplyResources(Me.CheckBox103, "CheckBox103")
+        Me.CheckBox103.Name = "CheckBox103"
+        Me.CheckBox103.UseVisualStyleBackColor = True
+        '
+        'CheckBox102
+        '
+        resources.ApplyResources(Me.CheckBox102, "CheckBox102")
+        Me.CheckBox102.Name = "CheckBox102"
+        Me.CheckBox102.UseVisualStyleBackColor = True
+        '
+        'CheckBox101
+        '
+        resources.ApplyResources(Me.CheckBox101, "CheckBox101")
+        Me.CheckBox101.Name = "CheckBox101"
+        Me.CheckBox101.UseVisualStyleBackColor = True
+        '
+        'CheckBox100
+        '
+        resources.ApplyResources(Me.CheckBox100, "CheckBox100")
+        Me.CheckBox100.Name = "CheckBox100"
+        Me.CheckBox100.UseVisualStyleBackColor = True
+        '
+        'CheckBox99
+        '
+        resources.ApplyResources(Me.CheckBox99, "CheckBox99")
+        Me.CheckBox99.Name = "CheckBox99"
+        Me.CheckBox99.UseVisualStyleBackColor = True
+        '
+        'CheckBox98
+        '
+        resources.ApplyResources(Me.CheckBox98, "CheckBox98")
+        Me.CheckBox98.Name = "CheckBox98"
+        Me.CheckBox98.UseVisualStyleBackColor = True
+        '
+        'CheckBox97
+        '
+        resources.ApplyResources(Me.CheckBox97, "CheckBox97")
+        Me.CheckBox97.Name = "CheckBox97"
+        Me.CheckBox97.UseVisualStyleBackColor = True
+        '
+        'CheckBox96
+        '
+        resources.ApplyResources(Me.CheckBox96, "CheckBox96")
+        Me.CheckBox96.Name = "CheckBox96"
+        Me.CheckBox96.UseVisualStyleBackColor = True
+        '
+        'CheckBox95
+        '
+        resources.ApplyResources(Me.CheckBox95, "CheckBox95")
+        Me.CheckBox95.Name = "CheckBox95"
+        Me.CheckBox95.UseVisualStyleBackColor = True
+        '
+        'CheckBox94
+        '
+        resources.ApplyResources(Me.CheckBox94, "CheckBox94")
+        Me.CheckBox94.Name = "CheckBox94"
+        Me.CheckBox94.UseVisualStyleBackColor = True
+        '
+        'CheckBox93
+        '
+        resources.ApplyResources(Me.CheckBox93, "CheckBox93")
+        Me.CheckBox93.Name = "CheckBox93"
+        Me.CheckBox93.UseVisualStyleBackColor = True
+        '
+        'CheckBox92
+        '
+        resources.ApplyResources(Me.CheckBox92, "CheckBox92")
+        Me.CheckBox92.Name = "CheckBox92"
+        Me.CheckBox92.UseVisualStyleBackColor = True
+        '
+        'CheckBox91
+        '
+        resources.ApplyResources(Me.CheckBox91, "CheckBox91")
+        Me.CheckBox91.Name = "CheckBox91"
+        Me.CheckBox91.UseVisualStyleBackColor = True
+        '
         'Label60
         '
         resources.ApplyResources(Me.Label60, "Label60")
@@ -884,6 +1064,16 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label92, "Label92")
         Me.Label92.Name = "Label92"
         Me.ToolTip1.SetToolTip(Me.Label92, resources.GetString("Label92.ToolTip"))
+        '
+        'Label133
+        '
+        resources.ApplyResources(Me.Label133, "Label133")
+        Me.Label133.Name = "Label133"
+        '
+        'Label134
+        '
+        resources.ApplyResources(Me.Label134, "Label134")
+        Me.Label134.Name = "Label134"
         '
         'TableLayoutPanel6
         '
@@ -1107,10 +1297,119 @@ Partial Class Blodbane
         Me.TableLayoutPanel7.Controls.Add(Me.CheckBox71, 1, 6)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         '
-        'Label63
+        'CheckBox90
         '
-        resources.ApplyResources(Me.Label63, "Label63")
-        Me.Label63.Name = "Label63"
+        resources.ApplyResources(Me.CheckBox90, "CheckBox90")
+        Me.CheckBox90.Name = "CheckBox90"
+        Me.CheckBox90.UseVisualStyleBackColor = True
+        '
+        'CheckBox89
+        '
+        resources.ApplyResources(Me.CheckBox89, "CheckBox89")
+        Me.CheckBox89.Name = "CheckBox89"
+        Me.CheckBox89.UseVisualStyleBackColor = True
+        '
+        'CheckBox88
+        '
+        resources.ApplyResources(Me.CheckBox88, "CheckBox88")
+        Me.CheckBox88.Name = "CheckBox88"
+        Me.CheckBox88.UseVisualStyleBackColor = True
+        '
+        'CheckBox87
+        '
+        resources.ApplyResources(Me.CheckBox87, "CheckBox87")
+        Me.CheckBox87.Name = "CheckBox87"
+        Me.CheckBox87.UseVisualStyleBackColor = True
+        '
+        'CheckBox86
+        '
+        resources.ApplyResources(Me.CheckBox86, "CheckBox86")
+        Me.CheckBox86.Name = "CheckBox86"
+        Me.CheckBox86.UseVisualStyleBackColor = True
+        '
+        'CheckBox85
+        '
+        resources.ApplyResources(Me.CheckBox85, "CheckBox85")
+        Me.CheckBox85.Name = "CheckBox85"
+        Me.CheckBox85.UseVisualStyleBackColor = True
+        '
+        'CheckBox84
+        '
+        resources.ApplyResources(Me.CheckBox84, "CheckBox84")
+        Me.CheckBox84.Name = "CheckBox84"
+        Me.CheckBox84.UseVisualStyleBackColor = True
+        '
+        'CheckBox83
+        '
+        resources.ApplyResources(Me.CheckBox83, "CheckBox83")
+        Me.CheckBox83.Name = "CheckBox83"
+        Me.CheckBox83.UseVisualStyleBackColor = True
+        '
+        'CheckBox82
+        '
+        resources.ApplyResources(Me.CheckBox82, "CheckBox82")
+        Me.CheckBox82.Name = "CheckBox82"
+        Me.CheckBox82.UseVisualStyleBackColor = True
+        '
+        'CheckBox81
+        '
+        resources.ApplyResources(Me.CheckBox81, "CheckBox81")
+        Me.CheckBox81.Name = "CheckBox81"
+        Me.CheckBox81.UseVisualStyleBackColor = True
+        '
+        'CheckBox80
+        '
+        resources.ApplyResources(Me.CheckBox80, "CheckBox80")
+        Me.CheckBox80.Name = "CheckBox80"
+        Me.CheckBox80.UseVisualStyleBackColor = True
+        '
+        'CheckBox79
+        '
+        resources.ApplyResources(Me.CheckBox79, "CheckBox79")
+        Me.CheckBox79.Name = "CheckBox79"
+        Me.CheckBox79.UseVisualStyleBackColor = True
+        '
+        'CheckBox78
+        '
+        resources.ApplyResources(Me.CheckBox78, "CheckBox78")
+        Me.CheckBox78.Name = "CheckBox78"
+        Me.CheckBox78.UseVisualStyleBackColor = True
+        '
+        'CheckBox77
+        '
+        resources.ApplyResources(Me.CheckBox77, "CheckBox77")
+        Me.CheckBox77.Name = "CheckBox77"
+        Me.CheckBox77.UseVisualStyleBackColor = True
+        '
+        'CheckBox76
+        '
+        resources.ApplyResources(Me.CheckBox76, "CheckBox76")
+        Me.CheckBox76.Name = "CheckBox76"
+        Me.CheckBox76.UseVisualStyleBackColor = True
+        '
+        'CheckBox75
+        '
+        resources.ApplyResources(Me.CheckBox75, "CheckBox75")
+        Me.CheckBox75.Name = "CheckBox75"
+        Me.CheckBox75.UseVisualStyleBackColor = True
+        '
+        'CheckBox74
+        '
+        resources.ApplyResources(Me.CheckBox74, "CheckBox74")
+        Me.CheckBox74.Name = "CheckBox74"
+        Me.CheckBox74.UseVisualStyleBackColor = True
+        '
+        'CheckBox73
+        '
+        resources.ApplyResources(Me.CheckBox73, "CheckBox73")
+        Me.CheckBox73.Name = "CheckBox73"
+        Me.CheckBox73.UseVisualStyleBackColor = True
+        '
+        'CheckBox72
+        '
+        resources.ApplyResources(Me.CheckBox72, "CheckBox72")
+        Me.CheckBox72.Name = "CheckBox72"
+        Me.CheckBox72.UseVisualStyleBackColor = True
         '
         'Label61
         '
@@ -1121,6 +1420,11 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.Label62, "Label62")
         Me.Label62.Name = "Label62"
+        '
+        'Label63
+        '
+        resources.ApplyResources(Me.Label63, "Label63")
+        Me.Label63.Name = "Label63"
         '
         'Label65
         '
@@ -1186,6 +1490,82 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.Label78, "Label78")
         Me.Label78.Name = "Label78"
+        '
+        'Label129
+        '
+        resources.ApplyResources(Me.Label129, "Label129")
+        Me.Label129.Name = "Label129"
+        '
+        'Label132
+        '
+        resources.ApplyResources(Me.Label132, "Label132")
+        Me.Label132.Name = "Label132"
+        '
+        'CheckBox61
+        '
+        resources.ApplyResources(Me.CheckBox61, "CheckBox61")
+        Me.CheckBox61.Name = "CheckBox61"
+        Me.CheckBox61.UseVisualStyleBackColor = True
+        '
+        'CheckBox62
+        '
+        resources.ApplyResources(Me.CheckBox62, "CheckBox62")
+        Me.CheckBox62.Name = "CheckBox62"
+        Me.CheckBox62.UseVisualStyleBackColor = True
+        '
+        'CheckBox63
+        '
+        resources.ApplyResources(Me.CheckBox63, "CheckBox63")
+        Me.CheckBox63.Name = "CheckBox63"
+        Me.CheckBox63.UseVisualStyleBackColor = True
+        '
+        'CheckBox64
+        '
+        resources.ApplyResources(Me.CheckBox64, "CheckBox64")
+        Me.CheckBox64.Name = "CheckBox64"
+        Me.CheckBox64.UseVisualStyleBackColor = True
+        '
+        'CheckBox65
+        '
+        resources.ApplyResources(Me.CheckBox65, "CheckBox65")
+        Me.CheckBox65.Name = "CheckBox65"
+        Me.CheckBox65.UseVisualStyleBackColor = True
+        '
+        'CheckBox66
+        '
+        resources.ApplyResources(Me.CheckBox66, "CheckBox66")
+        Me.CheckBox66.Name = "CheckBox66"
+        Me.CheckBox66.UseVisualStyleBackColor = True
+        '
+        'CheckBox67
+        '
+        resources.ApplyResources(Me.CheckBox67, "CheckBox67")
+        Me.CheckBox67.Name = "CheckBox67"
+        Me.CheckBox67.UseVisualStyleBackColor = True
+        '
+        'CheckBox68
+        '
+        resources.ApplyResources(Me.CheckBox68, "CheckBox68")
+        Me.CheckBox68.Name = "CheckBox68"
+        Me.CheckBox68.UseVisualStyleBackColor = True
+        '
+        'CheckBox69
+        '
+        resources.ApplyResources(Me.CheckBox69, "CheckBox69")
+        Me.CheckBox69.Name = "CheckBox69"
+        Me.CheckBox69.UseVisualStyleBackColor = True
+        '
+        'CheckBox70
+        '
+        resources.ApplyResources(Me.CheckBox70, "CheckBox70")
+        Me.CheckBox70.Name = "CheckBox70"
+        Me.CheckBox70.UseVisualStyleBackColor = True
+        '
+        'CheckBox71
+        '
+        resources.ApplyResources(Me.CheckBox71, "CheckBox71")
+        Me.CheckBox71.Name = "CheckBox71"
+        Me.CheckBox71.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel5
         '
@@ -1540,6 +1920,16 @@ Partial Class Blodbane
         resources.ApplyResources(Me.CheckBox60, "CheckBox60")
         Me.CheckBox60.Name = "CheckBox60"
         Me.CheckBox60.UseVisualStyleBackColor = True
+        '
+        'Label130
+        '
+        resources.ApplyResources(Me.Label130, "Label130")
+        Me.Label130.Name = "Label130"
+        '
+        'Label131
+        '
+        resources.ApplyResources(Me.Label131, "Label131")
+        Me.Label131.Name = "Label131"
         '
         'TableLayoutPanel1
         '
@@ -2218,6 +2608,7 @@ Partial Class Blodbane
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.TextBox20)
         Me.GroupBox4.Controls.Add(Me.ComboBox5)
         Me.GroupBox4.Controls.Add(Me.Label119)
         Me.GroupBox4.Controls.Add(Me.BttnSøkGiver)
@@ -2225,10 +2616,6 @@ Partial Class Blodbane
         Me.GroupBox4.Controls.Add(Me.Label99)
         Me.GroupBox4.Controls.Add(Me.Label98)
         Me.GroupBox4.Controls.Add(Me.ListBox2)
-        Me.GroupBox4.Controls.Add(Me.TextBox21)
-        Me.GroupBox4.Controls.Add(Me.Label97)
-        Me.GroupBox4.Controls.Add(Me.TextBox20)
-        Me.GroupBox4.Controls.Add(Me.Label89)
         Me.GroupBox4.Controls.Add(Me.TextBox19)
         Me.GroupBox4.Controls.Add(Me.Label27)
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
@@ -2275,26 +2662,6 @@ Partial Class Blodbane
         Me.ListBox2.FormattingEnabled = True
         resources.ApplyResources(Me.ListBox2, "ListBox2")
         Me.ListBox2.Name = "ListBox2"
-        '
-        'TextBox21
-        '
-        resources.ApplyResources(Me.TextBox21, "TextBox21")
-        Me.TextBox21.Name = "TextBox21"
-        '
-        'Label97
-        '
-        resources.ApplyResources(Me.Label97, "Label97")
-        Me.Label97.Name = "Label97"
-        '
-        'TextBox20
-        '
-        resources.ApplyResources(Me.TextBox20, "TextBox20")
-        Me.TextBox20.Name = "TextBox20"
-        '
-        'Label89
-        '
-        resources.ApplyResources(Me.Label89, "Label89")
-        Me.Label89.Name = "Label89"
         '
         'TextBox19
         '
@@ -2384,17 +2751,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend5)
+        ChartArea8.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea8)
+        Legend8.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend8)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.Chart1.Series.Add(Series5)
+        Series8.ChartArea = "ChartArea1"
+        Series8.Legend = "Legend1"
+        Series8.Name = "Series1"
+        Me.Chart1.Series.Add(Series8)
         '
         'ToolTip1
         '
@@ -2404,398 +2771,10 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
-        'Label128
+        'TextBox20
         '
-        resources.ApplyResources(Me.Label128, "Label128")
-        Me.Label128.Name = "Label128"
-        '
-        'Label129
-        '
-        resources.ApplyResources(Me.Label129, "Label129")
-        Me.Label129.Name = "Label129"
-        '
-        'Label130
-        '
-        resources.ApplyResources(Me.Label130, "Label130")
-        Me.Label130.Name = "Label130"
-        '
-        'Label131
-        '
-        resources.ApplyResources(Me.Label131, "Label131")
-        Me.Label131.Name = "Label131"
-        '
-        'Label132
-        '
-        resources.ApplyResources(Me.Label132, "Label132")
-        Me.Label132.Name = "Label132"
-        '
-        'Label133
-        '
-        resources.ApplyResources(Me.Label133, "Label133")
-        Me.Label133.Name = "Label133"
-        '
-        'Label134
-        '
-        resources.ApplyResources(Me.Label134, "Label134")
-        Me.Label134.Name = "Label134"
-        '
-        'Label135
-        '
-        resources.ApplyResources(Me.Label135, "Label135")
-        Me.Label135.Name = "Label135"
-        '
-        'Label136
-        '
-        resources.ApplyResources(Me.Label136, "Label136")
-        Me.Label136.Name = "Label136"
-        '
-        'CheckBox61
-        '
-        resources.ApplyResources(Me.CheckBox61, "CheckBox61")
-        Me.CheckBox61.Name = "CheckBox61"
-        Me.CheckBox61.UseVisualStyleBackColor = True
-        '
-        'CheckBox62
-        '
-        resources.ApplyResources(Me.CheckBox62, "CheckBox62")
-        Me.CheckBox62.Name = "CheckBox62"
-        Me.CheckBox62.UseVisualStyleBackColor = True
-        '
-        'CheckBox63
-        '
-        resources.ApplyResources(Me.CheckBox63, "CheckBox63")
-        Me.CheckBox63.Name = "CheckBox63"
-        Me.CheckBox63.UseVisualStyleBackColor = True
-        '
-        'CheckBox64
-        '
-        resources.ApplyResources(Me.CheckBox64, "CheckBox64")
-        Me.CheckBox64.Name = "CheckBox64"
-        Me.CheckBox64.UseVisualStyleBackColor = True
-        '
-        'CheckBox65
-        '
-        resources.ApplyResources(Me.CheckBox65, "CheckBox65")
-        Me.CheckBox65.Name = "CheckBox65"
-        Me.CheckBox65.UseVisualStyleBackColor = True
-        '
-        'CheckBox66
-        '
-        resources.ApplyResources(Me.CheckBox66, "CheckBox66")
-        Me.CheckBox66.Name = "CheckBox66"
-        Me.CheckBox66.UseVisualStyleBackColor = True
-        '
-        'CheckBox67
-        '
-        resources.ApplyResources(Me.CheckBox67, "CheckBox67")
-        Me.CheckBox67.Name = "CheckBox67"
-        Me.CheckBox67.UseVisualStyleBackColor = True
-        '
-        'CheckBox68
-        '
-        resources.ApplyResources(Me.CheckBox68, "CheckBox68")
-        Me.CheckBox68.Name = "CheckBox68"
-        Me.CheckBox68.UseVisualStyleBackColor = True
-        '
-        'CheckBox69
-        '
-        resources.ApplyResources(Me.CheckBox69, "CheckBox69")
-        Me.CheckBox69.Name = "CheckBox69"
-        Me.CheckBox69.UseVisualStyleBackColor = True
-        '
-        'CheckBox70
-        '
-        resources.ApplyResources(Me.CheckBox70, "CheckBox70")
-        Me.CheckBox70.Name = "CheckBox70"
-        Me.CheckBox70.UseVisualStyleBackColor = True
-        '
-        'CheckBox71
-        '
-        resources.ApplyResources(Me.CheckBox71, "CheckBox71")
-        Me.CheckBox71.Name = "CheckBox71"
-        Me.CheckBox71.UseVisualStyleBackColor = True
-        '
-        'CheckBox72
-        '
-        resources.ApplyResources(Me.CheckBox72, "CheckBox72")
-        Me.CheckBox72.Name = "CheckBox72"
-        Me.CheckBox72.UseVisualStyleBackColor = True
-        '
-        'CheckBox73
-        '
-        resources.ApplyResources(Me.CheckBox73, "CheckBox73")
-        Me.CheckBox73.Name = "CheckBox73"
-        Me.CheckBox73.UseVisualStyleBackColor = True
-        '
-        'CheckBox74
-        '
-        resources.ApplyResources(Me.CheckBox74, "CheckBox74")
-        Me.CheckBox74.Name = "CheckBox74"
-        Me.CheckBox74.UseVisualStyleBackColor = True
-        '
-        'CheckBox75
-        '
-        resources.ApplyResources(Me.CheckBox75, "CheckBox75")
-        Me.CheckBox75.Name = "CheckBox75"
-        Me.CheckBox75.UseVisualStyleBackColor = True
-        '
-        'CheckBox76
-        '
-        resources.ApplyResources(Me.CheckBox76, "CheckBox76")
-        Me.CheckBox76.Name = "CheckBox76"
-        Me.CheckBox76.UseVisualStyleBackColor = True
-        '
-        'CheckBox77
-        '
-        resources.ApplyResources(Me.CheckBox77, "CheckBox77")
-        Me.CheckBox77.Name = "CheckBox77"
-        Me.CheckBox77.UseVisualStyleBackColor = True
-        '
-        'CheckBox78
-        '
-        resources.ApplyResources(Me.CheckBox78, "CheckBox78")
-        Me.CheckBox78.Name = "CheckBox78"
-        Me.CheckBox78.UseVisualStyleBackColor = True
-        '
-        'CheckBox79
-        '
-        resources.ApplyResources(Me.CheckBox79, "CheckBox79")
-        Me.CheckBox79.Name = "CheckBox79"
-        Me.CheckBox79.UseVisualStyleBackColor = True
-        '
-        'CheckBox80
-        '
-        resources.ApplyResources(Me.CheckBox80, "CheckBox80")
-        Me.CheckBox80.Name = "CheckBox80"
-        Me.CheckBox80.UseVisualStyleBackColor = True
-        '
-        'CheckBox81
-        '
-        resources.ApplyResources(Me.CheckBox81, "CheckBox81")
-        Me.CheckBox81.Name = "CheckBox81"
-        Me.CheckBox81.UseVisualStyleBackColor = True
-        '
-        'CheckBox82
-        '
-        resources.ApplyResources(Me.CheckBox82, "CheckBox82")
-        Me.CheckBox82.Name = "CheckBox82"
-        Me.CheckBox82.UseVisualStyleBackColor = True
-        '
-        'CheckBox83
-        '
-        resources.ApplyResources(Me.CheckBox83, "CheckBox83")
-        Me.CheckBox83.Name = "CheckBox83"
-        Me.CheckBox83.UseVisualStyleBackColor = True
-        '
-        'CheckBox84
-        '
-        resources.ApplyResources(Me.CheckBox84, "CheckBox84")
-        Me.CheckBox84.Name = "CheckBox84"
-        Me.CheckBox84.UseVisualStyleBackColor = True
-        '
-        'CheckBox85
-        '
-        resources.ApplyResources(Me.CheckBox85, "CheckBox85")
-        Me.CheckBox85.Name = "CheckBox85"
-        Me.CheckBox85.UseVisualStyleBackColor = True
-        '
-        'CheckBox86
-        '
-        resources.ApplyResources(Me.CheckBox86, "CheckBox86")
-        Me.CheckBox86.Name = "CheckBox86"
-        Me.CheckBox86.UseVisualStyleBackColor = True
-        '
-        'CheckBox87
-        '
-        resources.ApplyResources(Me.CheckBox87, "CheckBox87")
-        Me.CheckBox87.Name = "CheckBox87"
-        Me.CheckBox87.UseVisualStyleBackColor = True
-        '
-        'CheckBox88
-        '
-        resources.ApplyResources(Me.CheckBox88, "CheckBox88")
-        Me.CheckBox88.Name = "CheckBox88"
-        Me.CheckBox88.UseVisualStyleBackColor = True
-        '
-        'CheckBox89
-        '
-        resources.ApplyResources(Me.CheckBox89, "CheckBox89")
-        Me.CheckBox89.Name = "CheckBox89"
-        Me.CheckBox89.UseVisualStyleBackColor = True
-        '
-        'CheckBox90
-        '
-        resources.ApplyResources(Me.CheckBox90, "CheckBox90")
-        Me.CheckBox90.Name = "CheckBox90"
-        Me.CheckBox90.UseVisualStyleBackColor = True
-        '
-        'CheckBox91
-        '
-        resources.ApplyResources(Me.CheckBox91, "CheckBox91")
-        Me.CheckBox91.Name = "CheckBox91"
-        Me.CheckBox91.UseVisualStyleBackColor = True
-        '
-        'CheckBox92
-        '
-        resources.ApplyResources(Me.CheckBox92, "CheckBox92")
-        Me.CheckBox92.Name = "CheckBox92"
-        Me.CheckBox92.UseVisualStyleBackColor = True
-        '
-        'CheckBox93
-        '
-        resources.ApplyResources(Me.CheckBox93, "CheckBox93")
-        Me.CheckBox93.Name = "CheckBox93"
-        Me.CheckBox93.UseVisualStyleBackColor = True
-        '
-        'CheckBox94
-        '
-        resources.ApplyResources(Me.CheckBox94, "CheckBox94")
-        Me.CheckBox94.Name = "CheckBox94"
-        Me.CheckBox94.UseVisualStyleBackColor = True
-        '
-        'CheckBox95
-        '
-        resources.ApplyResources(Me.CheckBox95, "CheckBox95")
-        Me.CheckBox95.Name = "CheckBox95"
-        Me.CheckBox95.UseVisualStyleBackColor = True
-        '
-        'CheckBox96
-        '
-        resources.ApplyResources(Me.CheckBox96, "CheckBox96")
-        Me.CheckBox96.Name = "CheckBox96"
-        Me.CheckBox96.UseVisualStyleBackColor = True
-        '
-        'CheckBox97
-        '
-        resources.ApplyResources(Me.CheckBox97, "CheckBox97")
-        Me.CheckBox97.Name = "CheckBox97"
-        Me.CheckBox97.UseVisualStyleBackColor = True
-        '
-        'CheckBox98
-        '
-        resources.ApplyResources(Me.CheckBox98, "CheckBox98")
-        Me.CheckBox98.Name = "CheckBox98"
-        Me.CheckBox98.UseVisualStyleBackColor = True
-        '
-        'CheckBox99
-        '
-        resources.ApplyResources(Me.CheckBox99, "CheckBox99")
-        Me.CheckBox99.Name = "CheckBox99"
-        Me.CheckBox99.UseVisualStyleBackColor = True
-        '
-        'CheckBox100
-        '
-        resources.ApplyResources(Me.CheckBox100, "CheckBox100")
-        Me.CheckBox100.Name = "CheckBox100"
-        Me.CheckBox100.UseVisualStyleBackColor = True
-        '
-        'CheckBox101
-        '
-        resources.ApplyResources(Me.CheckBox101, "CheckBox101")
-        Me.CheckBox101.Name = "CheckBox101"
-        Me.CheckBox101.UseVisualStyleBackColor = True
-        '
-        'CheckBox102
-        '
-        resources.ApplyResources(Me.CheckBox102, "CheckBox102")
-        Me.CheckBox102.Name = "CheckBox102"
-        Me.CheckBox102.UseVisualStyleBackColor = True
-        '
-        'CheckBox103
-        '
-        resources.ApplyResources(Me.CheckBox103, "CheckBox103")
-        Me.CheckBox103.Name = "CheckBox103"
-        Me.CheckBox103.UseVisualStyleBackColor = True
-        '
-        'CheckBox104
-        '
-        resources.ApplyResources(Me.CheckBox104, "CheckBox104")
-        Me.CheckBox104.Name = "CheckBox104"
-        Me.CheckBox104.UseVisualStyleBackColor = True
-        '
-        'CheckBox105
-        '
-        resources.ApplyResources(Me.CheckBox105, "CheckBox105")
-        Me.CheckBox105.Name = "CheckBox105"
-        Me.CheckBox105.UseVisualStyleBackColor = True
-        '
-        'CheckBox106
-        '
-        resources.ApplyResources(Me.CheckBox106, "CheckBox106")
-        Me.CheckBox106.Name = "CheckBox106"
-        Me.CheckBox106.UseVisualStyleBackColor = True
-        '
-        'CheckBox107
-        '
-        resources.ApplyResources(Me.CheckBox107, "CheckBox107")
-        Me.CheckBox107.Name = "CheckBox107"
-        Me.CheckBox107.UseVisualStyleBackColor = True
-        '
-        'CheckBox108
-        '
-        resources.ApplyResources(Me.CheckBox108, "CheckBox108")
-        Me.CheckBox108.Name = "CheckBox108"
-        Me.CheckBox108.UseVisualStyleBackColor = True
-        '
-        'CheckBox109
-        '
-        resources.ApplyResources(Me.CheckBox109, "CheckBox109")
-        Me.CheckBox109.Name = "CheckBox109"
-        Me.CheckBox109.UseVisualStyleBackColor = True
-        '
-        'CheckBox110
-        '
-        resources.ApplyResources(Me.CheckBox110, "CheckBox110")
-        Me.CheckBox110.Name = "CheckBox110"
-        Me.CheckBox110.UseVisualStyleBackColor = True
-        '
-        'CheckBox111
-        '
-        resources.ApplyResources(Me.CheckBox111, "CheckBox111")
-        Me.CheckBox111.Name = "CheckBox111"
-        Me.CheckBox111.UseVisualStyleBackColor = True
-        '
-        'CheckBox112
-        '
-        resources.ApplyResources(Me.CheckBox112, "CheckBox112")
-        Me.CheckBox112.Name = "CheckBox112"
-        Me.CheckBox112.UseVisualStyleBackColor = True
-        '
-        'CheckBox113
-        '
-        resources.ApplyResources(Me.CheckBox113, "CheckBox113")
-        Me.CheckBox113.Name = "CheckBox113"
-        Me.CheckBox113.UseVisualStyleBackColor = True
-        '
-        'CheckBox114
-        '
-        resources.ApplyResources(Me.CheckBox114, "CheckBox114")
-        Me.CheckBox114.Name = "CheckBox114"
-        Me.CheckBox114.UseVisualStyleBackColor = True
-        '
-        'CheckBox115
-        '
-        resources.ApplyResources(Me.CheckBox115, "CheckBox115")
-        Me.CheckBox115.Name = "CheckBox115"
-        Me.CheckBox115.UseVisualStyleBackColor = True
-        '
-        'CheckBox116
-        '
-        resources.ApplyResources(Me.CheckBox116, "CheckBox116")
-        Me.CheckBox116.Name = "CheckBox116"
-        Me.CheckBox116.UseVisualStyleBackColor = True
-        '
-        'CheckBox117
-        '
-        resources.ApplyResources(Me.CheckBox117, "CheckBox117")
-        Me.CheckBox117.Name = "CheckBox117"
-        Me.CheckBox117.UseVisualStyleBackColor = True
-        '
-        'CheckBox118
-        '
-        resources.ApplyResources(Me.CheckBox118, "CheckBox118")
-        Me.CheckBox118.Name = "CheckBox118"
-        Me.CheckBox118.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.TextBox20, "TextBox20")
+        Me.TextBox20.Name = "TextBox20"
         '
         'Blodbane
         '
@@ -2998,10 +2977,6 @@ Partial Class Blodbane
     Friend WithEvents Label99 As Label
     Friend WithEvents Label98 As Label
     Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents Label97 As Label
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents Label89 As Label
     Friend WithEvents TextBox19 As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents GroupBox7 As GroupBox
@@ -3231,4 +3206,5 @@ Partial Class Blodbane
     Friend WithEvents CheckBox71 As CheckBox
     Friend WithEvents Label130 As Label
     Friend WithEvents Label131 As Label
+    Friend WithEvents TextBox20 As TextBox
 End Class
