@@ -1,10 +1,32 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Blodbane
     Dim giversøk As New DataTable
+    Dim personstatusK As New Hashtable
+    Dim personstatusB As New Hashtable
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
         velkommen.Show()
+
+        'Henter statuskoder og legger i combobox(er)
+        Dim statuser As New DataTable
+        Dim da As New MySqlDataAdapter
+        Dim rad As DataRow
+        Dim statustekst, statuskode As String
+        giversøk.Clear()
+        tilkobling.Open()
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
+        da.SelectCommand = sqlSpørring
+        da.Fill(statuser)
+        tilkobling.Close()
+        ComboBox2.Items.Clear()
+        For Each rad In statuser.Rows
+            statustekst = rad("beskrivelse")
+            statuskode = rad("kode")
+            personstatusK.Add(statustekst, statuskode)
+            personstatusB.Add(statuskode, statustekst)
+            ComboBox2.Items.Add(statustekst)
+        Next
     End Sub
 
     Private Sub AvsluttToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvsluttToolStripMenuItem.Click
@@ -80,8 +102,8 @@ Public Class Blodbane
             resPnr = rad("fodselsnummer")
             resFnavn = rad("fornavn")
             resEnavn = rad("etternavn")
-            resStatus = rad("status")
-            ListBox2.Items.Add($"{resPnr},{vbTab}{resFnavn} {resEnavn},{vbTab}{resStatus}")
+            resStatus = rad("beskrivelse")
+            ListBox2.Items.Add($"{resPnr} {vbTab}{resFnavn} {resEnavn} {vbTab}{resStatus}")
         Next
     End Sub
 
@@ -90,22 +112,53 @@ Public Class Blodbane
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
         giversøk.Clear()
-        tilkobling.Open()
-        sqlStreng = "SELECT *  FROM blodgiver WHERE"
-        If (pnr <> "") And (status = 0) And (blodtype = "") Then
-            sqlStreng = sqlStreng & $" fodselsnummer = '{pnr}'"
-        ElseIf (status > 0) And (pnr = "") And (blodtype = "") Then
-            sqlStreng = sqlStreng & $" status = '{status}'"
-        ElseIf (blodtype <> "") And (status = 0) And (pnr = "") Then
-            sqlStreng = sqlStreng & $" blodtype = '{blodtype}'"
-        ElseIf (blodtype <> "") And (status > 0) And (pnr = "") Then
-            sqlStreng = sqlStreng & $" blodtype = '{blodtype}' and status = '{status}'"
-        ElseIf (pnr <> "") And (status > 0) And (blodtype <> "") Then
-            sqlStreng = sqlStreng & $" blodtype = '{blodtype}' and status = '{status}' and fodselsnummer = '{pnr}'"
-        End If
-        Dim sqlSpørring As New MySqlCommand($"{sqlStreng}", tilkobling)
-        da.SelectCommand = sqlSpørring
-        da.Fill(giversøk)
+        Try
+            tilkobling.Open()
+            sqlStreng = "SELECT *  FROM blodgiver b LEFT JOIN personstatus s ON b.status = s.kode WHERE"
+            If (pnr <> "") And (status = 0) And (blodtype = "") Then
+                sqlStreng = sqlStreng & $" fodselsnummer = '{pnr}'"
+            ElseIf (status > 0) And (pnr = "") And (blodtype = "") Then
+                sqlStreng = sqlStreng & $" status = '{status}'"
+            ElseIf (blodtype <> "") And (status = 0) And (pnr = "") Then
+                sqlStreng = sqlStreng & $" blodtype = '{blodtype}'"
+            ElseIf (blodtype <> "") And (status > 0) And (pnr = "") Then
+                sqlStreng = sqlStreng & $" blodtype = '{blodtype}' and status = '{status}'"
+            ElseIf (pnr <> "") And (status > 0) And (blodtype <> "") Then
+                sqlStreng = sqlStreng & $" blodtype = '{blodtype}' and status = '{status}' and fodselsnummer = '{pnr}'"
+            End If
+            Dim sqlSpørring As New MySqlCommand($"{sqlStreng}", tilkobling)
+            da.SelectCommand = sqlSpørring
+            da.Fill(giversøk)
+        Catch
+            MsgBox("Får ikke kontakt med databasen")
+            Exit Sub
+        End Try
         tilkobling.Close()
+    End Sub
+
+    'Sett rett statuskode i textboks
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        Dim tekst As String
+        Try
+            tekst = ComboBox2.SelectedItem
+            TextBox20.Text = personstatusK(tekst)
+        Catch
+            TextBox20.Text = ""
+            ComboBox2.Text = ""
+            Exit Sub
+        End Try
+    End Sub
+
+    'Sett rett statuskodebeskrivelse i combobox
+    Private Sub TextBox20_TextChanged(sender As Object, e As EventArgs) Handles TextBox20.TextChanged
+        Dim kode As String
+        Try
+            kode = TextBox20.Text
+            ComboBox2.Text = personstatusB(kode)
+        Catch
+            TextBox20.Text = ""
+            ComboBox2.Text = ""
+            Exit Sub
+        End Try
     End Sub
 End Class
