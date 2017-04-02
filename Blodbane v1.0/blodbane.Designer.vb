@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -328,6 +328,8 @@ Partial Class Blodbane
         Me.Label113 = New System.Windows.Forms.Label()
         Me.Label114 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.TextBox35 = New System.Windows.Forms.TextBox()
         Me.Label120 = New System.Windows.Forms.Label()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
@@ -337,13 +339,10 @@ Partial Class Blodbane
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label112 = New System.Windows.Forms.Label()
         Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.Label110 = New System.Windows.Forms.Label()
         Me.TextBox31 = New System.Windows.Forms.TextBox()
         Me.Label109 = New System.Windows.Forms.Label()
         Me.TextBox30 = New System.Windows.Forms.TextBox()
         Me.Label108 = New System.Windows.Forms.Label()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.Label106 = New System.Windows.Forms.Label()
         Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.Label107 = New System.Windows.Forms.Label()
         Me.TextBox26 = New System.Windows.Forms.TextBox()
@@ -357,8 +356,6 @@ Partial Class Blodbane
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.Label111 = New System.Windows.Forms.Label()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.Label101 = New System.Windows.Forms.Label()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Label100 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -2398,6 +2395,8 @@ Partial Class Blodbane
         '
         'GroupBox11
         '
+        Me.GroupBox11.Controls.Add(Me.TextBox28)
+        Me.GroupBox11.Controls.Add(Me.TextBox21)
         Me.GroupBox11.Controls.Add(Me.TextBox35)
         Me.GroupBox11.Controls.Add(Me.Label120)
         Me.GroupBox11.Controls.Add(Me.RichTextBox4)
@@ -2407,13 +2406,10 @@ Partial Class Blodbane
         Me.GroupBox11.Controls.Add(Me.RichTextBox2)
         Me.GroupBox11.Controls.Add(Me.Label112)
         Me.GroupBox11.Controls.Add(Me.TextBox32)
-        Me.GroupBox11.Controls.Add(Me.Label110)
         Me.GroupBox11.Controls.Add(Me.TextBox31)
         Me.GroupBox11.Controls.Add(Me.Label109)
         Me.GroupBox11.Controls.Add(Me.TextBox30)
         Me.GroupBox11.Controls.Add(Me.Label108)
-        Me.GroupBox11.Controls.Add(Me.TextBox28)
-        Me.GroupBox11.Controls.Add(Me.Label106)
         Me.GroupBox11.Controls.Add(Me.TextBox29)
         Me.GroupBox11.Controls.Add(Me.Label107)
         Me.GroupBox11.Controls.Add(Me.TextBox26)
@@ -2427,6 +2423,17 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox11, "GroupBox11")
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.TabStop = False
+        '
+        'TextBox28
+        '
+        Me.TextBox28.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox28, "TextBox28")
+        Me.TextBox28.Name = "TextBox28"
+        '
+        'TextBox21
+        '
+        resources.ApplyResources(Me.TextBox21, "TextBox21")
+        Me.TextBox21.Name = "TextBox21"
         '
         'TextBox35
         '
@@ -2472,13 +2479,9 @@ Partial Class Blodbane
         '
         'TextBox32
         '
+        Me.TextBox32.BackColor = System.Drawing.SystemColors.InactiveCaption
         resources.ApplyResources(Me.TextBox32, "TextBox32")
         Me.TextBox32.Name = "TextBox32"
-        '
-        'Label110
-        '
-        resources.ApplyResources(Me.Label110, "Label110")
-        Me.Label110.Name = "Label110"
         '
         'TextBox31
         '
@@ -2499,16 +2502,6 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.Label108, "Label108")
         Me.Label108.Name = "Label108"
-        '
-        'TextBox28
-        '
-        resources.ApplyResources(Me.TextBox28, "TextBox28")
-        Me.TextBox28.Name = "TextBox28"
-        '
-        'Label106
-        '
-        resources.ApplyResources(Me.Label106, "Label106")
-        Me.Label106.Name = "Label106"
         '
         'TextBox29
         '
@@ -2542,6 +2535,7 @@ Partial Class Blodbane
         '
         'TextBox25
         '
+        Me.TextBox25.BackColor = System.Drawing.SystemColors.InactiveCaption
         resources.ApplyResources(Me.TextBox25, "TextBox25")
         Me.TextBox25.Name = "TextBox25"
         '
@@ -2564,8 +2558,6 @@ Partial Class Blodbane
         '
         Me.GroupBox10.Controls.Add(Me.ListBox3)
         Me.GroupBox10.Controls.Add(Me.Label111)
-        Me.GroupBox10.Controls.Add(Me.TextBox23)
-        Me.GroupBox10.Controls.Add(Me.Label101)
         Me.GroupBox10.Controls.Add(Me.TextBox22)
         Me.GroupBox10.Controls.Add(Me.Label100)
         resources.ApplyResources(Me.GroupBox10, "GroupBox10")
@@ -2583,17 +2575,6 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.Label111, "Label111")
         Me.Label111.Name = "Label111"
-        '
-        'TextBox23
-        '
-        Me.TextBox23.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox23, "TextBox23")
-        Me.TextBox23.Name = "TextBox23"
-        '
-        'Label101
-        '
-        resources.ApplyResources(Me.Label101, "Label101")
-        Me.Label101.Name = "Label101"
         '
         'TextBox22
         '
@@ -2756,17 +2737,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart1.Series.Add(Series4)
         '
         'ToolTip1
         '
@@ -2986,13 +2967,10 @@ Partial Class Blodbane
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents TextBox32 As TextBox
-    Friend WithEvents Label110 As Label
     Friend WithEvents TextBox31 As TextBox
     Friend WithEvents Label109 As Label
     Friend WithEvents TextBox30 As TextBox
     Friend WithEvents Label108 As Label
-    Friend WithEvents TextBox28 As TextBox
-    Friend WithEvents Label106 As Label
     Friend WithEvents TextBox29 As TextBox
     Friend WithEvents Label107 As Label
     Friend WithEvents TextBox26 As TextBox
@@ -3006,8 +2984,6 @@ Partial Class Blodbane
     Friend WithEvents GroupBox10 As GroupBox
     Friend WithEvents ListBox3 As ListBox
     Friend WithEvents Label111 As Label
-    Friend WithEvents TextBox23 As TextBox
-    Friend WithEvents Label101 As Label
     Friend WithEvents TextBox22 As TextBox
     Friend WithEvents Label100 As Label
     Friend WithEvents BttnSøkGiver As Button
@@ -3207,4 +3183,6 @@ Partial Class Blodbane
     Friend WithEvents Label130 As Label
     Friend WithEvents Label131 As Label
     Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents TextBox28 As TextBox
 End Class

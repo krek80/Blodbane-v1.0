@@ -3,6 +3,7 @@ Public Class Blodbane
     Dim giversøk As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
+    Dim postnummer As New Hashtable
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
@@ -10,9 +11,11 @@ Public Class Blodbane
 
         'Henter statuskoder og legger i combobox(er)
         Dim statuser As New DataTable
+        Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
         Dim statustekst, statuskode As String
+        Dim psted, pnr As String
         giversøk.Clear()
         tilkobling.Open()
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
@@ -26,6 +29,18 @@ Public Class Blodbane
             personstatusK.Add(statustekst, statuskode)
             personstatusB.Add(statuskode, statustekst)
             ComboBox2.Items.Add(statustekst)
+            ComboBox4.Items.Add(statustekst)
+        Next
+
+        'Henter postnummer og sted og legegr i hastable
+        Dim sqlSpørring2 As New MySqlCommand("SELECT n.postnr, s.sted FROM postnummer n LEFT JOIN poststeder s ON n.stedid = s.id", tilkobling)
+        da.SelectCommand = sqlSpørring2
+        da.Fill(steder)
+        tilkobling.Close()
+        For Each rad In steder.Rows
+            psted = rad("sted")
+            pnr = rad("postnr")
+            postnummer.Add(pnr, psted)
         Next
     End Sub
 
@@ -76,15 +91,14 @@ Public Class Blodbane
         LoggAvToolStripMenuItem.Visible = False
     End Sub
 
-    'Knapp for å søke etter blodgivere basert på parametre
-    'Legger resultater i listeboks
+    'Knapp for å søke etter blodgivere basert på parametre - legger resultater i listeboks
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BttnSøkGiver.Click
         Dim personnummer As String = TextBox19.Text
         Dim status As String = TextBox20.Text
         Dim statuskode As Integer
         Dim blodtype As String = ComboBox5.Text
         Dim rad As DataRow
-        Dim resPnr, resFnavn, resEnavn, resStatus As String
+        Dim resPnr, resFnavn, resEnavn, resStatus, resKode As String
         If status = "" Then
             statuskode = 0
         Else
@@ -103,11 +117,15 @@ Public Class Blodbane
             resFnavn = rad("fornavn")
             resEnavn = rad("etternavn")
             resStatus = rad("beskrivelse")
-            ListBox2.Items.Add($"{resPnr} {vbTab}{resFnavn} {resEnavn} {vbTab}{resStatus}")
+            resKode = rad("status")
+            ListBox2.Items.Add($"{resPnr} {vbTab}{resFnavn} {resEnavn} {vbTab}{resKode} - {resStatus}")
         Next
+        If ListBox2.Items.Count > 0 Then
+            ListBox2.SetSelected(0, True)
+        End If
     End Sub
 
-    'Kjører SQL med søk mot database
+    'Kjører SQL med søk mot database - legger resultat i DataTable
     Private Sub søk(ByVal pnr As String, ByVal status As Integer, ByVal blodtype As String)
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
@@ -137,11 +155,18 @@ Public Class Blodbane
     End Sub
 
     'Sett rett statuskode i textboks
+    Private Sub statuskode(ByVal beskrivelse As String, ByVal utput As Object, input As Object)
+        utput.text = personstatusK(beskrivelse)
+    End Sub
+
+    'Sett rett statusbeskrivelse i combobox
+    Private Sub statusbeskrivelse(ByVal kode As String, ByVal utput As Object, input As Object)
+        utput.text = personstatusB(kode)
+    End Sub
+
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        Dim tekst As String
         Try
-            tekst = ComboBox2.SelectedItem
-            TextBox20.Text = personstatusK(tekst)
+            statuskode(ComboBox2.SelectedItem, TextBox20, ComboBox2)
         Catch
             TextBox20.Text = ""
             ComboBox2.Text = ""
@@ -149,16 +174,76 @@ Public Class Blodbane
         End Try
     End Sub
 
-    'Sett rett statuskodebeskrivelse i combobox
     Private Sub TextBox20_TextChanged(sender As Object, e As EventArgs) Handles TextBox20.TextChanged
-        Dim kode As String
         Try
-            kode = TextBox20.Text
-            ComboBox2.Text = personstatusB(kode)
+            statusbeskrivelse(TextBox20.Text, ComboBox2, TextBox20)
         Catch
             TextBox20.Text = ""
             ComboBox2.Text = ""
             Exit Sub
         End Try
+    End Sub
+
+    'Presenter valgt person
+    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        Dim index, i As Integer
+        Dim rad As DataRow
+        Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2 As String
+        Dim status As Integer
+        Dim sistTapping As Date
+        Dim dager As Long
+        index = ListBox2.SelectedIndex
+        For Each rad In giversøk.Rows
+            fNavn = rad("fornavn")
+            eNavn = rad("etternavn")
+            fnr = rad("fodselsnummer")
+            epost = rad("epost")
+            adresse = rad("adresse")
+            tlf1 = rad("telefon1")
+            tlf2 = rad("telefon2")
+            postnummmer = rad("postnr")
+            status = rad("status")
+            sistTapping = rad("siste_blodtapping")
+            If i = index Then
+                Exit For
+            End If
+            i = i + 1
+        Next
+        dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
+
+        TextBox24.Text = $"{fNavn} {eNavn}"
+        TextBox25.Text = fnr
+        TextBox27.Text = epost
+        TextBox26.Text = tlf1
+        TextBox29.Text = tlf2
+        TextBox30.Text = adresse
+        TextBox31.Text = postnummmer
+        TextBox21.Text = status
+        TextBox35.Text = $"{dager} dager"
+        TextBox28.Text = sistTapping
+    End Sub
+
+    Private Sub TextBox21_TextChanged(sender As Object, e As EventArgs) Handles TextBox21.TextChanged
+        Try
+            statusbeskrivelse(TextBox21.Text, ComboBox4, TextBox21)
+        Catch
+            TextBox21.Text = ""
+            ComboBox4.Text = ""
+            Exit Sub
+        End Try
+    End Sub
+
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
+        Try
+            statuskode(ComboBox4.SelectedItem, TextBox21, ComboBox4)
+        Catch
+            TextBox21.Text = ""
+            ComboBox4.Text = ""
+            Exit Sub
+        End Try
+    End Sub
+
+    Private Sub TextBox31_TextChanged(sender As Object, e As EventArgs) Handles TextBox31.TextChanged
+        TextBox32.Text = postnummer(TextBox31.Text)
     End Sub
 End Class
