@@ -33,13 +33,13 @@ Public Class Blodbane
         Next
 
         'Henter postnummer og sted og legegr i hastable
-        Dim sqlSpørring2 As New MySqlCommand("SELECT n.postnr, s.sted FROM postnummer n LEFT JOIN poststeder s ON n.stedid = s.id", tilkobling)
+        Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
         da.SelectCommand = sqlSpørring2
         da.Fill(steder)
         tilkobling.Close()
         For Each rad In steder.Rows
-            psted = rad("sted")
-            pnr = rad("postnr")
+            psted = rad("poststed")
+            pnr = rad("postnummer")
             postnummer.Add(pnr, psted)
         Next
     End Sub
