@@ -243,7 +243,13 @@ Public Class Blodbane
         End Try
     End Sub
 
+    'Sett rett poststed ved siden av postnummer i personsøk
     Private Sub TextBox31_TextChanged(sender As Object, e As EventArgs) Handles TextBox31.TextChanged
         TextBox32.Text = postnummer(TextBox31.Text)
+    End Sub
+
+    'Sett rett poststed ved siden av postnummer i egenregistrering
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
+        TextBox2.Text = postnummer(TextBox8.Text)
     End Sub
 End Class
