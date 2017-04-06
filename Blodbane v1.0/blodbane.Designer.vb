@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,9 +51,11 @@ Partial Class Blodbane
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.BttnSendSkjema = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.BttnLoggpåGiver = New System.Windows.Forms.Button()
@@ -321,10 +323,6 @@ Partial Class Blodbane
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.Label116 = New System.Windows.Forms.Label()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.Label115 = New System.Windows.Forms.Label()
         Me.Label113 = New System.Windows.Forms.Label()
         Me.Label114 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
@@ -359,6 +357,7 @@ Partial Class Blodbane
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Label100 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Label119 = New System.Windows.Forms.Label()
@@ -382,6 +381,9 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -481,9 +483,11 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.Label8, 0, 7)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBox6, 1, 7)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBox7, 1, 6)
-        Me.TableLayoutPanel2.Controls.Add(Me.BttnSendSkjema, 0, 9)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 8)
         Me.TableLayoutPanel2.Controls.Add(Me.TextBox8, 1, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.BttnSendSkjema, 0, 10)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label89, 0, 8)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox23, 1, 8)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
         'Label7
@@ -569,6 +573,11 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox7, 2)
         Me.TextBox7.Name = "TextBox7"
         '
+        'TextBox8
+        '
+        resources.ApplyResources(Me.TextBox8, "TextBox8")
+        Me.TextBox8.Name = "TextBox8"
+        '
         'BttnSendSkjema
         '
         resources.ApplyResources(Me.BttnSendSkjema, "BttnSendSkjema")
@@ -583,10 +592,17 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.SetColumnSpan(Me.Label13, 3)
         Me.Label13.Name = "Label13"
         '
-        'TextBox8
+        'Label89
         '
-        resources.ApplyResources(Me.TextBox8, "TextBox8")
-        Me.TextBox8.Name = "TextBox8"
+        resources.ApplyResources(Me.Label89, "Label89")
+        Me.Label89.Name = "Label89"
+        '
+        'TextBox23
+        '
+        resources.ApplyResources(Me.TextBox23, "TextBox23")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox23, 2)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.UseSystemPasswordChar = True
         '
         'TableLayoutPanel3
         '
@@ -2339,12 +2355,11 @@ Partial Class Blodbane
         '
         'GroupBox12
         '
+        Me.GroupBox12.Controls.Add(Me.Button6)
+        Me.GroupBox12.Controls.Add(Me.ComboBox3)
+        Me.GroupBox12.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox12.Controls.Add(Me.Label116)
         Me.GroupBox12.Controls.Add(Me.RichTextBox3)
-        Me.GroupBox12.Controls.Add(Me.ComboBox3)
-        Me.GroupBox12.Controls.Add(Me.TextBox34)
-        Me.GroupBox12.Controls.Add(Me.TextBox33)
-        Me.GroupBox12.Controls.Add(Me.Label115)
         Me.GroupBox12.Controls.Add(Me.Label113)
         Me.GroupBox12.Controls.Add(Me.Label114)
         resources.ApplyResources(Me.GroupBox12, "GroupBox12")
@@ -2360,28 +2375,6 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
         Me.RichTextBox3.Name = "RichTextBox3"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {resources.GetString("ComboBox3.Items"), resources.GetString("ComboBox3.Items1"), resources.GetString("ComboBox3.Items2")})
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
-        '
-        'TextBox34
-        '
-        resources.ApplyResources(Me.TextBox34, "TextBox34")
-        Me.TextBox34.Name = "TextBox34"
-        '
-        'TextBox33
-        '
-        resources.ApplyResources(Me.TextBox33, "TextBox33")
-        Me.TextBox33.Name = "TextBox33"
-        '
-        'Label115
-        '
-        resources.ApplyResources(Me.Label115, "Label115")
-        Me.Label115.Name = "Label115"
         '
         'Label113
         '
@@ -2546,6 +2539,7 @@ Partial Class Blodbane
         '
         'TextBox24
         '
+        Me.TextBox24.BackColor = System.Drawing.SystemColors.InactiveCaption
         resources.ApplyResources(Me.TextBox24, "TextBox24")
         Me.TextBox24.Name = "TextBox24"
         '
@@ -2589,6 +2583,7 @@ Partial Class Blodbane
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Button4)
         Me.GroupBox4.Controls.Add(Me.TextBox20)
         Me.GroupBox4.Controls.Add(Me.ComboBox5)
         Me.GroupBox4.Controls.Add(Me.Label119)
@@ -2602,6 +2597,12 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
+        '
+        'Button4
+        '
+        resources.ApplyResources(Me.Button4, "Button4")
+        Me.Button4.Name = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'TextBox20
         '
@@ -2737,17 +2738,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -2756,6 +2757,23 @@ Partial Class Blodbane
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        '
+        'DateTimePicker2
+        '
+        resources.ApplyResources(Me.DateTimePicker2, "DateTimePicker2")
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
+        Me.ComboBox3.Name = "ComboBox3"
+        '
+        'Button6
+        '
+        resources.ApplyResources(Me.Button6, "Button6")
+        Me.Button6.Name = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Blodbane
         '
@@ -2993,10 +3011,6 @@ Partial Class Blodbane
     Friend WithEvents GroupBox12 As GroupBox
     Friend WithEvents Label116 As Label
     Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents TextBox34 As TextBox
-    Friend WithEvents TextBox33 As TextBox
-    Friend WithEvents Label115 As Label
     Friend WithEvents Label113 As Label
     Friend WithEvents Label114 As Label
     Friend WithEvents ComboBox4 As ComboBox
@@ -3185,4 +3199,10 @@ Partial Class Blodbane
     Friend WithEvents TextBox20 As TextBox
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents TextBox28 As TextBox
+    Friend WithEvents Label89 As Label
+    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents Button6 As Button
 End Class

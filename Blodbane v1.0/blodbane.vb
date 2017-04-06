@@ -1,9 +1,11 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.ComponentModel
+Imports MySql.Data.MySqlClient
 Public Class Blodbane
     Dim giversøk As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
+    Dim ansatt As New DataTable
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
@@ -14,8 +16,7 @@ Public Class Blodbane
         Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
-        Dim statustekst, statuskode As String
-        Dim psted, pnr As String
+        Dim statustekst, statuskode, psted, pnr, aEpost As String
         giversøk.Clear()
         tilkobling.Open()
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
@@ -36,12 +37,21 @@ Public Class Blodbane
         Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
         da.SelectCommand = sqlSpørring2
         da.Fill(steder)
-        tilkobling.Close()
         For Each rad In steder.Rows
             psted = rad("poststed")
             pnr = rad("postnummer")
             postnummer.Add(pnr, psted)
         Next
+
+        'Henter anasatte og legger i datatable
+        Dim sqlSpørring3 As New MySqlCommand("SELECT * FROM ansatt a Inner JOIN bruker b ON a.epost = b.epost", tilkobling)
+        da.SelectCommand = sqlSpørring3
+        da.Fill(ansatt)
+        For Each rad In ansatt.Rows
+            aEpost = rad("epost")
+            ComboBox3.Items.Add(aEpost)
+        Next
+        tilkobling.Close()
     End Sub
 
     Private Sub AvsluttToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvsluttToolStripMenuItem.Click
@@ -132,7 +142,7 @@ Public Class Blodbane
         giversøk.Clear()
         Try
             tilkobling.Open()
-            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE"
+            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode INNER JOIN egenerklaering eg ON eg.bgepost = bl.epost WHERE"
             If (pnr <> "") And (status = 0) And (blodtype = "") Then
                 sqlStreng = sqlStreng & $" bl.fødselsnummer = '{pnr}'"
             ElseIf (status > 0) And (pnr = "") And (blodtype = "") Then
@@ -188,10 +198,11 @@ Public Class Blodbane
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
         Dim index, i As Integer
         Dim rad As DataRow
-        Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2 As String
+        Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar As String
         Dim status As Integer
-        Dim sistTapping As Date
+        Dim sistTapping, sistErklæring As Date
         Dim dager As Long
+        ListBox3.Items.Clear()
         index = ListBox2.SelectedIndex
         For Each rad In giversøk.Rows
             fNavn = rad("fornavn")
@@ -204,12 +215,18 @@ Public Class Blodbane
             postnummmer = rad("postnr")
             status = rad("statuskode")
             sistTapping = rad("siste_blodtapping")
+            intMerknad = rad("merknad")
+            preferanse = rad("timepreferanse")
+            sistErklæring = rad("datotidbg")
+            jasvar = rad("skjema")
             If i = index Then
                 Exit For
             End If
             i = i + 1
         Next
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value
         dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
+        utledJAsvar(jasvar)
 
         TextBox24.Text = $"{fNavn} {eNavn}"
         TextBox25.Text = fnr
@@ -221,6 +238,18 @@ Public Class Blodbane
         TextBox21.Text = status
         TextBox35.Text = $"{dager} dager"
         TextBox28.Text = sistTapping
+        RichTextBox4.Text = preferanse
+        RichTextBox2.Text = intMerknad
+        TextBox22.Text = sistErklæring
+#Enable Warning BC42104
+    End Sub
+
+    'Utleder Jasvar og presenterer i Listebox
+    Private Sub utledJAsvar(ByVal spmNr As String)
+        Dim svar() As String = spmNr.Split(",")
+        For i = 0 To svar.Length - 1
+            ListBox3.Items.Add(svar(i))
+        Next
     End Sub
 
     Private Sub TextBox21_TextChanged(sender As Object, e As EventArgs) Handles TextBox21.TextChanged
@@ -251,5 +280,11 @@ Public Class Blodbane
     'Sett rett poststed ved siden av postnummer i egenregistrering
     Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
         TextBox2.Text = postnummer(TextBox8.Text)
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        TextBox19.Text = ""
+        ComboBox5.Text = ""
+        TextBox20.Text = ""
     End Sub
 End Class
