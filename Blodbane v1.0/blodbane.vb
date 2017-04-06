@@ -117,7 +117,7 @@ Public Class Blodbane
             resFnavn = rad("fornavn")
             resEnavn = rad("etternavn")
             resStatus = rad("beskrivelse")
-            resKode = rad("status")
+            resKode = rad("statuskode")
             ListBox2.Items.Add($"{resPnr} {vbTab}{resFnavn} {resEnavn} {vbTab}{resKode} - {resStatus}")
         Next
         If ListBox2.Items.Count > 0 Then
@@ -132,17 +132,17 @@ Public Class Blodbane
         giversøk.Clear()
         Try
             tilkobling.Open()
-            sqlStreng = "SELECT *  FROM blodgiver b LEFT JOIN personstatus s ON b.status = s.kode WHERE"
+            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE"
             If (pnr <> "") And (status = 0) And (blodtype = "") Then
-                sqlStreng = sqlStreng & $" fodselsnummer = '{pnr}'"
+                sqlStreng = sqlStreng & $" bl.fødselsnummer = '{pnr}'"
             ElseIf (status > 0) And (pnr = "") And (blodtype = "") Then
-                sqlStreng = sqlStreng & $" status = '{status}'"
+                sqlStreng = sqlStreng & $" br.statuskode = '{status}'"
             ElseIf (blodtype <> "") And (status = 0) And (pnr = "") Then
-                sqlStreng = sqlStreng & $" blodtype = '{blodtype}'"
+                sqlStreng = sqlStreng & $" bl.blodtype = '{blodtype}'"
             ElseIf (blodtype <> "") And (status > 0) And (pnr = "") Then
-                sqlStreng = sqlStreng & $" blodtype = '{blodtype}' and status = '{status}'"
+                sqlStreng = sqlStreng & $" bl.blodtype = '{blodtype}' and br.statuskode = '{status}'"
             ElseIf (pnr <> "") And (status > 0) And (blodtype <> "") Then
-                sqlStreng = sqlStreng & $" blodtype = '{blodtype}' and status = '{status}' and fodselsnummer = '{pnr}'"
+                sqlStreng = sqlStreng & $" bl.blodtype = '{blodtype}' and br.statuskde = '{status}' and bl.fødselsnummer = '{pnr}'"
             End If
             Dim sqlSpørring As New MySqlCommand($"{sqlStreng}", tilkobling)
             da.SelectCommand = sqlSpørring
@@ -202,7 +202,7 @@ Public Class Blodbane
             tlf1 = rad("telefon1")
             tlf2 = rad("telefon2")
             postnummmer = rad("postnr")
-            status = rad("status")
+            status = rad("statuskode")
             sistTapping = rad("siste_blodtapping")
             If i = index Then
                 Exit For
