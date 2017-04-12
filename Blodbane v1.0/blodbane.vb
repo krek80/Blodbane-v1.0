@@ -3,6 +3,7 @@ Imports MySql.Data.MySqlClient
 Public Class Blodbane
     Dim giversøk As New DataTable
     Dim egenerklaering As New DataTable
+    Dim innkalling As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
@@ -17,7 +18,7 @@ Public Class Blodbane
         Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
-        Dim statustekst, statuskode, psted, pnr, aEpost As String
+        Dim statustekst, statuskode, psted, pnr As String
         giversøk.Clear()
         tilkobling.Open()
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
@@ -48,10 +49,6 @@ Public Class Blodbane
         Dim sqlSpørring3 As New MySqlCommand("SELECT * FROM ansatt a Inner JOIN bruker b ON a.epost = b.epost", tilkobling)
         da.SelectCommand = sqlSpørring3
         da.Fill(ansatt)
-        For Each rad In ansatt.Rows
-            aEpost = rad("epost")
-            ComboBox3.Items.Add(aEpost)
-        Next
         tilkobling.Close()
     End Sub
 
@@ -294,9 +291,35 @@ Public Class Blodbane
         TextBox2.Text = postnummer(TextBox8.Text)
     End Sub
 
+    'Tøm giversøk
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
         TextBox19.Text = ""
         ComboBox5.Text = ""
         TextBox20.Text = ""
+    End Sub
+
+    'Innkallingsoversikt
+    Private Sub TabPage3_Enter(sender As Object, e As EventArgs) Handles TabPage3.Enter
+        Dim rad As DataRow
+        Dim da As New MySqlDataAdapter
+        Dim epost As String
+        Dim dato As Date
+        Dim romnr, etg As Integer
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM timeavtale t INNER JOIN rom r ON t.romnr = r.romnr", tilkobling)
+        da.SelectCommand = sqlSpørring
+        da.Fill(innkalling)
+
+        For Each rad In innkalling.Rows
+            dato = DateValue(rad("datotid"))
+            If dato = Today Then
+                dato = rad("datotid")
+                epost = rad("bgepost")
+                romnr = rad("romnr")
+                etg = rad("etasje")
+                ListBox4.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
+            End If
+        Next
+        tilkobling.Close()
+
     End Sub
 End Class
