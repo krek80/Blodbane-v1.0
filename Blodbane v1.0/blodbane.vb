@@ -228,16 +228,15 @@ Public Class Blodbane
             End If
             i = i + 1
         Next
-        i = 0
-        For Each rad In egenerklaering.Rows
-            sistErklæring = rad("datotidbg")
-            jasvar = rad("skjema")
-            If i = index Then
-                Exit For
-            End If
-            i = i + 1
-        Next
 #Disable Warning BC42104 ' Variable is used before it has been assigned a value
+        For Each rad In egenerklaering.Rows
+            If rad("bgepost") = epost Then
+                If rad("datotidbg") > sistErklæring Then
+                    sistErklæring = rad("datotidbg")
+                    jasvar = rad("skjema")
+                End If
+            End If
+        Next
         dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
         utledJAsvar(jasvar)
 

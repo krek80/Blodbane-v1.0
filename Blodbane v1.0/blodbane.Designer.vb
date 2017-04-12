@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -320,14 +320,6 @@ Partial Class Blodbane
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label116 = New System.Windows.Forms.Label()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.Label113 = New System.Windows.Forms.Label()
-        Me.Label114 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.TextBox28 = New System.Windows.Forms.TextBox()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
@@ -407,7 +399,6 @@ Partial Class Blodbane
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.GroupBox12.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -2346,62 +2337,11 @@ Partial Class Blodbane
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage1.Controls.Add(Me.GroupBox12)
         Me.TabPage1.Controls.Add(Me.GroupBox11)
         Me.TabPage1.Controls.Add(Me.GroupBox10)
         Me.TabPage1.Controls.Add(Me.GroupBox4)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
-        '
-        'GroupBox12
-        '
-        Me.GroupBox12.Controls.Add(Me.Button6)
-        Me.GroupBox12.Controls.Add(Me.ComboBox3)
-        Me.GroupBox12.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox12.Controls.Add(Me.Label116)
-        Me.GroupBox12.Controls.Add(Me.RichTextBox3)
-        Me.GroupBox12.Controls.Add(Me.Label113)
-        Me.GroupBox12.Controls.Add(Me.Label114)
-        resources.ApplyResources(Me.GroupBox12, "GroupBox12")
-        Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.TabStop = False
-        '
-        'Button6
-        '
-        resources.ApplyResources(Me.Button6, "Button6")
-        Me.Button6.Name = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
-        '
-        'DateTimePicker2
-        '
-        resources.ApplyResources(Me.DateTimePicker2, "DateTimePicker2")
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        '
-        'Label116
-        '
-        resources.ApplyResources(Me.Label116, "Label116")
-        Me.Label116.Name = "Label116"
-        '
-        'RichTextBox3
-        '
-        resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
-        Me.RichTextBox3.Name = "RichTextBox3"
-        '
-        'Label113
-        '
-        resources.ApplyResources(Me.Label113, "Label113")
-        Me.Label113.Name = "Label113"
-        '
-        'Label114
-        '
-        resources.ApplyResources(Me.Label114, "Label114")
-        Me.Label114.Name = "Label114"
         '
         'GroupBox11
         '
@@ -2755,17 +2695,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend3)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart1.Series.Add(Series3)
         '
         'ToolTip1
         '
@@ -2828,8 +2768,6 @@ Partial Class Blodbane
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.GroupBox12.ResumeLayout(False)
-        Me.GroupBox12.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
@@ -3008,11 +2946,6 @@ Partial Class Blodbane
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents Label112 As Label
     Friend WithEvents LagreToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GroupBox12 As GroupBox
-    Friend WithEvents Label116 As Label
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents Label113 As Label
-    Friend WithEvents Label114 As Label
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents Label117 As Label
     Friend WithEvents RichTextBox4 As RichTextBox
@@ -3202,7 +3135,4 @@ Partial Class Blodbane
     Friend WithEvents Label89 As Label
     Friend WithEvents TextBox23 As TextBox
     Friend WithEvents Button4 As Button
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Button6 As Button
 End Class
