@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Public Class Blodbane
     Dim giversøk As New DataTable
+    Dim egenerklaering As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
@@ -140,9 +141,10 @@ Public Class Blodbane
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
         giversøk.Clear()
+        egenerklaering.Clear()
         Try
             tilkobling.Open()
-            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode INNER JOIN egenerklaering eg ON eg.bgepost = bl.epost WHERE"
+            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE"
             If (pnr <> "") And (status = 0) And (blodtype = "") Then
                 sqlStreng = sqlStreng & $" bl.fødselsnummer = '{pnr}'"
             ElseIf (status > 0) And (pnr = "") And (blodtype = "") Then
@@ -157,6 +159,10 @@ Public Class Blodbane
             Dim sqlSpørring As New MySqlCommand($"{sqlStreng}", tilkobling)
             da.SelectCommand = sqlSpørring
             da.Fill(giversøk)
+
+            Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM egenerklaering", tilkobling)
+            da.SelectCommand = sqlSpørring2
+            da.Fill(egenerklaering)
         Catch
             MsgBox("Får ikke kontakt med databasen")
             Exit Sub
@@ -217,6 +223,13 @@ Public Class Blodbane
             sistTapping = rad("siste_blodtapping")
             intMerknad = rad("merknad")
             preferanse = rad("timepreferanse")
+            If i = index Then
+                Exit For
+            End If
+            i = i + 1
+        Next
+        i = 0
+        For Each rad In egenerklaering.Rows
             sistErklæring = rad("datotidbg")
             jasvar = rad("skjema")
             If i = index Then

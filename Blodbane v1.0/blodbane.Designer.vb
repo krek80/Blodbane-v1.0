@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -321,6 +321,9 @@ Partial Class Blodbane
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label116 = New System.Windows.Forms.Label()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.Label113 = New System.Windows.Forms.Label()
@@ -381,9 +384,6 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -2366,6 +2366,23 @@ Partial Class Blodbane
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.TabStop = False
         '
+        'Button6
+        '
+        resources.ApplyResources(Me.Button6, "Button6")
+        Me.Button6.Name = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
+        Me.ComboBox3.Name = "ComboBox3"
+        '
+        'DateTimePicker2
+        '
+        resources.ApplyResources(Me.DateTimePicker2, "DateTimePicker2")
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        '
         'Label116
         '
         resources.ApplyResources(Me.Label116, "Label116")
@@ -2738,17 +2755,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
         '
         'ToolTip1
         '
@@ -2757,23 +2774,6 @@ Partial Class Blodbane
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
-        'DateTimePicker2
-        '
-        resources.ApplyResources(Me.DateTimePicker2, "DateTimePicker2")
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
-        '
-        'Button6
-        '
-        resources.ApplyResources(Me.Button6, "Button6")
-        Me.Button6.Name = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'Blodbane
         '
