@@ -4,10 +4,12 @@ Public Class Blodbane
     Dim giversøk As New DataTable
     Dim egenerklaering As New DataTable
     Dim innkalling As New DataTable
+    Dim blodlager As New DataTable
+    Public ansatt As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
-    Dim ansatt As New DataTable
+    Public påloggetAnsatt As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
@@ -46,7 +48,7 @@ Public Class Blodbane
         Next
 
         'Henter anasatte og legger i datatable
-        Dim sqlSpørring3 As New MySqlCommand("SELECT * FROM ansatt a Inner JOIN bruker b ON a.epost = b.epost", tilkobling)
+        Dim sqlSpørring3 As New MySqlCommand("SELECT a.epost, b.passord, b.fornavn FROM ansatt a Inner JOIN bruker b ON a.epost = b.epost", tilkobling)
         da.SelectCommand = sqlSpørring3
         da.Fill(ansatt)
         tilkobling.Close()
@@ -56,6 +58,7 @@ Public Class Blodbane
         Me.Close()
     End Sub
 
+    'Logg på ansatt
     Private Sub LoggPåansattToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoggPåansattToolStripMenuItem.Click
         pålogging.Show()
     End Sub
@@ -90,7 +93,9 @@ Public Class Blodbane
         LoggAvToolStripMenuItem.Visible = False
     End Sub
 
+    'Logg av ansatt
     Private Sub LoggAvToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoggAvToolStripMenuItem.Click
+        Label23.Text = ""
         PanelGiver.Hide()
         PanelAnsatt.Hide()
         PanelPåmelding.Show()
@@ -332,6 +337,22 @@ Public Class Blodbane
                 ListBox6.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
             End If
         Next
+        tilkobling.Close()
+    End Sub
+
+    'Blodlager
+    Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
+        Me.Cursor = Cursors.WaitCursor
+        Dim rad As DataRow
+        Dim da As New MySqlDataAdapter
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN blodstatus s ON b.statusid = s.id", tilkobling)
+        da.SelectCommand = sqlSpørring
+        da.Fill(blodlager)
+        Me.Cursor = Cursors.Default
+
+        For Each rad In blodlager.Rows
+        Next
+
         tilkobling.Close()
     End Sub
 End Class
