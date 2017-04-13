@@ -101,6 +101,7 @@ Public Class Blodbane
 
     'Knapp for å søke etter blodgivere basert på parametre - legger resultater i listeboks
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BttnSøkGiver.Click
+        Me.Cursor = Cursors.WaitCursor
         Dim personnummer As String = TextBox19.Text
         Dim status As String = TextBox20.Text
         Dim statuskode As Integer
@@ -120,6 +121,7 @@ Public Class Blodbane
         End If
         søk(personnummer, statuskode, blodtype)
         ListBox2.Items.Clear()
+        Me.Cursor = Cursors.Default
         For Each rad In giversøk.Rows
             resPnr = rad("fodselsnummer")
             resFnavn = rad("fornavn")
@@ -197,7 +199,7 @@ Public Class Blodbane
         End Try
     End Sub
 
-    'Presenter valgt person
+    'Presenter valgt person i giversøk
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
         Dim index, i As Integer
         Dim rad As DataRow
@@ -253,7 +255,7 @@ Public Class Blodbane
 #Enable Warning BC42104
     End Sub
 
-    'Utleder Jasvar og presenterer i Listebox
+    'Utleder Jasvar og presenterer i Listebox i giversøk
     Private Sub utledJAsvar(ByVal spmNr As String)
         Dim svar() As String = spmNr.Split(",")
         For i = 0 To svar.Length - 1
@@ -300,26 +302,36 @@ Public Class Blodbane
 
     'Innkallingsoversikt
     Private Sub TabPage3_Enter(sender As Object, e As EventArgs) Handles TabPage3.Enter
+        Me.Cursor = Cursors.WaitCursor
         Dim rad As DataRow
         Dim da As New MySqlDataAdapter
         Dim epost As String
         Dim dato As Date
         Dim romnr, etg As Integer
-        Dim sqlSpørring As New MySqlCommand("SELECT * FROM timeavtale t INNER JOIN rom r ON t.romnr = r.romnr", tilkobling)
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM timeavtale t INNER JOIN rom r ON t.romnr = r.romnr ORDER BY datotid DESC", tilkobling)
+        innkalling.Clear()
         da.SelectCommand = sqlSpørring
         da.Fill(innkalling)
-
+        ListBox4.Items.Clear()
+        ListBox5.Items.Clear()
+        ListBox6.Items.Clear()
+        Me.Cursor = Cursors.Default
         For Each rad In innkalling.Rows
             dato = DateValue(rad("datotid"))
+            epost = rad("bgepost")
+            romnr = rad("romnr")
+            etg = rad("etasje")
             If dato = Today Then
                 dato = rad("datotid")
-                epost = rad("bgepost")
-                romnr = rad("romnr")
-                etg = rad("etasje")
                 ListBox4.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
+            ElseIf dato = DateAdd(DateInterval.Day, 1, Today) Then
+                dato = rad("datotid")
+                ListBox5.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
+            ElseIf dato < Today Then
+                dato = rad("datotid")
+                ListBox6.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
             End If
         Next
         tilkobling.Close()
-
     End Sub
 End Class
