@@ -9,7 +9,8 @@ Public Class Blodbane
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
-    Public påloggetAnsatt As String
+    Public påloggetAnsatt, påloggetAepost As String
+    Dim egenerklærigID As Integer
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
@@ -208,9 +209,9 @@ Public Class Blodbane
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
         Dim index, i As Integer
         Dim rad As DataRow
-        Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar As String
+        Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar, erklaringLege As String
         Dim status As Integer
-        Dim sistTapping, sistErklæring As Date
+        Dim sistTapping, sistErklæring, gjennomgåttErklæring As Date
         Dim dager As Long
         ListBox3.Items.Clear()
         index = ListBox2.SelectedIndex
@@ -238,8 +239,19 @@ Public Class Blodbane
                 If rad("datotidbg") > sistErklæring Then
                     sistErklæring = rad("datotidbg")
                     jasvar = rad("skjema")
+                    egenerklærigID = rad("id")
+                    If Not IsDBNull(rad("ansattepost")) Then
+                        erklaringLege = rad("ansattepost")
+                    Else
+                        erklaringLege = ""
+                    End If
+                    If Not IsDBNull(rad("datotidansatt")) Then
+                        gjennomgåttErklæring = rad("datotidansatt")
+                    Else
+                        gjennomgåttErklæring = Nothing
+                    End If
                 End If
-            End If
+                End If
         Next
         dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
         utledJAsvar(jasvar)
@@ -257,6 +269,14 @@ Public Class Blodbane
         RichTextBox4.Text = preferanse
         RichTextBox2.Text = intMerknad
         TextBox22.Text = sistErklæring
+        TextBox33.Text = erklaringLege
+        If gjennomgåttErklæring = Nothing Then
+            TextBox34.Text = ""
+            GroupBoxIntervju.Visible = True
+        Else
+            TextBox34.Text = gjennomgåttErklæring
+            GroupBoxIntervju.Visible = False
+        End If
 #Enable Warning BC42104
     End Sub
 
@@ -354,5 +374,33 @@ Public Class Blodbane
         Next
 
         tilkobling.Close()
+    End Sub
+
+    'Lagre intervju og eventuelle endringer i blodgiver
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim epost, adresse, preferanse, merknad, kommentar, spørring As String
+        Dim tlf1, tlf2, postnr, status As Integer
+        Dim da As New MySqlDataAdapter
+        epost = TextBox27.Text
+        tlf1 = TextBox26.Text
+        tlf2 = TextBox29.Text
+        adresse = TextBox30.Text
+        postnr = TextBox31.Text
+        status = TextBox21.Text
+        preferanse = RichTextBox4.Text
+        merknad = RichTextBox2.Text
+        kommentar = RichTextBox3.Text
+
+        spørring = $"UPDATE egenerklaering SET ansattepost= '{påloggetAepost}', datotidansatt= '{Now.ToString("yyyy.MM.dd HH:mm.ss")}', kommentar= '{kommentar}' WHERE id= '{egenerklærigID}'"
+        Try
+            tilkobling.Open()
+            MsgBox(spørring)
+            Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
+            sqlSpørring.ExecuteNonQuery()
+            tilkobling.Close()
+        Catch
+            MsgBox("Feil")
+        End Try
+
     End Sub
 End Class

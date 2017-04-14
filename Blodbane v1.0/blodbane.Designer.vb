@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,6 +34,7 @@ Partial Class Blodbane
         Me.LoggAvToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AvsluttToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstillingerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LagreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -320,6 +321,10 @@ Partial Class Blodbane
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Label106 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.TextBox28 = New System.Windows.Forms.TextBox()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
@@ -347,6 +352,13 @@ Partial Class Blodbane
         Me.TextBox24 = New System.Windows.Forms.TextBox()
         Me.Label102 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label110 = New System.Windows.Forms.Label()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.Label101 = New System.Windows.Forms.Label()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.Label97 = New System.Windows.Forms.Label()
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.Label111 = New System.Windows.Forms.Label()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
@@ -399,6 +411,7 @@ Partial Class Blodbane
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBoxIntervju.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -446,8 +459,14 @@ Partial Class Blodbane
         '
         'InstillingerToolStripMenuItem
         '
+        Me.InstillingerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LagreToolStripMenuItem1})
         Me.InstillingerToolStripMenuItem.Name = "InstillingerToolStripMenuItem"
         resources.ApplyResources(Me.InstillingerToolStripMenuItem, "InstillingerToolStripMenuItem")
+        '
+        'LagreToolStripMenuItem1
+        '
+        Me.LagreToolStripMenuItem1.Name = "LagreToolStripMenuItem1"
+        resources.ApplyResources(Me.LagreToolStripMenuItem1, "LagreToolStripMenuItem1")
         '
         'Label1
         '
@@ -2343,6 +2362,36 @@ Partial Class Blodbane
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         '
+        'GroupBoxIntervju
+        '
+        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton2)
+        Me.GroupBoxIntervju.Controls.Add(Me.Label110)
+        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton1)
+        Me.GroupBoxIntervju.Controls.Add(Me.RichTextBox3)
+        Me.GroupBoxIntervju.Controls.Add(Me.Label106)
+        resources.ApplyResources(Me.GroupBoxIntervju, "GroupBoxIntervju")
+        Me.GroupBoxIntervju.Name = "GroupBoxIntervju"
+        Me.GroupBoxIntervju.TabStop = False
+        '
+        'RadioButton2
+        '
+        resources.ApplyResources(Me.RadioButton2, "RadioButton2")
+        Me.RadioButton2.Checked = True
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        resources.ApplyResources(Me.RadioButton1, "RadioButton1")
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Label106
+        '
+        resources.ApplyResources(Me.Label106, "Label106")
+        Me.Label106.Name = "Label106"
+        '
         'GroupBox11
         '
         Me.GroupBox11.Controls.Add(Me.TextBox28)
@@ -2507,6 +2556,12 @@ Partial Class Blodbane
         '
         'GroupBox10
         '
+        Me.GroupBox10.Controls.Add(Me.Button6)
+        Me.GroupBox10.Controls.Add(Me.GroupBoxIntervju)
+        Me.GroupBox10.Controls.Add(Me.TextBox34)
+        Me.GroupBox10.Controls.Add(Me.Label101)
+        Me.GroupBox10.Controls.Add(Me.TextBox33)
+        Me.GroupBox10.Controls.Add(Me.Label97)
         Me.GroupBox10.Controls.Add(Me.ListBox3)
         Me.GroupBox10.Controls.Add(Me.Label111)
         Me.GroupBox10.Controls.Add(Me.TextBox22)
@@ -2514,6 +2569,44 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GroupBox10, "GroupBox10")
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.TabStop = False
+        '
+        'Button6
+        '
+        resources.ApplyResources(Me.Button6, "Button6")
+        Me.Button6.Name = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label110
+        '
+        resources.ApplyResources(Me.Label110, "Label110")
+        Me.Label110.Name = "Label110"
+        '
+        'RichTextBox3
+        '
+        resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
+        Me.RichTextBox3.Name = "RichTextBox3"
+        '
+        'TextBox34
+        '
+        Me.TextBox34.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox34, "TextBox34")
+        Me.TextBox34.Name = "TextBox34"
+        '
+        'Label101
+        '
+        resources.ApplyResources(Me.Label101, "Label101")
+        Me.Label101.Name = "Label101"
+        '
+        'TextBox33
+        '
+        Me.TextBox33.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox33, "TextBox33")
+        Me.TextBox33.Name = "TextBox33"
+        '
+        'Label97
+        '
+        resources.ApplyResources(Me.Label97, "Label97")
+        Me.Label97.Name = "Label97"
         '
         'ListBox3
         '
@@ -2695,17 +2788,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart1.Series.Add(Series4)
         '
         'ToolTip1
         '
@@ -2768,6 +2861,8 @@ Partial Class Blodbane
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.GroupBoxIntervju.ResumeLayout(False)
+        Me.GroupBoxIntervju.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
@@ -3135,4 +3230,16 @@ Partial Class Blodbane
     Friend WithEvents Label89 As Label
     Friend WithEvents TextBox23 As TextBox
     Friend WithEvents Button4 As Button
+    Friend WithEvents LagreToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Button6 As Button
+    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents Label101 As Label
+    Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents Label97 As Label
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RichTextBox3 As RichTextBox
+    Friend WithEvents Label106 As Label
+    Friend WithEvents Label110 As Label
+    Friend WithEvents GroupBoxIntervju As GroupBox
 End Class
