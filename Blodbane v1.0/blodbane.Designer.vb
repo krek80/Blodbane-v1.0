@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,26 +44,28 @@ Partial Class Blodbane
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_fornavn = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_poststed = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_etternavn = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_personnr = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_adresse = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.BttnSendSkjema = New System.Windows.Forms.Button()
+        Me.txtBgInn_epost = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_tlfnr = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_postnr = New System.Windows.Forms.TextBox()
+        Me.BtnRegBlodgiver = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label89 = New System.Windows.Forms.Label()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_passord1 = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_passord2 = New System.Windows.Forms.TextBox()
+        Me.Label113 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.txtAInn_passord = New System.Windows.Forms.TextBox()
         Me.BttnLoggpåGiver = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtAInn_epost = New System.Windows.Forms.TextBox()
         Me.PanelPåmelding = New System.Windows.Forms.Panel()
         Me.PanelGiver = New System.Windows.Forms.Panel()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
@@ -321,10 +323,6 @@ Partial Class Blodbane
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label106 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.TextBox28 = New System.Windows.Forms.TextBox()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
@@ -353,8 +351,12 @@ Partial Class Blodbane
         Me.Label102 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label110 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.Label106 = New System.Windows.Forms.Label()
         Me.TextBox34 = New System.Windows.Forms.TextBox()
         Me.Label101 = New System.Windows.Forms.Label()
         Me.TextBox33 = New System.Windows.Forms.TextBox()
@@ -411,9 +413,9 @@ Partial Class Blodbane
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.GroupBoxIntervju.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
+        Me.GroupBoxIntervju.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -485,19 +487,21 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox2, 2, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox3, 1, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox4, 1, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox5, 1, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_fornavn, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_poststed, 2, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_etternavn, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_personnr, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_adresse, 1, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.Label8, 0, 7)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox6, 1, 7)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox7, 1, 6)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox8, 1, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.BttnSendSkjema, 0, 10)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_epost, 1, 7)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_tlfnr, 1, 6)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_postnr, 1, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnRegBlodgiver, 0, 11)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 10)
         Me.TableLayoutPanel2.Controls.Add(Me.Label89, 0, 8)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox23, 1, 8)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_passord1, 1, 8)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_passord2, 1, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label113, 0, 9)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
         'Label7
@@ -536,65 +540,65 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.SetColumnSpan(Me.Label9, 3)
         Me.Label9.Name = "Label9"
         '
-        'TextBox1
+        'txtBgInn_fornavn
         '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox1, 2)
-        Me.TextBox1.Name = "TextBox1"
+        resources.ApplyResources(Me.txtBgInn_fornavn, "txtBgInn_fornavn")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_fornavn, 2)
+        Me.txtBgInn_fornavn.Name = "txtBgInn_fornavn"
         '
-        'TextBox2
+        'txtBgInn_poststed
         '
-        resources.ApplyResources(Me.TextBox2, "TextBox2")
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox2.Name = "TextBox2"
+        resources.ApplyResources(Me.txtBgInn_poststed, "txtBgInn_poststed")
+        Me.txtBgInn_poststed.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtBgInn_poststed.Name = "txtBgInn_poststed"
         '
-        'TextBox3
+        'txtBgInn_etternavn
         '
-        resources.ApplyResources(Me.TextBox3, "TextBox3")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox3, 2)
-        Me.TextBox3.Name = "TextBox3"
+        resources.ApplyResources(Me.txtBgInn_etternavn, "txtBgInn_etternavn")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_etternavn, 2)
+        Me.txtBgInn_etternavn.Name = "txtBgInn_etternavn"
         '
-        'TextBox4
+        'txtBgInn_personnr
         '
-        resources.ApplyResources(Me.TextBox4, "TextBox4")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox4, 2)
-        Me.TextBox4.Name = "TextBox4"
+        resources.ApplyResources(Me.txtBgInn_personnr, "txtBgInn_personnr")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_personnr, 2)
+        Me.txtBgInn_personnr.Name = "txtBgInn_personnr"
         '
-        'TextBox5
+        'txtBgInn_adresse
         '
-        resources.ApplyResources(Me.TextBox5, "TextBox5")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox5, 2)
-        Me.TextBox5.Name = "TextBox5"
+        resources.ApplyResources(Me.txtBgInn_adresse, "txtBgInn_adresse")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_adresse, 2)
+        Me.txtBgInn_adresse.Name = "txtBgInn_adresse"
         '
         'Label8
         '
         resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.Name = "Label8"
         '
-        'TextBox6
+        'txtBgInn_epost
         '
-        resources.ApplyResources(Me.TextBox6, "TextBox6")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox6, 2)
-        Me.TextBox6.Name = "TextBox6"
+        resources.ApplyResources(Me.txtBgInn_epost, "txtBgInn_epost")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_epost, 2)
+        Me.txtBgInn_epost.Name = "txtBgInn_epost"
         '
-        'TextBox7
+        'txtBgInn_tlfnr
         '
-        resources.ApplyResources(Me.TextBox7, "TextBox7")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox7, 2)
-        Me.TextBox7.Name = "TextBox7"
+        resources.ApplyResources(Me.txtBgInn_tlfnr, "txtBgInn_tlfnr")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_tlfnr, 2)
+        Me.txtBgInn_tlfnr.Name = "txtBgInn_tlfnr"
         '
-        'TextBox8
+        'txtBgInn_postnr
         '
-        resources.ApplyResources(Me.TextBox8, "TextBox8")
-        Me.TextBox8.Name = "TextBox8"
+        resources.ApplyResources(Me.txtBgInn_postnr, "txtBgInn_postnr")
+        Me.txtBgInn_postnr.Name = "txtBgInn_postnr"
         '
-        'BttnSendSkjema
+        'BtnRegBlodgiver
         '
-        resources.ApplyResources(Me.BttnSendSkjema, "BttnSendSkjema")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.BttnSendSkjema, 3)
-        Me.BttnSendSkjema.ForeColor = System.Drawing.Color.Red
-        Me.BttnSendSkjema.Name = "BttnSendSkjema"
-        Me.BttnSendSkjema.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.BtnRegBlodgiver, "BtnRegBlodgiver")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.BtnRegBlodgiver, 3)
+        Me.BtnRegBlodgiver.ForeColor = System.Drawing.Color.Red
+        Me.BtnRegBlodgiver.Name = "BtnRegBlodgiver"
+        Me.BtnRegBlodgiver.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -607,30 +611,41 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label89, "Label89")
         Me.Label89.Name = "Label89"
         '
-        'TextBox23
+        'txtBgInn_passord1
         '
-        resources.ApplyResources(Me.TextBox23, "TextBox23")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox23, 2)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.UseSystemPasswordChar = True
+        resources.ApplyResources(Me.txtBgInn_passord1, "txtBgInn_passord1")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_passord1, 2)
+        Me.txtBgInn_passord1.Name = "txtBgInn_passord1"
+        Me.txtBgInn_passord1.UseSystemPasswordChar = True
+        '
+        'txtBgInn_passord2
+        '
+        resources.ApplyResources(Me.txtBgInn_passord2, "txtBgInn_passord2")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_passord2, 2)
+        Me.txtBgInn_passord2.Name = "txtBgInn_passord2"
+        '
+        'Label113
+        '
+        resources.ApplyResources(Me.Label113, "Label113")
+        Me.Label113.Name = "Label113"
         '
         'TableLayoutPanel3
         '
         resources.ApplyResources(Me.TableLayoutPanel3, "TableLayoutPanel3")
         Me.TableLayoutPanel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox10, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtAInn_passord, 1, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.BttnLoggpåGiver, 0, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.Label10, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label11, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label12, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox9, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtAInn_epost, 1, 1)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         '
-        'TextBox10
+        'txtAInn_passord
         '
-        resources.ApplyResources(Me.TextBox10, "TextBox10")
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.UseSystemPasswordChar = True
+        resources.ApplyResources(Me.txtAInn_passord, "txtAInn_passord")
+        Me.txtAInn_passord.Name = "txtAInn_passord"
+        Me.txtAInn_passord.UseSystemPasswordChar = True
         '
         'BttnLoggpåGiver
         '
@@ -655,10 +670,10 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label12, "Label12")
         Me.Label12.Name = "Label12"
         '
-        'TextBox9
+        'txtAInn_epost
         '
-        resources.ApplyResources(Me.TextBox9, "TextBox9")
-        Me.TextBox9.Name = "TextBox9"
+        resources.ApplyResources(Me.txtAInn_epost, "txtAInn_epost")
+        Me.txtAInn_epost.Name = "txtAInn_epost"
         '
         'PanelPåmelding
         '
@@ -2362,36 +2377,6 @@ Partial Class Blodbane
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         '
-        'GroupBoxIntervju
-        '
-        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton2)
-        Me.GroupBoxIntervju.Controls.Add(Me.Label110)
-        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton1)
-        Me.GroupBoxIntervju.Controls.Add(Me.RichTextBox3)
-        Me.GroupBoxIntervju.Controls.Add(Me.Label106)
-        resources.ApplyResources(Me.GroupBoxIntervju, "GroupBoxIntervju")
-        Me.GroupBoxIntervju.Name = "GroupBoxIntervju"
-        Me.GroupBoxIntervju.TabStop = False
-        '
-        'RadioButton2
-        '
-        resources.ApplyResources(Me.RadioButton2, "RadioButton2")
-        Me.RadioButton2.Checked = True
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        resources.ApplyResources(Me.RadioButton1, "RadioButton1")
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label106
-        '
-        resources.ApplyResources(Me.Label106, "Label106")
-        Me.Label106.Name = "Label106"
-        '
         'GroupBox11
         '
         Me.GroupBox11.Controls.Add(Me.TextBox28)
@@ -2576,15 +2561,45 @@ Partial Class Blodbane
         Me.Button6.Name = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'GroupBoxIntervju
+        '
+        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton2)
+        Me.GroupBoxIntervju.Controls.Add(Me.Label110)
+        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton1)
+        Me.GroupBoxIntervju.Controls.Add(Me.RichTextBox3)
+        Me.GroupBoxIntervju.Controls.Add(Me.Label106)
+        resources.ApplyResources(Me.GroupBoxIntervju, "GroupBoxIntervju")
+        Me.GroupBoxIntervju.Name = "GroupBoxIntervju"
+        Me.GroupBoxIntervju.TabStop = False
+        '
+        'RadioButton2
+        '
+        resources.ApplyResources(Me.RadioButton2, "RadioButton2")
+        Me.RadioButton2.Checked = True
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
         'Label110
         '
         resources.ApplyResources(Me.Label110, "Label110")
         Me.Label110.Name = "Label110"
         '
+        'RadioButton1
+        '
+        resources.ApplyResources(Me.RadioButton1, "RadioButton1")
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
         'RichTextBox3
         '
         resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
         Me.RichTextBox3.Name = "RichTextBox3"
+        '
+        'Label106
+        '
+        resources.ApplyResources(Me.Label106, "Label106")
+        Me.Label106.Name = "Label106"
         '
         'TextBox34
         '
@@ -2788,17 +2803,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend4)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.Chart1.Series.Add(Series4)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -2810,13 +2825,13 @@ Partial Class Blodbane
         '
         'Blodbane
         '
-        Me.AcceptButton = Me.BttnSendSkjema
+        Me.AcceptButton = Me.BtnRegBlodgiver
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelGiver)
+        Me.Controls.Add(Me.PanelAnsatt)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
@@ -2861,12 +2876,12 @@ Partial Class Blodbane
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.GroupBoxIntervju.ResumeLayout(False)
-        Me.GroupBoxIntervju.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
+        Me.GroupBoxIntervju.ResumeLayout(False)
+        Me.GroupBoxIntervju.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -2888,17 +2903,17 @@ Partial Class Blodbane
     Friend WithEvents InstillingerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtBgInn_fornavn As TextBox
     Friend WithEvents LoggPåansattToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtBgInn_postnr As TextBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents txtAInn_passord As TextBox
     Friend WithEvents BttnLoggpåGiver As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtAInn_epost As TextBox
+    Friend WithEvents txtBgInn_etternavn As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -2906,13 +2921,13 @@ Partial Class Blodbane
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtBgInn_poststed As TextBox
+    Friend WithEvents txtBgInn_personnr As TextBox
+    Friend WithEvents txtBgInn_adresse As TextBox
+    Friend WithEvents txtBgInn_epost As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents BttnSendSkjema As Button
+    Friend WithEvents txtBgInn_tlfnr As TextBox
+    Friend WithEvents BtnRegBlodgiver As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents PanelPåmelding As Panel
     Friend WithEvents PanelGiver As Panel
@@ -3228,7 +3243,7 @@ Partial Class Blodbane
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents TextBox28 As TextBox
     Friend WithEvents Label89 As Label
-    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents txtBgInn_passord1 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents LagreToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Button6 As Button
@@ -3242,4 +3257,6 @@ Partial Class Blodbane
     Friend WithEvents Label106 As Label
     Friend WithEvents Label110 As Label
     Friend WithEvents GroupBoxIntervju As GroupBox
+    Friend WithEvents txtBgInn_passord2 As TextBox
+    Friend WithEvents Label113 As Label
 End Class

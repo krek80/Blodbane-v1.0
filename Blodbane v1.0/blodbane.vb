@@ -38,7 +38,7 @@ Public Class Blodbane
             ComboBox4.Items.Add(statustekst)
         Next
 
-        'Henter postnummer og sted og legegr i hastable
+        'Henter postnummer og sted og legger i hashtable
         Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
         da.SelectCommand = sqlSpørring2
         da.Fill(steder)
@@ -48,8 +48,8 @@ Public Class Blodbane
             postnummer.Add(pnr, psted)
         Next
 
-        'Henter anasatte og legger i datatable
-        Dim sqlSpørring3 As New MySqlCommand("SELECT a.epost, b.passord, b.fornavn FROM ansatt a Inner JOIN bruker b ON a.epost = b.epost", tilkobling)
+        'Henter ansatte og legger i datatable
+        Dim sqlSpørring3 As New MySqlCommand("SELECT a.epost, b.passord, b.fornavn FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
         da.SelectCommand = sqlSpørring3
         da.Fill(ansatt)
         tilkobling.Close()
@@ -71,7 +71,7 @@ Public Class Blodbane
         PanelGiver.BringToFront()
     End Sub
 
-    Private Sub BttnSendSkjema_Click(sender As Object, e As EventArgs) Handles BttnSendSkjema.Click
+    Private Sub BttnSendSkjema_Click(sender As Object, e As EventArgs) Handles BtnRegBlodgiver.Click
         PanelPåmelding.Hide()
         PanelAnsatt.Hide()
         PanelGiver.Show()
@@ -251,7 +251,7 @@ Public Class Blodbane
                         gjennomgåttErklæring = Nothing
                     End If
                 End If
-                End If
+            End If
         Next
         dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
         utledJAsvar(jasvar)
@@ -314,8 +314,8 @@ Public Class Blodbane
     End Sub
 
     'Sett rett poststed ved siden av postnummer i egenregistrering
-    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
-        TextBox2.Text = postnummer(TextBox8.Text)
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles txtBgInn_postnr.TextChanged
+        txtBgInn_poststed.Text = postnummer(txtBgInn_postnr.Text)
     End Sub
 
     'Tøm giversøk
