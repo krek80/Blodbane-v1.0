@@ -71,12 +71,64 @@ Public Class Blodbane
         PanelGiver.BringToFront()
     End Sub
 
-    Private Sub BttnSendSkjema_Click(sender As Object, e As EventArgs) Handles BtnRegBlodgiver.Click
-        PanelPåmelding.Hide()
-        PanelAnsatt.Hide()
-        PanelGiver.Show()
-        PanelGiver.BringToFront()
+    Private Sub BtnRegBlodgiver_Click(sender As Object, e As EventArgs) Handles BtnRegBlodgiver.Click
+        tilkobling.Open()
+        If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
+            MsgBox("Skjema Ok! Nå kan du logge deg på.")
+            'PanelPåmelding.Hide()
+            'PanelAnsatt.Hide()
+            'PanelGiver.Show()
+            'PanelGiver.BringToFront()
+        Else
+            MsgBox("Skjema dessverre ikke ok.")
+        End If
+        tilkobling.Close()
+
     End Sub
+
+    'Funksjonen sjekker om skjemaet for registrering av ny blodgiver er korrekt utfylt.
+    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
+
+        Dim sqlSporring1 As String = $"SELECT epost FROM bruker WHERE epost = @eposten"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        sql1.Parameters.AddWithValue("@eposten", epostInn)
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+
+        Dim sqlSporring2 As String = $"SELECT fodselsnummer FROM blodgiver WHERE fodselsnummer = @fnr"
+        Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
+        sql2.Parameters.AddWithValue("@fnr", personnrInn)
+        Dim da2 As New MySqlDataAdapter
+        Dim interntabell2 As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell2"
+        da2.SelectCommand = sql2
+        da2.Fill(interntabell2)
+        If interntabell1.Rows.Count = 1 Then
+            MsgBox("Epostadressen finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
+            Return False
+        Else
+            If interntabell2.Rows.Count = 1 Then
+                MsgBox("Fødselsnummeret finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
+                Return False
+            Else
+                If passord1Inn <> passord2Inn Then
+                    MsgBox("Passordene er ikke like. Prøv igjen!", MsgBoxStyle.Critical)
+                    Return False
+                Else
+                    If passord1Inn.Length < 6 Or passord1Inn.IndexOf(" ") <> -1 Then
+                        MsgBox("Passordet må ha minst 6 tegn og ingen mellomrom. Prøv igjen!", MsgBoxStyle.Critical)
+                        Return False
+                    Else
+                        Return True
+                    End If
+                End If
+            End If
+        End If
+
+    End Function
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BttnLoggavGiver.Click
         PanelGiver.Hide()
