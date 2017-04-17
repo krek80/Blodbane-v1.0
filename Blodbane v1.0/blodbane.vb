@@ -65,11 +65,26 @@ Public Class Blodbane
         pålogging.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
-        PanelPåmelding.Hide()
-        PanelAnsatt.Hide()
-        PanelGiver.Show()
-        PanelGiver.BringToFront()
+    Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
+        Dim sql As New MySqlCommand("SELECT * FROM bruker WHERE epost = @epostInn AND passord = @passordInn", tilkobling)
+        sql.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
+        sql.Parameters.AddWithValue("@passordInn", txtAInn_passord.Text)
+        Dim da As New MySqlDataAdapter
+        Dim interntabell As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
+        da.SelectCommand = sql
+        da.Fill(interntabell)
+        tilkobling.Close()
+
+        Dim antallRader As Integer = interntabell.Rows.Count()
+        If antallRader = 1 Then
+            PanelPåmelding.Hide()
+            PanelAnsatt.Hide()
+            PanelGiver.Show()
+            PanelGiver.BringToFront()
+        Else
+            MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
+        End If
     End Sub
 
     Private Sub BtnRegBlodgiver_Click(sender As Object, e As EventArgs) Handles BtnRegBlodgiver.Click
@@ -78,22 +93,20 @@ Public Class Blodbane
             Dim spoerring As String = ""
             If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
 
-                'Legger inn ny rad i tabellen "bruker":
-
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_postnr.Text}', '{txtBgInn_tlfnr.Text}', '{txtBgInn_tlfnr2.Text}'"
-                spoerring = spoerring & $", '11'"
-                Dim sql As New MySqlCommand(spoerring, tilkobling)
+                spoerring = spoerring & $", '11')"
+                Dim sql1 As New MySqlCommand(spoerring, tilkobling)
                 Dim da1 As New MySqlDataAdapter
                 Dim interntabell1 As New DataTable
-                'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
-                da1.SelectCommand = sql
+                'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+                da1.SelectCommand = sql1
                 da1.Fill(interntabell1)
 
                 'Legger inn ny rad i tabellen "blodgiver":
 
-                spoerring = $"INSERT INTO blodgiver (epost, fodselsnummer) VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_personnr.Text}'"
+                spoerring = $"INSERT INTO blodgiver (epost, fodselsnummer) VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_personnr.Text}')"
                 Dim sql2 As New MySqlCommand(spoerring, tilkobling)
                 Dim da2 As New MySqlDataAdapter
                 Dim interntabell2 As New DataTable
