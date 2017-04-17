@@ -1,5 +1,6 @@
-﻿Imports System.ComponentModel
+﻿'Imports System.ComponentModel
 Imports MySql.Data.MySqlClient
+'Imports System.Globalization
 Public Class Blodbane
     Dim giversøk As New DataTable
     Dim egenerklaering As New DataTable
@@ -72,24 +73,54 @@ Public Class Blodbane
     End Sub
 
     Private Sub BtnRegBlodgiver_Click(sender As Object, e As EventArgs) Handles BtnRegBlodgiver.Click
-        tilkobling.Open()
-        If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
-            MsgBox("Skjema Ok! Nå kan du logge deg på.")
-            'PanelPåmelding.Hide()
-            'PanelAnsatt.Hide()
-            'PanelGiver.Show()
-            'PanelGiver.BringToFront()
-        Else
-            MsgBox("Skjema dessverre ikke ok.")
-        End If
+        Try
+            tilkobling.Open()
+            Dim spoerring As String = ""
+            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
+
+                'Legger inn ny rad i tabellen "bruker":
+
+                spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
+                spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
+                spoerring = spoerring & $", '{txtBgInn_postnr.Text}', '{txtBgInn_tlfnr.Text}', '{txtBgInn_tlfnr2.Text}'"
+                spoerring = spoerring & $", '11'"
+                Dim sql As New MySqlCommand(spoerring, tilkobling)
+                Dim da1 As New MySqlDataAdapter
+                Dim interntabell1 As New DataTable
+                'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
+                da1.SelectCommand = sql
+                da1.Fill(interntabell1)
+
+                'Legger inn ny rad i tabellen "blodgiver":
+
+                spoerring = $"INSERT INTO blodgiver (epost, fodselsnummer) VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_personnr.Text}'"
+                Dim sql2 As New MySqlCommand(spoerring, tilkobling)
+                Dim da2 As New MySqlDataAdapter
+                Dim interntabell2 As New DataTable
+                da2.SelectCommand = sql2
+                da2.Fill(interntabell2)
+
+                'PanelPåmelding.Hide()
+                'PanelAnsatt.Hide()
+                'PanelGiver.Show()
+                'PanelGiver.BringToFront()
+                MsgBox("Skjema Ok! Nå kan du logge deg på.")
+
+            Else
+                MsgBox("Skjema dessverre ikke ok.")
+            End If
+        Catch ex As MySqlException
+        MsgBox(ex.Message)
+        Finally
         tilkobling.Close()
+        End Try
 
     End Sub
 
     'Funksjonen sjekker om skjemaet for registrering av ny blodgiver er korrekt utfylt.
     Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
 
-        Dim sqlSporring1 As String = $"SELECT epost FROM bruker WHERE epost = @eposten"
+        Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         sql1.Parameters.AddWithValue("@eposten", epostInn)
         Dim da1 As New MySqlDataAdapter
@@ -98,7 +129,7 @@ Public Class Blodbane
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
 
-        Dim sqlSporring2 As String = $"SELECT fodselsnummer FROM blodgiver WHERE fodselsnummer = @fnr"
+        Dim sqlSporring2 As String = "SELECT fodselsnummer FROM blodgiver WHERE fodselsnummer = @fnr"
         Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
         sql2.Parameters.AddWithValue("@fnr", personnrInn)
         Dim da2 As New MySqlDataAdapter
@@ -106,27 +137,54 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell2"
         da2.SelectCommand = sql2
         da2.Fill(interntabell2)
+
+        If txtBgInn_fornavn.Text = "" Or txtBgInn_etternavn.Text = "" Or txtBgInn_postnr.Text = "" Or txtBgInn_tlfnr.Text = "" Then
+            MsgBox("Alle felt må være utfylt unntatt gateadresse- og telefon 2-feltet må være utfylt.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        If Not IsNumeric(personnrInn) Or personnrInn.Length <> 11 Then
+            MsgBox("Fødselsnummeret ble ikke godtatt.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        Dim aar As String
+        Dim aarstall As Integer = CInt(personnrInn.Substring(4, 2))
+        If aarstall < 17 Then
+            aar = $"20{aarstall}"
+        Else
+            aar = $"19{aarstall}"
+        End If
+        Dim fnrDato As String = $"#{personnrInn.Substring(0, 2)}/{personnrInn.Substring(2, 2)}/{aar}#"
+        If Not IsDate(fnrDato) Then
+            MsgBox($"De seks første tallene i fødselsnummeret, {fnrDato}, ble ikke gjenkjent som en dato.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        If interntabell2.Rows.Count = 1 Then
+            MsgBox("Fødselsnummeret finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
         If interntabell1.Rows.Count = 1 Then
             MsgBox("Epostadressen finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
             Return False
-        Else
-            If interntabell2.Rows.Count = 1 Then
-                MsgBox("Fødselsnummeret finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
-                Return False
-            Else
-                If passord1Inn <> passord2Inn Then
-                    MsgBox("Passordene er ikke like. Prøv igjen!", MsgBoxStyle.Critical)
-                    Return False
-                Else
-                    If passord1Inn.Length < 6 Or passord1Inn.IndexOf(" ") <> -1 Then
-                        MsgBox("Passordet må ha minst 6 tegn og ingen mellomrom. Prøv igjen!", MsgBoxStyle.Critical)
-                        Return False
-                    Else
-                        Return True
-                    End If
-                End If
-            End If
         End If
+
+        If epostInn.IndexOf("@") = -1 Or epostInn.IndexOf(".") = -1 Then
+            MsgBox("Epostadressen ble ikke gjenkjent som en epostadresse.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        If passord1Inn <> passord2Inn Then
+            MsgBox("Passordene er ikke like. Prøv igjen!", MsgBoxStyle.Critical)
+            Return False
+        End If
+        If passord1Inn.Length < 6 Or passord1Inn.IndexOf(" ") <> -1 Then
+            MsgBox("Passordet må ha minst 6 tegn og ingen mellomrom. Prøv igjen!", MsgBoxStyle.Critical)
+            Return False
+        End If
+        Return True
 
     End Function
 
