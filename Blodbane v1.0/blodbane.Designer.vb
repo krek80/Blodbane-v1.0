@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,6 +59,8 @@ Partial Class Blodbane
         Me.txtBgInn_passord1 = New System.Windows.Forms.TextBox()
         Me.txtBgInn_passord2 = New System.Windows.Forms.TextBox()
         Me.Label113 = New System.Windows.Forms.Label()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.txtBgInn_tlfnr2 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtAInn_passord = New System.Windows.Forms.TextBox()
         Me.BttnLoggpåGiver = New System.Windows.Forms.Button()
@@ -390,8 +392,6 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label114 = New System.Windows.Forms.Label()
-        Me.txtBgInn_tlfnr2 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -633,6 +633,17 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.Label113, "Label113")
         Me.Label113.Name = "Label113"
+        '
+        'Label114
+        '
+        resources.ApplyResources(Me.Label114, "Label114")
+        Me.Label114.Name = "Label114"
+        '
+        'txtBgInn_tlfnr2
+        '
+        resources.ApplyResources(Me.txtBgInn_tlfnr2, "txtBgInn_tlfnr2")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_tlfnr2, 2)
+        Me.txtBgInn_tlfnr2.Name = "txtBgInn_tlfnr2"
         '
         'TableLayoutPanel3
         '
@@ -2808,17 +2819,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
         '
         'ToolTip1
         '
@@ -2827,17 +2838,6 @@ Partial Class Blodbane
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
-        'Label114
-        '
-        resources.ApplyResources(Me.Label114, "Label114")
-        Me.Label114.Name = "Label114"
-        '
-        'txtBgInn_tlfnr2
-        '
-        resources.ApplyResources(Me.txtBgInn_tlfnr2, "txtBgInn_tlfnr2")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_tlfnr2, 2)
-        Me.txtBgInn_tlfnr2.Name = "txtBgInn_tlfnr2"
         '
         'Blodbane
         '
