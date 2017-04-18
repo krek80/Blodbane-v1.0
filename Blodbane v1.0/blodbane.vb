@@ -287,4 +287,16 @@ Public Class Blodbane
         ComboBox5.Text = ""
         TextBox20.Text = ""
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub PanelPåmelding_Paint(sender As Object, e As PaintEventArgs) Handles PanelPåmelding.Paint
+
+    End Sub
+
+    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
+
+    End Sub
 End Class
