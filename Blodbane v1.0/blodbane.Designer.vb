@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -392,6 +392,19 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.Label115 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.Label137 = New System.Windows.Forms.Label()
+        Me.Label138 = New System.Windows.Forms.Label()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label139 = New System.Windows.Forms.Label()
+        Me.Label140 = New System.Windows.Forms.Label()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.Label141 = New System.Windows.Forms.Label()
+        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -426,6 +439,10 @@ Partial Class Blodbane
         Me.TabPage2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox12.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -2387,6 +2404,7 @@ Partial Class Blodbane
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.GroupBox12)
         Me.TabPage1.Controls.Add(Me.GroupBox11)
         Me.TabPage1.Controls.Add(Me.GroupBox10)
         Me.TabPage1.Controls.Add(Me.GroupBox4)
@@ -2819,17 +2837,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend3)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart1.Series.Add(Series3)
         '
         'ToolTip1
         '
@@ -2838,6 +2856,86 @@ Partial Class Blodbane
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        '
+        'GroupBox12
+        '
+        Me.GroupBox12.Controls.Add(Me.Button7)
+        Me.GroupBox12.Controls.Add(Me.Label141)
+        Me.GroupBox12.Controls.Add(Me.NumericUpDown3)
+        Me.GroupBox12.Controls.Add(Me.Label140)
+        Me.GroupBox12.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox12.Controls.Add(Me.Label139)
+        Me.GroupBox12.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox12.Controls.Add(Me.Label138)
+        Me.GroupBox12.Controls.Add(Me.Label137)
+        Me.GroupBox12.Controls.Add(Me.Label116)
+        Me.GroupBox12.Controls.Add(Me.ComboBox3)
+        Me.GroupBox12.Controls.Add(Me.Label115)
+        resources.ApplyResources(Me.GroupBox12, "GroupBox12")
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.TabStop = False
+        '
+        'Label115
+        '
+        resources.ApplyResources(Me.Label115, "Label115")
+        Me.Label115.Name = "Label115"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
+        Me.ComboBox3.Name = "ComboBox3"
+        '
+        'Label116
+        '
+        resources.ApplyResources(Me.Label116, "Label116")
+        Me.Label116.Name = "Label116"
+        '
+        'Label137
+        '
+        resources.ApplyResources(Me.Label137, "Label137")
+        Me.Label137.Name = "Label137"
+        '
+        'Label138
+        '
+        resources.ApplyResources(Me.Label138, "Label138")
+        Me.Label138.Name = "Label138"
+        '
+        'NumericUpDown1
+        '
+        resources.ApplyResources(Me.NumericUpDown1, "NumericUpDown1")
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        '
+        'Label139
+        '
+        resources.ApplyResources(Me.Label139, "Label139")
+        Me.Label139.Name = "Label139"
+        '
+        'Label140
+        '
+        resources.ApplyResources(Me.Label140, "Label140")
+        Me.Label140.Name = "Label140"
+        '
+        'NumericUpDown2
+        '
+        resources.ApplyResources(Me.NumericUpDown2, "NumericUpDown2")
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        '
+        'Label141
+        '
+        resources.ApplyResources(Me.Label141, "Label141")
+        Me.Label141.Name = "Label141"
+        '
+        'NumericUpDown3
+        '
+        resources.ApplyResources(Me.NumericUpDown3, "NumericUpDown3")
+        Me.NumericUpDown3.Name = "NumericUpDown3"
+        '
+        'Button7
+        '
+        resources.ApplyResources(Me.Button7, "Button7")
+        Me.Button7.Name = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Blodbane
         '
@@ -2907,6 +3005,11 @@ Partial Class Blodbane
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox12.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3277,4 +3380,17 @@ Partial Class Blodbane
     Friend WithEvents Label113 As Label
     Friend WithEvents Label114 As Label
     Friend WithEvents txtBgInn_tlfnr2 As TextBox
+    Friend WithEvents GroupBox12 As GroupBox
+    Friend WithEvents Label141 As Label
+    Friend WithEvents NumericUpDown3 As NumericUpDown
+    Friend WithEvents Label140 As Label
+    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents Label139 As Label
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents Label138 As Label
+    Friend WithEvents Label137 As Label
+    Friend WithEvents Label116 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label115 As Label
+    Friend WithEvents Button7 As Button
 End Class

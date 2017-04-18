@@ -499,12 +499,13 @@ Public Class Blodbane
         Me.Cursor = Cursors.WaitCursor
         Dim rad As DataRow
         Dim da As New MySqlDataAdapter
-        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN blodstatus s ON b.statusid = s.id", tilkobling)
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost", tilkobling)
         da.SelectCommand = sqlSpørring
         da.Fill(blodlager)
         Me.Cursor = Cursors.Default
 
         For Each rad In blodlager.Rows
+            MsgBox(rad("produkttypeid"))
         Next
 
         tilkobling.Close()
