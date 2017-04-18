@@ -13,6 +13,8 @@ Public Class Blodbane
     Public påloggetAnsatt, påloggetAepost As String
     Dim egenerklærigID As Integer
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
+
+    'Kjøres ved oppstart
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Hide()
         velkommen.Show()
@@ -56,6 +58,7 @@ Public Class Blodbane
         tilkobling.Close()
     End Sub
 
+    'Avslutt program
     Private Sub AvsluttToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvsluttToolStripMenuItem.Click
         Me.Close()
     End Sub
@@ -65,6 +68,7 @@ Public Class Blodbane
         pålogging.Show()
     End Sub
 
+    'Logg på blodgiver
     Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
         Dim sql As New MySqlCommand("SELECT * FROM bruker WHERE epost = @epostInn AND passord = @passordInn", tilkobling)
         sql.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
@@ -87,6 +91,7 @@ Public Class Blodbane
         End If
     End Sub
 
+    'Registrer ny blodgiver
     Private Sub BtnRegBlodgiver_Click(sender As Object, e As EventArgs) Handles BtnRegBlodgiver.Click
         Try
             tilkobling.Open()
@@ -130,7 +135,7 @@ Public Class Blodbane
 
     End Sub
 
-    'Funksjonen sjekker om skjemaet for registrering av ny blodgiver er korrekt utfylt.
+    'Skjemavalidering
     Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
@@ -201,6 +206,7 @@ Public Class Blodbane
 
     End Function
 
+    'Logg av blodgiver
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BttnLoggavGiver.Click
         PanelGiver.Hide()
         PanelAnsatt.Hide()
@@ -208,6 +214,7 @@ Public Class Blodbane
         PanelPåmelding.BringToFront()
     End Sub
 
+    'Logg av ansatt
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles BttnLoggavAnsatt.Click
         PanelGiver.Hide()
         PanelAnsatt.Hide()
@@ -228,7 +235,7 @@ Public Class Blodbane
         LoggAvToolStripMenuItem.Visible = False
     End Sub
 
-    'Knapp for å søke etter blodgivere basert på parametre - legger resultater i listeboks
+    'Blodgiversøk
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BttnSøkGiver.Click
         Me.Cursor = Cursors.WaitCursor
         Dim personnummer As String = TextBox19.Text
@@ -264,7 +271,7 @@ Public Class Blodbane
         End If
     End Sub
 
-    'Kjører SQL med søk mot database - legger resultat i DataTable
+    'SQL - blodgiversøk basert på 3 parameter
     Private Sub søk(ByVal pnr As String, ByVal status As Integer, ByVal blodtype As String)
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
@@ -308,6 +315,7 @@ Public Class Blodbane
         utput.text = personstatusB(kode)
     End Sub
 
+    'Endring av statusbeskrvelse - henter statuskode
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         Try
             statuskode(ComboBox2.SelectedItem, TextBox20, ComboBox2)
@@ -318,6 +326,7 @@ Public Class Blodbane
         End Try
     End Sub
 
+    'Endring av statuskode - henter statusbeskrivelse
     Private Sub TextBox20_TextChanged(sender As Object, e As EventArgs) Handles TextBox20.TextChanged
         Try
             statusbeskrivelse(TextBox20.Text, ComboBox2, TextBox20)
@@ -328,7 +337,7 @@ Public Class Blodbane
         End Try
     End Sub
 
-    'Presenter valgt person i giversøk
+    'Presenter valgt person i blodgiversøk
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
         Dim index, i As Integer
         Dim rad As DataRow
@@ -411,6 +420,7 @@ Public Class Blodbane
         Next
     End Sub
 
+    'Endring av statuskode - henter statusbeskrivelse
     Private Sub TextBox21_TextChanged(sender As Object, e As EventArgs) Handles TextBox21.TextChanged
         Try
             statusbeskrivelse(TextBox21.Text, ComboBox4, TextBox21)
@@ -421,6 +431,7 @@ Public Class Blodbane
         End Try
     End Sub
 
+    'Endring av statusbeskrvelse - henter statuskode
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
         Try
             statuskode(ComboBox4.SelectedItem, TextBox21, ComboBox4)
