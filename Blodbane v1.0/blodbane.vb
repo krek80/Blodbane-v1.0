@@ -528,6 +528,23 @@ Public Class Blodbane
         tilkobling.Close()
     End Sub
 
+    'Slår av og på visning av gruppeboksen med skjema for å endre avtalt time
+    Private Sub BtnEndreInnkalling_Click(sender As Object, e As EventArgs) Handles BtnEndreInnkalling.Click
+        If GpBxEndreInnkalling.Visible Then
+            GpBxEndreInnkalling.Visible = False
+        Else
+            GpBxEndreInnkalling.Visible = True
+        End If
+    End Sub
+
+    Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
+        LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
+    End Sub
+
+    Private Sub TabPagBGPersInfo_Click(sender As Object, e As EventArgs) Handles TabPagBGPersInfo.Click
+
+    End Sub
+
     'Lagre intervju og eventuelle endringer i blodgiver
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim epost, adresse, preferanse, merknad, kommentar, spørring As String
@@ -555,4 +572,5 @@ Public Class Blodbane
         End Try
 
     End Sub
+
 End Class

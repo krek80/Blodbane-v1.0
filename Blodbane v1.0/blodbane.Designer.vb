@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -70,7 +70,7 @@ Partial Class Blodbane
         Me.txtAInn_epost = New System.Windows.Forms.TextBox()
         Me.PanelPåmelding = New System.Windows.Forms.Panel()
         Me.PanelGiver = New System.Windows.Forms.Panel()
-        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TbCtrlBlodgiver = New System.Windows.Forms.TabControl()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
@@ -286,19 +286,19 @@ Partial Class Blodbane
         Me.Label40 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPagBGPersInfo = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.BttnLoggavGiver = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GBxTime = New System.Windows.Forms.GroupBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.RTxtPrefInnkalling = New System.Windows.Forms.RichTextBox()
+        Me.GpBxEndreInnkalling = New System.Windows.Forms.GroupBox()
+        Me.DateTimePickerNyTime = New System.Windows.Forms.DateTimePicker()
+        Me.BtnBekreftEndretTime = New System.Windows.Forms.Button()
+        Me.LblLedigeTimer = New System.Windows.Forms.Label()
+        Me.LBxLedigeTimer = New System.Windows.Forms.ListBox()
+        Me.BtnEndreInnkalling = New System.Windows.Forms.Button()
+        Me.TxtNesteInnkalling = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -410,7 +410,7 @@ Partial Class Blodbane
         Me.TableLayoutPanel3.SuspendLayout()
         Me.PanelPåmelding.SuspendLayout()
         Me.PanelGiver.SuspendLayout()
-        Me.TabControl2.SuspendLayout()
+        Me.TbCtrlBlodgiver.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TableLayoutPanel11.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
@@ -421,9 +421,9 @@ Partial Class Blodbane
         Me.TableLayoutPanel7.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.TabPagBGPersInfo.SuspendLayout()
+        Me.GBxTime.SuspendLayout()
+        Me.GpBxEndreInnkalling.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -719,16 +719,16 @@ Partial Class Blodbane
         'PanelGiver
         '
         resources.ApplyResources(Me.PanelGiver, "PanelGiver")
-        Me.PanelGiver.Controls.Add(Me.TabControl2)
+        Me.PanelGiver.Controls.Add(Me.TbCtrlBlodgiver)
         Me.PanelGiver.Name = "PanelGiver"
         '
-        'TabControl2
+        'TbCtrlBlodgiver
         '
-        Me.TabControl2.Controls.Add(Me.TabPage5)
-        Me.TabControl2.Controls.Add(Me.TabPage4)
-        resources.ApplyResources(Me.TabControl2, "TabControl2")
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedIndex = 0
+        Me.TbCtrlBlodgiver.Controls.Add(Me.TabPage5)
+        Me.TbCtrlBlodgiver.Controls.Add(Me.TabPagBGPersInfo)
+        resources.ApplyResources(Me.TbCtrlBlodgiver, "TbCtrlBlodgiver")
+        Me.TbCtrlBlodgiver.Name = "TbCtrlBlodgiver"
+        Me.TbCtrlBlodgiver.SelectedIndex = 0
         '
         'TabPage5
         '
@@ -2153,15 +2153,15 @@ Partial Class Blodbane
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
         '
-        'TabPage4
+        'TabPagBGPersInfo
         '
-        Me.TabPage4.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage4.Controls.Add(Me.GroupBox9)
-        Me.TabPage4.Controls.Add(Me.BttnLoggavGiver)
-        Me.TabPage4.Controls.Add(Me.GroupBox1)
-        Me.TabPage4.Controls.Add(Me.GroupBox2)
-        resources.ApplyResources(Me.TabPage4, "TabPage4")
-        Me.TabPage4.Name = "TabPage4"
+        Me.TabPagBGPersInfo.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPagBGPersInfo.Controls.Add(Me.GroupBox9)
+        Me.TabPagBGPersInfo.Controls.Add(Me.BttnLoggavGiver)
+        Me.TabPagBGPersInfo.Controls.Add(Me.GBxTime)
+        Me.TabPagBGPersInfo.Controls.Add(Me.GroupBox2)
+        resources.ApplyResources(Me.TabPagBGPersInfo, "TabPagBGPersInfo")
+        Me.TabPagBGPersInfo.Name = "TabPagBGPersInfo"
         '
         'GroupBox9
         '
@@ -2175,71 +2175,71 @@ Partial Class Blodbane
         Me.BttnLoggavGiver.Name = "BttnLoggavGiver"
         Me.BttnLoggavGiver.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'GBxTime
         '
-        Me.GroupBox1.Controls.Add(Me.Label19)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox5)
-        Me.GroupBox1.Controls.Add(Me.GroupBox3)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.TextBox15)
-        Me.GroupBox1.Controls.Add(Me.Label18)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.TabStop = False
+        Me.GBxTime.Controls.Add(Me.Label19)
+        Me.GBxTime.Controls.Add(Me.RTxtPrefInnkalling)
+        Me.GBxTime.Controls.Add(Me.GpBxEndreInnkalling)
+        Me.GBxTime.Controls.Add(Me.BtnEndreInnkalling)
+        Me.GBxTime.Controls.Add(Me.TxtNesteInnkalling)
+        Me.GBxTime.Controls.Add(Me.Label18)
+        resources.ApplyResources(Me.GBxTime, "GBxTime")
+        Me.GBxTime.Name = "GBxTime"
+        Me.GBxTime.TabStop = False
         '
         'Label19
         '
         resources.ApplyResources(Me.Label19, "Label19")
         Me.Label19.Name = "Label19"
         '
-        'RichTextBox5
+        'RTxtPrefInnkalling
         '
-        resources.ApplyResources(Me.RichTextBox5, "RichTextBox5")
-        Me.RichTextBox5.Name = "RichTextBox5"
+        resources.ApplyResources(Me.RTxtPrefInnkalling, "RTxtPrefInnkalling")
+        Me.RTxtPrefInnkalling.Name = "RTxtPrefInnkalling"
         '
-        'GroupBox3
+        'GpBxEndreInnkalling
         '
-        Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Controls.Add(Me.Label22)
-        Me.GroupBox3.Controls.Add(Me.ListBox1)
-        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.TabStop = False
+        Me.GpBxEndreInnkalling.Controls.Add(Me.DateTimePickerNyTime)
+        Me.GpBxEndreInnkalling.Controls.Add(Me.BtnBekreftEndretTime)
+        Me.GpBxEndreInnkalling.Controls.Add(Me.LblLedigeTimer)
+        Me.GpBxEndreInnkalling.Controls.Add(Me.LBxLedigeTimer)
+        resources.ApplyResources(Me.GpBxEndreInnkalling, "GpBxEndreInnkalling")
+        Me.GpBxEndreInnkalling.Name = "GpBxEndreInnkalling"
+        Me.GpBxEndreInnkalling.TabStop = False
         '
-        'DateTimePicker1
+        'DateTimePickerNyTime
         '
-        resources.ApplyResources(Me.DateTimePicker1, "DateTimePicker1")
-        Me.DateTimePicker1.Name = "DateTimePicker1"
+        resources.ApplyResources(Me.DateTimePickerNyTime, "DateTimePickerNyTime")
+        Me.DateTimePickerNyTime.Name = "DateTimePickerNyTime"
         '
-        'Button3
+        'BtnBekreftEndretTime
         '
-        resources.ApplyResources(Me.Button3, "Button3")
-        Me.Button3.Name = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.BtnBekreftEndretTime, "BtnBekreftEndretTime")
+        Me.BtnBekreftEndretTime.Name = "BtnBekreftEndretTime"
+        Me.BtnBekreftEndretTime.UseVisualStyleBackColor = True
         '
-        'Label22
+        'LblLedigeTimer
         '
-        resources.ApplyResources(Me.Label22, "Label22")
-        Me.Label22.Name = "Label22"
+        resources.ApplyResources(Me.LblLedigeTimer, "LblLedigeTimer")
+        Me.LblLedigeTimer.Name = "LblLedigeTimer"
         '
-        'ListBox1
+        'LBxLedigeTimer
         '
-        Me.ListBox1.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox1, "ListBox1")
-        Me.ListBox1.Name = "ListBox1"
+        Me.LBxLedigeTimer.FormattingEnabled = True
+        resources.ApplyResources(Me.LBxLedigeTimer, "LBxLedigeTimer")
+        Me.LBxLedigeTimer.Name = "LBxLedigeTimer"
         '
-        'Button2
+        'BtnEndreInnkalling
         '
-        resources.ApplyResources(Me.Button2, "Button2")
-        Me.Button2.Name = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.BtnEndreInnkalling, "BtnEndreInnkalling")
+        Me.BtnEndreInnkalling.Name = "BtnEndreInnkalling"
+        Me.BtnEndreInnkalling.UseVisualStyleBackColor = True
         '
-        'TextBox15
+        'TxtNesteInnkalling
         '
-        Me.TextBox15.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox15, "TextBox15")
-        Me.TextBox15.Name = "TextBox15"
+        Me.TxtNesteInnkalling.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TxtNesteInnkalling, "TxtNesteInnkalling")
+        Me.TxtNesteInnkalling.Name = "TxtNesteInnkalling"
         '
         'Label18
         '
@@ -2917,17 +2917,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend3)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.Chart1.Series.Add(Series3)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -2958,7 +2958,7 @@ Partial Class Blodbane
         Me.TableLayoutPanel3.PerformLayout()
         Me.PanelPåmelding.ResumeLayout(False)
         Me.PanelGiver.ResumeLayout(False)
-        Me.TabControl2.ResumeLayout(False)
+        Me.TbCtrlBlodgiver.ResumeLayout(False)
         Me.TabPage5.ResumeLayout(False)
         Me.TableLayoutPanel11.ResumeLayout(False)
         Me.TableLayoutPanel11.PerformLayout()
@@ -2978,12 +2978,12 @@ Partial Class Blodbane
         Me.TableLayoutPanel5.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.TabPagBGPersInfo.ResumeLayout(False)
+        Me.TabPagBGPersInfo.PerformLayout()
+        Me.GBxTime.ResumeLayout(False)
+        Me.GBxTime.PerformLayout()
+        Me.GpBxEndreInnkalling.ResumeLayout(False)
+        Me.GpBxEndreInnkalling.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.PanelAnsatt.ResumeLayout(False)
@@ -3066,14 +3066,14 @@ Partial Class Blodbane
     Friend WithEvents Label17 As Label
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label22 As Label
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents GBxTime As GroupBox
+    Friend WithEvents GpBxEndreInnkalling As GroupBox
+    Friend WithEvents LblLedigeTimer As Label
+    Friend WithEvents LBxLedigeTimer As ListBox
+    Friend WithEvents BtnEndreInnkalling As Button
+    Friend WithEvents TxtNesteInnkalling As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnBekreftEndretTime As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TextBox17 As TextBox
@@ -3107,8 +3107,8 @@ Partial Class Blodbane
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
     Friend WithEvents Label57 As Label
-    Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TbCtrlBlodgiver As TabControl
+    Friend WithEvents TabPagBGPersInfo As TabPage
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label59 As Label
@@ -3189,8 +3189,8 @@ Partial Class Blodbane
     Friend WithEvents GroupBox14 As GroupBox
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents RTxtPrefInnkalling As RichTextBox
+    Friend WithEvents DateTimePickerNyTime As DateTimePicker
     Friend WithEvents Label122 As Label
     Friend WithEvents TextBox37 As TextBox
     Friend WithEvents Label121 As Label
