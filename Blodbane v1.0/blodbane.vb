@@ -91,7 +91,7 @@ Public Class Blodbane
         Try
             tilkobling.Open()
             Dim spoerring As String = ""
-            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
+            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_poststed.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
 
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
@@ -131,7 +131,7 @@ Public Class Blodbane
     End Sub
 
     'Funksjonen sjekker om skjemaet for registrering av ny blodgiver er korrekt utfylt.
-    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
+    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByRef poststedInn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
@@ -176,6 +176,11 @@ Public Class Blodbane
 
         If interntabell2.Rows.Count = 1 Then
             MsgBox("Fødselsnummeret finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        If poststedInn = "" Then
+            MsgBox("Du har tastet inn feil postnummer. Sjekk at poststed kommer opp i det grå feltet ved siden av postnummeret.", MsgBoxStyle.Critical)
             Return False
         End If
 

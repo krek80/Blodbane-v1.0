@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -2819,17 +2819,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -2844,8 +2844,8 @@ Partial Class Blodbane
         Me.AcceptButton = Me.BtnRegBlodgiver
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PanelPåmelding)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelAnsatt)
         Me.MainMenuStrip = Me.MenuStrip1
