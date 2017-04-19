@@ -96,7 +96,7 @@ Public Class Blodbane
         Try
             tilkobling.Open()
             Dim spoerring As String = ""
-            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
+            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_poststed.Text, txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
 
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
@@ -128,15 +128,15 @@ Public Class Blodbane
                 MsgBox("Skjema dessverre ikke ok.")
             End If
         Catch ex As MySqlException
-        MsgBox(ex.Message)
+            MsgBox(ex.Message)
         Finally
-        tilkobling.Close()
+            tilkobling.Close()
         End Try
 
     End Sub
 
     'Skjemavalidering
-    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
+    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal poststedInn As String, ByVal telefon1Inn As String, ByVal telefon2Inn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
@@ -182,6 +182,23 @@ Public Class Blodbane
         If interntabell2.Rows.Count = 1 Then
             MsgBox("Fødselsnummeret finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
             Return False
+        End If
+
+        If poststedInn = "" Then
+            MsgBox("Du har tastet inn feil postnummer. Sjekk at poststed kommer opp i det grå feltet ved siden av postnummeret.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        If Not IsNumeric(telefon1Inn) Or telefon1Inn.Length <> 8 Then
+            MsgBox("Telefonnummeret ble ikke akseptert.", MsgBoxStyle.Critical)
+            Return False
+        End If
+
+        If telefon2Inn <> "" Then
+            If Not IsNumeric(telefon2Inn) Or telefon2Inn.Length <> 8 Then
+                MsgBox("Telefonnummer2 ble ikke akseptert.", MsgBoxStyle.Critical)
+                Return False
+            End If
         End If
 
         If interntabell1.Rows.Count = 1 Then
