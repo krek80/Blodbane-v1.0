@@ -78,17 +78,57 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
         da.SelectCommand = sql
         da.Fill(interntabell)
-        tilkobling.Close()
 
         Dim antallRader As Integer = interntabell.Rows.Count()
+        Dim fornavnet As String = ""
+        Dim etternavnet As String = ""
+        Dim passordet As String = ""
+        Dim adressen As String = ""
+        Dim postnummeret As String = ""
+        Dim telefonen1 As String = ""
+        Dim telefonen2 As String = ""
+        Dim statuskoden As Integer = 0
+        Dim eposten As String = ""
+        Dim blodtypen As String = ""
+        ' Dim siste_blodtappingen As DateTime = 
         If antallRader = 1 Then
+            Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
+            sql2.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
+            Dim da2 As New MySqlDataAdapter
+            Dim interntabell2 As New DataTable
+            'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
+            da2.SelectCommand = sql2
+            da2.Fill(interntabell2)
             PanelPåmelding.Hide()
             PanelAnsatt.Hide()
             PanelGiver.Show()
             PanelGiver.BringToFront()
+            Dim rad As DataRow
+            For Each rad In interntabell.Rows
+                fornavnet = rad("fornavn")
+                etternavnet = rad("etternavn")
+                passordet = rad("passord")
+                adressen = rad("adresse")
+                postnummeret = rad("postnr")
+                telefonen1 = rad("telefon1")
+                telefonen2 = rad("telefonen2")
+                statuskoden = rad("statuskode")
+                eposten = rad("epost")
+            Next rad
+            For Each rad2 In interntabell2.Rows
+
+            Next
+            txtPersDataNavn.Text = $"{fornavnet} {etternavnet}"
+            txtPersDataGateAdr.Text = adressen
+            txtPersDataPostnr.Text = postnummeret
+            txtPersDataTlf.Text = telefonen1
+            txtPersDataTlf2.Text = telefonen2
+            txtPersDataEpost.Text = eposten
         Else
             MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
         End If
+        tilkobling.Close()
+
     End Sub
 
     'Registrer ny blodgiver
@@ -539,10 +579,6 @@ Public Class Blodbane
 
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
         LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
-    End Sub
-
-    Private Sub TabPagBGPersInfo_Click(sender As Object, e As EventArgs) Handles TabPagBGPersInfo.Click
-
     End Sub
 
     'Lagre intervju og eventuelle endringer i blodgiver

@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -289,7 +289,7 @@ Partial Class Blodbane
         Me.TabPagBGPersInfo = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.BttnLoggavGiver = New System.Windows.Forms.Button()
-        Me.GBxTime = New System.Windows.Forms.GroupBox()
+        Me.GpBxTime = New System.Windows.Forms.GroupBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.RTxtPrefInnkalling = New System.Windows.Forms.RichTextBox()
         Me.GpBxEndreInnkalling = New System.Windows.Forms.GroupBox()
@@ -300,25 +300,31 @@ Partial Class Blodbane
         Me.BtnEndreInnkalling = New System.Windows.Forms.Button()
         Me.TxtNesteInnkalling = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GpBxPersonData = New System.Windows.Forms.GroupBox()
+        Me.Label143 = New System.Windows.Forms.Label()
+        Me.Label142 = New System.Windows.Forms.Label()
+        Me.txtPersDataPoststed = New System.Windows.Forms.TextBox()
+        Me.btnPersDataSettNyttPassord = New System.Windows.Forms.Button()
+        Me.txtPersDataEpost = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label122 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox37 = New System.Windows.Forms.TextBox()
+        Me.CBxKontaktform = New System.Windows.Forms.ComboBox()
+        Me.txtPersDataSisteUnders = New System.Windows.Forms.TextBox()
         Me.Label121 = New System.Windows.Forms.Label()
-        Me.TextBox36 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.txtPersDataBlodtype = New System.Windows.Forms.TextBox()
+        Me.txtPersDataTlf2 = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.txtPersDataTlf = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.txtPersDataGStatus = New System.Windows.Forms.TextBox()
+        Me.txtPersDataGateAdr = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.btnPersDataLagreEndringer = New System.Windows.Forms.Button()
+        Me.txtPersDataNavn = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.txtPersDataPostnr = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PanelAnsatt = New System.Windows.Forms.Panel()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -422,9 +428,9 @@ Partial Class Blodbane
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TabPagBGPersInfo.SuspendLayout()
-        Me.GBxTime.SuspendLayout()
+        Me.GpBxTime.SuspendLayout()
         Me.GpBxEndreInnkalling.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.GpBxPersonData.SuspendLayout()
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -2158,8 +2164,8 @@ Partial Class Blodbane
         Me.TabPagBGPersInfo.BackColor = System.Drawing.SystemColors.Control
         Me.TabPagBGPersInfo.Controls.Add(Me.GroupBox9)
         Me.TabPagBGPersInfo.Controls.Add(Me.BttnLoggavGiver)
-        Me.TabPagBGPersInfo.Controls.Add(Me.GBxTime)
-        Me.TabPagBGPersInfo.Controls.Add(Me.GroupBox2)
+        Me.TabPagBGPersInfo.Controls.Add(Me.GpBxTime)
+        Me.TabPagBGPersInfo.Controls.Add(Me.GpBxPersonData)
         resources.ApplyResources(Me.TabPagBGPersInfo, "TabPagBGPersInfo")
         Me.TabPagBGPersInfo.Name = "TabPagBGPersInfo"
         '
@@ -2175,17 +2181,17 @@ Partial Class Blodbane
         Me.BttnLoggavGiver.Name = "BttnLoggavGiver"
         Me.BttnLoggavGiver.UseVisualStyleBackColor = True
         '
-        'GBxTime
+        'GpBxTime
         '
-        Me.GBxTime.Controls.Add(Me.Label19)
-        Me.GBxTime.Controls.Add(Me.RTxtPrefInnkalling)
-        Me.GBxTime.Controls.Add(Me.GpBxEndreInnkalling)
-        Me.GBxTime.Controls.Add(Me.BtnEndreInnkalling)
-        Me.GBxTime.Controls.Add(Me.TxtNesteInnkalling)
-        Me.GBxTime.Controls.Add(Me.Label18)
-        resources.ApplyResources(Me.GBxTime, "GBxTime")
-        Me.GBxTime.Name = "GBxTime"
-        Me.GBxTime.TabStop = False
+        Me.GpBxTime.Controls.Add(Me.Label19)
+        Me.GpBxTime.Controls.Add(Me.RTxtPrefInnkalling)
+        Me.GpBxTime.Controls.Add(Me.GpBxEndreInnkalling)
+        Me.GpBxTime.Controls.Add(Me.BtnEndreInnkalling)
+        Me.GpBxTime.Controls.Add(Me.TxtNesteInnkalling)
+        Me.GpBxTime.Controls.Add(Me.Label18)
+        resources.ApplyResources(Me.GpBxTime, "GpBxTime")
+        Me.GpBxTime.Name = "GpBxTime"
+        Me.GpBxTime.TabStop = False
         '
         'Label19
         '
@@ -2246,30 +2252,68 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label18, "Label18")
         Me.Label18.Name = "Label18"
         '
-        'GroupBox2
+        'GpBxPersonData
         '
-        Me.GroupBox2.Controls.Add(Me.Label20)
-        Me.GroupBox2.Controls.Add(Me.Label122)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Controls.Add(Me.TextBox37)
-        Me.GroupBox2.Controls.Add(Me.Label121)
-        Me.GroupBox2.Controls.Add(Me.TextBox36)
-        Me.GroupBox2.Controls.Add(Me.TextBox17)
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.TextBox16)
-        Me.GroupBox2.Controls.Add(Me.Label24)
-        Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.TextBox14)
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
-        Me.GroupBox2.Controls.Add(Me.Label16)
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.TabStop = False
+        Me.GpBxPersonData.Controls.Add(Me.Label143)
+        Me.GpBxPersonData.Controls.Add(Me.Label142)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataPoststed)
+        Me.GpBxPersonData.Controls.Add(Me.btnPersDataSettNyttPassord)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataEpost)
+        Me.GpBxPersonData.Controls.Add(Me.Label22)
+        Me.GpBxPersonData.Controls.Add(Me.Label20)
+        Me.GpBxPersonData.Controls.Add(Me.Label122)
+        Me.GpBxPersonData.Controls.Add(Me.CBxKontaktform)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataSisteUnders)
+        Me.GpBxPersonData.Controls.Add(Me.Label121)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataBlodtype)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataTlf2)
+        Me.GpBxPersonData.Controls.Add(Me.Label25)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataTlf)
+        Me.GpBxPersonData.Controls.Add(Me.Label24)
+        Me.GpBxPersonData.Controls.Add(Me.Label17)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataGStatus)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataGateAdr)
+        Me.GpBxPersonData.Controls.Add(Me.Label14)
+        Me.GpBxPersonData.Controls.Add(Me.btnPersDataLagreEndringer)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataNavn)
+        Me.GpBxPersonData.Controls.Add(Me.Label15)
+        Me.GpBxPersonData.Controls.Add(Me.txtPersDataPostnr)
+        Me.GpBxPersonData.Controls.Add(Me.Label16)
+        resources.ApplyResources(Me.GpBxPersonData, "GpBxPersonData")
+        Me.GpBxPersonData.Name = "GpBxPersonData"
+        Me.GpBxPersonData.TabStop = False
+        '
+        'Label143
+        '
+        resources.ApplyResources(Me.Label143, "Label143")
+        Me.Label143.Name = "Label143"
+        '
+        'Label142
+        '
+        resources.ApplyResources(Me.Label142, "Label142")
+        Me.Label142.Name = "Label142"
+        '
+        'txtPersDataPoststed
+        '
+        Me.txtPersDataPoststed.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.txtPersDataPoststed, "txtPersDataPoststed")
+        Me.txtPersDataPoststed.Name = "txtPersDataPoststed"
+        '
+        'btnPersDataSettNyttPassord
+        '
+        resources.ApplyResources(Me.btnPersDataSettNyttPassord, "btnPersDataSettNyttPassord")
+        Me.btnPersDataSettNyttPassord.Name = "btnPersDataSettNyttPassord"
+        Me.btnPersDataSettNyttPassord.UseVisualStyleBackColor = True
+        '
+        'txtPersDataEpost
+        '
+        resources.ApplyResources(Me.txtPersDataEpost, "txtPersDataEpost")
+        Me.txtPersDataEpost.Name = "txtPersDataEpost"
+        '
+        'Label22
+        '
+        resources.ApplyResources(Me.Label22, "Label22")
+        Me.Label22.Name = "Label22"
         '
         'Label20
         '
@@ -2281,44 +2325,44 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label122, "Label122")
         Me.Label122.Name = "Label122"
         '
-        'ComboBox1
+        'CBxKontaktform
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1"), resources.GetString("ComboBox1.Items2"), resources.GetString("ComboBox1.Items3")})
-        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
-        Me.ComboBox1.Name = "ComboBox1"
+        Me.CBxKontaktform.FormattingEnabled = True
+        Me.CBxKontaktform.Items.AddRange(New Object() {resources.GetString("CBxKontaktform.Items"), resources.GetString("CBxKontaktform.Items1"), resources.GetString("CBxKontaktform.Items2"), resources.GetString("CBxKontaktform.Items3")})
+        resources.ApplyResources(Me.CBxKontaktform, "CBxKontaktform")
+        Me.CBxKontaktform.Name = "CBxKontaktform"
         '
-        'TextBox37
+        'txtPersDataSisteUnders
         '
-        Me.TextBox37.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox37, "TextBox37")
-        Me.TextBox37.Name = "TextBox37"
+        Me.txtPersDataSisteUnders.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.txtPersDataSisteUnders, "txtPersDataSisteUnders")
+        Me.txtPersDataSisteUnders.Name = "txtPersDataSisteUnders"
         '
         'Label121
         '
         resources.ApplyResources(Me.Label121, "Label121")
         Me.Label121.Name = "Label121"
         '
-        'TextBox36
+        'txtPersDataBlodtype
         '
-        Me.TextBox36.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox36, "TextBox36")
-        Me.TextBox36.Name = "TextBox36"
+        Me.txtPersDataBlodtype.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.txtPersDataBlodtype, "txtPersDataBlodtype")
+        Me.txtPersDataBlodtype.Name = "txtPersDataBlodtype"
         '
-        'TextBox17
+        'txtPersDataTlf2
         '
-        resources.ApplyResources(Me.TextBox17, "TextBox17")
-        Me.TextBox17.Name = "TextBox17"
+        resources.ApplyResources(Me.txtPersDataTlf2, "txtPersDataTlf2")
+        Me.txtPersDataTlf2.Name = "txtPersDataTlf2"
         '
         'Label25
         '
         resources.ApplyResources(Me.Label25, "Label25")
         Me.Label25.Name = "Label25"
         '
-        'TextBox16
+        'txtPersDataTlf
         '
-        resources.ApplyResources(Me.TextBox16, "TextBox16")
-        Me.TextBox16.Name = "TextBox16"
+        resources.ApplyResources(Me.txtPersDataTlf, "txtPersDataTlf")
+        Me.txtPersDataTlf.Name = "txtPersDataTlf"
         '
         'Label24
         '
@@ -2330,43 +2374,43 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label17, "Label17")
         Me.Label17.Name = "Label17"
         '
-        'TextBox14
+        'txtPersDataGStatus
         '
-        Me.TextBox14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox14, "TextBox14")
-        Me.TextBox14.Name = "TextBox14"
+        Me.txtPersDataGStatus.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.txtPersDataGStatus, "txtPersDataGStatus")
+        Me.txtPersDataGStatus.Name = "txtPersDataGStatus"
         '
-        'TextBox12
+        'txtPersDataGateAdr
         '
-        resources.ApplyResources(Me.TextBox12, "TextBox12")
-        Me.TextBox12.Name = "TextBox12"
+        resources.ApplyResources(Me.txtPersDataGateAdr, "txtPersDataGateAdr")
+        Me.txtPersDataGateAdr.Name = "txtPersDataGateAdr"
         '
         'Label14
         '
         resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
         '
-        'Button1
+        'btnPersDataLagreEndringer
         '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnPersDataLagreEndringer, "btnPersDataLagreEndringer")
+        Me.btnPersDataLagreEndringer.Name = "btnPersDataLagreEndringer"
+        Me.btnPersDataLagreEndringer.UseVisualStyleBackColor = True
         '
-        'TextBox11
+        'txtPersDataNavn
         '
-        Me.TextBox11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        resources.ApplyResources(Me.TextBox11, "TextBox11")
-        Me.TextBox11.Name = "TextBox11"
+        Me.txtPersDataNavn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.txtPersDataNavn, "txtPersDataNavn")
+        Me.txtPersDataNavn.Name = "txtPersDataNavn"
         '
         'Label15
         '
         resources.ApplyResources(Me.Label15, "Label15")
         Me.Label15.Name = "Label15"
         '
-        'TextBox13
+        'txtPersDataPostnr
         '
-        resources.ApplyResources(Me.TextBox13, "TextBox13")
-        Me.TextBox13.Name = "TextBox13"
+        resources.ApplyResources(Me.txtPersDataPostnr, "txtPersDataPostnr")
+        Me.txtPersDataPostnr.Name = "txtPersDataPostnr"
         '
         'Label16
         '
@@ -2917,17 +2961,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
         '
         'ToolTip1
         '
@@ -2980,12 +3024,12 @@ Partial Class Blodbane
         Me.TableLayoutPanel1.PerformLayout()
         Me.TabPagBGPersInfo.ResumeLayout(False)
         Me.TabPagBGPersInfo.PerformLayout()
-        Me.GBxTime.ResumeLayout(False)
-        Me.GBxTime.PerformLayout()
+        Me.GpBxTime.ResumeLayout(False)
+        Me.GpBxTime.PerformLayout()
         Me.GpBxEndreInnkalling.ResumeLayout(False)
         Me.GpBxEndreInnkalling.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.GpBxPersonData.ResumeLayout(False)
+        Me.GpBxPersonData.PerformLayout()
         Me.PanelAnsatt.ResumeLayout(False)
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -3050,11 +3094,11 @@ Partial Class Blodbane
     Friend WithEvents Label13 As Label
     Friend WithEvents PanelPåmelding As Panel
     Friend WithEvents PanelGiver As Panel
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents txtPersDataPostnr As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents txtPersDataGateAdr As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txtPersDataNavn As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents BttnLoggavGiver As Button
     Friend WithEvents PanelAnsatt As Panel
@@ -3062,11 +3106,11 @@ Partial Class Blodbane
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents BttnLoggavAnsatt As Button
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GpBxPersonData As GroupBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents GBxTime As GroupBox
+    Friend WithEvents txtPersDataGStatus As TextBox
+    Friend WithEvents btnPersDataLagreEndringer As Button
+    Friend WithEvents GpBxTime As GroupBox
     Friend WithEvents GpBxEndreInnkalling As GroupBox
     Friend WithEvents LblLedigeTimer As Label
     Friend WithEvents LBxLedigeTimer As ListBox
@@ -3076,9 +3120,9 @@ Partial Class Blodbane
     Friend WithEvents BtnBekreftEndretTime As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents txtPersDataTlf2 As TextBox
     Friend WithEvents Label25 As Label
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents txtPersDataTlf As TextBox
     Friend WithEvents Label24 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -3137,7 +3181,7 @@ Partial Class Blodbane
     Friend WithEvents Label94 As Label
     Friend WithEvents Label95 As Label
     Friend WithEvents Label96 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CBxKontaktform As ComboBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label99 As Label
@@ -3192,9 +3236,9 @@ Partial Class Blodbane
     Friend WithEvents RTxtPrefInnkalling As RichTextBox
     Friend WithEvents DateTimePickerNyTime As DateTimePicker
     Friend WithEvents Label122 As Label
-    Friend WithEvents TextBox37 As TextBox
+    Friend WithEvents txtPersDataSisteUnders As TextBox
     Friend WithEvents Label121 As Label
-    Friend WithEvents TextBox36 As TextBox
+    Friend WithEvents txtPersDataBlodtype As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Label20 As Label
     Friend WithEvents GroupBox9 As GroupBox
@@ -3393,4 +3437,10 @@ Partial Class Blodbane
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label115 As Label
     Friend WithEvents Button7 As Button
+    Friend WithEvents Label143 As Label
+    Friend WithEvents Label142 As Label
+    Friend WithEvents txtPersDataPoststed As TextBox
+    Friend WithEvents btnPersDataSettNyttPassord As Button
+    Friend WithEvents txtPersDataEpost As TextBox
+    Friend WithEvents Label22 As Label
 End Class
