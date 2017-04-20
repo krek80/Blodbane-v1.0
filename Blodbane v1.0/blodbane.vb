@@ -90,7 +90,7 @@ Public Class Blodbane
         Dim statuskoden As Integer = 0
         Dim eposten As String = ""
         Dim blodtypen As String = ""
-        ' Dim siste_blodtappingen As DateTime = 
+        Dim siste_time As String = DateTimePickerNyTime.Text
         If antallRader = 1 Then
             Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
             sql2.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
@@ -111,13 +111,28 @@ Public Class Blodbane
                 adressen = rad("adresse")
                 postnummeret = rad("postnr")
                 telefonen1 = rad("telefon1")
-                telefonen2 = rad("telefonen2")
+                telefonen2 = rad("telefon2")
                 statuskoden = rad("statuskode")
                 eposten = rad("epost")
             Next rad
-            For Each rad2 In interntabell2.Rows
+            Dim sql3 As New MySqlCommand("SELECT * FROM timeavtale WHERE bgepost = @epostInn", tilkobling)
+            sql3.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
+            Dim da3 As New MySqlDataAdapter
+            Dim interntabell3 As New DataTable
+            'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
+            da3.SelectCommand = sql3
+            da3.Fill(interntabell3)
+            If interntabell3.Rows.Count > 0 Then
+                Dim rad3() As DataRow = interntabell3.Select()
+                txtPersDataSisteUnders.Text = rad3(interntabell3.Rows.Count - 1)("datotid")
+            End If
 
-            Next
+            PanelPåmelding.Hide()
+            PanelAnsatt.Hide()
+            PanelGiver.Show()
+            PanelGiver.BringToFront()
+
+
             txtPersDataNavn.Text = $"{fornavnet} {etternavnet}"
             txtPersDataGateAdr.Text = adressen
             txtPersDataPostnr.Text = postnummeret
