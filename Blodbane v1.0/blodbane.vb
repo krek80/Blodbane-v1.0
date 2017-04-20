@@ -68,7 +68,7 @@ Public Class Blodbane
         pålogging.Show()
     End Sub
 
-    'Logg på blodgiver
+    'Logg på blodgiver og setter opp personinfo i fanen Personinformasjon
     Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
         Dim sql As New MySqlCommand("SELECT * FROM bruker WHERE epost = @epostInn AND passord = @passordInn", tilkobling)
         sql.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
@@ -87,22 +87,13 @@ Public Class Blodbane
         Dim postnummeret As String = ""
         Dim telefonen1 As String = ""
         Dim telefonen2 As String = ""
-        Dim statuskoden As Integer = 0
+        Dim statuskoden As String = ""
         Dim eposten As String = ""
         Dim blodtypen As String = ""
-        Dim siste_time As String = DateTimePickerNyTime.Text
+        Dim siste_timen As DateTime
+
         If antallRader = 1 Then
-            Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
-            sql2.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
-            Dim da2 As New MySqlDataAdapter
-            Dim interntabell2 As New DataTable
-            'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
-            da2.SelectCommand = sql2
-            da2.Fill(interntabell2)
-            PanelPåmelding.Hide()
-            PanelAnsatt.Hide()
-            PanelGiver.Show()
-            PanelGiver.BringToFront()
+
             Dim rad As DataRow
             For Each rad In interntabell.Rows
                 fornavnet = rad("fornavn")
@@ -112,9 +103,28 @@ Public Class Blodbane
                 postnummeret = rad("postnr")
                 telefonen1 = rad("telefon1")
                 telefonen2 = rad("telefon2")
-                statuskoden = rad("statuskode")
                 eposten = rad("epost")
+                statuskoden = rad("statuskode")
             Next rad
+
+            Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
+            sql2.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
+            Dim da2 As New MySqlDataAdapter
+            Dim interntabell2 As New DataTable
+            'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
+            da2.SelectCommand = sql2
+            da2.Fill(interntabell2)
+
+            Dim rad2 As DataRow
+            For Each rad2 In interntabell2.Rows
+                blodtypen = rad2("blodtype")
+                If IsDate(rad2("siste_blodtapping")) Then
+                    siste_timen = rad2("siste_blodtapping")
+                End If
+            Next rad2
+
+            Dim idag, sistetime As DateTime
+            idag = Today
             Dim sql3 As New MySqlCommand("SELECT * FROM timeavtale WHERE bgepost = @epostInn", tilkobling)
             sql3.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
             Dim da3 As New MySqlDataAdapter
@@ -124,7 +134,12 @@ Public Class Blodbane
             da3.Fill(interntabell3)
             If interntabell3.Rows.Count > 0 Then
                 Dim rad3() As DataRow = interntabell3.Select()
-                txtPersDataSisteUnders.Text = rad3(interntabell3.Rows.Count - 1)("datotid")
+                sistetime = rad3(interntabell3.Rows.Count - 1)("datotid")
+                If sistetime > idag Then
+                    TxtNesteInnkalling.Text = sistetime
+                Else
+                    TxtNesteInnkalling.Text = "Ikke fastsatt"
+                End If
             End If
 
             PanelPåmelding.Hide()
@@ -132,8 +147,10 @@ Public Class Blodbane
             PanelGiver.Show()
             PanelGiver.BringToFront()
 
-
             txtPersDataNavn.Text = $"{fornavnet} {etternavnet}"
+            txtPersDataGStatus.Text = personstatusB(statuskoden)
+            txtPersDataBlodtype.Text = blodtypen
+            txtPersDataSisteUnders.Text = siste_timen
             txtPersDataGateAdr.Text = adressen
             txtPersDataPostnr.Text = postnummeret
             txtPersDataTlf.Text = telefonen1
@@ -592,8 +609,14 @@ Public Class Blodbane
         End If
     End Sub
 
+    'Plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
         LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
+    End Sub
+
+    'Setter rett poststed ved siden av postnummeret i fanen Personinfo for blodgiveren
+    Private Sub txtPersDataPostnr_TextChanged(sender As Object, e As EventArgs) Handles txtPersDataPostnr.TextChanged
+        txtPersDataPoststed.Text = postnummer(txtPersDataPostnr.Text)
     End Sub
 
     'Lagre intervju og eventuelle endringer i blodgiver
