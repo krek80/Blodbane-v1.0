@@ -610,23 +610,47 @@ Public Class Blodbane
         If TxtNesteInnkalling.Text <> "" Then
             DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
         End If
+        hentLedigeTimer(DateTimePickerNyTime.Value)
+    End Sub
 
+    Private Sub hentLedigeTimer(ByVal aktuelldato As DateTime)
 
-        Dim aktuell_dato As DateTime = DateTimePickerNyTime.Value
-        Dim aktuell_datopluss1 = aktuell_dato.AddDays(1)
-        MsgBox($"Aktuell dato: {aktuell_dato}. Aktuell dato pluss 1: {aktuell_datopluss1}.")
+        Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
 
-
-        Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid > '{aktuell_dato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuell_datopluss1.ToString("yyyy-MM-dd")}'"
+        Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}'"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         Dim rad1 As DataRow
+        Dim i As Integer
+        Dim fulltimetabell As New ArrayList()
+        Dim opptatt As Boolean = False
+        Dim raddato1 As DateTime
+        Dim raddato2 As String
+        Dim tabort As Integer
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
+        LBxLedigeTimer.Items.Clear()
+        For i = 0 To 7
+            fulltimetabell.Add($"{i + 8}:00")
+        Next
         For Each rad1 In interntabell1.Rows
-            LBxLedigeTimer.Items.Add(rad1("datotid"))
+            raddato1 = rad1("datotid")
+            raddato2 = $"{raddato1.Hour}:00"
+            For i = 0 To fulltimetabell.Count - 1
+                If fulltimetabell(i) = raddato2 Then
+                    tabort = i
+                    opptatt = True
+                End If
+            Next
+            If opptatt Then
+                fulltimetabell.RemoveAt(tabort)
+                opptatt = False
+            End If
+        Next
+        For i = 0 To fulltimetabell.Count - 1
+            LBxLedigeTimer.Items.Add(fulltimetabell(i))
         Next
 
     End Sub
@@ -634,6 +658,7 @@ Public Class Blodbane
     'Plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
         LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
+        hentLedigeTimer(DateTimePickerNyTime.Value)
     End Sub
 
     'Setter rett poststed ved siden av postnummeret i fanen Personinfo for blodgiveren
