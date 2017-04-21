@@ -70,6 +70,7 @@ Public Class Blodbane
 
     'Logg på blodgiver og setter opp personinfo i fanen Personinformasjon
     Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
+        tilkobling.Open()
         Dim sql As New MySqlCommand("SELECT * FROM bruker WHERE epost = @epostInn AND passord = @passordInn", tilkobling)
         sql.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
         sql.Parameters.AddWithValue("@passordInn", txtAInn_passord.Text)
@@ -610,13 +611,15 @@ Public Class Blodbane
         If TxtNesteInnkalling.Text <> "" Then
             DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
         End If
+        BtnBekreftEndretTime.Enabled = False
         hentLedigeTimer(DateTimePickerNyTime.Value)
     End Sub
 
+    'Henter ledige timer for valgt dato
     Private Sub hentLedigeTimer(ByVal aktuelldato As DateTime)
 
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
-
+        tilkobling.Open()
         Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}'"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
@@ -631,6 +634,7 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
+        tilkobling.Close()
         LBxLedigeTimer.Items.Clear()
         For i = 0 To 7
             fulltimetabell.Add($"{i + 8}:00")
@@ -655,7 +659,7 @@ Public Class Blodbane
 
     End Sub
 
-    'Plukker ut ledige timer når dato blir valgt.
+    'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
         LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
         hentLedigeTimer(DateTimePickerNyTime.Value)
@@ -664,6 +668,31 @@ Public Class Blodbane
     'Setter rett poststed ved siden av postnummeret i fanen Personinfo for blodgiveren
     Private Sub txtPersDataPostnr_TextChanged(sender As Object, e As EventArgs) Handles txtPersDataPostnr.TextChanged
         txtPersDataPoststed.Text = postnummer(txtPersDataPostnr.Text)
+    End Sub
+
+    'Slår på knappen for å bekrefte nytt tidspunkt for neste time.
+    Private Sub LBxLedigeTimer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LBxLedigeTimer.SelectedIndexChanged
+        Dim valgtTime As String = LBxLedigeTimer.SelectedItem
+        BtnBekreftEndretTime.Enabled = True
+        MsgBox($"Valgt time: {valgtTime}.")
+    End Sub
+
+    'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
+    Private Sub BtnBekreftEndretTime_Click(sender As Object, e As EventArgs) Handles BtnBekreftEndretTime.Click
+
+        Dim nyDato, time_DateTime As DateTime
+
+        Try
+            Dim provider As CultureInfo = CultureInfo.InvariantCulture
+            time_DateTime = Date.ParseExact(LBxLedigeTimer.SelectedItem, "H:mm", provider)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
+                           time_DateTime.Hour, 0, 0)
+
+        GpBxEndreInnkalling.Visible = False
+        TxtNesteInnkalling.Text = nyDato
     End Sub
 
     'Lagre intervju og eventuelle endringer i blodgiver
@@ -680,7 +709,6 @@ Public Class Blodbane
         preferanse = RichTextBox4.Text
         merknad = RichTextBox2.Text
         kommentar = RichTextBox3.Text
-
         spørring = $"UPDATE egenerklaering SET ansattepost= '{påloggetAepost}', datotidansatt= '{Now.ToString("yyyy.MM.dd HH:mm.ss")}', kommentar= '{kommentar}' WHERE id= '{egenerklærigID}'"
         Try
             tilkobling.Open()

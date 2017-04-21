@@ -24,9 +24,9 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -293,6 +293,7 @@ Partial Class Blodbane
         Me.Label19 = New System.Windows.Forms.Label()
         Me.RTxtPrefInnkalling = New System.Windows.Forms.RichTextBox()
         Me.GpBxEndreInnkalling = New System.Windows.Forms.GroupBox()
+        Me.Label144 = New System.Windows.Forms.Label()
         Me.DateTimePickerNyTime = New System.Windows.Forms.DateTimePicker()
         Me.BtnBekreftEndretTime = New System.Windows.Forms.Button()
         Me.LblLedigeTimer = New System.Windows.Forms.Label()
@@ -411,7 +412,6 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label144 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -2215,6 +2215,11 @@ Partial Class Blodbane
         Me.GpBxEndreInnkalling.Name = "GpBxEndreInnkalling"
         Me.GpBxEndreInnkalling.TabStop = False
         '
+        'Label144
+        '
+        resources.ApplyResources(Me.Label144, "Label144")
+        Me.Label144.Name = "Label144"
+        '
         'DateTimePickerNyTime
         '
         resources.ApplyResources(Me.DateTimePickerNyTime, "DateTimePickerNyTime")
@@ -2963,17 +2968,17 @@ Partial Class Blodbane
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart1.Series.Add(Series4)
         '
         'ToolTip1
         '
@@ -2982,11 +2987,6 @@ Partial Class Blodbane
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
-        'Label144
-        '
-        resources.ApplyResources(Me.Label144, "Label144")
-        Me.Label144.Name = "Label144"
         '
         'Blodbane
         '
