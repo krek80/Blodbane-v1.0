@@ -8741,8 +8741,41 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;RTxtPrefInnkalling.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="Label144.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label144.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label144.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 36</value>
+  </data>
+  <data name="Label144.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label144.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 20</value>
+  </data>
+  <data name="Label144.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label144.Text" xml:space="preserve">
+    <value>Velg dato, og klikk på ønsket ledig time</value>
+  </data>
+  <data name="&gt;&gt;Label144.Name" xml:space="preserve">
+    <value>Label144</value>
+  </data>
+  <data name="&gt;&gt;Label144.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label144.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;Label144.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="DateTimePickerNyTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 37</value>
+    <value>12, 69</value>
   </data>
   <data name="DateTimePickerNyTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -8763,13 +8796,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>GpBxEndreInnkalling</value>
   </data>
   <data name="&gt;&gt;DateTimePickerNyTime.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BtnBekreftEndretTime.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="BtnBekreftEndretTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 247</value>
+    <value>12, 351</value>
   </data>
   <data name="BtnBekreftEndretTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -8793,7 +8826,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>GpBxEndreInnkalling</value>
   </data>
   <data name="&gt;&gt;BtnBekreftEndretTime.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LblLedigeTimer.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8802,19 +8835,19 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="LblLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 70</value>
+    <value>8, 107</value>
   </data>
   <data name="LblLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="LblLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 20</value>
+    <value>107, 20</value>
   </data>
   <data name="LblLedigeTimer.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="LblLedigeTimer.Text" xml:space="preserve">
-    <value>Ledige timer</value>
+    <value>Ledige timer:</value>
   </data>
   <data name="&gt;&gt;LblLedigeTimer.Name" xml:space="preserve">
     <value>LblLedigeTimer</value>
@@ -8826,19 +8859,19 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>GpBxEndreInnkalling</value>
   </data>
   <data name="&gt;&gt;LblLedigeTimer.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="LBxLedigeTimer.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="LBxLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 91</value>
+    <value>12, 136</value>
   </data>
   <data name="LBxLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="LBxLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 144</value>
+    <value>445, 204</value>
   </data>
   <data name="LBxLedigeTimer.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -8853,10 +8886,10 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>GpBxEndreInnkalling</value>
   </data>
   <data name="&gt;&gt;LBxLedigeTimer.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="GpBxEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 276</value>
+    <value>24, 286</value>
   </data>
   <data name="GpBxEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -8865,7 +8898,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GpBxEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 283</value>
+    <value>470, 398</value>
   </data>
   <data name="GpBxEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>

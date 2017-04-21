@@ -1,6 +1,6 @@
 ﻿'Imports System.ComponentModel
 Imports MySql.Data.MySqlClient
-'Imports System.Globalization
+Imports System.Globalization
 Public Class Blodbane
     Dim giversøk As New DataTable
     Dim egenerklaering As New DataTable
@@ -607,6 +607,28 @@ Public Class Blodbane
         Else
             GpBxEndreInnkalling.Visible = True
         End If
+        If TxtNesteInnkalling.Text <> "" Then
+            DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
+        End If
+
+
+        Dim aktuell_dato As DateTime = DateTimePickerNyTime.Value
+        Dim aktuell_datopluss1 = aktuell_dato.AddDays(1)
+        MsgBox($"Aktuell dato: {aktuell_dato}. Aktuell dato pluss 1: {aktuell_datopluss1}.")
+
+
+        Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid > '{aktuell_dato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuell_datopluss1.ToString("yyyy-MM-dd")}'"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        Dim rad1 As DataRow
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+        For Each rad1 In interntabell1.Rows
+            LBxLedigeTimer.Items.Add(rad1("datotid"))
+        Next
+
     End Sub
 
     'Plukker ut ledige timer når dato blir valgt.

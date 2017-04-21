@@ -411,6 +411,7 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label144 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -2205,6 +2206,7 @@ Partial Class Blodbane
         '
         'GpBxEndreInnkalling
         '
+        Me.GpBxEndreInnkalling.Controls.Add(Me.Label144)
         Me.GpBxEndreInnkalling.Controls.Add(Me.DateTimePickerNyTime)
         Me.GpBxEndreInnkalling.Controls.Add(Me.BtnBekreftEndretTime)
         Me.GpBxEndreInnkalling.Controls.Add(Me.LblLedigeTimer)
@@ -2981,6 +2983,11 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
+        'Label144
+        '
+        resources.ApplyResources(Me.Label144, "Label144")
+        Me.Label144.Name = "Label144"
+        '
         'Blodbane
         '
         Me.AcceptButton = Me.BtnRegBlodgiver
@@ -3443,4 +3450,5 @@ Partial Class Blodbane
     Friend WithEvents btnPersDataSettNyttPassord As Button
     Friend WithEvents txtPersDataEpost As TextBox
     Friend WithEvents Label22 As Label
+    Friend WithEvents Label144 As Label
 End Class
