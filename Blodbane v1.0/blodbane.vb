@@ -11,7 +11,8 @@ Public Class Blodbane
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
     Public påloggetAnsatt, påloggetAepost As String
-    Dim egenerklærigID As Integer
+    Dim egenerklæringID As Integer
+    Dim presentertGiver, bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
 
     'Kjøres ved oppstart
@@ -55,6 +56,9 @@ Public Class Blodbane
         Dim sqlSpørring3 As New MySqlCommand("SELECT a.epost, b.passord, b.fornavn FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
         da.SelectCommand = sqlSpørring3
         da.Fill(ansatt)
+        For Each rad In ansatt.Rows
+            ComboBox3.Items.Add(rad("epost"))
+        Next
         tilkobling.Close()
     End Sub
 
@@ -304,18 +308,18 @@ Public Class Blodbane
         PanelPåmelding.BringToFront()
     End Sub
 
-    'Logg av ansatt
+    'Knapp - Logg av ansatt
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles BttnLoggavAnsatt.Click
-        PanelGiver.Hide()
-        PanelAnsatt.Hide()
-        PanelPåmelding.Show()
-        PanelPåmelding.BringToFront()
-        LoggPåansattToolStripMenuItem.Visible = True
-        LoggAvToolStripMenuItem.Visible = False
+        loggAvAnsatt()
     End Sub
 
-    'Logg av ansatt
+    'Filmeny - Logg av ansatt
     Private Sub LoggAvToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoggAvToolStripMenuItem.Click
+        loggAvAnsatt()
+    End Sub
+
+    'Sub for å loogge av ansatt
+    Private Sub loggAvAnsatt()
         Label23.Text = ""
         PanelGiver.Hide()
         PanelAnsatt.Hide()
@@ -325,15 +329,14 @@ Public Class Blodbane
         LoggAvToolStripMenuItem.Visible = False
     End Sub
 
-    'Blodgiversøk
+    'Blodgiversøk knapp
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BttnSøkGiver.Click
         Me.Cursor = Cursors.WaitCursor
         Dim personnummer As String = TextBox19.Text
         Dim status As String = TextBox20.Text
         Dim statuskode As Integer
         Dim blodtype As String = ComboBox5.Text
-        Dim rad As DataRow
-        Dim resPnr, resFnavn, resEnavn, resStatus, resKode As String
+        bgSøkParameter = ""
         If status = "" Then
             statuskode = 0
         Else
@@ -345,9 +348,28 @@ Public Class Blodbane
             MsgBox("Feil i søkeparametrene")
             Exit Sub
         End If
-        søk(personnummer, statuskode, blodtype)
-        ListBox2.Items.Clear()
+        If (personnummer <> "") And (statuskode = 0) And (blodtype = "") Then
+            bgSøkParameter = $" bl.fødselsnummer = '{personnummer}'"
+        ElseIf (statuskode > 0) And (personnummer = "") And (blodtype = "") Then
+            bgSøkParameter = $" br.statuskode = '{statuskode}'"
+        ElseIf (blodtype <> "") And (statuskode = 0) And (personnummer = "") Then
+            bgSøkParameter = $" bl.blodtype = '{blodtype}'"
+        ElseIf (blodtype <> "") And (statuskode > 0) And (personnummer = "") Then
+            bgSøkParameter = $" bl.blodtype = '{blodtype}' and br.statuskode = '{statuskode}'"
+        ElseIf (personnummer <> "") And (statuskode > 0) And (blodtype <> "") Then
+            bgSøkParameter = $" bl.blodtype = '{blodtype}' and br.statuskde = '{statuskode}' and bl.fødselsnummer = '{personnummer}'"
+        End If
+        bgSøk(bgSøkParameter)
         Me.Cursor = Cursors.Default
+        giverSøkTreff()
+    End Sub
+
+    'Vis treff av blodgiversøk i listebox
+    Private Sub giverSøkTreff()
+        Dim resPnr, resFnavn, resEnavn, resStatus, resKode As String
+        Dim rad As DataRow
+
+        ListBox2.Items.Clear()
         For Each rad In giversøk.Rows
             resPnr = rad("fodselsnummer")
             resFnavn = rad("fornavn")
@@ -361,8 +383,8 @@ Public Class Blodbane
         End If
     End Sub
 
-    'SQL - blodgiversøk basert på 3 parameter
-    Private Sub søk(ByVal pnr As String, ByVal status As Integer, ByVal blodtype As String)
+    'SQL - søk frem blodgiver og egenerklæring
+    Private Sub bgSøk(ByVal streng As String)
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
         giversøk.Clear()
@@ -370,18 +392,7 @@ Public Class Blodbane
         Try
             tilkobling.Open()
             sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE"
-            If (pnr <> "") And (status = 0) And (blodtype = "") Then
-                sqlStreng = sqlStreng & $" bl.fødselsnummer = '{pnr}'"
-            ElseIf (status > 0) And (pnr = "") And (blodtype = "") Then
-                sqlStreng = sqlStreng & $" br.statuskode = '{status}'"
-            ElseIf (blodtype <> "") And (status = 0) And (pnr = "") Then
-                sqlStreng = sqlStreng & $" bl.blodtype = '{blodtype}'"
-            ElseIf (blodtype <> "") And (status > 0) And (pnr = "") Then
-                sqlStreng = sqlStreng & $" bl.blodtype = '{blodtype}' and br.statuskode = '{status}'"
-            ElseIf (pnr <> "") And (status > 0) And (blodtype <> "") Then
-                sqlStreng = sqlStreng & $" bl.blodtype = '{blodtype}' and br.statuskde = '{status}' and bl.fødselsnummer = '{pnr}'"
-            End If
-            Dim sqlSpørring As New MySqlCommand($"{sqlStreng}", tilkobling)
+            Dim sqlSpørring As New MySqlCommand($"{sqlStreng}{streng}", tilkobling)
             da.SelectCommand = sqlSpørring
             da.Fill(giversøk)
 
@@ -429,6 +440,11 @@ Public Class Blodbane
 
     'Presenter valgt person i blodgiversøk
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        visBG()
+    End Sub
+
+    'Vis blodgiverdata til ansatt
+    Private Sub visBG()
         Dim index, i As Integer
         Dim rad As DataRow
         Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar, erklaringLege As String
@@ -461,7 +477,8 @@ Public Class Blodbane
                 If rad("datotidbg") > sistErklæring Then
                     sistErklæring = rad("datotidbg")
                     jasvar = rad("skjema")
-                    egenerklærigID = rad("id")
+                    egenerklæringID = rad("id")
+                    presentertGiver = rad("bgepost")
                     If Not IsDBNull(rad("ansattepost")) Then
                         erklaringLege = rad("ansattepost")
                     Else
@@ -794,12 +811,66 @@ Public Class Blodbane
             time_DateTime = Date.ParseExact(LBxLedigeTimer.SelectedItem, "H:mm", provider)
         Catch ex As Exception
             MsgBox(ex.Message)
-            End Try
-            nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
+        End Try
+        nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
                                time_DateTime.Hour, 0, 0)
 
-            GpBxEndreInnkalling.Visible = False
-            TxtNesteInnkalling.Text = nyDato
+        GpBxEndreInnkalling.Visible = False
+        TxtNesteInnkalling.Text = nyDato
+
+    End Sub
+
+    'Registrer gitt blod
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim ansatt, SettInnSpørring, SøkSpørring, timeID, produktID, satusID As String
+        Dim bPlater, bLegemer, bPlasma, i As Integer
+        Dim timedato As Date
+        Dim feil As Boolean
+        Dim antallProdukt(2) As Integer
+        Dim tabell As New DataTable
+        Dim da As New MySqlDataAdapter
+        ansatt = ComboBox3.Text
+        bPlater = NumericUpDown1.Value
+        bPlasma = NumericUpDown2.Value
+        bLegemer = NumericUpDown3.Value
+        antallProdukt(1) = bPlater : antallProdukt(2) = bPlasma : antallProdukt(0) = bLegemer
+        If ansatt = "" Then
+            MsgBox("Registrer hvem som tappet blodet")
+            Exit Sub
+        End If
+        SøkSpørring = $"SELECT * FROM timeavtale t INNER JOIN blodgiver b ON t.bgepost = b.epost WHERE t.epost = '{presentertGiver}' ORDER BY datotid DESC"
+        MsgBox(SøkSpørring)
+        Try
+            tilkobling.Open()
+            Dim sqlSpørring As New MySqlCommand($"{SøkSpørring}", tilkobling)
+            da.SelectCommand = sqlSpørring
+            da.Fill(tabell)
+            i = 0
+            For Each rad In tabell.Rows
+                If rad("datotid") = Today Then
+                    timedato = Today
+                    timeID = rad("timeid")
+                    feil = False
+                    Exit For
+                Else
+                    feil = True
+                End If
+                i = i + 1
+            Next
+            If feil = False Then
+                i = 1
+                For i = 1 To 3
+                    SettInnSpørring = $"INSERT INTO blodprodukt (timeid, produkttypeid, statusid, antall) VALUES ({timeID}, {i}, 1, {antallProdukt(i - 0)} )"
+                    MsgBox(SettInnSpørring)
+                    Dim sqlSpørring2 As New MySqlCommand($"{SettInnSpørring}", tilkobling)
+                    sqlSpørring2.ExecuteNonQuery()
+                Next
+            End If
+            tilkobling.Close()
+        Catch ex As Exception
+            tilkobling.Close()
+            MsgBox("Feil")
+        End Try
 
     End Sub
 
@@ -833,9 +904,24 @@ Public Class Blodbane
 
     'Lagre intervju og eventuelle endringer i blodgiver
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim epost, adresse, preferanse, merknad, kommentar, spørring As String
-        Dim tlf1, tlf2, postnr, status As Integer
+        Dim epost, adresse, preferanse, merknad, kommentar, spørring, spørring2 As String
+        Dim tlf1, tlf2, postnr, status, i, svar As Integer
         Dim da As New MySqlDataAdapter
+
+        'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
+        If RadioButton2.Checked = True Then
+            svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
+            If svar = 7 Then
+                Exit Sub
+            End If
+        ElseIf RadioButton1.Checked = True Then
+            svar = MsgBox("Er du sikker på at du vil godkjenne giveren?", MsgBoxStyle.YesNo)
+            If svar = 7 Then
+                Exit Sub
+            End If
+        End If
+
+        i = ListBox2.SelectedIndex
         epost = TextBox27.Text
         tlf1 = TextBox26.Text
         tlf2 = TextBox29.Text
@@ -845,17 +931,22 @@ Public Class Blodbane
         preferanse = RichTextBox4.Text
         merknad = RichTextBox2.Text
         kommentar = RichTextBox3.Text
-        spørring = $"UPDATE egenerklaering SET ansattepost= '{påloggetAepost}', datotidansatt= '{Now.ToString("yyyy.MM.dd HH:mm.ss")}', kommentar= '{kommentar}' WHERE id= '{egenerklærigID}'"
+        spørring = $"UPDATE egenerklaering SET ansattepost= '{påloggetAepost}', datotidansatt= '{Now.ToString("yyyy.MM.dd HH:mm.ss")}', kommentar= '{kommentar}' WHERE id= '{egenerklæringID}'"
+        spørring2 = $"UPDATE bruker SET epost= '{epost}', telefon1= '{tlf1}', telefon2= '{tlf2}', adresse= '{adresse}', postnr= '{postnr}', statuskode= '{status}' WHERE epost= '{presentertGiver}'"
         Try
             tilkobling.Open()
-            MsgBox(spørring)
-            Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
-            sqlSpørring.ExecuteNonQuery()
+            If GroupBoxIntervju.Visible = True Then
+                Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
+                sqlSpørring.ExecuteNonQuery()
+            End If
+
+            Dim sqlSpørring2 As New MySqlCommand($"{spørring2}", tilkobling)
+            sqlSpørring2.ExecuteNonQuery()
             tilkobling.Close()
         Catch
             MsgBox("Feil")
         End Try
-
+        bgSøk(bgSøkParameter)
+        visBG()
     End Sub
-
 End Class
