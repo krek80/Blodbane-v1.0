@@ -661,8 +661,11 @@ Public Class Blodbane
 
     'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
-        LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
-        hentLedigeTimer(DateTimePickerNyTime.Value)
+        MsgBox($"Antall dager: {(DateTimePickerNyTime.Value - CDate(txtPersDataSisteUnders.Text)).TotalDays}.")
+        If (DateTimePickerNyTime.Value - CDate(txtPersDataSisteUnders.Text)).TotalDays < 90 Then
+            LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
+            hentLedigeTimer(DateTimePickerNyTime.Value)
+        End If
     End Sub
 
     'Setter rett poststed ved siden av postnummeret i fanen Personinfo for blodgiveren
