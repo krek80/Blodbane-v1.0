@@ -788,19 +788,30 @@ Public Class Blodbane
     'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
     Private Sub BtnBekreftEndretTime_Click(sender As Object, e As EventArgs) Handles BtnBekreftEndretTime.Click
 
-        Dim nyDato, time_DateTime As DateTime
+        Dim nyDato, gmlDato, time_DateTime As DateTime
+        Dim interntabell As New DataTable
         Try
             Dim provider As CultureInfo = CultureInfo.InvariantCulture
             time_DateTime = Date.ParseExact(LBxLedigeTimer.SelectedItem, "H:mm", provider)
         Catch ex As Exception
             MsgBox(ex.Message)
-            End Try
-            nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
+        End Try
+
+        nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
                                time_DateTime.Hour, 0, 0)
 
-            GpBxEndreInnkalling.Visible = False
-            TxtNesteInnkalling.Text = nyDato
-
+        gmlDato = CDate(TxtNesteInnkalling.Text)
+        tilkobling.Open()
+        Dim spoerring As String = "UPDATE timeavtale SET datotid = @newDate WHERE datotid =@newDate2"
+        Dim sql1 As New MySqlCommand(spoerring, tilkobling)
+        sql1.Parameters.Add("newDate", MySqlDbType.DateTime).Value = nyDato
+        sql1.Parameters.Add("newDate2", MySqlDbType.DateTime).Value = gmlDato
+        Dim da1 As New MySqlDataAdapter
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell)
+        tilkobling.Close()
+        GpBxEndreInnkalling.Visible = False
+        TxtNesteInnkalling.Text = nyDato
     End Sub
 
     'Sjekker om valgt dato er fridag
