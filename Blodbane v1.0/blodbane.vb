@@ -68,7 +68,7 @@ Public Class Blodbane
         pålogging.Show()
     End Sub
 
-    'Logg på blodgiver og setter opp personinfo i fanen Personinformasjon
+    'Logger på blodgiver og setter opp personinfo i fanen Personinformasjon
     Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
         tilkobling.Open()
         Dim sql As New MySqlCommand("SELECT * FROM bruker WHERE epost = @epostInn AND passord = @passordInn", tilkobling)
@@ -610,9 +610,9 @@ Public Class Blodbane
         End If
         If TxtNesteInnkalling.Text <> "" Then
             DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
+            hentLedigeTimer(DateTimePickerNyTime.Value)
         End If
         BtnBekreftEndretTime.Enabled = False
-        hentLedigeTimer(DateTimePickerNyTime.Value)
     End Sub
 
     'Henter ledige timer for valgt dato
@@ -661,12 +661,119 @@ Public Class Blodbane
 
     'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
-        MsgBox($"Antall dager: {(DateTimePickerNyTime.Value - CDate(txtPersDataSisteUnders.Text)).TotalDays}.")
         If (DateTimePickerNyTime.Value - CDate(txtPersDataSisteUnders.Text)).TotalDays < 90 Then
-            LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
-            hentLedigeTimer(DateTimePickerNyTime.Value)
+            MsgBox("Det må være minst 90 dager siden siste blodtapping. Velg en ny dato.", MsgBoxStyle.Critical)
+        Else
+            If Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DateTimePickerNyTime.Value) Then
+                MsgBox($"Ukedagnr: {Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday)}, Fridag: {fridag(DateTimePickerNyTime.Value)}.")
+                MsgBox("Blodbanken er stengt denne dagen. Velg en en ny dag.", MsgBoxStyle.Critical)
+            Else
+                LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
+                hentLedigeTimer(DateTimePickerNyTime.Value)
+            End If
+
         End If
     End Sub
+
+    'Fjerner ValueChanged-eventet når datovelgeren droppes ned
+    Private Sub DateTimePickerNyTime_DropDown(ByVal sender As Object, ByVal e As EventArgs) Handles DateTimePickerNyTime.DropDown
+        RemoveHandler DateTimePickerNyTime.ValueChanged, AddressOf DateTimePickerNyTime_ValueChanged
+    End Sub
+
+    'Slår på ValueChanged-eventet når datovelgeren rulles opp når dato velges, i tillegg til å kalle ValueChange-prosedyren manuelt
+    Private Sub DateTimePickerNyTime_CloseUp(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePickerNyTime.CloseUp
+        AddHandler DateTimePickerNyTime.ValueChanged, AddressOf DateTimePickerNyTime_ValueChanged
+        Call DateTimePickerNyTime_ValueChanged(sender, EventArgs.Empty)
+    End Sub
+
+    'Funksjon som regner ut datoen til 1. påskedag
+    Public Shared Function GetEasterDate(ByVal Year As Integer) As Date
+
+        Dim a As Integer
+        Dim b As Integer
+        Dim c As Integer
+        Dim d As Integer
+        Dim e As Integer
+        Dim f As Integer
+        Dim g As Integer
+        Dim h As Integer
+        Dim i As Integer
+        Dim k As Integer
+        Dim l As Integer
+        Dim m As Integer
+        Dim n As Integer
+        Dim p As Integer
+
+        If Year < 1583 Then
+
+            MsgBox("Årstallet er feil.")
+            Return Nothing
+        Else
+
+            ' Step 1: Divide the year by 19 and store the
+            ' remainder in variable A.  Example: If the year
+            ' is 2000, then A is initialized to 5.
+
+            a = Year Mod 19
+
+            ' Step 2: Divide the year by 100.  Store the integer
+            ' result in B and the remainder in C.
+
+            b = Year \ 100
+            c = Year Mod 100
+
+            ' Step 3: Divide B (calculated above).  Store the
+            ' integer result in D and the remainder in E.
+
+            d = b \ 4
+            e = b Mod 4
+
+            ' Step 4: Divide (b+8)/25 and store the integer
+            ' portion of the result in F.
+
+            f = (b + 8) \ 25
+
+            ' Step 5: Divide (b-f+1)/3 and store the integer
+            ' portion of the result in G.
+
+            g = (b - f + 1) \ 3
+
+            ' Step 6: Divide (19a+b-d-g+15)/30 and store the
+            ' remainder of the result in H.
+
+            h = (19 * a + b - d - g + 15) Mod 30
+
+            ' Step 7: Divide C by 4.  Store the integer result
+            ' in I and the remainder in K.
+
+            i = c \ 4
+            k = c Mod 4
+
+            ' Step 8: Divide (32+2e+2i-h-k) by 7.  Store the
+            ' remainder of the result in L.
+
+            l = (32 + 2 * e + 2 * i - h - k) Mod 7
+
+            ' Step 9: Divide (a + 11h + 22l) by 451 and
+            ' store the integer portion of the result in M.
+
+            m = (a + 11 * h + 22 * l) \ 451
+
+            ' Step 10: Divide (h + l - 7m + 114) by 31.  Store
+            ' the integer portion of the result in N and the
+            ' remainder in P.
+
+            n = (h + l - 7 * m + 114) \ 31
+            p = (h + l - 7 * m + 114) Mod 31
+
+            ' At this point p+1 is the day on which Easter falls.
+            ' n is 3 for March or 4 for April.
+
+            Return DateSerial(Year, n, p + 1)
+
+        End If
+
+    End Function
 
     'Setter rett poststed ved siden av postnummeret i fanen Personinfo for blodgiveren
     Private Sub txtPersDataPostnr_TextChanged(sender As Object, e As EventArgs) Handles txtPersDataPostnr.TextChanged
@@ -675,28 +782,54 @@ Public Class Blodbane
 
     'Slår på knappen for å bekrefte nytt tidspunkt for neste time.
     Private Sub LBxLedigeTimer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LBxLedigeTimer.SelectedIndexChanged
-        Dim valgtTime As String = LBxLedigeTimer.SelectedItem
         BtnBekreftEndretTime.Enabled = True
-        MsgBox($"Valgt time: {valgtTime}.")
     End Sub
 
     'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
     Private Sub BtnBekreftEndretTime_Click(sender As Object, e As EventArgs) Handles BtnBekreftEndretTime.Click
 
         Dim nyDato, time_DateTime As DateTime
-
         Try
             Dim provider As CultureInfo = CultureInfo.InvariantCulture
             time_DateTime = Date.ParseExact(LBxLedigeTimer.SelectedItem, "H:mm", provider)
         Catch ex As Exception
             MsgBox(ex.Message)
-        End Try
-        nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
-                           time_DateTime.Hour, 0, 0)
+            End Try
+            nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
+                               time_DateTime.Hour, 0, 0)
 
-        GpBxEndreInnkalling.Visible = False
-        TxtNesteInnkalling.Text = nyDato
+            GpBxEndreInnkalling.Visible = False
+            TxtNesteInnkalling.Text = nyDato
+
     End Sub
+
+    'Sjekker om valgt dato er fridag
+    Private Function fridag(ByVal dato As Date) As Boolean
+        Dim fridagtabell As New Hashtable()
+        Dim aaret As Integer = dato.Year
+        Dim førstepåskedag As Date = GetEasterDate(aaret)
+        fridagtabell.Add("1. nyttårsdag", DateSerial(aaret, 1, 1))
+        fridagtabell.Add("Skjærtorsdag", førstepåskedag.AddDays(-3))
+        fridagtabell.Add("Langfredag", førstepåskedag.AddDays(-2))
+        fridagtabell.Add("1. påskedag", førstepåskedag)
+        fridagtabell.Add("2. påskedag", førstepåskedag.AddDays(1))
+        fridagtabell.Add("Kristi Himmelfartsdag", førstepåskedag.AddDays(39))
+        fridagtabell.Add("1. pinsedag", førstepåskedag.AddDays(49))
+        fridagtabell.Add("2. pinsedag", førstepåskedag.AddDays(50))
+        fridagtabell.Add("1. mai", DateSerial(aaret, 5, 1))
+        fridagtabell.Add("17. mai", DateSerial(aaret, 5, 17))
+        fridagtabell.Add("Julekvelden", DateSerial(aaret, 12, 24))
+        fridagtabell.Add("1. juledag", DateSerial(aaret, 12, 25))
+        fridagtabell.Add("2. juledag", DateSerial(aaret, 12, 26))
+        fridagtabell.Add("Nyttårskvelden", DateSerial(aaret, 12, 31))
+
+        For Each nokkel In fridagtabell.Keys
+            If DateSerial(aaret, dato.Month, dato.Day) = fridagtabell(nokkel) Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
 
     'Lagre intervju og eventuelle endringer i blodgiver
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
