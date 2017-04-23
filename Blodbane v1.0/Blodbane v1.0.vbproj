@@ -81,6 +81,12 @@
       <DependentUpon>blodbane.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Egenerlkaering.designer.vb">
+      <DependentUpon>Egenerlkaering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Egenerlkaering.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="blodbane.resx">
       <DependentUpon>blodbane.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Egenerlkaering.resx">
+      <DependentUpon>Egenerlkaering.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
