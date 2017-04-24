@@ -63,7 +63,7 @@ Public Class Blodbane
         Next
 
         'Henter ned spørsmål til egenerklæring
-        Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringssporsmaal", tilkobling)
+        Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
         da.SelectCommand = sqlSpørring4
         da.Fill(spørsmål)
         For Each rad In spørsmål.Rows
@@ -917,12 +917,12 @@ Public Class Blodbane
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
         'Funksjon: lagrer svar og blar til neste spørsmål 
         For i = nr To sisteindeks - 1
-            spoersmaal(i) = spoersmaal(i + 1)
-            Label1.Text = spoersmaal(i)
+            Erklæringspørsmål(i) = Erklæringspørsmål(i + 1)
+            Label1.Text = Erklæringspørsmål(i)
 
 
             'oppdaterer spørsmåsteller
-            Label2.Text = i & " av 60 spørsmål er besvart"
+            Label26.Text = i & " av 60 spørsmål er besvart"
             'Registrere eventuelt jasvar
             If rdbtnJa.Checked Then
                 Jasvar = Jasvar & ", " & i
@@ -947,7 +947,7 @@ Public Class Blodbane
         'Funksjon: blar tilbake i spørsmålene, så lenge man ikke har kommet til første spørsmål
         If i > 0 Then
             i = i - 1
-            Label1.Text = spoersmaal(i)
+            Label1.Text = Erklæringspørsmål(i)
         Else
             MsgBox("Ingen flere spørsmål.")
         End If
