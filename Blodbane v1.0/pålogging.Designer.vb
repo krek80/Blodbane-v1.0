@@ -52,6 +52,7 @@ Partial Class pålogging
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(125, 20)
         Me.TextBox2.TabIndex = 2
+        Me.TextBox2.UseSystemPasswordChar = True
         '
         'Label1
         '
@@ -83,6 +84,7 @@ Partial Class pålogging
         '
         'pålogging
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 237)
