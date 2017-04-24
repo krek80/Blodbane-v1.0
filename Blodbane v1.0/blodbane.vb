@@ -893,6 +893,10 @@ Public Class Blodbane
         End Try
     End Sub
 
+    Private Sub TabPage5_Click(sender As Object, e As EventArgs) Handles TabPage5.Click
+
+    End Sub
+
     'Sjekker om valgt dato er fridag
     Private Function fridag(ByVal dato As Date) As Boolean
         Dim fridagtabell As New Hashtable()

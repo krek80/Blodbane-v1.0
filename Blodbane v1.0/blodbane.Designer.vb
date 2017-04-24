@@ -213,6 +213,13 @@ Partial Class Blodbane
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblSpml = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.btnNeste = New System.Windows.Forms.Button()
+        Me.rdbtnJa = New System.Windows.Forms.RadioButton()
+        Me.btnForrige = New System.Windows.Forms.Button()
+        Me.rdbtnNei = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -243,6 +250,7 @@ Partial Class Blodbane
         Me.GroupBox8.SuspendLayout()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -532,6 +540,7 @@ Partial Class Blodbane
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.GroupBox1)
         Me.TabPage5.Controls.Add(Me.RichTextBox1)
         resources.ApplyResources(Me.TabPage5, "TabPage5")
         Me.TabPage5.Name = "TabPage5"
@@ -1411,15 +1420,64 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lblSpml)
+        Me.GroupBox1.Controls.Add(Me.Label26)
+        Me.GroupBox1.Controls.Add(Me.btnNeste)
+        Me.GroupBox1.Controls.Add(Me.rdbtnJa)
+        Me.GroupBox1.Controls.Add(Me.btnForrige)
+        Me.GroupBox1.Controls.Add(Me.rdbtnNei)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.TabStop = False
+        '
+        'lblSpml
+        '
+        resources.ApplyResources(Me.lblSpml, "lblSpml")
+        Me.lblSpml.Name = "lblSpml"
+        '
+        'Label26
+        '
+        resources.ApplyResources(Me.Label26, "Label26")
+        Me.Label26.Name = "Label26"
+        '
+        'btnNeste
+        '
+        resources.ApplyResources(Me.btnNeste, "btnNeste")
+        Me.btnNeste.Name = "btnNeste"
+        Me.btnNeste.UseVisualStyleBackColor = True
+        '
+        'rdbtnJa
+        '
+        resources.ApplyResources(Me.rdbtnJa, "rdbtnJa")
+        Me.rdbtnJa.Name = "rdbtnJa"
+        Me.rdbtnJa.TabStop = True
+        Me.rdbtnJa.UseVisualStyleBackColor = True
+        '
+        'btnForrige
+        '
+        resources.ApplyResources(Me.btnForrige, "btnForrige")
+        Me.btnForrige.Name = "btnForrige"
+        Me.btnForrige.UseVisualStyleBackColor = True
+        '
+        'rdbtnNei
+        '
+        Me.rdbtnNei.AutoCheck = False
+        resources.ApplyResources(Me.rdbtnNei, "rdbtnNei")
+        Me.rdbtnNei.Name = "rdbtnNei"
+        Me.rdbtnNei.TabStop = True
+        Me.rdbtnNei.UseVisualStyleBackColor = True
+        '
         'Blodbane
         '
         Me.AcceptButton = Me.BtnRegBlodgiver
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelPåmelding)
+        Me.Controls.Add(Me.PanelAnsatt)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
@@ -1466,6 +1524,8 @@ Partial Class Blodbane
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1644,4 +1704,11 @@ Partial Class Blodbane
     Friend WithEvents Label22 As Label
     Friend WithEvents Label144 As Label
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblSpml As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents btnNeste As Button
+    Friend WithEvents rdbtnJa As RadioButton
+    Friend WithEvents btnForrige As Button
+    Friend WithEvents rdbtnNei As RadioButton
 End Class
