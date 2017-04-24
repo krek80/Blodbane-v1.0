@@ -919,7 +919,7 @@ Public Class Blodbane
         lblSpml.Text = spmText
 
         'oppdaterer spørsmåsteller
-        Label2.Text = SPMnr & " av 60 spørsmål er besvart"
+        Label26.Text = SPMnr & " av 60 spørsmål er besvart"
         'Registrere eventuelt jasvar
         If rdbtnJa.Checked Then
             jasvar = jasvar & ", " & SPMnr
@@ -936,16 +936,7 @@ Public Class Blodbane
 
     End Sub
 
-    Private Sub btnForrige_Click(sender As Object, e As EventArgs) Handles btnForrige.Click
-        'Funksjon: blar tilbake i spørsmålene, så lenge man ikke har kommet til første spørsmål
-        If SPMnr > 0 Then
-            SPMnr = SPMnr - 1
-            Label1.Text = Erklæringspørsmål(SPMnr)
-        Else
-            MsgBox("Ingen flere spørsmål.")
-        End If
 
-    End Sub
 
     'Sjekker om valgt dato er fridag
     Private Function fridag(ByVal dato As Date) As Boolean
