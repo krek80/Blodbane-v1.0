@@ -11,7 +11,7 @@ Public Class Blodbane
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
     Dim Erklæringspørsmål As New Hashtable
-    Public påloggetAnsatt, påloggetAepost As String
+    Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID As Integer
     Dim presentertGiver, bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
@@ -179,7 +179,7 @@ Public Class Blodbane
             MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
         End If
         tilkobling.Close()
-
+        påloggetBgiver = eposten
     End Sub
 
     'Registrer ny blodgiver
@@ -907,36 +907,63 @@ Public Class Blodbane
     End Sub
 
     Dim SPMnr As Integer = 1
-    Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
-        'Funksjon: lagrer svar og blar til neste spørsmål 
+    Dim erklæringSvar(60) As Integer
+    'Forige spørsmål i erklæring
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim spmText As String
 
+        If SPMnr > 1 Then
+            SPMnr = SPMnr - 1
+            spmText = Erklæringspørsmål($"{SPMnr}")
+            lblSpml.Text = spmText
+            Label26.Text = $"{SPMnr} av 60 spørsmål"
+        Else
+            SPMnr = SPMnr
+            MsgBox("Dette var siste spørsmål")
+        End If
+        RadioButton3.Checked = False
+        RadioButton4.Checked = False
+    End Sub
+
+    'Send inn egenerklæring
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Elisabeth:
+        'Nå ligger svarene i ''erklæringSvar(60)'', jasvar er lagret som ''1''
+        'i denne suben må du lage en  for-løkke som ser etter 1ere i erklæringSvar og som
+        'legger det den finner i en streng.
+
+        'feks dersom man har svart ja bare på spm 16 vil dataene i erklæringSvar ligge sllik:
+        'erklæringSvar(15) = 0 : erklæringSvar(16) = 1 : erklæringSvar(17) = 0 osv...
+        'Så da må løkken lagre tallet fra ''SPMnr'' i en streng for de tilfellene der
+        'erklæringSvar(SPMnr) = 1
+    End Sub
+
+    'Neste spørsmål i erklæring
+    Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
         Dim sisteindex As Integer
-        Dim spmText, jasvar As String
+        Dim spmText As String
+
+        If (RadioButton3.Checked = False) And (RadioButton4.Checked = False) Then
+            MsgBox("Du må svare før du går videre")
+            Exit Sub
+        End If
+
         sisteindex = Erklæringspørsmål.Count
         SPMnr = SPMnr + 1
         spmText = Erklæringspørsmål($"{SPMnr}")
 
         lblSpml.Text = spmText
+        Label26.Text = $"{SPMnr} av 60 spørsmål"
 
-        'oppdaterer spørsmåsteller
-        Label26.Text = SPMnr & " av 60 spørsmål er besvart"
-        'Registrere eventuelt jasvar
-        If rdbtnJa.Checked Then
-            jasvar = jasvar & ", " & SPMnr
+        'Registrere svar
+        If RadioButton3.Checked Then
+            erklæringSvar(SPMnr - 1) = 1
+        Else
+            erklæringSvar(SPMnr - 1) = 0
         End If
-
-        'Lagre jasvar i tabellen egenerklæring i databasen:
-        If SPMnr = sisteindex - 1 Then
-            tilkobling.Open()
-
-            Dim sporring As String
-            sporring = "INSERT INTO egenerklaering (skjema) VALUES (Jasvar)"
-
-        End If
-
+        RadioButton3.Checked = False
+        RadioButton4.Checked = False
     End Sub
-
-
 
     'Sjekker om valgt dato er fridag
     Private Function fridag(ByVal dato As Date) As Boolean
