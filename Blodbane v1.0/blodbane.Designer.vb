@@ -24,9 +24,22 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
+        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
+        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
+        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
+        Dim DataPoint5 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim DataPoint6 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
+        Dim DataPoint7 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
+        Dim DataPoint8 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint9 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
+        Dim DataPoint10 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,7 +59,6 @@ Partial Class Blodbane
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtBgInn_fornavn = New System.Windows.Forms.TextBox()
         Me.txtBgInn_poststed = New System.Windows.Forms.TextBox()
-        Me.txtBgInn_etternavn = New System.Windows.Forms.TextBox()
         Me.txtBgInn_personnr = New System.Windows.Forms.TextBox()
         Me.txtBgInn_adresse = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -61,6 +73,7 @@ Partial Class Blodbane
         Me.Label113 = New System.Windows.Forms.Label()
         Me.Label114 = New System.Windows.Forms.Label()
         Me.txtBgInn_tlfnr2 = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_etternavn = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtAInn_passord = New System.Windows.Forms.TextBox()
         Me.BttnLoggpåGiver = New System.Windows.Forms.Button()
@@ -197,6 +210,7 @@ Partial Class Blodbane
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
@@ -227,6 +241,7 @@ Partial Class Blodbane
         Me.GroupBox5.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -293,7 +308,6 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_fornavn, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_poststed, 2, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_etternavn, 1, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_personnr, 1, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_adresse, 1, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.Label8, 0, 8)
@@ -308,6 +322,7 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.Label113, 0, 10)
         Me.TableLayoutPanel2.Controls.Add(Me.Label114, 0, 7)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_tlfnr2, 1, 7)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_etternavn, 1, 2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
         'Label7
@@ -357,12 +372,6 @@ Partial Class Blodbane
         resources.ApplyResources(Me.txtBgInn_poststed, "txtBgInn_poststed")
         Me.txtBgInn_poststed.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.txtBgInn_poststed.Name = "txtBgInn_poststed"
-        '
-        'txtBgInn_etternavn
-        '
-        resources.ApplyResources(Me.txtBgInn_etternavn, "txtBgInn_etternavn")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_etternavn, 2)
-        Me.txtBgInn_etternavn.Name = "txtBgInn_etternavn"
         '
         'txtBgInn_personnr
         '
@@ -446,6 +455,12 @@ Partial Class Blodbane
         resources.ApplyResources(Me.txtBgInn_tlfnr2, "txtBgInn_tlfnr2")
         Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_tlfnr2, 2)
         Me.txtBgInn_tlfnr2.Name = "txtBgInn_tlfnr2"
+        '
+        'txtBgInn_etternavn
+        '
+        resources.ApplyResources(Me.txtBgInn_etternavn, "txtBgInn_etternavn")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_etternavn, 2)
+        Me.txtBgInn_etternavn.Name = "txtBgInn_etternavn"
         '
         'TableLayoutPanel3
         '
@@ -1333,24 +1348,60 @@ Partial Class Blodbane
         '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.Chart2)
         Me.GroupBox8.Controls.Add(Me.Chart1)
         resources.ApplyResources(Me.GroupBox8, "GroupBox8")
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.TabStop = False
         '
+        'Chart2
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend1)
+        resources.ApplyResources(Me.Chart2, "Chart2")
+        Me.Chart2.Name = "Chart2"
+        Me.Chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Blodplater"
+        DataPoint1.AxisLabel = "0+"
+        DataPoint1.Label = ""
+        DataPoint2.AxisLabel = "0-"
+        DataPoint2.LegendText = ""
+        DataPoint3.AxisLabel = "A+"
+        DataPoint4.AxisLabel = "A-"
+        DataPoint5.AxisLabel = "AB+"
+        DataPoint6.AxisLabel = "AB-"
+        DataPoint7.AxisLabel = "B+"
+        DataPoint8.AxisLabel = "B-"
+        Series1.Points.Add(DataPoint1)
+        Series1.Points.Add(DataPoint2)
+        Series1.Points.Add(DataPoint3)
+        Series1.Points.Add(DataPoint4)
+        Series1.Points.Add(DataPoint5)
+        Series1.Points.Add(DataPoint6)
+        Series1.Points.Add(DataPoint7)
+        Series1.Points.Add(DataPoint8)
+        Me.Chart2.Series.Add(Series1)
+        '
         'Chart1
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend3)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Me.Chart1.Cursor = System.Windows.Forms.Cursors.Default
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.Chart1.Series.Add(Series3)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Series2.Points.Add(DataPoint9)
+        Series2.Points.Add(DataPoint10)
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -1413,6 +1464,7 @@ Partial Class Blodbane
         Me.GroupBox5.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1591,4 +1643,5 @@ Partial Class Blodbane
     Friend WithEvents txtPersDataEpost As TextBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Label144 As Label
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
 End Class

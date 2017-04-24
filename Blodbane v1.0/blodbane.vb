@@ -603,7 +603,9 @@ Public Class Blodbane
 
     'Blodlager
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
+        Dim B_legemer, B_plater, B_plasma As Integer
         Me.Cursor = Cursors.WaitCursor
+        blodlager.Clear()
         Dim rad As DataRow
         Dim da As New MySqlDataAdapter
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost", tilkobling)
@@ -612,10 +614,23 @@ Public Class Blodbane
         Me.Cursor = Cursors.Default
 
         For Each rad In blodlager.Rows
-            MsgBox(rad("produkttypeid"))
+            If (rad("produkttypeid") = 1) And (rad("statusid") = 1) Then
+                B_legemer = B_legemer + (rad("antall"))
+            ElseIf (rad("produkttypeid") = 2) And (rad("statusid") = 1) Then
+                B_plater = B_plater + (rad("antall"))
+            ElseIf (rad("produkttypeid") = 3) And (rad("statusid") = 1) Then
+                B_plasma = B_plasma + (rad("antall"))
+            End If
         Next
-
         tilkobling.Close()
+
+        Chart1.Series.Clear()
+        MsgBox(B_plasma)
+        MsgBox(B_plater)
+        MsgBox(Chart1.Series.)
+        Chart1.Series(0).Points(0).YValues(0) = B_plasma
+        Chart2.Series(0).Points(1).YValues(0) = B_plater
+
     End Sub
 
     'Slår av og på visning av gruppeboksen med skjema for å endre avtalt time
@@ -822,7 +837,7 @@ Public Class Blodbane
 
     'Registrer gitt blod
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Dim ansatt, SettInnSpørring, SøkSpørring, timeID, produktID, satusID As String
+        Dim ansatt, SettInnSpørring, SøkSpørring, timeID As String
         Dim bPlater, bLegemer, bPlasma, i As Integer
         Dim timedato As Date
         Dim feil As Boolean
@@ -838,8 +853,7 @@ Public Class Blodbane
             MsgBox("Registrer hvem som tappet blodet")
             Exit Sub
         End If
-        SøkSpørring = $"SELECT * FROM timeavtale t INNER JOIN blodgiver b ON t.bgepost = b.epost WHERE t.epost = '{presentertGiver}' ORDER BY datotid DESC"
-        MsgBox(SøkSpørring)
+        SøkSpørring = $"SELECT * FROM timeavtale t INNER JOIN blodgiver b ON t.bgepost = b.epost WHERE t.bgepost = '{presentertGiver}' ORDER BY datotid DESC"
         Try
             tilkobling.Open()
             Dim sqlSpørring As New MySqlCommand($"{SøkSpørring}", tilkobling)
@@ -847,7 +861,8 @@ Public Class Blodbane
             da.Fill(tabell)
             i = 0
             For Each rad In tabell.Rows
-                If rad("datotid") = Today Then
+                timedato = rad("datotid")
+                If DateDiff(DateInterval.DayOfYear, timedato, Today) = 0 Then
                     timedato = Today
                     timeID = rad("timeid")
                     feil = False
@@ -860,18 +875,22 @@ Public Class Blodbane
             If feil = False Then
                 i = 1
                 For i = 1 To 3
-                    SettInnSpørring = $"INSERT INTO blodprodukt (timeid, produkttypeid, statusid, antall) VALUES ({timeID}, {i}, 1, {antallProdukt(i - 0)} )"
-                    MsgBox(SettInnSpørring)
+                    SettInnSpørring = $"INSERT INTO blodprodukt (timeid, produkttypeid, statusid, antall) VALUES ({timeID}, {i}, 1, {antallProdukt(i - 1)} )"
                     Dim sqlSpørring2 As New MySqlCommand($"{SettInnSpørring}", tilkobling)
                     sqlSpørring2.ExecuteNonQuery()
                 Next
+            Else
+                MsgBox("Denne personen har ikke gitt blod i dag")
             End If
             tilkobling.Close()
+            NumericUpDown1.Value = 0
+            NumericUpDown2.Value = 0
+            NumericUpDown3.Value = 0
+            MsgBox("Blodlager oppdatert")
         Catch ex As Exception
             tilkobling.Close()
             MsgBox("Feil")
         End Try
-
     End Sub
 
     'Sjekker om valgt dato er fridag
