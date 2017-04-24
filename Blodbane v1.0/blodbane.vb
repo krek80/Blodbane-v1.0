@@ -909,6 +909,51 @@ Public Class Blodbane
 
     End Sub
 
+    Private i As Integer
+    Private Jasvar As String
+    Private nr As Integer
+    Private sisteindeks As Integer
+
+    Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
+        'Funksjon: lagrer svar og blar til neste spørsmål 
+        For i = nr To sisteindeks - 1
+            spoersmaal(i) = spoersmaal(i + 1)
+            Label1.Text = spoersmaal(i)
+
+
+            'oppdaterer spørsmåsteller
+            Label2.Text = i & " av 60 spørsmål er besvart"
+            'Registrere eventuelt jasvar
+            If rdbtnJa.Checked Then
+                Jasvar = Jasvar & ", " & i
+            Else
+                Jasvar = Jasvar
+            End If
+
+
+        Next i
+        'Lagre jasvar i tabellen egenerklæring i databasen:
+        If i = sisteindeks - 1 Then
+            tilkobling.Open()
+
+            Dim sporring As String
+            sporring = "INSERT INTO egenerklaering (skjema) VALUES (Jasvar)"
+
+        End If
+
+    End Sub
+
+    Private Sub btnForrige_Click(sender As Object, e As EventArgs) Handles btnForrige.Click
+        'Funksjon: blar tilbake i spørsmålene, så lenge man ikke har kommet til første spørsmål
+        If i > 0 Then
+            i = i - 1
+            Label1.Text = spoersmaal(i)
+        Else
+            MsgBox("Ingen flere spørsmål.")
+        End If
+
+    End Sub
+
     'Sjekker om valgt dato er fridag
     Private Function fridag(ByVal dato As Date) As Boolean
         Dim fridagtabell As New Hashtable()
