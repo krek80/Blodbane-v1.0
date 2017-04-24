@@ -10,6 +10,7 @@ Public Class Blodbane
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
+    Dim Erklæringspørsmål As New Hashtable
     Public påloggetAnsatt, påloggetAepost As String
     Dim egenerklæringID As Integer
     Dim presentertGiver, bgSøkParameter As String
@@ -22,10 +23,11 @@ Public Class Blodbane
 
         'Henter statuskoder og legger i combobox(er)
         Dim statuser As New DataTable
+        Dim spørsmål As New DataTable
         Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
-        Dim statustekst, statuskode, psted, pnr As String
+        Dim statustekst, statuskode, psted, pnr, spmNR, spmTekst As String
         giversøk.Clear()
         tilkobling.Open()
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
@@ -59,6 +61,17 @@ Public Class Blodbane
         For Each rad In ansatt.Rows
             ComboBox3.Items.Add(rad("epost"))
         Next
+
+        'Henter ned spørsmål til egenerklæring
+        Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringssporsmaal", tilkobling)
+        da.SelectCommand = sqlSpørring4
+        da.Fill(spørsmål)
+        For Each rad In spørsmål.Rows
+            spmNR = rad("nr")
+            spmTekst = rad("spoersmaal")
+            Erklæringspørsmål.Add(spmNR, spmTekst)
+        Next
+
         tilkobling.Close()
     End Sub
 
@@ -627,7 +640,6 @@ Public Class Blodbane
         Chart1.Series.Clear()
         MsgBox(B_plasma)
         MsgBox(B_plater)
-        MsgBox(Chart1.Series.)
         Chart1.Series(0).Points(0).YValues(0) = B_plasma
         Chart2.Series(0).Points(1).YValues(0) = B_plater
 
