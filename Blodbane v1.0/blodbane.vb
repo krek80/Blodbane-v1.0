@@ -10,7 +10,6 @@ Public Class Blodbane
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
-    Dim bgPersonInfo As New Hashtable
     Public påloggetAnsatt, påloggetAepost As String
     Dim egenerklæringID As Integer
     Dim presentertGiver, bgSøkParameter As String
@@ -162,13 +161,6 @@ Public Class Blodbane
             txtPersDataTlf.Text = telefonen1
             txtPersDataTlf2.Text = telefonen2
             txtPersDataEpost.Text = eposten
-
-            bgPersonInfo.Add("adresse", adressen)
-            bgPersonInfo.Add("postnummer", postnummeret)
-            bgPersonInfo.Add("telefon1", telefonen1)
-            bgPersonInfo.Add("telefon2", telefonen2)
-            bgPersonInfo.Add("epost", eposten)
-
         Else
             MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
         End If
@@ -181,15 +173,7 @@ Public Class Blodbane
         Try
             tilkobling.Open()
             Dim spoerring As String = ""
-            If bgRegSkjemadata_OK(txtBgInn_fornavn.Text,
-                                  txtBgInn_etternavn.Text,
-                                  txtBgInn_personnr.Text,
-                                  txtBgInn_poststed.Text,
-                                  txtBgInn_tlfnr.Text,
-                                  txtBgInn_tlfnr2.Text,
-                                  txtBgInn_epost.Text,
-                                  txtBgInn_passord1.Text,
-                                  txtBgInn_passord2.Text) Then
+            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_poststed.Text, txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
 
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
@@ -229,15 +213,7 @@ Public Class Blodbane
     End Sub
 
     'Skjemavalidering
-    Private Function bgRegSkjemadata_OK(ByVal fornavnInn As String,
-                                        ByVal etternavnInn As String,
-                                        ByVal personnrInn As String,
-                                        ByVal poststedInn As String,
-                                        ByVal telefon1Inn As String,
-                                        ByVal telefon2Inn As String,
-                                        ByVal epostInn As String,
-                                        ByVal passord1Inn As String,
-                                        ByVal passord2Inn As String) As Boolean
+    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal poststedInn As String, ByVal telefon1Inn As String, ByVal telefon2Inn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
@@ -257,13 +233,8 @@ Public Class Blodbane
         da2.SelectCommand = sql2
         da2.Fill(interntabell2)
 
-        If fornavnInn = "" Or etternavnInn = "" Then
-            MsgBox("Fornavn og etternavn kan ikke være tomt.", MsgBoxStyle.Critical)
-            Return False
-        End If
-
-        If telefon1Inn = "" Then
-            MsgBox("Telefonfeltet må være utfylt.", MsgBoxStyle.Critical)
+        If txtBgInn_fornavn.Text = "" Or txtBgInn_etternavn.Text = "" Or txtBgInn_postnr.Text = "" Or txtBgInn_tlfnr.Text = "" Then
+            MsgBox("Alle felt må være utfylt unntatt gateadresse- og telefon 2-feltet må være utfylt.", MsgBoxStyle.Critical)
             Return False
         End If
 
@@ -307,7 +278,7 @@ Public Class Blodbane
             End If
         End If
 
-        If interntabell1.Rows.Count = 1 And CDate(fnrDato) <> Today Then
+        If interntabell1.Rows.Count = 1 Then
             MsgBox("Epostadressen finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
             Return False
         End If
@@ -322,7 +293,7 @@ Public Class Blodbane
             Return False
         End If
         If passord1Inn.Length < 6 Or passord1Inn.IndexOf(" ") <> -1 Then
-            MsgBox("Passordet må ha minst 6 tegn og ikke ha noen mellomrom. Prøv igjen!", MsgBoxStyle.Critical)
+            MsgBox("Passordet må ha minst 6 tegn og ingen mellomrom. Prøv igjen!", MsgBoxStyle.Critical)
             Return False
         End If
         Return True
