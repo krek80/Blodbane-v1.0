@@ -71,6 +71,7 @@ Public Class Blodbane
             spmTekst = rad("spoersmaal")
             Erklæringspørsmål.Add(spmNR, spmTekst)
         Next
+        lblSpml.Text = Erklæringspørsmål("1")
 
         tilkobling.Close()
     End Sub
@@ -905,35 +906,27 @@ Public Class Blodbane
         End Try
     End Sub
 
-    Private Sub TabPage5_Click(sender As Object, e As EventArgs) Handles TabPage5.Click
-
-    End Sub
-
-    Private i As Integer
-    Private Jasvar As String
-    Private nr As Integer
-    Private sisteindeks As Integer
-
+    Dim SPMnr As Integer = 1
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
         'Funksjon: lagrer svar og blar til neste spørsmål 
-        For i = nr To sisteindeks - 1
-            Erklæringspørsmål(i) = Erklæringspørsmål(i + 1)
-            Label1.Text = Erklæringspørsmål(i)
 
+        Dim sisteindex As Integer
+        Dim spmText, jasvar As String
+        sisteindex = Erklæringspørsmål.Count
+        SPMnr = SPMnr + 1
+        spmText = Erklæringspørsmål($"{SPMnr}")
 
-            'oppdaterer spørsmåsteller
-            Label26.Text = i & " av 60 spørsmål er besvart"
-            'Registrere eventuelt jasvar
-            If rdbtnJa.Checked Then
-                Jasvar = Jasvar & ", " & i
-            Else
-                Jasvar = Jasvar
-            End If
+        lblSpml.Text = spmText
 
+        'oppdaterer spørsmåsteller
+        Label2.Text = SPMnr & " av 60 spørsmål er besvart"
+        'Registrere eventuelt jasvar
+        If rdbtnJa.Checked Then
+            jasvar = jasvar & ", " & SPMnr
+        End If
 
-        Next i
         'Lagre jasvar i tabellen egenerklæring i databasen:
-        If i = sisteindeks - 1 Then
+        If SPMnr = sisteindex - 1 Then
             tilkobling.Open()
 
             Dim sporring As String
@@ -945,9 +938,9 @@ Public Class Blodbane
 
     Private Sub btnForrige_Click(sender As Object, e As EventArgs) Handles btnForrige.Click
         'Funksjon: blar tilbake i spørsmålene, så lenge man ikke har kommet til første spørsmål
-        If i > 0 Then
-            i = i - 1
-            Label1.Text = Erklæringspørsmål(i)
+        If SPMnr > 0 Then
+            SPMnr = SPMnr - 1
+            Label1.Text = Erklæringspørsmål(SPMnr)
         Else
             MsgBox("Ingen flere spørsmål.")
         End If
