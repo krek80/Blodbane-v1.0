@@ -110,6 +110,13 @@ Partial Class Blodbane
         Me.TxtNesteInnkalling = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.GpBxPersonData = New System.Windows.Forms.GroupBox()
+        Me.txtNyttPassordGjenta = New System.Windows.Forms.TextBox()
+        Me.lblNyttPassordGjenta = New System.Windows.Forms.Label()
+        Me.txtNyttPassord = New System.Windows.Forms.TextBox()
+        Me.lblNyttPassord = New System.Windows.Forms.Label()
+        Me.txtGmlPassord = New System.Windows.Forms.TextBox()
+        Me.lblGmlPassord = New System.Windows.Forms.Label()
+        Me.btnLagreNyttPassord = New System.Windows.Forms.Button()
         Me.Label143 = New System.Windows.Forms.Label()
         Me.Label142 = New System.Windows.Forms.Label()
         Me.txtPersDataPoststed = New System.Windows.Forms.TextBox()
@@ -221,13 +228,6 @@ Partial Class Blodbane
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnLagreNyttPassord = New System.Windows.Forms.Button()
-        Me.txtNyttPassordGjenta = New System.Windows.Forms.TextBox()
-        Me.lblNyttPassordGjenta = New System.Windows.Forms.Label()
-        Me.txtNyttPassord = New System.Windows.Forms.TextBox()
-        Me.lblNyttPassord = New System.Windows.Forms.Label()
-        Me.txtGmlPassord = New System.Windows.Forms.TextBox()
-        Me.lblGmlPassord = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -752,6 +752,42 @@ Partial Class Blodbane
         resources.ApplyResources(Me.GpBxPersonData, "GpBxPersonData")
         Me.GpBxPersonData.Name = "GpBxPersonData"
         Me.GpBxPersonData.TabStop = False
+        '
+        'txtNyttPassordGjenta
+        '
+        resources.ApplyResources(Me.txtNyttPassordGjenta, "txtNyttPassordGjenta")
+        Me.txtNyttPassordGjenta.Name = "txtNyttPassordGjenta"
+        '
+        'lblNyttPassordGjenta
+        '
+        resources.ApplyResources(Me.lblNyttPassordGjenta, "lblNyttPassordGjenta")
+        Me.lblNyttPassordGjenta.Name = "lblNyttPassordGjenta"
+        '
+        'txtNyttPassord
+        '
+        resources.ApplyResources(Me.txtNyttPassord, "txtNyttPassord")
+        Me.txtNyttPassord.Name = "txtNyttPassord"
+        '
+        'lblNyttPassord
+        '
+        resources.ApplyResources(Me.lblNyttPassord, "lblNyttPassord")
+        Me.lblNyttPassord.Name = "lblNyttPassord"
+        '
+        'txtGmlPassord
+        '
+        resources.ApplyResources(Me.txtGmlPassord, "txtGmlPassord")
+        Me.txtGmlPassord.Name = "txtGmlPassord"
+        '
+        'lblGmlPassord
+        '
+        resources.ApplyResources(Me.lblGmlPassord, "lblGmlPassord")
+        Me.lblGmlPassord.Name = "lblGmlPassord"
+        '
+        'btnLagreNyttPassord
+        '
+        resources.ApplyResources(Me.btnLagreNyttPassord, "btnLagreNyttPassord")
+        Me.btnLagreNyttPassord.Name = "btnLagreNyttPassord"
+        Me.btnLagreNyttPassord.UseVisualStyleBackColor = True
         '
         'Label143
         '
@@ -1490,51 +1526,15 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
-        'btnLagreNyttPassord
-        '
-        resources.ApplyResources(Me.btnLagreNyttPassord, "btnLagreNyttPassord")
-        Me.btnLagreNyttPassord.Name = "btnLagreNyttPassord"
-        Me.btnLagreNyttPassord.UseVisualStyleBackColor = True
-        '
-        'txtNyttPassordGjenta
-        '
-        resources.ApplyResources(Me.txtNyttPassordGjenta, "txtNyttPassordGjenta")
-        Me.txtNyttPassordGjenta.Name = "txtNyttPassordGjenta"
-        '
-        'lblNyttPassordGjenta
-        '
-        resources.ApplyResources(Me.lblNyttPassordGjenta, "lblNyttPassordGjenta")
-        Me.lblNyttPassordGjenta.Name = "lblNyttPassordGjenta"
-        '
-        'txtNyttPassord
-        '
-        resources.ApplyResources(Me.txtNyttPassord, "txtNyttPassord")
-        Me.txtNyttPassord.Name = "txtNyttPassord"
-        '
-        'lblNyttPassord
-        '
-        resources.ApplyResources(Me.lblNyttPassord, "lblNyttPassord")
-        Me.lblNyttPassord.Name = "lblNyttPassord"
-        '
-        'txtGmlPassord
-        '
-        resources.ApplyResources(Me.txtGmlPassord, "txtGmlPassord")
-        Me.txtGmlPassord.Name = "txtGmlPassord"
-        '
-        'lblGmlPassord
-        '
-        resources.ApplyResources(Me.lblGmlPassord, "lblGmlPassord")
-        Me.lblGmlPassord.Name = "lblGmlPassord"
-        '
         'Blodbane
         '
         Me.AcceptButton = Me.BtnRegBlodgiver
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelAnsatt)
+        Me.Controls.Add(Me.PanelGiver)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show

@@ -961,12 +961,13 @@ Public Class Blodbane
         'erklæringSvar(15) = 0 : erklæringSvar(16) = 1 : erklæringSvar(17) = 0 osv...
         'Så da må løkken lagre tallet fra ''SPMnr'' i en streng for de tilfellene der
         'erklæringSvar(SPMnr) = 1
-        Dim Jasvar As String = 0
+        Dim Jasvar As String
         For SPMnr = 0 To 60
             If erklæringSvar(SPMnr) = 1 Then
-                Jasvar = Jasvar & " : " & SPMnr
+                Jasvar = Jasvar & SPMnr & ","
             End If
         Next
+        MsgBox(Jasvar)
     End Sub
 
     'Neste spørsmål i erklæring
