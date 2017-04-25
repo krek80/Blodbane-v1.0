@@ -7,13 +7,13 @@ Public Class Blodbane
     Dim innkalling As New DataTable
     Dim blodlager As New DataTable
     Public ansatt As New DataTable
+    Dim Erklæringspørsmål As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
-    Dim Erklæringspørsmål As New Hashtable
     Dim blodgiverData As New Hashtable
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
-    Dim egenerklæringID As Integer
+    Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
     Dim presentertGiver, bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
 
@@ -24,7 +24,6 @@ Public Class Blodbane
 
         'Henter statuskoder og legger i combobox(er)
         Dim statuser As New DataTable
-        Dim spørsmål As New DataTable
         Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
@@ -66,13 +65,7 @@ Public Class Blodbane
         'Henter ned spørsmål til egenerklæring
         Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
         da.SelectCommand = sqlSpørring4
-        da.Fill(spørsmål)
-        For Each rad In spørsmål.Rows
-            spmNR = rad("nr")
-            spmTekst = rad("spoersmaal")
-            Erklæringspørsmål.Add(spmNR, spmTekst)
-        Next
-        lblSpml.Text = Erklæringspørsmål("1")
+        da.Fill(Erklæringspørsmål)
 
         tilkobling.Close()
     End Sub
@@ -928,17 +921,21 @@ Public Class Blodbane
         End Try
     End Sub
 
-    Dim SPMnr As Integer = 1
-    Dim erklæringSvar(60) As Integer
+    Private Sub TabPage5_Enter(sender As Object, e As EventArgs) Handles TabPage5.Enter
+        SPMnr = 1
+        lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
+        Label26.Text = "Spørsmål 1"
+    End Sub
+
     'Forige spørsmål i erklæring
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim spmText As String
 
         If SPMnr > 1 Then
             SPMnr = SPMnr - 1
-            spmText = Erklæringspørsmål($"{SPMnr}")
+            spmText = 1
             lblSpml.Text = spmText
-            Label26.Text = $"{SPMnr} av 60 spørsmål"
+            Label26.Text = $"Spørsmål {SPMnr}"
         Else
             SPMnr = SPMnr
             MsgBox("Dette var siste spørsmål")
@@ -963,25 +960,37 @@ Public Class Blodbane
 
     'Neste spørsmål i erklæring
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
-        Dim sisteindex As Integer
-        Dim spmText As String
+        Dim sisteindex, kjønn As Integer
+        Dim spmText, pnr As String
         Dim dame As Boolean
+        pnr = "04079147929" 'Testverdi
 
+        kjønn = pnr.Substring(8, 1)
+        If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
+            dame = True
+        Else
+            dame = False
+        End If
         If (RadioButton3.Checked = False) And (RadioButton4.Checked = False) Then
             MsgBox("Du må svare før du går videre")
             Exit Sub
         End If
-
-        sisteindex = Erklæringspørsmål.Count
+        sisteindex = Erklæringspørsmål.Rows.Count
         SPMnr = SPMnr + 1
 
-        If dame = True Then
-            spmText = Erklæringspørsmål($"{SPMnr}")
+        If Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr") < 100 Then
+            spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+        ElseIf (Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr") > 199) And (dame = False) Then
+            spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+        ElseIf (Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr") > 99) And (dame = True) Then
+            spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+        End If
+        If spmText = Nothing Then
+            MsgBox("dette spørsmålet er ikke for deg, gå videre")
         End If
 
-
         lblSpml.Text = spmText
-        Label26.Text = $"{SPMnr} av 60 spørsmål"
+        Label26.Text = $"Spørsmål {SPMnr}"
 
         'Registrere svar
         If RadioButton3.Checked Then
@@ -1068,5 +1077,4 @@ Public Class Blodbane
         bgSøk(bgSøkParameter)
         visBG()
     End Sub
-
 End Class
