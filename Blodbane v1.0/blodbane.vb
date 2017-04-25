@@ -179,13 +179,14 @@ Public Class Blodbane
             txtPersDataTlf.Text = blodgiverData("telefon1")
             txtPersDataTlf2.Text = blodgiverData("telefon2")
             txtPersDataEpost.Text = blodgiverData("epost")
-            If blodgiverData("kontaktform") <> "" Then
+            If Not IsDBNull(blodgiverData("kontaktform")) Then
                 CBxKontaktform.Text = blodgiverData("kontaktform")
             End If
-
-        Else
-            MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
         End If
+
+
+        MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
+
         tilkobling.Close()
         påloggetBgiver = eposten
     End Sub
@@ -962,10 +963,8 @@ Public Class Blodbane
         'erklæringSvar(SPMnr) = 1
         Dim Jasvar As String = 0
         For SPMnr = 0 To 60
-
             If erklæringSvar(SPMnr) = 1 Then
-                Jasvar = Jasvar & erklæringSvar(SPMnr)
-
+                Jasvar = Jasvar & " : " & SPMnr
             End If
         Next
     End Sub
