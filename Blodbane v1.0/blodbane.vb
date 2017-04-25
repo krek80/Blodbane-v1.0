@@ -758,7 +758,6 @@ Public Class Blodbane
 
     'Funksjon som regner ut datoen til 1. påskedag
     Public Shared Function GetEasterDate(ByVal Year As Integer) As Date
-
         Dim a As Integer
         Dim b As Integer
         Dim c As Integer
@@ -840,9 +839,7 @@ Public Class Blodbane
             ' n is 3 for March or 4 for April.
 
             Return DateSerial(Year, n, p + 1)
-
         End If
-
     End Function
 
     'Setter rett poststed ved siden av postnummeret i fanen Personinfo for blodgiveren
@@ -952,28 +949,23 @@ Public Class Blodbane
 
     'Send inn egenerklæring
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'Elisabeth:
-        'Nå ligger svarene i ''erklæringSvar(60)'', jasvar er lagret som ''1''
-        'i denne suben må du lage en  for-løkke som ser etter 1ere i erklæringSvar og som
-        'legger det den finner i en streng.
-
-        'feks dersom man har svart ja bare på spm 16 vil dataene i erklæringSvar ligge sllik:
-        'erklæringSvar(15) = 0 : erklæringSvar(16) = 1 : erklæringSvar(17) = 0 osv...
-        'Så da må løkken lagre tallet fra ''SPMnr'' i en streng for de tilfellene der
-        'erklæringSvar(SPMnr) = 1
         Dim Jasvar As String
-        For SPMnr = 0 To 60
-            If erklæringSvar(SPMnr) = 1 Then
-                Jasvar = Jasvar & SPMnr & ","
+        Dim i As Integer
+        For i = 0 To 60
+            If erklæringSvar(i) = 1 Then
+                Jasvar = Jasvar & i & ","
             End If
         Next
-        MsgBox(Jasvar)
+
+        'SQL her:
+
     End Sub
 
     'Neste spørsmål i erklæring
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
         Dim sisteindex As Integer
         Dim spmText As String
+        Dim dame As Boolean
 
         If (RadioButton3.Checked = False) And (RadioButton4.Checked = False) Then
             MsgBox("Du må svare før du går videre")
@@ -982,7 +974,11 @@ Public Class Blodbane
 
         sisteindex = Erklæringspørsmål.Count
         SPMnr = SPMnr + 1
-        spmText = Erklæringspørsmål($"{SPMnr}")
+
+        If dame = True Then
+            spmText = Erklæringspørsmål($"{SPMnr}")
+        End If
+
 
         lblSpml.Text = spmText
         Label26.Text = $"{SPMnr} av 60 spørsmål"
