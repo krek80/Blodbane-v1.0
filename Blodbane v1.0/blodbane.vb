@@ -11,6 +11,7 @@ Public Class Blodbane
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
     Dim Erklæringspørsmål As New Hashtable
+    Dim blodgiverData As New Hashtable
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID As Integer
     Dim presentertGiver, bgSøkParameter As String
@@ -110,20 +111,21 @@ Public Class Blodbane
         Dim eposten As String = ""
         Dim blodtypen As String = ""
         Dim siste_timen As DateTime
+        Dim kontaktformen As String = ""
 
         If antallRader = 1 Then
 
             Dim rad As DataRow
             For Each rad In interntabell.Rows
-                fornavnet = rad("fornavn")
-                etternavnet = rad("etternavn")
-                passordet = rad("passord")
-                adressen = rad("adresse")
-                postnummeret = rad("postnr")
-                telefonen1 = rad("telefon1")
-                telefonen2 = rad("telefon2")
-                eposten = rad("epost")
-                statuskoden = rad("statuskode")
+                blodgiverData.Add("fornavn", rad("fornavn"))
+                blodgiverData.Add("etternavn", rad("etternavn"))
+                blodgiverData.Add("passord", rad("passord"))
+                blodgiverData.Add("adresse", rad("adresse"))
+                blodgiverData.Add("postnr", rad("postnr"))
+                blodgiverData.Add("telefon1", rad("telefon1"))
+                blodgiverData.Add("telefon2", rad("telefon2"))
+                blodgiverData.Add("epost", rad("epost"))
+                blodgiverData.Add("statuskode", rad("statuskode"))
             Next rad
 
             Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
@@ -136,10 +138,12 @@ Public Class Blodbane
 
             Dim rad2 As DataRow
             For Each rad2 In interntabell2.Rows
-                blodtypen = rad2("blodtype")
+                blodgiverData.Add("blodtype", rad2("blodtype"))
                 If IsDate(rad2("siste_blodtapping")) Then
-                    siste_timen = rad2("siste_blodtapping")
+                    blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
                 End If
+                blodgiverData.Add("kontaktform", rad2("kontaktform"))
+
             Next rad2
 
             Dim idag, sistetime As DateTime
@@ -166,15 +170,19 @@ Public Class Blodbane
             PanelGiver.Show()
             PanelGiver.BringToFront()
 
-            txtPersDataNavn.Text = $"{fornavnet} {etternavnet}"
-            txtPersDataGStatus.Text = personstatusB(statuskoden)
-            txtPersDataBlodtype.Text = blodtypen
-            txtPersDataSisteUnders.Text = siste_timen
-            txtPersDataGateAdr.Text = adressen
-            txtPersDataPostnr.Text = postnummeret
-            txtPersDataTlf.Text = telefonen1
-            txtPersDataTlf2.Text = telefonen2
-            txtPersDataEpost.Text = eposten
+            txtPersDataNavn.Text = $"{blodgiverData("fornavn")} {blodgiverData("etternavn")}"
+            txtPersDataGStatus.Text = personstatusB(blodgiverData("statuskode"))
+            txtPersDataBlodtype.Text = blodgiverData("blodtype")
+            txtPersDataSisteUnders.Text = blodgiverData("siste_time")
+            txtPersDataGateAdr.Text = blodgiverData("adresse")
+            txtPersDataPostnr.Text = blodgiverData("postnr")
+            txtPersDataTlf.Text = blodgiverData("telefon1")
+            txtPersDataTlf2.Text = blodgiverData("telefon2")
+            txtPersDataEpost.Text = blodgiverData("epost")
+            If blodgiverData("kontaktform") <> "" Then
+                CBxKontaktform.Text = blodgiverData("kontaktform")
+            End If
+
         Else
             MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
         End If
@@ -187,7 +195,11 @@ Public Class Blodbane
         Try
             tilkobling.Open()
             Dim spoerring As String = ""
-            If bgRegSkjemadata_OK(txtBgInn_personnr.Text, txtBgInn_poststed.Text, txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text, txtBgInn_epost.Text, txtBgInn_passord1.Text, txtBgInn_passord2.Text) Then
+            If bgRegSkjemadata_OK(txtBgInn_fornavn.Text, txtBgInn_etternavn.Text,
+                                  txtBgInn_personnr.Text, txtBgInn_poststed.Text,
+                                  txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text,
+                                  txtBgInn_epost.Text, txtBgInn_passord1.Text,
+                                  txtBgInn_passord2.Text) Then
 
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
@@ -227,7 +239,11 @@ Public Class Blodbane
     End Sub
 
     'Skjemavalidering
-    Private Function bgRegSkjemadata_OK(ByVal personnrInn As String, ByVal poststedInn As String, ByVal telefon1Inn As String, ByVal telefon2Inn As String, ByVal epostInn As String, ByVal passord1Inn As String, ByVal passord2Inn As String) As Boolean
+    Private Function bgRegSkjemadata_OK(ByVal fornavnInn As String, ByVal etternavnInn As String,
+                                        ByVal personnrInn As String, ByVal poststedInn As String,
+                                        ByVal telefon1Inn As String, ByVal telefon2Inn As String,
+                                        ByVal epostInn As String, ByVal passord1Inn As String,
+                                        ByVal passord2Inn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
@@ -247,13 +263,13 @@ Public Class Blodbane
         da2.SelectCommand = sql2
         da2.Fill(interntabell2)
 
-        If txtBgInn_fornavn.Text = "" Or txtBgInn_etternavn.Text = "" Or txtBgInn_postnr.Text = "" Or txtBgInn_tlfnr.Text = "" Then
+        If fornavnInn = "" Or etternavnInn = "" Or telefon1Inn = "" Then
             MsgBox("Alle felt må være utfylt unntatt gateadresse- og telefon 2-feltet må være utfylt.", MsgBoxStyle.Critical)
             Return False
         End If
 
         If Not IsNumeric(personnrInn) Or personnrInn.Length <> 11 Then
-            MsgBox("Fødselsnummeret ble ikke godtatt.", MsgBoxStyle.Critical)
+            MsgBox("Fødselsnummeret inneholder ikke bare tall, eller består ikke av 11 siffer.", MsgBoxStyle.Critical)
             Return False
         End If
 
@@ -302,16 +318,24 @@ Public Class Blodbane
             Return False
         End If
 
-        If passord1Inn <> passord2Inn Then
+        If Not passordSjekk(passord1Inn, passord2Inn) Then
+            Return False
+        End If
+
+        Return True
+
+    End Function
+
+    Private Function passordSjekk(ByVal p1Inn As String, p2Inn As String) As Boolean
+        If p1Inn <> p2Inn Then
             MsgBox("Passordene er ikke like. Prøv igjen!", MsgBoxStyle.Critical)
             Return False
         End If
-        If passord1Inn.Length < 6 Or passord1Inn.IndexOf(" ") <> -1 Then
+        If p1Inn.Length < 6 Or p1Inn.IndexOf(" ") <> -1 Then
             MsgBox("Passordet må ha minst 6 tegn og ingen mellomrom. Prøv igjen!", MsgBoxStyle.Critical)
             Return False
         End If
         Return True
-
     End Function
 
     'Logg av blodgiver
