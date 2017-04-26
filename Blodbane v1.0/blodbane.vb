@@ -12,6 +12,9 @@ Public Class Blodbane
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
     Dim blodgiverData As New Hashtable
+    Dim rommene As New ArrayList
+    Dim interntabellRom As New DataTable
+    Dim antallRom As Integer
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
     Dim presentertGiver, bgSøkParameter As String
@@ -33,7 +36,6 @@ Public Class Blodbane
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
         da.SelectCommand = sqlSpørring
         da.Fill(statuser)
-        tilkobling.Close()
         ComboBox2.Items.Clear()
         For Each rad In statuser.Rows
             statustekst = rad("beskrivelse")
@@ -43,6 +45,16 @@ Public Class Blodbane
             ComboBox2.Items.Add(statustekst)
             ComboBox4.Items.Add(statustekst)
         Next
+
+        'Lager liste over rommene
+        antallRom = 0
+        Dim sqlSporringRom As String = "SELECT * FROM rom"
+        Dim sqlRom As New MySqlCommand(sqlSporringRom, tilkobling)
+        Dim daRom As New MySqlDataAdapter
+        daRom.SelectCommand = sqlRom
+        daRom.Fill(interntabellRom)
+        antallRom = interntabellRom.Rows.Count()
+
 
         'Henter postnummer og sted og legger i hashtable
         Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
@@ -91,24 +103,12 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
         da.SelectCommand = sql
         da.Fill(interntabell)
+        Dim rad As DataRow
 
         Dim antallRader As Integer = interntabell.Rows.Count()
-        Dim fornavnet As String = ""
-        Dim etternavnet As String = ""
-        Dim passordet As String = ""
-        Dim adressen As String = ""
-        Dim postnummeret As String = ""
-        Dim telefonen1 As String = ""
-        Dim telefonen2 As String = ""
-        Dim statuskoden As String = ""
-        Dim eposten As String = ""
-        Dim blodtypen As String = ""
-        Dim siste_timen As DateTime
-        Dim kontaktformen As String = ""
 
         If antallRader = 1 Then
 
-            Dim rad As DataRow
             For Each rad In interntabell.Rows
                 blodgiverData.Add("fornavn", rad("fornavn"))
                 blodgiverData.Add("etternavn", rad("etternavn"))
@@ -131,8 +131,14 @@ Public Class Blodbane
 
             Dim rad2 As DataRow
             For Each rad2 In interntabell2.Rows
-                blodgiverData.Add("blodtype", rad2("blodtype"))
-                If IsDate(rad2("siste_blodtapping")) Then
+                If IsDBNull(rad2("blodtype")) Then
+                    blodgiverData.Add("blodtype", "")
+                Else
+                    blodgiverData.Add("blodtype", rad2("blodtype"))
+                End If
+                If IsDBNull(rad2("siste_blodtapping")) Then
+                    blodgiverData.Add("siste_blodtapping", "")
+                Else
                     blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
                 End If
                 blodgiverData.Add("kontaktform", rad2("kontaktform"))
@@ -155,7 +161,10 @@ Public Class Blodbane
                     TxtNesteInnkalling.Text = sistetime
                 Else
                     TxtNesteInnkalling.Text = "Ikke fastsatt"
+                    BtnEndreInnkalling.Enabled = False
                 End If
+            Else
+                TxtNesteInnkalling.Text = "Ikke fastsatt"
             End If
 
             PanelPåmelding.Hide()
@@ -164,9 +173,9 @@ Public Class Blodbane
             PanelGiver.BringToFront()
 
             txtPersDataNavn.Text = $"{blodgiverData("fornavn")} {blodgiverData("etternavn")}"
-            txtPersDataGStatus.Text = personstatusB(blodgiverData("statuskode"))
+            txtPersDataGStatus.Text = blodgiverData("statuskode")
             txtPersDataBlodtype.Text = blodgiverData("blodtype")
-            txtPersDataSisteUnders.Text = blodgiverData("siste_time")
+            txtPersDataSisteUnders.Text = blodgiverData("siste_blodtapping")
             txtPersDataGateAdr.Text = blodgiverData("adresse")
             txtPersDataPostnr.Text = blodgiverData("postnr")
             txtPersDataTlf.Text = blodgiverData("telefon1")
@@ -175,13 +184,12 @@ Public Class Blodbane
             If Not IsDBNull(blodgiverData("kontaktform")) Then
                 CBxKontaktform.Text = blodgiverData("kontaktform")
             End If
+        Else
+            MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
+
+            tilkobling.Close()
+            påloggetBgiver = blodgiverData("epost")
         End If
-
-
-        MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
-
-        tilkobling.Close()
-        påloggetBgiver = eposten
     End Sub
 
     'Registrer ny blodgiver
@@ -208,7 +216,7 @@ Public Class Blodbane
 
                 'Legger inn ny rad i tabellen "blodgiver":
 
-                spoerring = $"INSERT INTO blodgiver (epost, fodselsnummer) VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_personnr.Text}')"
+                spoerring = $"INSERT INTO blodgiver (epost, fodselsnummer, kontaktform) VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_personnr.Text}', 'Epost')"
                 Dim sql2 As New MySqlCommand(spoerring, tilkobling)
                 Dim da2 As New MySqlDataAdapter
                 Dim interntabell2 As New DataTable
@@ -683,17 +691,19 @@ Public Class Blodbane
 
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
         tilkobling.Open()
+
         Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}'"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         Dim rad1 As DataRow
-        Dim i As Integer
+        Dim antallTimerPåDetteKlokkeslettet As Integer = 0
+        Dim tabort As Integer = 0
         Dim fulltimetabell As New ArrayList()
         Dim opptatt As Boolean = False
         Dim raddato1 As DateTime
         Dim raddato2 As String
-        Dim tabort As Integer
+        Dim i As Integer
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
@@ -707,8 +717,11 @@ Public Class Blodbane
             raddato2 = $"{raddato1.Hour}:00"
             For i = 0 To fulltimetabell.Count - 1
                 If fulltimetabell(i) = raddato2 Then
-                    tabort = i
-                    opptatt = True
+                    antallTimerPåDetteKlokkeslettet += 1
+                    If antallTimerPåDetteKlokkeslettet = antallRom Then
+                        tabort = i
+                        opptatt = True
+                    End If
                 End If
             Next
             If opptatt Then
@@ -724,7 +737,8 @@ Public Class Blodbane
 
     'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
-        If (DateTimePickerNyTime.Value - CDate(txtPersDataSisteUnders.Text)).TotalDays < 90 Then
+        'Dim sisteUndersøkelse As Date =
+        If (DateTimePickerNyTime.Value - CDate(blodgiverData("siste_blodtapping"))).TotalDays < 90 Then
             MsgBox("Det må være minst 90 dager siden siste blodtapping. Velg en ny dato.", MsgBoxStyle.Critical)
         Else
             If Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DateTimePickerNyTime.Value) Then
@@ -927,7 +941,7 @@ Public Class Blodbane
         Label26.Text = "Spørsmål 1"
     End Sub
 
-    'Forige spørsmål i erklæring
+    'Forrige spørsmål i erklæring
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim spmText As String
 
