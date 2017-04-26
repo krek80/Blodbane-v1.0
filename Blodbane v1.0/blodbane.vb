@@ -95,7 +95,7 @@ Public Class Blodbane
     'Logger på blodgiver og setter opp personinfo i fanen Personinformasjon
     Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
         tilkobling.Open()
-        Dim sql As New MySqlCommand("SELECT * FROM bruker WHERE epost = @epostInn AND passord = @passordInn", tilkobling)
+        Dim sql As New MySqlCommand("SELECT * FROM bruker br JOIN blodgiver bg ON br.epost=bg.epost WHERE br.epost = @epostInn AND br.passord = @passordInn", tilkobling)
         sql.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
         sql.Parameters.AddWithValue("@passordInn", txtAInn_passord.Text)
         Dim da As New MySqlDataAdapter
@@ -103,12 +103,16 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
         da.SelectCommand = sql
         da.Fill(interntabell)
-        Dim rad As DataRow
+        Dim rad() As DataRow
+        Dim blodgiveren As Blodgiver
 
         Dim antallRader As Integer = interntabell.Rows.Count()
 
         If antallRader = 1 Then
-
+            rad = interntabell.Select()
+            blodgiveren = New Blodgiver(rad(0)("fodselsnummer"), rad(0)("blodtype"), rad(0)("kontaktform"), rad(0)("merknad"), rad(0)("timepreferanse"), rad(0)("siste_blodtapping"), rad(0)("epost"), rad(0)("passord"), rad(0)("fornavn"), rad(0)("etternavn"), rad(0)("adresse"), rad(0)("telefon1"), rad(0)("telefon2"), rad(0)("postnr"), rad(0)("statuskode"))
+            ' If IsDBNull(blodgiveren.Blodtype1) Then
+            'blodgiveren.Blodtype1 = ""
             For Each rad In interntabell.Rows
                 blodgiverData.Add("fornavn", rad("fornavn"))
                 blodgiverData.Add("etternavn", rad("etternavn"))
@@ -131,21 +135,18 @@ Public Class Blodbane
 
             Dim rad2 As DataRow
             For Each rad2 In interntabell2.Rows
-                If IsDBNull(rad2("blodtype")) Then
-                    blodgiverData.Add("blodtype", "")
-                Else
-                    blodgiverData.Add("blodtype", rad2("blodtype"))
-                End If
-                If IsDBNull(rad2("siste_blodtapping")) Then
-                    blodgiverData.Add("siste_blodtapping", "")
-                Else
-                    blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
+
+                    If IsDBNull(rad2("siste_blodtapping")) Then
+                        blodgiverData.Add("siste_blodtapping", "")
+                    Else
+                        blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
                 End If
                 blodgiverData.Add("kontaktform", rad2("kontaktform"))
 
             Next rad2
 
             Dim idag, sistetime As DateTime
+            Dim ingenNyTime As Boolean = False
             idag = Today
             Dim sql3 As New MySqlCommand("SELECT * FROM timeavtale WHERE bgepost = @epostInn", tilkobling)
             sql3.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
@@ -160,11 +161,14 @@ Public Class Blodbane
                 If sistetime > idag Then
                     TxtNesteInnkalling.Text = sistetime
                 Else
-                    TxtNesteInnkalling.Text = "Ikke fastsatt"
-                    BtnEndreInnkalling.Enabled = False
+                    ingenNyTime = True
                 End If
             Else
+                ingenNyTime = True
+            End If
+            If ingenNyTime Then
                 TxtNesteInnkalling.Text = "Ikke fastsatt"
+                BtnEndreInnkalling.Enabled = False
             End If
 
             PanelPåmelding.Hide()
