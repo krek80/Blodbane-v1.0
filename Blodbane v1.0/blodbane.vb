@@ -15,6 +15,8 @@ Public Class Blodbane
     Dim rommene As New ArrayList
     Dim interntabellRom As New DataTable
     Dim antallRom As Integer
+    Dim blodgiveren As Blodgiver
+    Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
     Dim presentertGiver, bgSøkParameter As String
@@ -45,6 +47,7 @@ Public Class Blodbane
             ComboBox2.Items.Add(statustekst)
             ComboBox4.Items.Add(statustekst)
         Next
+        blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
 
         'Lager liste over rommene
         antallRom = 0
@@ -82,6 +85,27 @@ Public Class Blodbane
         tilkobling.Close()
     End Sub
 
+    'Nullstiller objekt blodgiveren
+    Private Sub BlodgiverInit()
+
+        blodgiveren.Fodselsnummer1 = ""
+        blodgiveren.Blodtype1 = ""
+        blodgiveren.Kontaktform1 = ""
+        blodgiveren.Merknad1 = ""
+        blodgiveren.Timepreferanse1 = ""
+        blodgiveren.Siste_blodtapping1 = dummyDato
+        blodgiveren.Epost1 = ""
+        blodgiveren.Passord1 = ""
+        blodgiveren.Fornavn1 = ""
+        blodgiveren.Etternavn1 = ""
+        blodgiveren.Adresse1 = ""
+        blodgiveren.Telefon11 = ""
+        blodgiveren.Telefon21 = ""
+        blodgiveren.Postnr1 = ""
+        blodgiveren.Statuskode1 = 0
+
+    End Sub
+
     'Avslutt program
     Private Sub AvsluttToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvsluttToolStripMenuItem.Click
         Me.Close()
@@ -103,27 +127,58 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
         da.SelectCommand = sql
         da.Fill(interntabell)
-        Dim rad() As DataRow
-        Dim blodgiveren As Blodgiver
-
+        Dim rad(), radb As DataRow
         Dim antallRader As Integer = interntabell.Rows.Count()
+
+
 
         If antallRader = 1 Then
             rad = interntabell.Select()
-            blodgiveren = New Blodgiver(rad(0)("fodselsnummer"), rad(0)("blodtype"), rad(0)("kontaktform"), rad(0)("merknad"), rad(0)("timepreferanse"), rad(0)("siste_blodtapping"), rad(0)("epost"), rad(0)("passord"), rad(0)("fornavn"), rad(0)("etternavn"), rad(0)("adresse"), rad(0)("telefon1"), rad(0)("telefon2"), rad(0)("postnr"), rad(0)("statuskode"))
-            ' If IsDBNull(blodgiveren.Blodtype1) Then
-            'blodgiveren.Blodtype1 = ""
-            For Each rad In interntabell.Rows
-                blodgiverData.Add("fornavn", rad("fornavn"))
-                blodgiverData.Add("etternavn", rad("etternavn"))
-                blodgiverData.Add("passord", rad("passord"))
-                blodgiverData.Add("adresse", rad("adresse"))
-                blodgiverData.Add("postnr", rad("postnr"))
-                blodgiverData.Add("telefon1", rad("telefon1"))
-                blodgiverData.Add("telefon2", rad("telefon2"))
-                blodgiverData.Add("epost", rad("epost"))
-                blodgiverData.Add("statuskode", rad("statuskode"))
-            Next rad
+            If IsDBNull(rad(0)("blodtype")) Then
+                rad(0)("blodtype") = ""
+            End If
+            If IsDBNull(rad(0)("merknad")) Then
+                rad(0)("merknad") = ""
+            End If
+            If IsDBNull(rad(0)("timepreferanse")) Then
+                rad(0)("timepreferanse") = ""
+            End If
+            If IsDBNull(rad(0)("adresse")) Then
+                rad(0)("adresse") = ""
+            End If
+            If IsDBNull(rad(0)("telefon2")) Then
+                rad(0)("telefon2") = ""
+            End If
+            If IsDBNull(rad(0)("siste_blodtapping")) Then
+                rad(0)("siste_blodtapping") = dummyDato
+            End If
+            blodgiveren.Fodselsnummer1 = rad(0)("fodselsnummer")
+            blodgiveren.Blodtype1 = rad(0)("blodtype")
+            blodgiveren.Kontaktform1 = rad(0)("kontaktform")
+            blodgiveren.Merknad1 = rad(0)("merknad")
+            blodgiveren.Timepreferanse1 = rad(0)("timepreferanse")
+            blodgiveren.Siste_blodtapping1 = rad(0)("siste_blodtapping")
+            blodgiveren.Epost1 = rad(0)("epost")
+            blodgiveren.Passord1 = rad(0)("passord")
+            blodgiveren.Fornavn1 = rad(0)("fornavn")
+            blodgiveren.Etternavn1 = rad(0)("etternavn")
+            blodgiveren.Adresse1 -= rad(0)("adresse")
+            blodgiveren.Telefon11 = rad(0)("telefon1")
+            blodgiveren.Telefon21 = rad(0)("telefon2")
+            blodgiveren.Postnr1 = rad(0)("postnr")
+            blodgiveren.Statuskode1 = rad(0)("statuskode")
+
+            For Each radb In interntabell.Rows
+                blodgiverData.Add("fornavn", radb("fornavn"))
+                blodgiverData.Add("etternavn", radb("etternavn"))
+                blodgiverData.Add("passord", radb("passord"))
+                blodgiverData.Add("adresse", radb("adresse"))
+                blodgiverData.Add("postnr", radb("postnr"))
+                blodgiverData.Add("telefon1", radb("telefon1"))
+                blodgiverData.Add("telefon2", radb("telefon2"))
+                blodgiverData.Add("epost", radb("epost"))
+                blodgiverData.Add("statuskode", radb("statuskode"))
+            Next radb
 
             Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
             sql2.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
@@ -136,10 +191,10 @@ Public Class Blodbane
             Dim rad2 As DataRow
             For Each rad2 In interntabell2.Rows
 
-                    If IsDBNull(rad2("siste_blodtapping")) Then
-                        blodgiverData.Add("siste_blodtapping", "")
-                    Else
-                        blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
+                If IsDBNull(rad2("siste_blodtapping")) Then
+                    blodgiverData.Add("siste_blodtapping", "")
+                Else
+                    blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
                 End If
                 blodgiverData.Add("kontaktform", rad2("kontaktform"))
 
@@ -176,24 +231,27 @@ Public Class Blodbane
             PanelGiver.Show()
             PanelGiver.BringToFront()
 
-            txtPersDataNavn.Text = $"{blodgiverData("fornavn")} {blodgiverData("etternavn")}"
-            txtPersDataGStatus.Text = blodgiverData("statuskode")
-            txtPersDataBlodtype.Text = blodgiverData("blodtype")
-            txtPersDataSisteUnders.Text = blodgiverData("siste_blodtapping")
-            txtPersDataGateAdr.Text = blodgiverData("adresse")
-            txtPersDataPostnr.Text = blodgiverData("postnr")
-            txtPersDataTlf.Text = blodgiverData("telefon1")
-            txtPersDataTlf2.Text = blodgiverData("telefon2")
-            txtPersDataEpost.Text = blodgiverData("epost")
-            If Not IsDBNull(blodgiverData("kontaktform")) Then
-                CBxKontaktform.Text = blodgiverData("kontaktform")
+            txtPersDataNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
+            txtPersDataGStatus.Text = blodgiveren.Statuskode1
+            txtPersDataBlodtype.Text = blodgiveren.Blodtype1
+            If blodgiveren.Siste_blodtapping1 = dummyDato Then
+                txtPersDataSisteUnders.Text = ""
+            Else
+                txtPersDataSisteUnders.Text = blodgiveren.Siste_blodtapping1
             End If
-        Else
-            MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
+            txtPersDataGateAdr.Text = blodgiveren.Adresse1
+            txtPersDataPostnr.Text = blodgiveren.Postnr1
+            txtPersDataTlf.Text = blodgiveren.Telefon11
+            txtPersDataTlf2.Text = blodgiveren.Telefon21
+            txtPersDataEpost.Text = blodgiveren.Epost1
 
-            tilkobling.Close()
-            påloggetBgiver = blodgiverData("epost")
+            CBxKontaktform.Text = blodgiveren.Kontaktform1
+            påloggetBgiver = blodgiveren.Postnr1
+        Else
+                MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
+
         End If
+        tilkobling.Close()
     End Sub
 
     'Registrer ny blodgiver
@@ -350,6 +408,9 @@ Public Class Blodbane
         PanelAnsatt.Hide()
         PanelPåmelding.Show()
         PanelPåmelding.BringToFront()
+
+        'Nullstiller objektet blodgiveren
+        BlodgiverInit()
     End Sub
 
     'Knapp - Logg av ansatt

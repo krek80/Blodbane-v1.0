@@ -3,7 +3,13 @@
     Private fodselsnummer, blodtype, kontaktform, merknad, timepreferanse As String
     Private siste_blodtapping As Date
 
-    Public Sub New(fodselsnummer As String, blodtype As String, kontaktform As String, merknad As String, timepreferanse As String, siste_blodtapping As Date, epost As String, passord As String, fornavn As String, etternavn As String, adresse As String, telefon1 As String, telefon2 As String, postnr As String, statuskode As Integer)
+    Public Sub New(fodselsnummer As String, blodtype As String,
+                   kontaktform As String, merknad As String,
+                   timepreferanse As String, siste_blodtapping As Date,
+                   epost As String, passord As String,
+                   fornavn As String, etternavn As String,
+                   adresse As String, telefon1 As String, telefon2 As String,
+                   postnr As String, statuskode As Integer)
         MyBase.New(epost, passord, fornavn, etternavn, adresse, telefon1, telefon2, postnr, statuskode)
         Me.fodselsnummer = fodselsnummer
         Me.blodtype = blodtype
