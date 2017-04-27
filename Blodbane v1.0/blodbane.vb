@@ -162,43 +162,12 @@ Public Class Blodbane
             blodgiveren.Passord1 = rad(0)("passord")
             blodgiveren.Fornavn1 = rad(0)("fornavn")
             blodgiveren.Etternavn1 = rad(0)("etternavn")
-            blodgiveren.Adresse1 -= rad(0)("adresse")
+            blodgiveren.Adresse1 = rad(0)("adresse")
             blodgiveren.Telefon11 = rad(0)("telefon1")
             blodgiveren.Telefon21 = rad(0)("telefon2")
             blodgiveren.Postnr1 = rad(0)("postnr")
             blodgiveren.Statuskode1 = rad(0)("statuskode")
 
-            For Each radb In interntabell.Rows
-                blodgiverData.Add("fornavn", radb("fornavn"))
-                blodgiverData.Add("etternavn", radb("etternavn"))
-                blodgiverData.Add("passord", radb("passord"))
-                blodgiverData.Add("adresse", radb("adresse"))
-                blodgiverData.Add("postnr", radb("postnr"))
-                blodgiverData.Add("telefon1", radb("telefon1"))
-                blodgiverData.Add("telefon2", radb("telefon2"))
-                blodgiverData.Add("epost", radb("epost"))
-                blodgiverData.Add("statuskode", radb("statuskode"))
-            Next radb
-
-            Dim sql2 As New MySqlCommand("SELECT * FROM blodgiver WHERE epost = @epostInn", tilkobling)
-            sql2.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
-            Dim da2 As New MySqlDataAdapter
-            Dim interntabell2 As New DataTable
-            'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
-            da2.SelectCommand = sql2
-            da2.Fill(interntabell2)
-
-            Dim rad2 As DataRow
-            For Each rad2 In interntabell2.Rows
-
-                If IsDBNull(rad2("siste_blodtapping")) Then
-                    blodgiverData.Add("siste_blodtapping", "")
-                Else
-                    blodgiverData.Add("siste_blodtapping", rad2("siste_blodtapping"))
-                End If
-                blodgiverData.Add("kontaktform", rad2("kontaktform"))
-
-            Next rad2
 
             Dim idag, sistetime As DateTime
             Dim ingenNyTime As Boolean = False
