@@ -127,7 +127,7 @@ Public Class Blodbane
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
         da.SelectCommand = sql
         da.Fill(interntabell)
-        Dim rad(), radb As DataRow
+        Dim rad() As DataRow
         Dim antallRader As Integer = interntabell.Rows.Count()
 
 
@@ -906,8 +906,49 @@ Public Class Blodbane
         nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
                                time_DateTime.Hour, 0, 0)
 
-        GpBxEndreInnkalling.Visible = False
-        TxtNesteInnkalling.Text = nyDato
+        Me.Cursor = Cursors.WaitCursor
+        tilkobling.Open()
+        Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid = {nyDato}"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        Dim rad1, radRom As DataRow
+        Dim timeOk As Boolean = True
+        Dim ledigRom As String = ""
+
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+        tilkobling.Close()
+        Me.Cursor = Cursors.Default
+
+        Dim antallLedigeRom As Integer = antallRom - interntabell1.Rows.Count
+        If antallLedigeRom = 0 Then
+            MsgBox("Dessverre var ikke den valgte timen ledig likevel. Prøv en annen time.")
+            timeOk = False
+        Else
+            For Each radRom In interntabellRom.Rows
+                For Each rad1 In interntabell1.Rows
+                    If radRom("romnr") <> rad1("romnr") Then
+                        ledigRom = radRom("romnr")
+                    End If
+                Next
+            Next
+
+            Me.Cursor = Cursors.WaitCursor
+            tilkobling.Open()
+            Dim sqlSporring2 As String = $"UPDATE timeavtale SET"
+            Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
+            Dim da2 As New MySqlDataAdapter
+            Dim interntabell2 As New DataTable
+            'Objektet "da" utfører spørringen og legger resultatet i "interntabell2"
+            da2.SelectCommand = sql1
+            da1.Fill(interntabell2)
+            tilkobling.Close()
+            Me.Cursor = Cursors.Default
+            GpBxEndreInnkalling.Visible = False
+            TxtNesteInnkalling.Text = nyDato
+        End If
 
     End Sub
 
