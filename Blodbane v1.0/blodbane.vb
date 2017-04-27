@@ -736,7 +736,7 @@ Public Class Blodbane
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
         tilkobling.Open()
 
-        Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) AS 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid"
+        Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) AS 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
@@ -746,23 +746,21 @@ Public Class Blodbane
         Dim fulltimetabell As New ArrayList()
         Dim opptatt As Boolean = False
         Dim raddato1 As DateTime
-        Dim raddato2 As String
         Dim i, radnr As Integer
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         tilkobling.Close()
+        MsgBox($"Antall rader i spørring: {interntabell1.Rows.Count}.")
         LBxLedigeTimer.Items.Clear()
         For i = 0 To 7
             fulltimetabell.Add($"{i + 8}:00")
         Next
         For Each rad1 In interntabell1.Rows
-            If rad1("antall") = antallRom Then
-                raddato1 = rad1("datotid")
-                raddato2 = $"{raddato1.Hour}:00"
-                radnr = raddato1.Hour
-                fulltimetabell.RemoveAt(radnr - 8)
-            End If
+            raddato1 = rad1("datotid")
+            radnr = raddato1.Hour
+            fulltimetabell.RemoveAt(radnr - 8)
+
         Next
 
         For i = 0 To fulltimetabell.Count - 1
