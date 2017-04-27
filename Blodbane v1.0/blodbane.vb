@@ -16,6 +16,7 @@ Public Class Blodbane
     Dim interntabellRom As New DataTable
     Dim antallRom As Integer
     Dim blodgiveren As Blodgiver
+    Dim bytteRomTime As Romtime
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
@@ -47,7 +48,9 @@ Public Class Blodbane
             ComboBox2.Items.Add(statustekst)
             ComboBox4.Items.Add(statustekst)
         Next
+
         blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
+        bytteRomTime = New Romtime(dummyDato, "", 0)
 
         'Lager liste over rommene
         antallRom = 0
@@ -85,7 +88,7 @@ Public Class Blodbane
         tilkobling.Close()
     End Sub
 
-    'Nullstiller objekt blodgiveren
+    'Nullstiller objektene blodgiveren og bytteRomTime
     Private Sub BlodgiverInit()
 
         blodgiveren.Fodselsnummer1 = ""
@@ -103,6 +106,10 @@ Public Class Blodbane
         blodgiveren.Telefon21 = ""
         blodgiveren.Postnr1 = ""
         blodgiveren.Statuskode1 = 0
+
+        bytteRomTime.Datotid1 = dummyDato
+        bytteRomTime.Romnummer1 = ""
+        bytteRomTime.Timenr1 = 0
 
     End Sub
 
@@ -184,6 +191,9 @@ Public Class Blodbane
                 sistetime = rad3(interntabell3.Rows.Count - 1)("datotid")
                 If sistetime > idag Then
                     TxtNesteInnkalling.Text = sistetime
+                    bytteRomTime.Timenr1 = rad3(interntabell3.Rows.Count - 1)("timeid")
+                    bytteRomTime.Datotid1 = sistetime
+                    bytteRomTime.Romnummer1 = rad3(interntabell3.Rows.Count - 1)("romnr")
                 Else
                     ingenNyTime = True
                 End If
@@ -378,7 +388,7 @@ Public Class Blodbane
         PanelPåmelding.Show()
         PanelPåmelding.BringToFront()
 
-        'Nullstiller objektet blodgiveren
+        'Nullstiller objektene blodgiveren og bytteRomTime
         BlodgiverInit()
     End Sub
 
@@ -726,7 +736,7 @@ Public Class Blodbane
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
         tilkobling.Open()
 
-        Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}'"
+        Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) AS 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
@@ -737,7 +747,7 @@ Public Class Blodbane
         Dim opptatt As Boolean = False
         Dim raddato1 As DateTime
         Dim raddato2 As String
-        Dim i As Integer
+        Dim i, radnr As Integer
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
@@ -747,22 +757,14 @@ Public Class Blodbane
             fulltimetabell.Add($"{i + 8}:00")
         Next
         For Each rad1 In interntabell1.Rows
-            raddato1 = rad1("datotid")
-            raddato2 = $"{raddato1.Hour}:00"
-            For i = 0 To fulltimetabell.Count - 1
-                If fulltimetabell(i) = raddato2 Then
-                    antallTimerPåDetteKlokkeslettet += 1
-                    If antallTimerPåDetteKlokkeslettet = antallRom Then
-                        tabort = i
-                        opptatt = True
-                    End If
-                End If
-            Next
-            If opptatt Then
-                fulltimetabell.RemoveAt(tabort)
-                opptatt = False
+            If rad1("antall") = antallRom Then
+                raddato1 = rad1("datotid")
+                raddato2 = $"{raddato1.Hour}:00"
+                radnr = raddato1.Hour
+                fulltimetabell.RemoveAt(radnr - 8)
             End If
         Next
+
         For i = 0 To fulltimetabell.Count - 1
             LBxLedigeTimer.Items.Add(fulltimetabell(i))
         Next
@@ -896,60 +898,64 @@ Public Class Blodbane
     'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
     Private Sub BtnBekreftEndretTime_Click(sender As Object, e As EventArgs) Handles BtnBekreftEndretTime.Click
 
-        Dim nyDato, time_DateTime As DateTime
+        Dim time_DateTime As DateTime
         Try
             Dim provider As CultureInfo = CultureInfo.InvariantCulture
             time_DateTime = Date.ParseExact(LBxLedigeTimer.SelectedItem, "H:mm", provider)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        nyDato = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
+        bytteRomTime.Datotid1 = New Date(DateTimePickerNyTime.Value.Year, DateTimePickerNyTime.Value.Month, DateTimePickerNyTime.Value.Day,
                                time_DateTime.Hour, 0, 0)
 
         Me.Cursor = Cursors.WaitCursor
         tilkobling.Open()
-        Dim sqlSporring1 As String = $"SELECT datotid FROM timeavtale WHERE datotid = {nyDato}"
+        Dim sqlSporring1 As String = $"SELECT * FROM timeavtale WHERE datotid = @nyDatotime"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        sql1.Parameters.Add("nyDatotime", MySqlDbType.DateTime).Value = bytteRomTime.Datotid1
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         Dim rad1, radRom As DataRow
-        Dim timeOk As Boolean = True
-        Dim ledigRom As String = ""
 
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
-        tilkobling.Close()
         Me.Cursor = Cursors.Default
 
         Dim antallLedigeRom As Integer = antallRom - interntabell1.Rows.Count
+        'MsgBox($"Antall rom totalt: {antallRom}. Antall rader i spørringsresultat: {interntabell1.Rows.Count}")
         If antallLedigeRom = 0 Then
             MsgBox("Dessverre var ikke den valgte timen ledig likevel. Prøv en annen time.")
-            timeOk = False
         Else
             For Each radRom In interntabellRom.Rows
-                For Each rad1 In interntabell1.Rows
-                    If radRom("romnr") <> rad1("romnr") Then
-                        ledigRom = radRom("romnr")
-                    End If
-                Next
+                If antallLedigeRom = antallRom Then
+                    bytteRomTime.Romnummer1 = radRom("romnr")
+                Else
+                    For Each rad1 In interntabell1.Rows
+                        'MsgBox($"Rom fra romoversikt: {radRom("romnr")}. Rom fra søk: {rad1("romnr")}.")
+                        If radRom("romnr") <> rad1("romnr") Then
+                            bytteRomTime.Romnummer1 = radRom("romnr")
+                        End If
+                    Next
+                End If
             Next
-
+            MsgBox($"Ledig rom: {bytteRomTime.Romnummer1}.")
+            GpBxEndreInnkalling.Visible = False
+            TxtNesteInnkalling.Text = bytteRomTime.Datotid1
             Me.Cursor = Cursors.WaitCursor
-            tilkobling.Open()
-            Dim sqlSporring2 As String = $"UPDATE timeavtale SET"
+            Dim sqlSporring2 As String = $"UPDATE timeavtale SET datotid = @nyDatotime, romnr = {bytteRomTime.Romnummer1} WHERE timeid = {bytteRomTime.Timenr1}"
             Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
+            sql2.Parameters.Add("nyDatotime", MySqlDbType.DateTime).Value = bytteRomTime.Datotid1
             Dim da2 As New MySqlDataAdapter
             Dim interntabell2 As New DataTable
-            'Objektet "da" utfører spørringen og legger resultatet i "interntabell2"
-            da2.SelectCommand = sql1
-            da1.Fill(interntabell2)
-            tilkobling.Close()
-            Me.Cursor = Cursors.Default
-            GpBxEndreInnkalling.Visible = False
-            TxtNesteInnkalling.Text = nyDato
-        End If
 
+            'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+            da2.SelectCommand = sql2
+            da2.Fill(interntabell2)
+
+            Me.Cursor = Cursors.Default
+        End If
+        tilkobling.Close()
     End Sub
 
     'Registrer gitt blod

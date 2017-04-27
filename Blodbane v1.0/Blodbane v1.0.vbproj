@@ -105,6 +105,7 @@
     <Compile Include="pålogging.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Romtime.vb" />
     <Compile Include="velkommen.Designer.vb">
       <DependentUpon>velkommen.vb</DependentUpon>
     </Compile>
