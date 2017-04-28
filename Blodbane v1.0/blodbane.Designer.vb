@@ -24,22 +24,22 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
-        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
-        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
-        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
-        Dim DataPoint5 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
-        Dim DataPoint6 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
-        Dim DataPoint7 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
-        Dim DataPoint8 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint9 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
-        Dim DataPoint10 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint21 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
+        Dim DataPoint22 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
+        Dim DataPoint23 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
+        Dim DataPoint24 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
+        Dim DataPoint25 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim DataPoint26 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
+        Dim DataPoint27 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
+        Dim DataPoint28 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint29 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
+        Dim DataPoint30 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -228,6 +228,8 @@ Partial Class Blodbane
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnAvbrytNyttPassord = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -619,6 +621,7 @@ Partial Class Blodbane
         'TabPagBGPersInfo
         '
         Me.TabPagBGPersInfo.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPagBGPersInfo.Controls.Add(Me.Button3)
         Me.TabPagBGPersInfo.Controls.Add(Me.GroupBox9)
         Me.TabPagBGPersInfo.Controls.Add(Me.BttnLoggavGiver)
         Me.TabPagBGPersInfo.Controls.Add(Me.GpBxTime)
@@ -717,6 +720,7 @@ Partial Class Blodbane
         '
         'GpBxPersonData
         '
+        Me.GpBxPersonData.Controls.Add(Me.btnAvbrytNyttPassord)
         Me.GpBxPersonData.Controls.Add(Me.txtNyttPassordGjenta)
         Me.GpBxPersonData.Controls.Add(Me.lblNyttPassordGjenta)
         Me.GpBxPersonData.Controls.Add(Me.txtNyttPassord)
@@ -1471,52 +1475,52 @@ Partial Class Blodbane
         '
         'Chart2
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend1)
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend5)
         resources.ApplyResources(Me.Chart2, "Chart2")
         Me.Chart2.Name = "Chart2"
         Me.Chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Blodplater"
-        DataPoint1.AxisLabel = "0+"
-        DataPoint1.Label = ""
-        DataPoint2.AxisLabel = "0-"
-        DataPoint2.LegendText = ""
-        DataPoint3.AxisLabel = "A+"
-        DataPoint4.AxisLabel = "A-"
-        DataPoint5.AxisLabel = "AB+"
-        DataPoint6.AxisLabel = "AB-"
-        DataPoint7.AxisLabel = "B+"
-        DataPoint8.AxisLabel = "B-"
-        Series1.Points.Add(DataPoint1)
-        Series1.Points.Add(DataPoint2)
-        Series1.Points.Add(DataPoint3)
-        Series1.Points.Add(DataPoint4)
-        Series1.Points.Add(DataPoint5)
-        Series1.Points.Add(DataPoint6)
-        Series1.Points.Add(DataPoint7)
-        Series1.Points.Add(DataPoint8)
-        Me.Chart2.Series.Add(Series1)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Blodplater"
+        DataPoint21.AxisLabel = "0+"
+        DataPoint21.Label = ""
+        DataPoint22.AxisLabel = "0-"
+        DataPoint22.LegendText = ""
+        DataPoint23.AxisLabel = "A+"
+        DataPoint24.AxisLabel = "A-"
+        DataPoint25.AxisLabel = "AB+"
+        DataPoint26.AxisLabel = "AB-"
+        DataPoint27.AxisLabel = "B+"
+        DataPoint28.AxisLabel = "B-"
+        Series5.Points.Add(DataPoint21)
+        Series5.Points.Add(DataPoint22)
+        Series5.Points.Add(DataPoint23)
+        Series5.Points.Add(DataPoint24)
+        Series5.Points.Add(DataPoint25)
+        Series5.Points.Add(DataPoint26)
+        Series5.Points.Add(DataPoint27)
+        Series5.Points.Add(DataPoint28)
+        Me.Chart2.Series.Add(Series5)
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea6.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea6)
         Me.Chart1.Cursor = System.Windows.Forms.Cursors.Default
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        Legend6.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend6)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Series2.Points.Add(DataPoint9)
-        Series2.Points.Add(DataPoint10)
-        Me.Chart1.Series.Add(Series2)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Legend = "Legend1"
+        Series6.Name = "Series1"
+        Series6.Points.Add(DataPoint29)
+        Series6.Points.Add(DataPoint30)
+        Me.Chart1.Series.Add(Series6)
         '
         'ToolTip1
         '
@@ -1525,6 +1529,18 @@ Partial Class Blodbane
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        '
+        'btnAvbrytNyttPassord
+        '
+        resources.ApplyResources(Me.btnAvbrytNyttPassord, "btnAvbrytNyttPassord")
+        Me.btnAvbrytNyttPassord.Name = "btnAvbrytNyttPassord"
+        Me.btnAvbrytNyttPassord.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        resources.ApplyResources(Me.Button3, "Button3")
+        Me.Button3.Name = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Blodbane
         '
@@ -1776,4 +1792,6 @@ Partial Class Blodbane
     Friend WithEvents txtGmlPassord As TextBox
     Friend WithEvents lblGmlPassord As Label
     Friend WithEvents btnLagreNyttPassord As Button
+    Friend WithEvents btnAvbrytNyttPassord As Button
+    Friend WithEvents Button3 As Button
 End Class

@@ -141,7 +141,6 @@ Public Class Blodbane
 
         If antallRader = 1 Then
             rad = interntabell.Select()
-            MsgBox($"Statuskode og -tekst: {rad(0)("statuskode")} og {rad(0)("beskrivelse")}")
             If IsDBNull(rad(0)("blodtype")) Then
                 rad(0)("blodtype") = ""
             End If
@@ -231,6 +230,62 @@ Public Class Blodbane
                 MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
 
         End If
+        tilkobling.Close()
+    End Sub
+
+    Private Sub OppdaterBlodgiver(ByVal epost As String, ByVal passord As String,
+                                  ByVal fornavn As String, ByVal etternavn As String,
+                                  ByVal adresse As String, ByVal postnr As String,
+                                  ByVal telefon1 As String, ByVal telefon2 As String,
+                                  ByVal statuskode As Integer,
+                                  ByVal fodselsnummer As String, ByVal blodtype As String,
+                                  ByVal siste_blodtapping As Date, ByVal kontaktform As String,
+                                  ByVal merknad As String, ByVal timepreferanse As String)
+        tilkobling.Open()
+        Me.Cursor = Cursors.WaitCursor
+        Dim sqlSporring2 As String = $"UPDATE bruker SET epost='{epost}', passord='{passord}'"
+        sqlSporring2 += $", fornavn='{fornavn}', etternavn='{etternavn}'"
+        sqlSporring2 += $", adresse='{adresse}', postnr='{postnr}'"
+        sqlSporring2 += $", telefon1='{telefon1}', telefon2='{telefon2}'"
+        sqlSporring2 += $", statuskode={statuskode} WHERE epost = '{blodgiveren.Epost1}'"
+        Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
+        Dim da2 As New MySqlDataAdapter
+        Dim interntabell2 As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da2.SelectCommand = sql2
+        da2.Fill(interntabell2)
+
+        Dim sqlSporring1 As String = $"UPDATE blodgiver SET fodselsnummer='{fodselsnummer}', blodtype='{blodtype}'"
+        sqlSporring1 += $", siste_blodtapping=@datotime, kontaktform='{kontaktform}'"
+        sqlSporring1 += $", merknad='{merknad}', timepreferanse='{timepreferanse}' WHERE epost = '{blodgiveren.Epost1}'"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        sql1.Parameters.Add("datotime", MySqlDbType.DateTime).Value = blodgiveren.Siste_blodtapping1
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+        Me.Cursor = Cursors.Default
+        tilkobling.Close()
+
+    End Sub
+
+    'Testsub
+    Private Sub test(epost As String)
+        tilkobling.Open()
+        Me.Cursor = Cursors.WaitCursor
+        MsgBox($"blodgiverepost: {blodgiveren.Epost1}")
+        Dim sqlSporring2 As String = $"UPDATE bruker SET epost = '{epost}' WHERE epost = '{blodgiveren.Epost1}'"
+        Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
+        Dim da2 As New MySqlDataAdapter
+        Dim interntabell2 As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da2.SelectCommand = sql2
+        da2.Fill(interntabell2)
+        blodgiveren.Epost1 = epost
+        Me.Cursor = Cursors.Default
+        MsgBox($"Ny epostadresse ble satt til {blodgiveren.Epost1}")
+
         tilkobling.Close()
     End Sub
 
@@ -381,6 +436,42 @@ Public Class Blodbane
         End If
         Return True
     End Function
+
+    'Slår på visning av objektene for å sette nytt passord
+    Private Sub btnPersDataSettNyttPassord_Click(sender As Object, e As EventArgs) Handles btnPersDataSettNyttPassord.Click
+        btnPersDataLagreEndringer.Visible = False
+        btnPersDataSettNyttPassord.Visible = False
+        lblGmlPassord.Visible = True
+        lblNyttPassord.Visible = True
+        lblNyttPassordGjenta.Visible = True
+        txtGmlPassord.Visible = True
+        txtNyttPassord.Visible = True
+        txtNyttPassordGjenta.Visible = True
+        btnLagreNyttPassord.Visible = True
+    End Sub
+
+    'Avbryter setting av nytt passord og gjør om visningene
+    Private Sub btnAvbrytNyttPassord_Click(sender As Object, e As EventArgs) Handles btnAvbrytNyttPassord.Click
+        btnPersDataLagreEndringer.Visible = True
+        btnPersDataSettNyttPassord.Visible = True
+        lblGmlPassord.Visible = False
+        lblNyttPassord.Visible = False
+        lblNyttPassordGjenta.Visible = False
+        txtGmlPassord.Visible = False
+        txtNyttPassord.Visible = False
+        txtNyttPassordGjenta.Visible = False
+        btnLagreNyttPassord.Visible = False
+    End Sub
+
+    'Lagrer nytt passord for blodgiver
+    Private Sub btnLagreNyttPassord_Click(sender As Object, e As EventArgs) Handles btnLagreNyttPassord.Click
+        If txtGmlPassord.Text = blodgiveren.Passord1 Then
+            If passordSjekk(txtNyttPassord.Text, txtNyttPassordGjenta.Text) Then
+                blodgiveren.Passord1 = txtNyttPassord.Text
+
+            End If
+        End If
+    End Sub
 
     'Logg av blodgiver
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BttnLoggavGiver.Click
@@ -1024,6 +1115,10 @@ Public Class Blodbane
         SPMnr = 1
         lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
         Label26.Text = "Spørsmål 1"
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        test(txtPersDataEpost.Text)
     End Sub
 
     'Forrige spørsmål i erklæring
