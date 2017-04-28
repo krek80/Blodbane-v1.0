@@ -105,7 +105,7 @@ Public Class Blodbane
         blodgiveren.Telefon11 = ""
         blodgiveren.Telefon21 = ""
         blodgiveren.Postnr1 = ""
-        blodgiveren.Statuskode1 = 0
+        blodgiveren.Status1 = ""
 
         bytteRomTime.Datotid1 = dummyDato
         bytteRomTime.Romnummer1 = ""
@@ -126,7 +126,7 @@ Public Class Blodbane
     'Logger på blodgiver og setter opp personinfo i fanen Personinformasjon
     Private Sub ButtonLoggpåGiver_Click(sender As Object, e As EventArgs) Handles BttnLoggpåGiver.Click
         tilkobling.Open()
-        Dim sql As New MySqlCommand("SELECT * FROM bruker br JOIN blodgiver bg ON br.epost=bg.epost WHERE br.epost = @epostInn AND br.passord = @passordInn", tilkobling)
+        Dim sql As New MySqlCommand("SELECT * FROM bruker br JOIN blodgiver bg ON br.epost=bg.epost INNER JOIN personstatus p ON p.kode=br.statuskode WHERE br.epost = @epostInn AND br.passord = @passordInn", tilkobling)
         sql.Parameters.AddWithValue("@epostInn", txtAInn_epost.Text)
         sql.Parameters.AddWithValue("@passordInn", txtAInn_passord.Text)
         Dim da As New MySqlDataAdapter
@@ -138,9 +138,9 @@ Public Class Blodbane
         Dim antallRader As Integer = interntabell.Rows.Count()
 
 
-
         If antallRader = 1 Then
             rad = interntabell.Select()
+            MsgBox($"Statuskode og -tekst: {rad(0)("statuskode")} og {rad(0)("beskrivelse")}")
             If IsDBNull(rad(0)("blodtype")) Then
                 rad(0)("blodtype") = ""
             End If
@@ -173,7 +173,7 @@ Public Class Blodbane
             blodgiveren.Telefon11 = rad(0)("telefon1")
             blodgiveren.Telefon21 = rad(0)("telefon2")
             blodgiveren.Postnr1 = rad(0)("postnr")
-            blodgiveren.Statuskode1 = rad(0)("statuskode")
+            blodgiveren.Status1 = rad(0)("beskrivelse")
 
             'Henter eventuell ny innkalling
             Dim idag, sistetime As DateTime
@@ -211,7 +211,7 @@ Public Class Blodbane
             PanelGiver.BringToFront()
 
             txtPersDataNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
-            txtPersDataGStatus.Text = blodgiveren.Statuskode1
+            txtPersDataGStatus.Text = blodgiveren.Status1
             txtPersDataBlodtype.Text = blodgiveren.Blodtype1
             If blodgiveren.Siste_blodtapping1 = dummyDato Then
                 txtPersDataSisteUnders.Text = ""

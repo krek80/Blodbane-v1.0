@@ -1,8 +1,7 @@
 ﻿Public Class Bruker
-    Private epost, passord, fornavn, etternavn, adresse, telefon1, telefon2, postnr As String
-    Private statuskode As Integer
+    Private epost, passord, fornavn, etternavn, adresse, telefon1, telefon2, postnr, status As String
 
-    Public Sub New(epost As String, passord As String, fornavn As String, etternavn As String, adresse As String, telefon1 As String, telefon2 As String, postnr As String, statuskode As Integer)
+    Public Sub New(epost As String, passord As String, fornavn As String, etternavn As String, adresse As String, telefon1 As String, telefon2 As String, postnr As String, status As String)
         Me.epost = epost
         Me.passord = passord
         Me.fornavn = fornavn
@@ -15,7 +14,7 @@
         Me.telefon1 = telefon1
         Me.telefon2 = telefon2
         Me.postnr = postnr
-        Me.statuskode = statuskode
+        Me.status = status
     End Sub
 
     Public Property Adresse1 As String
@@ -72,12 +71,12 @@
         End Set
     End Property
 
-    Public Property Statuskode1 As Integer
+    Public Property Status1 As String
         Get
-            Return statuskode
+            Return status
         End Get
-        Set(value As Integer)
-            statuskode = value
+        Set(value As String)
+            status = value
         End Set
     End Property
 
