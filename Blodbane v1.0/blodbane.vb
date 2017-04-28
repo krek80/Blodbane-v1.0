@@ -175,7 +175,7 @@ Public Class Blodbane
             blodgiveren.Postnr1 = rad(0)("postnr")
             blodgiveren.Statuskode1 = rad(0)("statuskode")
 
-
+            'Henter eventuell ny innkalling
             Dim idag, sistetime As DateTime
             Dim ingenNyTime As Boolean = False
             idag = Today
@@ -725,7 +725,6 @@ Public Class Blodbane
         End If
         If TxtNesteInnkalling.Text <> "" Then
             DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
-            hentLedigeTimer(DateTimePickerNyTime.Value)
         End If
         BtnBekreftEndretTime.Enabled = False
     End Sub
@@ -751,7 +750,6 @@ Public Class Blodbane
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         tilkobling.Close()
-        MsgBox($"Antall rader i spørring: {interntabell1.Rows.Count}.")
         LBxLedigeTimer.Items.Clear()
         For i = 0 To 7
             fulltimetabell.Add($"{i + 8}:00")
@@ -930,14 +928,12 @@ Public Class Blodbane
                     bytteRomTime.Romnummer1 = radRom("romnr")
                 Else
                     For Each rad1 In interntabell1.Rows
-                        'MsgBox($"Rom fra romoversikt: {radRom("romnr")}. Rom fra søk: {rad1("romnr")}.")
                         If radRom("romnr") <> rad1("romnr") Then
                             bytteRomTime.Romnummer1 = radRom("romnr")
                         End If
                     Next
                 End If
             Next
-            MsgBox($"Ledig rom: {bytteRomTime.Romnummer1}.")
             GpBxEndreInnkalling.Visible = False
             TxtNesteInnkalling.Text = bytteRomTime.Datotid1
             Me.Cursor = Cursors.WaitCursor
@@ -946,7 +942,7 @@ Public Class Blodbane
             sql2.Parameters.Add("nyDatotime", MySqlDbType.DateTime).Value = bytteRomTime.Datotid1
             Dim da2 As New MySqlDataAdapter
             Dim interntabell2 As New DataTable
-
+            MsgBox($"Ny innkallingstime ble satt til {bytteRomTime.Datotid1}")
             'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
             da2.SelectCommand = sql2
             da2.Fill(interntabell2)
