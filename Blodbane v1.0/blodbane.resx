@@ -1821,7 +1821,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="BtnBekreftEndretTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 351</value>
+    <value>12, 374</value>
   </data>
   <data name="BtnBekreftEndretTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1890,7 +1890,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4, 4, 4, 4</value>
   </data>
   <data name="LBxLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 144</value>
+    <value>445, 224</value>
   </data>
   <data name="LBxLedigeTimer.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1917,7 +1917,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4, 4, 4, 4</value>
   </data>
   <data name="GpBxEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 398</value>
+    <value>469, 438</value>
   </data>
   <data name="GpBxEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>

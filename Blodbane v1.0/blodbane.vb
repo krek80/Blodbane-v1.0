@@ -17,6 +17,7 @@ Public Class Blodbane
     Dim antallRom As Integer
     Dim blodgiveren As Blodgiver
     Dim bytteRomTime As Romtime
+    Dim fulltimetabell As New ArrayList()
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
@@ -718,6 +719,7 @@ Public Class Blodbane
 
     'Slår av og på visning av gruppeboksen med skjema for å endre avtalt time
     Private Sub BtnEndreInnkalling_Click(sender As Object, e As EventArgs) Handles BtnEndreInnkalling.Click
+        LBxLedigeTimer.Items.Clear()
         If GpBxEndreInnkalling.Visible Then
             GpBxEndreInnkalling.Visible = False
         Else
@@ -726,6 +728,9 @@ Public Class Blodbane
         If TxtNesteInnkalling.Text <> "" Then
             DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
         End If
+        For i = 0 To fulltimetabell.Count - 1
+            LBxLedigeTimer.Items.Add(fulltimetabell(i))
+        Next
         BtnBekreftEndretTime.Enabled = False
     End Sub
 
@@ -742,7 +747,6 @@ Public Class Blodbane
         Dim rad1 As DataRow
         Dim antallTimerPåDetteKlokkeslettet As Integer = 0
         Dim tabort As Integer = 0
-        Dim fulltimetabell As New ArrayList()
         Dim opptatt As Boolean = False
         Dim raddato1 As DateTime
         Dim i, radnr As Integer
@@ -750,10 +754,8 @@ Public Class Blodbane
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         tilkobling.Close()
-        LBxLedigeTimer.Items.Clear()
-        For i = 0 To 7
-            fulltimetabell.Add($"{i + 8}:00")
-        Next
+        FulltimeTabellReset()
+
         For Each rad1 In interntabell1.Rows
             raddato1 = rad1("datotid")
             radnr = raddato1.Hour
@@ -761,10 +763,18 @@ Public Class Blodbane
 
         Next
 
-        For i = 0 To fulltimetabell.Count - 1
-            LBxLedigeTimer.Items.Add(fulltimetabell(i))
-        Next
+    End Sub
 
+    'Resetter fulltimetabellen
+    Private Sub FulltimeTabellReset()
+        Dim i, tabellstørrelse As Integer
+        tabellstørrelse = fulltimetabell.Count
+        For i = 0 To tabellstørrelse - 1
+            fulltimetabell.RemoveAt(0)
+        Next
+        For i = 0 To 7
+            fulltimetabell.Add($"{i + 8}:00")
+        Next
     End Sub
 
     'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
