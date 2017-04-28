@@ -19,6 +19,8 @@ Public Class Blodbane
     Dim bytteRomTime As Romtime
     Dim fulltimetabell As New ArrayList()
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
+    Dim dummyFodselsnr, aarstallet As String
+    Dim dummyEpost As String = "@@.@...@..@."
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
     Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
     Dim presentertGiver, bgSøkParameter As String
@@ -34,6 +36,7 @@ Public Class Blodbane
         Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
+        Dim sifre As String
         Dim statustekst, statuskode, psted, pnr, spmNR, spmTekst As String
         giversøk.Clear()
         tilkobling.Open()
@@ -52,6 +55,14 @@ Public Class Blodbane
 
         blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
         bytteRomTime = New Romtime(dummyDato, "", 0)
+        If Today.Month < 10 Then
+            sifre = $"0{Today.Month}"
+        Else
+            sifre = CStr(Today.Month)
+        End If
+        aarstallet = CStr(Today.Year).Substring(2, 2)
+        dummyFodselsnr = $"{sifre}{sifre}{aarstallet}11111"
+        MsgBox($"dummyFodselsnr er: {dummyFodselsnr}")
 
         'Lager liste over rommene
         antallRom = 0
@@ -61,7 +72,6 @@ Public Class Blodbane
         daRom.SelectCommand = sqlRom
         daRom.Fill(interntabellRom)
         antallRom = interntabellRom.Rows.Count()
-
 
         'Henter postnummer og sted og legger i hashtable
         Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
@@ -159,21 +169,6 @@ Public Class Blodbane
             If IsDBNull(rad(0)("siste_blodtapping")) Then
                 rad(0)("siste_blodtapping") = dummyDato
             End If
-            'blodgiveren.Fodselsnummer1 = rad(0)("fodselsnummer")
-            'blodgiveren.Blodtype1 = rad(0)("blodtype")
-            'blodgiveren.Kontaktform1 = rad(0)("kontaktform")
-            'blodgiveren.Merknad1 = rad(0)("merknad")
-            'blodgiveren.Timepreferanse1 = rad(0)("timepreferanse")
-            'blodgiveren.Siste_blodtapping1 = rad(0)("siste_blodtapping")
-            'blodgiveren.Epost1 = rad(0)("epost")
-            'blodgiveren.Passord1 = rad(0)("passord")
-            'blodgiveren.Fornavn1 = rad(0)("fornavn")
-            'blodgiveren.Etternavn1 = rad(0)("etternavn")
-            'blodgiveren.Adresse1 = rad(0)("adresse")
-            'blodgiveren.Telefon11 = rad(0)("telefon1")
-            'blodgiveren.Telefon21 = rad(0)("telefon2")
-            'blodgiveren.Postnr1 = rad(0)("postnr")
-            'blodgiveren.Status1 = rad(0)("beskrivelse")
             BlodgiverObjOppdat(rad(0)("epost"), rad(0)("passord"), rad(0)("fornavn"),
                                rad(0)("etternavn"), rad(0)("adresse"), rad(0)("postnr"),
                                rad(0)("telefon1"), rad(0)("telefon2"), rad(0)("statuskode"),
@@ -208,12 +203,12 @@ Public Class Blodbane
                 TxtNesteInnkalling.Text = "Ikke fastsatt"
                 BtnEndreInnkalling.Enabled = False
             End If
-
+            'Bytter til panelet for blodgiver
             PanelPåmelding.Hide()
             PanelAnsatt.Hide()
             PanelGiver.Show()
             PanelGiver.BringToFront()
-
+            'Setter personinfo i tekstboksene
             txtPersDataNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
             txtPersDataGStatus.Text = blodgiveren.Status1
             txtPersDataBlodtype.Text = blodgiveren.Blodtype1
@@ -323,7 +318,7 @@ Public Class Blodbane
                                   txtBgInn_personnr.Text, txtBgInn_poststed.Text,
                                   txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text,
                                   txtBgInn_epost.Text, txtBgInn_passord1.Text,
-                                  txtBgInn_passord2.Text) Then
+                                  txtBgInn_passord2.Text, "hvilkenSomHelstStreng") Then
 
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
@@ -344,11 +339,6 @@ Public Class Blodbane
                 Dim interntabell2 As New DataTable
                 da2.SelectCommand = sql2
                 da2.Fill(interntabell2)
-
-                'PanelPåmelding.Hide()
-                'PanelAnsatt.Hide()
-                'PanelGiver.Show()
-                'PanelGiver.BringToFront()
                 MsgBox("Skjema Ok! Nå kan du logge deg på.")
 
             Else
@@ -367,7 +357,7 @@ Public Class Blodbane
                                         ByVal personnrInn As String, ByVal poststedInn As String,
                                         ByVal telefon1Inn As String, ByVal telefon2Inn As String,
                                         ByVal epostInn As String, ByVal passord1Inn As String,
-                                        ByVal passord2Inn As String) As Boolean
+                                        ByVal passord2Inn As String, ByVal kontaktformInn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
@@ -387,7 +377,7 @@ Public Class Blodbane
         da2.SelectCommand = sql2
         da2.Fill(interntabell2)
 
-        If fornavnInn = "" Or etternavnInn = "" Or telefon1Inn = "" Then
+        If fornavnInn = "" Or etternavnInn = "" Or telefon1Inn = "" Or kontaktformInn = "" Then
             MsgBox("Alle felt må være utfylt unntatt gateadresse- og telefon 2-feltet må være utfylt.", MsgBoxStyle.Critical)
             Return False
         End If
@@ -399,7 +389,7 @@ Public Class Blodbane
 
         Dim aar As String
         Dim aarstall As Integer = CInt(personnrInn.Substring(4, 2))
-        If aarstall < 17 Then
+        If aarstall < CInt(aarstallet) Then
             aar = $"20{aarstall}"
         Else
             aar = $"19{aarstall}"
@@ -410,7 +400,7 @@ Public Class Blodbane
             Return False
         End If
 
-        If interntabell2.Rows.Count = 1 Then
+        If interntabell2.Rows.Count = 1 And personnrInn <> dummyFodselsnr Then
             MsgBox("Fødselsnummeret finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
             Return False
         End If
@@ -432,7 +422,7 @@ Public Class Blodbane
             End If
         End If
 
-        If interntabell1.Rows.Count = 1 Then
+        If interntabell1.Rows.Count = 1 And epostInn <> dummyEpost Then
             MsgBox("Epostadressen finnes fra før. Er du allerede registrert, så logg deg på i skjemaet til høyre.", MsgBoxStyle.Critical)
             Return False
         End If
@@ -508,11 +498,17 @@ Public Class Blodbane
                 Me.Cursor = Cursors.Default
                 If interntabell1.Rows.Count = 1 Then
                     Dim rad1() As DataRow = interntabell1.Select
-                    OppdaterBlodgiver(blodgiveren.Epost1, blodgiveren.Passord1, blodgiveren.Fornavn1,
+                    Me.Cursor = Cursors.WaitCursor
+                    tilkobling.Open()
+
+                    OppdaterBlodgiver(blodgiveren.Epost1, txtNyttPassord.Text, blodgiveren.Fornavn1,
                                   blodgiveren.Etternavn1, blodgiveren.Adresse1, blodgiveren.Postnr1,
                                   blodgiveren.Telefon11, blodgiveren.Telefon21, rad1(0)("kode"),
                                   blodgiveren.Fodselsnummer1, blodgiveren.Blodtype1, blodgiveren.Siste_blodtapping1,
                                   blodgiveren.Kontaktform1, blodgiveren.Merknad1, blodgiveren.Timepreferanse1)
+                    tilkobling.Close()
+                    Me.Cursor = Cursors.Default
+
                     btnPersDataLagreEndringer.Visible = True
                     btnPersDataSettNyttPassord.Visible = True
                     lblGmlPassord.Visible = False
@@ -528,6 +524,53 @@ Public Class Blodbane
             End If
         Else
             MsgBox("Du tastet inn feil gammelt passord. Prøv igjen!", MsgBoxStyle.Critical)
+        End If
+
+
+    End Sub
+
+    'Lagrer ny personinformasjon satt av blodgiver
+    Private Sub btnPersDataLagreEndringer_Click(sender As Object, e As EventArgs) Handles btnPersDataLagreEndringer.Click
+        Dim epost As String
+        If txtPersDataEpost.Text <> blodgiveren.Epost1 Or txtPersDataGateAdr.Text <> blodgiveren.Adresse1 Or txtPersDataPostnr.Text <> blodgiveren.Postnr1 Or txtPersDataTlf.Text <> blodgiveren.Telefon11 Or txtPersDataTlf2.Text <> blodgiveren.Telefon21 Or CBxKontaktform.Text <> blodgiveren.Kontaktform1 Then
+            If txtPersDataEpost.Text = blodgiveren.Epost1 Then
+                epost = dummyEpost
+            Else
+                epost = txtPersDataEpost.Text
+            End If
+            If bgRegSkjemadata_OK(blodgiveren.Fornavn1, blodgiveren.Etternavn1, dummyFodselsnr, txtPersDataPoststed.Text,
+                                  txtPersDataTlf.Text, txtPersDataTlf2.Text, epost,
+                                  blodgiveren.Passord1, blodgiveren.Passord1, blodgiveren.Kontaktform1) Then
+                Me.Cursor = Cursors.WaitCursor
+                tilkobling.Open()
+                Dim sqlSporring1 As String = $"SELECT kode FROM personstatus WHERE beskrivelse ='{txtPersDataGStatus.Text}'"
+                Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+                Dim da1 As New MySqlDataAdapter
+                Dim interntabell1 As New DataTable
+                'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+                da1.SelectCommand = sql1
+                da1.Fill(interntabell1)
+                tilkobling.Close()
+                Me.Cursor = Cursors.Default
+                If interntabell1.Rows.Count = 1 Then
+                    Dim rad1() As DataRow = interntabell1.Select
+                    Me.Cursor = Cursors.WaitCursor
+                    tilkobling.Open()
+
+                    OppdaterBlodgiver(txtPersDataEpost.Text, blodgiveren.Passord1, blodgiveren.Fornavn1,
+                              blodgiveren.Etternavn1, txtPersDataGateAdr.Text, txtPersDataPostnr.Text,
+                              txtPersDataTlf.Text, txtPersDataTlf2.Text, rad1(0)("kode"),
+                              blodgiveren.Fodselsnummer1, blodgiveren.Blodtype1, blodgiveren.Siste_blodtapping1,
+                              CBxKontaktform.Text, blodgiveren.Merknad1, blodgiveren.Timepreferanse1)
+                    tilkobling.Close()
+                    Me.Cursor = Cursors.Default
+                    MsgBox("Informasjonen ble oppdatert.", MsgBoxStyle.Information)
+                Else
+                    MsgBox("Noe gikk feil under søk etter statuskode.", MsgBoxStyle.Critical)
+                End If
+            End If
+        Else
+            MsgBox("Ingen endringer av personinformasjonen ble funnet.", MsgBoxStyle.Information)
         End If
     End Sub
 

@@ -110,6 +110,7 @@ Partial Class Blodbane
         Me.TxtNesteInnkalling = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.GpBxPersonData = New System.Windows.Forms.GroupBox()
+        Me.btnAvbrytNyttPassord = New System.Windows.Forms.Button()
         Me.txtNyttPassordGjenta = New System.Windows.Forms.TextBox()
         Me.lblNyttPassordGjenta = New System.Windows.Forms.Label()
         Me.txtNyttPassord = New System.Windows.Forms.TextBox()
@@ -228,8 +229,6 @@ Partial Class Blodbane
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnAvbrytNyttPassord = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -621,7 +620,6 @@ Partial Class Blodbane
         'TabPagBGPersInfo
         '
         Me.TabPagBGPersInfo.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPagBGPersInfo.Controls.Add(Me.Button3)
         Me.TabPagBGPersInfo.Controls.Add(Me.GroupBox9)
         Me.TabPagBGPersInfo.Controls.Add(Me.BttnLoggavGiver)
         Me.TabPagBGPersInfo.Controls.Add(Me.GpBxTime)
@@ -757,10 +755,17 @@ Partial Class Blodbane
         Me.GpBxPersonData.Name = "GpBxPersonData"
         Me.GpBxPersonData.TabStop = False
         '
+        'btnAvbrytNyttPassord
+        '
+        resources.ApplyResources(Me.btnAvbrytNyttPassord, "btnAvbrytNyttPassord")
+        Me.btnAvbrytNyttPassord.Name = "btnAvbrytNyttPassord"
+        Me.btnAvbrytNyttPassord.UseVisualStyleBackColor = True
+        '
         'txtNyttPassordGjenta
         '
         resources.ApplyResources(Me.txtNyttPassordGjenta, "txtNyttPassordGjenta")
         Me.txtNyttPassordGjenta.Name = "txtNyttPassordGjenta"
+        Me.txtNyttPassordGjenta.UseSystemPasswordChar = True
         '
         'lblNyttPassordGjenta
         '
@@ -771,6 +776,7 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.txtNyttPassord, "txtNyttPassord")
         Me.txtNyttPassord.Name = "txtNyttPassord"
+        Me.txtNyttPassord.UseSystemPasswordChar = True
         '
         'lblNyttPassord
         '
@@ -781,6 +787,7 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.txtGmlPassord, "txtGmlPassord")
         Me.txtGmlPassord.Name = "txtGmlPassord"
+        Me.txtGmlPassord.UseSystemPasswordChar = True
         '
         'lblGmlPassord
         '
@@ -1530,18 +1537,6 @@ Partial Class Blodbane
         Me.ToolTip1.ReshowDelay = 100
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
-        'btnAvbrytNyttPassord
-        '
-        resources.ApplyResources(Me.btnAvbrytNyttPassord, "btnAvbrytNyttPassord")
-        Me.btnAvbrytNyttPassord.Name = "btnAvbrytNyttPassord"
-        Me.btnAvbrytNyttPassord.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        resources.ApplyResources(Me.Button3, "Button3")
-        Me.Button3.Name = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Blodbane
         '
         Me.AcceptButton = Me.BtnRegBlodgiver
@@ -1793,5 +1788,4 @@ Partial Class Blodbane
     Friend WithEvents lblGmlPassord As Label
     Friend WithEvents btnLagreNyttPassord As Button
     Friend WithEvents btnAvbrytNyttPassord As Button
-    Friend WithEvents Button3 As Button
 End Class

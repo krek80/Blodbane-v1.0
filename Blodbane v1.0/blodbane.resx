@@ -1764,30 +1764,6 @@ For registrerte givere</value>
   <data name="&gt;&gt;TabPage5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1080, 599</value>
-  </data>
-  <data name="Button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 36</value>
-  </data>
-  <data name="Button3.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="Button3.Text" xml:space="preserve">
-    <value>Button3</value>
-  </data>
-  <data name="&gt;&gt;Button3.Name" xml:space="preserve">
-    <value>Button3</value>
-  </data>
-  <data name="&gt;&gt;Button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button3.Parent" xml:space="preserve">
-    <value>TabPagBGPersInfo</value>
-  </data>
-  <data name="&gt;&gt;Button3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="GroupBox9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
@@ -1819,7 +1795,7 @@ For registrerte givere</value>
     <value>TabPagBGPersInfo</value>
   </data>
   <data name="&gt;&gt;GroupBox9.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="BttnLoggavGiver.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -1858,7 +1834,7 @@ For registrerte givere</value>
     <value>TabPagBGPersInfo</value>
   </data>
   <data name="&gt;&gt;BttnLoggavGiver.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;Label19.Name" xml:space="preserve">
     <value>Label19</value>
@@ -1963,7 +1939,1239 @@ For registrerte givere</value>
     <value>TabPagBGPersInfo</value>
   </data>
   <data name="&gt;&gt;GpBxTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnAvbrytNyttPassord.Name" xml:space="preserve">
+    <value>btnAvbrytNyttPassord</value>
+  </data>
+  <data name="&gt;&gt;btnAvbrytNyttPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAvbrytNyttPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;btnAvbrytNyttPassord.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassordGjenta.Name" xml:space="preserve">
+    <value>txtNyttPassordGjenta</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassordGjenta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassordGjenta.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassordGjenta.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassordGjenta.Name" xml:space="preserve">
+    <value>lblNyttPassordGjenta</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassordGjenta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassordGjenta.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassordGjenta.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassord.Name" xml:space="preserve">
+    <value>txtNyttPassord</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtNyttPassord.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassord.Name" xml:space="preserve">
+    <value>lblNyttPassord</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;lblNyttPassord.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtGmlPassord.Name" xml:space="preserve">
+    <value>txtGmlPassord</value>
+  </data>
+  <data name="&gt;&gt;txtGmlPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtGmlPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtGmlPassord.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblGmlPassord.Name" xml:space="preserve">
+    <value>lblGmlPassord</value>
+  </data>
+  <data name="&gt;&gt;lblGmlPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblGmlPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;lblGmlPassord.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnLagreNyttPassord.Name" xml:space="preserve">
+    <value>btnLagreNyttPassord</value>
+  </data>
+  <data name="&gt;&gt;btnLagreNyttPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLagreNyttPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;btnLagreNyttPassord.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Label143.Name" xml:space="preserve">
+    <value>Label143</value>
+  </data>
+  <data name="&gt;&gt;Label143.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label143.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label143.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Label142.Name" xml:space="preserve">
+    <value>Label142</value>
+  </data>
+  <data name="&gt;&gt;Label142.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label142.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label142.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPoststed.Name" xml:space="preserve">
+    <value>txtPersDataPoststed</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPoststed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPoststed.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPoststed.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataSettNyttPassord.Name" xml:space="preserve">
+    <value>btnPersDataSettNyttPassord</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataSettNyttPassord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataSettNyttPassord.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataSettNyttPassord.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataEpost.Name" xml:space="preserve">
+    <value>txtPersDataEpost</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataEpost.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataEpost.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataEpost.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;Label22.Name" xml:space="preserve">
+    <value>Label22</value>
+  </data>
+  <data name="&gt;&gt;Label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label22.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label22.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Label20.Name" xml:space="preserve">
+    <value>Label20</value>
+  </data>
+  <data name="&gt;&gt;Label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label20.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label20.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;Label122.Name" xml:space="preserve">
+    <value>Label122</value>
+  </data>
+  <data name="&gt;&gt;Label122.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label122.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label122.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;CBxKontaktform.Name" xml:space="preserve">
+    <value>CBxKontaktform</value>
+  </data>
+  <data name="&gt;&gt;CBxKontaktform.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBxKontaktform.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;CBxKontaktform.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataSisteUnders.Name" xml:space="preserve">
+    <value>txtPersDataSisteUnders</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataSisteUnders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataSisteUnders.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataSisteUnders.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Label121.Name" xml:space="preserve">
+    <value>Label121</value>
+  </data>
+  <data name="&gt;&gt;Label121.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label121.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label121.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataBlodtype.Name" xml:space="preserve">
+    <value>txtPersDataBlodtype</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataBlodtype.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataBlodtype.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataBlodtype.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf2.Name" xml:space="preserve">
+    <value>txtPersDataTlf2</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf2.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;Label25.Name" xml:space="preserve">
+    <value>Label25</value>
+  </data>
+  <data name="&gt;&gt;Label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label25.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label25.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf.Name" xml:space="preserve">
+    <value>txtPersDataTlf</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataTlf.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Label24.Name" xml:space="preserve">
+    <value>Label24</value>
+  </data>
+  <data name="&gt;&gt;Label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label24.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label24.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;Label17.Name" xml:space="preserve">
+    <value>Label17</value>
+  </data>
+  <data name="&gt;&gt;Label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label17.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGStatus.Name" xml:space="preserve">
+    <value>txtPersDataGStatus</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGStatus.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGStatus.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGateAdr.Name" xml:space="preserve">
+    <value>txtPersDataGateAdr</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGateAdr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGateAdr.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataGateAdr.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
+  </data>
+  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataLagreEndringer.Name" xml:space="preserve">
+    <value>btnPersDataLagreEndringer</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataLagreEndringer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataLagreEndringer.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;btnPersDataLagreEndringer.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataNavn.Name" xml:space="preserve">
+    <value>txtPersDataNavn</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataNavn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataNavn.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataNavn.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPostnr.Name" xml:space="preserve">
+    <value>txtPersDataPostnr</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPostnr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPostnr.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;txtPersDataPostnr.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;Label16.Name" xml:space="preserve">
+    <value>Label16</value>
+  </data>
+  <data name="&gt;&gt;Label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label16.Parent" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="GpBxPersonData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="GpBxPersonData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 58</value>
+  </data>
+  <data name="GpBxPersonData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxPersonData.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxPersonData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>520, 758</value>
+  </data>
+  <data name="GpBxPersonData.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="GpBxPersonData.Text" xml:space="preserve">
+    <value>Persondata</value>
+  </data>
+  <data name="&gt;&gt;GpBxPersonData.Name" xml:space="preserve">
+    <value>GpBxPersonData</value>
+  </data>
+  <data name="&gt;&gt;GpBxPersonData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GpBxPersonData.Parent" xml:space="preserve">
+    <value>TabPagBGPersInfo</value>
+  </data>
+  <data name="&gt;&gt;GpBxPersonData.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TabPagBGPersInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="TabPagBGPersInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPagBGPersInfo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPagBGPersInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1851, 843</value>
+  </data>
+  <data name="TabPagBGPersInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TabPagBGPersInfo.Text" xml:space="preserve">
+    <value>Personinformasjon</value>
+  </data>
+  <data name="&gt;&gt;TabPagBGPersInfo.Name" xml:space="preserve">
+    <value>TabPagBGPersInfo</value>
+  </data>
+  <data name="&gt;&gt;TabPagBGPersInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPagBGPersInfo.Parent" xml:space="preserve">
+    <value>TbCtrlBlodgiver</value>
+  </data>
+  <data name="&gt;&gt;TabPagBGPersInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TbCtrlBlodgiver.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="TbCtrlBlodgiver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="TbCtrlBlodgiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TbCtrlBlodgiver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1859, 876</value>
+  </data>
+  <data name="TbCtrlBlodgiver.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;TbCtrlBlodgiver.Name" xml:space="preserve">
+    <value>TbCtrlBlodgiver</value>
+  </data>
+  <data name="&gt;&gt;TbCtrlBlodgiver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TbCtrlBlodgiver.Parent" xml:space="preserve">
+    <value>PanelGiver</value>
+  </data>
+  <data name="&gt;&gt;TbCtrlBlodgiver.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PanelGiver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 37</value>
+  </data>
+  <data name="PanelGiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="PanelGiver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1867, 892</value>
+  </data>
+  <data name="PanelGiver.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="PanelGiver.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PanelGiver.Name" xml:space="preserve">
+    <value>PanelGiver</value>
+  </data>
+  <data name="&gt;&gt;PanelGiver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelGiver.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelGiver.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1108, 432</value>
+  </data>
+  <data name="Button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 113</value>
+  </data>
+  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Button2.Text" xml:space="preserve">
+    <value>Send inn</value>
+  </data>
+  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
+    <value>Button2</value>
+  </data>
+  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
+    <value>TabPage5</value>
+  </data>
+  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.Name" xml:space="preserve">
+    <value>RadioButton4</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.Name" xml:space="preserve">
+    <value>RadioButton3</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.Name" xml:space="preserve">
+    <value>lblSpml</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label26.Name" xml:space="preserve">
+    <value>Label26</value>
+  </data>
+  <data name="&gt;&gt;Label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label26.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.Name" xml:space="preserve">
+    <value>btnNeste</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 251</value>
+  </data>
+  <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 347</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Egenerklæring</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>TabPage5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadioButton4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadioButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 196</value>
+  </data>
+  <data name="RadioButton4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RadioButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 24</value>
+  </data>
+  <data name="RadioButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RadioButton4.Text" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.Name" xml:space="preserve">
+    <value>RadioButton4</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RadioButton4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadioButton3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadioButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 196</value>
+  </data>
+  <data name="RadioButton3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RadioButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 24</value>
+  </data>
+  <data name="RadioButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RadioButton3.Text" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.Name" xml:space="preserve">
+    <value>RadioButton3</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RadioButton3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 242</value>
+  </data>
+  <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 28</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>&lt;&lt; Forrige spørsmål</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblSpml.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSpml.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 34</value>
+  </data>
+  <data name="lblSpml.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 20</value>
+  </data>
+  <data name="lblSpml.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblSpml.Text" xml:space="preserve">
+    <value>lbl</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.Name" xml:space="preserve">
+    <value>lblSpml</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblSpml.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 319</value>
+  </data>
+  <data name="Label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="Label26.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label26.Text" xml:space="preserve">
+    <value>Label 26</value>
+  </data>
+  <data name="&gt;&gt;Label26.Name" xml:space="preserve">
+    <value>Label26</value>
+  </data>
+  <data name="&gt;&gt;Label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label26.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnNeste.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 242</value>
+  </data>
+  <data name="btnNeste.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnNeste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 28</value>
+  </data>
+  <data name="btnNeste.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnNeste.Text" xml:space="preserve">
+    <value>Neste spørsmål &gt;&gt;</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.Name" xml:space="preserve">
+    <value>btnNeste</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnNeste.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RichTextBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="RichTextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 7</value>
+  </data>
+  <data name="RichTextBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RichTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1831, 171</value>
+  </data>
+  <data name="RichTextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Blodoverføring er en uerstattelig del av moderne medisinsk behandling. Likevel kan både det å motta blodoverføring og det å gi blod medføre risiko. 
+
+Noen sykdommer kan overføres med blod fra blodgiver til pasient. Man kan være bærer av overførbare smittestoffer uten selv å vite om det. En nylig smittet person kan være smittefarlig selv om testene ikke viser noe galt. Av den grunn må personer som kan ha blitt utsatt for smitte, ikke gi blod. Vi stiller derfor mange spørsmål som vedrører situasjoner der man kan ha blitt utsatt for smitte. 
+Hvis man er frisk, er risikoen ved å gi blod svært liten. Noen sykdommer kan gi økt risiko for komplikasjoner etter blodgivning. Vi stiller derfor mange spørsmål om blodgiverens egen helse, for å være sikre på at han eller hun trygt kan gi blod. 
+
+Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning av blodbankpersonalets taushetsplikt. Blodbanken må ha full tillit til at de opplysningene som gis er riktige. Er du i tvil om du kan være blodgiver, kan du drøfte dette med den som kontrollerer spørsmålene. Blodbanken har informasjonsmateriell om blodgivning. Hvis du ikke har lest dette tidligere, oppfordrer vi deg til å gjøre det nå! </value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.Name" xml:space="preserve">
+    <value>RichTextBox1</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.Parent" xml:space="preserve">
+    <value>TabPage5</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 62</value>
+  </data>
+  <data name="Label19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 20</value>
+  </data>
+  <data name="Label19.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>Preferanser vedr. innkalling</value>
+  </data>
+  <data name="&gt;&gt;Label19.Name" xml:space="preserve">
+    <value>Label19</value>
+  </data>
+  <data name="&gt;&gt;Label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label19.Parent" xml:space="preserve">
+    <value>GpBxTime</value>
+  </data>
+  <data name="&gt;&gt;Label19.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RTxtPrefInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 89</value>
+  </data>
+  <data name="RTxtPrefInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RTxtPrefInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 125</value>
+  </data>
+  <data name="RTxtPrefInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RTxtPrefInnkalling.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RTxtPrefInnkalling.Name" xml:space="preserve">
+    <value>RTxtPrefInnkalling</value>
+  </data>
+  <data name="&gt;&gt;RTxtPrefInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RTxtPrefInnkalling.Parent" xml:space="preserve">
+    <value>GpBxTime</value>
+  </data>
+  <data name="&gt;&gt;RTxtPrefInnkalling.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label144.Name" xml:space="preserve">
+    <value>Label144</value>
+  </data>
+  <data name="&gt;&gt;Label144.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label144.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;Label144.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.Name" xml:space="preserve">
+    <value>DateTimePickerNyTime</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.Name" xml:space="preserve">
+    <value>BtnBekreftEndretTime</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.Name" xml:space="preserve">
+    <value>LblLedigeTimer</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.Name" xml:space="preserve">
+    <value>LBxLedigeTimer</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 286</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 438</value>
+  </data>
+  <data name="GpBxEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Text" xml:space="preserve">
+    <value>Ny innkallingstime</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GpBxEndreInnkalling.Name" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;GpBxEndreInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GpBxEndreInnkalling.Parent" xml:space="preserve">
+    <value>GpBxTime</value>
+  </data>
+  <data name="&gt;&gt;GpBxEndreInnkalling.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label144.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label144.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label144.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 36</value>
+  </data>
+  <data name="Label144.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label144.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 20</value>
+  </data>
+  <data name="Label144.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label144.Text" xml:space="preserve">
+    <value>Velg dato, og klikk på ønsket ledig time</value>
+  </data>
+  <data name="&gt;&gt;Label144.Name" xml:space="preserve">
+    <value>Label144</value>
+  </data>
+  <data name="&gt;&gt;Label144.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label144.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;Label144.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DateTimePickerNyTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 69</value>
+  </data>
+  <data name="DateTimePickerNyTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="DateTimePickerNyTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 27</value>
+  </data>
+  <data name="DateTimePickerNyTime.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.Name" xml:space="preserve">
+    <value>DateTimePickerNyTime</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;DateTimePickerNyTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnBekreftEndretTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="BtnBekreftEndretTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 374</value>
+  </data>
+  <data name="BtnBekreftEndretTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="BtnBekreftEndretTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 37</value>
+  </data>
+  <data name="BtnBekreftEndretTime.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="BtnBekreftEndretTime.Text" xml:space="preserve">
+    <value>Bekreft endret time</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.Name" xml:space="preserve">
+    <value>BtnBekreftEndretTime</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;BtnBekreftEndretTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LblLedigeTimer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LblLedigeTimer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 107</value>
+  </data>
+  <data name="LblLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="LblLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
+  </data>
+  <data name="LblLedigeTimer.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="LblLedigeTimer.Text" xml:space="preserve">
+    <value>Ledige timer:</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.Name" xml:space="preserve">
+    <value>LblLedigeTimer</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;LblLedigeTimer.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LBxLedigeTimer.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="LBxLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 135</value>
+  </data>
+  <data name="LBxLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="LBxLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 224</value>
+  </data>
+  <data name="LBxLedigeTimer.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.Name" xml:space="preserve">
+    <value>LBxLedigeTimer</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.Parent" xml:space="preserve">
+    <value>GpBxEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;LBxLedigeTimer.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BtnEndreInnkalling.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="BtnEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 228</value>
+  </data>
+  <data name="BtnEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="BtnEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 38</value>
+  </data>
+  <data name="BtnEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="BtnEndreInnkalling.Text" xml:space="preserve">
+    <value>Endre innkallingstime</value>
+  </data>
+  <data name="&gt;&gt;BtnEndreInnkalling.Name" xml:space="preserve">
+    <value>BtnEndreInnkalling</value>
+  </data>
+  <data name="&gt;&gt;BtnEndreInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnEndreInnkalling.Parent" xml:space="preserve">
+    <value>GpBxTime</value>
+  </data>
+  <data name="&gt;&gt;BtnEndreInnkalling.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TxtNesteInnkalling.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TxtNesteInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 25</value>
+  </data>
+  <data name="TxtNesteInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TxtNesteInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 27</value>
+  </data>
+  <data name="TxtNesteInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TxtNesteInnkalling.Name" xml:space="preserve">
+    <value>TxtNesteInnkalling</value>
+  </data>
+  <data name="&gt;&gt;TxtNesteInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtNesteInnkalling.Parent" xml:space="preserve">
+    <value>GpBxTime</value>
+  </data>
+  <data name="&gt;&gt;TxtNesteInnkalling.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 31</value>
+  </data>
+  <data name="Label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 20</value>
+  </data>
+  <data name="Label18.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>Din neste innkalling:</value>
+  </data>
+  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
+    <value>Label18</value>
+  </data>
+  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
+    <value>GpBxTime</value>
+  </data>
+  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="btnAvbrytNyttPassord.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2978,842 +4186,6 @@ For registrerte givere</value>
   </data>
   <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
     <value>32</value>
-  </data>
-  <data name="GpBxPersonData.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="GpBxPersonData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 58</value>
-  </data>
-  <data name="GpBxPersonData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GpBxPersonData.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GpBxPersonData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 758</value>
-  </data>
-  <data name="GpBxPersonData.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="GpBxPersonData.Text" xml:space="preserve">
-    <value>Persondata</value>
-  </data>
-  <data name="&gt;&gt;GpBxPersonData.Name" xml:space="preserve">
-    <value>GpBxPersonData</value>
-  </data>
-  <data name="&gt;&gt;GpBxPersonData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GpBxPersonData.Parent" xml:space="preserve">
-    <value>TabPagBGPersInfo</value>
-  </data>
-  <data name="&gt;&gt;GpBxPersonData.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="TabPagBGPersInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="TabPagBGPersInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TabPagBGPersInfo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TabPagBGPersInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1851, 843</value>
-  </data>
-  <data name="TabPagBGPersInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TabPagBGPersInfo.Text" xml:space="preserve">
-    <value>Personinformasjon</value>
-  </data>
-  <data name="&gt;&gt;TabPagBGPersInfo.Name" xml:space="preserve">
-    <value>TabPagBGPersInfo</value>
-  </data>
-  <data name="&gt;&gt;TabPagBGPersInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPagBGPersInfo.Parent" xml:space="preserve">
-    <value>TbCtrlBlodgiver</value>
-  </data>
-  <data name="&gt;&gt;TabPagBGPersInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TbCtrlBlodgiver.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="TbCtrlBlodgiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="TbCtrlBlodgiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TbCtrlBlodgiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1859, 876</value>
-  </data>
-  <data name="TbCtrlBlodgiver.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;TbCtrlBlodgiver.Name" xml:space="preserve">
-    <value>TbCtrlBlodgiver</value>
-  </data>
-  <data name="&gt;&gt;TbCtrlBlodgiver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TbCtrlBlodgiver.Parent" xml:space="preserve">
-    <value>PanelGiver</value>
-  </data>
-  <data name="&gt;&gt;TbCtrlBlodgiver.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PanelGiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 37</value>
-  </data>
-  <data name="PanelGiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="PanelGiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1867, 892</value>
-  </data>
-  <data name="PanelGiver.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="PanelGiver.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PanelGiver.Name" xml:space="preserve">
-    <value>PanelGiver</value>
-  </data>
-  <data name="&gt;&gt;PanelGiver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelGiver.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelGiver.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1108, 432</value>
-  </data>
-  <data name="Button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 113</value>
-  </data>
-  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="Button2.Text" xml:space="preserve">
-    <value>Send inn</value>
-  </data>
-  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
-    <value>Button2</value>
-  </data>
-  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
-    <value>TabPage5</value>
-  </data>
-  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.Name" xml:space="preserve">
-    <value>RadioButton4</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.Name" xml:space="preserve">
-    <value>RadioButton3</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.Name" xml:space="preserve">
-    <value>lblSpml</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Label26.Name" xml:space="preserve">
-    <value>Label26</value>
-  </data>
-  <data name="&gt;&gt;Label26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label26.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.Name" xml:space="preserve">
-    <value>btnNeste</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 251</value>
-  </data>
-  <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>561, 347</value>
-  </data>
-  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Egenerklæring</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>TabPage5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadioButton4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RadioButton4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 196</value>
-  </data>
-  <data name="RadioButton4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="RadioButton4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 24</value>
-  </data>
-  <data name="RadioButton4.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RadioButton4.Text" xml:space="preserve">
-    <value>Nei</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.Name" xml:space="preserve">
-    <value>RadioButton4</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;RadioButton4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadioButton3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RadioButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 196</value>
-  </data>
-  <data name="RadioButton3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="RadioButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
-  </data>
-  <data name="RadioButton3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="RadioButton3.Text" xml:space="preserve">
-    <value>Ja</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.Name" xml:space="preserve">
-    <value>RadioButton3</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;RadioButton3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 242</value>
-  </data>
-  <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 28</value>
-  </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>&lt;&lt; Forrige spørsmål</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblSpml.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSpml.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 34</value>
-  </data>
-  <data name="lblSpml.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 20</value>
-  </data>
-  <data name="lblSpml.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblSpml.Text" xml:space="preserve">
-    <value>lbl</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.Name" xml:space="preserve">
-    <value>lblSpml</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblSpml.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 319</value>
-  </data>
-  <data name="Label26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
-  </data>
-  <data name="Label26.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Label26.Text" xml:space="preserve">
-    <value>Label 26</value>
-  </data>
-  <data name="&gt;&gt;Label26.Name" xml:space="preserve">
-    <value>Label26</value>
-  </data>
-  <data name="&gt;&gt;Label26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label26.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnNeste.Location" type="System.Drawing.Point, System.Drawing">
-    <value>332, 242</value>
-  </data>
-  <data name="btnNeste.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnNeste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 28</value>
-  </data>
-  <data name="btnNeste.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnNeste.Text" xml:space="preserve">
-    <value>Neste spørsmål &gt;&gt;</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.Name" xml:space="preserve">
-    <value>btnNeste</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnNeste.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RichTextBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="RichTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 7</value>
-  </data>
-  <data name="RichTextBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="RichTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1831, 171</value>
-  </data>
-  <data name="RichTextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Blodoverføring er en uerstattelig del av moderne medisinsk behandling. Likevel kan både det å motta blodoverføring og det å gi blod medføre risiko. 
-
-Noen sykdommer kan overføres med blod fra blodgiver til pasient. Man kan være bærer av overførbare smittestoffer uten selv å vite om det. En nylig smittet person kan være smittefarlig selv om testene ikke viser noe galt. Av den grunn må personer som kan ha blitt utsatt for smitte, ikke gi blod. Vi stiller derfor mange spørsmål som vedrører situasjoner der man kan ha blitt utsatt for smitte. 
-Hvis man er frisk, er risikoen ved å gi blod svært liten. Noen sykdommer kan gi økt risiko for komplikasjoner etter blodgivning. Vi stiller derfor mange spørsmål om blodgiverens egen helse, for å være sikre på at han eller hun trygt kan gi blod. 
-
-Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning av blodbankpersonalets taushetsplikt. Blodbanken må ha full tillit til at de opplysningene som gis er riktige. Er du i tvil om du kan være blodgiver, kan du drøfte dette med den som kontrollerer spørsmålene. Blodbanken har informasjonsmateriell om blodgivning. Hvis du ikke har lest dette tidligere, oppfordrer vi deg til å gjøre det nå! </value>
-  </data>
-  <data name="&gt;&gt;RichTextBox1.Name" xml:space="preserve">
-    <value>RichTextBox1</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox1.Parent" xml:space="preserve">
-    <value>TabPage5</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label19.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 62</value>
-  </data>
-  <data name="Label19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 20</value>
-  </data>
-  <data name="Label19.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="Label19.Text" xml:space="preserve">
-    <value>Preferanser vedr. innkalling</value>
-  </data>
-  <data name="&gt;&gt;Label19.Name" xml:space="preserve">
-    <value>Label19</value>
-  </data>
-  <data name="&gt;&gt;Label19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label19.Parent" xml:space="preserve">
-    <value>GpBxTime</value>
-  </data>
-  <data name="&gt;&gt;Label19.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RTxtPrefInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 89</value>
-  </data>
-  <data name="RTxtPrefInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="RTxtPrefInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 125</value>
-  </data>
-  <data name="RTxtPrefInnkalling.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RTxtPrefInnkalling.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;RTxtPrefInnkalling.Name" xml:space="preserve">
-    <value>RTxtPrefInnkalling</value>
-  </data>
-  <data name="&gt;&gt;RTxtPrefInnkalling.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RTxtPrefInnkalling.Parent" xml:space="preserve">
-    <value>GpBxTime</value>
-  </data>
-  <data name="&gt;&gt;RTxtPrefInnkalling.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label144.Name" xml:space="preserve">
-    <value>Label144</value>
-  </data>
-  <data name="&gt;&gt;Label144.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label144.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;Label144.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.Name" xml:space="preserve">
-    <value>DateTimePickerNyTime</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.Name" xml:space="preserve">
-    <value>BtnBekreftEndretTime</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.Name" xml:space="preserve">
-    <value>LblLedigeTimer</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.Name" xml:space="preserve">
-    <value>LBxLedigeTimer</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="GpBxEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 286</value>
-  </data>
-  <data name="GpBxEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GpBxEndreInnkalling.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GpBxEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 438</value>
-  </data>
-  <data name="GpBxEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GpBxEndreInnkalling.Text" xml:space="preserve">
-    <value>Ny innkallingstime</value>
-  </data>
-  <data name="GpBxEndreInnkalling.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;GpBxEndreInnkalling.Name" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;GpBxEndreInnkalling.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GpBxEndreInnkalling.Parent" xml:space="preserve">
-    <value>GpBxTime</value>
-  </data>
-  <data name="&gt;&gt;GpBxEndreInnkalling.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label144.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label144.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label144.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 36</value>
-  </data>
-  <data name="Label144.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label144.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 20</value>
-  </data>
-  <data name="Label144.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="Label144.Text" xml:space="preserve">
-    <value>Velg dato, og klikk på ønsket ledig time</value>
-  </data>
-  <data name="&gt;&gt;Label144.Name" xml:space="preserve">
-    <value>Label144</value>
-  </data>
-  <data name="&gt;&gt;Label144.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label144.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;Label144.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="DateTimePickerNyTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 69</value>
-  </data>
-  <data name="DateTimePickerNyTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="DateTimePickerNyTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 27</value>
-  </data>
-  <data name="DateTimePickerNyTime.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.Name" xml:space="preserve">
-    <value>DateTimePickerNyTime</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;DateTimePickerNyTime.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BtnBekreftEndretTime.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="BtnBekreftEndretTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 374</value>
-  </data>
-  <data name="BtnBekreftEndretTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="BtnBekreftEndretTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 37</value>
-  </data>
-  <data name="BtnBekreftEndretTime.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="BtnBekreftEndretTime.Text" xml:space="preserve">
-    <value>Bekreft endret time</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.Name" xml:space="preserve">
-    <value>BtnBekreftEndretTime</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;BtnBekreftEndretTime.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LblLedigeTimer.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LblLedigeTimer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LblLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 107</value>
-  </data>
-  <data name="LblLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="LblLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
-  </data>
-  <data name="LblLedigeTimer.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="LblLedigeTimer.Text" xml:space="preserve">
-    <value>Ledige timer:</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.Name" xml:space="preserve">
-    <value>LblLedigeTimer</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;LblLedigeTimer.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LBxLedigeTimer.ItemHeight" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="LBxLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 135</value>
-  </data>
-  <data name="LBxLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="LBxLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 224</value>
-  </data>
-  <data name="LBxLedigeTimer.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.Name" xml:space="preserve">
-    <value>LBxLedigeTimer</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.Parent" xml:space="preserve">
-    <value>GpBxEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;LBxLedigeTimer.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="BtnEndreInnkalling.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="BtnEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 228</value>
-  </data>
-  <data name="BtnEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="BtnEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 38</value>
-  </data>
-  <data name="BtnEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="BtnEndreInnkalling.Text" xml:space="preserve">
-    <value>Endre innkallingstime</value>
-  </data>
-  <data name="&gt;&gt;BtnEndreInnkalling.Name" xml:space="preserve">
-    <value>BtnEndreInnkalling</value>
-  </data>
-  <data name="&gt;&gt;BtnEndreInnkalling.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnEndreInnkalling.Parent" xml:space="preserve">
-    <value>GpBxTime</value>
-  </data>
-  <data name="&gt;&gt;BtnEndreInnkalling.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TxtNesteInnkalling.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TxtNesteInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 25</value>
-  </data>
-  <data name="TxtNesteInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TxtNesteInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 27</value>
-  </data>
-  <data name="TxtNesteInnkalling.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;TxtNesteInnkalling.Name" xml:space="preserve">
-    <value>TxtNesteInnkalling</value>
-  </data>
-  <data name="&gt;&gt;TxtNesteInnkalling.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TxtNesteInnkalling.Parent" xml:space="preserve">
-    <value>GpBxTime</value>
-  </data>
-  <data name="&gt;&gt;TxtNesteInnkalling.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 31</value>
-  </data>
-  <data name="Label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 20</value>
-  </data>
-  <data name="Label18.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Label18.Text" xml:space="preserve">
-    <value>Din neste innkalling:</value>
-  </data>
-  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
-    <value>Label18</value>
-  </data>
-  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
-    <value>GpBxTime</value>
-  </data>
-  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <metadata name="PanelAnsatt.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
