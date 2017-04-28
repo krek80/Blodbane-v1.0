@@ -159,22 +159,26 @@ Public Class Blodbane
             If IsDBNull(rad(0)("siste_blodtapping")) Then
                 rad(0)("siste_blodtapping") = dummyDato
             End If
-            blodgiveren.Fodselsnummer1 = rad(0)("fodselsnummer")
-            blodgiveren.Blodtype1 = rad(0)("blodtype")
-            blodgiveren.Kontaktform1 = rad(0)("kontaktform")
-            blodgiveren.Merknad1 = rad(0)("merknad")
-            blodgiveren.Timepreferanse1 = rad(0)("timepreferanse")
-            blodgiveren.Siste_blodtapping1 = rad(0)("siste_blodtapping")
-            blodgiveren.Epost1 = rad(0)("epost")
-            blodgiveren.Passord1 = rad(0)("passord")
-            blodgiveren.Fornavn1 = rad(0)("fornavn")
-            blodgiveren.Etternavn1 = rad(0)("etternavn")
-            blodgiveren.Adresse1 = rad(0)("adresse")
-            blodgiveren.Telefon11 = rad(0)("telefon1")
-            blodgiveren.Telefon21 = rad(0)("telefon2")
-            blodgiveren.Postnr1 = rad(0)("postnr")
-            blodgiveren.Status1 = rad(0)("beskrivelse")
-
+            'blodgiveren.Fodselsnummer1 = rad(0)("fodselsnummer")
+            'blodgiveren.Blodtype1 = rad(0)("blodtype")
+            'blodgiveren.Kontaktform1 = rad(0)("kontaktform")
+            'blodgiveren.Merknad1 = rad(0)("merknad")
+            'blodgiveren.Timepreferanse1 = rad(0)("timepreferanse")
+            'blodgiveren.Siste_blodtapping1 = rad(0)("siste_blodtapping")
+            'blodgiveren.Epost1 = rad(0)("epost")
+            'blodgiveren.Passord1 = rad(0)("passord")
+            'blodgiveren.Fornavn1 = rad(0)("fornavn")
+            'blodgiveren.Etternavn1 = rad(0)("etternavn")
+            'blodgiveren.Adresse1 = rad(0)("adresse")
+            'blodgiveren.Telefon11 = rad(0)("telefon1")
+            'blodgiveren.Telefon21 = rad(0)("telefon2")
+            'blodgiveren.Postnr1 = rad(0)("postnr")
+            'blodgiveren.Status1 = rad(0)("beskrivelse")
+            BlodgiverObjOppdat(rad(0)("epost"), rad(0)("passord"), rad(0)("fornavn"),
+                               rad(0)("etternavn"), rad(0)("adresse"), rad(0)("postnr"),
+                               rad(0)("telefon1"), rad(0)("telefon2"), rad(0)("statuskode"),
+                               rad(0)("fodselsnummer"), rad(0)("blodtype"), rad(0)("siste_blodtapping"),
+                               rad(0)("kontaktform"), rad(0)("merknad"), rad(0)("timepreferanse"))
             'Henter eventuell ny innkalling
             Dim idag, sistetime As DateTime
             Dim ingenNyTime As Boolean = False
@@ -241,7 +245,6 @@ Public Class Blodbane
                                   ByVal fodselsnummer As String, ByVal blodtype As String,
                                   ByVal siste_blodtapping As Date, ByVal kontaktform As String,
                                   ByVal merknad As String, ByVal timepreferanse As String)
-        tilkobling.Open()
         Me.Cursor = Cursors.WaitCursor
         Dim sqlSporring2 As String = $"UPDATE bruker SET epost='{epost}', passord='{passord}'"
         sqlSporring2 += $", fornavn='{fornavn}', etternavn='{etternavn}'"
@@ -257,7 +260,7 @@ Public Class Blodbane
 
         Dim sqlSporring1 As String = $"UPDATE blodgiver SET fodselsnummer='{fodselsnummer}', blodtype='{blodtype}'"
         sqlSporring1 += $", siste_blodtapping=@datotime, kontaktform='{kontaktform}'"
-        sqlSporring1 += $", merknad='{merknad}', timepreferanse='{timepreferanse}' WHERE epost = '{blodgiveren.Epost1}'"
+        sqlSporring1 += $", merknad='{merknad}', timepreferanse='{timepreferanse}' WHERE epost = '{epost}'"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         sql1.Parameters.Add("datotime", MySqlDbType.DateTime).Value = blodgiveren.Siste_blodtapping1
         Dim da1 As New MySqlDataAdapter
@@ -266,27 +269,49 @@ Public Class Blodbane
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         Me.Cursor = Cursors.Default
-        tilkobling.Close()
+
+        BlodgiverObjOppdat(epost, passord, fornavn, etternavn, adresse, postnr, telefon1, telefon2,
+                           statuskode, fodselsnummer, blodtype, siste_blodtapping, kontaktform, merknad, timepreferanse)
 
     End Sub
 
-    'Testsub
-    Private Sub test(epost As String)
-        tilkobling.Open()
-        Me.Cursor = Cursors.WaitCursor
-        MsgBox($"blodgiverepost: {blodgiveren.Epost1}")
-        Dim sqlSporring2 As String = $"UPDATE bruker SET epost = '{epost}' WHERE epost = '{blodgiveren.Epost1}'"
-        Dim sql2 As New MySqlCommand(sqlSporring2, tilkobling)
-        Dim da2 As New MySqlDataAdapter
-        Dim interntabell2 As New DataTable
+    'Oppdaterer blodgiverobjektet blodgiveren
+    Private Sub BlodgiverObjOppdat(ByVal epost As String, ByVal passord As String,
+                                  ByVal fornavn As String, ByVal etternavn As String,
+                                  ByVal adresse As String, ByVal postnr As String,
+                                  ByVal telefon1 As String, ByVal telefon2 As String,
+                                  ByVal statuskode As Integer,
+                                  ByVal fodselsnummer As String, ByVal blodtype As String,
+                                  ByVal siste_blodtapping As Date, ByVal kontaktform As String,
+                                  ByVal merknad As String, ByVal timepreferanse As String)
+        Dim sqlSporring1 As String = $"SELECT beskrivelse FROM personstatus WHERE kode ={statuskode}"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
-        da2.SelectCommand = sql2
-        da2.Fill(interntabell2)
-        blodgiveren.Epost1 = epost
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
         Me.Cursor = Cursors.Default
-        MsgBox($"Ny epostadresse ble satt til {blodgiveren.Epost1}")
+        If interntabell1.Rows.Count = 1 Then
+            Dim rad1() As DataRow = interntabell1.Select
 
-        tilkobling.Close()
+            blodgiveren.Epost1 = epost
+            blodgiveren.Passord1 = passord
+            blodgiveren.Fornavn1 = fornavn
+            blodgiveren.Etternavn1 = etternavn
+            blodgiveren.Adresse1 = adresse
+            blodgiveren.Postnr1 = postnr
+            blodgiveren.Telefon11 = telefon1
+            blodgiveren.Telefon21 = telefon2
+            blodgiveren.Status1 = rad1(0)("beskrivelse")
+            blodgiveren.Fodselsnummer1 = fodselsnummer
+            blodgiveren.Blodtype1 = blodtype
+            blodgiveren.Siste_blodtapping1 = siste_blodtapping
+            blodgiveren.Kontaktform1 = kontaktform
+            blodgiveren.Merknad1 = merknad
+            blodgiveren.Timepreferanse1 = timepreferanse
+        End If
+
     End Sub
 
     'Registrer ny blodgiver
@@ -448,6 +473,7 @@ Public Class Blodbane
         txtNyttPassord.Visible = True
         txtNyttPassordGjenta.Visible = True
         btnLagreNyttPassord.Visible = True
+        btnAvbrytNyttPassord.Visible = True
     End Sub
 
     'Avbryter setting av nytt passord og gjør om visningene
@@ -461,15 +487,47 @@ Public Class Blodbane
         txtNyttPassord.Visible = False
         txtNyttPassordGjenta.Visible = False
         btnLagreNyttPassord.Visible = False
+        btnAvbrytNyttPassord.Visible = False
     End Sub
 
     'Lagrer nytt passord for blodgiver
     Private Sub btnLagreNyttPassord_Click(sender As Object, e As EventArgs) Handles btnLagreNyttPassord.Click
         If txtGmlPassord.Text = blodgiveren.Passord1 Then
             If passordSjekk(txtNyttPassord.Text, txtNyttPassordGjenta.Text) Then
-                blodgiveren.Passord1 = txtNyttPassord.Text
-
+                'blodgiveren.Passord1 = txtNyttPassord.Text
+                Me.Cursor = Cursors.WaitCursor
+                tilkobling.Open()
+                Dim sqlSporring1 As String = $"SELECT kode FROM personstatus WHERE beskrivelse ='{txtPersDataGStatus.Text}'"
+                Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+                Dim da1 As New MySqlDataAdapter
+                Dim interntabell1 As New DataTable
+                'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+                da1.SelectCommand = sql1
+                da1.Fill(interntabell1)
+                tilkobling.Close()
+                Me.Cursor = Cursors.Default
+                If interntabell1.Rows.Count = 1 Then
+                    Dim rad1() As DataRow = interntabell1.Select
+                    OppdaterBlodgiver(blodgiveren.Epost1, blodgiveren.Passord1, blodgiveren.Fornavn1,
+                                  blodgiveren.Etternavn1, blodgiveren.Adresse1, blodgiveren.Postnr1,
+                                  blodgiveren.Telefon11, blodgiveren.Telefon21, rad1(0)("kode"),
+                                  blodgiveren.Fodselsnummer1, blodgiveren.Blodtype1, blodgiveren.Siste_blodtapping1,
+                                  blodgiveren.Kontaktform1, blodgiveren.Merknad1, blodgiveren.Timepreferanse1)
+                    btnPersDataLagreEndringer.Visible = True
+                    btnPersDataSettNyttPassord.Visible = True
+                    lblGmlPassord.Visible = False
+                    lblNyttPassord.Visible = False
+                    lblNyttPassordGjenta.Visible = False
+                    txtGmlPassord.Visible = False
+                    txtNyttPassord.Visible = False
+                    txtNyttPassordGjenta.Visible = False
+                    btnLagreNyttPassord.Visible = False
+                    btnAvbrytNyttPassord.Visible = False
+                    MsgBox("Nytt passord ble satt.", MsgBoxStyle.Information)
+                End If
             End If
+        Else
+            MsgBox("Du tastet inn feil gammelt passord. Prøv igjen!", MsgBoxStyle.Critical)
         End If
     End Sub
 
@@ -840,7 +898,7 @@ Public Class Blodbane
         Dim tabort As Integer = 0
         Dim opptatt As Boolean = False
         Dim raddato1 As DateTime
-        Dim i, radnr As Integer
+        Dim radnr As Integer
         'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
@@ -1115,10 +1173,6 @@ Public Class Blodbane
         SPMnr = 1
         lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
         Label26.Text = "Spørsmål 1"
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        test(txtPersDataEpost.Text)
     End Sub
 
     'Forrige spørsmål i erklæring
