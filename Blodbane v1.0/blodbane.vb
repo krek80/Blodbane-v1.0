@@ -207,7 +207,8 @@ Public Class Blodbane
             PanelAnsatt.Hide()
             PanelGiver.Show()
             PanelGiver.BringToFront()
-            TabPage5.Show()
+            'TabPage5.Show()
+            TbCtrlBlodgiver.SelectTab(0)
             'Setter personinfo i tekstboksene
             txtPersDataNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
             txtPersDataGStatus.Text = blodgiveren.Status1
@@ -240,7 +241,6 @@ Public Class Blodbane
                                   ByVal fodselsnummer As String, ByVal blodtype As String,
                                   ByVal siste_blodtapping As Date, ByVal kontaktform As String,
                                   ByVal merknad As String, ByVal timepreferanse As String)
-
 
         Me.Cursor = Cursors.WaitCursor
         Dim sqlSporring2 As String = $"UPDATE bruker SET epost='{epost}', passord='{passord}'"
@@ -337,14 +337,15 @@ Public Class Blodbane
                 'Legger inn ny rad i tabellen "blodgiver":
 
                 spoerring = $"INSERT INTO blodgiver (epost, fodselsnummer, kontaktform, siste_blodtapping) VALUES ('{txtBgInn_epost.Text}', 
-                    '{txtBgInn_personnr.Text}', 'Epost', {dummyDato}"
+                    '{txtBgInn_personnr.Text}', 'Epost', @dummyDato)"
                 Dim sql2 As New MySqlCommand(spoerring, tilkobling)
+                sql2.Parameters.Add("dummyDato", MySqlDbType.DateTime).Value = dummyDato
                 Dim da2 As New MySqlDataAdapter
                 Dim interntabell2 As New DataTable
                 da2.SelectCommand = sql2
                 da2.Fill(interntabell2)
                 MsgBox("Skjema Ok! Nå kan du logge deg på.")
-
+                NullstillPålogging()
             Else
                 MsgBox("Skjema dessverre ikke ok.")
             End If
@@ -592,16 +593,18 @@ Public Class Blodbane
             Select Case resultat
                 Case 6
                     lagre = True
+                    loggAv = False
                 Case 7
                 Case Else
                     loggAv = False
             End Select
         End If
         If lagre Then
-            btnPersDataLagreEndringer_Click(sender, EventArgs.Empty)
+            MsgBox("Se over personinformasjonen din og lagre den før du logger av.", MsgBoxStyle.Information)
         End If
         If loggAv Then
             'Bytter til panelet for pålogging
+            NullstillPålogging()
             PanelGiver.Hide()
             PanelAnsatt.Hide()
             PanelPåmelding.Show()
@@ -635,7 +638,18 @@ Public Class Blodbane
 
     'Nullstiller tekstfeltene på påloggingssiden
     Private Sub NullstillPålogging()
-
+        txtBgInn_adresse.Text = ""
+        txtBgInn_epost.Text = ""
+        txtBgInn_etternavn.Text = ""
+        txtBgInn_fornavn.Text = ""
+        txtBgInn_passord1.Text = ""
+        txtBgInn_passord2.Text = ""
+        txtBgInn_personnr.Text = ""
+        txtBgInn_postnr.Text = ""
+        txtBgInn_tlfnr.Text = ""
+        txtBgInn_tlfnr2.Text = ""
+        txtAInn_epost.Text = ""
+        txtAInn_passord.Text = ""
     End Sub
 
     'Blodgiversøk knapp
