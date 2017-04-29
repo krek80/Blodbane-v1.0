@@ -31,6 +31,8 @@ Public Class Blodbane
         Me.Hide()
         velkommen.Show()
 
+        Me.Hide()
+        velkommen.ProgressBar1.Value = 0
         'Henter statuskoder og legger i combobox(er)
         Dim statuser As New DataTable
         Dim steder As New DataTable
@@ -53,6 +55,8 @@ Public Class Blodbane
             ComboBox4.Items.Add(statustekst)
         Next
 
+        Me.Hide()
+        velkommen.ProgressBar1.Value = 20
         blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
         bytteRomTime = New Romtime(dummyDato, "", 0)
         If Today.Month < 10 Then
@@ -72,6 +76,8 @@ Public Class Blodbane
         daRom.Fill(interntabellRom)
         antallRom = interntabellRom.Rows.Count()
 
+        Me.Hide()
+        velkommen.ProgressBar1.Value = 50
         'Henter postnummer og sted og legger i hashtable
         Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
         da.SelectCommand = sqlSpørring2
@@ -90,12 +96,20 @@ Public Class Blodbane
             ComboBox3.Items.Add(rad("epost"))
         Next
 
+        Me.Hide()
+        velkommen.ProgressBar1.Value = 80
         'Henter ned spørsmål til egenerklæring
         Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
         da.SelectCommand = sqlSpørring4
         da.Fill(Erklæringspørsmål)
 
         tilkobling.Close()
+
+        Me.Hide()
+        velkommen.ProgressBar1.Value = 100
+        MsgBox("Nå er eg klar!")
+        velkommen.Close()
+        Me.Show()
     End Sub
 
     'Nullstiller objektene blodgiveren og bytteRomTime
@@ -227,7 +241,7 @@ Public Class Blodbane
             CBxKontaktform.Text = blodgiveren.Kontaktform1
             påloggetBgiver = blodgiveren.Postnr1
         Else
-                MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
+            MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
 
         End If
         tilkobling.Close()
