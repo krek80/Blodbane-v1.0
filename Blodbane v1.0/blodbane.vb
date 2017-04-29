@@ -103,7 +103,7 @@ Public Class Blodbane
         da.SelectCommand = sqlSpørring4
         da.Fill(Erklæringspørsmål)
         lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
-        Label26.Text = $"Spørsmål {spmNR + 1}"
+        Label26.Text = $"Spørsmål {SPMnr + 1}"
 
         tilkobling.Close()
 
@@ -241,6 +241,7 @@ Public Class Blodbane
             txtPersDataEpost.Text = blodgiveren.Epost1
 
             CBxKontaktform.Text = blodgiveren.Kontaktform1
+            RTxtPrefInnkalling.Text = blodgiveren.Timepreferanse1
             påloggetBgiver = blodgiveren.Postnr1
         Else
             MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
@@ -643,7 +644,7 @@ Public Class Blodbane
 
     'Sub for å loogge av ansatt
     Private Sub loggAvAnsatt()
-        Label23.Text = ""
+        lblVelkommen.Text = ""
         PanelGiver.Hide()
         PanelAnsatt.Hide()
         PanelPåmelding.Show()
@@ -932,10 +933,10 @@ Public Class Blodbane
             ElseIf dato = DateAdd(DateInterval.Day, 1, Today) Then
                 dato = rad("datotid")
                 ListBox5.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
-            ElseIf dato <Today Then
-                dato= rad("datotid")
+            ElseIf dato < Today Then
+                dato = rad("datotid")
                 ListBox6.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
-        End If
+            End If
         Next
         tilkobling.Close()
     End Sub

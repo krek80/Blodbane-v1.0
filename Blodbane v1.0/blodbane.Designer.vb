@@ -24,22 +24,22 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
-        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
-        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
-        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
-        Dim DataPoint5 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
-        Dim DataPoint6 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
-        Dim DataPoint7 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
-        Dim DataPoint8 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint9 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
-        Dim DataPoint10 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint11 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
+        Dim DataPoint12 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
+        Dim DataPoint13 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
+        Dim DataPoint14 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
+        Dim DataPoint15 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim DataPoint16 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
+        Dim DataPoint17 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
+        Dim DataPoint18 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint19 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
+        Dim DataPoint20 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -144,7 +144,7 @@ Partial Class Blodbane
         Me.txtPersDataPostnr = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PanelAnsatt = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.lblVelkommen = New System.Windows.Forms.Label()
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -203,7 +203,7 @@ Partial Class Blodbane
         Me.Label111 = New System.Windows.Forms.Label()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Label100 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GpBxSøk = New System.Windows.Forms.GroupBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
@@ -252,7 +252,7 @@ Partial Class Blodbane
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBoxIntervju.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.GpBxSøk.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -938,15 +938,15 @@ Partial Class Blodbane
         'PanelAnsatt
         '
         resources.ApplyResources(Me.PanelAnsatt, "PanelAnsatt")
-        Me.PanelAnsatt.Controls.Add(Me.Label23)
+        Me.PanelAnsatt.Controls.Add(Me.lblVelkommen)
         Me.PanelAnsatt.Controls.Add(Me.BttnLoggavAnsatt)
         Me.PanelAnsatt.Controls.Add(Me.TabControl1)
         Me.PanelAnsatt.Name = "PanelAnsatt"
         '
-        'Label23
+        'lblVelkommen
         '
-        resources.ApplyResources(Me.Label23, "Label23")
-        Me.Label23.Name = "Label23"
+        resources.ApplyResources(Me.lblVelkommen, "lblVelkommen")
+        Me.lblVelkommen.Name = "lblVelkommen"
         '
         'BttnLoggavAnsatt
         '
@@ -969,7 +969,7 @@ Partial Class Blodbane
         Me.TabPage1.Controls.Add(Me.GroupBox12)
         Me.TabPage1.Controls.Add(Me.GroupBox11)
         Me.TabPage1.Controls.Add(Me.GroupBox10)
-        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GpBxSøk)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         '
@@ -1325,22 +1325,22 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label100, "Label100")
         Me.Label100.Name = "Label100"
         '
-        'GroupBox4
+        'GpBxSøk
         '
-        Me.GroupBox4.Controls.Add(Me.Button4)
-        Me.GroupBox4.Controls.Add(Me.TextBox20)
-        Me.GroupBox4.Controls.Add(Me.ComboBox5)
-        Me.GroupBox4.Controls.Add(Me.Label119)
-        Me.GroupBox4.Controls.Add(Me.BttnSøkGiver)
-        Me.GroupBox4.Controls.Add(Me.ComboBox2)
-        Me.GroupBox4.Controls.Add(Me.Label99)
-        Me.GroupBox4.Controls.Add(Me.Label98)
-        Me.GroupBox4.Controls.Add(Me.ListBox2)
-        Me.GroupBox4.Controls.Add(Me.TextBox19)
-        Me.GroupBox4.Controls.Add(Me.Label27)
-        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.TabStop = False
+        Me.GpBxSøk.Controls.Add(Me.Button4)
+        Me.GpBxSøk.Controls.Add(Me.TextBox20)
+        Me.GpBxSøk.Controls.Add(Me.ComboBox5)
+        Me.GpBxSøk.Controls.Add(Me.Label119)
+        Me.GpBxSøk.Controls.Add(Me.BttnSøkGiver)
+        Me.GpBxSøk.Controls.Add(Me.ComboBox2)
+        Me.GpBxSøk.Controls.Add(Me.Label99)
+        Me.GpBxSøk.Controls.Add(Me.Label98)
+        Me.GpBxSøk.Controls.Add(Me.ListBox2)
+        Me.GpBxSøk.Controls.Add(Me.TextBox19)
+        Me.GpBxSøk.Controls.Add(Me.Label27)
+        resources.ApplyResources(Me.GpBxSøk, "GpBxSøk")
+        Me.GpBxSøk.Name = "GpBxSøk"
+        Me.GpBxSøk.TabStop = False
         '
         'Button4
         '
@@ -1483,52 +1483,52 @@ Partial Class Blodbane
         '
         'Chart2
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend3)
         resources.ApplyResources(Me.Chart2, "Chart2")
         Me.Chart2.Name = "Chart2"
         Me.Chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Blodplater"
-        DataPoint1.AxisLabel = "0+"
-        DataPoint1.Label = ""
-        DataPoint2.AxisLabel = "0-"
-        DataPoint2.LegendText = ""
-        DataPoint3.AxisLabel = "A+"
-        DataPoint4.AxisLabel = "A-"
-        DataPoint5.AxisLabel = "AB+"
-        DataPoint6.AxisLabel = "AB-"
-        DataPoint7.AxisLabel = "B+"
-        DataPoint8.AxisLabel = "B-"
-        Series1.Points.Add(DataPoint1)
-        Series1.Points.Add(DataPoint2)
-        Series1.Points.Add(DataPoint3)
-        Series1.Points.Add(DataPoint4)
-        Series1.Points.Add(DataPoint5)
-        Series1.Points.Add(DataPoint6)
-        Series1.Points.Add(DataPoint7)
-        Series1.Points.Add(DataPoint8)
-        Me.Chart2.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Blodplater"
+        DataPoint11.AxisLabel = "0+"
+        DataPoint11.Label = ""
+        DataPoint12.AxisLabel = "0-"
+        DataPoint12.LegendText = ""
+        DataPoint13.AxisLabel = "A+"
+        DataPoint14.AxisLabel = "A-"
+        DataPoint15.AxisLabel = "AB+"
+        DataPoint16.AxisLabel = "AB-"
+        DataPoint17.AxisLabel = "B+"
+        DataPoint18.AxisLabel = "B-"
+        Series3.Points.Add(DataPoint11)
+        Series3.Points.Add(DataPoint12)
+        Series3.Points.Add(DataPoint13)
+        Series3.Points.Add(DataPoint14)
+        Series3.Points.Add(DataPoint15)
+        Series3.Points.Add(DataPoint16)
+        Series3.Points.Add(DataPoint17)
+        Series3.Points.Add(DataPoint18)
+        Me.Chart2.Series.Add(Series3)
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
         Me.Chart1.Cursor = System.Windows.Forms.Cursors.Default
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Series2.Points.Add(DataPoint9)
-        Series2.Points.Add(DataPoint10)
-        Me.Chart1.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Series4.Points.Add(DataPoint19)
+        Series4.Points.Add(DataPoint20)
+        Me.Chart1.Series.Add(Series4)
         '
         'ToolTip1
         '
@@ -1548,9 +1548,9 @@ Partial Class Blodbane
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelPåmelding)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
@@ -1589,8 +1589,8 @@ Partial Class Blodbane
         Me.GroupBox10.PerformLayout()
         Me.GroupBoxIntervju.ResumeLayout(False)
         Me.GroupBoxIntervju.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        Me.GpBxSøk.ResumeLayout(False)
+        Me.GpBxSøk.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
@@ -1663,7 +1663,7 @@ Partial Class Blodbane
     Friend WithEvents TxtNesteInnkalling As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents BtnBekreftEndretTime As Button
-    Friend WithEvents Label23 As Label
+    Friend WithEvents lblVelkommen As Label
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents txtPersDataTlf2 As TextBox
     Friend WithEvents Label25 As Label
@@ -1675,7 +1675,7 @@ Partial Class Blodbane
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents CBxKontaktform As ComboBox
-    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents GpBxSøk As GroupBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label99 As Label
     Friend WithEvents Label98 As Label
