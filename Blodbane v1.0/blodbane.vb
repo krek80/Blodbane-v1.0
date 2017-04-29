@@ -786,41 +786,34 @@ Public Class Blodbane
     'Vis blodgiverdata til ansatt
     Private Sub visBG()
         Dim index, i As Integer
-        Dim rad, rad1(), rad2() As DataRow
+        Dim rad As DataRow
         Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar, erklaringLege As String
         Dim status As Integer
         Dim sistTapping, sistErklæring, gjennomgåttErklæring As Date
         Dim dager As Long
-        jasvar = ""
-        sistErklæring = dummyDato
         lbxHKtrlJasvar.Items.Clear()
         index = lBxSøkResultater.SelectedIndex
-        rad1 = giversøk.Select
-        BlodgiverObjOppdat(rad1(index)("epost"), rad1(index)("passord"), rad1(index)("fornavn"),
-                           rad1(index)("etternavn"), rad1(index)("adresse"), rad1(index)("postnr"),
-                           rad1(index)("telefon1"), rad1(index)("telefon2"), rad1(index)("statuskode"),
-                           rad1(index)("fodselsnummer"), rad1(index)("blodtype"), rad1(index)("siste_blodtapping"),
-                           rad1(index)("kontaktform"), rad1(index)("merknad"), rad1(index)("timepreferanse"))
-        '  For Each rad In giversøk.Rows
-        ' fNavn = rad("fornavn")
-        'eNavn = rad("etternavn")
-        'fnr = rad("fodselsnummer")
-        'epost = rad("epost")
-        'adresse = rad("adresse")
-        'tlf1 = rad("telefon1")
-        'tlf2 = rad("telefon2")
-        'postnummmer = rad("postnr")
-        'status = rad("statuskode")
-        'sistTapping = rad("siste_blodtapping")
-        'intMerknad = rad("merknad")
-        'preferanse = rad("timepreferanse")
-        'If i = index Then
-        'Exit For
-        'End If
-        'i = i + 1
-        'Next
+        For Each rad In giversøk.Rows
+            fNavn = rad("fornavn")
+            eNavn = rad("etternavn")
+            fnr = rad("fodselsnummer")
+            epost = rad("epost")
+            adresse = rad("adresse")
+            tlf1 = rad("telefon1")
+            tlf2 = rad("telefon2")
+            postnummmer = rad("postnr")
+            status = rad("statuskode")
+            sistTapping = rad("siste_blodtapping")
+            intMerknad = rad("merknad")
+            preferanse = rad("timepreferanse")
+            If i = index Then
+                Exit For
+            End If
+            i = i + 1
+        Next
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value
         For Each rad In egenerklaering.Rows
-            If rad("bgepost") = blodgiveren.Epost1 Then
+            If rad("bgepost") = epost Then
                 If rad("datotidbg") > sistErklæring Then
                     sistErklæring = rad("datotidbg")
                     jasvar = rad("skjema")
@@ -839,55 +832,21 @@ Public Class Blodbane
                 End If
             End If
         Next
-        tilkobling.Open()
-        Dim sqlSpørring = $"SELECT MAX(datotidbg) from egenerklæring WHERE bgepost='{blodgiveren.Epost1}'"
-        Dim sql1 As New MySqlCommand(sqlSpørring, tilkobling)
-        Dim da1 As New MySqlDataAdapter
-        Dim interntabell1 As New DataTable
-        da1.SelectCommand = sql1
-        da1.Fill(interntabell1)
-        ' Dim rad1() As DataRow = interntabell1.Select
-        If interntabell1.Rows.Count = 1 Then
-            sistErklæring = rad1(0)("datotidbg")
-        Else
-            sistErklæring = dummyDato
-        End If
-        jasvar = rad1(index)("skjema")
-        egenerklæringID = rad1(index)("id")
-        presentertGiver = blodgiveren.Epost1
-        If Not IsDBNull(rad("ansattepost")) Then
-            erklaringLege = rad("ansattepost")
-        Else
-            erklaringLege = ""
-        End If
-        If Not IsDBNull(rad("datotidansatt")) Then
-            gjennomgåttErklæring = rad("datotidansatt")
-        Else
-            gjennomgåttErklæring = Nothing
-        End If
-        tilkobling.Close()
+        dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
+        utledJAsvar(jasvar)
 
-        dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
-        If jasvar <> "" Then
-            utledJAsvar(jasvar)
-        End If
-
-        txtValgtBlodgiverNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
-        txtValgtBlodgiverPersnr.Text = blodgiveren.Fodselsnummer1
-        txtValgtBlodgiverEpost.Text = blodgiveren.Epost1
-        txtValgtBlodgiverTelefon1.Text = blodgiveren.Telefon11
-        txtValgtBlodgiverTelefon2.Text = blodgiveren.Telefon21
-        txtValgtBlodgiverAdresse.Text = blodgiveren.Adresse1
-        txtValgtBlodgiverPostnr.Text = blodgiveren.Postnr1
-        cBxValgtBlodgiverStatusTekst.Text = blodgiveren.Status1
+        txtValgtBlodgiverNavn.Text = $"{fNavn} {eNavn}"
+        txtValgtBlodgiverPersnr.Text = fnr
+        txtValgtBlodgiverEpost.Text = epost
+        txtValgtBlodgiverTelefon1.Text = tlf1
+        txtValgtBlodgiverTelefon2.Text = tlf2
+        txtValgtBlodgiverAdresse.Text = adresse
+        txtValgtBlodgiverPostnr.Text = postnummmer
+        txtValgtBlodgiverStatusKode.Text = status
         txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
-        If blodgiveren.Siste_blodtapping1 <> dummyDato Then
-            txtValgtBlodgiverSistTappDato.Text = blodgiveren.Siste_blodtapping1
-        Else
-            txtValgtBlodgiverSistTappDato.Text = "Ikke gitt blod enda"
-        End If
-        rTxtValgBlodgiverTimepref.Text = blodgiveren.Timepreferanse1
-        rTxtValgtBlodgiverInternMrknd.Text = blodgiveren.Merknad1
+        txtValgtBlodgiverSistTappDato.Text = sistTapping
+        rTxtValgBlodgiverTimepref.Text = preferanse
+        rTxtValgtBlodgiverInternMrknd.Text = intMerknad
         txtHKtrlSisteEgenerkl.Text = sistErklæring
         txtHKtrlGjennomgAv.Text = erklaringLege
         If gjennomgåttErklæring = Nothing Then
@@ -897,7 +856,7 @@ Public Class Blodbane
             txtHKtrlEKDatoGjennomg.Text = gjennomgåttErklæring
             GroupBoxIntervju.Visible = False
         End If
-
+#Enable Warning BC42104
     End Sub
 
     'Utleder Jasvar og presenterer i Listebox i giversøk
