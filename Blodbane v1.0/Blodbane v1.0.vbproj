@@ -74,6 +74,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ansatt.vb" />
     <Compile Include="blodbane.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,8 @@
       <DependentUpon>blodbane.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Blodgiver.vb" />
+    <Compile Include="bruker.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -102,6 +105,7 @@
     <Compile Include="pålogging.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Romtime.vb" />
     <Compile Include="velkommen.Designer.vb">
       <DependentUpon>velkommen.vb</DependentUpon>
     </Compile>
