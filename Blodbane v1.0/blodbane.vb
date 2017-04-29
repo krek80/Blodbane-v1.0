@@ -39,7 +39,7 @@ Public Class Blodbane
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
         Dim sifre As String
-        Dim statustekst, statuskode, psted, pnr, spmNR, spmTekst As String
+        Dim statustekst, statuskode, psted, pnr As String
         giversøk.Clear()
         tilkobling.Open()
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
@@ -102,6 +102,8 @@ Public Class Blodbane
         Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
         da.SelectCommand = sqlSpørring4
         da.Fill(Erklæringspørsmål)
+        lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
+        Label26.Text = $"Spørsmål {spmNR + 1}"
 
         tilkobling.Close()
 
@@ -1272,12 +1274,6 @@ Public Class Blodbane
         End Try
     End Sub
 
-    Private Sub TabPage5_Enter(sender As Object, e As EventArgs) Handles TabPage5.Enter
-        SPMnr = 1
-        lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
-        Label26.Text = "Spørsmål 1"
-    End Sub
-
     'Forrige spørsmål i erklæring
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim spmText As String
@@ -1297,35 +1293,36 @@ Public Class Blodbane
 
     'Send inn egenerklæring
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim Jasvar As String
-        Dim i As Integer
-        For i = 0 To 60
+        Dim Jasvar, sporring As String
+        Dim i, siste As Integer
+        siste = erklæringSvar.Length
+
+        For i = 0 To siste - 1
             If erklæringSvar(i) = 1 Then
                 Jasvar = Jasvar & i & ","
             End If
         Next
 
-        'Lagring jasvar i database
         Try
             tilkobling.Open()
-            Dim sporring As String = ""
-            sporring = $"INSERT INTO egenerklaering (skjema) VALUES (Jasvar)"
+            sporring = $"INSERT INTO egenerklaering (bgepost, datotidbg, skjema ) VALUES ('{blodgiveren.Epost1}','{Now.ToString("yyyy.MM.dd HH:mm.ss")}','{Jasvar}')"
+            MsgBox(sporring)
             Dim sqlja As New MySqlCommand(sporring, tilkobling)
-
+            sqlja.ExecuteNonQuery()
         Catch ex As MySqlException
             MsgBox("Feil ved tilkobling til databasen: " & ex.Message())
         Finally
-            tilkobling.Dispose()
+            tilkobling.Close()
         End Try
-
     End Sub
 
-    'Neste spørsmål i erklæring
+    'Lagre svar i erklæring og vis neste spørsmål
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
-        Dim sisteindex, kjønn As Integer
+        Dim sisteindex, kjønn, spmID, i As Integer
         Dim spmText, pnr As String
         Dim dame As Boolean
-        pnr = "04079147929" 'Testverdi
+        pnr = "04079147929" 'Testverdi, ekte verdi: blodgiveren.Fodselsnummer1
+        sisteindex = Erklæringspørsmål.Rows.Count
 
         kjønn = pnr.Substring(8, 1)
         If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
@@ -1337,22 +1334,6 @@ Public Class Blodbane
             MsgBox("Du må svare før du går videre")
             Exit Sub
         End If
-        sisteindex = Erklæringspørsmål.Rows.Count
-        SPMnr = SPMnr + 1
-
-        If Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr") < 100 Then
-            spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-        ElseIf (Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr") > 199) And (dame = False) Then
-            spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-        ElseIf (Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr") > 99) And (dame = True) Then
-            spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-        End If
-        If spmText = Nothing Then
-            MsgBox("dette spørsmålet er ikke for deg, gå videre")
-        End If
-
-        lblSpml.Text = spmText
-        Label26.Text = $"Spørsmål {SPMnr}"
 
         'Registrere svar
         If RadioButton3.Checked Then
@@ -1360,8 +1341,33 @@ Public Class Blodbane
         Else
             erklæringSvar(SPMnr - 1) = 0
         End If
+
+        'Neste spm
+        SPMnr = SPMnr + 1
+        spmID = Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr")
+        For i = 0 To sisteindex
+            If spmID < 100 Then
+                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+                Exit For
+            ElseIf (spmID > 199) And (dame = False) Then
+                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+                Exit For
+            ElseIf (spmID > 99) And (dame = True) Then
+                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+                Exit For
+            Else
+                spmID = Erklæringspørsmål.Rows((SPMnr - 1) + i).Item("Nr")
+            End If
+        Next
+        spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
+        lblSpml.Text = spmText
+        Label26.Text = $"Spørsmål {SPMnr}"
         RadioButton3.Checked = False
         RadioButton4.Checked = False
+        If SPMnr - 1 = sisteindex Then
+            btnNeste.Enabled = False
+            MsgBox("Alle spørsmål besvart - send inn!")
+        End If
     End Sub
 
     'Sjekker om valgt dato er fridag

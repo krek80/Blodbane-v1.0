@@ -7,6 +7,8 @@
         brukere = Blodbane.ansatt
         epost = TextBox1.Text
         passord = TextBox2.Text
+        pålogget = ""
+        påloggetEpost = ""
 
         For Each rad In brukere.Rows
             If (epost = rad("epost")) And (passord = rad("passord")) Then
