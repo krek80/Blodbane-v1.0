@@ -1253,8 +1253,8 @@ Partial Class Blodbane
         '
         'rBtnHKtrlIkkeGodkjent
         '
-        resources.ApplyResources(Me.rBtnHKtrlIkkeGodkjent, "rBtnHKtrlIkkeGodkjent")
         Me.rBtnHKtrlIkkeGodkjent.Checked = True
+        resources.ApplyResources(Me.rBtnHKtrlIkkeGodkjent, "rBtnHKtrlIkkeGodkjent")
         Me.rBtnHKtrlIkkeGodkjent.Name = "rBtnHKtrlIkkeGodkjent"
         Me.rBtnHKtrlIkkeGodkjent.TabStop = True
         Me.rBtnHKtrlIkkeGodkjent.UseVisualStyleBackColor = True
