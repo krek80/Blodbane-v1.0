@@ -24,22 +24,22 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint21 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
-        Dim DataPoint22 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
-        Dim DataPoint23 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
-        Dim DataPoint24 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
-        Dim DataPoint25 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
-        Dim DataPoint26 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
-        Dim DataPoint27 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
-        Dim DataPoint28 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint29 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
-        Dim DataPoint30 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 1.0R)
+        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 2.0R)
+        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 3.0R)
+        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 4.0R)
+        Dim DataPoint5 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
+        Dim DataPoint6 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 6.0R)
+        Dim DataPoint7 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 7.0R)
+        Dim DataPoint8 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 8.0R)
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint9 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 10.0R)
+        Dim DataPoint10 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 5.0R)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -144,76 +144,76 @@ Partial Class Blodbane
         Me.txtPersDataPostnr = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PanelAnsatt = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.lblVelkommen = New System.Windows.Forms.Label()
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btnBlodgivingGjført = New System.Windows.Forms.Button()
         Me.Label141 = New System.Windows.Forms.Label()
-        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.nudResRødeBlodl = New System.Windows.Forms.NumericUpDown()
         Me.Label140 = New System.Windows.Forms.Label()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.nudResPlasma = New System.Windows.Forms.NumericUpDown()
         Me.Label139 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.nudResBlodplater = New System.Windows.Forms.NumericUpDown()
         Me.Label138 = New System.Windows.Forms.Label()
         Me.Label137 = New System.Windows.Forms.Label()
         Me.Label116 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.cbxAnsattUtførtTapping = New System.Windows.Forms.ComboBox()
         Me.Label115 = New System.Windows.Forms.Label()
-        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.gpBxValgtBlodgiver = New System.Windows.Forms.GroupBox()
+        Me.txtValgtBlodgiverSistTappDato = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverStatusKode = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverSistTappDager = New System.Windows.Forms.TextBox()
         Me.Label120 = New System.Windows.Forms.Label()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.rTxtValgBlodgiverTimepref = New System.Windows.Forms.RichTextBox()
         Me.Label118 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.cBxValgtBlodgiverStatusTekst = New System.Windows.Forms.ComboBox()
         Me.Label117 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.rTxtValgtBlodgiverInternMrknd = New System.Windows.Forms.RichTextBox()
         Me.Label112 = New System.Windows.Forms.Label()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverPoststed = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverPostnr = New System.Windows.Forms.TextBox()
         Me.Label109 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverAdresse = New System.Windows.Forms.TextBox()
         Me.Label108 = New System.Windows.Forms.Label()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverTelefon2 = New System.Windows.Forms.TextBox()
         Me.Label107 = New System.Windows.Forms.Label()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverTelefon1 = New System.Windows.Forms.TextBox()
         Me.Label104 = New System.Windows.Forms.Label()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverEpost = New System.Windows.Forms.TextBox()
         Me.Label105 = New System.Windows.Forms.Label()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverPersnr = New System.Windows.Forms.TextBox()
         Me.Label103 = New System.Windows.Forms.Label()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.txtValgtBlodgiverNavn = New System.Windows.Forms.TextBox()
         Me.Label102 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnHKtrlIntProfGjgått = New System.Windows.Forms.Button()
         Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.rBtnHKtrlIkkeGodkjent = New System.Windows.Forms.RadioButton()
         Me.Label110 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.rBtnHKtrlGodkjent = New System.Windows.Forms.RadioButton()
+        Me.rTxtHKtrlKommentar = New System.Windows.Forms.RichTextBox()
         Me.Label106 = New System.Windows.Forms.Label()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.txtHKtrlEKDatoGjennomg = New System.Windows.Forms.TextBox()
         Me.Label101 = New System.Windows.Forms.Label()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.txtHKtrlGjennomgAv = New System.Windows.Forms.TextBox()
         Me.Label97 = New System.Windows.Forms.Label()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.lbxHKtrlJasvar = New System.Windows.Forms.ListBox()
         Me.Label111 = New System.Windows.Forms.Label()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.txtHKtrlSisteEgenerkl = New System.Windows.Forms.TextBox()
         Me.Label100 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.GpBxSøk = New System.Windows.Forms.GroupBox()
+        Me.btnSøkTømSkjema = New System.Windows.Forms.Button()
+        Me.txtSøkStatuskode = New System.Windows.Forms.TextBox()
+        Me.cBxSøkBlodtype = New System.Windows.Forms.ComboBox()
         Me.Label119 = New System.Windows.Forms.Label()
         Me.BttnSøkGiver = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cBxSøkStatusbeskrivelse = New System.Windows.Forms.ComboBox()
         Me.Label99 = New System.Windows.Forms.Label()
         Me.Label98 = New System.Windows.Forms.Label()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.lBxSøkResultater = New System.Windows.Forms.ListBox()
+        Me.txtSøk = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
@@ -246,13 +246,13 @@ Partial Class Blodbane
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox11.SuspendLayout()
+        CType(Me.nudResRødeBlodl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudResPlasma, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudResBlodplater, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gpBxValgtBlodgiver.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBoxIntervju.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.GpBxSøk.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -938,15 +938,15 @@ Partial Class Blodbane
         'PanelAnsatt
         '
         resources.ApplyResources(Me.PanelAnsatt, "PanelAnsatt")
-        Me.PanelAnsatt.Controls.Add(Me.Label23)
+        Me.PanelAnsatt.Controls.Add(Me.lblVelkommen)
         Me.PanelAnsatt.Controls.Add(Me.BttnLoggavAnsatt)
         Me.PanelAnsatt.Controls.Add(Me.TabControl1)
         Me.PanelAnsatt.Name = "PanelAnsatt"
         '
-        'Label23
+        'lblVelkommen
         '
-        resources.ApplyResources(Me.Label23, "Label23")
-        Me.Label23.Name = "Label23"
+        resources.ApplyResources(Me.lblVelkommen, "lblVelkommen")
+        Me.lblVelkommen.Name = "lblVelkommen"
         '
         'BttnLoggavAnsatt
         '
@@ -967,68 +967,68 @@ Partial Class Blodbane
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage1.Controls.Add(Me.GroupBox12)
-        Me.TabPage1.Controls.Add(Me.GroupBox11)
+        Me.TabPage1.Controls.Add(Me.gpBxValgtBlodgiver)
         Me.TabPage1.Controls.Add(Me.GroupBox10)
-        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GpBxSøk)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         '
         'GroupBox12
         '
-        Me.GroupBox12.Controls.Add(Me.Button7)
+        Me.GroupBox12.Controls.Add(Me.btnBlodgivingGjført)
         Me.GroupBox12.Controls.Add(Me.Label141)
-        Me.GroupBox12.Controls.Add(Me.NumericUpDown3)
+        Me.GroupBox12.Controls.Add(Me.nudResRødeBlodl)
         Me.GroupBox12.Controls.Add(Me.Label140)
-        Me.GroupBox12.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox12.Controls.Add(Me.nudResPlasma)
         Me.GroupBox12.Controls.Add(Me.Label139)
-        Me.GroupBox12.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox12.Controls.Add(Me.nudResBlodplater)
         Me.GroupBox12.Controls.Add(Me.Label138)
         Me.GroupBox12.Controls.Add(Me.Label137)
         Me.GroupBox12.Controls.Add(Me.Label116)
-        Me.GroupBox12.Controls.Add(Me.ComboBox3)
+        Me.GroupBox12.Controls.Add(Me.cbxAnsattUtførtTapping)
         Me.GroupBox12.Controls.Add(Me.Label115)
         resources.ApplyResources(Me.GroupBox12, "GroupBox12")
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.TabStop = False
         '
-        'Button7
+        'btnBlodgivingGjført
         '
-        resources.ApplyResources(Me.Button7, "Button7")
-        Me.Button7.Name = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnBlodgivingGjført, "btnBlodgivingGjført")
+        Me.btnBlodgivingGjført.Name = "btnBlodgivingGjført"
+        Me.btnBlodgivingGjført.UseVisualStyleBackColor = True
         '
         'Label141
         '
         resources.ApplyResources(Me.Label141, "Label141")
         Me.Label141.Name = "Label141"
         '
-        'NumericUpDown3
+        'nudResRødeBlodl
         '
-        resources.ApplyResources(Me.NumericUpDown3, "NumericUpDown3")
-        Me.NumericUpDown3.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
-        Me.NumericUpDown3.Name = "NumericUpDown3"
+        resources.ApplyResources(Me.nudResRødeBlodl, "nudResRødeBlodl")
+        Me.nudResRødeBlodl.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
+        Me.nudResRødeBlodl.Name = "nudResRødeBlodl"
         '
         'Label140
         '
         resources.ApplyResources(Me.Label140, "Label140")
         Me.Label140.Name = "Label140"
         '
-        'NumericUpDown2
+        'nudResPlasma
         '
-        resources.ApplyResources(Me.NumericUpDown2, "NumericUpDown2")
-        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
-        Me.NumericUpDown2.Name = "NumericUpDown2"
+        resources.ApplyResources(Me.nudResPlasma, "nudResPlasma")
+        Me.nudResPlasma.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
+        Me.nudResPlasma.Name = "nudResPlasma"
         '
         'Label139
         '
         resources.ApplyResources(Me.Label139, "Label139")
         Me.Label139.Name = "Label139"
         '
-        'NumericUpDown1
+        'nudResBlodplater
         '
-        resources.ApplyResources(Me.NumericUpDown1, "NumericUpDown1")
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
+        resources.ApplyResources(Me.nudResBlodplater, "nudResBlodplater")
+        Me.nudResBlodplater.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
+        Me.nudResBlodplater.Name = "nudResBlodplater"
         '
         'Label138
         '
@@ -1045,173 +1045,173 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label116, "Label116")
         Me.Label116.Name = "Label116"
         '
-        'ComboBox3
+        'cbxAnsattUtførtTapping
         '
-        Me.ComboBox3.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
+        Me.cbxAnsattUtførtTapping.FormattingEnabled = True
+        resources.ApplyResources(Me.cbxAnsattUtførtTapping, "cbxAnsattUtførtTapping")
+        Me.cbxAnsattUtførtTapping.Name = "cbxAnsattUtførtTapping"
         '
         'Label115
         '
         resources.ApplyResources(Me.Label115, "Label115")
         Me.Label115.Name = "Label115"
         '
-        'GroupBox11
+        'gpBxValgtBlodgiver
         '
-        Me.GroupBox11.Controls.Add(Me.TextBox28)
-        Me.GroupBox11.Controls.Add(Me.TextBox21)
-        Me.GroupBox11.Controls.Add(Me.TextBox35)
-        Me.GroupBox11.Controls.Add(Me.Label120)
-        Me.GroupBox11.Controls.Add(Me.RichTextBox4)
-        Me.GroupBox11.Controls.Add(Me.Label118)
-        Me.GroupBox11.Controls.Add(Me.ComboBox4)
-        Me.GroupBox11.Controls.Add(Me.Label117)
-        Me.GroupBox11.Controls.Add(Me.RichTextBox2)
-        Me.GroupBox11.Controls.Add(Me.Label112)
-        Me.GroupBox11.Controls.Add(Me.TextBox32)
-        Me.GroupBox11.Controls.Add(Me.TextBox31)
-        Me.GroupBox11.Controls.Add(Me.Label109)
-        Me.GroupBox11.Controls.Add(Me.TextBox30)
-        Me.GroupBox11.Controls.Add(Me.Label108)
-        Me.GroupBox11.Controls.Add(Me.TextBox29)
-        Me.GroupBox11.Controls.Add(Me.Label107)
-        Me.GroupBox11.Controls.Add(Me.TextBox26)
-        Me.GroupBox11.Controls.Add(Me.Label104)
-        Me.GroupBox11.Controls.Add(Me.TextBox27)
-        Me.GroupBox11.Controls.Add(Me.Label105)
-        Me.GroupBox11.Controls.Add(Me.TextBox25)
-        Me.GroupBox11.Controls.Add(Me.Label103)
-        Me.GroupBox11.Controls.Add(Me.TextBox24)
-        Me.GroupBox11.Controls.Add(Me.Label102)
-        resources.ApplyResources(Me.GroupBox11, "GroupBox11")
-        Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.TabStop = False
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverSistTappDato)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverStatusKode)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverSistTappDager)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label120)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.rTxtValgBlodgiverTimepref)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label118)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.cBxValgtBlodgiverStatusTekst)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label117)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.rTxtValgtBlodgiverInternMrknd)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label112)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverPoststed)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverPostnr)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label109)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverAdresse)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label108)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverTelefon2)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label107)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverTelefon1)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label104)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverEpost)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label105)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverPersnr)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label103)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverNavn)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label102)
+        resources.ApplyResources(Me.gpBxValgtBlodgiver, "gpBxValgtBlodgiver")
+        Me.gpBxValgtBlodgiver.Name = "gpBxValgtBlodgiver"
+        Me.gpBxValgtBlodgiver.TabStop = False
         '
-        'TextBox28
+        'txtValgtBlodgiverSistTappDato
         '
-        Me.TextBox28.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox28, "TextBox28")
-        Me.TextBox28.Name = "TextBox28"
+        Me.txtValgtBlodgiverSistTappDato.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtValgtBlodgiverSistTappDato, "txtValgtBlodgiverSistTappDato")
+        Me.txtValgtBlodgiverSistTappDato.Name = "txtValgtBlodgiverSistTappDato"
         '
-        'TextBox21
+        'txtValgtBlodgiverStatusKode
         '
-        resources.ApplyResources(Me.TextBox21, "TextBox21")
-        Me.TextBox21.Name = "TextBox21"
+        resources.ApplyResources(Me.txtValgtBlodgiverStatusKode, "txtValgtBlodgiverStatusKode")
+        Me.txtValgtBlodgiverStatusKode.Name = "txtValgtBlodgiverStatusKode"
         '
-        'TextBox35
+        'txtValgtBlodgiverSistTappDager
         '
-        Me.TextBox35.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox35, "TextBox35")
-        Me.TextBox35.Name = "TextBox35"
+        Me.txtValgtBlodgiverSistTappDager.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtValgtBlodgiverSistTappDager, "txtValgtBlodgiverSistTappDager")
+        Me.txtValgtBlodgiverSistTappDager.Name = "txtValgtBlodgiverSistTappDager"
         '
         'Label120
         '
         resources.ApplyResources(Me.Label120, "Label120")
         Me.Label120.Name = "Label120"
         '
-        'RichTextBox4
+        'rTxtValgBlodgiverTimepref
         '
-        resources.ApplyResources(Me.RichTextBox4, "RichTextBox4")
-        Me.RichTextBox4.Name = "RichTextBox4"
+        resources.ApplyResources(Me.rTxtValgBlodgiverTimepref, "rTxtValgBlodgiverTimepref")
+        Me.rTxtValgBlodgiverTimepref.Name = "rTxtValgBlodgiverTimepref"
         '
         'Label118
         '
         resources.ApplyResources(Me.Label118, "Label118")
         Me.Label118.Name = "Label118"
         '
-        'ComboBox4
+        'cBxValgtBlodgiverStatusTekst
         '
-        Me.ComboBox4.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox4, "ComboBox4")
-        Me.ComboBox4.Name = "ComboBox4"
+        Me.cBxValgtBlodgiverStatusTekst.FormattingEnabled = True
+        resources.ApplyResources(Me.cBxValgtBlodgiverStatusTekst, "cBxValgtBlodgiverStatusTekst")
+        Me.cBxValgtBlodgiverStatusTekst.Name = "cBxValgtBlodgiverStatusTekst"
         '
         'Label117
         '
         resources.ApplyResources(Me.Label117, "Label117")
         Me.Label117.Name = "Label117"
         '
-        'RichTextBox2
+        'rTxtValgtBlodgiverInternMrknd
         '
-        resources.ApplyResources(Me.RichTextBox2, "RichTextBox2")
-        Me.RichTextBox2.Name = "RichTextBox2"
+        resources.ApplyResources(Me.rTxtValgtBlodgiverInternMrknd, "rTxtValgtBlodgiverInternMrknd")
+        Me.rTxtValgtBlodgiverInternMrknd.Name = "rTxtValgtBlodgiverInternMrknd"
         '
         'Label112
         '
         resources.ApplyResources(Me.Label112, "Label112")
         Me.Label112.Name = "Label112"
         '
-        'TextBox32
+        'txtValgtBlodgiverPoststed
         '
-        Me.TextBox32.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox32, "TextBox32")
-        Me.TextBox32.Name = "TextBox32"
+        Me.txtValgtBlodgiverPoststed.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtValgtBlodgiverPoststed, "txtValgtBlodgiverPoststed")
+        Me.txtValgtBlodgiverPoststed.Name = "txtValgtBlodgiverPoststed"
         '
-        'TextBox31
+        'txtValgtBlodgiverPostnr
         '
-        resources.ApplyResources(Me.TextBox31, "TextBox31")
-        Me.TextBox31.Name = "TextBox31"
+        resources.ApplyResources(Me.txtValgtBlodgiverPostnr, "txtValgtBlodgiverPostnr")
+        Me.txtValgtBlodgiverPostnr.Name = "txtValgtBlodgiverPostnr"
         '
         'Label109
         '
         resources.ApplyResources(Me.Label109, "Label109")
         Me.Label109.Name = "Label109"
         '
-        'TextBox30
+        'txtValgtBlodgiverAdresse
         '
-        resources.ApplyResources(Me.TextBox30, "TextBox30")
-        Me.TextBox30.Name = "TextBox30"
+        resources.ApplyResources(Me.txtValgtBlodgiverAdresse, "txtValgtBlodgiverAdresse")
+        Me.txtValgtBlodgiverAdresse.Name = "txtValgtBlodgiverAdresse"
         '
         'Label108
         '
         resources.ApplyResources(Me.Label108, "Label108")
         Me.Label108.Name = "Label108"
         '
-        'TextBox29
+        'txtValgtBlodgiverTelefon2
         '
-        resources.ApplyResources(Me.TextBox29, "TextBox29")
-        Me.TextBox29.Name = "TextBox29"
+        resources.ApplyResources(Me.txtValgtBlodgiverTelefon2, "txtValgtBlodgiverTelefon2")
+        Me.txtValgtBlodgiverTelefon2.Name = "txtValgtBlodgiverTelefon2"
         '
         'Label107
         '
         resources.ApplyResources(Me.Label107, "Label107")
         Me.Label107.Name = "Label107"
         '
-        'TextBox26
+        'txtValgtBlodgiverTelefon1
         '
-        resources.ApplyResources(Me.TextBox26, "TextBox26")
-        Me.TextBox26.Name = "TextBox26"
+        resources.ApplyResources(Me.txtValgtBlodgiverTelefon1, "txtValgtBlodgiverTelefon1")
+        Me.txtValgtBlodgiverTelefon1.Name = "txtValgtBlodgiverTelefon1"
         '
         'Label104
         '
         resources.ApplyResources(Me.Label104, "Label104")
         Me.Label104.Name = "Label104"
         '
-        'TextBox27
+        'txtValgtBlodgiverEpost
         '
-        resources.ApplyResources(Me.TextBox27, "TextBox27")
-        Me.TextBox27.Name = "TextBox27"
+        resources.ApplyResources(Me.txtValgtBlodgiverEpost, "txtValgtBlodgiverEpost")
+        Me.txtValgtBlodgiverEpost.Name = "txtValgtBlodgiverEpost"
         '
         'Label105
         '
         resources.ApplyResources(Me.Label105, "Label105")
         Me.Label105.Name = "Label105"
         '
-        'TextBox25
+        'txtValgtBlodgiverPersnr
         '
-        Me.TextBox25.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox25, "TextBox25")
-        Me.TextBox25.Name = "TextBox25"
+        Me.txtValgtBlodgiverPersnr.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtValgtBlodgiverPersnr, "txtValgtBlodgiverPersnr")
+        Me.txtValgtBlodgiverPersnr.Name = "txtValgtBlodgiverPersnr"
         '
         'Label103
         '
         resources.ApplyResources(Me.Label103, "Label103")
         Me.Label103.Name = "Label103"
         '
-        'TextBox24
+        'txtValgtBlodgiverNavn
         '
-        Me.TextBox24.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox24, "TextBox24")
-        Me.TextBox24.Name = "TextBox24"
+        Me.txtValgtBlodgiverNavn.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtValgtBlodgiverNavn, "txtValgtBlodgiverNavn")
+        Me.txtValgtBlodgiverNavn.Name = "txtValgtBlodgiverNavn"
         '
         'Label102
         '
@@ -1220,145 +1220,145 @@ Partial Class Blodbane
         '
         'GroupBox10
         '
-        Me.GroupBox10.Controls.Add(Me.Button6)
+        Me.GroupBox10.Controls.Add(Me.btnHKtrlIntProfGjgått)
         Me.GroupBox10.Controls.Add(Me.GroupBoxIntervju)
-        Me.GroupBox10.Controls.Add(Me.TextBox34)
+        Me.GroupBox10.Controls.Add(Me.txtHKtrlEKDatoGjennomg)
         Me.GroupBox10.Controls.Add(Me.Label101)
-        Me.GroupBox10.Controls.Add(Me.TextBox33)
+        Me.GroupBox10.Controls.Add(Me.txtHKtrlGjennomgAv)
         Me.GroupBox10.Controls.Add(Me.Label97)
-        Me.GroupBox10.Controls.Add(Me.ListBox3)
+        Me.GroupBox10.Controls.Add(Me.lbxHKtrlJasvar)
         Me.GroupBox10.Controls.Add(Me.Label111)
-        Me.GroupBox10.Controls.Add(Me.TextBox22)
+        Me.GroupBox10.Controls.Add(Me.txtHKtrlSisteEgenerkl)
         Me.GroupBox10.Controls.Add(Me.Label100)
         resources.ApplyResources(Me.GroupBox10, "GroupBox10")
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.TabStop = False
         '
-        'Button6
+        'btnHKtrlIntProfGjgått
         '
-        resources.ApplyResources(Me.Button6, "Button6")
-        Me.Button6.Name = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnHKtrlIntProfGjgått, "btnHKtrlIntProfGjgått")
+        Me.btnHKtrlIntProfGjgått.Name = "btnHKtrlIntProfGjgått"
+        Me.btnHKtrlIntProfGjgått.UseVisualStyleBackColor = True
         '
         'GroupBoxIntervju
         '
-        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton2)
+        Me.GroupBoxIntervju.Controls.Add(Me.rBtnHKtrlIkkeGodkjent)
         Me.GroupBoxIntervju.Controls.Add(Me.Label110)
-        Me.GroupBoxIntervju.Controls.Add(Me.RadioButton1)
-        Me.GroupBoxIntervju.Controls.Add(Me.RichTextBox3)
+        Me.GroupBoxIntervju.Controls.Add(Me.rBtnHKtrlGodkjent)
+        Me.GroupBoxIntervju.Controls.Add(Me.rTxtHKtrlKommentar)
         Me.GroupBoxIntervju.Controls.Add(Me.Label106)
         resources.ApplyResources(Me.GroupBoxIntervju, "GroupBoxIntervju")
         Me.GroupBoxIntervju.Name = "GroupBoxIntervju"
         Me.GroupBoxIntervju.TabStop = False
         '
-        'RadioButton2
+        'rBtnHKtrlIkkeGodkjent
         '
-        resources.ApplyResources(Me.RadioButton2, "RadioButton2")
-        Me.RadioButton2.Checked = True
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.rBtnHKtrlIkkeGodkjent, "rBtnHKtrlIkkeGodkjent")
+        Me.rBtnHKtrlIkkeGodkjent.Checked = True
+        Me.rBtnHKtrlIkkeGodkjent.Name = "rBtnHKtrlIkkeGodkjent"
+        Me.rBtnHKtrlIkkeGodkjent.TabStop = True
+        Me.rBtnHKtrlIkkeGodkjent.UseVisualStyleBackColor = True
         '
         'Label110
         '
         resources.ApplyResources(Me.Label110, "Label110")
         Me.Label110.Name = "Label110"
         '
-        'RadioButton1
+        'rBtnHKtrlGodkjent
         '
-        resources.ApplyResources(Me.RadioButton1, "RadioButton1")
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.rBtnHKtrlGodkjent, "rBtnHKtrlGodkjent")
+        Me.rBtnHKtrlGodkjent.Name = "rBtnHKtrlGodkjent"
+        Me.rBtnHKtrlGodkjent.UseVisualStyleBackColor = True
         '
-        'RichTextBox3
+        'rTxtHKtrlKommentar
         '
-        resources.ApplyResources(Me.RichTextBox3, "RichTextBox3")
-        Me.RichTextBox3.Name = "RichTextBox3"
+        resources.ApplyResources(Me.rTxtHKtrlKommentar, "rTxtHKtrlKommentar")
+        Me.rTxtHKtrlKommentar.Name = "rTxtHKtrlKommentar"
         '
         'Label106
         '
         resources.ApplyResources(Me.Label106, "Label106")
         Me.Label106.Name = "Label106"
         '
-        'TextBox34
+        'txtHKtrlEKDatoGjennomg
         '
-        Me.TextBox34.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox34, "TextBox34")
-        Me.TextBox34.Name = "TextBox34"
+        Me.txtHKtrlEKDatoGjennomg.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtHKtrlEKDatoGjennomg, "txtHKtrlEKDatoGjennomg")
+        Me.txtHKtrlEKDatoGjennomg.Name = "txtHKtrlEKDatoGjennomg"
         '
         'Label101
         '
         resources.ApplyResources(Me.Label101, "Label101")
         Me.Label101.Name = "Label101"
         '
-        'TextBox33
+        'txtHKtrlGjennomgAv
         '
-        Me.TextBox33.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox33, "TextBox33")
-        Me.TextBox33.Name = "TextBox33"
+        Me.txtHKtrlGjennomgAv.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtHKtrlGjennomgAv, "txtHKtrlGjennomgAv")
+        Me.txtHKtrlGjennomgAv.Name = "txtHKtrlGjennomgAv"
         '
         'Label97
         '
         resources.ApplyResources(Me.Label97, "Label97")
         Me.Label97.Name = "Label97"
         '
-        'ListBox3
+        'lbxHKtrlJasvar
         '
-        Me.ListBox3.BackColor = System.Drawing.SystemColors.Info
-        Me.ListBox3.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox3, "ListBox3")
-        Me.ListBox3.Name = "ListBox3"
+        Me.lbxHKtrlJasvar.BackColor = System.Drawing.SystemColors.Info
+        Me.lbxHKtrlJasvar.FormattingEnabled = True
+        resources.ApplyResources(Me.lbxHKtrlJasvar, "lbxHKtrlJasvar")
+        Me.lbxHKtrlJasvar.Name = "lbxHKtrlJasvar"
         '
         'Label111
         '
         resources.ApplyResources(Me.Label111, "Label111")
         Me.Label111.Name = "Label111"
         '
-        'TextBox22
+        'txtHKtrlSisteEgenerkl
         '
-        Me.TextBox22.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox22, "TextBox22")
-        Me.TextBox22.Name = "TextBox22"
+        Me.txtHKtrlSisteEgenerkl.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtHKtrlSisteEgenerkl, "txtHKtrlSisteEgenerkl")
+        Me.txtHKtrlSisteEgenerkl.Name = "txtHKtrlSisteEgenerkl"
         '
         'Label100
         '
         resources.ApplyResources(Me.Label100, "Label100")
         Me.Label100.Name = "Label100"
         '
-        'GroupBox4
+        'GpBxSøk
         '
-        Me.GroupBox4.Controls.Add(Me.Button4)
-        Me.GroupBox4.Controls.Add(Me.TextBox20)
-        Me.GroupBox4.Controls.Add(Me.ComboBox5)
-        Me.GroupBox4.Controls.Add(Me.Label119)
-        Me.GroupBox4.Controls.Add(Me.BttnSøkGiver)
-        Me.GroupBox4.Controls.Add(Me.ComboBox2)
-        Me.GroupBox4.Controls.Add(Me.Label99)
-        Me.GroupBox4.Controls.Add(Me.Label98)
-        Me.GroupBox4.Controls.Add(Me.ListBox2)
-        Me.GroupBox4.Controls.Add(Me.TextBox19)
-        Me.GroupBox4.Controls.Add(Me.Label27)
-        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.TabStop = False
+        Me.GpBxSøk.Controls.Add(Me.btnSøkTømSkjema)
+        Me.GpBxSøk.Controls.Add(Me.txtSøkStatuskode)
+        Me.GpBxSøk.Controls.Add(Me.cBxSøkBlodtype)
+        Me.GpBxSøk.Controls.Add(Me.Label119)
+        Me.GpBxSøk.Controls.Add(Me.BttnSøkGiver)
+        Me.GpBxSøk.Controls.Add(Me.cBxSøkStatusbeskrivelse)
+        Me.GpBxSøk.Controls.Add(Me.Label99)
+        Me.GpBxSøk.Controls.Add(Me.Label98)
+        Me.GpBxSøk.Controls.Add(Me.lBxSøkResultater)
+        Me.GpBxSøk.Controls.Add(Me.txtSøk)
+        Me.GpBxSøk.Controls.Add(Me.Label27)
+        resources.ApplyResources(Me.GpBxSøk, "GpBxSøk")
+        Me.GpBxSøk.Name = "GpBxSøk"
+        Me.GpBxSøk.TabStop = False
         '
-        'Button4
+        'btnSøkTømSkjema
         '
-        resources.ApplyResources(Me.Button4, "Button4")
-        Me.Button4.Name = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnSøkTømSkjema, "btnSøkTømSkjema")
+        Me.btnSøkTømSkjema.Name = "btnSøkTømSkjema"
+        Me.btnSøkTømSkjema.UseVisualStyleBackColor = True
         '
-        'TextBox20
+        'txtSøkStatuskode
         '
-        resources.ApplyResources(Me.TextBox20, "TextBox20")
-        Me.TextBox20.Name = "TextBox20"
+        resources.ApplyResources(Me.txtSøkStatuskode, "txtSøkStatuskode")
+        Me.txtSøkStatuskode.Name = "txtSøkStatuskode"
         '
-        'ComboBox5
+        'cBxSøkBlodtype
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {resources.GetString("ComboBox5.Items"), resources.GetString("ComboBox5.Items1"), resources.GetString("ComboBox5.Items2"), resources.GetString("ComboBox5.Items3"), resources.GetString("ComboBox5.Items4"), resources.GetString("ComboBox5.Items5"), resources.GetString("ComboBox5.Items6"), resources.GetString("ComboBox5.Items7")})
-        resources.ApplyResources(Me.ComboBox5, "ComboBox5")
-        Me.ComboBox5.Name = "ComboBox5"
+        Me.cBxSøkBlodtype.FormattingEnabled = True
+        Me.cBxSøkBlodtype.Items.AddRange(New Object() {resources.GetString("cBxSøkBlodtype.Items"), resources.GetString("cBxSøkBlodtype.Items1"), resources.GetString("cBxSøkBlodtype.Items2"), resources.GetString("cBxSøkBlodtype.Items3"), resources.GetString("cBxSøkBlodtype.Items4"), resources.GetString("cBxSøkBlodtype.Items5"), resources.GetString("cBxSøkBlodtype.Items6"), resources.GetString("cBxSøkBlodtype.Items7")})
+        resources.ApplyResources(Me.cBxSøkBlodtype, "cBxSøkBlodtype")
+        Me.cBxSøkBlodtype.Name = "cBxSøkBlodtype"
         '
         'Label119
         '
@@ -1371,12 +1371,12 @@ Partial Class Blodbane
         Me.BttnSøkGiver.Name = "BttnSøkGiver"
         Me.BttnSøkGiver.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'cBxSøkStatusbeskrivelse
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {resources.GetString("ComboBox2.Items"), resources.GetString("ComboBox2.Items1"), resources.GetString("ComboBox2.Items2"), resources.GetString("ComboBox2.Items3"), resources.GetString("ComboBox2.Items4"), resources.GetString("ComboBox2.Items5"), resources.GetString("ComboBox2.Items6"), resources.GetString("ComboBox2.Items7"), resources.GetString("ComboBox2.Items8")})
-        resources.ApplyResources(Me.ComboBox2, "ComboBox2")
-        Me.ComboBox2.Name = "ComboBox2"
+        Me.cBxSøkStatusbeskrivelse.FormattingEnabled = True
+        Me.cBxSøkStatusbeskrivelse.Items.AddRange(New Object() {resources.GetString("cBxSøkStatusbeskrivelse.Items"), resources.GetString("cBxSøkStatusbeskrivelse.Items1"), resources.GetString("cBxSøkStatusbeskrivelse.Items2"), resources.GetString("cBxSøkStatusbeskrivelse.Items3"), resources.GetString("cBxSøkStatusbeskrivelse.Items4"), resources.GetString("cBxSøkStatusbeskrivelse.Items5"), resources.GetString("cBxSøkStatusbeskrivelse.Items6"), resources.GetString("cBxSøkStatusbeskrivelse.Items7"), resources.GetString("cBxSøkStatusbeskrivelse.Items8")})
+        resources.ApplyResources(Me.cBxSøkStatusbeskrivelse, "cBxSøkStatusbeskrivelse")
+        Me.cBxSøkStatusbeskrivelse.Name = "cBxSøkStatusbeskrivelse"
         '
         'Label99
         '
@@ -1388,16 +1388,16 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label98, "Label98")
         Me.Label98.Name = "Label98"
         '
-        'ListBox2
+        'lBxSøkResultater
         '
-        Me.ListBox2.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox2, "ListBox2")
-        Me.ListBox2.Name = "ListBox2"
+        Me.lBxSøkResultater.FormattingEnabled = True
+        resources.ApplyResources(Me.lBxSøkResultater, "lBxSøkResultater")
+        Me.lBxSøkResultater.Name = "lBxSøkResultater"
         '
-        'TextBox19
+        'txtSøk
         '
-        resources.ApplyResources(Me.TextBox19, "TextBox19")
-        Me.TextBox19.Name = "TextBox19"
+        resources.ApplyResources(Me.txtSøk, "txtSøk")
+        Me.txtSøk.Name = "txtSøk"
         '
         'Label27
         '
@@ -1483,52 +1483,52 @@ Partial Class Blodbane
         '
         'Chart2
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend5)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend1)
         resources.ApplyResources(Me.Chart2, "Chart2")
         Me.Chart2.Name = "Chart2"
         Me.Chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Blodplater"
-        DataPoint21.AxisLabel = "0+"
-        DataPoint21.Label = ""
-        DataPoint22.AxisLabel = "0-"
-        DataPoint22.LegendText = ""
-        DataPoint23.AxisLabel = "A+"
-        DataPoint24.AxisLabel = "A-"
-        DataPoint25.AxisLabel = "AB+"
-        DataPoint26.AxisLabel = "AB-"
-        DataPoint27.AxisLabel = "B+"
-        DataPoint28.AxisLabel = "B-"
-        Series5.Points.Add(DataPoint21)
-        Series5.Points.Add(DataPoint22)
-        Series5.Points.Add(DataPoint23)
-        Series5.Points.Add(DataPoint24)
-        Series5.Points.Add(DataPoint25)
-        Series5.Points.Add(DataPoint26)
-        Series5.Points.Add(DataPoint27)
-        Series5.Points.Add(DataPoint28)
-        Me.Chart2.Series.Add(Series5)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Blodplater"
+        DataPoint1.AxisLabel = "0+"
+        DataPoint1.Label = ""
+        DataPoint2.AxisLabel = "0-"
+        DataPoint2.LegendText = ""
+        DataPoint3.AxisLabel = "A+"
+        DataPoint4.AxisLabel = "A-"
+        DataPoint5.AxisLabel = "AB+"
+        DataPoint6.AxisLabel = "AB-"
+        DataPoint7.AxisLabel = "B+"
+        DataPoint8.AxisLabel = "B-"
+        Series1.Points.Add(DataPoint1)
+        Series1.Points.Add(DataPoint2)
+        Series1.Points.Add(DataPoint3)
+        Series1.Points.Add(DataPoint4)
+        Series1.Points.Add(DataPoint5)
+        Series1.Points.Add(DataPoint6)
+        Series1.Points.Add(DataPoint7)
+        Series1.Points.Add(DataPoint8)
+        Me.Chart2.Series.Add(Series1)
         '
         'Chart1
         '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea6)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
         Me.Chart1.Cursor = System.Windows.Forms.Cursors.Default
-        Legend6.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend6)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         resources.ApplyResources(Me.Chart1, "Chart1")
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Series6.Points.Add(DataPoint29)
-        Series6.Points.Add(DataPoint30)
-        Me.Chart1.Series.Add(Series6)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Series2.Points.Add(DataPoint9)
+        Series2.Points.Add(DataPoint10)
+        Me.Chart1.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -1580,17 +1580,17 @@ Partial Class Blodbane
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox11.ResumeLayout(False)
-        Me.GroupBox11.PerformLayout()
+        CType(Me.nudResRødeBlodl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudResPlasma, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudResBlodplater, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gpBxValgtBlodgiver.ResumeLayout(False)
+        Me.gpBxValgtBlodgiver.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
         Me.GroupBoxIntervju.ResumeLayout(False)
         Me.GroupBoxIntervju.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        Me.GpBxSøk.ResumeLayout(False)
+        Me.GpBxSøk.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
@@ -1663,7 +1663,7 @@ Partial Class Blodbane
     Friend WithEvents TxtNesteInnkalling As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents BtnBekreftEndretTime As Button
-    Friend WithEvents Label23 As Label
+    Friend WithEvents lblVelkommen As Label
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents txtPersDataTlf2 As TextBox
     Friend WithEvents Label25 As Label
@@ -1675,50 +1675,50 @@ Partial Class Blodbane
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents CBxKontaktform As ComboBox
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents GpBxSøk As GroupBox
+    Friend WithEvents cBxSøkStatusbeskrivelse As ComboBox
     Friend WithEvents Label99 As Label
     Friend WithEvents Label98 As Label
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents lBxSøkResultater As ListBox
+    Friend WithEvents txtSøk As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents GroupBox8 As GroupBox
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
-    Friend WithEvents GroupBox11 As GroupBox
-    Friend WithEvents TextBox32 As TextBox
-    Friend WithEvents TextBox31 As TextBox
+    Friend WithEvents gpBxValgtBlodgiver As GroupBox
+    Friend WithEvents txtValgtBlodgiverPoststed As TextBox
+    Friend WithEvents txtValgtBlodgiverPostnr As TextBox
     Friend WithEvents Label109 As Label
-    Friend WithEvents TextBox30 As TextBox
+    Friend WithEvents txtValgtBlodgiverAdresse As TextBox
     Friend WithEvents Label108 As Label
-    Friend WithEvents TextBox29 As TextBox
+    Friend WithEvents txtValgtBlodgiverTelefon2 As TextBox
     Friend WithEvents Label107 As Label
-    Friend WithEvents TextBox26 As TextBox
+    Friend WithEvents txtValgtBlodgiverTelefon1 As TextBox
     Friend WithEvents Label104 As Label
-    Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents txtValgtBlodgiverEpost As TextBox
     Friend WithEvents Label105 As Label
-    Friend WithEvents TextBox25 As TextBox
+    Friend WithEvents txtValgtBlodgiverPersnr As TextBox
     Friend WithEvents Label103 As Label
-    Friend WithEvents TextBox24 As TextBox
+    Friend WithEvents txtValgtBlodgiverNavn As TextBox
     Friend WithEvents Label102 As Label
     Friend WithEvents GroupBox10 As GroupBox
-    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents lbxHKtrlJasvar As ListBox
     Friend WithEvents Label111 As Label
-    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents txtHKtrlSisteEgenerkl As TextBox
     Friend WithEvents Label100 As Label
     Friend WithEvents BttnSøkGiver As Button
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents rTxtValgtBlodgiverInternMrknd As RichTextBox
     Friend WithEvents Label112 As Label
     Friend WithEvents LagreToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents cBxValgtBlodgiverStatusTekst As ComboBox
     Friend WithEvents Label117 As Label
-    Friend WithEvents RichTextBox4 As RichTextBox
+    Friend WithEvents rTxtValgBlodgiverTimepref As RichTextBox
     Friend WithEvents Label118 As Label
-    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents cBxSøkBlodtype As ComboBox
     Friend WithEvents Label119 As Label
-    Friend WithEvents TextBox35 As TextBox
+    Friend WithEvents txtValgtBlodgiverSistTappDager As TextBox
     Friend WithEvents Label120 As Label
     Friend WithEvents ListBox6 As ListBox
     Friend WithEvents ListBox5 As ListBox
@@ -1734,21 +1734,21 @@ Partial Class Blodbane
     Friend WithEvents txtPersDataBlodtype As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents GroupBox9 As GroupBox
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox28 As TextBox
+    Friend WithEvents txtSøkStatuskode As TextBox
+    Friend WithEvents txtValgtBlodgiverStatusKode As TextBox
+    Friend WithEvents txtValgtBlodgiverSistTappDato As TextBox
     Friend WithEvents Label89 As Label
     Friend WithEvents txtBgInn_passord1 As TextBox
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnSøkTømSkjema As Button
     Friend WithEvents LagreToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents Button6 As Button
-    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents btnHKtrlIntProfGjgått As Button
+    Friend WithEvents txtHKtrlEKDatoGjennomg As TextBox
     Friend WithEvents Label101 As Label
-    Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents txtHKtrlGjennomgAv As TextBox
     Friend WithEvents Label97 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RichTextBox3 As RichTextBox
+    Friend WithEvents rBtnHKtrlIkkeGodkjent As RadioButton
+    Friend WithEvents rBtnHKtrlGodkjent As RadioButton
+    Friend WithEvents rTxtHKtrlKommentar As RichTextBox
     Friend WithEvents Label106 As Label
     Friend WithEvents Label110 As Label
     Friend WithEvents GroupBoxIntervju As GroupBox
@@ -1758,17 +1758,17 @@ Partial Class Blodbane
     Friend WithEvents txtBgInn_tlfnr2 As TextBox
     Friend WithEvents GroupBox12 As GroupBox
     Friend WithEvents Label141 As Label
-    Friend WithEvents NumericUpDown3 As NumericUpDown
+    Friend WithEvents nudResRødeBlodl As NumericUpDown
     Friend WithEvents Label140 As Label
-    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents nudResPlasma As NumericUpDown
     Friend WithEvents Label139 As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents nudResBlodplater As NumericUpDown
     Friend WithEvents Label138 As Label
     Friend WithEvents Label137 As Label
     Friend WithEvents Label116 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cbxAnsattUtførtTapping As ComboBox
     Friend WithEvents Label115 As Label
-    Friend WithEvents Button7 As Button
+    Friend WithEvents btnBlodgivingGjført As Button
     Friend WithEvents Label143 As Label
     Friend WithEvents Label142 As Label
     Friend WithEvents txtPersDataPoststed As TextBox

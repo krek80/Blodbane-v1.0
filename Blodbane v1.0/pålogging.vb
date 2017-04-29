@@ -32,6 +32,6 @@
         End If
         Blodbane.påloggetAnsatt = pålogget
         Blodbane.påloggetAepost = påloggetEpost
-        Blodbane.Label23.Text = $"Velkommen {pålogget}"
+        Blodbane.lblVelkommen.Text = $"Velkommen {pålogget}"
     End Sub
 End Class
