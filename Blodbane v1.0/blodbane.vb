@@ -1305,7 +1305,18 @@ Public Class Blodbane
             End If
         Next
 
-        'SQL her:
+        'Lagring jasvar i database
+        Try
+            tilkobling.Open()
+            Dim sporring As String = ""
+            sporring = $"INSERT INTO egenerklaering (skjema) VALUES (Jasvar)"
+            Dim sqlja As New MySqlCommand(sporring, tilkobling)
+
+        Catch ex As MySqlException
+            MsgBox("Feil ved tilkobling til databasen: " & ex.Message())
+        Finally
+            tilkobling.Dispose()
+        End Try
 
     End Sub
 
