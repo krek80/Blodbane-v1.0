@@ -931,8 +931,10 @@ Public Class Blodbane
         End Try
     End Sub
 
+
     Dim SPMnr As Integer = 1
     Dim erklæringSvar(60) As Integer
+
     'Forige spørsmål i erklæring
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim spmText As String
@@ -968,7 +970,23 @@ Public Class Blodbane
             End If
         Next
         MsgBox(Jasvar)
+        'Åpne tilkobling til databasesen
+        Try
+            tilkobling.Open()
+            Dim sporring As String = ""
+            sporring = $"INSERT INTO egenerklaering (skjema) VALUES (Jasvar)"
+            Dim sqlja As New MySqlCommand(sporring, tilkobling)
+
+        Catch ex As MySqlException
+            MsgBox("Feil ved tilkobling til databasen: " & ex.Message())
+        Finally
+            tilkobling.Dispose()
+        End Try
+
+
     End Sub
+
+
 
     'Neste spørsmål i erklæring
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
