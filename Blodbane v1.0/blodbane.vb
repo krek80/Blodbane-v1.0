@@ -22,7 +22,7 @@ Public Class Blodbane
     Dim dummyFodselsnr, aarstallet As String
     Dim dummyEpost As String = "@@.@...@..@."
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
-    Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
+    Dim egenerklæringID, SPMnr, SPMnrPresentert, erklæringSvar(60) As Integer
     Dim presentertGiver, bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
 
@@ -1318,19 +1318,49 @@ Public Class Blodbane
 
     'Forrige spørsmål i erklæring
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim spmText As String
+        Dim sisteindex, kjønn, spmID, i As Integer
+        Dim spmText, pnr As String
+        Dim dame As Boolean
+        pnr = blodgiveren.Fodselsnummer1
+        sisteindex = Erklæringspørsmål.Rows.Count - 1
+        spmText = ""
 
-        If SPMnr > 1 Then
-            SPMnr = SPMnr - 1
-            spmText = 1
-            lblSpml.Text = spmText
-            Label26.Text = $"Spørsmål {SPMnr}"
+        kjønn = pnr.Substring(8, 1)
+        If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
+            dame = True
         Else
-            SPMnr = SPMnr
-            MsgBox("Dette var siste spørsmål")
+            dame = False
         End If
+
+        'Forrige spm
+        SPMnr = SPMnr - 1
+        spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
+        For i = sisteindex + 1 To 1 Step -1
+            If spmID < 100 Then
+                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                Exit For
+            ElseIf (spmID > 199) And (dame = False) Then
+                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                Exit For
+            ElseIf (spmID > 99) And (dame = True) Then
+                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                Exit For
+            Else
+                SPMnr = SPMnr - 1
+                spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
+                spmText = Nothing
+            End If
+        Next
+        SPMnrPresentert = SPMnrPresentert - 1
+        lblSpml.Text = spmText
+        Label26.Text = $"Spørsmål {SPMnrPresentert + 1}"
         RadioButton3.Checked = False
         RadioButton4.Checked = False
+        btnNeste.Enabled = True
+        If SPMnr <= 0 Then
+            Button1.Enabled = False
+            Exit Sub
+        End If
     End Sub
 
     'Send inn egenerklæring
@@ -1338,6 +1368,7 @@ Public Class Blodbane
         Dim Jasvar, sporring As String
         Dim i, siste As Integer
         siste = erklæringSvar.Length
+        Jasvar = ""
 
         For i = 0 To siste - 1
             If erklæringSvar(i) = 1 Then
@@ -1363,8 +1394,9 @@ Public Class Blodbane
         Dim sisteindex, kjønn, spmID, i As Integer
         Dim spmText, pnr As String
         Dim dame As Boolean
-        pnr = "04079147929" 'Testverdi, ekte verdi: blodgiveren.Fodselsnummer1
-        sisteindex = Erklæringspørsmål.Rows.Count
+        pnr = blodgiveren.Fodselsnummer1
+        sisteindex = Erklæringspørsmål.Rows.Count - 1
+        spmText = ""
 
         kjønn = pnr.Substring(8, 1)
         If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
@@ -1376,40 +1408,42 @@ Public Class Blodbane
             MsgBox("Du må svare før du går videre")
             Exit Sub
         End If
-
-        'Registrere svar
         If RadioButton3.Checked Then
-            erklæringSvar(SPMnr - 1) = 1
+            erklæringSvar(SPMnr) = 1
         Else
-            erklæringSvar(SPMnr - 1) = 0
+            erklæringSvar(SPMnr) = 0
         End If
 
         'Neste spm
-        SPMnr = SPMnr + 1
-        spmID = Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr")
-        For i = 0 To sisteindex
-            If spmID < 100 Then
-                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-                Exit For
-            ElseIf (spmID > 199) And (dame = False) Then
-                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-                Exit For
-            ElseIf (spmID > 99) And (dame = True) Then
-                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-                Exit For
-            Else
-                spmID = Erklæringspørsmål.Rows((SPMnr - 1) + i).Item("Nr")
-            End If
-        Next
-        spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
-        lblSpml.Text = spmText
-        Label26.Text = $"Spørsmål {SPMnr}"
-        RadioButton3.Checked = False
-        RadioButton4.Checked = False
-        If SPMnr - 1 = sisteindex Then
+        If SPMnr >= sisteindex Then
             btnNeste.Enabled = False
             MsgBox("Alle spørsmål besvart - send inn!")
+            Exit Sub
         End If
+        SPMnr = SPMnr + 1
+        spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
+        For i = 1 To (sisteindex - SPMnr) + 1
+            If spmID < 100 Then
+                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                Exit For
+            ElseIf (spmID > 199) And (dame = False) Then
+                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                Exit For
+            ElseIf (spmID > 99) And (dame = True) Then
+                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                Exit For
+            Else
+                SPMnr = SPMnr + 1
+                spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
+                spmText = Nothing
+            End If
+        Next
+        SPMnrPresentert = SPMnrPresentert + 1
+        lblSpml.Text = spmText
+        Label26.Text = $"Spørsmål {SPMnrPresentert + 1}"
+        RadioButton3.Checked = False
+        RadioButton4.Checked = False
+        Button1.Enabled = True
     End Sub
 
     'Sjekker om valgt dato er fridag
