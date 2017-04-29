@@ -1267,6 +1267,7 @@ Public Class Blodbane
         Dim antallProdukt(2) As Integer
         Dim tabell As New DataTable
         Dim da As New MySqlDataAdapter
+        timeID = ""
         ansatt = cbxAnsattUtførtTapping.Text
         bPlater = nudResBlodplater.Value
         bPlasma = nudResPlasma.Value
