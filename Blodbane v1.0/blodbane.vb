@@ -22,7 +22,7 @@ Public Class Blodbane
     Dim dummyFodselsnr, aarstallet As String
     Dim dummyEpost As String = "@@.@...@..@."
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
-    Dim egenerklæringID, SPMnr, SPMnrPresentert, erklæringSvar(60) As Integer
+    Dim egenerklæringID, SPMnr, erklæringSvar(60) As Integer
     Dim presentertGiver, bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
 
@@ -45,14 +45,14 @@ Public Class Blodbane
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
         da.SelectCommand = sqlSpørring
         da.Fill(statuser)
-        ComboBox2.Items.Clear()
+        cBxSøkStatusbeskrivelse.Items.Clear()
         For Each rad In statuser.Rows
             statustekst = rad("beskrivelse")
             statuskode = rad("kode")
             personstatusK.Add(statustekst, statuskode)
             personstatusB.Add(statuskode, statustekst)
-            ComboBox2.Items.Add(statustekst)
-            ComboBox4.Items.Add(statustekst)
+            cBxSøkStatusbeskrivelse.Items.Add(statustekst)
+            cBxValgtBlodgiverStatusTekst.Items.Add(statustekst)
         Next
 
         Me.Hide()
@@ -93,7 +93,7 @@ Public Class Blodbane
         da.SelectCommand = sqlSpørring3
         da.Fill(ansatt)
         For Each rad In ansatt.Rows
-            ComboBox3.Items.Add(rad("epost"))
+            cbxAnsattUtførtTapping.Items.Add(rad("epost"))
         Next
 
         Me.Hide()
@@ -672,10 +672,10 @@ Public Class Blodbane
     'Blodgiversøk knapp
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BttnSøkGiver.Click
         Me.Cursor = Cursors.WaitCursor
-        Dim personnummer As String = TextBox19.Text
-        Dim status As String = TextBox20.Text
+        Dim personnummer As String = txtSøk.Text
+        Dim status As String = txtSøkStatuskode.Text
         Dim statuskode As Integer
-        Dim blodtype As String = ComboBox5.Text
+        Dim blodtype As String = cBxSøkBlodtype.Text
         bgSøkParameter = ""
         If status = "" Then
             statuskode = 0
@@ -709,17 +709,17 @@ Public Class Blodbane
         Dim resPnr, resFnavn, resEnavn, resStatus, resKode As String
         Dim rad As DataRow
 
-        ListBox2.Items.Clear()
+        lBxSøkResultater.Items.Clear()
         For Each rad In giversøk.Rows
             resPnr = rad("fodselsnummer")
             resFnavn = rad("fornavn")
             resEnavn = rad("etternavn")
             resStatus = rad("beskrivelse")
             resKode = rad("statuskode")
-            ListBox2.Items.Add($"{resPnr} {vbTab}{resFnavn} {resEnavn} {vbTab}{resKode} - {resStatus}")
+            lBxSøkResultater.Items.Add($"{resPnr} {vbTab}{resFnavn} {resEnavn} {vbTab}{resKode} - {resStatus}")
         Next
-        If ListBox2.Items.Count > 0 Then
-            ListBox2.SetSelected(0, True)
+        If lBxSøkResultater.Items.Count > 0 Then
+            lBxSøkResultater.SetSelected(0, True)
         End If
     End Sub
 
@@ -757,63 +757,70 @@ Public Class Blodbane
     End Sub
 
     'Endring av statusbeskrvelse - henter statuskode
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBxSøkStatusbeskrivelse.SelectedIndexChanged
         Try
-            statuskode(ComboBox2.SelectedItem, TextBox20, ComboBox2)
+            statuskode(cBxSøkStatusbeskrivelse.SelectedItem, txtSøkStatuskode, cBxSøkStatusbeskrivelse)
         Catch
-            TextBox20.Text = ""
-            ComboBox2.Text = ""
+            txtSøkStatuskode.Text = ""
+            cBxSøkStatusbeskrivelse.Text = ""
             Exit Sub
         End Try
     End Sub
 
     'Endring av statuskode - henter statusbeskrivelse
-    Private Sub TextBox20_TextChanged(sender As Object, e As EventArgs) Handles TextBox20.TextChanged
+    Private Sub TextBox20_TextChanged(sender As Object, e As EventArgs) Handles txtSøkStatuskode.TextChanged
         Try
-            statusbeskrivelse(TextBox20.Text, ComboBox2, TextBox20)
+            statusbeskrivelse(txtSøkStatuskode.Text, cBxSøkStatusbeskrivelse, txtSøkStatuskode)
         Catch
-            TextBox20.Text = ""
-            ComboBox2.Text = ""
+            txtSøkStatuskode.Text = ""
+            cBxSøkStatusbeskrivelse.Text = ""
             Exit Sub
         End Try
     End Sub
 
     'Presenter valgt person i blodgiversøk
-    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lBxSøkResultater.SelectedIndexChanged
         visBG()
     End Sub
 
     'Vis blodgiverdata til ansatt
     Private Sub visBG()
         Dim index, i As Integer
-        Dim rad As DataRow
+        Dim rad, rad1(), rad2() As DataRow
         Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar, erklaringLege As String
         Dim status As Integer
         Dim sistTapping, sistErklæring, gjennomgåttErklæring As Date
         Dim dager As Long
-        ListBox3.Items.Clear()
-        index = ListBox2.SelectedIndex
-        For Each rad In giversøk.Rows
-            fNavn = rad("fornavn")
-            eNavn = rad("etternavn")
-            fnr = rad("fodselsnummer")
-            epost = rad("epost")
-            adresse = rad("adresse")
-            tlf1 = rad("telefon1")
-            tlf2 = rad("telefon2")
-            postnummmer = rad("postnr")
-            status = rad("statuskode")
-            sistTapping = rad("siste_blodtapping")
-            intMerknad = rad("merknad")
-            preferanse = rad("timepreferanse")
-            If i = index Then
-                Exit For
-            End If
-            i = i + 1
-        Next
-#Disable Warning BC42104 ' Variable is used before it has been assigned a value
+        jasvar = ""
+        sistErklæring = dummyDato
+        lbxHKtrlJasvar.Items.Clear()
+        index = lBxSøkResultater.SelectedIndex
+        rad1 = giversøk.Select
+        BlodgiverObjOppdat(rad1(index)("epost"), rad1(index)("passord"), rad1(index)("fornavn"),
+                           rad1(index)("etternavn"), rad1(index)("adresse"), rad1(index)("postnr"),
+                           rad1(index)("telefon1"), rad1(index)("telefon2"), rad1(index)("statuskode"),
+                           rad1(index)("fodselsnummer"), rad1(index)("blodtype"), rad1(index)("siste_blodtapping"),
+                           rad1(index)("kontaktform"), rad1(index)("merknad"), rad1(index)("timepreferanse"))
+        '  For Each rad In giversøk.Rows
+        ' fNavn = rad("fornavn")
+        'eNavn = rad("etternavn")
+        'fnr = rad("fodselsnummer")
+        'epost = rad("epost")
+        'adresse = rad("adresse")
+        'tlf1 = rad("telefon1")
+        'tlf2 = rad("telefon2")
+        'postnummmer = rad("postnr")
+        'status = rad("statuskode")
+        'sistTapping = rad("siste_blodtapping")
+        'intMerknad = rad("merknad")
+        'preferanse = rad("timepreferanse")
+        'If i = index Then
+        'Exit For
+        'End If
+        'i = i + 1
+        'Next
         For Each rad In egenerklaering.Rows
-            If rad("bgepost") = epost Then
+            If rad("bgepost") = blodgiveren.Epost1 Then
                 If rad("datotidbg") > sistErklæring Then
                     sistErklæring = rad("datotidbg")
                     jasvar = rad("skjema")
@@ -832,66 +839,100 @@ Public Class Blodbane
                 End If
             End If
         Next
-        dager = DateDiff(DateInterval.DayOfYear, sistTapping, Today)
-        utledJAsvar(jasvar)
+        tilkobling.Open()
+        Dim sqlSpørring = $"SELECT MAX(datotidbg) from egenerklæring WHERE bgepost='{blodgiveren.Epost1}'"
+        Dim sql1 As New MySqlCommand(sqlSpørring, tilkobling)
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+        ' Dim rad1() As DataRow = interntabell1.Select
+        If interntabell1.Rows.Count = 1 Then
+            sistErklæring = rad1(0)("datotidbg")
+        Else
+            sistErklæring = dummyDato
+        End If
+        jasvar = rad1(index)("skjema")
+        egenerklæringID = rad1(index)("id")
+        presentertGiver = blodgiveren.Epost1
+        If Not IsDBNull(rad("ansattepost")) Then
+            erklaringLege = rad("ansattepost")
+        Else
+            erklaringLege = ""
+        End If
+        If Not IsDBNull(rad("datotidansatt")) Then
+            gjennomgåttErklæring = rad("datotidansatt")
+        Else
+            gjennomgåttErklæring = Nothing
+        End If
+        tilkobling.Close()
 
-        TextBox24.Text = $"{fNavn} {eNavn}"
-        TextBox25.Text = fnr
-        TextBox27.Text = epost
-        TextBox26.Text = tlf1
-        TextBox29.Text = tlf2
-        TextBox30.Text = adresse
-        TextBox31.Text = postnummmer
-        TextBox21.Text = status
-        TextBox35.Text = $"{dager} dager"
-        TextBox28.Text = sistTapping
-        RichTextBox4.Text = preferanse
-        RichTextBox2.Text = intMerknad
-        TextBox22.Text = sistErklæring
-        TextBox33.Text = erklaringLege
+        dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
+        If jasvar <> "" Then
+            utledJAsvar(jasvar)
+        End If
+
+        txtValgtBlodgiverNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
+        txtValgtBlodgiverPersnr.Text = blodgiveren.Fodselsnummer1
+        txtValgtBlodgiverEpost.Text = blodgiveren.Epost1
+        txtValgtBlodgiverTelefon1.Text = blodgiveren.Telefon11
+        txtValgtBlodgiverTelefon2.Text = blodgiveren.Telefon21
+        txtValgtBlodgiverAdresse.Text = blodgiveren.Adresse1
+        txtValgtBlodgiverPostnr.Text = blodgiveren.Postnr1
+        cBxValgtBlodgiverStatusTekst.Text = blodgiveren.Status1
+        txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
+        If blodgiveren.Siste_blodtapping1 <> dummyDato Then
+            txtValgtBlodgiverSistTappDato.Text = blodgiveren.Siste_blodtapping1
+        Else
+            txtValgtBlodgiverSistTappDato.Text = "Ikke gitt blod enda"
+        End If
+        rTxtValgBlodgiverTimepref.Text = blodgiveren.Timepreferanse1
+        rTxtValgtBlodgiverInternMrknd.Text = blodgiveren.Merknad1
+        txtHKtrlSisteEgenerkl.Text = sistErklæring
+        txtHKtrlGjennomgAv.Text = erklaringLege
         If gjennomgåttErklæring = Nothing Then
-            TextBox34.Text = ""
+            txtHKtrlEKDatoGjennomg.Text = ""
             GroupBoxIntervju.Visible = True
         Else
-            TextBox34.Text = gjennomgåttErklæring
+            txtHKtrlEKDatoGjennomg.Text = gjennomgåttErklæring
             GroupBoxIntervju.Visible = False
         End If
-#Enable Warning BC42104
+
     End Sub
 
     'Utleder Jasvar og presenterer i Listebox i giversøk
     Private Sub utledJAsvar(ByVal spmNr As String)
         Dim svar() As String = spmNr.Split(",")
         For i = 0 To svar.Length - 1
-            ListBox3.Items.Add(svar(i))
+            lbxHKtrlJasvar.Items.Add(svar(i))
         Next
     End Sub
 
     'Endring av statuskode - henter statusbeskrivelse
-    Private Sub TextBox21_TextChanged(sender As Object, e As EventArgs) Handles TextBox21.TextChanged
+    Private Sub TextBox21_TextChanged(sender As Object, e As EventArgs) Handles txtValgtBlodgiverStatusKode.TextChanged
         Try
-            statusbeskrivelse(TextBox21.Text, ComboBox4, TextBox21)
+            statusbeskrivelse(txtValgtBlodgiverStatusKode.Text, cBxValgtBlodgiverStatusTekst, txtValgtBlodgiverStatusKode)
         Catch
-            TextBox21.Text = ""
-            ComboBox4.Text = ""
+            txtValgtBlodgiverStatusKode.Text = ""
+            cBxValgtBlodgiverStatusTekst.Text = ""
             Exit Sub
         End Try
     End Sub
 
     'Endring av statusbeskrvelse - henter statuskode
-    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBxValgtBlodgiverStatusTekst.SelectedIndexChanged
         Try
-            statuskode(ComboBox4.SelectedItem, TextBox21, ComboBox4)
+            statuskode(cBxValgtBlodgiverStatusTekst.SelectedItem, txtValgtBlodgiverStatusKode, cBxValgtBlodgiverStatusTekst)
         Catch
-            TextBox21.Text = ""
-            ComboBox4.Text = ""
+            txtValgtBlodgiverStatusKode.Text = ""
+            cBxValgtBlodgiverStatusTekst.Text = ""
             Exit Sub
         End Try
     End Sub
 
     'Sett rett poststed ved siden av postnummer i personsøk
-    Private Sub TextBox31_TextChanged(sender As Object, e As EventArgs) Handles TextBox31.TextChanged
-        TextBox32.Text = postnummer(TextBox31.Text)
+    Private Sub TextBox31_TextChanged(sender As Object, e As EventArgs) Handles txtValgtBlodgiverPostnr.TextChanged
+        txtValgtBlodgiverPoststed.Text = postnummer(txtValgtBlodgiverPostnr.Text)
     End Sub
 
     'Sett rett poststed ved siden av postnummer i egenregistrering
@@ -900,10 +941,10 @@ Public Class Blodbane
     End Sub
 
     'Tøm giversøk
-    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
-        TextBox19.Text = ""
-        ComboBox5.Text = ""
-        TextBox20.Text = ""
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles btnSøkTømSkjema.Click
+        txtSøk.Text = ""
+        cBxSøkBlodtype.Text = ""
+        txtSøkStatuskode.Text = ""
     End Sub
 
     'Innkallingsoversikt
@@ -1218,7 +1259,7 @@ Public Class Blodbane
     End Sub
 
     'Registrer gitt blod
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnBlodgivingGjført.Click
         Dim ansatt, SettInnSpørring, SøkSpørring, timeID As String
         Dim bPlater, bLegemer, bPlasma, i As Integer
         Dim timedato As Date
@@ -1226,12 +1267,11 @@ Public Class Blodbane
         Dim antallProdukt(2) As Integer
         Dim tabell As New DataTable
         Dim da As New MySqlDataAdapter
-        ansatt = ComboBox3.Text
-        bPlater = NumericUpDown1.Value
-        bPlasma = NumericUpDown2.Value
-        bLegemer = NumericUpDown3.Value
+        ansatt = cbxAnsattUtførtTapping.Text
+        bPlater = nudResBlodplater.Value
+        bPlasma = nudResPlasma.Value
+        bLegemer = nudResRødeBlodl.Value
         antallProdukt(1) = bPlater : antallProdukt(2) = bPlasma : antallProdukt(0) = bLegemer
-        timeID = ""
         If ansatt = "" Then
             MsgBox("Registrer hvem som tappet blodet")
             Exit Sub
@@ -1266,9 +1306,9 @@ Public Class Blodbane
                 MsgBox("Denne personen har ikke gitt blod i dag")
             End If
             tilkobling.Close()
-            NumericUpDown1.Value = 0
-            NumericUpDown2.Value = 0
-            NumericUpDown3.Value = 0
+            nudResBlodplater.Value = 0
+            nudResPlasma.Value = 0
+            nudResRødeBlodl.Value = 0
             MsgBox("Blodlager oppdatert")
         Catch ex As Exception
             tilkobling.Close()
@@ -1278,49 +1318,19 @@ Public Class Blodbane
 
     'Forrige spørsmål i erklæring
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sisteindex, kjønn, spmID, i As Integer
-        Dim spmText, pnr As String
-        Dim dame As Boolean
-        pnr = blodgiveren.Fodselsnummer1
-        sisteindex = Erklæringspørsmål.Rows.Count - 1
-        spmText = ""
+        Dim spmText As String
 
-        kjønn = pnr.Substring(8, 1)
-        If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
-            dame = True
+        If SPMnr > 1 Then
+            SPMnr = SPMnr - 1
+            spmText = 1
+            lblSpml.Text = spmText
+            Label26.Text = $"Spørsmål {SPMnr}"
         Else
-            dame = False
+            SPMnr = SPMnr
+            MsgBox("Dette var siste spørsmål")
         End If
-
-        'Forrige spm
-        SPMnr = SPMnr - 1
-        spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
-        For i = sisteindex + 1 To 1 Step -1
-            If spmID < 100 Then
-                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
-                Exit For
-            ElseIf (spmID > 199) And (dame = False) Then
-                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
-                Exit For
-            ElseIf (spmID > 99) And (dame = True) Then
-                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
-                Exit For
-            Else
-                SPMnr = SPMnr - 1
-                spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
-                spmText = Nothing
-            End If
-        Next
-        SPMnrPresentert = SPMnrPresentert - 1
-        lblSpml.Text = spmText
-        Label26.Text = $"Spørsmål {SPMnrPresentert + 1}"
         RadioButton3.Checked = False
         RadioButton4.Checked = False
-        btnNeste.Enabled = True
-        If SPMnr <= 0 Then
-            Button1.Enabled = False
-            Exit Sub
-        End If
     End Sub
 
     'Send inn egenerklæring
@@ -1328,7 +1338,6 @@ Public Class Blodbane
         Dim Jasvar, sporring As String
         Dim i, siste As Integer
         siste = erklæringSvar.Length
-        Jasvar = ""
 
         For i = 0 To siste - 1
             If erklæringSvar(i) = 1 Then
@@ -1354,9 +1363,8 @@ Public Class Blodbane
         Dim sisteindex, kjønn, spmID, i As Integer
         Dim spmText, pnr As String
         Dim dame As Boolean
-        pnr = blodgiveren.Fodselsnummer1
-        sisteindex = Erklæringspørsmål.Rows.Count - 1
-        spmText = ""
+        pnr = "04079147929" 'Testverdi, ekte verdi: blodgiveren.Fodselsnummer1
+        sisteindex = Erklæringspørsmål.Rows.Count
 
         kjønn = pnr.Substring(8, 1)
         If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
@@ -1368,42 +1376,40 @@ Public Class Blodbane
             MsgBox("Du må svare før du går videre")
             Exit Sub
         End If
+
+        'Registrere svar
         If RadioButton3.Checked Then
-            erklæringSvar(SPMnr) = 1
+            erklæringSvar(SPMnr - 1) = 1
         Else
-            erklæringSvar(SPMnr) = 0
+            erklæringSvar(SPMnr - 1) = 0
         End If
 
         'Neste spm
-        If SPMnr >= sisteindex Then
-            btnNeste.Enabled = False
-            MsgBox("Alle spørsmål besvart - send inn!")
-            Exit Sub
-        End If
         SPMnr = SPMnr + 1
-        spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
-        For i = 1 To (sisteindex - SPMnr) + 1
+        spmID = Erklæringspørsmål.Rows(SPMnr - 1).Item("Nr")
+        For i = 0 To sisteindex
             If spmID < 100 Then
-                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
                 Exit For
             ElseIf (spmID > 199) And (dame = False) Then
-                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
                 Exit For
             ElseIf (spmID > 99) And (dame = True) Then
-                spmText = Erklæringspørsmål.Rows(SPMnr).Item("spoersmaal")
+                spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
                 Exit For
             Else
-                SPMnr = SPMnr + 1
-                spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
-                spmText = Nothing
+                spmID = Erklæringspørsmål.Rows((SPMnr - 1) + i).Item("Nr")
             End If
         Next
-        SPMnrPresentert = SPMnrPresentert + 1
+        spmText = Erklæringspørsmål.Rows(SPMnr - 1).Item("spoersmaal")
         lblSpml.Text = spmText
-        Label26.Text = $"Spørsmål {SPMnrPresentert + 1}"
+        Label26.Text = $"Spørsmål {SPMnr}"
         RadioButton3.Checked = False
         RadioButton4.Checked = False
-        Button1.Enabled = True
+        If SPMnr - 1 = sisteindex Then
+            btnNeste.Enabled = False
+            MsgBox("Alle spørsmål besvart - send inn!")
+        End If
     End Sub
 
     'Sjekker om valgt dato er fridag
@@ -1435,34 +1441,34 @@ Public Class Blodbane
     End Function
 
     'Lagre intervju og eventuelle endringer i blodgiver
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnHKtrlIntProfGjgått.Click
         Dim epost, adresse, preferanse, merknad, kommentar, spørring, spørring2 As String
         Dim tlf1, tlf2, postnr, status, i, svar As Integer
         Dim da As New MySqlDataAdapter
 
         'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
-        If RadioButton2.Checked = True Then
+        If rBtnHKtrlIkkeGodkjent.Checked = True Then
             svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
             If svar = 7 Then
                 Exit Sub
             End If
-        ElseIf RadioButton1.Checked = True Then
+        ElseIf rBtnHKtrlGodkjent.Checked = True Then
             svar = MsgBox("Er du sikker på at du vil godkjenne giveren?", MsgBoxStyle.YesNo)
             If svar = 7 Then
                 Exit Sub
             End If
         End If
 
-        i = ListBox2.SelectedIndex
-        epost = TextBox27.Text
-        tlf1 = TextBox26.Text
-        tlf2 = TextBox29.Text
-        adresse = TextBox30.Text
-        postnr = TextBox31.Text
-        status = TextBox21.Text
-        preferanse = RichTextBox4.Text
-        merknad = RichTextBox2.Text
-        kommentar = RichTextBox3.Text
+        i = lBxSøkResultater.SelectedIndex
+        epost = txtValgtBlodgiverEpost.Text
+        tlf1 = txtValgtBlodgiverTelefon1.Text
+        tlf2 = txtValgtBlodgiverTelefon2.Text
+        adresse = txtValgtBlodgiverAdresse.Text
+        postnr = txtValgtBlodgiverPostnr.Text
+        status = txtValgtBlodgiverStatusKode.Text
+        preferanse = rTxtValgBlodgiverTimepref.Text
+        merknad = rTxtValgtBlodgiverInternMrknd.Text
+        kommentar = rTxtHKtrlKommentar.Text
         spørring = $"UPDATE egenerklaering SET ansattepost= '{påloggetAepost}', datotidansatt= '{Now.ToString("yyyy.MM.dd HH:mm.ss")}', kommentar= '{kommentar}' WHERE id= '{egenerklæringID}'"
         spørring2 = $"UPDATE bruker SET epost= '{epost}', telefon1= '{tlf1}', telefon2= '{tlf2}', adresse= '{adresse}', postnr= '{postnr}', statuskode= '{status}' WHERE epost= '{presentertGiver}'"
         Try
