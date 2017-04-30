@@ -1253,8 +1253,8 @@ Partial Class Blodbane
         '
         'rBtnHKtrlIkkeGodkjent
         '
-        Me.rBtnHKtrlIkkeGodkjent.Checked = True
         resources.ApplyResources(Me.rBtnHKtrlIkkeGodkjent, "rBtnHKtrlIkkeGodkjent")
+        Me.rBtnHKtrlIkkeGodkjent.Checked = True
         Me.rBtnHKtrlIkkeGodkjent.Name = "rBtnHKtrlIkkeGodkjent"
         Me.rBtnHKtrlIkkeGodkjent.TabStop = True
         Me.rBtnHKtrlIkkeGodkjent.UseVisualStyleBackColor = True
@@ -1548,9 +1548,9 @@ Partial Class Blodbane
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelPåmelding)
+        Me.Controls.Add(Me.PanelAnsatt)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
