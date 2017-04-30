@@ -800,23 +800,23 @@ Public Class Blodbane
         index = lBxSøkResultater.SelectedIndex
         rad1 = giversøk.Select
 
-        If IsDBNull(rad1(0)("blodtype")) Then
-            rad1(0)("blodtype") = ""
+        If IsDBNull(rad1(index)("blodtype")) Then
+            rad1(index)("blodtype") = ""
         End If
-        If IsDBNull(rad1(0)("merknad")) Then
-            rad1(0)("merknad") = ""
+        If IsDBNull(rad1(index)("merknad")) Then
+            rad1(index)("merknad") = ""
         End If
-        If IsDBNull(rad1(0)("timepreferanse")) Then
-            rad1(0)("timepreferanse") = ""
+        If IsDBNull(rad1(index)("timepreferanse")) Then
+            rad1(index)("timepreferanse") = ""
         End If
-        If IsDBNull(rad1(0)("adresse")) Then
-            rad1(0)("adresse") = ""
+        If IsDBNull(rad1(index)("adresse")) Then
+            rad1(index)("adresse") = ""
         End If
-        If IsDBNull(rad1(0)("telefon2")) Then
-            rad1(0)("telefon2") = ""
+        If IsDBNull(rad1(index)("telefon2")) Then
+            rad1(index)("telefon2") = ""
         End If
-        If IsDBNull(rad1(0)("siste_blodtapping")) Then
-            rad(1)("siste_blodtapping") = dummyDato
+        If IsDBNull(rad1(index)("siste_blodtapping")) Then
+            rad1(index)("siste_blodtapping") = dummyDato
         End If
         BlodgiverObjOppdat(rad1(index)("epost"), rad1(index)("passord"), rad1(index)("fornavn"),
                            rad1(index)("etternavn"), rad1(index)("adresse"), rad1(index)("postnr"),
@@ -880,8 +880,6 @@ Public Class Blodbane
             egenerklaeringObjekt.DatotidBG1 = rad2(0)("datotidbg")
             egenerklaeringObjekt.DatotidAnsatt1 = rad2(0)("datotidansatt")
 
-        Else
-            MsgBox($"Blodgiver {blodgiveren.Epost1} har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
         End If
         'jasvar = rad1(index)("skjema")
         'egenerklæringID = rad1(index)("id")
@@ -896,6 +894,7 @@ Public Class Blodbane
         'Else
         'gjennomgåttErklæring = Nothing
         'End If
+        GroupBoxIntervju.Visible = False
 
         dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
         If egenerklaeringObjekt.Skjema1 <> "" Then
@@ -910,23 +909,30 @@ Public Class Blodbane
         txtValgtBlodgiverAdresse.Text = blodgiveren.Adresse1
         txtValgtBlodgiverPostnr.Text = blodgiveren.Postnr1
         cBxValgtBlodgiverStatusTekst.Text = blodgiveren.Status1
+        rTxtValgBlodgiverTimepref.Text = blodgiveren.Timepreferanse1
+        rTxtValgtBlodgiverInternMrknd.Text = blodgiveren.Merknad1
+
         If blodgiveren.Siste_blodtapping1 <> dummyDato Then
             txtValgtBlodgiverSistTappDato.Text = blodgiveren.Siste_blodtapping1
             txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
             txtHKtrlSisteEgenerkl.Text = egenerklaeringObjekt.DatotidBG1
-            txtHKtrlGjennomgAv.Text = egenerklaeringObjekt.AnsattEpost1
-            If egenerklaeringObjekt.DatotidAnsatt1 = dummyDato Then
-                txtHKtrlEKDatoGjennomg.Text = ""
+            If egenerklaeringObjekt.AnsattEpost1 <> dummyEpost Then
+                txtHKtrlGjennomgAv.Text = egenerklaeringObjekt.AnsattEpost1
+                txtHKtrlEKDatoGjennomg.Text = egenerklaeringObjekt.DatotidAnsatt1
                 GroupBoxIntervju.Visible = True
             Else
-                txtHKtrlEKDatoGjennomg.Text = egenerklaeringObjekt.DatotidAnsatt1
-                GroupBoxIntervju.Visible = False
+                txtHKtrlGjennomgAv.Text = ""
+                txtHKtrlEKDatoGjennomg.Text = ""
             End If
         Else
             txtValgtBlodgiverSistTappDato.Text = "Ikke gitt blod enda"
+            txtValgtBlodgiverSistTappDager.Text = ""
+            txtHKtrlSisteEgenerkl.Text = ""
+            txtHKtrlGjennomgAv.Text = ""
+            txtHKtrlEKDatoGjennomg.Text = ""
+            lbxHKtrlJasvar.Items.Clear()
+            MsgBox($"Blodgiver {blodgiveren.Epost1} har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
         End If
-        rTxtValgBlodgiverTimepref.Text = blodgiveren.Timepreferanse1
-        rTxtValgtBlodgiverInternMrknd.Text = blodgiveren.Merknad1
 
     End Sub
 
