@@ -17,6 +17,7 @@ Public Class Blodbane
     Dim antallRom As Integer
     Dim blodgiveren As Blodgiver
     Dim bytteRomTime As Romtime
+    Dim egenerklaeringObjekt As Egenerklaering
     Dim fulltimetabell As New ArrayList()
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Dim dummyFodselsnr, aarstallet As String
@@ -786,7 +787,7 @@ Public Class Blodbane
     'Vis blodgiverdata til ansatt
     Private Sub visBG()
         Dim index, i As Integer
-        Dim rad, rad1(), rad2() As DataRow
+        Dim rad, rad1() As DataRow
         Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar, erklaringLege As String
         Dim status As Integer
         Dim sistTapping, sistErklæring, gjennomgåttErklæring As Date
@@ -840,17 +841,22 @@ Public Class Blodbane
             End If
         Next
         tilkobling.Open()
-        Dim sqlSpørring = $"SELECT MAX(datotidbg) from egenerklæring WHERE bgepost='{blodgiveren.Epost1}'"
+        Dim sqlSpørring = $"SELECT * FROM egenerklaering WHERE bgepost='{blodgiveren.Epost1}' ORDER BY datotidbg DESC"
         Dim sql1 As New MySqlCommand(sqlSpørring, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
-        ' Dim rad1() As DataRow = interntabell1.Select
-        If interntabell1.Rows.Count = 1 Then
-            sistErklæring = rad1(0)("datotidbg")
+        tilkobling.Close()
+        If interntabell1.Rows.Count > 0 Then
+
+            Dim rad2() As DataRow = interntabell1.Select()
+            egenerklaeringObjekt = New Egenerklaering(rad2(0)("id"), rad2(0)("bgepost"), rad2(0)("ansattepost"),
+                                                    rad2(0)("skjema"), rad2(0)("kommentar"), rad2(0)("datotidbg"),
+                                                    rad2(0)("datotidansatt"))
+
         Else
-            sistErklæring = dummyDato
+            MsgBox($"Blodgiver {blodgiveren.Epost1} har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
         End If
         jasvar = rad1(index)("skjema")
         egenerklæringID = rad1(index)("id")
@@ -865,7 +871,6 @@ Public Class Blodbane
         Else
             gjennomgåttErklæring = Nothing
         End If
-        tilkobling.Close()
 
         dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
         If jasvar <> "" Then
