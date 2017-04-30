@@ -227,6 +227,7 @@ Public Class Blodbane
             PanelGiver.BringToFront()
             'TabPage5.Show()
             TbCtrlBlodgiver.SelectTab(0)
+            btnEgenerklForrigeSpm.Enabled = False
             'Setter personinfo i tekstboksene
             txtPersDataNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
             txtPersDataGStatus.Text = blodgiveren.Status1
@@ -1074,6 +1075,7 @@ Public Class Blodbane
     Private Sub hentLedigeTimer(ByVal aktuelldato As DateTime)
 
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
+        Dim opptattetimer As String = "Opptatte timer: "
         tilkobling.Open()
 
         Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) AS 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
@@ -1096,9 +1098,9 @@ Public Class Blodbane
             raddato1 = rad1("datotid")
             radnr = raddato1.Hour
             fulltimetabell.RemoveAt(radnr - 8)
-
+            opptattetimer += $"{radnr} "
         Next
-
+        MsgBox(opptattetimer)
     End Sub
 
     'Resetter fulltimetabellen
@@ -1120,11 +1122,15 @@ Public Class Blodbane
             MsgBox("Det må være minst 90 dager siden siste blodtapping. Velg en ny dato.", MsgBoxStyle.Critical)
         Else
             If Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DateTimePickerNyTime.Value) Then
-                MsgBox($"Ukedagnr: {Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday)}, Fridag: {fridag(DateTimePickerNyTime.Value)}.")
                 MsgBox("Blodbanken er stengt denne dagen. Velg en en ny dag.", MsgBoxStyle.Critical)
             Else
+                LBxLedigeTimer.Items.Clear()
                 LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
                 hentLedigeTimer(DateTimePickerNyTime.Value)
+                For i = 0 To fulltimetabell.Count - 1
+                    LBxLedigeTimer.Items.Add(fulltimetabell(i))
+                Next
+                BtnBekreftEndretTime.Enabled = False
             End If
 
         End If
@@ -1568,7 +1574,5 @@ Public Class Blodbane
         visBG()
     End Sub
 
-    Private Sub TabPage5_Enter(sender As Object, e As EventArgs) Handles TabPage5.Enter
-        btnEgenerklForrigeSpm.Enabled = False
-    End Sub
+
 End Class
