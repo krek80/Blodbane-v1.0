@@ -1365,7 +1365,7 @@ Public Class Blodbane
         pnr = blodgiveren.Fodselsnummer1
         sisteindex = Erklæringspørsmål.Rows.Count - 1
         spmText = ""
-
+        btnEgenerklSendInn.Enabled = False
         kjønn = pnr.Substring(8, 1)
         If (kjønn = 0) Or (kjønn = 2) Or (kjønn = 4) Or (kjønn = 6) Or (kjønn = 8) Then
             dame = True
@@ -1420,7 +1420,6 @@ Public Class Blodbane
         Try
             tilkobling.Open()
             sporring = $"INSERT INTO egenerklaering (bgepost, datotidbg, datotidansatt, skjema, kommentar) VALUES ('{blodgiveren.Epost1}', @idag , @dummydato, '{Jasvar}', 'Ingen kommentar')"
-            MsgBox(sporring)
             Dim sqlja As New MySqlCommand(sporring, tilkobling)
             sqlja.Parameters.Add("idag", MySqlDbType.DateTime).Value = Now
             sqlja.Parameters.Add("dummydato", MySqlDbType.DateTime).Value = dummyDato
@@ -1433,6 +1432,8 @@ Public Class Blodbane
         Finally
             tilkobling.Close()
         End Try
+        btnEgenerklSendInn.Enabled = False
+        TbCtrlBlodgiver.SelectTab(1)
     End Sub
 
     'Lagre svar i erklæring og vis neste spørsmål
@@ -1464,6 +1465,7 @@ Public Class Blodbane
         If SPMnr >= sisteindex Then
             btnEgenerklNesteSpm.Enabled = False
             MsgBox("Alle spørsmål besvart - send inn!")
+            btnEgenerklSendInn.Enabled = True
             Exit Sub
         End If
         SPMnr = SPMnr + 1
