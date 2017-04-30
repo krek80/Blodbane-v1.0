@@ -52,11 +52,12 @@ Partial Class velkommen
         '
         Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Info
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 138)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(345, 202)
         Me.RichTextBox1.TabIndex = 2
-        Me.RichTextBox1.Text = "Versjon: 1.0" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "Lisens: 000000000000001" & Global.Microsoft.VisualBasic.ChrW(10) & "Lisenseier: Blodbanken" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "Utviklet av: Team 2" &
+        Me.RichTextBox1.Text = "Versjon: 2.0" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "Lisens: 000000000000001" & Global.Microsoft.VisualBasic.ChrW(10) & "Lisenseier: Blodbanken" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "Utviklet av: Team 2" &
     ""
         '
         'velkommen

@@ -24,12 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea11 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend11 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series11 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend12 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series12 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -220,6 +220,10 @@ Partial Class Blodbane
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -300,20 +304,21 @@ Partial Class Blodbane
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Name = "Label1"
         '
         'TableLayoutPanel2
         '
         resources.ApplyResources(Me.TableLayoutPanel2, "TableLayoutPanel2")
         Me.TableLayoutPanel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label21, 0, 9)
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 6)
         Me.TableLayoutPanel2.Controls.Add(Me.Label6, 0, 5)
         Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_fornavn, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_poststed, 2, 5)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_personnr, 1, 3)
@@ -322,15 +327,16 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_epost, 1, 8)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_tlfnr, 1, 6)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_postnr, 1, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnRegBlodgiver, 0, 12)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 11)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label89, 0, 9)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_passord1, 1, 9)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_passord2, 1, 10)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label113, 0, 10)
         Me.TableLayoutPanel2.Controls.Add(Me.Label114, 0, 7)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_tlfnr2, 1, 7)
         Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_etternavn, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 12)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_passord2, 1, 11)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label113, 0, 11)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label89, 0, 10)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_passord1, 1, 10)
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnRegBlodgiver, 2, 12)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
         'Label7
@@ -519,6 +525,7 @@ Partial Class Blodbane
         'PanelPåmelding
         '
         resources.ApplyResources(Me.PanelPåmelding, "PanelPåmelding")
+        Me.PanelPåmelding.BackColor = System.Drawing.Color.Red
         Me.PanelPåmelding.Controls.Add(Me.TableLayoutPanel3)
         Me.PanelPåmelding.Controls.Add(Me.TableLayoutPanel2)
         Me.PanelPåmelding.Controls.Add(Me.Label1)
@@ -1048,6 +1055,8 @@ Partial Class Blodbane
         '
         'gpBxValgtBlodgiver
         '
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.TextBox2)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.Label23)
         Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverSistTappDato)
         Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverStatusKode)
         Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverSistTappDager)
@@ -1473,29 +1482,29 @@ Partial Class Blodbane
         '
         'ChartLegemer
         '
-        ChartArea11.Name = "ChartArea1"
-        Me.ChartLegemer.ChartAreas.Add(ChartArea11)
-        Legend11.Name = "Legend1"
-        Me.ChartLegemer.Legends.Add(Legend11)
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartLegemer.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartLegemer.Legends.Add(Legend1)
         resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
         Me.ChartLegemer.Name = "ChartLegemer"
-        Series11.ChartArea = "ChartArea1"
-        Series11.Legend = "Legend1"
-        Series11.Name = "Blodlegemer"
-        Me.ChartLegemer.Series.Add(Series11)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Blodlegemer"
+        Me.ChartLegemer.Series.Add(Series1)
         '
         'ChartProdukt
         '
-        ChartArea12.Name = "ChartArea1"
-        Me.ChartProdukt.ChartAreas.Add(ChartArea12)
-        Legend12.Name = "Legend1"
-        Me.ChartProdukt.Legends.Add(Legend12)
+        ChartArea2.Name = "ChartArea1"
+        Me.ChartProdukt.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.ChartProdukt.Legends.Add(Legend2)
         resources.ApplyResources(Me.ChartProdukt, "ChartProdukt")
         Me.ChartProdukt.Name = "ChartProdukt"
-        Series12.ChartArea = "ChartArea1"
-        Series12.Legend = "Legend1"
-        Series12.Name = "Blodposer"
-        Me.ChartProdukt.Series.Add(Series12)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Blodposer"
+        Me.ChartProdukt.Series.Add(Series2)
         '
         'ToolTip1
         '
@@ -1508,6 +1517,28 @@ Partial Class Blodbane
         'Timer1
         '
         Me.Timer1.Interval = 2000
+        '
+        'Label21
+        '
+        resources.ApplyResources(Me.Label21, "Label21")
+        Me.Label21.Name = "Label21"
+        '
+        'TextBox1
+        '
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox1, 2)
+        Me.TextBox1.Name = "TextBox1"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox2, "TextBox2")
+        Me.TextBox2.Name = "TextBox2"
+        '
+        'Label23
+        '
+        resources.ApplyResources(Me.Label23, "Label23")
+        Me.Label23.Name = "Label23"
         '
         'Blodbane
         '
@@ -1763,4 +1794,8 @@ Partial Class Blodbane
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ChartLegemer As DataVisualization.Charting.Chart
     Friend WithEvents ChartProdukt As DataVisualization.Charting.Chart
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label23 As Label
 End Class
