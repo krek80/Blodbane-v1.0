@@ -29,10 +29,9 @@ Public Class Blodbane
 
     'Kjøres ved oppstart
     Private Sub Blodbane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Hide()
+        Me.WindowState = FormWindowState.Minimized
         velkommen.Show()
 
-        Me.Hide()
         velkommen.ProgressBar1.Value = 0
         'Henter statuskoder og legger i combobox(er)
         Dim statuser As New DataTable
@@ -56,8 +55,7 @@ Public Class Blodbane
             cBxValgtBlodgiverStatusTekst.Items.Add(statustekst)
         Next
 
-        Me.Hide()
-        velkommen.ProgressBar1.Value = 20
+        velkommen.ProgressBar1.Value = 10
         blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
         bytteRomTime = New Romtime(dummyDato, "", 0)
         egenerklaeringObjekt = New Egenerklaering(-1, dummyEpost, dummyEpost, "", "", dummyDato, dummyDato)
@@ -69,6 +67,7 @@ Public Class Blodbane
         aarstallet = CStr(Today.Year).Substring(2, 2)
         dummyFodselsnr = $"{sifre}{sifre}{aarstallet}11111"
 
+        velkommen.ProgressBar1.Value = 20
         'Lager liste over rommene
         antallRom = 0
         Dim sqlSporringRom As String = "SELECT * FROM rom"
@@ -78,8 +77,7 @@ Public Class Blodbane
         daRom.Fill(interntabellRom)
         antallRom = interntabellRom.Rows.Count()
 
-        Me.Hide()
-        velkommen.ProgressBar1.Value = 50
+        velkommen.ProgressBar1.Value = 30
         'Henter postnummer og sted og legger i hashtable
         Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
         da.SelectCommand = sqlSpørring2
@@ -90,6 +88,7 @@ Public Class Blodbane
             postnummer.Add(pnr, psted)
         Next
 
+        velkommen.ProgressBar1.Value = 40
         'Henter ansatte og legger i datatable
         Dim sqlSpørring3 As New MySqlCommand("SELECT a.epost, b.passord, b.fornavn FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
         da.SelectCommand = sqlSpørring3
@@ -98,22 +97,24 @@ Public Class Blodbane
             cbxAnsattUtførtTapping.Items.Add(rad("epost"))
         Next
 
-        Me.Hide()
-        velkommen.ProgressBar1.Value = 80
+        velkommen.ProgressBar1.Value = 50
         'Henter ned spørsmål til egenerklæring
         Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
         da.SelectCommand = sqlSpørring4
         da.Fill(Erklæringspørsmål)
         lblEgenerklSpmTekst.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
         lblEgenerklSpmNr.Text = $"Spørsmål {SPMnr + 1}"
-
         tilkobling.Close()
 
-        Me.Hide()
+        velkommen.ProgressBar1.Value = 60
+        Timer1.Start()
         velkommen.ProgressBar1.Value = 100
-        MsgBox("Nå er eg klar!")
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Timer1.Stop()
         velkommen.Close()
-        Me.Show()
+        Me.WindowState = FormWindowState.Normal
     End Sub
 
     'Nullstiller objektene blodgiveren og bytteRomTime
