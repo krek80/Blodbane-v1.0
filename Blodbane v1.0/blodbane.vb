@@ -219,6 +219,8 @@ Public Class Blodbane
             If ingenNyTime Then
                 TxtNesteInnkalling.Text = "Ikke fastsatt"
                 BtnEndreInnkalling.Enabled = False
+            Else
+                BtnEndreInnkalling.Enabled = True
             End If
             'Bytter til panelet for blodgiver
             PanelPåmelding.Hide()
@@ -466,6 +468,7 @@ Public Class Blodbane
 
     End Function
 
+    'Sjekker om to passord er like, ikke har mellomrom og er på minst 6 tegn
     Private Function passordSjekk(ByVal p1Inn As String, p2Inn As String) As Boolean
         If p1Inn <> p2Inn Then
             MsgBox("Passordene er ikke like. Prøv igjen!", MsgBoxStyle.Critical)
@@ -625,6 +628,7 @@ Public Class Blodbane
         End If
         If loggAv Then
             'Bytter til panelet for pålogging
+            GpBxEndreInnkalling.Visible = False
             NullstillPålogging()
             PanelGiver.Hide()
             PanelAnsatt.Hide()
@@ -936,7 +940,8 @@ Public Class Blodbane
             txtHKtrlGjennomgAv.Text = ""
             txtHKtrlEKDatoGjennomg.Text = ""
             lbxHKtrlJasvar.Items.Clear()
-            MsgBox($"Blodgiver {blodgiveren.Epost1} har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
+            MsgBox($"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}, epostadresse {blodgiveren.Epost1}, 
+                har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
         End If
 
     End Sub
@@ -1075,7 +1080,6 @@ Public Class Blodbane
     Private Sub hentLedigeTimer(ByVal aktuelldato As DateTime)
 
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
-        Dim opptattetimer As String = "Opptatte timer: "
         tilkobling.Open()
 
         Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) AS 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
@@ -1098,9 +1102,8 @@ Public Class Blodbane
             raddato1 = rad1("datotid")
             radnr = raddato1.Hour
             fulltimetabell.RemoveAt(radnr - 8)
-            opptattetimer += $"{radnr} "
         Next
-        MsgBox(opptattetimer)
+
     End Sub
 
     'Resetter fulltimetabellen
@@ -1117,12 +1120,12 @@ Public Class Blodbane
 
     'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
-        'Dim sisteUndersøkelse As Date =
         If (DateTimePickerNyTime.Value - CDate(blodgiverData("siste_blodtapping"))).TotalDays < 90 Then
             MsgBox("Det må være minst 90 dager siden siste blodtapping. Velg en ny dato.", MsgBoxStyle.Critical)
         Else
             If Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DateTimePickerNyTime.Value) Then
                 MsgBox("Blodbanken er stengt denne dagen. Velg en en ny dag.", MsgBoxStyle.Critical)
+                DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
             Else
                 LBxLedigeTimer.Items.Clear()
                 LblLedigeTimer.Text = $"Ledige timer {DateTimePickerNyTime.Text}"
