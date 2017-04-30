@@ -872,29 +872,33 @@ Public Class Blodbane
         If interntabell1.Rows.Count > 0 Then
 
             Dim rad2() As DataRow = interntabell1.Select()
-            egenerklaeringObjekt.Id1 = rad2(0)("id")
-            egenerklaeringObjekt.BgEpost1 = rad2(0)("bgepost")
-            egenerklaeringObjekt.AnsattEpost1 = rad2(0)("ansattepost")
-            egenerklaeringObjekt.Skjema1 = rad2(0)("skjema")
-            egenerklaeringObjekt.Kommentar1 = rad2(0)("kommentar")
-            egenerklaeringObjekt.DatotidBG1 = rad2(0)("datotidbg")
-            egenerklaeringObjekt.DatotidAnsatt1 = rad2(0)("datotidansatt")
+            If IsDBNull(rad2(0)("ansattepost")) Then
+                rad2(0)("ansattepost") = dummyEpost
+            End If
 
-        End If
-        'jasvar = rad1(index)("skjema")
-        'egenerklæringID = rad1(index)("id")
-        'presentertGiver = blodgiveren.Epost1
-        'If Not IsDBNull(rad("ansattepost")) Then
-        ' erklaringLege = rad("ansattepost")
-        'Else
-        'erklaringLege = ""
-        'End If
-        'If Not IsDBNull(rad("datotidansatt")) Then
-        'gjennomgåttErklæring = rad("datotidansatt")
-        'Else
-        'gjennomgåttErklæring = Nothing
-        'End If
-        GroupBoxIntervju.Visible = False
+            egenerklaeringObjekt.Id1 = rad2(0)("id")
+                egenerklaeringObjekt.BgEpost1 = rad2(0)("bgepost")
+                egenerklaeringObjekt.AnsattEpost1 = rad2(0)("ansattepost")
+                egenerklaeringObjekt.Skjema1 = rad2(0)("skjema")
+                egenerklaeringObjekt.Kommentar1 = rad2(0)("kommentar")
+                egenerklaeringObjekt.DatotidBG1 = rad2(0)("datotidbg")
+                egenerklaeringObjekt.DatotidAnsatt1 = rad2(0)("datotidansatt")
+
+            End If
+            'jasvar = rad1(index)("skjema")
+            'egenerklæringID = rad1(index)("id")
+            'presentertGiver = blodgiveren.Epost1
+            'If Not IsDBNull(rad("ansattepost")) Then
+            ' erklaringLege = rad("ansattepost")
+            'Else
+            'erklaringLege = ""
+            'End If
+            'If Not IsDBNull(rad("datotidansatt")) Then
+            'gjennomgåttErklæring = rad("datotidansatt")
+            'Else
+            'gjennomgåttErklæring = Nothing
+            'End If
+            GroupBoxIntervju.Visible = False
 
         dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
         If egenerklaeringObjekt.Skjema1 <> "" Then
@@ -913,13 +917,13 @@ Public Class Blodbane
         rTxtValgtBlodgiverInternMrknd.Text = blodgiveren.Merknad1
 
         If blodgiveren.Siste_blodtapping1 <> dummyDato Then
+            GroupBoxIntervju.Visible = True
             txtValgtBlodgiverSistTappDato.Text = blodgiveren.Siste_blodtapping1
             txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
             txtHKtrlSisteEgenerkl.Text = egenerklaeringObjekt.DatotidBG1
             If egenerklaeringObjekt.AnsattEpost1 <> dummyEpost Then
                 txtHKtrlGjennomgAv.Text = egenerklaeringObjekt.AnsattEpost1
                 txtHKtrlEKDatoGjennomg.Text = egenerklaeringObjekt.DatotidAnsatt1
-                GroupBoxIntervju.Visible = True
             Else
                 txtHKtrlGjennomgAv.Text = ""
                 txtHKtrlEKDatoGjennomg.Text = ""
@@ -938,7 +942,7 @@ Public Class Blodbane
 
     'Utleder Jasvar og presenterer i Listebox i giversøk
     Private Sub utledJAsvar(ByVal spmNr As String)
-        Dim svar() As String = spmNr.Split(",")
+        Dim svar() As String = spmNr.Split(", ")
         For i = 0 To svar.Length - 1
             lbxHKtrlJasvar.Items.Add(svar(i))
         Next
@@ -1006,7 +1010,7 @@ Public Class Blodbane
             etg = rad("etasje")
             If dato = Today Then
                 dato = rad("datotid")
-                ListBox4.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
+                ListBox4.Items.Add($"{dato} - Rom:  {romnr} - Etg: {etg} - Giver: {epost}")
             ElseIf dato = DateAdd(DateInterval.Day, 1, Today) Then
                 dato = rad("datotid")
                 ListBox5.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
@@ -1415,9 +1419,11 @@ Public Class Blodbane
 
         Try
             tilkobling.Open()
-            sporring = $"INSERT INTO egenerklaering VALUES ('{blodgiveren.Epost1}', '{dummyEpost}','{Now.ToString("yyyy.MM.dd HH:mm.ss")}',{dummyDato},'{Jasvar}','Ingen kommentar')"
+            sporring = $"INSERT INTO egenerklaering (bgepost, datotidbg, datotidansatt, skjema, kommentar) VALUES ('{blodgiveren.Epost1}', @idag , @dummydato, '{Jasvar}', 'Ingen kommentar')"
             MsgBox(sporring)
             Dim sqlja As New MySqlCommand(sporring, tilkobling)
+            sqlja.Parameters.Add("idag", MySqlDbType.DateTime).Value = Now
+            sqlja.Parameters.Add("dummydato", MySqlDbType.DateTime).Value = dummyDato
             sqlja.ExecuteNonQuery()
         Catch ex As MySqlException
             MsgBox("Feil ved tilkobling til databasen: " & ex.Message())
@@ -1512,7 +1518,7 @@ Public Class Blodbane
     End Function
 
     'Lagre intervju og eventuelle endringer i blodgiver
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnHKtrlIntProfGjgått.Click
+    Private Sub LagreIntervjuInfo_Click(sender As Object, e As EventArgs) Handles btnHKtrlIntProfGjgått.Click
         Dim epost, adresse, preferanse, merknad, kommentar, spørring, spørring2 As String
         Dim tlf1, tlf2, postnr, status, i, svar As Integer
         Dim da As New MySqlDataAdapter
