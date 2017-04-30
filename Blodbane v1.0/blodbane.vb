@@ -60,6 +60,7 @@ Public Class Blodbane
         velkommen.ProgressBar1.Value = 20
         blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
         bytteRomTime = New Romtime(dummyDato, "", 0)
+        egenerklaeringObjekt = New Egenerklaering(-1, dummyEpost, dummyEpost, "", "", dummyDato, dummyDato)
         If Today.Month < 10 Then
             sifre = $"0{Today.Month}"
         Else
@@ -251,6 +252,7 @@ Public Class Blodbane
         tilkobling.Close()
     End Sub
 
+    'Oppdaterer både tabellene bruker og blodgiver i tillegg til blodgiveren-objektet
     Private Sub OppdaterBlodgiver(ByVal epost As String, ByVal passord As String,
                                   ByVal fornavn As String, ByVal etternavn As String,
                                   ByVal adresse As String, ByVal postnr As String,
@@ -737,9 +739,9 @@ Public Class Blodbane
             da.SelectCommand = sqlSpørring
             da.Fill(giversøk)
 
-            Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM egenerklaering", tilkobling)
-            da.SelectCommand = sqlSpørring2
-            da.Fill(egenerklaering)
+            '   Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM egenerklaering", tilkobling)
+            '  da.SelectCommand = sqlSpørring2
+            ' da.Fill(egenerklaering)
         Catch
             MsgBox("Får ikke kontakt med databasen")
             Exit Sub
@@ -797,6 +799,25 @@ Public Class Blodbane
         lbxHKtrlJasvar.Items.Clear()
         index = lBxSøkResultater.SelectedIndex
         rad1 = giversøk.Select
+
+        If IsDBNull(rad1(0)("blodtype")) Then
+            rad1(0)("blodtype") = ""
+        End If
+        If IsDBNull(rad1(0)("merknad")) Then
+            rad1(0)("merknad") = ""
+        End If
+        If IsDBNull(rad1(0)("timepreferanse")) Then
+            rad1(0)("timepreferanse") = ""
+        End If
+        If IsDBNull(rad1(0)("adresse")) Then
+            rad1(0)("adresse") = ""
+        End If
+        If IsDBNull(rad1(0)("telefon2")) Then
+            rad1(0)("telefon2") = ""
+        End If
+        If IsDBNull(rad1(0)("siste_blodtapping")) Then
+            rad(1)("siste_blodtapping") = dummyDato
+        End If
         BlodgiverObjOppdat(rad1(index)("epost"), rad1(index)("passord"), rad1(index)("fornavn"),
                            rad1(index)("etternavn"), rad1(index)("adresse"), rad1(index)("postnr"),
                            rad1(index)("telefon1"), rad1(index)("telefon2"), rad1(index)("statuskode"),
@@ -820,26 +841,26 @@ Public Class Blodbane
         'End If
         'i = i + 1
         'Next
-        For Each rad In egenerklaering.Rows
-            If rad("bgepost") = blodgiveren.Epost1 Then
-                If rad("datotidbg") > sistErklæring Then
-                    sistErklæring = rad("datotidbg")
-                    jasvar = rad("skjema")
-                    egenerklæringID = rad("id")
-                    presentertGiver = rad("bgepost")
-                    If Not IsDBNull(rad("ansattepost")) Then
-                        erklaringLege = rad("ansattepost")
-                    Else
-                        erklaringLege = ""
-                    End If
-                    If Not IsDBNull(rad("datotidansatt")) Then
-                        gjennomgåttErklæring = rad("datotidansatt")
-                    Else
-                        gjennomgåttErklæring = Nothing
-                    End If
-                End If
-            End If
-        Next
+        'For Each rad In egenerklaering.Rows
+        'If rad("bgepost") = blodgiveren.Epost1 Then
+        'If rad("datotidbg") > sistErklæring Then
+        'sistErklæring = rad("datotidbg")
+        'jasvar = rad("skjema")
+        'egenerklæringID = rad("id")
+        'presentertGiver = rad("bgepost")
+        'If Not IsDBNull(rad("ansattepost")) Then
+        'erklaringLege = rad("ansattepost")
+        'Else
+        'erklaringLege = ""
+        'End If
+        'If Not IsDBNull(rad("datotidansatt")) Then
+        'gjennomgåttErklæring = rad("datotidansatt")
+        'Else
+        'gjennomgåttErklæring = Nothing
+        'End If
+        'End If
+        'End If
+        'Next
         tilkobling.Open()
         Dim sqlSpørring = $"SELECT * FROM egenerklaering WHERE bgepost='{blodgiveren.Epost1}' ORDER BY datotidbg DESC"
         Dim sql1 As New MySqlCommand(sqlSpørring, tilkobling)
@@ -851,30 +872,34 @@ Public Class Blodbane
         If interntabell1.Rows.Count > 0 Then
 
             Dim rad2() As DataRow = interntabell1.Select()
-            egenerklaeringObjekt = New Egenerklaering(rad2(0)("id"), rad2(0)("bgepost"), rad2(0)("ansattepost"),
-                                                    rad2(0)("skjema"), rad2(0)("kommentar"), rad2(0)("datotidbg"),
-                                                    rad2(0)("datotidansatt"))
+            egenerklaeringObjekt.Id1 = rad2(0)("id")
+            egenerklaeringObjekt.BgEpost1 = rad2(0)("bgepost")
+            egenerklaeringObjekt.AnsattEpost1 = rad2(0)("ansattepost")
+            egenerklaeringObjekt.Skjema1 = rad2(0)("skjema")
+            egenerklaeringObjekt.Kommentar1 = rad2(0)("kommentar")
+            egenerklaeringObjekt.DatotidBG1 = rad2(0)("datotidbg")
+            egenerklaeringObjekt.DatotidAnsatt1 = rad2(0)("datotidansatt")
 
         Else
             MsgBox($"Blodgiver {blodgiveren.Epost1} har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
         End If
-        jasvar = rad1(index)("skjema")
-        egenerklæringID = rad1(index)("id")
-        presentertGiver = blodgiveren.Epost1
-        If Not IsDBNull(rad("ansattepost")) Then
-            erklaringLege = rad("ansattepost")
-        Else
-            erklaringLege = ""
-        End If
-        If Not IsDBNull(rad("datotidansatt")) Then
-            gjennomgåttErklæring = rad("datotidansatt")
-        Else
-            gjennomgåttErklæring = Nothing
-        End If
+        'jasvar = rad1(index)("skjema")
+        'egenerklæringID = rad1(index)("id")
+        'presentertGiver = blodgiveren.Epost1
+        'If Not IsDBNull(rad("ansattepost")) Then
+        ' erklaringLege = rad("ansattepost")
+        'Else
+        'erklaringLege = ""
+        'End If
+        'If Not IsDBNull(rad("datotidansatt")) Then
+        'gjennomgåttErklæring = rad("datotidansatt")
+        'Else
+        'gjennomgåttErklæring = Nothing
+        'End If
 
         dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
-        If jasvar <> "" Then
-            utledJAsvar(jasvar)
+        If egenerklaeringObjekt.Skjema1 <> "" Then
+            utledJAsvar(egenerklaeringObjekt.Skjema1)
         End If
 
         txtValgtBlodgiverNavn.Text = $"{blodgiveren.Fornavn1} {blodgiveren.Etternavn1}"
@@ -885,23 +910,23 @@ Public Class Blodbane
         txtValgtBlodgiverAdresse.Text = blodgiveren.Adresse1
         txtValgtBlodgiverPostnr.Text = blodgiveren.Postnr1
         cBxValgtBlodgiverStatusTekst.Text = blodgiveren.Status1
-        txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
         If blodgiveren.Siste_blodtapping1 <> dummyDato Then
             txtValgtBlodgiverSistTappDato.Text = blodgiveren.Siste_blodtapping1
+            txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
+            txtHKtrlSisteEgenerkl.Text = egenerklaeringObjekt.DatotidBG1
+            txtHKtrlGjennomgAv.Text = egenerklaeringObjekt.AnsattEpost1
+            If egenerklaeringObjekt.DatotidAnsatt1 = dummyDato Then
+                txtHKtrlEKDatoGjennomg.Text = ""
+                GroupBoxIntervju.Visible = True
+            Else
+                txtHKtrlEKDatoGjennomg.Text = egenerklaeringObjekt.DatotidAnsatt1
+                GroupBoxIntervju.Visible = False
+            End If
         Else
             txtValgtBlodgiverSistTappDato.Text = "Ikke gitt blod enda"
         End If
         rTxtValgBlodgiverTimepref.Text = blodgiveren.Timepreferanse1
         rTxtValgtBlodgiverInternMrknd.Text = blodgiveren.Merknad1
-        txtHKtrlSisteEgenerkl.Text = sistErklæring
-        txtHKtrlGjennomgAv.Text = erklaringLege
-        If gjennomgåttErklæring = Nothing Then
-            txtHKtrlEKDatoGjennomg.Text = ""
-            GroupBoxIntervju.Visible = True
-        Else
-            txtHKtrlEKDatoGjennomg.Text = gjennomgåttErklæring
-            GroupBoxIntervju.Visible = False
-        End If
 
     End Sub
 
@@ -1384,7 +1409,7 @@ Public Class Blodbane
 
         Try
             tilkobling.Open()
-            sporring = $"INSERT INTO egenerklaering (bgepost, datotidbg, skjema ) VALUES ('{blodgiveren.Epost1}','{Now.ToString("yyyy.MM.dd HH:mm.ss")}','{Jasvar}')"
+            sporring = $"INSERT INTO egenerklaering VALUES ('{blodgiveren.Epost1}', '{dummyEpost}','{Now.ToString("yyyy.MM.dd HH:mm.ss")}',{dummyDato},'{Jasvar}','Ingen kommentar')"
             MsgBox(sporring)
             Dim sqlja As New MySqlCommand(sporring, tilkobling)
             sqlja.ExecuteNonQuery()
