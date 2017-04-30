@@ -104,8 +104,8 @@ Public Class Blodbane
         Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
         da.SelectCommand = sqlSpørring4
         da.Fill(Erklæringspørsmål)
-        lblSpml.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
-        Label26.Text = $"Spørsmål {SPMnr + 1}"
+        lblEgenerklSpmTekst.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
+        lblEgenerklSpmNr.Text = $"Spørsmål {SPMnr + 1}"
 
         tilkobling.Close()
 
@@ -877,28 +877,28 @@ Public Class Blodbane
             End If
 
             egenerklaeringObjekt.Id1 = rad2(0)("id")
-                egenerklaeringObjekt.BgEpost1 = rad2(0)("bgepost")
-                egenerklaeringObjekt.AnsattEpost1 = rad2(0)("ansattepost")
-                egenerklaeringObjekt.Skjema1 = rad2(0)("skjema")
-                egenerklaeringObjekt.Kommentar1 = rad2(0)("kommentar")
-                egenerklaeringObjekt.DatotidBG1 = rad2(0)("datotidbg")
-                egenerklaeringObjekt.DatotidAnsatt1 = rad2(0)("datotidansatt")
+            egenerklaeringObjekt.BgEpost1 = rad2(0)("bgepost")
+            egenerklaeringObjekt.AnsattEpost1 = rad2(0)("ansattepost")
+            egenerklaeringObjekt.Skjema1 = rad2(0)("skjema")
+            egenerklaeringObjekt.Kommentar1 = rad2(0)("kommentar")
+            egenerklaeringObjekt.DatotidBG1 = rad2(0)("datotidbg")
+            egenerklaeringObjekt.DatotidAnsatt1 = rad2(0)("datotidansatt")
 
-            End If
-            'jasvar = rad1(index)("skjema")
-            'egenerklæringID = rad1(index)("id")
-            'presentertGiver = blodgiveren.Epost1
-            'If Not IsDBNull(rad("ansattepost")) Then
-            ' erklaringLege = rad("ansattepost")
-            'Else
-            'erklaringLege = ""
-            'End If
-            'If Not IsDBNull(rad("datotidansatt")) Then
-            'gjennomgåttErklæring = rad("datotidansatt")
-            'Else
-            'gjennomgåttErklæring = Nothing
-            'End If
-            GroupBoxIntervju.Visible = False
+        End If
+        'jasvar = rad1(index)("skjema")
+        'egenerklæringID = rad1(index)("id")
+        'presentertGiver = blodgiveren.Epost1
+        'If Not IsDBNull(rad("ansattepost")) Then
+        ' erklaringLege = rad("ansattepost")
+        'Else
+        'erklaringLege = ""
+        'End If
+        'If Not IsDBNull(rad("datotidansatt")) Then
+        'gjennomgåttErklæring = rad("datotidansatt")
+        'Else
+        'gjennomgåttErklæring = Nothing
+        'End If
+        GroupBoxIntervju.Visible = False
 
         dager = DateDiff(DateInterval.DayOfYear, blodgiveren.Siste_blodtapping1, Today)
         If egenerklaeringObjekt.Skjema1 <> "" Then
@@ -1358,7 +1358,7 @@ Public Class Blodbane
     End Sub
 
     'Forrige spørsmål i erklæring
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEgenerklForrigeSpm.Click
         Dim sisteindex, kjønn, spmID, i As Integer
         Dim spmText, pnr As String
         Dim dame As Boolean
@@ -1393,19 +1393,19 @@ Public Class Blodbane
             End If
         Next
         SPMnrPresentert = SPMnrPresentert - 1
-        lblSpml.Text = spmText
-        Label26.Text = $"Spørsmål {SPMnrPresentert + 1}"
-        RadioButton3.Checked = False
-        RadioButton4.Checked = False
-        btnNeste.Enabled = True
+        lblEgenerklSpmTekst.Text = spmText
+        lblEgenerklSpmNr.Text = $"Spørsmål {SPMnrPresentert + 1}"
+        rBtnEgenerklJa.Checked = False
+        rBtnEgenerklNei.Checked = False
+        btnEgenerklNesteSpm.Enabled = True
         If SPMnr <= 0 Then
-            Button1.Enabled = False
+            btnEgenerklForrigeSpm.Enabled = False
             Exit Sub
         End If
     End Sub
 
     'Send inn egenerklæring
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnEgenerklSendInn.Click
         Dim Jasvar, sporring As String
         Dim i, siste As Integer
         siste = erklæringSvar.Length
@@ -1425,6 +1425,9 @@ Public Class Blodbane
             sqlja.Parameters.Add("idag", MySqlDbType.DateTime).Value = Now
             sqlja.Parameters.Add("dummydato", MySqlDbType.DateTime).Value = dummyDato
             sqlja.ExecuteNonQuery()
+            sporring = $"UPDATE bruker SET statuskode = 32 WHERE epost = '{blodgiveren.Epost1}'"
+            Dim sqlNy As New MySqlCommand(sporring, tilkobling)
+            sqlNy.ExecuteNonQuery()
         Catch ex As MySqlException
             MsgBox("Feil ved tilkobling til databasen: " & ex.Message())
         Finally
@@ -1433,7 +1436,7 @@ Public Class Blodbane
     End Sub
 
     'Lagre svar i erklæring og vis neste spørsmål
-    Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnNeste.Click
+    Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnEgenerklNesteSpm.Click
         Dim sisteindex, kjønn, spmID, i As Integer
         Dim spmText, pnr As String
         Dim dame As Boolean
@@ -1447,11 +1450,11 @@ Public Class Blodbane
         Else
             dame = False
         End If
-        If (RadioButton3.Checked = False) And (RadioButton4.Checked = False) Then
+        If (rBtnEgenerklJa.Checked = False) And (rBtnEgenerklNei.Checked = False) Then
             MsgBox("Du må svare før du går videre")
             Exit Sub
         End If
-        If RadioButton3.Checked Then
+        If rBtnEgenerklJa.Checked Then
             erklæringSvar(SPMnr) = 1
         Else
             erklæringSvar(SPMnr) = 0
@@ -1459,7 +1462,7 @@ Public Class Blodbane
 
         'Neste spm
         If SPMnr >= sisteindex Then
-            btnNeste.Enabled = False
+            btnEgenerklNesteSpm.Enabled = False
             MsgBox("Alle spørsmål besvart - send inn!")
             Exit Sub
         End If
@@ -1482,11 +1485,11 @@ Public Class Blodbane
             End If
         Next
         SPMnrPresentert = SPMnrPresentert + 1
-        lblSpml.Text = spmText
-        Label26.Text = $"Spørsmål {SPMnrPresentert + 1}"
-        RadioButton3.Checked = False
-        RadioButton4.Checked = False
-        Button1.Enabled = True
+        lblEgenerklSpmTekst.Text = spmText
+        lblEgenerklSpmNr.Text = $"Spørsmål {SPMnrPresentert + 1}"
+        rBtnEgenerklJa.Checked = False
+        rBtnEgenerklNei.Checked = False
+        btnEgenerklForrigeSpm.Enabled = True
     End Sub
 
     'Sjekker om valgt dato er fridag
@@ -1563,5 +1566,9 @@ Public Class Blodbane
         End Try
         bgSøk(bgSøkParameter)
         visBG()
+    End Sub
+
+    Private Sub TabPage5_Enter(sender As Object, e As EventArgs) Handles TabPage5.Enter
+        btnEgenerklForrigeSpm.Enabled = False
     End Sub
 End Class
