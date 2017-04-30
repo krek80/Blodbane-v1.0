@@ -24,12 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -216,10 +216,10 @@ Partial Class Blodbane
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.ChartLegemer = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.ChartLegemer = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -249,8 +249,8 @@ Partial Class Blodbane
         Me.GroupBox5.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1471,17 +1471,18 @@ Partial Class Blodbane
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.TabStop = False
         '
-        'ToolTip1
+        'ChartLegemer
         '
-        Me.ToolTip1.AutoPopDelay = 5000
-        Me.ToolTip1.InitialDelay = 0
-        Me.ToolTip1.IsBalloon = True
-        Me.ToolTip1.ReshowDelay = 100
-        Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 3000
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartLegemer.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartLegemer.Legends.Add(Legend1)
+        resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
+        Me.ChartLegemer.Name = "ChartLegemer"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Blodlegemer"
+        Me.ChartLegemer.Series.Add(Series1)
         '
         'ChartProdukt
         '
@@ -1496,18 +1497,17 @@ Partial Class Blodbane
         Series2.Name = "Blodposer"
         Me.ChartProdukt.Series.Add(Series2)
         '
-        'ChartLegemer
+        'ToolTip1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartLegemer.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartLegemer.Legends.Add(Legend1)
-        resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
-        Me.ChartLegemer.Name = "ChartLegemer"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Blodlegemer"
-        Me.ChartLegemer.Series.Add(Series1)
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 0
+        Me.ToolTip1.IsBalloon = True
+        Me.ToolTip1.ReshowDelay = 100
+        Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 3000
         '
         'Blodbane
         '
@@ -1564,8 +1564,8 @@ Partial Class Blodbane
         Me.GroupBox5.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
-        CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
