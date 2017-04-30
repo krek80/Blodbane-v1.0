@@ -23,7 +23,7 @@ Public Class Blodbane
     Dim dummyFodselsnr, aarstallet As String
     Dim dummyEpost As String = "@@.@...@..@."
     Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
-    Dim egenerklæringID, SPMnr, SPMnrPresentert, erklæringSvar(60) As Integer
+    Dim egenerklæringID, SPMnr, SPMnrPresentert, erklæringSvar(100) As Integer
     Dim presentertGiver, bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
 
@@ -1025,7 +1025,7 @@ Public Class Blodbane
 
     'Blodlager
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
-        Dim B_legemer, B_plater, B_plasma As Integer
+        Dim B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma As Integer
         Me.Cursor = Cursors.WaitCursor
         blodlager.Clear()
         Dim rad As DataRow
@@ -1037,7 +1037,23 @@ Public Class Blodbane
 
         For Each rad In blodlager.Rows
             If (rad("produkttypeid") = 1) And (rad("statusid") = 1) Then
-                B_legemer = B_legemer + (rad("antall"))
+                If rad("blodtype") = "0+" Then
+                    B_legemer0p = B_legemer0p + rad("antall")
+                ElseIf rad("blodtype") = "0-" Then
+                    B_legemer0m = B_legemer0m + rad("antall")
+                ElseIf rad("blodtype") = "A+" Then
+                    B_legemerAp = B_legemerAp + rad("antall")
+                ElseIf rad("blodtype") = "A-" Then
+                    B_legemerAm = B_legemerAm + rad("antall")
+                ElseIf rad("blodtype") = "AB+" Then
+                    B_legemerABp = B_legemerABp + rad("antall")
+                ElseIf rad("blodtype") = "AB-" Then
+                    B_legemerABm = B_legemerABm + rad("antall")
+                ElseIf rad("blodtype") = "B+" Then
+                    B_legemerBp = B_legemerBp + rad("antall")
+                ElseIf rad("blodtype") = "B-" Then
+                    B_legemerBm = B_legemerBm + rad("antall")
+                End If
             ElseIf (rad("produkttypeid") = 2) And (rad("statusid") = 1) Then
                 B_plater = B_plater + (rad("antall"))
             ElseIf (rad("produkttypeid") = 3) And (rad("statusid") = 1) Then
@@ -1045,13 +1061,18 @@ Public Class Blodbane
             End If
         Next
         tilkobling.Close()
-
-        Chart1.Series.Clear()
-        MsgBox(B_plasma)
-        MsgBox(B_plater)
-        Chart1.Series(0).Points(0).YValues(0) = B_plasma
-        Chart2.Series(0).Points(1).YValues(0) = B_plater
-
+        ChartProdukt.Series("Blodposer").Points.Clear()
+        ChartLegemer.Series("Blodlegemer").Points.Clear()
+        ChartProdukt.Series("Blodposer").Points.AddXY("Plasma", B_plasma)
+        ChartProdukt.Series("Blodposer").Points.AddXY("Blodplater", B_plater)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("0+", B_legemer0p)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("0-", B_legemer0m)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("A+", B_legemerAp)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("A-", B_legemerAm)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("AB+", B_legemerABp)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("AB-", B_legemerABm)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("B+", B_legemerBp)
+        ChartLegemer.Series("Blodlegemer").Points.AddXY("B-", B_legemerBm)
     End Sub
 
     'Slår av og på visning av gruppeboksen med skjema for å endre avtalt time
