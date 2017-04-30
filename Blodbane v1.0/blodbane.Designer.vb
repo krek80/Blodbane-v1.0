@@ -40,13 +40,14 @@ Partial Class Blodbane
         Me.LagreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtBgInn_fornavn = New System.Windows.Forms.TextBox()
         Me.txtBgInn_poststed = New System.Windows.Forms.TextBox()
         Me.txtBgInn_personnr = New System.Windows.Forms.TextBox()
@@ -55,15 +56,16 @@ Partial Class Blodbane
         Me.txtBgInn_epost = New System.Windows.Forms.TextBox()
         Me.txtBgInn_tlfnr = New System.Windows.Forms.TextBox()
         Me.txtBgInn_postnr = New System.Windows.Forms.TextBox()
-        Me.BtnRegBlodgiver = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.txtBgInn_passord1 = New System.Windows.Forms.TextBox()
-        Me.txtBgInn_passord2 = New System.Windows.Forms.TextBox()
-        Me.Label113 = New System.Windows.Forms.Label()
         Me.Label114 = New System.Windows.Forms.Label()
         Me.txtBgInn_tlfnr2 = New System.Windows.Forms.TextBox()
         Me.txtBgInn_etternavn = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtBgInn_passord2 = New System.Windows.Forms.TextBox()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.txtBgInn_passord1 = New System.Windows.Forms.TextBox()
+        Me.BtnRegBlodgiver = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtAInn_passord = New System.Windows.Forms.TextBox()
         Me.BttnLoggpåGiver = New System.Windows.Forms.Button()
@@ -152,6 +154,8 @@ Partial Class Blodbane
         Me.cbxAnsattUtførtTapping = New System.Windows.Forms.ComboBox()
         Me.Label115 = New System.Windows.Forms.Label()
         Me.gpBxValgtBlodgiver = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.txtValgtBlodgiverSistTappDato = New System.Windows.Forms.TextBox()
         Me.txtValgtBlodgiverStatusKode = New System.Windows.Forms.TextBox()
         Me.txtValgtBlodgiverSistTappDager = New System.Windows.Forms.TextBox()
@@ -214,16 +218,39 @@ Partial Class Blodbane
         Me.ListBox4 = New System.Windows.Forms.ListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.BttnRegUttakBlod = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.nudUttakBm = New System.Windows.Forms.NumericUpDown()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.nudUttakAp = New System.Windows.Forms.NumericUpDown()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.nudUttakAm = New System.Windows.Forms.NumericUpDown()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.nudUttakABp = New System.Windows.Forms.NumericUpDown()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.nudUttakABm = New System.Windows.Forms.NumericUpDown()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.nudUttakBp = New System.Windows.Forms.NumericUpDown()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.nudUttak0m = New System.Windows.Forms.NumericUpDown()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.nudUttak0p = New System.Windows.Forms.NumericUpDown()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.nudUttakB_plasm = New System.Windows.Forms.NumericUpDown()
+        Me.nudUttakB_plat = New System.Windows.Forms.NumericUpDown()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ListBoxKritiskBlod = New System.Windows.Forms.ListBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.ChartLegemer = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -252,6 +279,19 @@ Partial Class Blodbane
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox14.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.nudUttakBm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakAp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakAm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakABp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakABm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakBp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttak0m, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttak0p, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakB_plasm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudUttakB_plat, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox13.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -339,6 +379,17 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.BtnRegBlodgiver, 2, 12)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
+        'TextBox1
+        '
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox1, 2)
+        Me.TextBox1.Name = "TextBox1"
+        '
+        'Label21
+        '
+        resources.ApplyResources(Me.Label21, "Label21")
+        Me.Label21.Name = "Label21"
+        '
         'Label7
         '
         resources.ApplyResources(Me.Label7, "Label7")
@@ -368,12 +419,6 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        '
-        'Label9
-        '
-        resources.ApplyResources(Me.Label9, "Label9")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.Label9, 3)
-        Me.Label9.Name = "Label9"
         '
         'txtBgInn_fornavn
         '
@@ -421,44 +466,6 @@ Partial Class Blodbane
         resources.ApplyResources(Me.txtBgInn_postnr, "txtBgInn_postnr")
         Me.txtBgInn_postnr.Name = "txtBgInn_postnr"
         '
-        'BtnRegBlodgiver
-        '
-        resources.ApplyResources(Me.BtnRegBlodgiver, "BtnRegBlodgiver")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.BtnRegBlodgiver, 3)
-        Me.BtnRegBlodgiver.ForeColor = System.Drawing.Color.Red
-        Me.BtnRegBlodgiver.Name = "BtnRegBlodgiver"
-        Me.BtnRegBlodgiver.UseVisualStyleBackColor = True
-        '
-        'Label13
-        '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.Label13, 3)
-        Me.Label13.Name = "Label13"
-        '
-        'Label89
-        '
-        resources.ApplyResources(Me.Label89, "Label89")
-        Me.Label89.Name = "Label89"
-        '
-        'txtBgInn_passord1
-        '
-        resources.ApplyResources(Me.txtBgInn_passord1, "txtBgInn_passord1")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_passord1, 2)
-        Me.txtBgInn_passord1.Name = "txtBgInn_passord1"
-        Me.txtBgInn_passord1.UseSystemPasswordChar = True
-        '
-        'txtBgInn_passord2
-        '
-        resources.ApplyResources(Me.txtBgInn_passord2, "txtBgInn_passord2")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_passord2, 2)
-        Me.txtBgInn_passord2.Name = "txtBgInn_passord2"
-        Me.txtBgInn_passord2.UseSystemPasswordChar = True
-        '
-        'Label113
-        '
-        resources.ApplyResources(Me.Label113, "Label113")
-        Me.Label113.Name = "Label113"
-        '
         'Label114
         '
         resources.ApplyResources(Me.Label114, "Label114")
@@ -475,6 +482,50 @@ Partial Class Blodbane
         resources.ApplyResources(Me.txtBgInn_etternavn, "txtBgInn_etternavn")
         Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_etternavn, 2)
         Me.txtBgInn_etternavn.Name = "txtBgInn_etternavn"
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.Label9, 3)
+        Me.Label9.Name = "Label9"
+        '
+        'Label13
+        '
+        resources.ApplyResources(Me.Label13, "Label13")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.Label13, 3)
+        Me.Label13.Name = "Label13"
+        '
+        'txtBgInn_passord2
+        '
+        resources.ApplyResources(Me.txtBgInn_passord2, "txtBgInn_passord2")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_passord2, 2)
+        Me.txtBgInn_passord2.Name = "txtBgInn_passord2"
+        Me.txtBgInn_passord2.UseSystemPasswordChar = True
+        '
+        'Label113
+        '
+        resources.ApplyResources(Me.Label113, "Label113")
+        Me.Label113.Name = "Label113"
+        '
+        'Label89
+        '
+        resources.ApplyResources(Me.Label89, "Label89")
+        Me.Label89.Name = "Label89"
+        '
+        'txtBgInn_passord1
+        '
+        resources.ApplyResources(Me.txtBgInn_passord1, "txtBgInn_passord1")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_passord1, 2)
+        Me.txtBgInn_passord1.Name = "txtBgInn_passord1"
+        Me.txtBgInn_passord1.UseSystemPasswordChar = True
+        '
+        'BtnRegBlodgiver
+        '
+        resources.ApplyResources(Me.BtnRegBlodgiver, "BtnRegBlodgiver")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.BtnRegBlodgiver, 3)
+        Me.BtnRegBlodgiver.ForeColor = System.Drawing.Color.Red
+        Me.BtnRegBlodgiver.Name = "BtnRegBlodgiver"
+        Me.BtnRegBlodgiver.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3
         '
@@ -1086,6 +1137,17 @@ Partial Class Blodbane
         Me.gpBxValgtBlodgiver.Name = "gpBxValgtBlodgiver"
         Me.gpBxValgtBlodgiver.TabStop = False
         '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox2, "TextBox2")
+        Me.TextBox2.Name = "TextBox2"
+        '
+        'Label23
+        '
+        resources.ApplyResources(Me.Label23, "Label23")
+        Me.Label23.Name = "Label23"
+        '
         'txtValgtBlodgiverSistTappDato
         '
         Me.txtValgtBlodgiverSistTappDato.BackColor = System.Drawing.SystemColors.InactiveCaption
@@ -1462,15 +1524,182 @@ Partial Class Blodbane
         '
         'GroupBox14
         '
+        Me.GroupBox14.Controls.Add(Me.TextBox3)
+        Me.GroupBox14.Controls.Add(Me.Label39)
+        Me.GroupBox14.Controls.Add(Me.BttnRegUttakBlod)
+        Me.GroupBox14.Controls.Add(Me.GroupBox2)
+        Me.GroupBox14.Controls.Add(Me.Label28)
         resources.ApplyResources(Me.GroupBox14, "GroupBox14")
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.TabStop = False
         '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.TextBox3, "TextBox3")
+        Me.TextBox3.Name = "TextBox3"
+        '
+        'Label39
+        '
+        resources.ApplyResources(Me.Label39, "Label39")
+        Me.Label39.Name = "Label39"
+        '
+        'BttnRegUttakBlod
+        '
+        resources.ApplyResources(Me.BttnRegUttakBlod, "BttnRegUttakBlod")
+        Me.BttnRegUttakBlod.Name = "BttnRegUttakBlod"
+        Me.BttnRegUttakBlod.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.nudUttakBm)
+        Me.GroupBox2.Controls.Add(Me.Label38)
+        Me.GroupBox2.Controls.Add(Me.nudUttakAp)
+        Me.GroupBox2.Controls.Add(Me.Label37)
+        Me.GroupBox2.Controls.Add(Me.nudUttakAm)
+        Me.GroupBox2.Controls.Add(Me.Label36)
+        Me.GroupBox2.Controls.Add(Me.nudUttakABp)
+        Me.GroupBox2.Controls.Add(Me.Label35)
+        Me.GroupBox2.Controls.Add(Me.nudUttakABm)
+        Me.GroupBox2.Controls.Add(Me.Label34)
+        Me.GroupBox2.Controls.Add(Me.nudUttakBp)
+        Me.GroupBox2.Controls.Add(Me.Label33)
+        Me.GroupBox2.Controls.Add(Me.nudUttak0m)
+        Me.GroupBox2.Controls.Add(Me.Label32)
+        Me.GroupBox2.Controls.Add(Me.nudUttak0p)
+        Me.GroupBox2.Controls.Add(Me.Label31)
+        Me.GroupBox2.Controls.Add(Me.nudUttakB_plasm)
+        Me.GroupBox2.Controls.Add(Me.nudUttakB_plat)
+        Me.GroupBox2.Controls.Add(Me.Label30)
+        Me.GroupBox2.Controls.Add(Me.Label29)
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.TabStop = False
+        '
+        'nudUttakBm
+        '
+        resources.ApplyResources(Me.nudUttakBm, "nudUttakBm")
+        Me.nudUttakBm.Name = "nudUttakBm"
+        '
+        'Label38
+        '
+        resources.ApplyResources(Me.Label38, "Label38")
+        Me.Label38.Name = "Label38"
+        '
+        'nudUttakAp
+        '
+        resources.ApplyResources(Me.nudUttakAp, "nudUttakAp")
+        Me.nudUttakAp.Name = "nudUttakAp"
+        '
+        'Label37
+        '
+        resources.ApplyResources(Me.Label37, "Label37")
+        Me.Label37.Name = "Label37"
+        '
+        'nudUttakAm
+        '
+        resources.ApplyResources(Me.nudUttakAm, "nudUttakAm")
+        Me.nudUttakAm.Name = "nudUttakAm"
+        '
+        'Label36
+        '
+        resources.ApplyResources(Me.Label36, "Label36")
+        Me.Label36.Name = "Label36"
+        '
+        'nudUttakABp
+        '
+        resources.ApplyResources(Me.nudUttakABp, "nudUttakABp")
+        Me.nudUttakABp.Name = "nudUttakABp"
+        '
+        'Label35
+        '
+        resources.ApplyResources(Me.Label35, "Label35")
+        Me.Label35.Name = "Label35"
+        '
+        'nudUttakABm
+        '
+        resources.ApplyResources(Me.nudUttakABm, "nudUttakABm")
+        Me.nudUttakABm.Name = "nudUttakABm"
+        '
+        'Label34
+        '
+        resources.ApplyResources(Me.Label34, "Label34")
+        Me.Label34.Name = "Label34"
+        '
+        'nudUttakBp
+        '
+        resources.ApplyResources(Me.nudUttakBp, "nudUttakBp")
+        Me.nudUttakBp.Name = "nudUttakBp"
+        '
+        'Label33
+        '
+        resources.ApplyResources(Me.Label33, "Label33")
+        Me.Label33.Name = "Label33"
+        '
+        'nudUttak0m
+        '
+        resources.ApplyResources(Me.nudUttak0m, "nudUttak0m")
+        Me.nudUttak0m.Name = "nudUttak0m"
+        '
+        'Label32
+        '
+        resources.ApplyResources(Me.Label32, "Label32")
+        Me.Label32.Name = "Label32"
+        '
+        'nudUttak0p
+        '
+        resources.ApplyResources(Me.nudUttak0p, "nudUttak0p")
+        Me.nudUttak0p.Name = "nudUttak0p"
+        '
+        'Label31
+        '
+        resources.ApplyResources(Me.Label31, "Label31")
+        Me.Label31.Name = "Label31"
+        '
+        'nudUttakB_plasm
+        '
+        resources.ApplyResources(Me.nudUttakB_plasm, "nudUttakB_plasm")
+        Me.nudUttakB_plasm.Name = "nudUttakB_plasm"
+        '
+        'nudUttakB_plat
+        '
+        resources.ApplyResources(Me.nudUttakB_plat, "nudUttakB_plat")
+        Me.nudUttakB_plat.Name = "nudUttakB_plat"
+        '
+        'Label30
+        '
+        resources.ApplyResources(Me.Label30, "Label30")
+        Me.Label30.Name = "Label30"
+        '
+        'Label29
+        '
+        resources.ApplyResources(Me.Label29, "Label29")
+        Me.Label29.Name = "Label29"
+        '
+        'Label28
+        '
+        resources.ApplyResources(Me.Label28, "Label28")
+        Me.Label28.Name = "Label28"
+        '
         'GroupBox13
         '
+        Me.GroupBox13.Controls.Add(Me.Label26)
+        Me.GroupBox13.Controls.Add(Me.ListBoxKritiskBlod)
         resources.ApplyResources(Me.GroupBox13, "GroupBox13")
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.TabStop = False
+        '
+        'Label26
+        '
+        resources.ApplyResources(Me.Label26, "Label26")
+        Me.Label26.Name = "Label26"
+        '
+        'ListBoxKritiskBlod
+        '
+        Me.ListBoxKritiskBlod.ForeColor = System.Drawing.Color.Red
+        Me.ListBoxKritiskBlod.FormattingEnabled = True
+        resources.ApplyResources(Me.ListBoxKritiskBlod, "ListBoxKritiskBlod")
+        Me.ListBoxKritiskBlod.Name = "ListBoxKritiskBlod"
         '
         'GroupBox8
         '
@@ -1517,28 +1746,6 @@ Partial Class Blodbane
         'Timer1
         '
         Me.Timer1.Interval = 2000
-        '
-        'Label21
-        '
-        resources.ApplyResources(Me.Label21, "Label21")
-        Me.Label21.Name = "Label21"
-        '
-        'TextBox1
-        '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox1, 2)
-        Me.TextBox1.Name = "TextBox1"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox2, "TextBox2")
-        Me.TextBox2.Name = "TextBox2"
-        '
-        'Label23
-        '
-        resources.ApplyResources(Me.Label23, "Label23")
-        Me.Label23.Name = "Label23"
         '
         'Blodbane
         '
@@ -1596,6 +1803,21 @@ Partial Class Blodbane
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.GroupBox14.ResumeLayout(False)
+        Me.GroupBox14.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.nudUttakBm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakAp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakAm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakABp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakABm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakBp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttak0m, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttak0p, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakB_plasm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudUttakB_plat, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1798,4 +2020,31 @@ Partial Class Blodbane
     Friend WithEvents Label21 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label23 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents ListBoxKritiskBlod As ListBox
+    Friend WithEvents BttnRegUttakBlod As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents nudUttakB_plasm As NumericUpDown
+    Friend WithEvents nudUttakB_plat As NumericUpDown
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents nudUttakBm As NumericUpDown
+    Friend WithEvents Label38 As Label
+    Friend WithEvents nudUttakAp As NumericUpDown
+    Friend WithEvents Label37 As Label
+    Friend WithEvents nudUttakAm As NumericUpDown
+    Friend WithEvents Label36 As Label
+    Friend WithEvents nudUttakABp As NumericUpDown
+    Friend WithEvents Label35 As Label
+    Friend WithEvents nudUttakABm As NumericUpDown
+    Friend WithEvents Label34 As Label
+    Friend WithEvents nudUttakBp As NumericUpDown
+    Friend WithEvents Label33 As Label
+    Friend WithEvents nudUttak0m As NumericUpDown
+    Friend WithEvents Label32 As Label
+    Friend WithEvents nudUttak0p As NumericUpDown
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox3 As TextBox
 End Class

@@ -1029,18 +1029,33 @@ Public Class Blodbane
         tilkobling.Close()
     End Sub
 
-    'Blodlager
+    'Åpne blodlager
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
         Dim B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma As Integer
+        Dim kritiskNiva As Integer = 10     'Hardkodet definisjon av kritisk nivå
+
         Me.Cursor = Cursors.WaitCursor
         blodlager.Clear()
+        tilkobling.Open()
         Dim rad As DataRow
         Dim da As New MySqlDataAdapter
         Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost", tilkobling)
         da.SelectCommand = sqlSpørring
         da.Fill(blodlager)
-        Me.Cursor = Cursors.Default
 
+        'Kast gamle blodplater og blodlegemer - plasma kastes ikke
+        For Each rad In blodlager.Rows
+            If (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 35) And (rad("produkttypeid") = "1") Then
+                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 1", tilkobling)
+                sqlSpørring2.ExecuteNonQuery()
+            ElseIf (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 7) And (rad("produkttypeid") = "2") Then
+                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 2", tilkobling)
+                sqlSpørring2.ExecuteNonQuery()
+            End If
+        Next
+        tilkobling.Close()
+
+        'Tell opp gyldig beholdning
         For Each rad In blodlager.Rows
             If (rad("produkttypeid") = 1) And (rad("statusid") = 1) Then
                 If rad("blodtype") = "0+" Then
@@ -1066,7 +1081,58 @@ Public Class Blodbane
                 B_plasma = B_plasma + (rad("antall"))
             End If
         Next
-        tilkobling.Close()
+        oppdatBlodGraf(B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma)
+        oppdatBlodKritisk(B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma, kritiskNiva)
+        nudUttakB_plat.Maximum = B_plater
+        nudUttakB_plasm.Maximum = B_plasma
+        nudUttak0p.Maximum = B_legemer0p
+        nudUttak0m.Maximum = B_legemer0m
+        nudUttakAp.Maximum = B_legemerAp
+        nudUttakAm.Maximum = B_legemerAm
+        nudUttakABp.Maximum = B_legemerABp
+        nudUttakABm.Maximum = B_legemerABm
+        nudUttakBp.Maximum = B_legemerBp
+        nudUttakBm.Maximum = B_legemerBm
+        Me.Cursor = Cursors.Default
+    End Sub
+
+    'Fyll liste med kristisk blodnivå
+    Private Sub oppdatBlodKritisk(ByVal B_legemer0p As Integer, ByVal B_legemer0m As Integer, ByVal B_legemerAp As Integer, ByVal B_legemerAm As Integer, ByVal B_legemerABp As Integer, ByVal B_legemerABm As Integer, ByVal B_legemerBp As Integer, ByVal B_legemerBm As Integer, ByVal B_plater As Integer, ByVal B_plasma As Integer, ByRef kritiskNivå As Integer)
+        ListBoxKritiskBlod.Items.Clear()
+        If B_plasma < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Plasma - vi har {B_plasma} poser")
+        End If
+        If B_plater < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Blodplater - vi har {B_plater} poser")
+        End If
+        If B_legemer0p < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer 0+ vi har {B_legemer0p} poser")
+        End If
+        If B_legemer0m < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer 0- vi har {B_legemer0m} poser")
+        End If
+        If B_legemerAp < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer A+ vi har {B_legemerAp} poser")
+        End If
+        If B_legemerAm < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer A- vi har {B_legemerAm} poser")
+        End If
+        If B_legemerABp < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer AB+ vi har {B_legemerABp} poser")
+        End If
+        If B_legemerABm < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer AB- vi har {B_legemerABm} poser")
+        End If
+        If B_legemerBp < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer B+ vi har {B_legemerBp} poser")
+        End If
+        If B_legemerBm < kritiskNivå Then
+            ListBoxKritiskBlod.Items.Add($"Røde blodlegemer B- vi har {B_legemerBm} poser")
+        End If
+    End Sub
+
+    'Lag graf med blodlager
+    Private Sub oppdatBlodGraf(ByVal B_legemer0p As Integer, ByVal B_legemer0m As Integer, ByVal B_legemerAp As Integer, ByVal B_legemerAm As Integer, ByVal B_legemerABp As Integer, ByVal B_legemerABm As Integer, ByVal B_legemerBp As Integer, ByVal B_legemerBm As Integer, ByVal B_plater As Integer, ByVal B_plasma As Integer)
         ChartProdukt.Series("Blodposer").Points.Clear()
         ChartLegemer.Series("Blodlegemer").Points.Clear()
         ChartProdukt.Series("Blodposer").Points.AddXY("Plasma", B_plasma)
@@ -1104,8 +1170,8 @@ Public Class Blodbane
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
         tilkobling.Open()
 
-        Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) AS 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
-        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) As 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
+                Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         Dim rad1 As DataRow
@@ -1266,6 +1332,10 @@ Public Class Blodbane
     'Slår på knappen for å bekrefte nytt tidspunkt for neste time.
     Private Sub LBxLedigeTimer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LBxLedigeTimer.SelectedIndexChanged
         BtnBekreftEndretTime.Enabled = True
+    End Sub
+
+    Private Sub BttnRegUttakBlod_Click(sender As Object, e As EventArgs) Handles BttnRegUttakBlod.Click
+        MsgBox("Nå skal egentlig blod fjernes fra lager, men det er ikke programmert enda...")
     End Sub
 
     'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
