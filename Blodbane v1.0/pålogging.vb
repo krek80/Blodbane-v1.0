@@ -4,11 +4,11 @@
     Dim epost, passord, pålogget, påloggetEpost As String
     Dim riktigPålogging As Boolean = False
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAnsattPålogg.Click
 
         brukere = Blodbane.ansatt
-        epost = TextBox1.Text
-        passord = TextBox2.Text
+        epost = txtAnsattBrNavn.Text
+        passord = txtAnsattPassord.Text
         pålogget = ""
         påloggetEpost = ""
 
@@ -38,6 +38,6 @@
     End Sub
 
     Private Sub pålogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox1.Select()
+        txtAnsattBrNavn.Select()
     End Sub
 End Class
