@@ -18,6 +18,7 @@ Public Class Blodbane
     Dim blodgiveren As Blodgiver
     Dim bytteRomTime As Romtime
     Dim egenerklaeringObjekt As Egenerklaering
+    Dim ansattObjekt As Ansatt
     Dim fulltimetabell As New ArrayList()
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Dim dummyFodselsnr, aarstallet As String
@@ -109,6 +110,7 @@ Public Class Blodbane
         velkommen.ProgressBar1.Value = 60
         Timer1.Start()
         velkommen.ProgressBar1.Value = 100
+        txtAInn_epost.Select()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
