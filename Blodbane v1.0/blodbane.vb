@@ -805,6 +805,7 @@ Public Class Blodbane
             '   Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM egenerklaering", tilkobling)
             '  da.SelectCommand = sqlSpørring2
             ' da.Fill(egenerklaering)
+
         Catch
             MsgBox("Får ikke kontakt med databasen")
             Exit Sub
@@ -862,7 +863,7 @@ Public Class Blodbane
         lbxHKtrlJasvar.Items.Clear()
         index = lBxSøkResultater.SelectedIndex
         rad1 = giversøk.Select
-
+        MsgBox($"index: {index}")
         If IsDBNull(rad1(index)("blodtype")) Then
             rad1(index)("blodtype") = ""
         End If
@@ -1059,8 +1060,8 @@ Public Class Blodbane
         innkalling.Clear()
         da.SelectCommand = sqlSpørring
         da.Fill(innkalling)
-        ListBox4.Items.Clear()
-        ListBox5.Items.Clear()
+        lBxInnkallDagens.Items.Clear()
+        lBxInnkallIMorgen.Items.Clear()
         ListBox6.Items.Clear()
         Me.Cursor = Cursors.Default
         For Each rad In innkalling.Rows
@@ -1070,10 +1071,10 @@ Public Class Blodbane
             etg = rad("etasje")
             If dato = Today Then
                 dato = rad("datotid")
-                ListBox4.Items.Add($"{dato} - Rom:  {romnr} - Etg: {etg} - Giver: {epost}")
+                lBxInnkallDagens.Items.Add($"{dato} - Rom:  {romnr} - Etg: {etg} - Giver: {epost}")
             ElseIf dato = DateAdd(DateInterval.Day, 1, Today) Then
                 dato = rad("datotid")
-                ListBox5.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
+                lBxInnkallIMorgen.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
             ElseIf dato < Today Then
                 dato = rad("datotid")
                 ListBox6.Items.Add($"{dato} - Rom: {romnr} - Etg: {etg} - Giver: {epost}")
@@ -1751,7 +1752,6 @@ Public Class Blodbane
             '    Catch
             'MsgBox("Feil")
             'End Try
-            lBxSøkResultater.Items.Clear()
             bgSøk(bgSøkParameter)
             visBG()
         Else

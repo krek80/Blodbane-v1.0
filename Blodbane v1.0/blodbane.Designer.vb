@@ -213,9 +213,9 @@ Partial Class Blodbane
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.ListBox6 = New System.Windows.Forms.ListBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.ListBox5 = New System.Windows.Forms.ListBox()
+        Me.lBxInnkallIMorgen = New System.Windows.Forms.ListBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.lBxInnkallDagens = New System.Windows.Forms.ListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -1490,29 +1490,29 @@ Partial Class Blodbane
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.ListBox5)
+        Me.GroupBox6.Controls.Add(Me.lBxInnkallIMorgen)
         resources.ApplyResources(Me.GroupBox6, "GroupBox6")
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.TabStop = False
         '
-        'ListBox5
+        'lBxInnkallIMorgen
         '
-        Me.ListBox5.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox5, "ListBox5")
-        Me.ListBox5.Name = "ListBox5"
+        Me.lBxInnkallIMorgen.FormattingEnabled = True
+        resources.ApplyResources(Me.lBxInnkallIMorgen, "lBxInnkallIMorgen")
+        Me.lBxInnkallIMorgen.Name = "lBxInnkallIMorgen"
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.ListBox4)
+        Me.GroupBox5.Controls.Add(Me.lBxInnkallDagens)
         resources.ApplyResources(Me.GroupBox5, "GroupBox5")
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.TabStop = False
         '
-        'ListBox4
+        'lBxInnkallDagens
         '
-        Me.ListBox4.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox4, "ListBox4")
-        Me.ListBox4.Name = "ListBox4"
+        Me.lBxInnkallDagens.FormattingEnabled = True
+        resources.ApplyResources(Me.lBxInnkallDagens, "lBxInnkallDagens")
+        Me.lBxInnkallDagens.Name = "lBxInnkallDagens"
         '
         'TabPage2
         '
@@ -1755,9 +1755,9 @@ Partial Class Blodbane
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
+        Me.Controls.Add(Me.PanelPåmelding)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
@@ -1943,8 +1943,8 @@ Partial Class Blodbane
     Friend WithEvents txtValgtBlodgiverSistTappDager As TextBox
     Friend WithEvents Label120 As Label
     Friend WithEvents ListBox6 As ListBox
-    Friend WithEvents ListBox5 As ListBox
-    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents lBxInnkallIMorgen As ListBox
+    Friend WithEvents lBxInnkallDagens As ListBox
     Friend WithEvents GroupBox14 As GroupBox
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents Label19 As Label

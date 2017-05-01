@@ -244,6 +244,348 @@ Gi en gave for livet</value>
   <data name="TableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;txtBgInn_Land.Name" xml:space="preserve">
+    <value>txtBgInn_Land</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_Land.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_Land.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_Land.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label21.Name" xml:space="preserve">
+    <value>Label21</value>
+  </data>
+  <data name="&gt;&gt;Label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label21.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_fornavn.Name" xml:space="preserve">
+    <value>txtBgInn_fornavn</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_fornavn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_fornavn.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_fornavn.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_poststed.Name" xml:space="preserve">
+    <value>txtBgInn_poststed</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_poststed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_poststed.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_poststed.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_personnr.Name" xml:space="preserve">
+    <value>txtBgInn_personnr</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_personnr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_personnr.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_personnr.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_adresse.Name" xml:space="preserve">
+    <value>txtBgInn_adresse</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_adresse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_adresse.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_adresse.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_epost.Name" xml:space="preserve">
+    <value>txtBgInn_epost</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_epost.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_epost.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_epost.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr.Name" xml:space="preserve">
+    <value>txtBgInn_tlfnr</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_postnr.Name" xml:space="preserve">
+    <value>txtBgInn_postnr</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_postnr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_postnr.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_postnr.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Label114.Name" xml:space="preserve">
+    <value>Label114</value>
+  </data>
+  <data name="&gt;&gt;Label114.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label114.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label114.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr2.Name" xml:space="preserve">
+    <value>txtBgInn_tlfnr2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr2.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_tlfnr2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_etternavn.Name" xml:space="preserve">
+    <value>txtBgInn_etternavn</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_etternavn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_etternavn.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_etternavn.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
+    <value>Label13</value>
+  </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord2.Name" xml:space="preserve">
+    <value>txtBgInn_passord2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord2.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord2.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;Label113.Name" xml:space="preserve">
+    <value>Label113</value>
+  </data>
+  <data name="&gt;&gt;Label113.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label113.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label113.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Label89.Name" xml:space="preserve">
+    <value>Label89</value>
+  </data>
+  <data name="&gt;&gt;Label89.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label89.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Label89.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord1.Name" xml:space="preserve">
+    <value>txtBgInn_passord1</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord1.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtBgInn_passord1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;BtnRegBlodgiver.Name" xml:space="preserve">
+    <value>BtnRegBlodgiver</value>
+  </data>
+  <data name="&gt;&gt;BtnRegBlodgiver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnRegBlodgiver.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;BtnRegBlodgiver.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 166</value>
+  </data>
+  <data name="TableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>692, 722</value>
+  </data>
+  <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
+    <value>PanelPåmelding</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txtBgInn_Land" Row="9" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label21" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label7" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label6" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_fornavn" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_poststed" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_personnr" Row="3" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_adresse" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label8" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_epost" Row="8" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_tlfnr" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_postnr" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label114" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_tlfnr2" Row="7" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_etternavn" Row="2" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label9" Row="0" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="Label13" Row="12" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="txtBgInn_passord2" Row="11" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label113" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label89" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_passord1" Row="10" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="BtnRegBlodgiver" Row="12" RowSpan="1" Column="2" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,40,Percent,30,Percent,30" /&gt;&lt;Rows Styles="Percent,12,01441,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="txtBgInn_Land.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1103,36 +1445,6 @@ REGISTRER DEG HER</value>
   <data name="&gt;&gt;BtnRegBlodgiver.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 166</value>
-  </data>
-  <data name="TableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>692, 722</value>
-  </data>
-  <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
-    <value>PanelPåmelding</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txtBgInn_Land" Row="9" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label21" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label7" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label6" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_fornavn" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_poststed" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_personnr" Row="3" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_adresse" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label8" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_epost" Row="8" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_tlfnr" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_postnr" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label114" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_tlfnr2" Row="7" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_etternavn" Row="2" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label9" Row="0" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="Label13" Row="12" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="txtBgInn_passord2" Row="11" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label113" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label89" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_passord1" Row="10" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="BtnRegBlodgiver" Row="12" RowSpan="1" Column="2" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,40,Percent,30,Percent,30" /&gt;&lt;Rows Styles="Percent,12,01441,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="TableLayoutPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1471,7 +1783,7 @@ For registrerte givere</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PanelPåmelding.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="PanelGiver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1516,7 +1828,7 @@ For registrerte givere</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PanelGiver.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;TabPage5.Name" xml:space="preserve">
     <value>TabPage5</value>
@@ -4067,69 +4379,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="PanelAnsatt.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblVelkommen.Name" xml:space="preserve">
-    <value>lblVelkommen</value>
-  </data>
-  <data name="&gt;&gt;lblVelkommen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblVelkommen.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;lblVelkommen.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.Name" xml:space="preserve">
-    <value>BttnLoggavAnsatt</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="PanelAnsatt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 37</value>
-  </data>
-  <data name="PanelAnsatt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="PanelAnsatt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1867, 892</value>
-  </data>
-  <data name="PanelAnsatt.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="PanelAnsatt.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Name" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="lblVelkommen.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4192,69 +4441,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;BttnLoggavAnsatt.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
-    <value>TabPage1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 76</value>
-  </data>
-  <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1853, 812</value>
-  </data>
-  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;GroupBox12.Name" xml:space="preserve">
     <value>GroupBox12</value>
@@ -4333,6 +4519,294 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.Name" xml:space="preserve">
+    <value>ListBox6</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.Parent" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>869, 347</value>
+  </data>
+  <data name="GroupBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox7.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 311</value>
+  </data>
+  <data name="GroupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GroupBox7.Text" xml:space="preserve">
+    <value>Tidligere givere</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lBxInnkallIMorgen.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lBxInnkallIMorgen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 27</value>
+  </data>
+  <data name="lBxInnkallIMorgen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="lBxInnkallIMorgen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>828, 224</value>
+  </data>
+  <data name="lBxInnkallIMorgen.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.Name" xml:space="preserve">
+    <value>lBxInnkallIMorgen</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.Parent" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 347</value>
+  </data>
+  <data name="GroupBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 311</value>
+  </data>
+  <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GroupBox6.Text" xml:space="preserve">
+    <value>Innkallinger i morgen</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.Name" xml:space="preserve">
+    <value>lBxInnkallDagens</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.Parent" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 18</value>
+  </data>
+  <data name="GroupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 311</value>
+  </data>
+  <data name="GroupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupBox5.Text" xml:space="preserve">
+    <value>Dagens innkallinger</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="TabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1845, 779</value>
+  </data>
+  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Innkalling</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Name" xml:space="preserve">
+    <value>GroupBox8</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="TabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1845, 779</value>
+  </data>
+  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>Blodlager</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 76</value>
+  </data>
+  <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1853, 812</value>
+  </data>
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PanelAnsatt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 37</value>
+  </data>
+  <data name="PanelAnsatt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="PanelAnsatt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1867, 892</value>
+  </data>
+  <data name="PanelAnsatt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="PanelAnsatt.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Name" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;btnBlodgivingGjført.Name" xml:space="preserve">
     <value>btnBlodgivingGjført</value>
@@ -7166,111 +7640,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="TabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1845, 779</value>
-  </data>
-  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Innkalling</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.Name" xml:space="preserve">
-    <value>ListBox6</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.Parent" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>869, 347</value>
-  </data>
-  <data name="GroupBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GroupBox7.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GroupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>845, 311</value>
-  </data>
-  <data name="GroupBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GroupBox7.Text" xml:space="preserve">
-    <value>Tidligere givere</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="ListBox6.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
@@ -7298,209 +7667,32 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;ListBox6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ListBox5.Name" xml:space="preserve">
-    <value>ListBox5</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.Parent" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 347</value>
-  </data>
-  <data name="GroupBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GroupBox6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>845, 311</value>
-  </data>
-  <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GroupBox6.Text" xml:space="preserve">
-    <value>Innkallinger i morgen</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ListBox5.ItemHeight" type="System.Int32, mscorlib">
+  <data name="lBxInnkallDagens.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="ListBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 27</value>
-  </data>
-  <data name="ListBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="ListBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>828, 224</value>
-  </data>
-  <data name="ListBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.Name" xml:space="preserve">
-    <value>ListBox5</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.Parent" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;ListBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ListBox4.Name" xml:space="preserve">
-    <value>ListBox4</value>
-  </data>
-  <data name="&gt;&gt;ListBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox4.Parent" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;ListBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 18</value>
-  </data>
-  <data name="GroupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GroupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="GroupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>845, 311</value>
-  </data>
-  <data name="GroupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GroupBox5.Text" xml:space="preserve">
-    <value>Dagens innkallinger</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ListBox4.ItemHeight" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="ListBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lBxInnkallDagens.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 23</value>
   </data>
-  <data name="ListBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lBxInnkallDagens.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="ListBox4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lBxInnkallDagens.Size" type="System.Drawing.Size, System.Drawing">
     <value>828, 224</value>
   </data>
-  <data name="ListBox4.TabIndex" type="System.Int32, mscorlib">
+  <data name="lBxInnkallDagens.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ListBox4.Name" xml:space="preserve">
-    <value>ListBox4</value>
+  <data name="&gt;&gt;lBxInnkallDagens.Name" xml:space="preserve">
+    <value>lBxInnkallDagens</value>
   </data>
-  <data name="&gt;&gt;ListBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;lBxInnkallDagens.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ListBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lBxInnkallDagens.Parent" xml:space="preserve">
     <value>GroupBox5</value>
   </data>
-  <data name="&gt;&gt;ListBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lBxInnkallDagens.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Name" xml:space="preserve">
-    <value>GroupBox8</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="TabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1845, 779</value>
-  </data>
-  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>Blodlager</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;TextBox3.Name" xml:space="preserve">
     <value>TextBox3</value>
