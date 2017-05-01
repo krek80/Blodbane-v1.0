@@ -116,31 +116,6 @@ Public Class Blodbane
         Me.WindowState = FormWindowState.Normal
     End Sub
 
-    'Nullstiller objektene blodgiveren og bytteRomTime
-    Private Sub BlodgiverInit()
-
-        blodgiverObj.Fodselsnummer1 = ""
-        blodgiverObj.Blodtype1 = ""
-        blodgiverObj.Kontaktform1 = ""
-        blodgiverObj.Merknad1 = ""
-        blodgiverObj.Timepreferanse1 = ""
-        blodgiverObj.Siste_blodtapping1 = dummyDato
-        blodgiverObj.Epost1 = ""
-        blodgiverObj.Passord1 = ""
-        blodgiverObj.Fornavn1 = ""
-        blodgiverObj.Etternavn1 = ""
-        blodgiverObj.Adresse1 = ""
-        blodgiverObj.Telefon11 = ""
-        blodgiverObj.Telefon21 = ""
-        blodgiverObj.Postnr1 = ""
-        blodgiverObj.Status1 = ""
-
-        timeavtaleObj.Datotid1 = dummyDato
-        timeavtaleObj.Romnummer1 = ""
-        timeavtaleObj.Timenr1 = 0
-
-    End Sub
-
     'Avslutt program
     Private Sub AvsluttToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvsluttToolStripMenuItem.Click
         Me.Close()

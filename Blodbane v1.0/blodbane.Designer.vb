@@ -40,7 +40,7 @@ Partial Class Blodbane
         Me.LagreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBgInn_Land = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -351,7 +351,7 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.TableLayoutPanel2, "TableLayoutPanel2")
         Me.TableLayoutPanel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 9)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtBgInn_Land, 1, 9)
         Me.TableLayoutPanel2.Controls.Add(Me.Label21, 0, 9)
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 6)
         Me.TableLayoutPanel2.Controls.Add(Me.Label6, 0, 5)
@@ -379,11 +379,11 @@ Partial Class Blodbane
         Me.TableLayoutPanel2.Controls.Add(Me.BtnRegBlodgiver, 2, 12)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         '
-        'TextBox1
+        'txtBgInn_Land
         '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox1, 2)
-        Me.TextBox1.Name = "TextBox1"
+        resources.ApplyResources(Me.txtBgInn_Land, "txtBgInn_Land")
+        Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_Land, 2)
+        Me.txtBgInn_Land.Name = "txtBgInn_Land"
         '
         'Label21
         '
@@ -453,6 +453,7 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.txtBgInn_epost, "txtBgInn_epost")
         Me.TableLayoutPanel2.SetColumnSpan(Me.txtBgInn_epost, 2)
+        Me.txtBgInn_epost.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtBgInn_epost.Name = "txtBgInn_epost"
         '
         'txtBgInn_tlfnr
@@ -1754,9 +1755,9 @@ Partial Class Blodbane
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
-        Me.Controls.Add(Me.PanelPåmelding)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
@@ -2016,7 +2017,7 @@ Partial Class Blodbane
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ChartLegemer As DataVisualization.Charting.Chart
     Friend WithEvents ChartProdukt As DataVisualization.Charting.Chart
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtBgInn_Land As TextBox
     Friend WithEvents Label21 As Label
     Friend WithEvents txtValgtBlodgiverFødeland As TextBox
     Friend WithEvents Label23 As Label
