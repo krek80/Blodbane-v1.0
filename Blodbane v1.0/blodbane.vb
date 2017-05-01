@@ -1686,15 +1686,15 @@ Public Class Blodbane
         Dim da As New MySqlDataAdapter
 
         'Skal eventuelle endringer i skjemaet lagres?
-        If txtValgtBlodgiverAdresse.Text <> blodgiverObj.Adresse1 Or
-            txtValgtBlodgiverEpost.Text <> blodgiverObj.Epost1 Or
-                txtValgtBlodgiverPostnr.Text <> blodgiverObj.Postnr1 Or
-                txtValgtBlodgiverTelefon1.Text <> blodgiverObj.Telefon11 Or
-                txtValgtBlodgiverTelefon2.Text <> blodgiverObj.Telefon21 Or
-                cBxValgtBlodgiverStatusTekst.Text <> blodgiverObj.Status1 Or
-                rTxtValgBlodgiverTimepref.Text <> blodgiverObj.Timepreferanse1 Or
-                rTxtValgtBlodgiverInternMrknd.Text <> blodgiverObj.Merknad1 Then
-            If bgRegSkjemadata_OK(blodgiverObj.Fornavn1, blodgiverObj.Etternavn1, dummyFodselsnr,
+        'If txtValgtBlodgiverAdresse.Text <> blodgiverObj.Adresse1 Or
+        'txtValgtBlodgiverEpost.Text <> blodgiverObj.Epost1 Or
+        'txtValgtBlodgiverPostnr.Text <> blodgiverObj.Postnr1 Or
+        'txtValgtBlodgiverTelefon1.Text <> blodgiverObj.Telefon11 Or
+        'txtValgtBlodgiverTelefon2.Text <> blodgiverObj.Telefon21 Or
+        'cBxValgtBlodgiverStatusTekst.Text <> blodgiverObj.Status1 Or
+        'rTxtValgBlodgiverTimepref.Text <> blodgiverObj.Timepreferanse1 Or
+        'rTxtValgtBlodgiverInternMrknd.Text <> blodgiverObj.Merknad1 Then
+        If bgRegSkjemadata_OK(blodgiverObj.Fornavn1, blodgiverObj.Etternavn1, dummyFodselsnr,
                            postnummer(blodgiverObj.Postnr1), blodgiverObj.Telefon11, blodgiverObj.Telefon21,
                            dummyEpost, blodgiverObj.Passord1, blodgiverObj.Passord1, blodgiverObj.Kontaktform1) Then
 
@@ -1713,27 +1713,27 @@ Public Class Blodbane
                     End If
                 End If
 
-                i = lBxSøkResultater.SelectedIndex
-                epost = txtValgtBlodgiverEpost.Text
-                tlf1 = txtValgtBlodgiverTelefon1.Text
-                tlf2 = txtValgtBlodgiverTelefon2.Text
-                adresse = txtValgtBlodgiverAdresse.Text
-                postnr = txtValgtBlodgiverPostnr.Text
-                status = txtValgtBlodgiverStatusKode.Text
-                preferanse = rTxtValgBlodgiverTimepref.Text
-                merknad = rTxtValgtBlodgiverInternMrknd.Text
-                kommentar = rTxtHKtrlKommentar.Text
+                'i = lBxSøkResultater.SelectedIndex
+                epost = blodgiverObj.Epost1
+                'tlf1 = txtValgtBlodgiverTelefon1.Text
+                'tlf2 = txtValgtBlodgiverTelefon2.Text
+                'adresse = txtValgtBlodgiverAdresse.Text
+                'postnr = txtValgtBlodgiverPostnr.Text
+                'status = txtValgtBlodgiverStatusKode.Text
+                'preferanse = rTxtValgBlodgiverTimepref.Text
+                'merknad = rTxtValgtBlodgiverInternMrknd.Text
+                'kommentar = rTxtHKtrlKommentar.Text
 
-                BlodgiverObjOppdat(dummyEpost, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
+                BlodgiverObjOppdat(txtValgtBlodgiverEpost.Text, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
                                    blodgiverObj.Etternavn1, txtValgtBlodgiverAdresse.Text,
                                    txtValgtBlodgiverPostnr.Text, txtValgtBlodgiverTelefon1.Text,
                                    txtValgtBlodgiverTelefon2.Text, txtValgtBlodgiverStatusKode.Text,
-                                   dummyFodselsnr, blodgiverObj.Blodtype1,
+                                   blodgiverObj.Fodselsnummer1, blodgiverObj.Blodtype1,
                                    blodgiverObj.Siste_blodtapping1, blodgiverObj.Kontaktform1,
                                    rTxtValgtBlodgiverInternMrknd.Text, rTxtValgBlodgiverTimepref.Text)
                 EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Now.ToString("yyyy.MM.dd HH:mm.ss"), egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
-                spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt= '{Now.ToString("yyyy.MM.dd HH:mm.ss")}', kommentar= '{rTxtHKtrlKommentar.Text}' WHERE id= '{egenerklaeringObj.Id1}'"
-                spørring2 = $"UPDATE bruker SET epost= '{epost}', telefon1= '{tlf1}', telefon2= '{tlf2}', adresse= '{adresse}', postnr= '{postnr}', statuskode= '{status}' WHERE epost= '{presentertGiver}'"
+                spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt= '{egenerklaeringObj.DatotidAnsatt1}', kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
+                spørring2 = $"UPDATE bruker SET epost= '{blodgiverObj.Epost1}', telefon1= '{blodgiverObj.Telefon11}', telefon2= '{blodgiverObj.Telefon21}', adresse= '{blodgiverObj.Adresse1}', postnr= '{blodgiverObj.Postnr1}', statuskode= '{txtValgtBlodgiverStatusKode}' WHERE epost= '{epost}'"
                 Try
                     tilkobling.Open()
                     If GroupBoxIntervju.Visible = True Then
@@ -1752,7 +1752,7 @@ Public Class Blodbane
             Else
                 MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
             End If
-        End If
+        ' End If
     End Sub
 
 

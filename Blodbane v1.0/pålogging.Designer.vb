@@ -36,7 +36,7 @@ Partial Class pålogging
         Me.btnAnsattPålogg.Location = New System.Drawing.Point(36, 197)
         Me.btnAnsattPålogg.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAnsattPålogg.Name = "btnAnsattPålogg"
-        Me.btnAnsattPålogg.Size = New System.Drawing.Size(311, 58)
+        Me.btnAnsattPålogg.Size = New System.Drawing.Size(374, 58)
         Me.btnAnsattPålogg.TabIndex = 0
         Me.btnAnsattPålogg.Text = "LOGG PÅ"
         Me.btnAnsattPålogg.UseVisualStyleBackColor = True
@@ -47,7 +47,7 @@ Partial Class pålogging
         Me.txtAnsattBrNavn.Location = New System.Drawing.Point(152, 121)
         Me.txtAnsattBrNavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAnsattBrNavn.Name = "txtAnsattBrNavn"
-        Me.txtAnsattBrNavn.Size = New System.Drawing.Size(195, 27)
+        Me.txtAnsattBrNavn.Size = New System.Drawing.Size(258, 27)
         Me.txtAnsattBrNavn.TabIndex = 1
         '
         'txtAnsattPassord
@@ -56,7 +56,7 @@ Partial Class pålogging
         Me.txtAnsattPassord.Location = New System.Drawing.Point(152, 154)
         Me.txtAnsattPassord.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAnsattPassord.Name = "txtAnsattPassord"
-        Me.txtAnsattPassord.Size = New System.Drawing.Size(195, 27)
+        Me.txtAnsattPassord.Size = New System.Drawing.Size(258, 27)
         Me.txtAnsattPassord.TabIndex = 2
         Me.txtAnsattPassord.UseSystemPasswordChar = True
         '
@@ -98,7 +98,7 @@ Partial Class pålogging
         Me.AcceptButton = Me.btnAnsattPålogg
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(379, 292)
+        Me.ClientSize = New System.Drawing.Size(445, 292)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
