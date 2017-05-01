@@ -7,6 +7,7 @@ Public Class Blodbane
     Dim innkalling As New DataTable
     Dim blodlager As New DataTable
     Public ansatt As New DataTable
+    Public statuser As New DataTable
     Dim Erklæringspørsmål As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
@@ -15,10 +16,10 @@ Public Class Blodbane
     Dim rommene As New ArrayList
     Dim interntabellRom As New DataTable
     Dim antallRom As Integer
-    Dim blodgiveren As Blodgiver
-    Dim bytteRomTime As Romtime
-    Dim egenerklaeringObjekt As Egenerklaering
-    Dim ansattObjekt As Ansatt
+    Dim blodgiveren As Blodgiver = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
+    Dim bytteRomTime As Romtime = New Romtime(dummyDato, "", 0)
+    Dim egenerklaeringObjekt As Egenerklaering = New Egenerklaering(-1, dummyEpost, dummyEpost, "", "", dummyDato, dummyDato)
+    Public ansattObjekt As Ansatt = New Ansatt(0, "", "", "", "", "", "", "", "", "")
     Dim fulltimetabell As New ArrayList()
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Dim dummyFodselsnr, aarstallet As String
@@ -35,7 +36,6 @@ Public Class Blodbane
 
         velkommen.ProgressBar1.Value = 0
         'Henter statuskoder og legger i combobox(er)
-        Dim statuser As New DataTable
         Dim steder As New DataTable
         Dim da As New MySqlDataAdapter
         Dim rad As DataRow
@@ -57,9 +57,6 @@ Public Class Blodbane
         Next
 
         velkommen.ProgressBar1.Value = 10
-        blodgiveren = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
-        bytteRomTime = New Romtime(dummyDato, "", 0)
-        egenerklaeringObjekt = New Egenerklaering(-1, dummyEpost, dummyEpost, "", "", dummyDato, dummyDato)
         If Today.Month < 10 Then
             sifre = $"0{Today.Month}"
         Else
@@ -91,7 +88,7 @@ Public Class Blodbane
 
         velkommen.ProgressBar1.Value = 40
         'Henter ansatte og legger i datatable
-        Dim sqlSpørring3 As New MySqlCommand("SELECT a.epost, b.passord, b.fornavn FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
+        Dim sqlSpørring3 As New MySqlCommand("SELECT * FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
         da.SelectCommand = sqlSpørring3
         da.Fill(ansatt)
         For Each rad In ansatt.Rows
@@ -336,6 +333,36 @@ Public Class Blodbane
             blodgiveren.Timepreferanse1 = timepreferanse
         End If
 
+    End Sub
+
+    'Oppdaterer ansattObjekt
+    Public Sub AnsattObjOppdater(ByVal ansattnummer As Integer, ByVal epost As String, ByVal passord As String,
+                                  ByVal fornavn As String, ByVal etternavn As String,
+                                  ByVal adresse As String, ByVal postnr As String,
+                                  ByVal telefon1 As String, ByVal telefon2 As String,
+                                  ByVal statuskode As Integer)
+
+        Dim sqlSporring1 As String = $"SELECT beskrivelse FROM personstatus WHERE kode ={statuskode}"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+        Me.Cursor = Cursors.Default
+        If interntabell1.Rows.Count = 1 Then
+            Dim rad1() As DataRow = interntabell1.Select
+            ansattObjekt.Ansattnummer1 = ansattnummer
+            ansattObjekt.Epost1 = epost
+            ansattObjekt.Passord1 = passord
+            ansattObjekt.Fornavn1 = fornavn
+            ansattObjekt.Etternavn1 = etternavn
+            ansattObjekt.Adresse1 = adresse
+            ansattObjekt.Postnr1 = postnr
+            ansattObjekt.Telefon11 = telefon1
+            ansattObjekt.Telefon21 = telefon2
+            ansattObjekt.Status1 = rad1(0)("beskrivelse")
+        End If
     End Sub
 
     'Registrer ny blodgiver
@@ -678,6 +705,11 @@ Public Class Blodbane
         txtBgInn_tlfnr2.Text = ""
         txtAInn_epost.Text = ""
         txtAInn_passord.Text = ""
+        'BlodgiverObjOppdat("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
+        'Dim bytteRomTime As Romtime = New Romtime(dummyDato, "", 0)
+        'Dim egenerklaeringObjekt As Egenerklaering = New Egenerklaering(-1, dummyEpost, dummyEpost, "", "", dummyDato, dummyDato)
+        'Public ansattObjekt As Ansatt = New Ansatt(0, "", "", "", "", "", "", "", "", "")
+
     End Sub
 
     'Blodgiversøk knapp
@@ -767,7 +799,7 @@ Public Class Blodbane
         utput.text = personstatusB(kode)
     End Sub
 
-    'Endring av statusbeskrvelse - henter statuskode
+    'Endring av statusbeskirvelse - henter statuskode
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBxSøkStatusbeskrivelse.SelectedIndexChanged
         Try
             statuskode(cBxSøkStatusbeskrivelse.SelectedItem, txtSøkStatuskode, cBxSøkStatusbeskrivelse)
