@@ -759,7 +759,7 @@ Public Class Blodbane
             Exit Sub
         End If
         If (personnummer <> "") And (statuskode = 0) And (blodtype = "") Then
-            bgSøkParameter = $" bl.fødselsnummer = '{personnummer}'"
+            bgSøkParameter = $" bl.fodselsnummer = '{personnummer}'"
         ElseIf (statuskode > 0) And (personnummer = "") And (blodtype = "") Then
             bgSøkParameter = $" br.statuskode = '{statuskode}'"
         ElseIf (blodtype <> "") And (statuskode = 0) And (personnummer = "") Then
@@ -769,6 +769,7 @@ Public Class Blodbane
         ElseIf (personnummer <> "") And (statuskode > 0) And (blodtype <> "") Then
             bgSøkParameter = $" bl.blodtype = '{blodtype}' and br.statuskde = '{statuskode}' and bl.fødselsnummer = '{personnummer}'"
         End If
+        MsgBox($"bgSøkParameter er: {bgSøkParameter}.")
         bgSøk(bgSøkParameter)
         Me.Cursor = Cursors.Default
         giverSøkTreff()
@@ -1731,11 +1732,11 @@ Public Class Blodbane
                                    blodgiverObj.Fodselsnummer1, blodgiverObj.Blodtype1,
                                    blodgiverObj.Siste_blodtapping1, blodgiverObj.Kontaktform1,
                                    rTxtValgtBlodgiverInternMrknd.Text, rTxtValgBlodgiverTimepref.Text)
-                EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Now.ToString("yyyy.MM.dd HH:mm.ss"), egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
-                spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt= '{egenerklaeringObj.DatotidAnsatt1}', kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
+            EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Now, egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
+            spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt= '{egenerklaeringObj.DatotidAnsatt1}', kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
                 spørring2 = $"UPDATE bruker SET epost= '{blodgiverObj.Epost1}', telefon1= '{blodgiverObj.Telefon11}', telefon2= '{blodgiverObj.Telefon21}', adresse= '{blodgiverObj.Adresse1}', postnr= '{blodgiverObj.Postnr1}', statuskode= '{txtValgtBlodgiverStatusKode}' WHERE epost= '{epost}'"
-                Try
-                    tilkobling.Open()
+            'Try
+            tilkobling.Open()
                     If GroupBoxIntervju.Visible = True Then
                         Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
                         sqlSpørring.ExecuteNonQuery()
@@ -1744,10 +1745,10 @@ Public Class Blodbane
                     Dim sqlSpørring2 As New MySqlCommand($"{spørring2}", tilkobling)
                     sqlSpørring2.ExecuteNonQuery()
                     tilkobling.Close()
-                Catch
-                    MsgBox("Feil")
-                End Try
-                bgSøk(bgSøkParameter)
+            '    Catch
+            'MsgBox("Feil")
+            'End Try
+            bgSøk(bgSøkParameter)
                 visBG()
             Else
                 MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
