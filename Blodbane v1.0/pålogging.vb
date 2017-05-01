@@ -17,17 +17,8 @@
                 riktigPålogging = True
                 pålogget = rad("fornavn")
                 påloggetEpost = rad("epost")
-                Blodbane.ansattObjekt.Ansattnummer1 = rad("ansattnummer")
-                Blodbane.ansattObjekt.Epost1 = rad("epost")
-                Blodbane.ansattObjekt.Passord1 = rad("passord")
-                Blodbane.ansattObjekt.Fornavn1 = rad("fornavn")
-                Blodbane.ansattObjekt.Etternavn1 = rad("etternavn")
-                Blodbane.ansattObjekt.Adresse1 = rad("adresse")
-                Blodbane.ansattObjekt.Postnr1 = rad("postnr")
-                Blodbane.ansattObjekt.Telefon11 = rad("telefon1")
-                Blodbane.ansattObjekt.Telefon21 = rad("telefon2")
-                Blodbane.ansattObjekt.Status1 = rad("beskrivelse")
 
+                Blodbane.AnsattObjOppdat(rad("ansattnummer"), rad("epost"), rad("passord"), rad("fornavn"), rad("etternavn"), rad("adresse"), rad("postnr"), rad("telefon1"), rad("telefon2"), rad("statuskode"))
                 Blodbane.PanelAnsatt.BringToFront()
                 Blodbane.PanelAnsatt.Show()
                 Blodbane.PanelGiver.Hide()
