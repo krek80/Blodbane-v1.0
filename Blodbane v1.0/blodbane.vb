@@ -732,10 +732,10 @@ Public Class Blodbane
         txtAInn_passord.Text = ""
         pålogging.txtAnsattBrNavn.Text = ""
         pålogging.txtAnsattPassord.Text = ""
-        BlodgiverObjOppdat("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", 0)
-        TimeavtaleObjOppdat(-1, dummyDato, -1)
-        EgenerklæringsObjOppdat(-1, dummyEpost, dummyEpost, "", "", dummyDato, dummyDato)
-        AnsattObjOppdat(0, "", "", "", "", "", "", "", "", "")
+        BlodgiverObjOppdat("", "", "", "", "", "", "", "", 0, "", "", dummyDato, "", "", "")
+        TimeavtaleObjOppdat(0, dummyDato, "")
+        EgenerklæringsObjOppdat(0, "", "", dummyDato, dummyDato, "", "")
+        AnsattObjOppdat(0, "", "", "", "", "", "", "", "", 0)
 
     End Sub
 
@@ -769,7 +769,6 @@ Public Class Blodbane
         ElseIf (personnummer <> "") And (statuskode > 0) And (blodtype <> "") Then
             bgSøkParameter = $" bl.blodtype = '{blodtype}' and br.statuskde = '{statuskode}' and bl.fødselsnummer = '{personnummer}'"
         End If
-        MsgBox($"bgSøkParameter er: {bgSøkParameter}.")
         bgSøk(bgSøkParameter)
         Me.Cursor = Cursors.Default
         giverSøkTreff()
@@ -791,6 +790,27 @@ Public Class Blodbane
         Next
         If lBxSøkResultater.Items.Count > 0 Then
             lBxSøkResultater.SetSelected(0, True)
+        Else 'Tømmer skjemaene med info om blodgiver
+            txtValgtBlodgiverNavn.Text = ""
+            txtValgtBlodgiverPersnr.Text = ""
+            txtValgtBlodgiverEpost.Text = ""
+            txtValgtBlodgiverTelefon1.Text = ""
+            txtValgtBlodgiverTelefon2.Text = ""
+            txtValgtBlodgiverAdresse.Text = ""
+            txtValgtBlodgiverPostnr.Text = ""
+            txtValgtBlodgiverStatusKode.Text = ""
+            cBxValgtBlodgiverStatusTekst.Text = ""
+            rTxtValgBlodgiverTimepref.Text = ""
+            rTxtValgtBlodgiverInternMrknd.Text = ""
+            txtValgtBlodgiverSistTappDato.Text = ""
+            txtValgtBlodgiverSistTappDager.Text = ""
+            txtHKtrlSisteEgenerkl.Text = ""
+            rTxtHKtrlKommentar.Text = ""
+            txtHKtrlGjennomgAv.Text = ""
+            txtHKtrlEKDatoGjennomg.Text = ""
+            lbxHKtrlJasvar.Items.Clear()
+            lBxSøkResultater.Items.Add("Ingen blodgivere passet med søkekriteriene.")
+
         End If
     End Sub
 
@@ -946,7 +966,7 @@ Public Class Blodbane
 
             EgenerklæringsObjOppdat(rad2(0)("id"), rad2(0)("bgepost"), rad2(0)("ansattepost"),
                                     rad2(0)("datotidbg"), rad2(0)("datotidansatt"),
-                                    rad2(0)("skjema"), rad2(0)("datotidansatt"))
+                                    rad2(0)("skjema"), rad2(0)("kommentar"))
         End If
         'jasvar = rad1(index)("skjema")
         'egenerklæringID = rad1(index)("id")
@@ -984,6 +1004,7 @@ Public Class Blodbane
             txtValgtBlodgiverSistTappDato.Text = blodgiverObj.Siste_blodtapping1
             txtValgtBlodgiverSistTappDager.Text = $"{dager} dager"
             txtHKtrlSisteEgenerkl.Text = egenerklaeringObj.DatotidBG1
+            rTxtHKtrlKommentar.Text = egenerklaeringObj.Kommentar1
             If egenerklaeringObj.AnsattEpost1 <> dummyEpost Then
                 txtHKtrlGjennomgAv.Text = egenerklaeringObj.AnsattEpost1
                 txtHKtrlEKDatoGjennomg.Text = egenerklaeringObj.DatotidAnsatt1
@@ -1683,7 +1704,8 @@ Public Class Blodbane
     'Lagre intervju og eventuelle endringer i blodgiver
     Private Sub LagreIntervjuInfo_Click(sender As Object, e As EventArgs) Handles btnHKtrlIntProfGjgått.Click
         Dim epost, adresse, preferanse, merknad, kommentar, spørring, spørring2 As String
-        Dim tlf1, tlf2, postnr, status, i, svar As Integer
+        Dim tlf1, tlf2, postnr, i, svar As Integer
+        Dim statuskode As Integer = 0
         Dim da As New MySqlDataAdapter
 
         'Skal eventuelle endringer i skjemaet lagres?
@@ -1699,60 +1721,67 @@ Public Class Blodbane
                            postnummer(blodgiverObj.Postnr1), blodgiverObj.Telefon11, blodgiverObj.Telefon21,
                            dummyEpost, blodgiverObj.Passord1, blodgiverObj.Passord1, blodgiverObj.Kontaktform1) Then
 
-                'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
-                If rBtnHKtrlIkkeGodkjent.Checked = True Then
-                    svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
-                    If svar = 7 Then
-                        Exit Sub
-                    Else
-
-                    End If
-                ElseIf rBtnHKtrlGodkjent.Checked = True Then
-                    svar = MsgBox("Er du sikker på at du vil godkjenne giveren?", MsgBoxStyle.YesNo)
-                    If svar = 7 Then
-                        Exit Sub
-                    End If
+            'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
+            If rBtnHKtrlIkkeGodkjent.Checked = True Then
+                svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
+                If svar = 7 Then
+                    Exit Sub
+                Else
+                    statuskode = 98
                 End If
+            ElseIf rBtnHKtrlGodkjent.Checked = True Then
+                svar = MsgBox("Er du sikker på at du vil godkjenne giveren?", MsgBoxStyle.YesNo)
+                If svar = 7 Then
+                    Exit Sub
+                Else
+                    statuskode = 35
+                End If
+            Else
+                'statuskode = txtValgtBlodgiverStatusKode.Text
+            End If
 
-                'i = lBxSøkResultater.SelectedIndex
-                epost = blodgiverObj.Epost1
-                'tlf1 = txtValgtBlodgiverTelefon1.Text
-                'tlf2 = txtValgtBlodgiverTelefon2.Text
-                'adresse = txtValgtBlodgiverAdresse.Text
-                'postnr = txtValgtBlodgiverPostnr.Text
-                'status = txtValgtBlodgiverStatusKode.Text
-                'preferanse = rTxtValgBlodgiverTimepref.Text
-                'merknad = rTxtValgtBlodgiverInternMrknd.Text
-                'kommentar = rTxtHKtrlKommentar.Text
-
-                BlodgiverObjOppdat(txtValgtBlodgiverEpost.Text, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
+            'i = lBxSøkResultater.SelectedIndex
+            epost = blodgiverObj.Epost1        '...for å holde på opprinnelig epost som trengs i WHERE-klausul lenger ned
+            'tlf1 = txtValgtBlodgiverTelefon1.Text
+            'tlf2 = txtValgtBlodgiverTelefon2.Text
+            'adresse = txtValgtBlodgiverAdresse.Text
+            'postnr = txtValgtBlodgiverPostnr.Text
+            'status = txtValgtBlodgiverStatusKode.Text
+            'preferanse = rTxtValgBlodgiverTimepref.Text
+            'merknad = rTxtValgtBlodgiverInternMrknd.Text
+            'kommentar = rTxtHKtrlKommentar.Text
+            'Oppdaterer tabell blodgiver og blodgiverobjektet først
+            OppdaterBlodgiver(txtValgtBlodgiverEpost.Text, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
                                    blodgiverObj.Etternavn1, txtValgtBlodgiverAdresse.Text,
                                    txtValgtBlodgiverPostnr.Text, txtValgtBlodgiverTelefon1.Text,
-                                   txtValgtBlodgiverTelefon2.Text, txtValgtBlodgiverStatusKode.Text,
+                                   txtValgtBlodgiverTelefon2.Text, statuskode,
                                    blodgiverObj.Fodselsnummer1, blodgiverObj.Blodtype1,
                                    blodgiverObj.Siste_blodtapping1, blodgiverObj.Kontaktform1,
                                    rTxtValgtBlodgiverInternMrknd.Text, rTxtValgBlodgiverTimepref.Text)
-            EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Now, egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
-            spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt= '{egenerklaeringObj.DatotidAnsatt1}', kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
-                spørring2 = $"UPDATE bruker SET epost= '{blodgiverObj.Epost1}', telefon1= '{blodgiverObj.Telefon11}', telefon2= '{blodgiverObj.Telefon21}', adresse= '{blodgiverObj.Adresse1}', postnr= '{blodgiverObj.Postnr1}', statuskode= '{txtValgtBlodgiverStatusKode}' WHERE epost= '{epost}'"
+
+            'Oppdaterer egenerklæringsobjektet deretter med evt ny epostadresse fra blodgiverobjektet
+            EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Date.Now, egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
+
+            spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt=@datoen, kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
             'Try
             tilkobling.Open()
-                    If GroupBoxIntervju.Visible = True Then
-                        Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
-                        sqlSpørring.ExecuteNonQuery()
-                    End If
+            'Oppdaterer tabellen egenerklaering
+            If GroupBoxIntervju.Visible = True Then
+                Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
+                sqlSpørring.Parameters.Add("datoen", MySqlDbType.DateTime).Value = egenerklaeringObj.DatotidAnsatt1
+                sqlSpørring.ExecuteNonQuery()
+            End If
 
-                    Dim sqlSpørring2 As New MySqlCommand($"{spørring2}", tilkobling)
-                    sqlSpørring2.ExecuteNonQuery()
-                    tilkobling.Close()
+            tilkobling.Close()
             '    Catch
             'MsgBox("Feil")
             'End Try
+            lBxSøkResultater.Items.Clear()
             bgSøk(bgSøkParameter)
-                visBG()
-            Else
-                MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
-            End If
+            visBG()
+        Else
+            MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
+        End If
         ' End If
     End Sub
 

@@ -181,7 +181,7 @@ Partial Class Blodbane
         Me.Label103 = New System.Windows.Forms.Label()
         Me.txtValgtBlodgiverNavn = New System.Windows.Forms.TextBox()
         Me.Label102 = New System.Windows.Forms.Label()
-        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.gpBxHelseKontroll = New System.Windows.Forms.GroupBox()
         Me.btnHKtrlIntProfGjgått = New System.Windows.Forms.Button()
         Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
         Me.rBtnHKtrlIkkeGodkjent = New System.Windows.Forms.RadioButton()
@@ -271,7 +271,7 @@ Partial Class Blodbane
         CType(Me.nudResPlasma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudResBlodplater, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpBxValgtBlodgiver.SuspendLayout()
-        Me.GroupBox10.SuspendLayout()
+        Me.gpBxHelseKontroll.SuspendLayout()
         Me.GroupBoxIntervju.SuspendLayout()
         Me.GpBxSøk.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -1016,7 +1016,7 @@ Partial Class Blodbane
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage1.Controls.Add(Me.GroupBox12)
         Me.TabPage1.Controls.Add(Me.gpBxValgtBlodgiver)
-        Me.TabPage1.Controls.Add(Me.GroupBox10)
+        Me.TabPage1.Controls.Add(Me.gpBxHelseKontroll)
         Me.TabPage1.Controls.Add(Me.GpBxSøk)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
@@ -1279,21 +1279,21 @@ Partial Class Blodbane
         resources.ApplyResources(Me.Label102, "Label102")
         Me.Label102.Name = "Label102"
         '
-        'GroupBox10
+        'gpBxHelseKontroll
         '
-        Me.GroupBox10.Controls.Add(Me.btnHKtrlIntProfGjgått)
-        Me.GroupBox10.Controls.Add(Me.GroupBoxIntervju)
-        Me.GroupBox10.Controls.Add(Me.txtHKtrlEKDatoGjennomg)
-        Me.GroupBox10.Controls.Add(Me.Label101)
-        Me.GroupBox10.Controls.Add(Me.txtHKtrlGjennomgAv)
-        Me.GroupBox10.Controls.Add(Me.Label97)
-        Me.GroupBox10.Controls.Add(Me.lbxHKtrlJasvar)
-        Me.GroupBox10.Controls.Add(Me.Label111)
-        Me.GroupBox10.Controls.Add(Me.txtHKtrlSisteEgenerkl)
-        Me.GroupBox10.Controls.Add(Me.Label100)
-        resources.ApplyResources(Me.GroupBox10, "GroupBox10")
-        Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.TabStop = False
+        Me.gpBxHelseKontroll.Controls.Add(Me.btnHKtrlIntProfGjgått)
+        Me.gpBxHelseKontroll.Controls.Add(Me.GroupBoxIntervju)
+        Me.gpBxHelseKontroll.Controls.Add(Me.txtHKtrlEKDatoGjennomg)
+        Me.gpBxHelseKontroll.Controls.Add(Me.Label101)
+        Me.gpBxHelseKontroll.Controls.Add(Me.txtHKtrlGjennomgAv)
+        Me.gpBxHelseKontroll.Controls.Add(Me.Label97)
+        Me.gpBxHelseKontroll.Controls.Add(Me.lbxHKtrlJasvar)
+        Me.gpBxHelseKontroll.Controls.Add(Me.Label111)
+        Me.gpBxHelseKontroll.Controls.Add(Me.txtHKtrlSisteEgenerkl)
+        Me.gpBxHelseKontroll.Controls.Add(Me.Label100)
+        resources.ApplyResources(Me.gpBxHelseKontroll, "gpBxHelseKontroll")
+        Me.gpBxHelseKontroll.Name = "gpBxHelseKontroll"
+        Me.gpBxHelseKontroll.TabStop = False
         '
         'btnHKtrlIntProfGjgått
         '
@@ -1792,8 +1792,8 @@ Partial Class Blodbane
         CType(Me.nudResBlodplater, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gpBxValgtBlodgiver.ResumeLayout(False)
         Me.gpBxValgtBlodgiver.PerformLayout()
-        Me.GroupBox10.ResumeLayout(False)
-        Me.GroupBox10.PerformLayout()
+        Me.gpBxHelseKontroll.ResumeLayout(False)
+        Me.gpBxHelseKontroll.PerformLayout()
         Me.GroupBoxIntervju.ResumeLayout(False)
         Me.GroupBoxIntervju.PerformLayout()
         Me.GpBxSøk.ResumeLayout(False)
@@ -1924,7 +1924,7 @@ Partial Class Blodbane
     Friend WithEvents Label103 As Label
     Friend WithEvents txtValgtBlodgiverNavn As TextBox
     Friend WithEvents Label102 As Label
-    Friend WithEvents GroupBox10 As GroupBox
+    Friend WithEvents gpBxHelseKontroll As GroupBox
     Friend WithEvents lbxHKtrlJasvar As ListBox
     Friend WithEvents Label111 As Label
     Friend WithEvents txtHKtrlSisteEgenerkl As TextBox
