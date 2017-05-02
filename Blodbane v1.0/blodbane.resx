@@ -2262,7 +2262,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="GroupBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>810, 51</value>
+    <value>796, 47</value>
   </data>
   <data name="GroupBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>344, 338</value>
@@ -4112,6 +4112,66 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="PanelAnsatt.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;lblVelkommen.Name" xml:space="preserve">
+    <value>lblVelkommen</value>
+  </data>
+  <data name="&gt;&gt;lblVelkommen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVelkommen.Parent" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;lblVelkommen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BttnLoggavAnsatt.Name" xml:space="preserve">
+    <value>BttnLoggavAnsatt</value>
+  </data>
+  <data name="&gt;&gt;BttnLoggavAnsatt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BttnLoggavAnsatt.Parent" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;BttnLoggavAnsatt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PanelAnsatt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 30</value>
+  </data>
+  <data name="PanelAnsatt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1400, 725</value>
+  </data>
+  <data name="PanelAnsatt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="PanelAnsatt.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Name" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lblVelkommen.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4168,6 +4228,141 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;BttnLoggavAnsatt.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 62</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1390, 660</value>
+  </data>
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.Name" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gpBxValgtBlodgiver.Name" xml:space="preserve">
+    <value>gpBxValgtBlodgiver</value>
+  </data>
+  <data name="&gt;&gt;gpBxValgtBlodgiver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gpBxValgtBlodgiver.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;gpBxValgtBlodgiver.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.Name" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.Name" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="TabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 630</value>
+  </data>
+  <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>Giveradministrasjon</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;btnBlodgivingGjført.Name" xml:space="preserve">
     <value>btnBlodgivingGjført</value>
@@ -4336,6 +4531,315 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;GroupBox12.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="btnBlodgivingGjført.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 176</value>
+  </data>
+  <data name="btnBlodgivingGjført.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 36</value>
+  </data>
+  <data name="btnBlodgivingGjført.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnBlodgivingGjført.Text" xml:space="preserve">
+    <value>Blodgiving gjennomført!</value>
+  </data>
+  <data name="&gt;&gt;btnBlodgivingGjført.Name" xml:space="preserve">
+    <value>btnBlodgivingGjført</value>
+  </data>
+  <data name="&gt;&gt;btnBlodgivingGjført.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBlodgivingGjført.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;btnBlodgivingGjført.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label141.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label141.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label141.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 132</value>
+  </data>
+  <data name="Label141.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="Label141.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Label141.Text" xml:space="preserve">
+    <value>poser</value>
+  </data>
+  <data name="&gt;&gt;Label141.Name" xml:space="preserve">
+    <value>Label141</value>
+  </data>
+  <data name="&gt;&gt;Label141.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label141.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label141.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nudResRødeBlodl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 127</value>
+  </data>
+  <data name="nudResRødeBlodl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="nudResRødeBlodl.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;nudResRødeBlodl.Name" xml:space="preserve">
+    <value>nudResRødeBlodl</value>
+  </data>
+  <data name="&gt;&gt;nudResRødeBlodl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudResRødeBlodl.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;nudResRødeBlodl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label140.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label140.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label140.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 106</value>
+  </data>
+  <data name="Label140.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="Label140.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Label140.Text" xml:space="preserve">
+    <value>poser</value>
+  </data>
+  <data name="&gt;&gt;Label140.Name" xml:space="preserve">
+    <value>Label140</value>
+  </data>
+  <data name="&gt;&gt;Label140.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label140.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label140.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="nudResPlasma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 101</value>
+  </data>
+  <data name="nudResPlasma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="nudResPlasma.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;nudResPlasma.Name" xml:space="preserve">
+    <value>nudResPlasma</value>
+  </data>
+  <data name="&gt;&gt;nudResPlasma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudResPlasma.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;nudResPlasma.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label139.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label139.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 81</value>
+  </data>
+  <data name="Label139.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="Label139.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label139.Text" xml:space="preserve">
+    <value>poser</value>
+  </data>
+  <data name="&gt;&gt;Label139.Name" xml:space="preserve">
+    <value>Label139</value>
+  </data>
+  <data name="&gt;&gt;Label139.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label139.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label139.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="nudResBlodplater.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 76</value>
+  </data>
+  <data name="nudResBlodplater.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="nudResBlodplater.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;nudResBlodplater.Name" xml:space="preserve">
+    <value>nudResBlodplater</value>
+  </data>
+  <data name="&gt;&gt;nudResBlodplater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudResBlodplater.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;nudResBlodplater.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Label138.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label138.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label138.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 132</value>
+  </data>
+  <data name="Label138.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 17</value>
+  </data>
+  <data name="Label138.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Label138.Text" xml:space="preserve">
+    <value>Røde blodlegmer</value>
+  </data>
+  <data name="&gt;&gt;Label138.Name" xml:space="preserve">
+    <value>Label138</value>
+  </data>
+  <data name="&gt;&gt;Label138.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label138.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label138.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Label137.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label137.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label137.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 106</value>
+  </data>
+  <data name="Label137.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="Label137.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label137.Text" xml:space="preserve">
+    <value>Plasma</value>
+  </data>
+  <data name="&gt;&gt;Label137.Name" xml:space="preserve">
+    <value>Label137</value>
+  </data>
+  <data name="&gt;&gt;Label137.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label137.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label137.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Label116.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label116.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 80</value>
+  </data>
+  <data name="Label116.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="Label116.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Label116.Text" xml:space="preserve">
+    <value>Blodplater</value>
+  </data>
+  <data name="&gt;&gt;Label116.Name" xml:space="preserve">
+    <value>Label116</value>
+  </data>
+  <data name="&gt;&gt;Label116.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label116.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label116.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbxAnsattUtførtTapping.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 31</value>
+  </data>
+  <data name="cbxAnsattUtførtTapping.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 25</value>
+  </data>
+  <data name="cbxAnsattUtførtTapping.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbxAnsattUtførtTapping.Name" xml:space="preserve">
+    <value>cbxAnsattUtførtTapping</value>
+  </data>
+  <data name="&gt;&gt;cbxAnsattUtførtTapping.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxAnsattUtførtTapping.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;cbxAnsattUtførtTapping.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Label115.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label115.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="Label115.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="Label115.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label115.Text" xml:space="preserve">
+    <value>Blod tappet av</value>
+  </data>
+  <data name="&gt;&gt;Label115.Name" xml:space="preserve">
+    <value>Label115</value>
+  </data>
+  <data name="&gt;&gt;Label115.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label115.Parent" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;Label115.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;txtValgtBlodgiverFødeland.Name" xml:space="preserve">
     <value>txtValgtBlodgiverFødeland</value>
@@ -4684,1011 +5188,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;gpBxValgtBlodgiver.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnHKtrlIntProfGjgått.Name" xml:space="preserve">
-    <value>btnHKtrlIntProfGjgått</value>
-  </data>
-  <data name="&gt;&gt;btnHKtrlIntProfGjgått.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnHKtrlIntProfGjgått.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;btnHKtrlIntProfGjgått.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxIntervju.Name" xml:space="preserve">
-    <value>GroupBoxIntervju</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxIntervju.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxIntervju.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxIntervju.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.Name" xml:space="preserve">
-    <value>txtHKtrlEKDatoGjennomg</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label101.Name" xml:space="preserve">
-    <value>Label101</value>
-  </data>
-  <data name="&gt;&gt;Label101.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label101.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;Label101.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlGjennomgAv.Name" xml:space="preserve">
-    <value>txtHKtrlGjennomgAv</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlGjennomgAv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlGjennomgAv.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlGjennomgAv.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label97.Name" xml:space="preserve">
-    <value>Label97</value>
-  </data>
-  <data name="&gt;&gt;Label97.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label97.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;Label97.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lbxHKtrlJasvar.Name" xml:space="preserve">
-    <value>lbxHKtrlJasvar</value>
-  </data>
-  <data name="&gt;&gt;lbxHKtrlJasvar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbxHKtrlJasvar.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;lbxHKtrlJasvar.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;Label111.Name" xml:space="preserve">
-    <value>Label111</value>
-  </data>
-  <data name="&gt;&gt;Label111.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label111.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;Label111.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.Name" xml:space="preserve">
-    <value>txtHKtrlSisteEgenerkl</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;Label100.Name" xml:space="preserve">
-    <value>Label100</value>
-  </data>
-  <data name="&gt;&gt;Label100.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label100.Parent" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;Label100.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="gpBxHelseKontroll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 166</value>
-  </data>
-  <data name="gpBxHelseKontroll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>532, 433</value>
-  </data>
-  <data name="gpBxHelseKontroll.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gpBxHelseKontroll.Text" xml:space="preserve">
-    <value>Helsekontroll</value>
-  </data>
-  <data name="&gt;&gt;gpBxHelseKontroll.Name" xml:space="preserve">
-    <value>gpBxHelseKontroll</value>
-  </data>
-  <data name="&gt;&gt;gpBxHelseKontroll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gpBxHelseKontroll.Parent" xml:space="preserve">
-    <value>TabPage1</value>
-  </data>
-  <data name="&gt;&gt;gpBxHelseKontroll.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnSøkTømSkjema.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 50</value>
-  </data>
-  <data name="btnSøkTømSkjema.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 28</value>
-  </data>
-  <data name="btnSøkTømSkjema.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="btnSøkTømSkjema.Text" xml:space="preserve">
-    <value>Tøm søkeskjema</value>
-  </data>
-  <data name="&gt;&gt;btnSøkTømSkjema.Name" xml:space="preserve">
-    <value>btnSøkTømSkjema</value>
-  </data>
-  <data name="&gt;&gt;btnSøkTømSkjema.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSøkTømSkjema.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;btnSøkTømSkjema.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtSøkStatuskode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 53</value>
-  </data>
-  <data name="txtSøkStatuskode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
-  </data>
-  <data name="txtSøkStatuskode.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="txtSøkStatuskode.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;txtSøkStatuskode.Name" xml:space="preserve">
-    <value>txtSøkStatuskode</value>
-  </data>
-  <data name="&gt;&gt;txtSøkStatuskode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtSøkStatuskode.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;txtSøkStatuskode.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items" xml:space="preserve">
-    <value>A+</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items1" xml:space="preserve">
-    <value>A-</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items2" xml:space="preserve">
-    <value>B+</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items3" xml:space="preserve">
-    <value>B-</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items4" xml:space="preserve">
-    <value>O+</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items5" xml:space="preserve">
-    <value>O-</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items6" xml:space="preserve">
-    <value>AB+</value>
-  </data>
-  <data name="cBxSøkBlodtype.Items7" xml:space="preserve">
-    <value>AB-</value>
-  </data>
-  <data name="cBxSøkBlodtype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 24</value>
-  </data>
-  <data name="cBxSøkBlodtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 25</value>
-  </data>
-  <data name="cBxSøkBlodtype.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkBlodtype.Name" xml:space="preserve">
-    <value>cBxSøkBlodtype</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkBlodtype.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkBlodtype.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkBlodtype.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label119.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label119.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label119.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 27</value>
-  </data>
-  <data name="Label119.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
-  </data>
-  <data name="Label119.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Label119.Text" xml:space="preserve">
-    <value>Blodtype</value>
-  </data>
-  <data name="&gt;&gt;Label119.Name" xml:space="preserve">
-    <value>Label119</value>
-  </data>
-  <data name="&gt;&gt;Label119.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label119.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;Label119.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="BttnSøkGiver.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16.2pt</value>
-  </data>
-  <data name="BttnSøkGiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 86</value>
-  </data>
-  <data name="BttnSøkGiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>542, 49</value>
-  </data>
-  <data name="BttnSøkGiver.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="BttnSøkGiver.Text" xml:space="preserve">
-    <value>Søk etter blodgiver</value>
-  </data>
-  <data name="&gt;&gt;BttnSøkGiver.Name" xml:space="preserve">
-    <value>BttnSøkGiver</value>
-  </data>
-  <data name="&gt;&gt;BttnSøkGiver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BttnSøkGiver.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;BttnSøkGiver.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items" xml:space="preserve">
-    <value>Registrert</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items1" xml:space="preserve">
-    <value>Innkalt undersøkelse</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items2" xml:space="preserve">
-    <value>Godkjent giver</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items3" xml:space="preserve">
-    <value>Innkalt tapping</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items4" xml:space="preserve">
-    <value>Egenerklæring utfylt</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items5" xml:space="preserve">
-    <value>Klar for tapping</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items6" xml:space="preserve">
-    <value>Karantene</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items7" xml:space="preserve">
-    <value>Innaktiv giver</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Items8" xml:space="preserve">
-    <value>Ikke godkjent giver</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 51</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 25</value>
-  </data>
-  <data name="cBxSøkStatusbeskrivelse.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Name" xml:space="preserve">
-    <value>cBxSøkStatusbeskrivelse</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Label99.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label99.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 54</value>
-  </data>
-  <data name="Label99.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
-  </data>
-  <data name="Label99.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="Label99.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="&gt;&gt;Label99.Name" xml:space="preserve">
-    <value>Label99</value>
-  </data>
-  <data name="&gt;&gt;Label99.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label99.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;Label99.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Label98.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label98.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label98.Location" type="System.Drawing.Point, System.Drawing">
-    <value>554, 10</value>
-  </data>
-  <data name="Label98.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
-  </data>
-  <data name="Label98.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="Label98.Text" xml:space="preserve">
-    <value>Resultater</value>
-  </data>
-  <data name="&gt;&gt;Label98.Name" xml:space="preserve">
-    <value>Label98</value>
-  </data>
-  <data name="&gt;&gt;Label98.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label98.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lBxSøkResultater.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="lBxSøkResultater.Location" type="System.Drawing.Point, System.Drawing">
-    <value>557, 26</value>
-  </data>
-  <data name="lBxSøkResultater.Size" type="System.Drawing.Size, System.Drawing">
-    <value>801, 55</value>
-  </data>
-  <data name="lBxSøkResultater.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lBxSøkResultater.Name" xml:space="preserve">
-    <value>lBxSøkResultater</value>
-  </data>
-  <data name="&gt;&gt;lBxSøkResultater.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lBxSøkResultater.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;lBxSøkResultater.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txtSøk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 24</value>
-  </data>
-  <data name="txtSøk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 23</value>
-  </data>
-  <data name="txtSøk.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtSøk.Name" xml:space="preserve">
-    <value>txtSøk</value>
-  </data>
-  <data name="&gt;&gt;txtSøk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtSøk.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;txtSøk.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="Label27.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 27</value>
-  </data>
-  <data name="Label27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 17</value>
-  </data>
-  <data name="Label27.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Label27.Text" xml:space="preserve">
-    <value>Personnummer</value>
-  </data>
-  <data name="&gt;&gt;Label27.Name" xml:space="preserve">
-    <value>Label27</value>
-  </data>
-  <data name="&gt;&gt;Label27.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label27.Parent" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="GpBxSøk.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="GpBxSøk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 15</value>
-  </data>
-  <data name="GpBxSøk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1364, 145</value>
-  </data>
-  <data name="GpBxSøk.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GpBxSøk.Text" xml:space="preserve">
-    <value>Søk frem giver</value>
-  </data>
-  <data name="&gt;&gt;GpBxSøk.Name" xml:space="preserve">
-    <value>GpBxSøk</value>
-  </data>
-  <data name="&gt;&gt;GpBxSøk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GpBxSøk.Parent" xml:space="preserve">
-    <value>TabPage1</value>
-  </data>
-  <data name="&gt;&gt;GpBxSøk.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="TabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1382, 630</value>
-  </data>
-  <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>Giveradministrasjon</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
-    <value>TabPage1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1382, 630</value>
-  </data>
-  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Innkalling</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Name" xml:space="preserve">
-    <value>GroupBox8</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1382, 630</value>
-  </data>
-  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>Blodlager</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 62</value>
-  </data>
-  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1390, 660</value>
-  </data>
-  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="PanelAnsatt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
-  </data>
-  <data name="PanelAnsatt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1400, 725</value>
-  </data>
-  <data name="PanelAnsatt.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="PanelAnsatt.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Name" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnBlodgivingGjført.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 176</value>
-  </data>
-  <data name="btnBlodgivingGjført.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 36</value>
-  </data>
-  <data name="btnBlodgivingGjført.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="btnBlodgivingGjført.Text" xml:space="preserve">
-    <value>Blodgiving gjennomført!</value>
-  </data>
-  <data name="&gt;&gt;btnBlodgivingGjført.Name" xml:space="preserve">
-    <value>btnBlodgivingGjført</value>
-  </data>
-  <data name="&gt;&gt;btnBlodgivingGjført.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBlodgivingGjført.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;btnBlodgivingGjført.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Label141.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label141.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label141.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 132</value>
-  </data>
-  <data name="Label141.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
-  </data>
-  <data name="Label141.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="Label141.Text" xml:space="preserve">
-    <value>poser</value>
-  </data>
-  <data name="&gt;&gt;Label141.Name" xml:space="preserve">
-    <value>Label141</value>
-  </data>
-  <data name="&gt;&gt;Label141.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label141.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label141.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="nudResRødeBlodl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 127</value>
-  </data>
-  <data name="nudResRødeBlodl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
-  </data>
-  <data name="nudResRødeBlodl.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;nudResRødeBlodl.Name" xml:space="preserve">
-    <value>nudResRødeBlodl</value>
-  </data>
-  <data name="&gt;&gt;nudResRødeBlodl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudResRødeBlodl.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;nudResRødeBlodl.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label140.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label140.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label140.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 106</value>
-  </data>
-  <data name="Label140.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
-  </data>
-  <data name="Label140.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="Label140.Text" xml:space="preserve">
-    <value>poser</value>
-  </data>
-  <data name="&gt;&gt;Label140.Name" xml:space="preserve">
-    <value>Label140</value>
-  </data>
-  <data name="&gt;&gt;Label140.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label140.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label140.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="nudResPlasma.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 101</value>
-  </data>
-  <data name="nudResPlasma.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
-  </data>
-  <data name="nudResPlasma.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;nudResPlasma.Name" xml:space="preserve">
-    <value>nudResPlasma</value>
-  </data>
-  <data name="&gt;&gt;nudResPlasma.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudResPlasma.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;nudResPlasma.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Label139.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label139.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 81</value>
-  </data>
-  <data name="Label139.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
-  </data>
-  <data name="Label139.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Label139.Text" xml:space="preserve">
-    <value>poser</value>
-  </data>
-  <data name="&gt;&gt;Label139.Name" xml:space="preserve">
-    <value>Label139</value>
-  </data>
-  <data name="&gt;&gt;Label139.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label139.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label139.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="nudResBlodplater.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 76</value>
-  </data>
-  <data name="nudResBlodplater.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
-  </data>
-  <data name="nudResBlodplater.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;nudResBlodplater.Name" xml:space="preserve">
-    <value>nudResBlodplater</value>
-  </data>
-  <data name="&gt;&gt;nudResBlodplater.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudResBlodplater.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;nudResBlodplater.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Label138.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label138.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label138.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 132</value>
-  </data>
-  <data name="Label138.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 17</value>
-  </data>
-  <data name="Label138.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Label138.Text" xml:space="preserve">
-    <value>Røde blodlegmer</value>
-  </data>
-  <data name="&gt;&gt;Label138.Name" xml:space="preserve">
-    <value>Label138</value>
-  </data>
-  <data name="&gt;&gt;Label138.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label138.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label138.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="Label137.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label137.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label137.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 106</value>
-  </data>
-  <data name="Label137.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
-  </data>
-  <data name="Label137.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Label137.Text" xml:space="preserve">
-    <value>Plasma</value>
-  </data>
-  <data name="&gt;&gt;Label137.Name" xml:space="preserve">
-    <value>Label137</value>
-  </data>
-  <data name="&gt;&gt;Label137.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label137.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label137.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="Label116.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label116.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 80</value>
-  </data>
-  <data name="Label116.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
-  </data>
-  <data name="Label116.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Label116.Text" xml:space="preserve">
-    <value>Blodplater</value>
-  </data>
-  <data name="&gt;&gt;Label116.Name" xml:space="preserve">
-    <value>Label116</value>
-  </data>
-  <data name="&gt;&gt;Label116.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label116.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label116.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="cbxAnsattUtførtTapping.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 31</value>
-  </data>
-  <data name="cbxAnsattUtførtTapping.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 25</value>
-  </data>
-  <data name="cbxAnsattUtførtTapping.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbxAnsattUtførtTapping.Name" xml:space="preserve">
-    <value>cbxAnsattUtførtTapping</value>
-  </data>
-  <data name="&gt;&gt;cbxAnsattUtførtTapping.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxAnsattUtførtTapping.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;cbxAnsattUtførtTapping.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="Label115.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label115.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
-  </data>
-  <data name="Label115.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
-  </data>
-  <data name="Label115.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Label115.Text" xml:space="preserve">
-    <value>Blod tappet av</value>
-  </data>
-  <data name="&gt;&gt;Label115.Name" xml:space="preserve">
-    <value>Label115</value>
-  </data>
-  <data name="&gt;&gt;Label115.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label115.Parent" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;Label115.ZOrder" xml:space="preserve">
-    <value>11</value>
   </data>
   <data name="txtValgtBlodgiverFødeland.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6386,6 +5885,150 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;Label102.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="&gt;&gt;btnHKtrlIntProfGjgått.Name" xml:space="preserve">
+    <value>btnHKtrlIntProfGjgått</value>
+  </data>
+  <data name="&gt;&gt;btnHKtrlIntProfGjgått.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHKtrlIntProfGjgått.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;btnHKtrlIntProfGjgått.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxIntervju.Name" xml:space="preserve">
+    <value>GroupBoxIntervju</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxIntervju.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxIntervju.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxIntervju.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.Name" xml:space="preserve">
+    <value>txtHKtrlEKDatoGjennomg</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlEKDatoGjennomg.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label101.Name" xml:space="preserve">
+    <value>Label101</value>
+  </data>
+  <data name="&gt;&gt;Label101.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label101.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;Label101.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlGjennomgAv.Name" xml:space="preserve">
+    <value>txtHKtrlGjennomgAv</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlGjennomgAv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlGjennomgAv.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlGjennomgAv.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label97.Name" xml:space="preserve">
+    <value>Label97</value>
+  </data>
+  <data name="&gt;&gt;Label97.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label97.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;Label97.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbxHKtrlJasvar.Name" xml:space="preserve">
+    <value>lbxHKtrlJasvar</value>
+  </data>
+  <data name="&gt;&gt;lbxHKtrlJasvar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbxHKtrlJasvar.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;lbxHKtrlJasvar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label111.Name" xml:space="preserve">
+    <value>Label111</value>
+  </data>
+  <data name="&gt;&gt;Label111.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label111.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;Label111.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.Name" xml:space="preserve">
+    <value>txtHKtrlSisteEgenerkl</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;txtHKtrlSisteEgenerkl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Label100.Name" xml:space="preserve">
+    <value>Label100</value>
+  </data>
+  <data name="&gt;&gt;Label100.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label100.Parent" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;Label100.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="gpBxHelseKontroll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 166</value>
+  </data>
+  <data name="gpBxHelseKontroll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 433</value>
+  </data>
+  <data name="gpBxHelseKontroll.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gpBxHelseKontroll.Text" xml:space="preserve">
+    <value>Helsekontroll</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.Name" xml:space="preserve">
+    <value>gpBxHelseKontroll</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;gpBxHelseKontroll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnHKtrlIntProfGjgått.Location" type="System.Drawing.Point, System.Drawing">
     <value>236, 395</value>
   </data>
@@ -6854,6 +6497,564 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;Label100.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.Name" xml:space="preserve">
+    <value>btnSøkTømSkjema</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.Name" xml:space="preserve">
+    <value>txtSøkStatuskode</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.Name" xml:space="preserve">
+    <value>cBxSøkBlodtype</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label119.Name" xml:space="preserve">
+    <value>Label119</value>
+  </data>
+  <data name="&gt;&gt;Label119.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label119.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label119.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.Name" xml:space="preserve">
+    <value>BttnSøkGiver</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Name" xml:space="preserve">
+    <value>cBxSøkStatusbeskrivelse</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label99.Name" xml:space="preserve">
+    <value>Label99</value>
+  </data>
+  <data name="&gt;&gt;Label99.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label99.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label99.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label98.Name" xml:space="preserve">
+    <value>Label98</value>
+  </data>
+  <data name="&gt;&gt;Label98.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label98.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.Name" xml:space="preserve">
+    <value>lBxSøkResultater</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.Name" xml:space="preserve">
+    <value>txtSøk</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;Label27.Name" xml:space="preserve">
+    <value>Label27</value>
+  </data>
+  <data name="&gt;&gt;Label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label27.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="GpBxSøk.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="GpBxSøk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 15</value>
+  </data>
+  <data name="GpBxSøk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1364, 145</value>
+  </data>
+  <data name="GpBxSøk.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GpBxSøk.Text" xml:space="preserve">
+    <value>Søk frem giver</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.Name" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;GpBxSøk.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnSøkTømSkjema.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 50</value>
+  </data>
+  <data name="btnSøkTømSkjema.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 28</value>
+  </data>
+  <data name="btnSøkTømSkjema.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnSøkTømSkjema.Text" xml:space="preserve">
+    <value>Tøm søkeskjema</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.Name" xml:space="preserve">
+    <value>btnSøkTømSkjema</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;btnSøkTømSkjema.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtSøkStatuskode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 53</value>
+  </data>
+  <data name="txtSøkStatuskode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="txtSøkStatuskode.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="txtSøkStatuskode.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.Name" xml:space="preserve">
+    <value>txtSøkStatuskode</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;txtSøkStatuskode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items" xml:space="preserve">
+    <value>A+</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items1" xml:space="preserve">
+    <value>A-</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items2" xml:space="preserve">
+    <value>B+</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items3" xml:space="preserve">
+    <value>B-</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items4" xml:space="preserve">
+    <value>O+</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items5" xml:space="preserve">
+    <value>O-</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items6" xml:space="preserve">
+    <value>AB+</value>
+  </data>
+  <data name="cBxSøkBlodtype.Items7" xml:space="preserve">
+    <value>AB-</value>
+  </data>
+  <data name="cBxSøkBlodtype.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 24</value>
+  </data>
+  <data name="cBxSøkBlodtype.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 25</value>
+  </data>
+  <data name="cBxSøkBlodtype.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.Name" xml:space="preserve">
+    <value>cBxSøkBlodtype</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkBlodtype.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label119.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label119.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label119.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 27</value>
+  </data>
+  <data name="Label119.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="Label119.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Label119.Text" xml:space="preserve">
+    <value>Blodtype</value>
+  </data>
+  <data name="&gt;&gt;Label119.Name" xml:space="preserve">
+    <value>Label119</value>
+  </data>
+  <data name="&gt;&gt;Label119.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label119.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label119.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BttnSøkGiver.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16.2pt</value>
+  </data>
+  <data name="BttnSøkGiver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 86</value>
+  </data>
+  <data name="BttnSøkGiver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>542, 49</value>
+  </data>
+  <data name="BttnSøkGiver.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="BttnSøkGiver.Text" xml:space="preserve">
+    <value>Søk etter blodgiver</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.Name" xml:space="preserve">
+    <value>BttnSøkGiver</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;BttnSøkGiver.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items" xml:space="preserve">
+    <value>Registrert</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items1" xml:space="preserve">
+    <value>Innkalt undersøkelse</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items2" xml:space="preserve">
+    <value>Godkjent giver</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items3" xml:space="preserve">
+    <value>Innkalt tapping</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items4" xml:space="preserve">
+    <value>Egenerklæring utfylt</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items5" xml:space="preserve">
+    <value>Klar for tapping</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items6" xml:space="preserve">
+    <value>Karantene</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items7" xml:space="preserve">
+    <value>Innaktiv giver</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Items8" xml:space="preserve">
+    <value>Ikke godkjent giver</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 51</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 25</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Name" xml:space="preserve">
+    <value>cBxSøkStatusbeskrivelse</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;cBxSøkStatusbeskrivelse.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label99.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label99.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 54</value>
+  </data>
+  <data name="Label99.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="Label99.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Label99.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="&gt;&gt;Label99.Name" xml:space="preserve">
+    <value>Label99</value>
+  </data>
+  <data name="&gt;&gt;Label99.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label99.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label99.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Label98.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label98.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label98.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 10</value>
+  </data>
+  <data name="Label98.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="Label98.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Label98.Text" xml:space="preserve">
+    <value>Resultater</value>
+  </data>
+  <data name="&gt;&gt;Label98.Name" xml:space="preserve">
+    <value>Label98</value>
+  </data>
+  <data name="&gt;&gt;Label98.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label98.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lBxSøkResultater.ItemHeight" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lBxSøkResultater.Location" type="System.Drawing.Point, System.Drawing">
+    <value>557, 26</value>
+  </data>
+  <data name="lBxSøkResultater.Size" type="System.Drawing.Size, System.Drawing">
+    <value>801, 55</value>
+  </data>
+  <data name="lBxSøkResultater.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.Name" xml:space="preserve">
+    <value>lBxSøkResultater</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;lBxSøkResultater.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtSøk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="txtSøk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 23</value>
+  </data>
+  <data name="txtSøk.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.Name" xml:space="preserve">
+    <value>txtSøk</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;txtSøk.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="Label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 17</value>
+  </data>
+  <data name="Label27.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label27.Text" xml:space="preserve">
+    <value>Personnummer</value>
+  </data>
+  <data name="&gt;&gt;Label27.Name" xml:space="preserve">
+    <value>Label27</value>
+  </data>
+  <data name="&gt;&gt;Label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label27.Parent" xml:space="preserve">
+    <value>GpBxSøk</value>
+  </data>
+  <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 630</value>
+  </data>
+  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Innkalling</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;ListBox6.Name" xml:space="preserve">
     <value>ListBox6</value>
   </data>
@@ -6888,7 +7089,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="ListBox6.ItemHeight" type="System.Int32, mscorlib">
     <value>17</value>
@@ -6948,7 +7149,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lBxInnkallIMorgen.ItemHeight" type="System.Int32, mscorlib">
     <value>17</value>
@@ -7008,7 +7209,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lBxInnkallDagens.ItemHeight" type="System.Int32, mscorlib">
     <value>17</value>
@@ -7033,6 +7234,69 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;lBxInnkallDagens.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Name" xml:space="preserve">
+    <value>GroupBox8</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 630</value>
+  </data>
+  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>Blodlager</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;TextBox3.Name" xml:space="preserve">
     <value>TextBox3</value>
@@ -8201,6 +8465,465 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>231, 17</value>
   </metadata>
+  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
+    <value>Label40</value>
+  </data>
+  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.Name" xml:space="preserve">
+    <value>RichTextBox2</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
+    <value>Button2</value>
+  </data>
+  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
+    <value>TextBox1</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label43.Name" xml:space="preserve">
+    <value>Label43</value>
+  </data>
+  <data name="&gt;&gt;Label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label43.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Label43.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GroupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 15</value>
+  </data>
+  <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>448, 612</value>
+  </data>
+  <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="GroupBox3.Text" xml:space="preserve">
+    <value>Timer</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label40.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label40.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 50</value>
+  </data>
+  <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 17</value>
+  </data>
+  <data name="Label40.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Label40.Text" xml:space="preserve">
+    <value>Preferanser vedr. innkalling</value>
+  </data>
+  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
+    <value>Label40</value>
+  </data>
+  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RichTextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 72</value>
+  </data>
+  <data name="RichTextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 102</value>
+  </data>
+  <data name="RichTextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RichTextBox2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RichTextBox2.Name" xml:space="preserve">
+    <value>RichTextBox2</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label41.Name" xml:space="preserve">
+    <value>Label41</value>
+  </data>
+  <data name="&gt;&gt;Label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label41.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label41.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.Name" xml:space="preserve">
+    <value>DateTimePicker1</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label42.Name" xml:space="preserve">
+    <value>Label42</value>
+  </data>
+  <data name="&gt;&gt;Label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label42.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label42.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.Name" xml:space="preserve">
+    <value>ListBox1</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 232</value>
+  </data>
+  <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 356</value>
+  </data>
+  <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GroupBox4.Text" xml:space="preserve">
+    <value>Ny innkallingstime</value>
+  </data>
+  <data name="GroupBox4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label41.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 29</value>
+  </data>
+  <data name="Label41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 17</value>
+  </data>
+  <data name="Label41.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label41.Text" xml:space="preserve">
+    <value>Velg dato, og klikk på ønsket ledig time</value>
+  </data>
+  <data name="&gt;&gt;Label41.Name" xml:space="preserve">
+    <value>Label41</value>
+  </data>
+  <data name="&gt;&gt;Label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label41.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label41.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 56</value>
+  </data>
+  <data name="DateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 23</value>
+  </data>
+  <data name="DateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.Name" xml:space="preserve">
+    <value>DateTimePicker1</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 304</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 30</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>Bekreft endret time</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label42.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="Label42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="Label42.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Label42.Text" xml:space="preserve">
+    <value>Ledige timer:</value>
+  </data>
+  <data name="&gt;&gt;Label42.Name" xml:space="preserve">
+    <value>Label42</value>
+  </data>
+  <data name="&gt;&gt;Label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label42.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label42.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListBox1.ItemHeight" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="ListBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 110</value>
+  </data>
+  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 123</value>
+  </data>
+  <data name="ListBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.Name" xml:space="preserve">
+    <value>ListBox1</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="Button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 185</value>
+  </data>
+  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>333, 31</value>
+  </data>
+  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Button2.Text" xml:space="preserve">
+    <value>Endre innkallingstime</value>
+  </data>
+  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
+    <value>Button2</value>
+  </data>
+  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TextBox1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 20</value>
+  </data>
+  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 23</value>
+  </data>
+  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
+    <value>TextBox1</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label43.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="Label43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 17</value>
+  </data>
+  <data name="Label43.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label43.Text" xml:space="preserve">
+    <value>Din neste innkalling:</value>
+  </data>
+  <data name="&gt;&gt;Label43.Name" xml:space="preserve">
+    <value>Label43</value>
+  </data>
+  <data name="&gt;&gt;Label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label43.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;Label43.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -8224,6 +8947,544 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1413, 759</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA
+        IAAoQgAA/joAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAHQSAAB0EgAAAAAAAAAAAAD/////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////z8+//Nzdf/3d3p////////////////////////////////////
+        //////////////////////////////X18/+oqLn/KCp+/25vq//+/v7/////////////////////////
+        /////////////////////////////+jo5/+Li6X/Gxx9/wAAj/8fIZD/1dXl////////////////////
+        /////////////////////////f39/9vb2/9zc5f/EBF//wABmv8ABaz/AAOn/2hptf/5+fv/////////
+        /////////////////////////f39/9TU1P9oaZP/CwyC/wACnf8ABrP/AAfC/wAHy/8KD7P/mZvP////
+        /////////////////////////v7+/9fX1v9yc5f/DA6G/wACl/8ABbD/AAfG/wAJ2P8ACuD/AAjd/xUb
+        uf+vsNr//////////////////////+rq6f+SkqL/Gx2O/wABlP8ABKP/AAe//wAJ2P8AC+b/AAzr/wQQ
+        6/8rNOP/Ki+4/8DB4P/////////////////Ly8r/VliR/wADmv8AA5f/AAWt/wAIy/8ACuL/AA3t/wAO
+        8v8ADvH/WGDy/2lu4P88P6//5OTw///////7+/v/urq5/0BCjv8AAZz/AAOY/wAGtP8ACdL/AAvn/wAO
+        8f8AEPn/AA32/zA68P++wPf/LzK2/5mZxv//////+/v7/76+vP9KS4r/AAGX/wADmv8ABrb/AAjU/wMN
+        5/8ADvH/ABD4/wAO9P8SHuz/oaXz/zQ4vP90dbD////////////Z2df/dHWR/wcIh/8AApn/AAWz/xUc
+        0/83QOv/AQ7t/wAO8f8ADe7/BhHn/zxC3v8MEan/hYa0////////////+fn4/9DQ0v9WV5b/AAGI/wMG
+        rP9gZdj/QkjV/wAH3P8ADOr/AAvm/wAK3P8ABcX/DxCO/8DA1P//////////////////////5+fu/2pr
+        o/8gIo7/Oj2k/36Bwf9MUcT/AQbM/wAG1P8ABMP/AgSX/2tso//4+Pn/////////////////////////
+        ///5+fr/39/o/+Pk7P/9/f3/5+fx/3p8v/8yNaL/MzaW/4GCr//t7fH/////////////////////////
+        ///////////////////////////////////8/Pz/6uru/+rq7v/9/f3/////////////////AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgA
+        AAAgAAAAQAAAAAEAIAAAAAAAABAAAHQSAAB0EgAAAAAAAAAAAAD/////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////v7
+        +//x8fD/+/v8////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///39/f/09PS/42Op/+Vlb3//f3/////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///+/v7/7+/u/8PDxP9rbI7/DxBs/ykpfv/j4+//////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////Pz8/+Pj4/+ysrX/VleD/wkKbf8AAIL/AwRv/52dwf//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////f39//W1tX/oaGo/0NEev8EBWz/AAGF/wACkv8AAH7/QECJ/+/v9v//////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////w8PD/yMjH/5GRnf8zM3T/AQJw/wACi/8AA5f/AAOc/wADmv8GCHf/o6PH////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////+/v7/5+fn/7y8uv+Dg5b/JSZx/wAAdf8AApD/AAOc/wAEov8ABaj/AAWs/wAB
+        lP81Noz/5OTw////////////////////////////////////////////////////////////////////
+        /////////////////////////Pz8/9/f3/+ysrH/eHiR/xsccP8AAHn/AAOT/wAEn/8ABKf/AAWu/wAG
+        tP8ABrj/AAa2/wADiv9zdLH/+vr9////////////////////////////////////////////////////
+        //////////////////////////////v7+//Z2dn/rKyr/3JykP8WF3L/AAB9/wADk/8ABJ//AAWp/wAF
+        sv8ABrn/AAe//wAHxP8AB8f/AAW3/w0Pif+jpND/////////////////////////////////////////
+        ///////////////////////////////////7+/v/1tbW/6mpqP9zdJL/FBZ1/wAAgf8AApL/AASd/wAF
+        qP8ABrP/AAa8/wAHxP8ACMv/AAjQ/wAJ0/8ACdP/AASy/x4hkf/AweH/////////////////////////
+        /////////////////////////////////////////Pz8/9jY2P+pqaj/fX6V/xkbev8AAIT/AAKQ/wAD
+        mf8ABKb/AAWy/wAGvP8AB8f/AAjP/wAJ1/8ACdz/AAre/wAK3v8ACdr/AASt/y4xmv/R0ev/////////
+        //////////////////////////////////////////////7+/v/f39//q6uq/4uLmf8nKYH/AAGH/wAC
+        kv8AA5T/AASh/wAFrv8ABrr/AAfG/wAI0f8ACdr/AArh/wAL5P8AC+X/AAvl/wAK5P8ACdz/AAOp/zw+
+        of/b3PD/////////////////////////////////////////////////7e3t/7Ozs/+XmJv/QkOJ/wAC
+        h/8AA5j/AAKR/wADmv8ABKj/AAa1/wAHwv8ACM//AAna/wAK4v8AC+b/AAzo/wAM6f8ADOn/AQzo/xYg
+        6P8OFtz/AAKj/0lMpv/l5vT///////////////////////////////////////z8/P/Ly8v/n5+e/21u
+        lP8IC4X/AAOd/wADlv8AApL/AASf/wAFrv8ABrz/AAjJ/wAJ1/8ACuH/AAvm/wAM6f8ADez/AA3t/wAN
+        7f8DD+v/Tlbv/2Bn7v8WHtf/AAOa/15grv/x8fr/////////////////////////////////7+/v/7Cw
+        sP+Wlpr/MjSI/wACl/8ABKH/AAKS/wADlf8ABKT/AAaz/wAHwf8ACND/AArd/wAL5f8ADOn/AA3t/wAO
+        8P8ADvH/AA7x/wAM7v8yPO//lZr0/3F37v8VHMz/AwaO/4SFwP/9/f//////////////////////////
+        ///e3t7/pKSi/4WFlv8SFYT/AAOk/wADnf8AApH/AAOZ/wAFqP8ABrf/AAfG/wAJ1f8ACuH/AAvn/wAN
+        7P8ADvD/AA/0/wAP9f8AD/T/AA3x/xEd7v+JjvT/1Nb5/2lv5/8IDrb/FReG/8XF4P//////////////
+        /////////v7+/8/Pz/+fn57/d3eS/wcLh/8ABKf/AAOa/wACkf8AA5z/AAWr/wAGuv8ACMr/AAnZ/wAL
+        5P8ADOn/AA3u/wAP8/8AEPf/ABD5/wAQ9/8AD/P/Ag/u/1df8f/i4/z/xMb1/y810f8AAI3/Z2il//39
+        /v/////////////////9/f3/ycnJ/56enf90dI7/BgmG/wAEpv8AA5j/AAKR/wAEnv8ABa3/AAa9/wAI
+        zP8ACdv/AAvl/wAM6v8ADu//AA/0/wAQ+f8AEfz/ABD5/wAP9P8ADO//Lznt/8PG+P/q6/v/V1zb/wAD
+        o/8rLIH/6Ojx//////////////////39/f/Ly8v/n5+d/3t8kP8KDYH/AASj/wADmP8AApL/AASf/wAF
+        rv8AB73/AAjN/wAJ3P8AC+X/AAzq/wAO7/8AD/T/ABD5/wAR+/8AEPj/AA/z/wAM7v8WIev/pKj1/+zs
+        +/9jZ93/AQar/xUXdv/U1OL//////////////////v7+/9bW1v+ioqL/ioqU/xgaev8AApv/AAOY/wAC
+        kv8ABJ//AAWu/wAHvf8ACMz/AAnb/wEL5f8CDur/AA3u/wAP8/8AEPb/ABD3/wAP9f8ADvH/AAzs/woV
+        6P+DifH/xMb0/0xR1v8ABan/ERJy/87O3P//////////////////////6enp/6+vr/+YmJn/OTp5/wAB
+        i/8AA5j/AAKS/wAEnv8ABa3/AAa8/wAIyv8ACNn/KjPn/yUv6/8AC+z/AA7w/wAP8/8AD/P/AA7x/wAN
+        7v8ADOr/BRDm/15l6/96fub/HiTJ/wACoP8ZGnH/2Njj///////////////////////5+fn/y8vL/6Wl
+        o/9tbYf/Bwhz/wACkf8AApH/AAOc/wAFq/8ABrn/AAXH/yAo2v+IjfD/KTPq/wAK6v8ADe3/AA7v/wAO
+        7/8ADe3/AAzr/wAL5/8AC+L/GyPc/xwj0P8BCL3/AAGO/zQ0ev/u7vL/////////////////////////
+        ///v7+//x8fH/6ioqv9AQXn/AAB3/wACjv8AA5r/AASo/wAGtv8kKsv/oqXt/6uu9P8PGeX/AArn/wAM
+        6f8ADOv/AAzr/wAM6v8AC+f/AAvk/wAJ3P8AB9D/AAbE/wAFsf8AAHT/bW2a/////v//////////////
+        ///////////////////29vb/5+fn/8XFz/82Nnz/AABz/wACkf8ABKT/Awmy/2Rp1/+2ue//SU7W/wAD
+        s/8AB83/AAvm/wAL5/8AC+f/AAvm/wAK4/8ACt3/AAnU/wAIyf8ABrz/AAOT/xESZ/+/v9D/////////
+        /////////////////////////////////////////////8vL2f82Nnj/AABq/wABiP8AA57/EBWs/xYb
+        p/8MEI//UlSg/ycrpv8ABsr/AAri/wAK4v8ACuD/AAnb/wAJ0/8ACMr/AAe//wAEof8AAWr/aWmV//n5
+        +v///////////////////////////////////////////////////////////93d5f92dp3/LC11/xMV
+        cf8XGnn/QUOO/6enx//4+Pn/wMHe/yYpn/8AA7b/AAjR/wAJ1f8ACND/AAjI/wAGuv8ABJv/AAFt/0VF
+        fv/g4Of///////////////////////////////////////////////////////////////////////z8
+        /f/m5uv/zs7a/9bW4f/y8vX/////////////////ycrf/0RGmv8FCI7/AAGd/wACov8AApb/AAB+/wkL
+        aP9YWIr/29vj////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////7Ozx/5+gwP9VVpP/NTeA/zY3
+        fP9ZWoz/pqa9//Dw8v//////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////n5
+        +v/t7fD/7e3v//n5+f//////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAoAAAAMAAAAGAAAAABACAAAAAAAAAkAAB0EgAAdBIAAAAAAAAAAAAA////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////z8
+        /P/39/f//v7+////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////9/f3/9vb2//S09T/3t7q//39/v//////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////7+/v/x8fH/0NDP/62tsf9lZpH/PT6H/+Pj8f//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////f39/+jo6P/FxcT/nZ2l/0VGff8FBWb/BARm/6Sly///////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////4+Pj/3d3d/7u7uv+QkJ3/NDV0/wECZv8AAnr/AABq/1JS
+        k//4+Pz/////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////Ly8v/R0dH/srKx/4GClf8lJm3/AABm/wAC
+        ff8AAo3/AAB1/xITZ//Fxdz/////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////9/f3/6enp/8bGxv+qqqr/cXKN/xka
+        aP8AAGf/AAJ+/wACjf8AApD/AAKF/wAAYv9oaaH//Pz+////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////n5+f/e3t7/vLy7/6Ki
+        o/9hYYb/DxBk/wAAav8AAoL/AAKQ/wADlP8AA5f/AAOW/wABeP8YGW//zMzi////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////9PT0/9PT
+        0/+zs7L/mpqe/1FRgP8ICWL/AABu/wAChv8AA5P/AAOY/wADnP8ABJ//AASh/wADk/8AAGv/Z2ej//v7
+        /f//////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////7+
+        /v/t7e3/ycnJ/6ysq/+Skpr/QUJ7/wQEYv8AAXP/AAKL/wADlv8AA5v/AASg/wAEo/8ABKf/AAWq/wAF
+        qP8AAob/ERNx/7q72f//////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////f39/+fn5//BwcH/p6em/4uLmP81Nnf/AQJk/wABd/8AAo7/AAOY/wAEnf8ABKP/AASn/wAF
+        q/8ABa//AAWx/wAGtP8ABaX/AAB4/0JDkf/q6vX/////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////7+/v/4ODg/7q6uv+jo6L/hIWW/yssdf8AAWb/AAF7/wACj/8AA5n/AASf/wAE
+        pf8ABar/AAWv/wAGs/8ABrb/AAa5/wAGu/8ABrv/AAWc/wIEc/97fbj//Pz/////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////r6+v/b29v/tbW1/6Ghn/+AgZb/JCV1/wAAaf8AAn//AAKQ/wAD
+        mP8ABJ//AASm/wAFrP8ABbH/AAa2/wAGu/8AB77/AAfB/wAHw/8AB8X/AAe9/wADkf8QEnv/qqvW////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////+fn5/9jY2P+xsbH/n5+e/3+Al/8hI3b/AABs/wAC
+        gv8AAo//AAOX/wAEnv8ABKX/AAWs/wAGs/8ABrj/AAe+/wAHwv8AB8b/AAjJ/wAIy/8ACM3/AAjN/wAH
+        u/8AAon/JCaK/8rL6P//////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////5+fn/19fX/7CwsP+enp3/g4OY/yMk
+        ef8AAG//AAKF/wACj/8AA5X/AAOd/wAEpP8ABaz/AAaz/wAGuf8AB8D/AAfF/wAIyv8ACM7/AAjR/wAJ
+        1P8ACdX/AAnV/wAJ0/8AB7f/AAGE/zs9mv/d3vL/////////////////////////////////////////
+        //////////////////////////////////////////////////////////////r6+v/Z2dn/sLCw/56e
+        nP+Li5r/Kyx//wAAcP8AAoj/AAKP/wACkv8AA5r/AASi/wAFqv8ABbL/AAa5/wAHwP8AB8f/AAjM/wAI
+        0f8ACdb/AAnZ/wAJ2/8ACt3/AArd/wAJ3P8ACdf/AAay/wACgf9PUqn/6On4////////////////////
+        /////////////////////////////////////////////////////////////////////////Pz8/9zc
+        3P+ysrL/nZ2d/5OTm/86O4f/AAFy/wADif8AA5L/AAKQ/wADlv8ABJ//AASo/wAFsP8ABrj/AAe//wAH
+        x/8ACM3/AAnU/wAJ2f8ACt7/AArh/wAK4v8ACuP/AArj/wAK4v8ACuH/AAnY/wAGrf8BA4H/YWO1//Dw
+        +///////////////////////////////////////////////////////////////////////////////
+        ///+/v7/4+Pj/7a2tv+enp7/mZmb/1BSj/8DBHT/AAOJ/wADl/8AApD/AAKS/wADm/8ABKT/AAWt/wAG
+        tf8AB77/AAfG/wAIzf8ACdT/AAna/wAK4P8ACuP/AAvk/wAL5f8AC+b/AAvm/wAL5f8AC+T/AArj/wAJ
+        1/8ABqj/AwWB/3Byvv/19f3/////////////////////////////////////////////////////////
+        ///////////////////v7+//v7+//6CgoP+cnJr/bW6W/wsNeP8AAof/AAOb/wADlP8AAo//AAOW/wAE
+        oP8ABan/AAWy/wAGuv8AB8P/AAjL/wAJ0/8ACdr/AArh/wAL5P8AC+b/AAvn/wAM6P8ADOn/AAzo/wAM
+        6P8AC+f/BRDl/wgS5P8ACdT/AAWj/wYIgf+AgsX/+fr+////////////////////////////////////
+        //////////////////////////////v7+//S0tL/pqam/5ubmv+Kipv/ICKC/wABgf8ABJ3/AAOb/wAC
+        kf8AApH/AAOa/wAEpP8ABa3/AAa2/wAHv/8ACMj/AAjR/wAJ2f8ACuD/AAvk/wAL5v8ADOj/AAzq/wAM
+        6/8ADOv/AAzr/wAM6v8CDun/ND3r/1JZ7P8eJ+b/AgrQ/wAEnf8LDYH/lJbP//39////////////////
+        /////////////////////////////////////////////+zs7P+3t7f/nJyc/5qam/9OT5D/AAN8/wAE
+        mv8ABKH/AAOX/wACj/8AA5T/AASe/wAEp/8ABbH/AAa6/wAHxP8ACM3/AAnW/wAK3v8ACuP/AAvm/wAM
+        6f8ADOv/AA3s/wAN7f8ADe7/AA3u/wAN7f8BDuv/PUbu/4aM8v9pcO7/JS7k/wIKyv8AA5T/FBWD/66v
+        3P///////////////////////////////////////////////////////f39/9XV1f+mpqb/m5ua/4eH
+        m/8XGYD/AAKO/wAEpv8ABJ//AAOU/wACj/8AA5f/AASh/wAFq/8ABrX/AAe+/wAIyP8ACNH/AAna/wAK
+        4v8AC+X/AAzo/wAM6/8ADe3/AA7v/wAO8P8ADvH/AA7w/wAO7/8ADO3/HSjt/3mA8/+an/T/b3bu/ycv
+        4P8CCcD/AAGI/yYojP/P0Oz/////////////////////////////////////////////////9fX1/8LC
+        wv+enp7/nJya/2Fjk/8CBXz/AASf/wAEpv8AA5z/AAKS/wACkf8AA5r/AASk/wAFrv8ABrj/AAfB/wAI
+        y/8ACdX/AAre/wAK5P8AC+f/AAzq/wAN7f8ADu//AA7x/wAP8/8AD/P/AA/z/wAO8f8ADe//CRXt/1df
+        8f+vs/f/wsT3/3J47P8iKdn/AAaw/wAAev9PUKP/8fH6////////////////////////////////////
+        ////////6urq/7S0tP+bm5v/m5ub/0FDiP8AAYL/AAWn/wAEpP8AA5r/AAKR/wACkv8AA5z/AASm/wAF
+        sP8ABrr/AAfE/wAIzv8ACdj/AArh/wAL5f8ADOj/AA3s/wAN7/8ADvH/AA/0/wAP9v8AEPb/AA/1/wAP
+        8/8ADvH/AA7u/zM97/+dovX/7u/8/8LF9v9hZ+X/EBfL/wAEmf8FB3L/nZ7M////////////////////
+        ////////////////////////39/f/6ysrP+ampr/l5eb/y4wgf8AAYn/AAWq/wAEo/8AA5j/AAKQ/wAD
+        lP8ABJ7/AAWo/wAGsv8ABr3/AAfH/wAI0f8ACdv/AArj/wAL5v8ADOr/AA3t/wAO8P8AD/P/ABD2/wAQ
+        +P8AEPn/ABD3/wAP9f8ADvL/AA3v/xgj7v93fvL/3+H7//X2/f+lqPD/NDrX/wAHtP8AAHr/PT6M/+/v
+        9//////////////////////////////////+/v7/2NjY/6enp/+ampr/lJSZ/ycpe/8AAo3/AAWq/wAE
+        of8AA5f/AAKP/wADlv8ABKD/AAWq/wAGtP8AB77/AAjI/wAJ0/8ACd3/AArk/wAL5/8ADOr/AA3u/wAO
+        8f8AD/X/ABD4/wAR+/8AEfv/ABD5/wAQ9v8AD/P/AA3w/wcU7f9VXfD/xMf4//z8/v/W2Pj/W2De/wcO
+        wv8AA4//DA5r/76+2f/////////////////////////////////9/f3/1NTU/6ampv+ampr/lJSZ/ycp
+        ef8AAoz/AAWp/wAEoP8AA5b/AAKP/wADl/8ABKH/AAWr/wAGtf8AB8D/AAjK/wAJ1P8ACt7/AAvk/wAL
+        6P8ADev/AA3v/wAO8v8AD/X/ABD5/wAR/P8AEf3/ABH6/wAQ9/8AD/P/AA7w/wAN7P84Qe3/p6z1//f4
+        /v/p6vv/d3vj/xEXxv8ABJ7/AABn/4uLtv/////////////////////////////////9/f3/1dXV/6en
+        p/+ampr/l5ea/y8xev8AAYb/AAWm/wAEn/8AA5X/AAKP/wADl/8ABKH/AAWs/wAGtv8AB8D/AAjK/wAJ
+        1P8ACt7/AAvk/wAM6P8ADev/AA3v/wAO8v8AD/X/ABD4/wAR+/8AEfz/ABD5/wAP9v8AD/L/AA7v/wAM
+        6/8hK+v/jJLy//Dw/f/s7fv/gITk/xYcx/8ABKX/AABq/2lpnf//////////////////////////////
+        ///+/v7/3Nzc/6ysrP+ampr/m5ua/0JEff8AAX3/AASi/wAEoP8AA5X/AAKQ/wADmP8ABKH/AAWs/wAG
+        tv8AB8D/AAjK/wAJ1P8ACt7/AAvk/wAL5/8ADOv/AA3u/wAO8f8AD/X/ABD3/wAQ+f8AEPn/ABD3/wAP
+        9P8ADvH/AA3u/wAL6/8SHen/dnzw/+jp/P/e4Pn/dnri/xMaxf8ABKb/AABr/1hZkP/9/f3/////////
+        ////////////////////////5ubm/7W1tf+cnJz/nJyb/15fhP8BA3P/AASa/wAEoP8AA5X/AAKQ/wAD
+        l/8ABKH/AAWs/wAGtv8AB8D/AAjK/wAJ1P8ACt3/AArk/wIN5/8BDer/AA3t/wAO8P8AD/P/AA/1/wAQ
+        9v8AEPb/AA/1/wAP8/8ADvD/AA3t/wAL6v8JFOf/Ymnt/8HE9v+ws/D/XmLb/woRwf8ABKP/AABp/1hY
+        jv/9/f3/////////////////////////////////8vLy/8TExP+jo6P/m5ua/39/j/8OEGz/AAKK/wAE
+        nv8AA5X/AAKP/wADl/8ABKH/AAWr/wAGtf8AB7//AAjI/wAJ0v8ACdz/ChTk/z5G6/8PG+r/AAzs/wAO
+        7/8ADvH/AA/z/wAP9P8AD/T/AA/y/wAO8P8ADe7/AA3r/wAL6P8FEOb/U1rr/5me8P+Ch+f/MzjQ/wEH
+        vP8ABJz/AABk/2dnlv///////////////////////////////////////Pz8/9jY2P+wsLD/nJyc/5aW
+        mP8zM3H/AAB2/wADlv8AA5b/AAKP/wADlv8ABKD/AAWq/wAGs/8AB73/AAfH/wAI0P8DC9r/RUzo/3Z8
+        8P8RHOn/AAvr/wAN7f8ADu//AA7w/wAO8f8ADvH/AA7w/wAN7v8ADez/AAzp/wAL5v8BDOT/NDzk/2ht
+        5f9ARdf/CQ/E/wAFt/8ABJD/AABe/4eHq////////////////////////////////////////////+7u
+        7v/FxcX/qKio/56enf9rbIT/Bwhm/wACg/8AA5X/AAKQ/wADlf8ABJ7/AAWo/wAFsv8ABrv/AAfE/wEI
+        zv8zOt7/qa3z/3Z88P8FEOf/AAzp/wAM6/8ADe3/AA3u/wAN7/8ADe7/AA3t/wAN7P8ADOr/AAvn/wAL
+        5f8ACuH/Bg/a/xIa0/8GDcj/AAa+/wAFr/8AA3//Bwhd/7KyyP//////////////////////////////
+        //////////////39/f/k5OT/wsLC/62trf+enp//Oztx/wAAaf8AAob/AAKP/wADk/8AA53/AASm/wAF
+        r/8ABrj/AwnC/zE31P+kp+7/4OL6/1JZ6/8ACuX/AAvn/wAM6f8ADOr/AA3r/wAN7P8ADev/AAzr/wAM
+        6f8AC+f/AAvl/wAK4v8ACdz/AAjU/wAHy/8AB8P/AAa6/wAFoP8AAGz/Jidr/+Dg6P//////////////
+        ///////////////////////////////////8/Pz/6Ojo/9DQ0P/ExMP/oKCs/yQka/8AAGv/AAKD/wAC
+        kf8AA5r/AASj/wAFrP8CB7b/PkPN/62v7P/z8/z/srXz/yAo4P8ACNr/AAvi/wAL5/8ADOj/AAzp/wAM
+        6f8ADOn/AAzo/wAL5/8AC+X/AArj/wAK3v8ACdb/AAjP/wAHxv8AB77/AAax/wADh/8AAFz/aWmU//39
+        /f///////////////////////////////////////////////////////v7+//j4+P/w8PD/8PDv/6+v
+        w/8aG2f/AABo/wACgP8AA5X/AASh/wAEqv8DCLP/UVXP/6qt6/+kp+z/QEbX/wIItv8AA5//AAe9/wAK
+        4P8AC+b/AAvm/wAL5v8AC+b/AAvl/wAL5P8ACuL/AAre/wAJ1/8ACND/AAjJ/wAHwf8ABrj/AASa/wAB
+        bP8VFmD/wsLR////////////////////////////////////////////////////////////////////
+        //////////////7+/v+kpLz/GBhi/wAAYP8AAnn/AAOR/wAEof8ABav/DBG2/ygtwP8bIbf/Agab/wYI
+        gf8uMYn/DxOT/wAGvv8ACt//AArk/wAK5P8ACuP/AAri/wAK4P8ACdz/AAnX/wAI0f8ACMr/AAfD/wAG
+        u/8ABaT/AAJ5/wEBWf9tbZX/+fn6////////////////////////////////////////////////////
+        ///////////////////////////////////9/f3/srLF/zQ1cP8DBFn/AABn/wABef8AAoX/AAKJ/wAA
+        hf8AAHn/GBp7/4SGsv/n5+3/lJbI/wwPk/8ABbf/AAnY/wAK3/8ACt7/AAnc/wAJ2P8ACdT/AAjP/wAI
+        yv8AB8T/AAa7/wAFpf8AA37/AABd/zs7dP/c3OP/////////////////////////////////////////
+        /////////////////////////////////////////////////////////////+Dg5v+Kiqf/Pj53/xob
+        Zv8ND2T/EhRq/yord/9pap3/ycnZ//z8/f//////+vr8/42Pwf8OEIn/AAOj/wAHw/8ACNH/AAnT/wAI
+        0f8ACM3/AAjI/wAHwv8ABrX/AASb/wACef8AAF7/LS5r/8LCz///////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///+/v7/7e3w/9HR2/++vs7/ycnW/+Tk6v/8+/z///////////////////////v7/P+gocb/ICOE/wAB
+        hv8ABJ7/AAau/wAGtP8ABrP/AAar/wAFm/8AA4X/AAFt/wMEXP89PXT/wsLO/////v//////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///+/v7/zc7d/11fmf8UFnX/AQJz/wAAeP8AAXj/AABy/wAAaP8DBV//ICFm/3Jylf/a2uD/////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////f3+P/FxdT/gYGm/1JTif8/QHv/P0B5/1VWhf+FhqP/ycnT//j4
+        +P//////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////v7+//f39//t7e//7Ozv//b2
+        9v/+/v7/////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAEAAAACAAAAAAQAgAAAA
+        AAAAQAAAdBIAAHQSAAAAAAAAAAAAAP//////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////f39//v7+///////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////9/f3/+Hh
+        4f/i4uL//Pz8////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///+/v7/8vLy/9XV1f/AwL//wcHH/5ycwP/p6fT/////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////8/Pz/6+vr/8zMzP+1tbT/mJmm/0FCf/8ICWH/o6PO////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////5+fn/4uLi/8TExP+urq3/gYKX/ycocP8AAWP/AABg/1VV
+        m//5+f3/////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////7+/v/z8/P/2NjY/7y8vP+oqKj/cnOP/xka
+        af8AAGP/AAJ0/wAAa/8YGG7/z9Dm////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////39/f/r6+v/zs7O/7a2
+        tf+ioqP/YmKI/xAQZP8AAGT/AAJ3/wACh/8AAnX/AABb/39/sv//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////n5
+        +f/i4uL/xcXF/7Cwr/+amp//UVKB/wkJYP8AAGX/AAJ3/wACif8AAo//AAJ8/wAAXv8sLHf/4+Pw////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////T09P/Z2dn/vb29/6qqqf+RkZr/QEF5/wQFXv8AAWf/AAJ5/wACif8AAo7/AAKP/wAC
+        iP8AAW3/AgNb/5SUwP//////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////f39/+zs7P/Pz8//tra2/6ampf+Hh5b/MTJy/wECXf8AAWn/AAF7/wAC
+        iv8AApD/AAKS/wADlP8AA5T/AAJ//wAAYP82NoL/6Oj0////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////+vr6/+Tk5P/Hx8f/sLCv/6Kiof97e5L/IyRs/wAA
+        Xv8AAWv/AAJ+/wACjf8AA5P/AAOV/wADmP8AA5r/AAOc/wADkv8AAnP/BAVh/5eXxP//////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////9vb2/9vb2/+/v7//qqqq/56e
+        nv9tbo3/GBhn/wAAX/8AAW7/AAKC/wACkP8AA5X/AAOY/wADm/8ABJ7/AASg/wAEov8ABKH/AAOI/wAA
+        Z/8yM4L/4+Tx////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////+/v7/8fHx/9PT
+        0/+4uLj/pqal/5qanP9gYYn/DxBk/wAAYf8AAXL/AAKG/wADk/8AA5f/AAOb/wAEnv8ABKH/AASk/wAE
+        pv8ABaj/AAWq/wAEnv8AA3z/AQJk/4KDuP/+/v//////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///9/f3/6+vr/8zMzP+ysrL/oqKh/5aWm/9TU4X/CQli/wAAZP8AAXb/AAKJ/wADlP8AA5n/AAOd/wAE
+        oP8ABKT/AASn/wAFqv8ABaz/AAWu/wAFsP8ABa//AASV/wABcv8bHHb/x8jj////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////7+/v/5eXl/8bGxv+tra3/oKCf/5KSmv9HSIL/BQZi/wAAZ/8AAXn/AAKM/wAD
+        lf8AA5r/AASe/wAEov8ABKb/AAWp/wAFrf8ABa//AAWy/wAGtP8ABrb/AAa3/wAFrv8ABIv/AABr/0xN
+        mv/u7vn/////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////6+vr/4ODg/8DAwP+pqan/np6d/46Pmv88PoD/AgNi/wAB
+        av8AAnz/AAKN/wADlf8AA5r/AASf/wAEo/8ABKj/AAWr/wAFr/8ABrL/AAa1/wAGuP8ABrr/AAa8/wAG
+        vf8ABr3/AAWo/wADgv8DBW3/g4XA//39////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////4+Pj/3Nzc/7y8vP+mpqb/nZ2c/4yM
+        mv82N3//AQJj/wABbf8AAn//AAKN/wADlf8AA5r/AASf/wAEpP8ABan/AAWt/wAFsf8ABrX/AAa4/wAG
+        u/8AB77/AAfA/wAHwv8AB8P/AAfE/wAHwP8ABaD/AAJ6/xMVev+xs93/////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////39/f/2dnZ/7m5
+        uf+kpKT/nJyb/4qLmv8xM4D/AAFk/wACcP8AAoL/AAKN/wADlP8AA5n/AASf/wAEpP8ABan/AAWu/wAF
+        sv8ABrb/AAa6/wAHvv8AB8H/AAfE/wAHxv8ACMj/AAjJ/wAIyv8ACMr/AAe//wAFmf8AAXX/KiyO/9HS
+        7v//////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///29vb/19fX/7e3t/+ioqL/nJyb/4uMmv8xM4L/AAFm/wACcv8AAoT/AAKN/wACkv8AA5j/AASe/wAE
+        o/8ABan/AAWu/wAGs/8ABrf/AAa8/wAHwP8AB8T/AAfH/wAIyv8ACMz/AAjO/wAIz/8ACND/AAjQ/wAI
+        z/8AB7z/AAWT/wABc/9GSKL/5eb3////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////39/f/19fX/7e3t/+ioqL/m5ua/4+Pm/81N4X/AAFn/wACdP8AAof/AAKO/wAC
+        kP8AA5b/AAOc/wAEov8ABaj/AAWt/wAGs/8ABrj/AAa9/wAHwf8AB8X/AAjJ/wAIzf8ACM//AAjS/wAJ
+        1P8ACdX/AAnW/wAJ1v8ACdb/AAnT/wAHt/8ABY7/AAJ0/19is//w8fz/////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////4+Pj/2NjY/7e3t/+ioqL/m5ua/5SUm/8/QYr/AQJq/wAC
+        df8AAon/AAKQ/wACj/8AA5T/AAOb/wAEof8ABKf/AAWs/wAFsv8ABrf/AAa9/wAHwv8AB8b/AAjL/wAI
+        z/8ACNL/AAnV/wAJ2P8ACdr/AAnb/wAJ3P8ACdz/AAnb/wAJ2v8ACdT/AAez/wAEiv8EBnj/dnjE//f3
+        /v//////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////5+fn/29vb/7i4uP+ioqL/m5ua/5iY
+        m/9PUZH/AwVu/wACdf8AA4v/AAOT/wACj/8AApH/AAOY/wAEnv8ABKX/AAWr/wAFsf8ABrf/AAa8/wAH
+        wv8AB8f/AAjM/wAI0P8ACdT/AAnY/wAJ2/8ACt7/AArg/wAK4f8ACuH/AArh/wAK4f8ACuD/AAre/wAJ
+        1P8ABq//AAOG/wgKff+Ji9D/+/v/////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////7+/v/39/f/7u7
+        u/+jo6P/mpqa/5ubm/9jZJf/CQp0/wABdP8AA4v/AAOW/wACkf8AAo//AAOV/wADnP8ABKL/AAWp/wAF
+        r/8ABrX/AAa7/wAHwf8AB8b/AAjM/wAI0f8ACdX/AAna/wAK3v8ACuH/AAri/wAK4/8AC+T/AAvk/wAL
+        5P8ACuT/AArj/wAK4v8ACuH/AAnT/wAGq/8AA4T/DhCC/5mb2P/9/f//////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///+/v7/5ubm/8DAwP+mpqb/m5ub/5ycmv94eZv/ExV8/wABcv8AA4r/AAOZ/wADlP8AAo//AAKS/wAD
+        mP8ABJ//AASm/wAFrP8ABrP/AAa5/wAHv/8AB8X/AAjL/wAI0P8ACdb/AAnb/wAK3/8ACuL/AArk/wAL
+        5f8AC+X/AAvm/wAL5v8AC+b/AAvm/wAL5f8AC+T/AArj/wAK4v8ACdH/AAao/wACgf8UFof/qKnf////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////8PDw/8jIyP+qqqr/m5ub/5ubmv+MjJz/JymG/wABcf8AA4j/AAOb/wAD
+        mP8AApH/AAKP/wADlf8AA5z/AASj/wAFqf8ABbD/AAa3/wAHvf8AB8P/AAjJ/wAI0P8ACdX/AAnb/wAK
+        3/8ACuP/AAvk/wAL5f8AC+f/AAvn/wAM6P8ADOj/AAzo/wAM6P8AC+f/AAvm/wAL5f8CDeT/AQrh/wAI
+        zv8ABqT/AAJ+/xsejP+2uOX/////////////////////////////////////////////////////////
+        ////////////////////////////////////////+vr6/9fX1/+xsbH/nZ2d/5qamv+ZmZv/SEmS/wAC
+        cv8AA4T/AASb/wADnf8AA5X/AAKP/wACkf8AA5j/AASf/wAEpv8ABa3/AAaz/wAGuv8AB8H/AAfH/wAI
+        zv8ACdT/AAna/wAK3/8ACuP/AAvk/wAL5v8ADOf/AAzp/wAM6f8ADOr/AAzq/wAM6v8ADOr/AAzp/wAM
+        6P8XIej/Nz/q/yEq5/8EDuH/AAjK/wAGn/8AAXv/JiiS/8bI7P//////////////////////////////
+        /////////////////////////////////////////////////////////////+rq6v+/v7//oqKi/5qa
+        mv+cnJr/cXKb/wsNev8AAn3/AASZ/wAEov8AA5r/AAOT/wACjv8AA5P/AAOb/wAEov8ABan/AAWw/wAG
+        t/8AB77/AAfE/wAIy/8ACNH/AAnY/wAK3v8ACuL/AAvk/wAL5v8ADOj/AAzp/wAM6v8ADev/AA3s/wAN
+        7P8ADez/AA3s/wAM6/8CDur/OkPt/3V88f9la+7/Lzfo/wcR3/8AB8X/AAWa/wABd/81N5v/19jy////
+        //////////////////////////////////////////////////////////////////////////////r6
+        +v/U1NT/ra2t/5ubm/+ampr/k5Oc/y4wi/8AAXb/AAST/wAEpf8ABKD/AAOY/wACkf8AAo//AAOW/wAE
+        nf8ABKT/AAWr/wAGs/8ABrr/AAfB/wAIyP8ACM7/AAnV/wAJ3P8ACuH/AAvk/wAL5v8ADOj/AAzq/wAN
+        6/8ADez/AA3t/wAN7v8ADe7/AA3u/wAN7v8ADe3/AA3r/ys17f94fvL/j5Tz/2xy7/81Puf/CRHc/wAH
+        vv8ABZL/AAFz/0tNqP/p6fn/////////////////////////////////////////////////////////
+        ///////////////////u7u7/wcHB/6Kiov+ampr/nJya/21vmv8HCXn/AAOF/wAFpP8ABKX/AASe/wAD
+        lv8AAo//AAKR/wADmP8ABKD/AASn/wAFrv8ABrX/AAa8/wAHxP8ACMv/AAjS/wAJ2f8ACt//AArj/wAL
+        5f8ADOj/AAzp/wAN6/8ADe3/AA3u/wAO7/8ADvD/AA7w/wAO8P8ADu//AA3u/wAM7f8THu3/XmXx/5ab
+        9P+WmvP/cHbu/zhA5f8JEdf/AAa2/wAEif8BA3L/bnC9//j4/v//////////////////////////////
+        ///////////////////////////////////+/v7/39/f/7Ozs/+dnZ3/mpqa/5mZm/88Po7/AAF2/wAE
+        l/8ABan/AASj/wADnP8AA5T/AAKP/wACk/8AA5r/AASi/wAFqf8ABbH/AAa4/wAHv/8AB8b/AAjO/wAJ
+        1f8ACdz/AAri/wAL5P8AC+f/AAzp/wAM6/8ADe3/AA3v/wAO8P8ADvH/AA7y/wAO8v8ADvL/AA7x/wAO
+        8P8ADe7/BRHt/0BJ7/+HjPT/r7P2/6qu9f9zee3/Nj7i/wcP0P8ABan/AAN+/woMd/+foNb/////////
+        ////////////////////////////////////////////////////////+Pj4/9DQ0P+qqqr/mpqa/5ub
+        mv+Li5z/GRx+/wACf/8ABaL/AAWp/wAEof8AA5r/AAKS/wACj/8AA5X/AAOc/wAEpP8ABav/AAaz/wAG
+        uv8AB8H/AAjJ/wAI0P8ACdf/AAre/wAK4/8AC+b/AAzo/wAM6v8ADez/AA3u/wAO8P8ADvL/AA/z/wAP
+        9P8AD/X/AA/0/wAP8/8ADvH/AA7w/wAN7v8jLu7/cHfy/7zA+P/q6/z/sbX1/2506v8tNNz/AwrF/wAF
+        mv8AAXH/KCmL/9jZ8P////////////////////////////////////////////////////////////Hx
+        8f/ExMT/o6Oj/5qamv+cnJr/eXqX/wkMdf8AA4n/AAWp/wAFqP8ABKD/AAOY/wACkf8AAo//AAOW/wAE
+        nv8ABKb/AAWt/wAGtP8ABrz/AAfD/wAIy/8ACdL/AAna/wAK4P8AC+T/AAvn/wAM6f8ADev/AA3u/wAO
+        8P8ADvL/AA/0/wAP9f8AEPb/ABD2/wAP9v8AD/X/AA/z/wAO8f8ADe//Dhrt/1Ze8f+kqPb/8PH9/+zs
+        /P+nq/L/XmTk/xcf0v8ABrT/AASH/wAAaP9xcrb//f3/////////////////////////////////////
+        ///////////////////p6en/vLy8/6CgoP+ampr/nZyb/2ZnlP8CBXP/AASQ/wAFq/8ABKf/AASf/wAD
+        l/8AApD/AAKQ/wADmP8ABJ//AASn/wAFrv8ABrb/AAe+/wAHxf8ACM3/AAnU/wAJ3P8ACuL/AAvl/wAL
+        5/8ADOr/AA3s/wAO7/8ADvH/AA/z/wAP9f8AEPf/ABD4/wAQ+P8AEPf/ABD2/wAP9P8ADvL/AA3v/wMQ
+        7f86Q+//iI7z/9ze+//8/P7/4uP6/42R7P86QNn/BArE/wAFnf8AAXH/Hh94/9bW6///////////////
+        ///////////////////////////////////+/v7/4uLi/7a2tv+dnZ3/mpqa/52cm/9cXo3/AANy/wAE
+        lP8ABav/AASl/wAEnv8AA5b/AAKP/wACkf8AA5n/AASh/wAFqP8ABbD/AAa3/wAHv/8AB8f/AAjO/wAJ
+        1v8ACt3/AArj/wAL5v8ADOj/AAzr/wAN7f8ADvD/AA7y/wAP9f8AEPf/ABD5/wAR+v8AEfr/ABD5/wAQ
+        9/8AD/X/AA/y/wAO8P8ADe3/ISzt/2928v/Ex/j/+vr+//n5/v+8v/P/W2Df/xAXy/8ABa//AAOA/wAC
+        Yv+Oj77//////////////////////////////////////////////////v7+/97e3v+zs7P/nZ2d/5qa
+        mv+cnJv/WVuJ/wACcf8ABJX/AAWr/wAEpP8AA53/AAOV/wACj/8AApL/AAOa/wAEov8ABan/AAWx/wAG
+        uP8AB8D/AAjI/wAIz/8ACdf/AAre/wAK4/8AC+b/AAzp/wAN6/8ADe7/AA7w/wAP8/8AD/X/ABD4/wAR
+        +v8AEfz/ABH8/wAR+v8AEPj/AA/1/wAP8/8ADvD/AAzt/w8a7P9YX/D/qq72//Pz/f/8/P7/3N34/3Z7
+        5P8gJs7/AAa5/wAEjv8AAGT/SkuP//f3/P////////////////////////////////////////////39
+        /f/b29v/srKy/52dnf+ampr/nZyb/1xdiP8AA3D/AAST/wAFqv8ABKT/AAOc/wADlP8AAo//AAOT/wAD
+        m/8ABKP/AAWq/wAFsv8ABrn/AAfB/wAIyf8ACND/AAnY/wAK3/8ACuT/AAvm/wAM6f8ADev/AA3u/wAO
+        8f8AD/P/ABD2/wAQ+P8AEfv/ABL9/wAR/f8AEfr/ABD4/wAP9f8AD/P/AA7w/wAN7f8EEev/QUnu/5OY
+        8//o6fz//Pz+/+jp+/+IjOf/LTPQ/wAHvf8ABJj/AABq/yQlc//j4+//////////////////////////
+        ///////////////////9/f3/3Nzc/7Ozs/+dnZ3/mpqa/52dm/9kZYv/AQRu/wAEjv8ABaj/AASj/wAD
+        m/8AA5T/AAKP/wADlP8AA5v/AASj/wAFq/8ABbL/AAa6/wAHwf8ACMn/AAjQ/wAJ2P8ACt//AArk/wAL
+        5v8ADOn/AA3s/wAN7v8ADvH/AA/z/wAP9v8AEPj/ABH7/wAR/P8AEfz/ABD6/wAQ9/8AD/X/AA7y/wAO
+        8P8ADe3/AAzq/yw26/9/hfH/2tz6//z8/v/q6/v/jpLo/zQ60f8BCL7/AAWf/wACcP8RE2X/zc3f////
+        /////////////////////////////////////////v7+/+Dg4P+3t7f/n5+f/5qamv+cnJv/dXWP/wcJ
+        bf8AA4f/AAWl/wAEo/8AA5v/AAOU/wACj/8AA5T/AAOb/wAEo/8ABar/AAay/wAGuv8AB8H/AAjJ/wAI
+        0P8ACdj/AArf/wAK5P8AC+b/AAzp/wAN6/8ADe7/AA7w/wAP8/8AD/X/ABD3/wAQ+f8AEfr/ABH6/wAQ
+        +P8AEPb/AA/0/wAO8f8ADu//AA3s/wAL6v8cJun/bnTv/83Q+f/8/P7/4+T6/4qO5/80OdD/AQe9/wAE
+        of8AAnL/CQpf/7y80v/////////////////////////////////////////////////m5ub/vr6+/6Oj
+        o/+ampr/m5ua/4WFk/8SFG3/AAJ+/wAEn/8ABKP/AAOb/wADlP8AAo//AAOU/wADm/8ABKP/AAWq/wAG
+        sv8ABrr/AAfB/wAIyf8ACND/AAnY/wAK3/8ACuT/AAvm/wAM6f8ADOv/AA3u/wAO8P8ADvL/AA/0/wAQ
+        9v8AEPj/ABD4/wAQ+P8AEPf/AA/1/wAP8/8ADvD/AA3u/wAN7P8AC+n/ERvo/15l7v/BxPf/9fb9/8bJ
+        9P99geT/KzHN/wAGvP8ABKD/AAJy/wYIXP+1tcz/////////////////////////////////////////
+        ////////7+/v/8fHx/+pqan/m5ub/5qamv+UlJj/KSpx/wABdP8ABJb/AASj/wADm/8AA5T/AAKP/wAD
+        lP8AA5v/AASj/wAFq/8ABbL/AAa5/wAHwf8ACMj/AAjQ/wAJ1/8ACt7/AArj/wEM5v8CDuj/AAzr/wAN
+        7f8ADu//AA7x/wAP8/8AD/X/AA/2/wAQ9v8AD/b/AA/1/wAP8/8ADvH/AA7v/wAN7f8ADOv/AAvo/wkU
+        5/9RWez/oqbz/8PG9f+hpe3/aW7f/xshyP8ABbr/AASd/wACb/8ICVz/t7fN////////////////////
+        //////////////////////////////j4+P/T09P/srKy/56env+ampr/m5ub/05OfP8AAWr/AAOI/wAE
+        n/8AA5v/AAOU/wACj/8AA5T/AAOb/wAEov8ABar/AAWx/wAGuf8AB8D/AAfH/wAIz/8ACdb/AAnd/wAK
+        4/8jLej/NT7s/wMP6v8ADez/AA3u/wAO8P8ADvL/AA/z/wAP9P8AD/T/AA/0/wAP8/8ADvL/AA7w/wAN
+        7v8ADez/AAzp/wAL5/8GEOX/R0/q/4+U8P+gpO//hIjn/0ZL1v8JD8H/AAW3/wAEl/8AAWv/DQ5d/8TE
+        1P/////////////////////////////////////////////////9/f3/4uLi/7+/v/+mpqb/m5ub/5yc
+        m/94eIv/Cgxm/wACef8ABJb/AAOc/wADlP8AAo//AAOT/wADmv8ABKL/AAWp/wAFsP8ABrj/AAe//wAH
+        xv8ACM3/AAnV/wAI2/8VHuT/aXDu/1tj7/8FEOn/AAzr/wAN7f8ADe//AA7w/wAO8f8ADvL/AA7y/wAO
+        8v8ADvH/AA7w/wAN7v8ADez/AAzq/wAM6P8AC+b/Aw3k/zlC5/99g+z/g4fp/1Zb3P8YHsn/AAa9/wAG
+        s/8ABI7/AABk/xscZP/Z2eL///////////////////////////////////////////////////////Ly
+        8v/Ozs7/srKy/6CgoP+ampr/lZWX/zAxbv8AAGr/AAOF/wADmf8AA5X/AAKP/wACkv8AA5n/AASh/wAF
+        qP8ABa//AAa2/wAHvv8AB8X/AAjM/wAI0/8LFNv/WF/q/5me8/9KUuz/AQzo/wAM6v8ADev/AA3t/wAN
+        7v8ADu//AA7w/wAO8P8ADvD/AA7v/wAN7v8ADez/AAzr/wAM6f8AC+f/AAvl/wAK4v8WH+D/Q0rh/0JI
+        2/8aIc7/AQjC/wAGu/8ABaz/AAOC/wAAXf81NnT/7u7y////////////////////////////////////
+        ///////////////////8/Pz/4uLi/8PDw/+tra3/n5+f/5ycm/9ra4P/Bwlh/wACc/8AA4z/AAOV/wAC
+        j/8AApH/AAOY/wAEn/8ABKf/AAWu/wAGtf8ABrz/AAfD/wAHyv8HD9L/R07i/7K19P+3u/b/MTrp/wAK
+        5v8ADOj/AAzq/wAN7P8ADe3/AA3u/wAN7v8ADe7/AA3u/wAN7f8ADez/AAzr/wAM6f8AC+f/AAvl/wAK
+        4/8ACuD/AQra/wYP1P8GDs3/AAfF/wAHvv8ABrj/AAWh/wADdf8AAFf/YmKQ//39/P//////////////
+        //////////////////////////////////////////////f39//a2tr/wMDA/6+vr/+lpaX/mZmb/zk6
+        bv8AAGL/AAJ4/wACjf8AApD/AAKQ/wADl/8ABJ7/AASl/wAFrP8ABrP/AAa6/wAGwP8ID8n/Qkja/6ap
+        7//u7/z/n6Pz/xki5v8ACuX/AAvn/wAM6P8ADOr/AAzr/wAN7P8ADez/AA3s/wAN7P8ADOv/AAzq/wAM
+        6f8AC+f/AAvm/wAK5P8ACuH/AAnc/wAJ1v8ACM//AAfJ/wAHwv8ABrz/AAay/wAEkP8AAmn/BAVW/56e
+        uP//////////////////////////////////////////////////////////////////////9PT0/9zc
+        3P/IyMj/urq6/7S0s/+QkJz/HB1j/wAAZf8AAnn/AAKK/wACj/8AA5X/AAOc/wAEo/8ABar/AAWx/wAG
+        uP8SGMP/UVbX/6yv7v/w8Pz/6On7/2pw6/8HEeP/AArk/wAL5v8AC+f/AAzo/wAM6f8ADOr/AAzq/wAM
+        6v8ADOr/AAzp/wAM6P8AC+f/AAvl/wAL5P8ACuL/AArd/wAJ2P8ACNL/AAjM/wAHxf8AB7//AAa4/wAF
+        pf8AA33/AABd/yQkZ//Z2eL/////////////////////////////////////////////////////////
+        ///////////////////5+fn/6enp/9ra2v/R0dH/z8/O/4uLo/8QEWD/AABl/wACd/8AAoj/AAOT/wAD
+        mv8ABKH/AAWo/wAFr/8DCbb/TVLQ/6er6v/v7/v/8PD8/6Om7/8qMt//AAjQ/wAIyv8ACtr/AAvl/wAL
+        5v8AC+f/AAzo/wAM6P8ADOj/AAzo/wAL5/8AC+b/AAvl/wAK5P8ACuL/AAre/wAJ2f8ACdP/AAjN/wAH
+        yP8AB8H/AAa7/wAGsf8ABJD/AAJr/wAAVf9ra5P/+/v7////////////////////////////////////
+        //////////////////////////////////////////////7+/v/6+vr/9vb2//X19f/09PT/iIio/woK
+        W/8AAGP/AAFz/wACh/8AA5f/AASf/wAEpv8ABaz/AQez/z1Cyf+Lj+L/qq3r/4uP5/86QNb/BAu9/wAF
+        oP8ABJX/AAev/wAJ1v8AC+X/AAvl/wAL5v8AC+b/AAvm/wAL5v8AC+X/AAvk/wAK4/8ACuH/AAre/wAJ
+        2f8ACdT/AAjP/wAIyf8AB8P/AAe9/wAGtv8ABJ7/AAN4/wAAXP8bG2D/xMTR////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////T09v95eZz/CQlY/wAAXf8AAW3/AAKC/wADlP8ABKH/AAWp/wAFsP8HDbj/JyzF/zU6
+        yf8cIr3/BAmn/wADj/8DBXv/EhZ7/wQHiv8ABrH/AAnX/wAK4/8ACuT/AAvk/wAK5P8ACuP/AArj/wAK
+        4v8ACt//AAnc/wAJ2P8ACdT/AAjP/wAIyv8AB8X/AAe//wAGuf8ABaX/AAOC/wACZP8DA1X/c3OW//n5
+        +f//////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////8vL0/4KCov8TE1r/AABW/wABZf8AAnX/AAOE/wAD
+        kf8ABJr/AASe/wAEnf8ABJf/AAOL/wABe/8LDXT/a2yi/8XG1v9lZ7D/AgWN/wAGsP8ACdP/AArh/wAK
+        4f8ACuH/AArg/wAK3/8ACt3/AAna/wAJ1v8ACdP/AAjP/wAIyv8AB8X/AAfA/wAGuv8ABaj/AAOH/wAC
+        av8AAFf/Ojtx/9ra4P//////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////4+Pn/ra7A/z9A
+        c/8JClb/AABZ/wAAY/8AAW3/AAJz/wACdv8AAXX/AABv/wMFav8yNH//pKTC//b2+P//////7Oz2/1td
+        qf8BBIf/AAan/wAIx/8ACdn/AAnc/wAJ2/8ACdn/AAnX/wAJ1P8ACNH/AAjN/wAIyf8AB8X/AAfB/wAG
+        uP8ABaT/AAOG/wACbP8AAFn/IyNj/7W1xP//////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////l5en/nZ2y/1NTgP8lJmb/EhNf/woMXv8OEGL/Hh9r/0ZHg/+Sk7P/4+Pq////
+        ///////////////////o6fL/W12j/wMFf/8ABJf/AAey/wAIx/8ACNH/AAjT/wAI0f8ACM//AAjM/wAI
+        yP8AB8T/AAe9/wAFsP8ABJn/AAOA/wACaf8AAFn/Hx9h/6ChtP/7+/z/////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////z8/X/19fe/729y/+ursH/u7vL/9XV
+        3v/y8vT//////////////////////////////////////+3t8/9yc6r/DA55/wABg/8ABZf/AAap/wAG
+        tf8AB7z/AAe9/wAHu/8ABrX/AAaq/wAFmv8ABIf/AAN0/wABY/8CAln/LCxo/6Skt//5+fr/////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////+Pj5/6Ok
+        wv8uMH//AgRx/wABe/8AA4X/AASM/wAEjv8ABI3/AASH/wADfv8AA3L/AAFn/wABXP8PEFv/T098/729
+        yf/8+/z/////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////3d3l/4KCqf8xMnn/DA5p/wEDZ/8AAWj/AAFo/wABZf8AAWD/BAZd/xUX
+        X/9CQ3T/kpKp/+Pj5///////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////9/f3/4eHn/6urv/92dpv/WVmH/0lK
+        fP9JSnv/WlqF/3p6mP+srLz/4ODk//z8/P//////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////f39//X19v/t7e//6+vu//Pz9P/8/Pz/////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

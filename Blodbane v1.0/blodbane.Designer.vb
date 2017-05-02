@@ -251,6 +251,18 @@ Partial Class Blodbane
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -295,6 +307,8 @@ Partial Class Blodbane
         Me.GroupBox8.SuspendLayout()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1469,6 +1483,7 @@ Partial Class Blodbane
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage3.Controls.Add(Me.GroupBox3)
         Me.TabPage3.Controls.Add(Me.GroupBox7)
         Me.TabPage3.Controls.Add(Me.GroupBox6)
         Me.TabPage3.Controls.Add(Me.GroupBox5)
@@ -1748,6 +1763,83 @@ Partial Class Blodbane
         '
         Me.Timer1.Interval = 2000
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label40)
+        Me.GroupBox3.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox3.Controls.Add(Me.GroupBox4)
+        Me.GroupBox3.Controls.Add(Me.Button2)
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Label43)
+        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.TabStop = False
+        '
+        'Label40
+        '
+        resources.ApplyResources(Me.Label40, "Label40")
+        Me.Label40.Name = "Label40"
+        '
+        'RichTextBox2
+        '
+        resources.ApplyResources(Me.RichTextBox2, "RichTextBox2")
+        Me.RichTextBox2.Name = "RichTextBox2"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label41)
+        Me.GroupBox4.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox4.Controls.Add(Me.Button1)
+        Me.GroupBox4.Controls.Add(Me.Label42)
+        Me.GroupBox4.Controls.Add(Me.ListBox1)
+        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.TabStop = False
+        '
+        'Label41
+        '
+        resources.ApplyResources(Me.Label41, "Label41")
+        Me.Label41.Name = "Label41"
+        '
+        'DateTimePicker1
+        '
+        resources.ApplyResources(Me.DateTimePicker1, "DateTimePicker1")
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        '
+        'Button1
+        '
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label42
+        '
+        resources.ApplyResources(Me.Label42, "Label42")
+        Me.Label42.Name = "Label42"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        resources.ApplyResources(Me.ListBox1, "ListBox1")
+        Me.ListBox1.Name = "ListBox1"
+        '
+        'Button2
+        '
+        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Name = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
+        Me.TextBox1.Name = "TextBox1"
+        '
+        'Label43
+        '
+        resources.ApplyResources(Me.Label43, "Label43")
+        Me.Label43.Name = "Label43"
+        '
         'Blodbane
         '
         Me.AcceptButton = Me.BtnRegBlodgiver
@@ -1822,6 +1914,10 @@ Partial Class Blodbane
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2048,4 +2144,16 @@ Partial Class Blodbane
     Friend WithEvents nudUttak0p As NumericUpDown
     Friend WithEvents Label31 As Label
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label42 As Label
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label43 As Label
 End Class
