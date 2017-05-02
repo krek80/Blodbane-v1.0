@@ -789,7 +789,7 @@ Public Class Blodbane
         End If
     End Sub
 
-    'SQL - søk frem blodgiver og egenerklæring
+    'SQL - søk frem blodgiver
     Private Sub bgSøk(ByVal streng As String)
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
@@ -863,7 +863,6 @@ Public Class Blodbane
         lbxHKtrlJasvar.Items.Clear()
         index = lBxSøkResultater.SelectedIndex
         rad1 = giversøk.Select
-        MsgBox($"index: {index}")
         If IsDBNull(rad1(index)("blodtype")) Then
             rad1(index)("blodtype") = ""
         End If
@@ -1698,36 +1697,38 @@ Public Class Blodbane
                            dummyEpost, blodgiverObj.Passord1, blodgiverObj.Passord1, blodgiverObj.Kontaktform1) Then
 
             'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
-            If rBtnHKtrlIkkeGodkjent.Checked = True Then
-                svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
-                If svar = 7 Then
-                    Exit Sub
+            statuskode = CInt(txtValgtBlodgiverStatusKode.Text)
+            If personstatusB(statuskode) <> blodgiverObj.Status1 Then
+
+                If statuskode = 98 Then
+                    svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
+                    If svar = 7 Then
+                        Exit Sub
+                    End If
+                ElseIf statuskode = 35 Then
+                    svar = MsgBox("Er du sikker på at du vil godkjenne giveren?", MsgBoxStyle.YesNo)
+                    If svar = 7 Then
+                        Exit Sub
+                    End If
                 Else
-                    statuskode = 98
-                End If
-            ElseIf rBtnHKtrlGodkjent.Checked = True Then
-                svar = MsgBox("Er du sikker på at du vil godkjenne giveren?", MsgBoxStyle.YesNo)
-                If svar = 7 Then
-                    Exit Sub
-                Else
-                    statuskode = 35
+                    MsgBox($"Blodgiverstatusen blir nå satt til {personstatusB(statuskode)}, statuskode {statuskode}", MsgBoxStyle.Information)
                 End If
             Else
-                'statuskode = txtValgtBlodgiverStatusKode.Text
+                MsgBox("Blodgiverstatusen er ikke endret.", MsgBoxStyle.Information)
             End If
 
             'i = lBxSøkResultater.SelectedIndex
             epost = blodgiverObj.Epost1        '...for å holde på opprinnelig epost som trengs i WHERE-klausul lenger ned
-            'tlf1 = txtValgtBlodgiverTelefon1.Text
-            'tlf2 = txtValgtBlodgiverTelefon2.Text
-            'adresse = txtValgtBlodgiverAdresse.Text
-            'postnr = txtValgtBlodgiverPostnr.Text
-            'status = txtValgtBlodgiverStatusKode.Text
-            'preferanse = rTxtValgBlodgiverTimepref.Text
-            'merknad = rTxtValgtBlodgiverInternMrknd.Text
-            'kommentar = rTxtHKtrlKommentar.Text
-            'Oppdaterer tabell blodgiver og blodgiverobjektet først
-            OppdaterBlodgiver(txtValgtBlodgiverEpost.Text, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
+                'tlf1 = txtValgtBlodgiverTelefon1.Text
+                'tlf2 = txtValgtBlodgiverTelefon2.Text
+                'adresse = txtValgtBlodgiverAdresse.Text
+                'postnr = txtValgtBlodgiverPostnr.Text
+                'status = txtValgtBlodgiverStatusKode.Text
+                'preferanse = rTxtValgBlodgiverTimepref.Text
+                'merknad = rTxtValgtBlodgiverInternMrknd.Text
+                'kommentar = rTxtHKtrlKommentar.Text
+                'Oppdaterer tabell blodgiver og blodgiverobjektet først
+                OppdaterBlodgiver(txtValgtBlodgiverEpost.Text, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
                                    blodgiverObj.Etternavn1, txtValgtBlodgiverAdresse.Text,
                                    txtValgtBlodgiverPostnr.Text, txtValgtBlodgiverTelefon1.Text,
                                    txtValgtBlodgiverTelefon2.Text, statuskode,
@@ -1735,27 +1736,32 @@ Public Class Blodbane
                                    blodgiverObj.Siste_blodtapping1, blodgiverObj.Kontaktform1,
                                    rTxtValgtBlodgiverInternMrknd.Text, rTxtValgBlodgiverTimepref.Text)
 
-            'Oppdaterer egenerklæringsobjektet deretter med evt ny epostadresse fra blodgiverobjektet
-            EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Date.Now, egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
+                'Oppdaterer egenerklæringsobjektet deretter med evt ny epostadresse fra blodgiverobjektet
+                EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Date.Now, egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
 
-            spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt=@datoen, kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
-            'Try
-            tilkobling.Open()
-            'Oppdaterer tabellen egenerklaering
-            If GroupBoxIntervju.Visible = True Then
-                Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
-                sqlSpørring.Parameters.Add("datoen", MySqlDbType.DateTime).Value = egenerklaeringObj.DatotidAnsatt1
-                sqlSpørring.ExecuteNonQuery()
-            End If
+                spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt=@datoen, kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
+                'Try
+                tilkobling.Open()
+                'Oppdaterer tabellen egenerklaering
+                If GroupBoxIntervju.Visible = True Then
+                    Dim sqlSpørring As New MySqlCommand($"{spørring}", tilkobling)
+                    sqlSpørring.Parameters.Add("datoen", MySqlDbType.DateTime).Value = egenerklaeringObj.DatotidAnsatt1
+                    sqlSpørring.ExecuteNonQuery()
+                End If
 
-            tilkobling.Close()
-            '    Catch
-            'MsgBox("Feil")
-            'End Try
-            bgSøk(bgSøkParameter)
-            visBG()
-        Else
-            MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
+                tilkobling.Close()
+                '    Catch
+                'MsgBox("Feil")
+                'End Try
+                bgSøkParameter = $" bl.fodselsnummer = '{blodgiverObj.Fodselsnummer1}'"
+                txtSøk.Text = blodgiverObj.Fodselsnummer1
+            txtSøkStatuskode.Text = ""
+            cBxSøkBlodtype.Text = ""
+                bgSøk(bgSøkParameter)
+                giverSøkTreff()
+                'visBG()
+            Else
+                MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
         End If
         ' End If
     End Sub
