@@ -742,6 +742,8 @@ Public Class Blodbane
             bgSøkParameter = $" bl.blodtype = '{blodtype}' and br.statuskode = '{statuskode}'"
         ElseIf (personnummer <> "") And (statuskode > 0) And (blodtype <> "") Then
             bgSøkParameter = $" bl.blodtype = '{blodtype}' and br.statuskde = '{statuskode}' and bl.fødselsnummer = '{personnummer}'"
+        Else
+            bgSøkParameter = " bl.blodtype = 'tulleblodtype'"
         End If
         bgSøk(bgSøkParameter)
         Me.Cursor = Cursors.Default
@@ -1790,6 +1792,8 @@ Public Class Blodbane
                 MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
         End If
         ' End If
+        MsgBox("Eventuelle endringer ble oppdatert i databasen.", MsgBoxStyle.Information)
+
     End Sub
 
 
