@@ -5,7 +5,6 @@ Public Class Blodbane
     Dim giversøk As New DataTable
     Dim egenerklaering As New DataTable
     Dim innkalling As New DataTable
-    Dim blodlager As New DataTable
     Public ansatt As New DataTable
     Public statuser As New DataTable
     Dim Erklæringspørsmål As New DataTable
@@ -1085,6 +1084,7 @@ Public Class Blodbane
     'Åpne blodlager
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
         Dim B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma As Integer
+        Dim blodlager As New DataTable
         Dim kritiskNiva As Integer = 10     'Hardkodet definisjon av kritisk nivå
 
         Me.Cursor = Cursors.WaitCursor
@@ -1099,10 +1099,10 @@ Public Class Blodbane
         'Kast gamle blodplater og blodlegemer - plasma kastes ikke
         For Each rad In blodlager.Rows
             If (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 35) And (rad("produkttypeid") = "1") Then
-                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 1", tilkobling)
+                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 3 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 1", tilkobling)
                 sqlSpørring2.ExecuteNonQuery()
             ElseIf (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 7) And (rad("produkttypeid") = "2") Then
-                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 2", tilkobling)
+                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 3 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 2", tilkobling)
                 sqlSpørring2.ExecuteNonQuery()
             End If
         Next
@@ -1387,8 +1387,33 @@ Public Class Blodbane
         BtnBekreftEndretTime.Enabled = True
     End Sub
 
+    'Ta ut blod fra lager
     Private Sub BttnRegUttakBlod_Click(sender As Object, e As EventArgs) Handles BttnRegUttakBlod.Click
-        MsgBox("Nå skal egentlig blod fjernes fra lager, men det er ikke programmert enda...")
+        Dim i As Integer
+        Dim verdier(9) As Integer
+        Dim nud(9) As Object
+        Dim blodlager As New DataTable
+        verdier(0) = nudUttakB_plat.Value : verdier(1) = nudUttakB_plasm.Value : verdier(2) = nudUttak0p.Value
+        verdier(3) = nudUttak0m.Value : verdier(4) = nudUttakAp.Value : verdier(5) = nudUttakAm.Value
+
+
+        tilkobling.Open()
+        Dim rad As DataRow
+        Dim da As New MySqlDataAdapter
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost ORDER BY datotid DESC", tilkobling)
+        da.SelectCommand = sqlSpørring
+        da.Fill(blodlager)
+
+        For i = 0 To 9
+
+
+
+
+        Next
+        For i = 0 To 9
+            nud(i).value = 0
+        Next
+        MsgBox("Uttak registrert")
     End Sub
 
     'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
@@ -1455,7 +1480,7 @@ Public Class Blodbane
     'Registrer gitt blod
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnBlodgivingGjført.Click
         Dim ansatt, SettInnSpørring, SøkSpørring, timeID As String
-        Dim bPlater, bLegemer, bPlasma, i As Integer
+        Dim bPlater, bLegemer, bPlasma, i, j As Integer
         Dim timedato As Date
         Dim feil As Boolean
         Dim antallProdukt(2) As Integer
@@ -1466,12 +1491,12 @@ Public Class Blodbane
         bPlater = nudResBlodplater.Value
         bPlasma = nudResPlasma.Value
         bLegemer = nudResRødeBlodl.Value
-        antallProdukt(1) = bPlater : antallProdukt(2) = bPlasma : antallProdukt(0) = bLegemer
+        antallProdukt(0) = bLegemer : antallProdukt(1) = bPlater : antallProdukt(2) = bPlasma
         If ansatt = "" Then
             MsgBox("Registrer hvem som tappet blodet")
             Exit Sub
         End If
-        SøkSpørring = $"SELECT * FROM timeavtale t INNER JOIN blodgiver b ON t.bgepost = b.epost WHERE t.bgepost = '{presentertGiver}' ORDER BY datotid DESC"
+        SøkSpørring = $"SELECT * FROM timeavtale t INNER JOIN blodgiver b ON t.bgepost = b.epost WHERE t.bgepost = '{blodgiverObj.Epost1}' ORDER BY datotid DESC"
         Try
             tilkobling.Open()
             Dim sqlSpørring As New MySqlCommand($"{SøkSpørring}", tilkobling)
@@ -1491,11 +1516,12 @@ Public Class Blodbane
                 i = i + 1
             Next
             If feil = False Then
-                i = 1
-                For i = 1 To 3
-                    SettInnSpørring = $"INSERT INTO blodprodukt (timeid, produkttypeid, statusid, antall) VALUES ({timeID}, {i}, 1, {antallProdukt(i - 1)} )"
-                    Dim sqlSpørring2 As New MySqlCommand($"{SettInnSpørring}", tilkobling)
-                    sqlSpørring2.ExecuteNonQuery()
+                For i = 0 To 2
+                    For j = 1 To antallProdukt(i)
+                        SettInnSpørring = $"INSERT INTO blodprodukt (timeid, produkttypeid, statusid, antall) VALUES ({timeID}, {i + 1}, 1, 1)"
+                        Dim sqlSpørring2 As New MySqlCommand($"{SettInnSpørring}", tilkobling)
+                        sqlSpørring2.ExecuteNonQuery()
+                    Next
                 Next
             Else
                 MsgBox("Denne personen har ikke gitt blod i dag")
