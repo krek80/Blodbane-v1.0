@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports System.Globalization
 Public Class Blodbane
+    Const dagerFørNyInnkalling As Integer = 70
     Dim giversøk As New DataTable
     Dim egenerklaering As New DataTable
     Dim innkalling As New DataTable
@@ -369,13 +370,13 @@ Public Class Blodbane
             Dim spoerring As String = ""
             If bgRegSkjemadata_OK(txtBgInn_fornavn.Text, txtBgInn_etternavn.Text,
                                   txtBgInn_personnr.Text, txtBgInn_poststed.Text,
-                                  txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text,
+                                  txtBgInn_tlfnr.Text, txtBgInn_tlfnr2.Text, txtBgInn_Land.Text,
                                   txtBgInn_epost.Text, txtBgInn_passord1.Text,
                                   txtBgInn_passord2.Text, "hvilkenSomHelstStreng") Then
 
                 spoerring = $"INSERT INTO bruker VALUES ('{txtBgInn_epost.Text}', '{txtBgInn_passord1.Text}'"
                 spoerring = spoerring & $", '{txtBgInn_fornavn.Text}', '{txtBgInn_etternavn.Text}', '{txtBgInn_adresse.Text}'"
-                spoerring = spoerring & $", '{txtBgInn_postnr.Text}', '{txtBgInn_tlfnr.Text}', '{txtBgInn_tlfnr2.Text}'"
+                spoerring = spoerring & $", '{txtBgInn_postnr.Text}', '{txtBgInn_Land.Text}', '{txtBgInn_tlfnr.Text}', '{txtBgInn_tlfnr2.Text}'"
                 spoerring = spoerring & $", '11')"
                 Dim sql1 As New MySqlCommand(spoerring, tilkobling)
                 Dim da1 As New MySqlDataAdapter
@@ -411,7 +412,7 @@ Public Class Blodbane
     Private Function bgRegSkjemadata_OK(ByVal fornavnInn As String, ByVal etternavnInn As String,
                                         ByVal personnrInn As String, ByVal poststedInn As String,
                                         ByVal telefon1Inn As String, ByVal telefon2Inn As String,
-                                        ByVal epostInn As String, ByVal passord1Inn As String,
+                                        ByVal land As String, ByVal epostInn As String, ByVal passord1Inn As String,
                                         ByVal passord2Inn As String, ByVal kontaktformInn As String) As Boolean
 
         Dim sqlSporring1 As String = "SELECT epost FROM bruker WHERE epost = @eposten"
@@ -432,7 +433,7 @@ Public Class Blodbane
         da2.SelectCommand = sql2
         da2.Fill(interntabell2)
 
-        If fornavnInn = "" Or etternavnInn = "" Or telefon1Inn = "" Or kontaktformInn = "" Then
+        If fornavnInn = "" Or etternavnInn = "" Or telefon1Inn = "" Or kontaktformInn = "" Or land = "" Then
             MsgBox("Alle felt må være utfylt unntatt gateadresse- og telefon 2-feltet må være utfylt.", MsgBoxStyle.Critical)
             Return False
         End If
@@ -595,7 +596,7 @@ Public Class Blodbane
                 epost = txtPersDataEpost.Text
             End If
             If bgRegSkjemadata_OK(blodgiverObj.Fornavn1, blodgiverObj.Etternavn1, dummyFodselsnr, txtPersDataPoststed.Text,
-                                  txtPersDataTlf.Text, txtPersDataTlf2.Text, epost,
+                                  txtPersDataTlf.Text, txtPersDataTlf2.Text, "tulleland", epost,
                                   blodgiverObj.Passord1, blodgiverObj.Passord1, blodgiverObj.Kontaktform1) Then
                 Me.Cursor = Cursors.WaitCursor
                 tilkobling.Open()
@@ -745,7 +746,8 @@ Public Class Blodbane
         Else
             bgSøkParameter = " bl.blodtype = 'tulleblodtype'"
         End If
-        bgSøk(bgSøkParameter)
+        MsgBox($"Søkedato: {dummyDato.AddDays(-1)}")
+        bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
         Me.Cursor = Cursors.Default
         giverSøkTreff()
     End Sub
@@ -791,15 +793,16 @@ Public Class Blodbane
     End Sub
 
     'SQL - søk frem blodgiver
-    Private Sub bgSøk(ByVal streng As String)
+    Private Sub bgSøk(ByVal streng As String, ByVal søkeDato As Date)
         Dim sqlStreng As String
         Dim da As New MySqlDataAdapter
+
         giversøk.Clear()
-        egenerklaering.Clear()
+        tilkobling.Open()
         Try
-            tilkobling.Open()
-            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE"
+            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE bl.siste_blodtapping > @datoParameter AND"
             Dim sqlSpørring As New MySqlCommand($"{sqlStreng}{streng}", tilkobling)
+            sqlSpørring.Parameters.Add("datoParameter", MySqlDbType.DateTime).Value = søkeDato
             da.SelectCommand = sqlSpørring
             da.Fill(giversøk)
 
@@ -970,6 +973,7 @@ Public Class Blodbane
         txtValgtBlodgiverTelefon1.Text = blodgiverObj.Telefon11
         txtValgtBlodgiverTelefon2.Text = blodgiverObj.Telefon21
         txtValgtBlodgiverAdresse.Text = blodgiverObj.Adresse1
+        txtValgtBlodgiverFødeland.Text = rad1(index)("fødeland")
         txtValgtBlodgiverPostnr.Text = blodgiverObj.Postnr1
         cBxValgtBlodgiverStatusTekst.Text = blodgiverObj.Status1
         rTxtValgBlodgiverTimepref.Text = blodgiverObj.Timepreferanse1
@@ -1081,6 +1085,56 @@ Public Class Blodbane
             End If
         Next
         tilkobling.Close()
+        SøkBlodgivereTilNyInnkalling()
+    End Sub
+
+    'Søker opp blodgivere som ikke har gitt blod de siste "dagerFørNyInnkalling" dager.
+    Private Sub SøkBlodgivereTilNyInnkalling()
+        Dim sisteDato As Date = Date.Today.AddDays(-dagerFørNyInnkalling)
+        Dim delSøkeStreng As String = $" br.statuskode < '30' OR br.statuskode BETWEEN 40 AND 49 ORDER BY bl.siste_blodtapping"
+        bgSøk(delSøkeStreng, sisteDato)
+        lBxNyBGInnkalling.Items.Clear()
+        For Each rad In giversøk.Rows
+            lBxNyBGInnkalling.Items.Add($"{rad("fornavn")} {rad("etternavn")} {vbTab}{rad("blodtype")}{vbTab}{rad("beskrivelse")}{vbTab}Sist gitt blod: {rad("siste_blodtapping")}")
+        Next
+    End Sub
+
+    'Aktiverer innkallingsknappen for å kalle inn en blodgiver
+    Private Sub lBxNyBGInnkalling_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lBxNyBGInnkalling.SelectedIndexChanged
+        Dim index As Integer = lBxNyBGInnkalling.SelectedIndex
+        Dim rad1() As DataRow = giversøk.Select
+        If IsDBNull(rad1(Index)("blodtype")) Then
+            rad1(Index)("blodtype") = ""
+        End If
+        If IsDBNull(rad1(Index)("merknad")) Then
+            rad1(Index)("merknad") = ""
+        End If
+        If IsDBNull(rad1(Index)("timepreferanse")) Then
+            rad1(Index)("timepreferanse") = ""
+        End If
+        If IsDBNull(rad1(Index)("adresse")) Then
+            rad1(Index)("adresse") = ""
+        End If
+        If IsDBNull(rad1(Index)("telefon2")) Then
+            rad1(Index)("telefon2") = ""
+        End If
+        If IsDBNull(rad1(Index)("siste_blodtapping")) Then
+            rad1(Index)("siste_blodtapping") = dummyDato
+        End If
+        BlodgiverObjOppdat(rad1(Index)("epost"), rad1(Index)("passord"), rad1(Index)("fornavn"),
+                           rad1(Index)("etternavn"), rad1(Index)("adresse"), rad1(Index)("postnr"),
+                           rad1(Index)("telefon1"), rad1(Index)("telefon2"), rad1(Index)("statuskode"),
+                           rad1(Index)("fodselsnummer"), rad1(Index)("blodtype"), rad1(Index)("siste_blodtapping"),
+                           rad1(Index)("kontaktform"), rad1(Index)("merknad"), rad1(Index)("timepreferanse"))
+
+        btnNyBGInnkalling.Enabled = True
+    End Sub
+
+    'Lager en ny innkallingstime til valgt blodgiver
+    Private Sub btnNyBGInnkalling_Click(sender As Object, e As EventArgs) Handles btnNyBGInnkalling.Click
+
+        SøkBlodgivereTilNyInnkalling()
+        btnNyBGInnkalling.Enabled = False
     End Sub
 
     'Åpne blodlager
@@ -1721,14 +1775,14 @@ Public Class Blodbane
         'rTxtValgBlodgiverTimepref.Text <> blodgiverObj.Timepreferanse1 Or
         'rTxtValgtBlodgiverInternMrknd.Text <> blodgiverObj.Merknad1 Then
         If bgRegSkjemadata_OK(blodgiverObj.Fornavn1, blodgiverObj.Etternavn1, dummyFodselsnr,
-                           postnummer(blodgiverObj.Postnr1), blodgiverObj.Telefon11, blodgiverObj.Telefon21,
+                           postnummer(blodgiverObj.Postnr1), blodgiverObj.Telefon11, blodgiverObj.Telefon21, "tulleland",
                            dummyEpost, blodgiverObj.Passord1, blodgiverObj.Passord1, blodgiverObj.Kontaktform1) Then
 
             'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
             statuskode = CInt(txtValgtBlodgiverStatusKode.Text)
             If personstatusB(statuskode) <> blodgiverObj.Status1 Then
 
-                If statuskode = 98 Then
+                If statuskode = 20 Then
                     svar = MsgBox("Er du sikker på at du vil sette status til ''Ikke godkjent giver''?", MsgBoxStyle.YesNo)
                     If svar = 7 Then
                         Exit Sub
@@ -1785,9 +1839,9 @@ Public Class Blodbane
             txtSøk.Text = blodgiverObj.Fodselsnummer1
             txtSøkStatuskode.Text = ""
             cBxSøkBlodtype.Text = ""
-            bgSøk(bgSøkParameter)
+            bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
             giverSøkTreff()
-            'visBG()
+
         Else
             MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
         End If

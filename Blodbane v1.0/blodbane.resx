@@ -125,13 +125,13 @@
     <value>Segoe UI, 10.2pt</value>
   </data>
   <data name="FilToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 23</value>
+    <value>38, 27</value>
   </data>
   <data name="FilToolStripMenuItem.Text" xml:space="preserve">
     <value>Fil</value>
   </data>
   <data name="InstillingerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 23</value>
+    <value>101, 27</value>
   </data>
   <data name="InstillingerToolStripMenuItem.Text" xml:space="preserve">
     <value>Instillinger</value>
@@ -139,8 +139,12 @@
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 2, 0, 2</value>
+  </data>
   <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1413, 27</value>
+    <value>1884, 31</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -161,30 +165,29 @@
   <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LagreToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+S</value>
   </data>
   <data name="LagreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
+    <value>254, 28</value>
   </data>
   <data name="LagreToolStripMenuItem.Text" xml:space="preserve">
     <value>Lagre fanekort</value>
   </data>
   <data name="LoggPåansattToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
+    <value>254, 28</value>
   </data>
   <data name="LoggPåansattToolStripMenuItem.Text" xml:space="preserve">
     <value>Logg på (ansatt)</value>
   </data>
   <data name="LoggAvToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
+    <value>254, 28</value>
   </data>
   <data name="LoggAvToolStripMenuItem.Text" xml:space="preserve">
     <value>Logg av</value>
   </data>
   <data name="AvsluttToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
+    <value>254, 28</value>
   </data>
   <data name="AvsluttToolStripMenuItem.Text" xml:space="preserve">
     <value>Avslutt</value>
@@ -193,7 +196,7 @@
     <value>Ctrl+S</value>
   </data>
   <data name="LagreToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 24</value>
+    <value>186, 28</value>
   </data>
   <data name="LagreToolStripMenuItem1.Text" xml:space="preserve">
     <value>Lagre</value>
@@ -205,10 +208,13 @@
     <value>Microsoft Sans Serif, 40pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 3</value>
+    <value>3, 4</value>
+  </data>
+  <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1391, 135</value>
+    <value>1855, 166</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -551,13 +557,16 @@ Gi en gave for livet</value>
     <value>25</value>
   </data>
   <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 135</value>
+    <value>580, 166</value>
+  </data>
+  <data name="TableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>519, 587</value>
+    <value>692, 722</value>
   </data>
   <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -575,16 +584,19 @@ Gi en gave for livet</value>
     <value>1</value>
   </data>
   <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txtBgInn_Land" Row="9" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label21" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label7" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label6" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_fornavn" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_poststed" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_personnr" Row="3" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_adresse" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label8" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_epost" Row="8" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_tlfnr" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_postnr" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label114" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_tlfnr2" Row="7" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_etternavn" Row="2" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label9" Row="0" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="Label13" Row="12" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="txtBgInn_passord2" Row="11" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label113" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label89" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_passord1" Row="10" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="BtnRegBlodgiver" Row="12" RowSpan="1" Column="2" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,40,Percent,30,Percent,30" /&gt;&lt;Rows Styles="Percent,12,01441,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txtBgInn_Land" Row="9" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label21" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label7" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label6" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_fornavn" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_poststed" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_personnr" Row="3" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_adresse" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label8" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_epost" Row="8" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_tlfnr" Row="6" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_postnr" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Label114" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_tlfnr2" Row="7" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="txtBgInn_etternavn" Row="2" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label9" Row="0" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="Label13" Row="12" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="txtBgInn_passord2" Row="11" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="Label113" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Label89" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txtBgInn_passord1" Row="10" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="BtnRegBlodgiver" Row="12" RowSpan="1" Column="2" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,40,Percent,30,Percent,30" /&gt;&lt;Rows Styles="Percent,12,01441,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Percent,6,768121,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="txtBgInn_Land.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="txtBgInn_Land.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 391</value>
+    <value>318, 483</value>
+  </data>
+  <data name="txtBgInn_Land.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_Land.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_Land.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -614,10 +626,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 393</value>
+    <value>195, 484</value>
+  </data>
+  <data name="Label21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>77, 20</value>
   </data>
   <data name="Label21.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
@@ -650,10 +665,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 276</value>
+    <value>208, 340</value>
+  </data>
+  <data name="Label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
+    <value>64, 20</value>
   </data>
   <data name="Label7.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -686,10 +704,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 237</value>
+    <value>121, 292</value>
+  </data>
+  <data name="Label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 17</value>
+    <value>151, 20</value>
   </data>
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -722,10 +743,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 198</value>
+    <value>167, 244</value>
+  </data>
+  <data name="Label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>105, 20</value>
   </data>
   <data name="Label5.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -758,10 +782,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 159</value>
+    <value>71, 196</value>
+  </data>
+  <data name="Label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 17</value>
+    <value>201, 20</value>
   </data>
   <data name="Label4.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -794,10 +821,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 120</value>
+    <value>192, 148</value>
+  </data>
+  <data name="Label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 17</value>
+    <value>80, 20</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -830,10 +860,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 81</value>
+    <value>203, 100</value>
+  </data>
+  <data name="Label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
+    <value>69, 20</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -857,10 +890,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_fornavn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 79</value>
+    <value>318, 99</value>
+  </data>
+  <data name="txtBgInn_fornavn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_fornavn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_fornavn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -884,10 +920,13 @@ Gi en gave for livet</value>
     <value>False</value>
   </data>
   <data name="txtBgInn_poststed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 235</value>
+    <value>487, 291</value>
+  </data>
+  <data name="txtBgInn_poststed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_poststed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
+    <value>159, 22</value>
   </data>
   <data name="txtBgInn_poststed.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -908,10 +947,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_personnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 157</value>
+    <value>318, 195</value>
+  </data>
+  <data name="txtBgInn_personnr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_personnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_personnr.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -932,10 +974,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_adresse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 196</value>
+    <value>318, 243</value>
+  </data>
+  <data name="txtBgInn_adresse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_adresse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_adresse.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -965,10 +1010,13 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 354</value>
+    <value>214, 436</value>
+  </data>
+  <data name="Label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
+    <value>58, 20</value>
   </data>
   <data name="Label8.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -992,10 +1040,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_epost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 352</value>
+    <value>318, 435</value>
+  </data>
+  <data name="txtBgInn_epost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_epost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_epost.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1016,10 +1067,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_tlfnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 274</value>
+    <value>318, 339</value>
+  </data>
+  <data name="txtBgInn_tlfnr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_tlfnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_tlfnr.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1040,10 +1094,13 @@ Gi en gave for livet</value>
     <value>Right</value>
   </data>
   <data name="txtBgInn_postnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 235</value>
+    <value>320, 291</value>
+  </data>
+  <data name="txtBgInn_postnr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_postnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
+    <value>159, 22</value>
   </data>
   <data name="txtBgInn_postnr.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1070,13 +1127,10 @@ Gi en gave for livet</value>
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="Label114.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 315</value>
-  </data>
-  <data name="Label114.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>195, 388</value>
   </data>
   <data name="Label114.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 17</value>
+    <value>78, 20</value>
   </data>
   <data name="Label114.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1100,13 +1154,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_tlfnr2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 313</value>
+    <value>318, 387</value>
   </data>
   <data name="txtBgInn_tlfnr2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="txtBgInn_tlfnr2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_tlfnr2.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1127,10 +1181,13 @@ Gi en gave for livet</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_etternavn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 118</value>
+    <value>318, 147</value>
+  </data>
+  <data name="txtBgInn_etternavn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_etternavn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_etternavn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1160,13 +1217,16 @@ Gi en gave for livet</value>
     <value>NoControl</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 10</value>
+    <value>172, 14</value>
+  </data>
+  <data name="Label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label9.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>550, 50</value>
+    <value>733, 62</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 50</value>
+    <value>347, 58</value>
   </data>
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -1200,10 +1260,13 @@ REGISTRER DEG HER</value>
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 501</value>
+    <value>25, 628</value>
+  </data>
+  <data name="Label13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>478, 34</value>
+    <value>641, 20</value>
   </data>
   <data name="Label13.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -1230,13 +1293,13 @@ REGISTRER DEG HER</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_passord2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 469</value>
+    <value>318, 579</value>
   </data>
   <data name="txtBgInn_passord2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="txtBgInn_passord2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_passord2.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1263,13 +1326,10 @@ REGISTRER DEG HER</value>
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="Label113.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 471</value>
-  </data>
-  <data name="Label113.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>150, 580</value>
   </data>
   <data name="Label113.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 17</value>
+    <value>123, 20</value>
   </data>
   <data name="Label113.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1299,10 +1359,13 @@ REGISTRER DEG HER</value>
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="Label89.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 432</value>
+    <value>66, 532</value>
+  </data>
+  <data name="Label89.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label89.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 17</value>
+    <value>206, 20</value>
   </data>
   <data name="Label89.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -1326,10 +1389,13 @@ REGISTRER DEG HER</value>
     <value>None</value>
   </data>
   <data name="txtBgInn_passord1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 430</value>
+    <value>318, 531</value>
+  </data>
+  <data name="txtBgInn_passord1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtBgInn_passord1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 20</value>
+    <value>332, 22</value>
   </data>
   <data name="txtBgInn_passord1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1353,10 +1419,13 @@ REGISTRER DEG HER</value>
     <value>Microsoft Sans Serif, 20pt, style=Bold</value>
   </data>
   <data name="BtnRegBlodgiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 541</value>
+    <value>43, 666</value>
+  </data>
+  <data name="BtnRegBlodgiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BtnRegBlodgiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 42</value>
+    <value>605, 52</value>
   </data>
   <data name="BtnRegBlodgiver.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1455,13 +1524,16 @@ REGISTRER DEG HER</value>
     <value>5</value>
   </data>
   <data name="TableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1057, 492</value>
+    <value>1409, 606</value>
+  </data>
+  <data name="TableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="TableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 220</value>
+    <value>440, 271</value>
   </data>
   <data name="TableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1485,10 +1557,13 @@ REGISTRER DEG HER</value>
     <value>None</value>
   </data>
   <data name="txtAInn_passord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 127</value>
+    <value>196, 156</value>
+  </data>
+  <data name="txtAInn_passord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtAInn_passord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 20</value>
+    <value>224, 22</value>
   </data>
   <data name="txtAInn_passord.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -1512,10 +1587,13 @@ REGISTRER DEG HER</value>
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="BttnLoggpåGiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 173</value>
+    <value>30, 212</value>
+  </data>
+  <data name="BttnLoggpåGiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BttnLoggpåGiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 38</value>
+    <value>380, 47</value>
   </data>
   <data name="BttnLoggpåGiver.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1545,10 +1623,13 @@ REGISTRER DEG HER</value>
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 2</value>
+    <value>97, 4</value>
+  </data>
+  <data name="Label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 50</value>
+    <value>246, 58</value>
   </data>
   <data name="Label10.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1582,10 +1663,13 @@ For registrerte givere</value>
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 70</value>
+    <value>86, 86</value>
+  </data>
+  <data name="Label11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 25</value>
+    <value>86, 29</value>
   </data>
   <data name="Label11.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1618,10 +1702,13 @@ For registrerte givere</value>
     <value>NoControl</value>
   </data>
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 125</value>
+    <value>66, 153</value>
+  </data>
+  <data name="Label12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 25</value>
+    <value>106, 29</value>
   </data>
   <data name="Label12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1645,10 +1732,13 @@ For registrerte givere</value>
     <value>None</value>
   </data>
   <data name="txtAInn_epost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 72</value>
+    <value>196, 89</value>
+  </data>
+  <data name="txtAInn_epost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtAInn_epost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 20</value>
+    <value>224, 22</value>
   </data>
   <data name="txtAInn_epost.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1672,10 +1762,13 @@ For registrerte givere</value>
     <value>True</value>
   </data>
   <data name="PanelPåmelding.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
+    <value>4, 37</value>
+  </data>
+  <data name="PanelPåmelding.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="PanelPåmelding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1400, 725</value>
+    <value>1867, 892</value>
   </data>
   <data name="PanelPåmelding.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1711,10 +1804,13 @@ For registrerte givere</value>
     <value>0</value>
   </data>
   <data name="PanelGiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
+    <value>4, 37</value>
+  </data>
+  <data name="PanelGiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="PanelGiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1400, 725</value>
+    <value>1867, 892</value>
   </data>
   <data name="PanelGiver.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1762,10 +1858,13 @@ For registrerte givere</value>
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="TbCtrlBlodgiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
+  </data>
+  <data name="TbCtrlBlodgiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TbCtrlBlodgiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1394, 712</value>
+    <value>1859, 876</value>
   </data>
   <data name="TbCtrlBlodgiver.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1819,13 +1918,16 @@ For registrerte givere</value>
     <value>2</value>
   </data>
   <data name="TabPage5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 29</value>
+  </data>
+  <data name="TabPage5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1386, 682</value>
+    <value>1851, 843</value>
   </data>
   <data name="TabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1852,10 +1954,13 @@ For registrerte givere</value>
     <value>Microsoft Sans Serif, 19.8000011pt</value>
   </data>
   <data name="btnEgenerklSendInn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>545, 468</value>
+    <value>727, 576</value>
+  </data>
+  <data name="btnEgenerklSendInn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnEgenerklSendInn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>478, 92</value>
+    <value>637, 113</value>
   </data>
   <data name="btnEgenerklSendInn.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1948,16 +2053,16 @@ For registrerte givere</value>
     <value>5</value>
   </data>
   <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>545, 174</value>
+    <value>727, 214</value>
   </data>
   <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>478, 282</value>
+    <value>637, 347</value>
   </data>
   <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1981,10 +2086,13 @@ For registrerte givere</value>
     <value>True</value>
   </data>
   <data name="rBtnEgenerklNei.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 162</value>
+    <value>339, 199</value>
+  </data>
+  <data name="rBtnEgenerklNei.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rBtnEgenerklNei.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 21</value>
+    <value>55, 24</value>
   </data>
   <data name="rBtnEgenerklNei.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2008,10 +2116,13 @@ For registrerte givere</value>
     <value>True</value>
   </data>
   <data name="rBtnEgenerklJa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 162</value>
+    <value>228, 199</value>
+  </data>
+  <data name="rBtnEgenerklJa.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rBtnEgenerklJa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 21</value>
+    <value>48, 24</value>
   </data>
   <data name="rBtnEgenerklJa.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2035,13 +2146,13 @@ For registrerte givere</value>
     <value>NoControl</value>
   </data>
   <data name="btnEgenerklForrigeSpm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 197</value>
+    <value>5, 242</value>
   </data>
   <data name="btnEgenerklForrigeSpm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="btnEgenerklForrigeSpm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 36</value>
+    <value>293, 44</value>
   </data>
   <data name="btnEgenerklForrigeSpm.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2065,13 +2176,10 @@ For registrerte givere</value>
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="lblEgenerklSpmTekst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 28</value>
-  </data>
-  <data name="lblEgenerklSpmTekst.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>9, 34</value>
   </data>
   <data name="lblEgenerklSpmTekst.Size" type="System.Drawing.Size, System.Drawing">
-    <value>467, 121</value>
+    <value>623, 149</value>
   </data>
   <data name="lblEgenerklSpmTekst.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2098,13 +2206,10 @@ For registrerte givere</value>
     <value>True</value>
   </data>
   <data name="lblEgenerklSpmNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 259</value>
-  </data>
-  <data name="lblEgenerklSpmNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>5, 319</value>
   </data>
   <data name="lblEgenerklSpmNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
+    <value>73, 20</value>
   </data>
   <data name="lblEgenerklSpmNr.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2125,13 +2230,13 @@ For registrerte givere</value>
     <value>4</value>
   </data>
   <data name="btnEgenerklNesteSpm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 196</value>
+    <value>339, 241</value>
   </data>
   <data name="btnEgenerklNesteSpm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="btnEgenerklNesteSpm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 36</value>
+    <value>293, 44</value>
   </data>
   <data name="btnEgenerklNesteSpm.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2155,10 +2260,13 @@ For registrerte givere</value>
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="RichTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>8, 7</value>
+  </data>
+  <data name="RichTextBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RichTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1374, 140</value>
+    <value>1831, 171</value>
   </data>
   <data name="RichTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2232,13 +2340,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="TabPagBGPersInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 29</value>
+  </data>
+  <data name="TabPagBGPersInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPagBGPersInfo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPagBGPersInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1386, 682</value>
+    <value>1851, 843</value>
   </data>
   <data name="TabPagBGPersInfo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2262,10 +2373,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="GroupBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>796, 47</value>
+    <value>1080, 63</value>
+  </data>
+  <data name="GroupBox9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox9.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 338</value>
+    <value>459, 416</value>
   </data>
   <data name="GroupBox9.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -2298,10 +2415,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="BttnLoggavGiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>810, 413</value>
+    <value>1080, 508</value>
+  </data>
+  <data name="BttnLoggavGiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BttnLoggavGiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 49</value>
+    <value>357, 60</value>
   </data>
   <data name="BttnLoggavGiver.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2397,10 +2517,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="GpBxTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 47</value>
+    <value>536, 58</value>
+  </data>
+  <data name="GpBxTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxTime.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GpBxTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 616</value>
+    <value>517, 758</value>
   </data>
   <data name="GpBxTime.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2424,10 +2550,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 50</value>
+    <value>33, 62</value>
+  </data>
+  <data name="Label19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 17</value>
+    <value>212, 20</value>
   </data>
   <data name="Label19.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2448,10 +2577,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="RTxtPrefInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 72</value>
+    <value>37, 89</value>
+  </data>
+  <data name="RTxtPrefInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RTxtPrefInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 102</value>
+    <value>444, 125</value>
   </data>
   <data name="RTxtPrefInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2532,10 +2664,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4</value>
   </data>
   <data name="GpBxEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 232</value>
+    <value>24, 286</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxEndreInnkalling.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GpBxEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 356</value>
+    <value>469, 438</value>
   </data>
   <data name="GpBxEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2565,10 +2703,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label144.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 29</value>
+    <value>11, 36</value>
+  </data>
+  <data name="Label144.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label144.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 17</value>
+    <value>297, 20</value>
   </data>
   <data name="Label144.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -2589,10 +2730,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="DateTimePickerNyTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 56</value>
+    <value>12, 69</value>
+  </data>
+  <data name="DateTimePickerNyTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="DateTimePickerNyTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 23</value>
+    <value>445, 27</value>
   </data>
   <data name="DateTimePickerNyTime.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2613,10 +2757,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="BtnBekreftEndretTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 304</value>
+    <value>12, 374</value>
+  </data>
+  <data name="BtnBekreftEndretTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BtnBekreftEndretTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 30</value>
+    <value>445, 37</value>
   </data>
   <data name="BtnBekreftEndretTime.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -2643,10 +2790,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="LblLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
+    <value>8, 107</value>
+  </data>
+  <data name="LblLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="LblLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>107, 20</value>
   </data>
   <data name="LblLedigeTimer.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -2667,13 +2817,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="LBxLedigeTimer.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="LBxLedigeTimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 110</value>
+    <value>12, 135</value>
+  </data>
+  <data name="LBxLedigeTimer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="LBxLedigeTimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 123</value>
+    <value>445, 144</value>
   </data>
   <data name="LBxLedigeTimer.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -2694,10 +2847,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="BtnEndreInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 185</value>
+    <value>37, 228</value>
+  </data>
+  <data name="BtnEndreInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BtnEndreInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 31</value>
+    <value>444, 38</value>
   </data>
   <data name="BtnEndreInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2721,10 +2877,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="TxtNesteInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 20</value>
+    <value>205, 25</value>
+  </data>
+  <data name="TxtNesteInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TxtNesteInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 23</value>
+    <value>275, 27</value>
   </data>
   <data name="TxtNesteInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2745,10 +2904,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 25</value>
+    <value>33, 31</value>
+  </data>
+  <data name="Label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 17</value>
+    <value>160, 20</value>
   </data>
   <data name="Label18.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3168,10 +3330,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="GpBxPersonData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 47</value>
+    <value>8, 58</value>
+  </data>
+  <data name="GpBxPersonData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxPersonData.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GpBxPersonData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 616</value>
+    <value>520, 758</value>
   </data>
   <data name="GpBxPersonData.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -3198,10 +3366,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="btnAvbrytNyttPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 578</value>
+    <value>327, 711</value>
+  </data>
+  <data name="btnAvbrytNyttPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnAvbrytNyttPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 32</value>
+    <value>163, 39</value>
   </data>
   <data name="btnAvbrytNyttPassord.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -3225,10 +3396,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="txtNyttPassordGjenta.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 548</value>
+    <value>235, 674</value>
+  </data>
+  <data name="txtNyttPassordGjenta.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNyttPassordGjenta.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 23</value>
+    <value>255, 27</value>
   </data>
   <data name="txtNyttPassordGjenta.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -3255,10 +3429,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="lblNyttPassordGjenta.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 550</value>
+    <value>31, 677</value>
+  </data>
+  <data name="lblNyttPassordGjenta.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNyttPassordGjenta.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 17</value>
+    <value>155, 20</value>
   </data>
   <data name="lblNyttPassordGjenta.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -3282,10 +3459,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>2</value>
   </data>
   <data name="txtNyttPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 513</value>
+    <value>235, 631</value>
+  </data>
+  <data name="txtNyttPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNyttPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 23</value>
+    <value>256, 27</value>
   </data>
   <data name="txtNyttPassord.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -3312,10 +3492,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="lblNyttPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 516</value>
+    <value>32, 635</value>
+  </data>
+  <data name="lblNyttPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNyttPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
+    <value>104, 20</value>
   </data>
   <data name="lblNyttPassord.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -3339,10 +3522,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4</value>
   </data>
   <data name="txtGmlPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 479</value>
+    <value>235, 590</value>
+  </data>
+  <data name="txtGmlPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtGmlPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 23</value>
+    <value>256, 27</value>
   </data>
   <data name="txtGmlPassord.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -3369,10 +3555,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="lblGmlPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 481</value>
+    <value>32, 592</value>
+  </data>
+  <data name="lblGmlPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblGmlPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 17</value>
+    <value>159, 20</value>
   </data>
   <data name="lblGmlPassord.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -3402,10 +3591,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="btnLagreNyttPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 578</value>
+    <value>35, 711</value>
+  </data>
+  <data name="btnLagreNyttPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnLagreNyttPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 32</value>
+    <value>284, 39</value>
   </data>
   <data name="btnLagreNyttPassord.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -3438,10 +3630,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label143.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 177</value>
+    <value>32, 218</value>
+  </data>
+  <data name="Label143.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label143.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 20</value>
+    <value>443, 25</value>
   </data>
   <data name="Label143.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -3468,10 +3663,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label142.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 262</value>
+    <value>263, 322</value>
+  </data>
+  <data name="Label142.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label142.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 17</value>
+    <value>43, 20</value>
   </data>
   <data name="Label142.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -3495,10 +3693,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtPersDataPoststed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 260</value>
+    <value>315, 320</value>
+  </data>
+  <data name="txtPersDataPoststed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataPoststed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 23</value>
+    <value>176, 27</value>
   </data>
   <data name="txtPersDataPoststed.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -3522,10 +3723,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="btnPersDataSettNyttPassord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 497</value>
+    <value>35, 612</value>
+  </data>
+  <data name="btnPersDataSettNyttPassord.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnPersDataSettNyttPassord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 32</value>
+    <value>455, 39</value>
   </data>
   <data name="btnPersDataSettNyttPassord.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -3546,10 +3750,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>11</value>
   </data>
   <data name="txtPersDataEpost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 374</value>
+    <value>180, 460</value>
+  </data>
+  <data name="txtPersDataEpost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataEpost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataEpost.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -3573,10 +3780,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 376</value>
+    <value>31, 463</value>
+  </data>
+  <data name="Label22.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 17</value>
+    <value>112, 20</value>
   </data>
   <data name="Label22.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -3603,10 +3813,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 416</value>
+    <value>32, 512</value>
+  </data>
+  <data name="Label20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>99, 20</value>
   </data>
   <data name="Label20.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -3633,10 +3846,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label122.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 128</value>
+    <value>32, 158</value>
+  </data>
+  <data name="Label122.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label122.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 17</value>
+    <value>84, 20</value>
   </data>
   <data name="Label122.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -3669,10 +3885,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>INGEN KONTAKT</value>
   </data>
   <data name="CBxKontaktform.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 414</value>
+    <value>181, 510</value>
+  </data>
+  <data name="CBxKontaktform.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="CBxKontaktform.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 25</value>
+    <value>309, 28</value>
   </data>
   <data name="CBxKontaktform.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -3696,10 +3915,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtPersDataSisteUnders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 124</value>
+    <value>181, 153</value>
+  </data>
+  <data name="txtPersDataSisteUnders.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataSisteUnders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataSisteUnders.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -3723,10 +3945,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label121.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 93</value>
+    <value>32, 114</value>
+  </data>
+  <data name="Label121.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label121.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>102, 20</value>
   </data>
   <data name="Label121.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -3750,10 +3975,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtPersDataBlodtype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 89</value>
+    <value>181, 110</value>
+  </data>
+  <data name="txtPersDataBlodtype.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataBlodtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataBlodtype.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -3771,10 +3999,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>19</value>
   </data>
   <data name="txtPersDataTlf2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 333</value>
+    <value>181, 410</value>
+  </data>
+  <data name="txtPersDataTlf2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataTlf2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataTlf2.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -3798,10 +4029,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 336</value>
+    <value>32, 414</value>
+  </data>
+  <data name="Label25.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
+    <value>73, 20</value>
   </data>
   <data name="Label25.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -3822,10 +4056,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>21</value>
   </data>
   <data name="txtPersDataTlf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 297</value>
+    <value>181, 366</value>
+  </data>
+  <data name="txtPersDataTlf.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataTlf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataTlf.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -3849,10 +4086,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 300</value>
+    <value>32, 369</value>
+  </data>
+  <data name="Label24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
+    <value>64, 20</value>
   </data>
   <data name="Label24.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -3879,10 +4119,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 59</value>
+    <value>32, 73</value>
+  </data>
+  <data name="Label17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 17</value>
+    <value>128, 20</value>
   </data>
   <data name="Label17.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -3906,10 +4149,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtPersDataGStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 56</value>
+    <value>181, 69</value>
+  </data>
+  <data name="txtPersDataGStatus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataGStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataGStatus.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -3927,10 +4173,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>25</value>
   </data>
   <data name="txtPersDataGateAdr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 221</value>
+    <value>181, 272</value>
+  </data>
+  <data name="txtPersDataGateAdr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataGateAdr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataGateAdr.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3951,10 +4200,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 24</value>
+    <value>32, 30</value>
+  </data>
+  <data name="Label14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
+    <value>76, 20</value>
   </data>
   <data name="Label14.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3978,10 +4230,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="btnPersDataLagreEndringer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 453</value>
+    <value>35, 558</value>
+  </data>
+  <data name="btnPersDataLagreEndringer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnPersDataLagreEndringer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 32</value>
+    <value>455, 39</value>
   </data>
   <data name="btnPersDataLagreEndringer.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -4005,10 +4260,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtPersDataNavn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 20</value>
+    <value>181, 25</value>
+  </data>
+  <data name="txtPersDataNavn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataNavn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 23</value>
+    <value>309, 27</value>
   </data>
   <data name="txtPersDataNavn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4032,10 +4290,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 223</value>
+    <value>32, 274</value>
+  </data>
+  <data name="Label15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>105, 20</value>
   </data>
   <data name="Label15.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4056,10 +4317,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>30</value>
   </data>
   <data name="txtPersDataPostnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 260</value>
+    <value>181, 320</value>
+  </data>
+  <data name="txtPersDataPostnr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPersDataPostnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 23</value>
+    <value>60, 27</value>
   </data>
   <data name="txtPersDataPostnr.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -4083,10 +4347,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 262</value>
+    <value>32, 322</value>
+  </data>
+  <data name="Label16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>104, 20</value>
   </data>
   <data name="Label16.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4112,66 +4379,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="PanelAnsatt.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblVelkommen.Name" xml:space="preserve">
-    <value>lblVelkommen</value>
-  </data>
-  <data name="&gt;&gt;lblVelkommen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblVelkommen.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;lblVelkommen.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.Name" xml:space="preserve">
-    <value>BttnLoggavAnsatt</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;BttnLoggavAnsatt.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="PanelAnsatt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
-  </data>
-  <data name="PanelAnsatt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1400, 725</value>
-  </data>
-  <data name="PanelAnsatt.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="PanelAnsatt.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Name" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="lblVelkommen.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4179,10 +4386,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 20pt</value>
   </data>
   <data name="lblVelkommen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 6</value>
+    <value>7, 7</value>
+  </data>
+  <data name="lblVelkommen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblVelkommen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 31</value>
+    <value>197, 39</value>
   </data>
   <data name="lblVelkommen.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4206,10 +4416,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="BttnLoggavAnsatt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1066, 6</value>
+    <value>1421, 7</value>
+  </data>
+  <data name="BttnLoggavAnsatt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BttnLoggavAnsatt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 50</value>
+    <value>405, 62</value>
   </data>
   <data name="BttnLoggavAnsatt.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4228,66 +4441,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;BttnLoggavAnsatt.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
-    <value>TabPage1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 62</value>
-  </data>
-  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1390, 660</value>
-  </data>
-  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>PanelAnsatt</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;GroupBox12.Name" xml:space="preserve">
     <value>GroupBox12</value>
@@ -4338,13 +4491,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 29</value>
+  </data>
+  <data name="TabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1382, 630</value>
+    <value>1845, 779</value>
   </data>
   <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4363,6 +4519,390 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="Label40.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label40.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 40</value>
+  </data>
+  <data name="Label40.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 20</value>
+  </data>
+  <data name="Label40.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label40.Text" xml:space="preserve">
+    <value>Velg en blodgiver å kalle inn:</value>
+  </data>
+  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
+    <value>Label40</value>
+  </data>
+  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lBxNyBGInnkalling.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lBxNyBGInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 78</value>
+  </data>
+  <data name="lBxNyBGInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 224</value>
+  </data>
+  <data name="lBxNyBGInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Name" xml:space="preserve">
+    <value>lBxNyBGInnkalling</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnNyBGInnkalling.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnNyBGInnkalling.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16.2pt</value>
+  </data>
+  <data name="btnNyBGInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 315</value>
+  </data>
+  <data name="btnNyBGInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 46</value>
+  </data>
+  <data name="btnNyBGInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnNyBGInnkalling.Text" xml:space="preserve">
+    <value>Kall inn valgte blodgiver</value>
+  </data>
+  <data name="&gt;&gt;btnNyBGInnkalling.Name" xml:space="preserve">
+    <value>btnNyBGInnkalling</value>
+  </data>
+  <data name="&gt;&gt;btnNyBGInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNyBGInnkalling.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;btnNyBGInnkalling.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>907, 18</value>
+  </data>
+  <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>780, 375</value>
+  </data>
+  <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="GroupBox4.Text" xml:space="preserve">
+    <value>Kall inn blodgivere</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.Name" xml:space="preserve">
+    <value>ListBox6</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.Parent" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;ListBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 546</value>
+  </data>
+  <data name="GroupBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox7.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 225</value>
+  </data>
+  <data name="GroupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GroupBox7.Text" xml:space="preserve">
+    <value>Tidligere givere</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
+    <value>GroupBox7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.Name" xml:space="preserve">
+    <value>lBxInnkallIMorgen</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.Parent" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallIMorgen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 282</value>
+  </data>
+  <data name="GroupBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 256</value>
+  </data>
+  <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GroupBox6.Text" xml:space="preserve">
+    <value>Innkallinger i morgen</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.Name" xml:space="preserve">
+    <value>lBxInnkallDagens</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.Parent" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;lBxInnkallDagens.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 18</value>
+  </data>
+  <data name="GroupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 256</value>
+  </data>
+  <data name="GroupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupBox5.Text" xml:space="preserve">
+    <value>Dagens innkallinger</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="TabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1845, 779</value>
+  </data>
+  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Innkalling</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Name" xml:space="preserve">
+    <value>GroupBox8</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="TabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1845, 779</value>
+  </data>
+  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>Blodlager</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 76</value>
+  </data>
+  <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1853, 812</value>
+  </data>
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PanelAnsatt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 37</value>
+  </data>
+  <data name="PanelAnsatt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="PanelAnsatt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1867, 892</value>
+  </data>
+  <data name="PanelAnsatt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="PanelAnsatt.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Name" xml:space="preserve">
+    <value>PanelAnsatt</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelAnsatt.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;btnBlodgivingGjført.Name" xml:space="preserve">
     <value>btnBlodgivingGjført</value>
@@ -4509,10 +5049,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>11</value>
   </data>
   <data name="GroupBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1110, 166</value>
+    <value>1480, 204</value>
+  </data>
+  <data name="GroupBox12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox12.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 221</value>
+    <value>355, 272</value>
   </data>
   <data name="GroupBox12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4533,10 +5079,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="btnBlodgivingGjført.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 176</value>
+    <value>12, 217</value>
+  </data>
+  <data name="btnBlodgivingGjført.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnBlodgivingGjført.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 36</value>
+    <value>333, 44</value>
   </data>
   <data name="btnBlodgivingGjført.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -4563,10 +5112,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label141.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 132</value>
+    <value>255, 162</value>
+  </data>
+  <data name="Label141.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label141.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>51, 20</value>
   </data>
   <data name="Label141.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -4587,10 +5139,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>1</value>
   </data>
   <data name="nudResRødeBlodl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 127</value>
+    <value>165, 156</value>
+  </data>
+  <data name="nudResRødeBlodl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudResRødeBlodl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
+    <value>85, 27</value>
   </data>
   <data name="nudResRødeBlodl.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -4614,10 +5169,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label140.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 106</value>
+    <value>255, 130</value>
+  </data>
+  <data name="Label140.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label140.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>51, 20</value>
   </data>
   <data name="Label140.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -4638,10 +5196,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="nudResPlasma.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 101</value>
+    <value>165, 124</value>
+  </data>
+  <data name="nudResPlasma.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudResPlasma.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
+    <value>85, 27</value>
   </data>
   <data name="nudResPlasma.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -4662,10 +5223,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label139.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 81</value>
+    <value>255, 100</value>
+  </data>
+  <data name="Label139.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label139.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
+    <value>51, 20</value>
   </data>
   <data name="Label139.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -4686,10 +5250,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>5</value>
   </data>
   <data name="nudResBlodplater.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 76</value>
+    <value>165, 94</value>
+  </data>
+  <data name="nudResBlodplater.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudResBlodplater.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
+    <value>85, 27</value>
   </data>
   <data name="nudResBlodplater.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -4713,10 +5280,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label138.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 132</value>
+    <value>8, 162</value>
+  </data>
+  <data name="Label138.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label138.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 17</value>
+    <value>135, 20</value>
   </data>
   <data name="Label138.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4743,10 +5313,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label137.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 106</value>
+    <value>8, 130</value>
+  </data>
+  <data name="Label137.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label137.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
+    <value>65, 20</value>
   </data>
   <data name="Label137.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4770,10 +5343,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label116.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 80</value>
+    <value>8, 98</value>
+  </data>
+  <data name="Label116.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label116.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+    <value>85, 20</value>
   </data>
   <data name="Label116.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4794,10 +5370,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>9</value>
   </data>
   <data name="cbxAnsattUtførtTapping.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 31</value>
+    <value>155, 38</value>
+  </data>
+  <data name="cbxAnsattUtførtTapping.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbxAnsattUtførtTapping.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 25</value>
+    <value>192, 28</value>
   </data>
   <data name="cbxAnsattUtførtTapping.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4818,10 +5397,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label115.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
+    <value>8, 41</value>
+  </data>
+  <data name="Label115.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label115.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
+    <value>116, 20</value>
   </data>
   <data name="Label115.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5166,10 +5748,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>26</value>
   </data>
   <data name="gpBxValgtBlodgiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 166</value>
+    <value>16, 204</value>
+  </data>
+  <data name="gpBxValgtBlodgiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gpBxValgtBlodgiver.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="gpBxValgtBlodgiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>554, 433</value>
+    <value>739, 533</value>
   </data>
   <data name="gpBxValgtBlodgiver.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -5193,10 +5781,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtValgtBlodgiverFødeland.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 71</value>
+    <value>117, 87</value>
+  </data>
+  <data name="txtValgtBlodgiverFødeland.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverFødeland.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>211, 27</value>
   </data>
   <data name="txtValgtBlodgiverFødeland.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -5220,10 +5811,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 74</value>
+    <value>13, 91</value>
+  </data>
+  <data name="Label23.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>77, 20</value>
   </data>
   <data name="Label23.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -5247,10 +5841,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtValgtBlodgiverSistTappDato.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 123</value>
+    <value>541, 151</value>
+  </data>
+  <data name="txtValgtBlodgiverSistTappDato.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverSistTappDato.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 23</value>
+    <value>177, 27</value>
   </data>
   <data name="txtValgtBlodgiverSistTappDato.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -5268,10 +5865,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>2</value>
   </data>
   <data name="txtValgtBlodgiverStatusKode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 150</value>
+    <value>472, 185</value>
+  </data>
+  <data name="txtValgtBlodgiverStatusKode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverStatusKode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 23</value>
+    <value>63, 27</value>
   </data>
   <data name="txtValgtBlodgiverStatusKode.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -5295,10 +5895,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtValgtBlodgiverSistTappDager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 123</value>
+    <value>472, 151</value>
+  </data>
+  <data name="txtValgtBlodgiverSistTappDager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverSistTappDager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 23</value>
+    <value>63, 27</value>
   </data>
   <data name="txtValgtBlodgiverSistTappDager.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -5322,10 +5925,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label120.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 128</value>
+    <value>353, 158</value>
+  </data>
+  <data name="Label120.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label120.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>106, 20</value>
   </data>
   <data name="Label120.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5346,10 +5952,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>5</value>
   </data>
   <data name="rTxtValgBlodgiverTimepref.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 227</value>
+    <value>12, 279</value>
+  </data>
+  <data name="rTxtValgBlodgiverTimepref.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rTxtValgBlodgiverTimepref.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 77</value>
+    <value>707, 94</value>
   </data>
   <data name="rTxtValgBlodgiverTimepref.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -5376,10 +5985,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label118.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 209</value>
+    <value>13, 257</value>
+  </data>
+  <data name="Label118.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label118.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 17</value>
+    <value>277, 20</value>
   </data>
   <data name="Label118.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -5400,10 +6012,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>7</value>
   </data>
   <data name="cBxValgtBlodgiverStatusTekst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 149</value>
+    <value>541, 183</value>
+  </data>
+  <data name="cBxValgtBlodgiverStatusTekst.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cBxValgtBlodgiverStatusTekst.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 25</value>
+    <value>177, 28</value>
   </data>
   <data name="cBxValgtBlodgiverStatusTekst.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -5427,10 +6042,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label117.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 154</value>
+    <value>353, 190</value>
+  </data>
+  <data name="Label117.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label117.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
+    <value>57, 20</value>
   </data>
   <data name="Label117.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -5451,10 +6069,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>9</value>
   </data>
   <data name="rTxtValgtBlodgiverInternMrknd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 325</value>
+    <value>12, 400</value>
+  </data>
+  <data name="rTxtValgtBlodgiverInternMrknd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rTxtValgtBlodgiverInternMrknd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 101</value>
+    <value>707, 123</value>
   </data>
   <data name="rTxtValgtBlodgiverInternMrknd.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -5478,10 +6099,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label112.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 309</value>
+    <value>13, 380</value>
+  </data>
+  <data name="Label112.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label112.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 17</value>
+    <value>249, 20</value>
   </data>
   <data name="Label112.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -5505,10 +6129,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtValgtBlodgiverPoststed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 71</value>
+    <value>541, 87</value>
+  </data>
+  <data name="txtValgtBlodgiverPoststed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverPoststed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 23</value>
+    <value>177, 27</value>
   </data>
   <data name="txtValgtBlodgiverPoststed.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -5526,10 +6153,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>12</value>
   </data>
   <data name="txtValgtBlodgiverPostnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 71</value>
+    <value>472, 87</value>
+  </data>
+  <data name="txtValgtBlodgiverPostnr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverPostnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 23</value>
+    <value>63, 27</value>
   </data>
   <data name="txtValgtBlodgiverPostnr.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -5553,10 +6183,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label109.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 76</value>
+    <value>353, 94</value>
+  </data>
+  <data name="Label109.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label109.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>104, 20</value>
   </data>
   <data name="Label109.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -5577,10 +6210,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>14</value>
   </data>
   <data name="txtValgtBlodgiverAdresse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 45</value>
+    <value>472, 55</value>
+  </data>
+  <data name="txtValgtBlodgiverAdresse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverAdresse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 23</value>
+    <value>247, 27</value>
   </data>
   <data name="txtValgtBlodgiverAdresse.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -5604,10 +6240,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label108.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 50</value>
+    <value>353, 62</value>
+  </data>
+  <data name="Label108.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label108.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>105, 20</value>
   </data>
   <data name="Label108.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -5628,10 +6267,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>16</value>
   </data>
   <data name="txtValgtBlodgiverTelefon2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 149</value>
+    <value>117, 183</value>
+  </data>
+  <data name="txtValgtBlodgiverTelefon2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverTelefon2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>211, 27</value>
   </data>
   <data name="txtValgtBlodgiverTelefon2.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -5655,10 +6297,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label107.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 152</value>
+    <value>13, 187</value>
+  </data>
+  <data name="Label107.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label107.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
+    <value>73, 20</value>
   </data>
   <data name="Label107.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -5679,10 +6324,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>18</value>
   </data>
   <data name="txtValgtBlodgiverTelefon1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 123</value>
+    <value>117, 151</value>
+  </data>
+  <data name="txtValgtBlodgiverTelefon1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverTelefon1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>211, 27</value>
   </data>
   <data name="txtValgtBlodgiverTelefon1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -5706,10 +6354,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label104.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 126</value>
+    <value>13, 155</value>
+  </data>
+  <data name="Label104.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label104.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
+    <value>73, 20</value>
   </data>
   <data name="Label104.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -5730,10 +6381,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>20</value>
   </data>
   <data name="txtValgtBlodgiverEpost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 97</value>
+    <value>117, 119</value>
+  </data>
+  <data name="txtValgtBlodgiverEpost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverEpost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>211, 27</value>
   </data>
   <data name="txtValgtBlodgiverEpost.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -5757,10 +6411,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label105.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 100</value>
+    <value>13, 123</value>
+  </data>
+  <data name="Label105.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label105.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
+    <value>58, 20</value>
   </data>
   <data name="Label105.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -5784,10 +6441,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtValgtBlodgiverPersnr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 20</value>
+    <value>117, 25</value>
+  </data>
+  <data name="txtValgtBlodgiverPersnr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverPersnr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>211, 27</value>
   </data>
   <data name="txtValgtBlodgiverPersnr.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -5811,10 +6471,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label103.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 23</value>
+    <value>13, 28</value>
+  </data>
+  <data name="Label103.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label103.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
+    <value>63, 20</value>
   </data>
   <data name="Label103.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -5838,10 +6501,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtValgtBlodgiverNavn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 46</value>
+    <value>117, 57</value>
+  </data>
+  <data name="txtValgtBlodgiverNavn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtValgtBlodgiverNavn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>211, 27</value>
   </data>
   <data name="txtValgtBlodgiverNavn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -5862,10 +6528,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label102.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 49</value>
+    <value>13, 60</value>
+  </data>
+  <data name="Label102.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label102.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 17</value>
+    <value>47, 20</value>
   </data>
   <data name="Label102.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6006,10 +6675,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>9</value>
   </data>
   <data name="gpBxHelseKontroll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 166</value>
+    <value>763, 204</value>
+  </data>
+  <data name="gpBxHelseKontroll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gpBxHelseKontroll.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="gpBxHelseKontroll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>532, 433</value>
+    <value>709, 533</value>
   </data>
   <data name="gpBxHelseKontroll.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6030,10 +6705,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>2</value>
   </data>
   <data name="btnHKtrlIntProfGjgått.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 395</value>
+    <value>315, 486</value>
+  </data>
+  <data name="btnHKtrlIntProfGjgått.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnHKtrlIntProfGjgått.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 32</value>
+    <value>375, 39</value>
   </data>
   <data name="btnHKtrlIntProfGjgått.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -6114,10 +6792,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4</value>
   </data>
   <data name="GroupBoxIntervju.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 82</value>
+    <value>307, 101</value>
+  </data>
+  <data name="GroupBoxIntervju.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBoxIntervju.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBoxIntervju.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 313</value>
+    <value>392, 385</value>
   </data>
   <data name="GroupBoxIntervju.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -6144,10 +6828,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="rBtnHKtrlIkkeGodkjent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 21</value>
+    <value>208, 26</value>
+  </data>
+  <data name="rBtnHKtrlIkkeGodkjent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rBtnHKtrlIkkeGodkjent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 21</value>
+    <value>126, 24</value>
   </data>
   <data name="rBtnHKtrlIkkeGodkjent.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -6177,10 +6864,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label110.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
+    <value>8, 55</value>
+  </data>
+  <data name="Label110.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label110.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>95, 20</value>
   </data>
   <data name="Label110.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -6204,10 +6894,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="rBtnHKtrlGodkjent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 21</value>
+    <value>101, 26</value>
+  </data>
+  <data name="rBtnHKtrlGodkjent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rBtnHKtrlGodkjent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
+    <value>96, 24</value>
   </data>
   <data name="rBtnHKtrlGodkjent.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -6231,10 +6924,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>2</value>
   </data>
   <data name="rTxtHKtrlKommentar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 62</value>
+    <value>8, 76</value>
+  </data>
+  <data name="rTxtHKtrlKommentar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="rTxtHKtrlKommentar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 245</value>
+    <value>375, 301</value>
   </data>
   <data name="rTxtHKtrlKommentar.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -6261,10 +6957,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label106.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 23</value>
+    <value>8, 28</value>
+  </data>
+  <data name="Label106.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label106.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
+    <value>71, 20</value>
   </data>
   <data name="Label106.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -6291,10 +6990,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtHKtrlEKDatoGjennomg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 53</value>
+    <value>475, 65</value>
+  </data>
+  <data name="txtHKtrlEKDatoGjennomg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtHKtrlEKDatoGjennomg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 23</value>
+    <value>215, 27</value>
   </data>
   <data name="txtHKtrlEKDatoGjennomg.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6318,10 +7020,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label101.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 56</value>
+    <value>308, 69</value>
+  </data>
+  <data name="Label101.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label101.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 17</value>
+    <value>141, 20</value>
   </data>
   <data name="Label101.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -6345,10 +7050,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtHKtrlGjennomgAv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 28</value>
+    <value>475, 34</value>
+  </data>
+  <data name="txtHKtrlGjennomgAv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtHKtrlGjennomgAv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 23</value>
+    <value>215, 27</value>
   </data>
   <data name="txtHKtrlGjennomgAv.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -6372,10 +7080,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label97.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 31</value>
+    <value>308, 38</value>
+  </data>
+  <data name="Label97.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label97.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 17</value>
+    <value>126, 20</value>
   </data>
   <data name="Label97.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -6396,13 +7107,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>5</value>
   </data>
   <data name="lbxHKtrlJasvar.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="lbxHKtrlJasvar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 93</value>
+    <value>16, 114</value>
+  </data>
+  <data name="lbxHKtrlJasvar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lbxHKtrlJasvar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 293</value>
+    <value>261, 344</value>
   </data>
   <data name="lbxHKtrlJasvar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -6423,10 +7137,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label111.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 75</value>
+    <value>13, 92</value>
+  </data>
+  <data name="Label111.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label111.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 17</value>
+    <value>235, 20</value>
   </data>
   <data name="Label111.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -6450,10 +7167,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="txtHKtrlSisteEgenerkl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 46</value>
+    <value>17, 57</value>
+  </data>
+  <data name="txtHKtrlSisteEgenerkl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtHKtrlSisteEgenerkl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 23</value>
+    <value>260, 27</value>
   </data>
   <data name="txtHKtrlSisteEgenerkl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6474,10 +7194,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label100.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 26</value>
+    <value>13, 32</value>
+  </data>
+  <data name="Label100.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label100.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 17</value>
+    <value>201, 20</value>
   </data>
   <data name="Label100.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6633,10 +7356,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="GpBxSøk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 15</value>
+    <value>16, 18</value>
+  </data>
+  <data name="GpBxSøk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GpBxSøk.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GpBxSøk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1364, 145</value>
+    <value>1819, 178</value>
   </data>
   <data name="GpBxSøk.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6657,10 +7386,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="btnSøkTømSkjema.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 50</value>
+    <value>141, 62</value>
+  </data>
+  <data name="btnSøkTømSkjema.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnSøkTømSkjema.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 28</value>
+    <value>235, 34</value>
   </data>
   <data name="btnSøkTømSkjema.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -6681,10 +7413,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="txtSøkStatuskode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 53</value>
+    <value>491, 65</value>
+  </data>
+  <data name="txtSøkStatuskode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtSøkStatuskode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
+    <value>33, 27</value>
   </data>
   <data name="txtSøkStatuskode.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -6729,10 +7464,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>AB-</value>
   </data>
   <data name="cBxSøkBlodtype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 24</value>
+    <value>491, 30</value>
+  </data>
+  <data name="cBxSøkBlodtype.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cBxSøkBlodtype.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 25</value>
+    <value>243, 28</value>
   </data>
   <data name="cBxSøkBlodtype.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -6756,10 +7494,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label119.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 27</value>
+    <value>399, 33</value>
+  </data>
+  <data name="Label119.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label119.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
+    <value>74, 20</value>
   </data>
   <data name="Label119.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -6783,10 +7524,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 16.2pt</value>
   </data>
   <data name="BttnSøkGiver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 86</value>
+    <value>12, 106</value>
+  </data>
+  <data name="BttnSøkGiver.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BttnSøkGiver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>542, 49</value>
+    <value>723, 60</value>
   </data>
   <data name="BttnSøkGiver.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -6834,10 +7578,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Ikke godkjent giver</value>
   </data>
   <data name="cBxSøkStatusbeskrivelse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 51</value>
+    <value>533, 63</value>
+  </data>
+  <data name="cBxSøkStatusbeskrivelse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cBxSøkStatusbeskrivelse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 25</value>
+    <value>200, 28</value>
   </data>
   <data name="cBxSøkStatusbeskrivelse.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6858,10 +7605,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label99.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 54</value>
+    <value>399, 66</value>
+  </data>
+  <data name="Label99.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label99.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
+    <value>57, 20</value>
   </data>
   <data name="Label99.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -6888,10 +7638,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label98.Location" type="System.Drawing.Point, System.Drawing">
-    <value>554, 10</value>
+    <value>739, 12</value>
+  </data>
+  <data name="Label98.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label98.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>86, 20</value>
   </data>
   <data name="Label98.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -6912,13 +7665,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>7</value>
   </data>
   <data name="lBxSøkResultater.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="lBxSøkResultater.Location" type="System.Drawing.Point, System.Drawing">
-    <value>557, 26</value>
+    <value>743, 32</value>
+  </data>
+  <data name="lBxSøkResultater.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lBxSøkResultater.Size" type="System.Drawing.Size, System.Drawing">
-    <value>801, 55</value>
+    <value>1067, 64</value>
   </data>
   <data name="lBxSøkResultater.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -6936,10 +7692,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>8</value>
   </data>
   <data name="txtSøk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 24</value>
+    <value>141, 30</value>
+  </data>
+  <data name="txtSøk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtSøk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 23</value>
+    <value>233, 27</value>
   </data>
   <data name="txtSøk.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6960,10 +7719,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 27</value>
+    <value>8, 33</value>
+  </data>
+  <data name="Label27.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 17</value>
+    <value>123, 20</value>
   </data>
   <data name="Label27.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6983,122 +7745,17 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1382, 630</value>
-  </data>
-  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Innkalling</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.Name" xml:space="preserve">
-    <value>ListBox6</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.Parent" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;ListBox6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 444</value>
-  </data>
-  <data name="GroupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>634, 183</value>
-  </data>
-  <data name="GroupBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GroupBox7.Text" xml:space="preserve">
-    <value>Tidligere givere</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Name" xml:space="preserve">
-    <value>GroupBox7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="ListBox6.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="ListBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
+    <value>8, 27</value>
+  </data>
+  <data name="ListBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ListBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>622, 157</value>
+    <value>828, 184</value>
   </data>
   <data name="ListBox6.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -7115,50 +7772,17 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;ListBox6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lBxInnkallIMorgen.Name" xml:space="preserve">
-    <value>lBxInnkallIMorgen</value>
-  </data>
-  <data name="&gt;&gt;lBxInnkallIMorgen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lBxInnkallIMorgen.Parent" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;lBxInnkallIMorgen.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 229</value>
-  </data>
-  <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>634, 208</value>
-  </data>
-  <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GroupBox6.Text" xml:space="preserve">
-    <value>Innkallinger i morgen</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="lBxInnkallIMorgen.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="lBxInnkallIMorgen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
+    <value>8, 27</value>
+  </data>
+  <data name="lBxInnkallIMorgen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lBxInnkallIMorgen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>622, 174</value>
+    <value>828, 204</value>
   </data>
   <data name="lBxInnkallIMorgen.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -7175,50 +7799,17 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;lBxInnkallIMorgen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lBxInnkallDagens.Name" xml:space="preserve">
-    <value>lBxInnkallDagens</value>
-  </data>
-  <data name="&gt;&gt;lBxInnkallDagens.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lBxInnkallDagens.Parent" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;lBxInnkallDagens.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 15</value>
-  </data>
-  <data name="GroupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>634, 208</value>
-  </data>
-  <data name="GroupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GroupBox5.Text" xml:space="preserve">
-    <value>Dagens innkallinger</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="lBxInnkallDagens.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="lBxInnkallDagens.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
+    <value>8, 23</value>
+  </data>
+  <data name="lBxInnkallDagens.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lBxInnkallDagens.Size" type="System.Drawing.Size, System.Drawing">
-    <value>622, 174</value>
+    <value>828, 204</value>
   </data>
   <data name="lBxInnkallDagens.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7234,69 +7825,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;lBxInnkallDagens.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Name" xml:space="preserve">
-    <value>GroupBox8</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.Parent" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox8.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1382, 630</value>
-  </data>
-  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>Blodlager</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
-    <value>TabPage2</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;TextBox3.Name" xml:space="preserve">
     <value>TextBox3</value>
@@ -7359,10 +7887,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>4</value>
   </data>
   <data name="GroupBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1033, 34</value>
+    <value>1377, 42</value>
+  </data>
+  <data name="GroupBox14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox14.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 357</value>
+    <value>457, 439</value>
   </data>
   <data name="GroupBox14.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -7386,10 +7920,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>False</value>
   </data>
   <data name="TextBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 85</value>
+    <value>120, 105</value>
+  </data>
+  <data name="TextBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 23</value>
+    <value>328, 27</value>
   </data>
   <data name="TextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -7410,10 +7947,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label39.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 88</value>
+    <value>13, 108</value>
+  </data>
+  <data name="Label39.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+    <value>84, 20</value>
   </data>
   <data name="Label39.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -7434,10 +7974,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>1</value>
   </data>
   <data name="BttnRegUttakBlod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 315</value>
+    <value>8, 388</value>
+  </data>
+  <data name="BttnRegUttakBlod.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="BttnRegUttakBlod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 36</value>
+    <value>441, 44</value>
   </data>
   <data name="BttnRegUttakBlod.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -7698,10 +8241,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>19</value>
   </data>
   <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 125</value>
+    <value>8, 154</value>
+  </data>
+  <data name="GroupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 184</value>
+    <value>441, 226</value>
   </data>
   <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -7722,10 +8271,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="nudUttakBm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 153</value>
+    <value>349, 188</value>
+  </data>
+  <data name="nudUttakBm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakBm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakBm.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -7749,10 +8301,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 155</value>
+    <value>245, 191</value>
+  </data>
+  <data name="Label38.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label38.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
+    <value>66, 20</value>
   </data>
   <data name="Label38.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -7773,10 +8328,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>1</value>
   </data>
   <data name="nudUttakAp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 151</value>
+    <value>112, 186</value>
+  </data>
+  <data name="nudUttakAp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakAp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakAp.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -7800,10 +8358,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label37.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 153</value>
+    <value>8, 188</value>
+  </data>
+  <data name="Label37.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 17</value>
+    <value>69, 20</value>
   </data>
   <data name="Label37.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -7824,10 +8385,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>3</value>
   </data>
   <data name="nudUttakAm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 36</value>
+    <value>349, 44</value>
+  </data>
+  <data name="nudUttakAm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakAm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakAm.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -7851,10 +8415,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label36.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 38</value>
+    <value>245, 47</value>
+  </data>
+  <data name="Label36.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
+    <value>65, 20</value>
   </data>
   <data name="Label36.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -7875,10 +8442,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>5</value>
   </data>
   <data name="nudUttakABp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 64</value>
+    <value>349, 79</value>
+  </data>
+  <data name="nudUttakABp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakABp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakABp.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -7902,10 +8472,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 66</value>
+    <value>245, 81</value>
+  </data>
+  <data name="Label35.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
+    <value>81, 20</value>
   </data>
   <data name="Label35.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -7926,10 +8499,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>7</value>
   </data>
   <data name="nudUttakABm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 93</value>
+    <value>349, 114</value>
+  </data>
+  <data name="nudUttakABm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakABm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakABm.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -7953,10 +8529,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 95</value>
+    <value>245, 117</value>
+  </data>
+  <data name="Label34.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
+    <value>77, 20</value>
   </data>
   <data name="Label34.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -7977,10 +8556,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>9</value>
   </data>
   <data name="nudUttakBp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 122</value>
+    <value>349, 150</value>
+  </data>
+  <data name="nudUttakBp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakBp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakBp.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -8004,10 +8586,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 124</value>
+    <value>245, 153</value>
+  </data>
+  <data name="Label33.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 17</value>
+    <value>70, 20</value>
   </data>
   <data name="Label33.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -8028,10 +8613,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>11</value>
   </data>
   <data name="nudUttak0m.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 122</value>
+    <value>112, 150</value>
+  </data>
+  <data name="nudUttak0m.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttak0m.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttak0m.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -8055,10 +8643,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 124</value>
+    <value>8, 153</value>
+  </data>
+  <data name="Label32.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
+    <value>63, 20</value>
   </data>
   <data name="Label32.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -8079,10 +8670,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>13</value>
   </data>
   <data name="nudUttak0p.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 93</value>
+    <value>112, 114</value>
+  </data>
+  <data name="nudUttak0p.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttak0p.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttak0p.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -8106,10 +8700,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 95</value>
+    <value>8, 117</value>
+  </data>
+  <data name="Label31.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
+    <value>67, 20</value>
   </data>
   <data name="Label31.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -8130,10 +8727,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>15</value>
   </data>
   <data name="nudUttakB_plasm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 64</value>
+    <value>112, 79</value>
+  </data>
+  <data name="nudUttakB_plasm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakB_plasm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakB_plasm.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -8151,10 +8751,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>16</value>
   </data>
   <data name="nudUttakB_plat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 35</value>
+    <value>112, 43</value>
+  </data>
+  <data name="nudUttakB_plat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudUttakB_plat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 27</value>
   </data>
   <data name="nudUttakB_plat.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -8178,10 +8781,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 66</value>
+    <value>8, 81</value>
+  </data>
+  <data name="Label30.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
+    <value>65, 20</value>
   </data>
   <data name="Label30.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -8205,10 +8811,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>True</value>
   </data>
   <data name="Label29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 37</value>
+    <value>8, 46</value>
+  </data>
+  <data name="Label29.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+    <value>85, 20</value>
   </data>
   <data name="Label29.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -8232,13 +8841,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>NoControl</value>
   </data>
   <data name="Label28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 32</value>
+    <value>13, 39</value>
+  </data>
+  <data name="Label28.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label28.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+    <value>20, 18</value>
   </data>
   <data name="Label28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 47</value>
+    <value>436, 58</value>
   </data>
   <data name="Label28.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -8286,10 +8898,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>1</value>
   </data>
   <data name="GroupBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 34</value>
+    <value>952, 42</value>
+  </data>
+  <data name="GroupBox13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox13.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 358</value>
+    <value>417, 441</value>
   </data>
   <data name="GroupBox13.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -8310,13 +8928,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>1</value>
   </data>
   <data name="Label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 32</value>
+    <value>8, 39</value>
+  </data>
+  <data name="Label26.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label26.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+    <value>20, 18</value>
   </data>
   <data name="Label26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 47</value>
+    <value>399, 58</value>
   </data>
   <data name="Label26.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -8340,13 +8961,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="ListBoxKritiskBlod.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="ListBoxKritiskBlod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 88</value>
+    <value>12, 108</value>
+  </data>
+  <data name="ListBoxKritiskBlod.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ListBoxKritiskBlod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 242</value>
+    <value>393, 284</value>
   </data>
   <data name="ListBoxKritiskBlod.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -8388,10 +9012,16 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>1</value>
   </data>
   <data name="GroupBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 34</value>
+    <value>16, 42</value>
+  </data>
+  <data name="GroupBox8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="GroupBox8.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GroupBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>696, 590</value>
+    <value>928, 726</value>
   </data>
   <data name="GroupBox8.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -8412,10 +9042,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>2</value>
   </data>
   <data name="ChartLegemer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 283</value>
+    <value>8, 348</value>
+  </data>
+  <data name="ChartLegemer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ChartLegemer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 300</value>
+    <value>912, 369</value>
   </data>
   <data name="ChartLegemer.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -8436,10 +9069,13 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>0</value>
   </data>
   <data name="ChartProdukt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
+    <value>8, 27</value>
+  </data>
+  <data name="ChartProdukt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ChartProdukt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 255</value>
+    <value>912, 314</value>
   </data>
   <data name="ChartProdukt.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -8465,465 +9101,6 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>231, 17</value>
   </metadata>
-  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
-    <value>Label40</value>
-  </data>
-  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.Name" xml:space="preserve">
-    <value>RichTextBox2</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
-    <value>Button2</value>
-  </data>
-  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label43.Name" xml:space="preserve">
-    <value>Label43</value>
-  </data>
-  <data name="&gt;&gt;Label43.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label43.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label43.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="GroupBox3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>652, 15</value>
-  </data>
-  <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>448, 612</value>
-  </data>
-  <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="GroupBox3.Text" xml:space="preserve">
-    <value>Timer</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
-    <value>TabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Label40.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label40.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 50</value>
-  </data>
-  <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 17</value>
-  </data>
-  <data name="Label40.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="Label40.Text" xml:space="preserve">
-    <value>Preferanser vedr. innkalling</value>
-  </data>
-  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
-    <value>Label40</value>
-  </data>
-  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RichTextBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 72</value>
-  </data>
-  <data name="RichTextBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 102</value>
-  </data>
-  <data name="RichTextBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RichTextBox2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;RichTextBox2.Name" xml:space="preserve">
-    <value>RichTextBox2</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;RichTextBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label41.Name" xml:space="preserve">
-    <value>Label41</value>
-  </data>
-  <data name="&gt;&gt;Label41.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label41.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Label41.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.Name" xml:space="preserve">
-    <value>DateTimePicker1</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label42.Name" xml:space="preserve">
-    <value>Label42</value>
-  </data>
-  <data name="&gt;&gt;Label42.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label42.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Label42.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.Name" xml:space="preserve">
-    <value>ListBox1</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 232</value>
-  </data>
-  <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 356</value>
-  </data>
-  <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="GroupBox4.Text" xml:space="preserve">
-    <value>Ny innkallingstime</value>
-  </data>
-  <data name="GroupBox4.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label41.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label41.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 29</value>
-  </data>
-  <data name="Label41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 17</value>
-  </data>
-  <data name="Label41.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="Label41.Text" xml:space="preserve">
-    <value>Velg dato, og klikk på ønsket ledig time</value>
-  </data>
-  <data name="&gt;&gt;Label41.Name" xml:space="preserve">
-    <value>Label41</value>
-  </data>
-  <data name="&gt;&gt;Label41.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label41.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Label41.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="DateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 56</value>
-  </data>
-  <data name="DateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 23</value>
-  </data>
-  <data name="DateTimePicker1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.Name" xml:space="preserve">
-    <value>DateTimePicker1</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 304</value>
-  </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 30</value>
-  </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>Bekreft endret time</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label42.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label42.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
-  </data>
-  <data name="Label42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
-  </data>
-  <data name="Label42.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Label42.Text" xml:space="preserve">
-    <value>Ledige timer:</value>
-  </data>
-  <data name="&gt;&gt;Label42.Name" xml:space="preserve">
-    <value>Label42</value>
-  </data>
-  <data name="&gt;&gt;Label42.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label42.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;Label42.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ListBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="ListBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 110</value>
-  </data>
-  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 123</value>
-  </data>
-  <data name="ListBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.Name" xml:space="preserve">
-    <value>ListBox1</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Button2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="Button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 185</value>
-  </data>
-  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 31</value>
-  </data>
-  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Button2.Text" xml:space="preserve">
-    <value>Endre innkallingstime</value>
-  </data>
-  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
-    <value>Button2</value>
-  </data>
-  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TextBox1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 20</value>
-  </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 23</value>
-  </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Label43.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label43.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="Label43.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 17</value>
-  </data>
-  <data name="Label43.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Label43.Text" xml:space="preserve">
-    <value>Din neste innkalling:</value>
-  </data>
-  <data name="&gt;&gt;Label43.Name" xml:space="preserve">
-    <value>Label43</value>
-  </data>
-  <data name="&gt;&gt;Label43.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label43.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;Label43.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -8934,7 +9111,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>52</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8946,7 +9123,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1413, 759</value>
+    <value>1884, 934</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -9485,6 +9662,9 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
