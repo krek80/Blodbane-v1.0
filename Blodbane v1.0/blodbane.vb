@@ -704,6 +704,7 @@ Public Class Blodbane
         txtBgInn_passord2.Text = ""
         txtBgInn_personnr.Text = ""
         txtBgInn_postnr.Text = ""
+        txtBgInn_Land.Text = ""
         txtBgInn_tlfnr.Text = ""
         txtBgInn_tlfnr2.Text = ""
         txtAInn_epost.Text = ""
@@ -981,6 +982,26 @@ Public Class Blodbane
         cBxValgtBlodgiverStatusTekst.Text = blodgiverObj.Status1
         rTxtValgBlodgiverTimepref.Text = blodgiverObj.Timepreferanse1
         rTxtValgtBlodgiverInternMrknd.Text = blodgiverObj.Merknad1
+
+        If blodgiverObj.Status1 = personstatusB("30") Or blodgiverObj.Status1 = personstatusB("32") Then
+            lblVisBGInnkaltDato.Visible = True
+            txtVisBGInnkaltDato.Visible = True
+            Me.Cursor = Cursors.WaitCursor
+            Dim radTime As DataRow
+            Dim daTime As New MySqlDataAdapter
+            Dim tabellTime As New DataTable
+            Dim SpørringTime As String = $"SELECT MAX(datotid) AS siste_innkalling FROM timeavtale WHERE bgepost = '{blodgiverObj.Epost1}'"
+            Dim sqlSpørringTime As New MySqlCommand(SpørringTime, tilkobling)
+            daTime.SelectCommand = sqlSpørringTime
+            daTime.Fill(tabellTime)
+            For Each radTime In tabellTime.Rows
+                txtVisBGInnkaltDato.Text = radTime("siste_innkalling")
+            Next
+            Me.Cursor = Cursors.Default
+        Else
+            lblVisBGInnkaltDato.Visible = False
+            txtVisBGInnkaltDato.Visible = False
+        End If
 
         If blodgiverObj.Siste_blodtapping1 <> dummyDato Then
             GroupBoxIntervju.Visible = True

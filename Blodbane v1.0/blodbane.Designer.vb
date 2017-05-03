@@ -155,6 +155,8 @@ Partial Class Blodbane
         Me.cbxAnsattUtførtTapping = New System.Windows.Forms.ComboBox()
         Me.Label115 = New System.Windows.Forms.Label()
         Me.gpBxValgtBlodgiver = New System.Windows.Forms.GroupBox()
+        Me.txtVisBGInnkaltDato = New System.Windows.Forms.TextBox()
+        Me.lblVisBGInnkaltDato = New System.Windows.Forms.Label()
         Me.txtValgtBlodgiverFødeland = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txtValgtBlodgiverSistTappDato = New System.Windows.Forms.TextBox()
@@ -228,6 +230,7 @@ Partial Class Blodbane
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.lBxInnkallDagens = New System.Windows.Forms.ListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label39 = New System.Windows.Forms.Label()
@@ -262,7 +265,6 @@ Partial Class Blodbane
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -294,6 +296,7 @@ Partial Class Blodbane
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.nudUttakBm, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -310,7 +313,6 @@ Partial Class Blodbane
         Me.GroupBox8.SuspendLayout()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1131,6 +1133,8 @@ Partial Class Blodbane
         '
         'gpBxValgtBlodgiver
         '
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.txtVisBGInnkaltDato)
+        Me.gpBxValgtBlodgiver.Controls.Add(Me.lblVisBGInnkaltDato)
         Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverFødeland)
         Me.gpBxValgtBlodgiver.Controls.Add(Me.Label23)
         Me.gpBxValgtBlodgiver.Controls.Add(Me.txtValgtBlodgiverSistTappDato)
@@ -1161,6 +1165,16 @@ Partial Class Blodbane
         resources.ApplyResources(Me.gpBxValgtBlodgiver, "gpBxValgtBlodgiver")
         Me.gpBxValgtBlodgiver.Name = "gpBxValgtBlodgiver"
         Me.gpBxValgtBlodgiver.TabStop = False
+        '
+        'txtVisBGInnkaltDato
+        '
+        resources.ApplyResources(Me.txtVisBGInnkaltDato, "txtVisBGInnkaltDato")
+        Me.txtVisBGInnkaltDato.Name = "txtVisBGInnkaltDato"
+        '
+        'lblVisBGInnkaltDato
+        '
+        resources.ApplyResources(Me.lblVisBGInnkaltDato, "lblVisBGInnkaltDato")
+        Me.lblVisBGInnkaltDato.Name = "lblVisBGInnkaltDato"
         '
         'txtValgtBlodgiverFødeland
         '
@@ -1614,6 +1628,13 @@ Partial Class Blodbane
         resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Blodbane_v1._0.My.Resources.Resources.hjerte1
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.TabStop = False
+        '
         'GroupBox14
         '
         Me.GroupBox14.Controls.Add(Me.TextBox3)
@@ -1839,23 +1860,16 @@ Partial Class Blodbane
         '
         Me.Timer1.Interval = 2000
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Blodbane_v1._0.My.Resources.Resources.hjerte1
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.TabStop = False
-        '
         'Blodbane
         '
-        Me.AcceptButton = Me.BtnRegBlodgiver
+        Me.AcceptButton = Me.BttnLoggpåGiver
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
-        Me.Controls.Add(Me.PanelPåmelding)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
@@ -1907,6 +1921,7 @@ Partial Class Blodbane
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -1925,7 +1940,6 @@ Partial Class Blodbane
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2164,4 +2178,6 @@ Partial Class Blodbane
     Friend WithEvents lBxNyInnkallingKlokkeslett As ListBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents txtVisBGInnkaltDato As TextBox
+    Friend WithEvents lblVisBGInnkaltDato As Label
 End Class
