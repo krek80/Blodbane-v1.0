@@ -1128,6 +1128,7 @@ Public Class Blodbane
                            rad1(index)("kontaktform"), rad1(index)("merknad"), rad1(index)("timepreferanse"))
 
         gpBxNyInnkallingstime.Visible = True
+        DTPickerNyInnkalling.Value = Date.Today
     End Sub
 
     'Her velges dato for ny innkallingstime
@@ -1158,10 +1159,63 @@ Public Class Blodbane
 
     'Lager en ny innkallingstime til valgt blodgiver
     Private Sub btnNyBGInnkalling_Click(sender As Object, e As EventArgs) Handles btnNyBGInnkalling.Click
-        Dim index As Integer = lBxNyBGInnkalling.SelectedIndex
+        Dim time_DateTime As DateTime
+        Try
+            Dim provider As CultureInfo = CultureInfo.InvariantCulture
+            time_DateTime = Date.ParseExact(lBxNyInnkallingKlokkeslett.SelectedItem, "H:mm", provider)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        timeavtaleObj.Datotid1 = New Date(DTPickerNyInnkalling.Value.Year, DTPickerNyInnkalling.Value.Month, DTPickerNyInnkalling.Value.Day,
+                               time_DateTime.Hour, 0, 0)
 
-        SøkBlodgivereTilNyInnkalling()
-        btnNyBGInnkalling.Enabled = False
+        Me.Cursor = Cursors.WaitCursor
+        tilkobling.Open()
+        Dim sqlSporring1 As String = $"SELECT * FROM timeavtale WHERE datotid = @nyDatotime"
+        Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
+        sql1.Parameters.Add("nyDatotime", MySqlDbType.DateTime).Value = timeavtaleObj.Datotid1
+        Dim da1 As New MySqlDataAdapter
+        Dim interntabell1 As New DataTable
+        Dim rad1, radRom As DataRow
+
+        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
+        da1.SelectCommand = sql1
+        da1.Fill(interntabell1)
+        tilkobling.Close()
+        Me.Cursor = Cursors.Default
+
+        Dim antallLedigeRom As Integer = antallRom - interntabell1.Rows.Count
+        'MsgBox($"Antall rom totalt: {antallRom}. Antall rader i spørringsresultat: {interntabell1.Rows.Count}")
+        If antallLedigeRom = 0 Then
+            MsgBox("Dessverre var ikke den valgte timen ledig likevel. Prøv en annen time.")
+        Else
+            For Each radRom In interntabellRom.Rows
+                If antallLedigeRom = antallRom Then
+                    timeavtaleObj.Romnummer1 = radRom("romnr")
+                Else
+                    For Each rad1 In interntabell1.Rows
+                        If radRom("romnr") <> rad1("romnr") Then
+                            timeavtaleObj.Romnummer1 = radRom("romnr")
+                        End If
+                    Next
+                End If
+            Next
+            tilkobling.Open()
+            sqlSporring1 = $"INSERT INTO timeavtale (bgepost, datotid, romnr) VALUES ('{blodgiverObj.Epost1}', @nyDatoTime, '{timeavtaleObj.Romnummer1}')"
+            Dim sql2 As New MySqlCommand(sqlSporring1, tilkobling)
+            sql2.Parameters.Add("nyDatotime", MySqlDbType.DateTime).Value = timeavtaleObj.Datotid1
+            sql2.ExecuteNonQuery()
+            tilkobling.Close()
+            OppdaterBlodgiver(blodgiverObj.Epost1, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
+                              blodgiverObj.Etternavn1, blodgiverObj.Adresse1, blodgiverObj.Postnr1,
+                              blodgiverObj.Telefon11, blodgiverObj.Telefon21, 30, blodgiverObj.Fodselsnummer1,
+                              blodgiverObj.Blodtype1, blodgiverObj.Siste_blodtapping1, blodgiverObj.Kontaktform1,
+                              blodgiverObj.Merknad1, blodgiverObj.Timepreferanse1)
+            SøkBlodgivereTilNyInnkalling()
+            btnNyBGInnkalling.Enabled = False
+            MsgBox($"Ny time ble satt for {blodgiverObj.Fornavn1} {blodgiverObj.Etternavn1} {timeavtaleObj.Datotid1}")
+        End If
+
     End Sub
 
     'Åpne blodlager
@@ -1175,17 +1229,17 @@ Public Class Blodbane
         tilkobling.Open()
         Dim rad As DataRow
         Dim da As New MySqlDataAdapter
-        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost", tilkobling)
+        Dim sqlSpørring As New MySqlCommand("Select * FROM blodprodukt b INNER JOIN timeavtale t On b.timeid = t.timeid INNER JOIN blodgiver bl On t.bgepost = bl.epost", tilkobling)
         da.SelectCommand = sqlSpørring
         da.Fill(blodlager)
 
         'Kast gamle blodplater og blodlegemer - plasma kastes ikke
         For Each rad In blodlager.Rows
             If (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 35) And (rad("produkttypeid") = "1") Then
-                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 3 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 1", tilkobling)
+                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt Set `statusid` = 3 WHERE `timeid` = {rad("timeid")} And `produkttypeid` = 1", tilkobling)
                 sqlSpørring2.ExecuteNonQuery()
             ElseIf (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 7) And (rad("produkttypeid") = "2") Then
-                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 3 WHERE `timeid` = {rad("timeid")} AND `produkttypeid` = 2", tilkobling)
+                Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt Set `statusid` = 3 WHERE `timeid` = {rad("timeid")} And `produkttypeid` = 2", tilkobling)
                 sqlSpørring2.ExecuteNonQuery()
             End If
         Next
@@ -1306,7 +1360,7 @@ Public Class Blodbane
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
         tilkobling.Open()
 
-        Dim sqlSporring1 As String = $"SELECT datotid, COUNT(*) As 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
+        Dim sqlSporring1 As String = $"Select datotid, COUNT(*) As 'antall' FROM timeavtale WHERE datotid > '{aktuelldato.ToString("yyyy-MM-dd")}' AND datotid < '{aktuelldatopluss1.ToString("yyyy-MM-dd")}' GROUP BY datotid HAVING (antall>{antallRom - 1})"
         Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
