@@ -4520,61 +4520,61 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Label40.AutoSize" type="System.Boolean, mscorlib">
+  <data name="Label41.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Label41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Label40.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 40</value>
+  <data name="Label41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 36</value>
   </data>
-  <data name="Label40.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Label41.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 20</value>
+  <data name="Label41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 20</value>
   </data>
-  <data name="Label40.TabIndex" type="System.Int32, mscorlib">
+  <data name="Label41.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="Label40.Text" xml:space="preserve">
-    <value>Velg en blodgiver å kalle inn:</value>
+  <data name="Label41.Text" xml:space="preserve">
+    <value>Velg dato, og klikk på ønsket ledig time</value>
   </data>
-  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
-    <value>Label40</value>
+  <data name="&gt;&gt;Label41.Name" xml:space="preserve">
+    <value>Label41</value>
   </data>
-  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
+  <data name="&gt;&gt;Label41.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
+  <data name="&gt;&gt;Label41.Parent" xml:space="preserve">
+    <value>gpBxNyInnkallingstime</value>
   </data>
-  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Label41.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lBxNyBGInnkalling.ItemHeight" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="DTPickerNyInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 69</value>
   </data>
-  <data name="lBxNyBGInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 78</value>
+  <data name="DTPickerNyInnkalling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="lBxNyBGInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>752, 224</value>
+  <data name="DTPickerNyInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 27</value>
   </data>
-  <data name="lBxNyBGInnkalling.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="DTPickerNyInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;lBxNyBGInnkalling.Name" xml:space="preserve">
-    <value>lBxNyBGInnkalling</value>
+  <data name="&gt;&gt;DTPickerNyInnkalling.Name" xml:space="preserve">
+    <value>DTPickerNyInnkalling</value>
   </data>
-  <data name="&gt;&gt;lBxNyBGInnkalling.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;DTPickerNyInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lBxNyBGInnkalling.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
+  <data name="&gt;&gt;DTPickerNyInnkalling.Parent" xml:space="preserve">
+    <value>gpBxNyInnkallingstime</value>
   </data>
-  <data name="&gt;&gt;lBxNyBGInnkalling.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DTPickerNyInnkalling.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnNyBGInnkalling.Enabled" type="System.Boolean, mscorlib">
@@ -4584,10 +4584,10 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>Microsoft Sans Serif, 16.2pt</value>
   </data>
   <data name="btnNyBGInnkalling.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 315</value>
+    <value>15, 237</value>
   </data>
   <data name="btnNyBGInnkalling.Size" type="System.Drawing.Size, System.Drawing">
-    <value>752, 46</value>
+    <value>821, 46</value>
   </data>
   <data name="btnNyBGInnkalling.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -4602,16 +4602,166 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnNyBGInnkalling.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
+    <value>gpBxNyInnkallingstime</value>
   </data>
   <data name="&gt;&gt;btnNyBGInnkalling.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 374</value>
+  </data>
+  <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 37</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>Bekreft endret time</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>gpBxNyInnkallingstime</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 36</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 20</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblNyInnkallingVelgTime.Text" xml:space="preserve">
+    <value>Velg en ledig time:</value>
+  </data>
+  <data name="&gt;&gt;lblNyInnkallingVelgTime.Name" xml:space="preserve">
+    <value>lblNyInnkallingVelgTime</value>
+  </data>
+  <data name="&gt;&gt;lblNyInnkallingVelgTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNyInnkallingVelgTime.Parent" xml:space="preserve">
+    <value>gpBxNyInnkallingstime</value>
+  </data>
+  <data name="&gt;&gt;lblNyInnkallingVelgTime.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lBxNyInnkallingKlokkeslett.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lBxNyInnkallingKlokkeslett.Location" type="System.Drawing.Point, System.Drawing">
+    <value>387, 69</value>
+  </data>
+  <data name="lBxNyInnkallingKlokkeslett.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="lBxNyInnkallingKlokkeslett.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 144</value>
+  </data>
+  <data name="lBxNyInnkallingKlokkeslett.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lBxNyInnkallingKlokkeslett.Name" xml:space="preserve">
+    <value>lBxNyInnkallingKlokkeslett</value>
+  </data>
+  <data name="&gt;&gt;lBxNyInnkallingKlokkeslett.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxNyInnkallingKlokkeslett.Parent" xml:space="preserve">
+    <value>gpBxNyInnkallingstime</value>
+  </data>
+  <data name="&gt;&gt;lBxNyInnkallingKlokkeslett.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>907, 373</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>887, 306</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.Text" xml:space="preserve">
+    <value>Ny innkallingstime</value>
+  </data>
+  <data name="gpBxNyInnkallingstime.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;gpBxNyInnkallingstime.Name" xml:space="preserve">
+    <value>gpBxNyInnkallingstime</value>
+  </data>
+  <data name="&gt;&gt;gpBxNyInnkallingstime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gpBxNyInnkallingstime.Parent" xml:space="preserve">
+    <value>TabPage3</value>
+  </data>
+  <data name="&gt;&gt;gpBxNyInnkallingstime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
+    <value>Label40</value>
+  </data>
+  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Name" xml:space="preserve">
+    <value>lBxNyBGInnkalling</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>907, 18</value>
   </data>
   <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>780, 375</value>
+    <value>851, 327</value>
   </data>
   <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -4629,7 +4779,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;ListBox6.Name" xml:space="preserve">
     <value>ListBox6</value>
@@ -4671,7 +4821,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;lBxInnkallIMorgen.Name" xml:space="preserve">
     <value>lBxInnkallIMorgen</value>
@@ -4713,7 +4863,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lBxInnkallDagens.Name" xml:space="preserve">
     <value>lBxInnkallDagens</value>
@@ -4755,7 +4905,7 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>TabPage3</value>
   </data>
   <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
@@ -7744,6 +7894,63 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
   </data>
   <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="Label40.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label40.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 40</value>
+  </data>
+  <data name="Label40.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 20</value>
+  </data>
+  <data name="Label40.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label40.Text" xml:space="preserve">
+    <value>Velg en blodgiver å kalle inn:</value>
+  </data>
+  <data name="&gt;&gt;Label40.Name" xml:space="preserve">
+    <value>Label40</value>
+  </data>
+  <data name="&gt;&gt;Label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label40.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lBxNyBGInnkalling.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lBxNyBGInnkalling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 78</value>
+  </data>
+  <data name="lBxNyBGInnkalling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>821, 224</value>
+  </data>
+  <data name="lBxNyBGInnkalling.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Name" xml:space="preserve">
+    <value>lBxNyBGInnkalling</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.Parent" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="&gt;&gt;lBxNyBGInnkalling.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="ListBox6.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>

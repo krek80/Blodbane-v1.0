@@ -1099,39 +1099,66 @@ Public Class Blodbane
         Next
     End Sub
 
-    'Aktiverer innkallingsknappen for å kalle inn en blodgiver
+    'Aktiverer gruppeboksen for å velge time for ny innkalling av en blodgiver
     Private Sub lBxNyBGInnkalling_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lBxNyBGInnkalling.SelectedIndexChanged
         Dim index As Integer = lBxNyBGInnkalling.SelectedIndex
         Dim rad1() As DataRow = giversøk.Select
-        If IsDBNull(rad1(Index)("blodtype")) Then
-            rad1(Index)("blodtype") = ""
+        If IsDBNull(rad1(index)("blodtype")) Then
+            rad1(index)("blodtype") = ""
         End If
-        If IsDBNull(rad1(Index)("merknad")) Then
-            rad1(Index)("merknad") = ""
+        If IsDBNull(rad1(index)("merknad")) Then
+            rad1(index)("merknad") = ""
         End If
-        If IsDBNull(rad1(Index)("timepreferanse")) Then
-            rad1(Index)("timepreferanse") = ""
+        If IsDBNull(rad1(index)("timepreferanse")) Then
+            rad1(index)("timepreferanse") = ""
         End If
-        If IsDBNull(rad1(Index)("adresse")) Then
-            rad1(Index)("adresse") = ""
+        If IsDBNull(rad1(index)("adresse")) Then
+            rad1(index)("adresse") = ""
         End If
-        If IsDBNull(rad1(Index)("telefon2")) Then
-            rad1(Index)("telefon2") = ""
+        If IsDBNull(rad1(index)("telefon2")) Then
+            rad1(index)("telefon2") = ""
         End If
-        If IsDBNull(rad1(Index)("siste_blodtapping")) Then
-            rad1(Index)("siste_blodtapping") = dummyDato
+        If IsDBNull(rad1(index)("siste_blodtapping")) Then
+            rad1(index)("siste_blodtapping") = dummyDato
         End If
-        BlodgiverObjOppdat(rad1(Index)("epost"), rad1(Index)("passord"), rad1(Index)("fornavn"),
-                           rad1(Index)("etternavn"), rad1(Index)("adresse"), rad1(Index)("postnr"),
-                           rad1(Index)("telefon1"), rad1(Index)("telefon2"), rad1(Index)("statuskode"),
-                           rad1(Index)("fodselsnummer"), rad1(Index)("blodtype"), rad1(Index)("siste_blodtapping"),
-                           rad1(Index)("kontaktform"), rad1(Index)("merknad"), rad1(Index)("timepreferanse"))
+        BlodgiverObjOppdat(rad1(index)("epost"), rad1(index)("passord"), rad1(index)("fornavn"),
+                           rad1(index)("etternavn"), rad1(index)("adresse"), rad1(index)("postnr"),
+                           rad1(index)("telefon1"), rad1(index)("telefon2"), rad1(index)("statuskode"),
+                           rad1(index)("fodselsnummer"), rad1(index)("blodtype"), rad1(index)("siste_blodtapping"),
+                           rad1(index)("kontaktform"), rad1(index)("merknad"), rad1(index)("timepreferanse"))
 
+        gpBxNyInnkallingstime.Visible = True
+    End Sub
+
+    'Her velges dato for ny innkallingstime
+    Private Sub DTPickerNyInnkalling_ValueChanged(sender As Object, e As EventArgs) Handles DTPickerNyInnkalling.ValueChanged
+        If (DTPickerNyInnkalling.Value - blodgiverObj.Siste_blodtapping1).TotalDays < 90 Then
+            MsgBox("Det må være minst 90 dager siden siste blodtapping. Velg en ny dato.", MsgBoxStyle.Critical)
+        Else
+            If Weekday(DTPickerNyInnkalling.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DTPickerNyInnkalling.Value) Then
+                MsgBox("Blodbanken er stengt denne dagen. Velg en en ny dag.", MsgBoxStyle.Critical)
+                'DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
+            Else
+                lBxNyInnkallingKlokkeslett.Items.Clear()
+                lblNyInnkallingVelgTime.Text = $"Velg en ledig time {DTPickerNyInnkalling.Text}"
+                hentLedigeTimer(DTPickerNyInnkalling.Value)
+                For i = 0 To fulltimetabell.Count - 1
+                    lBxNyInnkallingKlokkeslett.Items.Add(fulltimetabell(i))
+                Next
+                btnNyBGInnkalling.Enabled = False
+            End If
+
+        End If
+    End Sub
+
+    'Velger ut klokkeslett for den nye timen
+    Private Sub lBxNyInnkallingKlokkeslett_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lBxNyInnkallingKlokkeslett.SelectedIndexChanged
         btnNyBGInnkalling.Enabled = True
     End Sub
 
     'Lager en ny innkallingstime til valgt blodgiver
     Private Sub btnNyBGInnkalling_Click(sender As Object, e As EventArgs) Handles btnNyBGInnkalling.Click
+        Dim index As Integer = lBxNyBGInnkalling.SelectedIndex
 
         SøkBlodgivereTilNyInnkalling()
         btnNyBGInnkalling.Enabled = False

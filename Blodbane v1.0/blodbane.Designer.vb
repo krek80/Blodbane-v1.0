@@ -210,6 +210,16 @@ Partial Class Blodbane
         Me.txtSøk = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.gpBxNyInnkallingstime = New System.Windows.Forms.GroupBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.DTPickerNyInnkalling = New System.Windows.Forms.DateTimePicker()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblNyInnkallingVelgTime = New System.Windows.Forms.Label()
+        Me.lBxNyInnkallingKlokkeslett = New System.Windows.Forms.ListBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.lBxNyBGInnkalling = New System.Windows.Forms.ListBox()
+        Me.btnNyBGInnkalling = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.ListBox6 = New System.Windows.Forms.ListBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
@@ -251,10 +261,6 @@ Partial Class Blodbane
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.lBxNyBGInnkalling = New System.Windows.Forms.ListBox()
-        Me.btnNyBGInnkalling = New System.Windows.Forms.Button()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -279,6 +285,8 @@ Partial Class Blodbane
         Me.GroupBoxIntervju.SuspendLayout()
         Me.GpBxSøk.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.gpBxNyInnkallingstime.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -299,7 +307,6 @@ Partial Class Blodbane
         Me.GroupBox8.SuspendLayout()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1474,12 +1481,77 @@ Partial Class Blodbane
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage3.Controls.Add(Me.gpBxNyInnkallingstime)
         Me.TabPage3.Controls.Add(Me.GroupBox4)
         Me.TabPage3.Controls.Add(Me.GroupBox7)
         Me.TabPage3.Controls.Add(Me.GroupBox6)
         Me.TabPage3.Controls.Add(Me.GroupBox5)
         resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
+        '
+        'gpBxNyInnkallingstime
+        '
+        Me.gpBxNyInnkallingstime.Controls.Add(Me.Label41)
+        Me.gpBxNyInnkallingstime.Controls.Add(Me.DTPickerNyInnkalling)
+        Me.gpBxNyInnkallingstime.Controls.Add(Me.btnNyBGInnkalling)
+        Me.gpBxNyInnkallingstime.Controls.Add(Me.Button1)
+        Me.gpBxNyInnkallingstime.Controls.Add(Me.lblNyInnkallingVelgTime)
+        Me.gpBxNyInnkallingstime.Controls.Add(Me.lBxNyInnkallingKlokkeslett)
+        resources.ApplyResources(Me.gpBxNyInnkallingstime, "gpBxNyInnkallingstime")
+        Me.gpBxNyInnkallingstime.Name = "gpBxNyInnkallingstime"
+        Me.gpBxNyInnkallingstime.TabStop = False
+        '
+        'Label41
+        '
+        resources.ApplyResources(Me.Label41, "Label41")
+        Me.Label41.Name = "Label41"
+        '
+        'DTPickerNyInnkalling
+        '
+        resources.ApplyResources(Me.DTPickerNyInnkalling, "DTPickerNyInnkalling")
+        Me.DTPickerNyInnkalling.Name = "DTPickerNyInnkalling"
+        '
+        'Button1
+        '
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblNyInnkallingVelgTime
+        '
+        resources.ApplyResources(Me.lblNyInnkallingVelgTime, "lblNyInnkallingVelgTime")
+        Me.lblNyInnkallingVelgTime.Name = "lblNyInnkallingVelgTime"
+        '
+        'lBxNyInnkallingKlokkeslett
+        '
+        Me.lBxNyInnkallingKlokkeslett.FormattingEnabled = True
+        resources.ApplyResources(Me.lBxNyInnkallingKlokkeslett, "lBxNyInnkallingKlokkeslett")
+        Me.lBxNyInnkallingKlokkeslett.Name = "lBxNyInnkallingKlokkeslett"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label40)
+        Me.GroupBox4.Controls.Add(Me.lBxNyBGInnkalling)
+        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.TabStop = False
+        '
+        'Label40
+        '
+        resources.ApplyResources(Me.Label40, "Label40")
+        Me.Label40.Name = "Label40"
+        '
+        'lBxNyBGInnkalling
+        '
+        Me.lBxNyBGInnkalling.FormattingEnabled = True
+        resources.ApplyResources(Me.lBxNyBGInnkalling, "lBxNyBGInnkalling")
+        Me.lBxNyBGInnkalling.Name = "lBxNyBGInnkalling"
+        '
+        'btnNyBGInnkalling
+        '
+        resources.ApplyResources(Me.btnNyBGInnkalling, "btnNyBGInnkalling")
+        Me.btnNyBGInnkalling.Name = "btnNyBGInnkalling"
+        Me.btnNyBGInnkalling.UseVisualStyleBackColor = True
         '
         'GroupBox7
         '
@@ -1754,32 +1826,6 @@ Partial Class Blodbane
         '
         Me.Timer1.Interval = 2000
         '
-        'Label40
-        '
-        resources.ApplyResources(Me.Label40, "Label40")
-        Me.Label40.Name = "Label40"
-        '
-        'lBxNyBGInnkalling
-        '
-        Me.lBxNyBGInnkalling.FormattingEnabled = True
-        resources.ApplyResources(Me.lBxNyBGInnkalling, "lBxNyBGInnkalling")
-        Me.lBxNyBGInnkalling.Name = "lBxNyBGInnkalling"
-        '
-        'btnNyBGInnkalling
-        '
-        resources.ApplyResources(Me.btnNyBGInnkalling, "btnNyBGInnkalling")
-        Me.btnNyBGInnkalling.Name = "btnNyBGInnkalling"
-        Me.btnNyBGInnkalling.UseVisualStyleBackColor = True
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.Label40)
-        Me.GroupBox4.Controls.Add(Me.lBxNyBGInnkalling)
-        Me.GroupBox4.Controls.Add(Me.btnNyBGInnkalling)
-        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.TabStop = False
-        '
         'Blodbane
         '
         Me.AcceptButton = Me.BtnRegBlodgiver
@@ -1832,6 +1878,10 @@ Partial Class Blodbane
         Me.GpBxSøk.ResumeLayout(False)
         Me.GpBxSøk.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
+        Me.gpBxNyInnkallingstime.ResumeLayout(False)
+        Me.gpBxNyInnkallingstime.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
@@ -1854,8 +1904,6 @@ Partial Class Blodbane
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2086,4 +2134,10 @@ Partial Class Blodbane
     Friend WithEvents Label40 As Label
     Friend WithEvents lBxNyBGInnkalling As ListBox
     Friend WithEvents btnNyBGInnkalling As Button
+    Friend WithEvents gpBxNyInnkallingstime As GroupBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents DTPickerNyInnkalling As DateTimePicker
+    Friend WithEvents Button1 As Button
+    Friend WithEvents lblNyInnkallingVelgTime As Label
+    Friend WithEvents lBxNyInnkallingKlokkeslett As ListBox
 End Class
