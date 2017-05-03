@@ -1529,31 +1529,43 @@ Public Class Blodbane
 
     'Ta ut blod fra lager
     Private Sub BttnRegUttakBlod_Click(sender As Object, e As EventArgs) Handles BttnRegUttakBlod.Click
-        Dim i, j As Integer
+        Dim i, j, løpenr As Integer
         Dim streng As String
         Dim nud(9) As Object
+        Dim Btyper(9) As String
         Dim blodlager As New DataTable
         nud(0) = nudUttakB_plat : nud(1) = nudUttakB_plasm : nud(2) = nudUttak0p : nud(3) = nudUttak0m
         nud(4) = nudUttakAp : nud(5) = nudUttakAm : nud(6) = nudUttakABp : nud(7) = nudUttakABm
         nud(8) = nudUttakBp : nud(9) = nudUttakBm
+        Btyper(0) = "plater" : Btyper(1) = "plasma" : Btyper(2) = "0+" : Btyper(3) = "0-"
+        Btyper(4) = "A+" : Btyper(5) = "A-" : Btyper(6) = "AB+" : Btyper(7) = "AB-"
+        Btyper(8) = "B+" : Btyper(9) = "B-"
         streng = ""
+        løpenr = 0
 
         tilkobling.Open()
         Dim rad As DataRow
         Dim da As New MySqlDataAdapter
-        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost ORDER BY datotid DESC", tilkobling)
+        Dim sqlSpørring As New MySqlCommand("SELECT * FROM blodprodukt b INNER JOIN timeavtale t ON b.timeid = t.timeid INNER JOIN blodgiver bl on t.bgepost = bl.epost ORDER BY datotid ASC", tilkobling)
         da.SelectCommand = sqlSpørring
         da.Fill(blodlager)
 
         'Endre databasen
         For i = 0 To 9
+            j = 1
             If nud(i).value > 0 Then
-                For j = 1 To nud(i).value
-                    streng = $"UPDATE blodprodukt Set `statusid` = 2 WHERE `timeid` = {rad("timeid")} And `produkttypeid` = 2"
-
-                    For Each rad In blodlager.Rows
-
-                    Next
+                For Each rad In blodlager.Rows
+                    If (i < 2) And (rad("statusid") = 1) Then
+                        j = j + 1
+                        løpenr = rad("lopenr")
+                        streng = $"UPDATE blodprodukt Set `statusid` = 2 WHERE `lopenr` = {løpenr}"
+                        MsgBox(streng)
+                    ElseIf (i > 1) And (rad("statusid") = 1) And (rad("produkttypeid") = 1) And (rad("blodtype") = Btyper(i)) Then
+                        j = j + j
+                        løpenr = rad("løpenr")
+                        streng = $"UPDATE blodprodukt Set `statusid` = 2 WHERE `lopenr` = {løpenr}"
+                        MsgBox(streng)
+                    End If
                 Next
             End If
         Next
