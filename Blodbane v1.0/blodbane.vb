@@ -33,75 +33,79 @@ Public Class Blodbane
         Me.WindowState = FormWindowState.Minimized
         velkommen.Show()
 
-        velkommen.ProgressBar1.Value = 0
-        'Henter statuskoder og legger i combobox(er)
-        Dim steder As New DataTable
-        Dim da As New MySqlDataAdapter
-        Dim rad As DataRow
-        Dim sifre As String
-        Dim statustekst, statuskode, psted, pnr As String
-        giversøk.Clear()
-        tilkobling.Open()
-        Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
-        da.SelectCommand = sqlSpørring
-        da.Fill(statuser)
-        cBxSøkStatusbeskrivelse.Items.Clear()
-        For Each rad In statuser.Rows
-            statustekst = rad("beskrivelse")
-            statuskode = rad("kode")
-            personstatusK.Add(statustekst, statuskode)
-            personstatusB.Add(statuskode, statustekst)
-            cBxSøkStatusbeskrivelse.Items.Add(statustekst)
-            cBxValgtBlodgiverStatusTekst.Items.Add(statustekst)
-        Next
+        Try
+            velkommen.ProgressBar1.Value = 0
+            'Henter statuskoder og legger i combobox(er)
+            Dim steder As New DataTable
+            Dim da As New MySqlDataAdapter
+            Dim rad As DataRow
+            Dim sifre As String
+            Dim statustekst, statuskode, psted, pnr As String
+            giversøk.Clear()
+            tilkobling.Open()
+            Dim sqlSpørring As New MySqlCommand("SELECT * FROM personstatus", tilkobling)
+            da.SelectCommand = sqlSpørring
+            da.Fill(statuser)
+            cBxSøkStatusbeskrivelse.Items.Clear()
+            For Each rad In statuser.Rows
+                statustekst = rad("beskrivelse")
+                statuskode = rad("kode")
+                personstatusK.Add(statustekst, statuskode)
+                personstatusB.Add(statuskode, statustekst)
+                cBxSøkStatusbeskrivelse.Items.Add(statustekst)
+                cBxValgtBlodgiverStatusTekst.Items.Add(statustekst)
+            Next
 
-        velkommen.ProgressBar1.Value = 10
-        If Today.Month < 10 Then
-            sifre = $"0{Today.Month}"
-        Else
-            sifre = CStr(Today.Month)
-        End If
-        aarstallet = CStr(Today.Year).Substring(2, 2)
-        dummyFodselsnr = $"{sifre}{sifre}{aarstallet}11111"
+            velkommen.ProgressBar1.Value = 10
+            If Today.Month < 10 Then
+                sifre = $"0{Today.Month}"
+            Else
+                sifre = CStr(Today.Month)
+            End If
+            aarstallet = CStr(Today.Year).Substring(2, 2)
+            dummyFodselsnr = $"{sifre}{sifre}{aarstallet}11111"
 
-        velkommen.ProgressBar1.Value = 20
-        'Lager liste over rommene
-        antallRom = 0
-        Dim sqlSporringRom As String = "SELECT * FROM rom"
-        Dim sqlRom As New MySqlCommand(sqlSporringRom, tilkobling)
-        Dim daRom As New MySqlDataAdapter
-        daRom.SelectCommand = sqlRom
-        daRom.Fill(interntabellRom)
-        antallRom = interntabellRom.Rows.Count()
+            velkommen.ProgressBar1.Value = 20
+            'Lager liste over rommene
+            antallRom = 0
+            Dim sqlSporringRom As String = "SELECT * FROM rom"
+            Dim sqlRom As New MySqlCommand(sqlSporringRom, tilkobling)
+            Dim daRom As New MySqlDataAdapter
+            daRom.SelectCommand = sqlRom
+            daRom.Fill(interntabellRom)
+            antallRom = interntabellRom.Rows.Count()
 
-        velkommen.ProgressBar1.Value = 30
-        'Henter postnummer og sted og legger i hashtable
-        Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
-        da.SelectCommand = sqlSpørring2
-        da.Fill(steder)
-        For Each rad In steder.Rows
-            psted = rad("poststed")
-            pnr = rad("postnummer")
-            postnummer.Add(pnr, psted)
-        Next
+            velkommen.ProgressBar1.Value = 30
+            'Henter postnummer og sted og legger i hashtable
+            Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM postnummer", tilkobling)
+            da.SelectCommand = sqlSpørring2
+            da.Fill(steder)
+            For Each rad In steder.Rows
+                psted = rad("poststed")
+                pnr = rad("postnummer")
+                postnummer.Add(pnr, psted)
+            Next
 
-        velkommen.ProgressBar1.Value = 40
-        'Henter ansatte og legger i datatable
-        Dim sqlSpørring3 As New MySqlCommand("SELECT * FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
-        da.SelectCommand = sqlSpørring3
-        da.Fill(ansatt)
-        For Each rad In ansatt.Rows
-            cbxAnsattUtførtTapping.Items.Add(rad("epost"))
-        Next
+            velkommen.ProgressBar1.Value = 40
+            'Henter ansatte og legger i datatable
+            Dim sqlSpørring3 As New MySqlCommand("SELECT * FROM ansatt a INNER JOIN bruker b ON a.epost = b.epost", tilkobling)
+            da.SelectCommand = sqlSpørring3
+            da.Fill(ansatt)
+            For Each rad In ansatt.Rows
+                cbxAnsattUtførtTapping.Items.Add(rad("epost"))
+            Next
 
-        velkommen.ProgressBar1.Value = 50
-        'Henter ned spørsmål til egenerklæring
-        Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
-        da.SelectCommand = sqlSpørring4
-        da.Fill(Erklæringspørsmål)
-        lblEgenerklSpmTekst.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
-        lblEgenerklSpmNr.Text = $"Spørsmål {SPMnr + 1}"
-        tilkobling.Close()
+            velkommen.ProgressBar1.Value = 50
+            'Henter ned spørsmål til egenerklæring
+            Dim sqlSpørring4 As New MySqlCommand("SELECT * FROM egenerklaeringsporsmaal", tilkobling)
+            da.SelectCommand = sqlSpørring4
+            da.Fill(Erklæringspørsmål)
+            lblEgenerklSpmTekst.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
+            lblEgenerklSpmNr.Text = $"Spørsmål {SPMnr + 1}"
+            tilkobling.Close()
+        Catch ex As MySqlException
+            MsgBox("Feil ved tilkobling til databasen: " & ex.Message())
+        End Try
 
         velkommen.ProgressBar1.Value = 60
         Timer1.Start()
@@ -745,7 +749,7 @@ Public Class Blodbane
         Else
             bgSøkParameter = " bl.blodtype = 'tulleblodtype'"
         End If
-        MsgBox($"Søkedato: {dummyDato.AddDays(-1)}")
+        'MsgBox($"Søkedato: {dummyDato.AddDays(-1)}")
         bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
         Me.Cursor = Cursors.Default
         giverSøkTreff()
@@ -972,7 +976,7 @@ Public Class Blodbane
         txtValgtBlodgiverTelefon1.Text = blodgiverObj.Telefon11
         txtValgtBlodgiverTelefon2.Text = blodgiverObj.Telefon21
         txtValgtBlodgiverAdresse.Text = blodgiverObj.Adresse1
-        txtValgtBlodgiverFødeland.Text = rad1(index)("fødeland")
+        txtValgtBlodgiverFødeland.Text = rad1(index)("fodeland")
         txtValgtBlodgiverPostnr.Text = blodgiverObj.Postnr1
         cBxValgtBlodgiverStatusTekst.Text = blodgiverObj.Status1
         rTxtValgBlodgiverTimepref.Text = blodgiverObj.Timepreferanse1
@@ -1525,13 +1529,14 @@ Public Class Blodbane
 
     'Ta ut blod fra lager
     Private Sub BttnRegUttakBlod_Click(sender As Object, e As EventArgs) Handles BttnRegUttakBlod.Click
-        Dim i As Integer
-        Dim verdier(9) As Integer
+        Dim i, j As Integer
+        Dim streng As String
         Dim nud(9) As Object
         Dim blodlager As New DataTable
-        verdier(0) = nudUttakB_plat.Value : verdier(1) = nudUttakB_plasm.Value : verdier(2) = nudUttak0p.Value
-        verdier(3) = nudUttak0m.Value : verdier(4) = nudUttakAp.Value : verdier(5) = nudUttakAm.Value
-
+        nud(0) = nudUttakB_plat : nud(1) = nudUttakB_plasm : nud(2) = nudUttak0p : nud(3) = nudUttak0m
+        nud(4) = nudUttakAp : nud(5) = nudUttakAm : nud(6) = nudUttakABp : nud(7) = nudUttakABm
+        nud(8) = nudUttakBp : nud(9) = nudUttakBm
+        streng = ""
 
         tilkobling.Open()
         Dim rad As DataRow
@@ -1540,11 +1545,17 @@ Public Class Blodbane
         da.SelectCommand = sqlSpørring
         da.Fill(blodlager)
 
+        'Endre databasen
         For i = 0 To 9
+            If nud(i).value > 0 Then
+                For j = 1 To nud(i).value
+                    streng = $"UPDATE blodprodukt Set `statusid` = 2 WHERE `timeid` = {rad("timeid")} And `produkttypeid` = 2"
 
+                    For Each rad In blodlager.Rows
 
-
-
+                    Next
+                Next
+            End If
         Next
         For i = 0 To 9
             nud(i).value = 0

@@ -125,7 +125,7 @@
       <DependentUpon>blodbane.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
@@ -151,6 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Hjerte.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloddråpe1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloddråpe2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hjerte1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

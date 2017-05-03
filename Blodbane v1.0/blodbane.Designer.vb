@@ -24,12 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -140,6 +140,7 @@ Partial Class Blodbane
         Me.BttnLoggavAnsatt = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.btnBlodgivingGjført = New System.Windows.Forms.Button()
         Me.Label141 = New System.Windows.Forms.Label()
@@ -261,6 +262,7 @@ Partial Class Blodbane
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -276,6 +278,7 @@ Partial Class Blodbane
         Me.PanelAnsatt.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox12.SuspendLayout()
         CType(Me.nudResRødeBlodl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudResPlasma, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -307,6 +310,7 @@ Partial Class Blodbane
         Me.GroupBox8.SuspendLayout()
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1026,13 +1030,21 @@ Partial Class Blodbane
         '
         'TabPage1
         '
-        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.GroupBox12)
         Me.TabPage1.Controls.Add(Me.gpBxValgtBlodgiver)
         Me.TabPage1.Controls.Add(Me.gpBxHelseKontroll)
         Me.TabPage1.Controls.Add(Me.GpBxSøk)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Blodbane_v1._0.My.Resources.Resources.hjerte1
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
         '
         'GroupBox12
         '
@@ -1480,7 +1492,7 @@ Partial Class Blodbane
         '
         'TabPage3
         '
-        Me.TabPage3.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage3.BackColor = System.Drawing.Color.White
         Me.TabPage3.Controls.Add(Me.gpBxNyInnkallingstime)
         Me.TabPage3.Controls.Add(Me.GroupBox4)
         Me.TabPage3.Controls.Add(Me.GroupBox7)
@@ -1594,7 +1606,8 @@ Partial Class Blodbane
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox14)
         Me.TabPage2.Controls.Add(Me.GroupBox13)
         Me.TabPage2.Controls.Add(Me.GroupBox8)
@@ -1790,29 +1803,29 @@ Partial Class Blodbane
         '
         'ChartLegemer
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartLegemer.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartLegemer.Legends.Add(Legend1)
+        ChartArea5.Name = "ChartArea1"
+        Me.ChartLegemer.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.ChartLegemer.Legends.Add(Legend5)
         resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
         Me.ChartLegemer.Name = "ChartLegemer"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Blodlegemer"
-        Me.ChartLegemer.Series.Add(Series1)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Blodlegemer"
+        Me.ChartLegemer.Series.Add(Series5)
         '
         'ChartProdukt
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.ChartProdukt.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.ChartProdukt.Legends.Add(Legend2)
+        ChartArea6.Name = "ChartArea1"
+        Me.ChartProdukt.ChartAreas.Add(ChartArea6)
+        Legend6.Name = "Legend1"
+        Me.ChartProdukt.Legends.Add(Legend6)
         resources.ApplyResources(Me.ChartProdukt, "ChartProdukt")
         Me.ChartProdukt.Name = "ChartProdukt"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Blodposer"
-        Me.ChartProdukt.Series.Add(Series2)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Legend = "Legend1"
+        Series6.Name = "Blodposer"
+        Me.ChartProdukt.Series.Add(Series6)
         '
         'ToolTip1
         '
@@ -1825,6 +1838,13 @@ Partial Class Blodbane
         'Timer1
         '
         Me.Timer1.Interval = 2000
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Blodbane_v1._0.My.Resources.Resources.hjerte1
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.TabStop = False
         '
         'Blodbane
         '
@@ -1864,6 +1884,7 @@ Partial Class Blodbane
         Me.PanelAnsatt.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         CType(Me.nudResRødeBlodl, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1904,6 +1925,7 @@ Partial Class Blodbane
         Me.GroupBox8.ResumeLayout(False)
         CType(Me.ChartLegemer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartProdukt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2140,4 +2162,6 @@ Partial Class Blodbane
     Friend WithEvents Button1 As Button
     Friend WithEvents lblNyInnkallingVelgTime As Label
     Friend WithEvents lBxNyInnkallingKlokkeslett As ListBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
