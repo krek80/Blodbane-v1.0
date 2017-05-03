@@ -1,5 +1,4 @@
-﻿'Imports System.ComponentModel
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Globalization
 Public Class Blodbane
     Const dagerFørNyInnkalling As Integer = 70
@@ -1692,6 +1691,14 @@ Public Class Blodbane
 
         'Forrige spm
         SPMnr = SPMnr - 1
+        If erklæringSvar(SPMnr) = 2 Then
+            rBtnEgenerklJa.Checked = True
+        ElseIf erklæringSvar(SPMnr) = 1 Then
+            rBtnEgenerklNei.Checked = True
+        Else
+            rBtnEgenerklNei.Checked = False
+            rBtnEgenerklJa.Checked = False
+        End If
         spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
         For i = sisteindex + 1 To 1 Step -1
             If spmID < 100 Then
@@ -1712,8 +1719,6 @@ Public Class Blodbane
         SPMnrPresentert = SPMnrPresentert - 1
         lblEgenerklSpmTekst.Text = spmText
         lblEgenerklSpmNr.Text = $"Spørsmål {SPMnrPresentert + 1}"
-        rBtnEgenerklJa.Checked = False
-        rBtnEgenerklNei.Checked = False
         btnEgenerklNesteSpm.Enabled = True
         If SPMnr <= 0 Then
             btnEgenerklForrigeSpm.Enabled = False
@@ -1729,7 +1734,7 @@ Public Class Blodbane
         Jasvar = ""
 
         For i = 0 To siste - 1
-            If erklæringSvar(i) = 1 Then
+            If erklæringSvar(i) = 2 Then
                 Jasvar = Jasvar & i & ","
             End If
         Next
@@ -1773,9 +1778,9 @@ Public Class Blodbane
             Exit Sub
         End If
         If rBtnEgenerklJa.Checked Then
-            erklæringSvar(SPMnr) = 1
+            erklæringSvar(SPMnr) = 2
         Else
-            erklæringSvar(SPMnr) = 0
+            erklæringSvar(SPMnr) = 1
         End If
 
         'Neste spm
@@ -1786,6 +1791,14 @@ Public Class Blodbane
             Exit Sub
         End If
         SPMnr = SPMnr + 1
+        If erklæringSvar(SPMnr) = 2 Then
+            rBtnEgenerklJa.Checked = True
+        ElseIf erklæringSvar(SPMnr) = 1 Then
+            rBtnEgenerklNei.Checked = True
+        Else
+            rBtnEgenerklNei.Checked = False
+            rBtnEgenerklJa.Checked = False
+        End If
         spmID = Erklæringspørsmål.Rows(SPMnr).Item("Nr")
         For i = 1 To (sisteindex - SPMnr) + 1
             If spmID < 100 Then
@@ -1806,8 +1819,6 @@ Public Class Blodbane
         SPMnrPresentert = SPMnrPresentert + 1
         lblEgenerklSpmTekst.Text = spmText
         lblEgenerklSpmNr.Text = $"Spørsmål {SPMnrPresentert + 1}"
-        rBtnEgenerklJa.Checked = False
-        rBtnEgenerklNei.Checked = False
         btnEgenerklForrigeSpm.Enabled = True
     End Sub
 
