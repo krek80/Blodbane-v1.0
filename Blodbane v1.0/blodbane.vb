@@ -1244,6 +1244,11 @@ Public Class Blodbane
 
     'Åpne blodlager
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
+        oppdaterBodlager()
+    End Sub
+
+    'Oppdater blodlager
+    Private Sub oppdaterBodlager()
         Dim B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma As Integer
         Dim blodlager As New DataTable
         Dim kritiskNiva As Integer = 10     'Hardkodet definisjon av kritisk nivå
@@ -1576,16 +1581,33 @@ Public Class Blodbane
             j = 1
             If nud(i).value > 0 Then
                 For Each rad In blodlager.Rows
-                    If (i < 2) And (rad("statusid") = 1) Then
-                        j = j + 1
-                        løpenr = rad("lopenr")
-                        streng = $"UPDATE blodprodukt Set `statusid` = 2 WHERE `lopenr` = {løpenr}"
-                        MsgBox(streng)
-                    ElseIf (i > 1) And (rad("statusid") = 1) And (rad("produkttypeid") = 1) And (rad("blodtype") = Btyper(i)) Then
-                        j = j + j
-                        løpenr = rad("løpenr")
-                        streng = $"UPDATE blodprodukt Set `statusid` = 2 WHERE `lopenr` = {løpenr}"
-                        MsgBox(streng)
+                    If (i = 1) And (rad("statusid") = 1) And (rad("produkttypeid") = 3) Then 'Plasma
+                        If j <= nud(i).value Then
+                            j = j + 1
+                            løpenr = rad("lopenr")
+                            Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `lopenr` = {løpenr}", tilkobling)
+                            sqlSpørring2.ExecuteNonQuery()
+                        Else
+                            Exit For
+                        End If
+                    ElseIf (i = 0) And (rad("statusid") = 1) And (rad("produkttypeid") = 2) Then 'Blodplater
+                        If j <= nud(i).value Then
+                            j = j + 1
+                            løpenr = rad("lopenr")
+                            Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `lopenr` = {løpenr}", tilkobling)
+                            sqlSpørring2.ExecuteNonQuery()
+                        Else
+                            Exit For
+                        End If
+                    ElseIf (i >= 2) And (rad("statusid") = 1) And (rad("produkttypeid") = 1) And (rad("blodtype") = Btyper(i)) Then
+                        If j <= nud(i).value Then
+                            j = j + j
+                            løpenr = rad("lopenr")
+                            Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt SET `statusid` = 2 WHERE `lopenr` = {løpenr}", tilkobling)
+                            sqlSpørring2.ExecuteNonQuery()
+                        Else
+                            Exit For
+                        End If
                     End If
                 Next
             End If
@@ -1593,6 +1615,8 @@ Public Class Blodbane
         For i = 0 To 9
             nud(i).value = 0
         Next
+        tilkobling.Close()
+        oppdaterBodlager()
         MsgBox("Uttak registrert")
     End Sub
 
