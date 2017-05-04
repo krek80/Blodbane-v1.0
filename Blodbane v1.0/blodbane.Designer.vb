@@ -24,12 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -232,7 +232,7 @@ Partial Class Blodbane
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtUttakBlodAnsatt = New System.Windows.Forms.TextBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.BttnRegUttakBlod = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -1637,7 +1637,7 @@ Partial Class Blodbane
         '
         'GroupBox14
         '
-        Me.GroupBox14.Controls.Add(Me.TextBox3)
+        Me.GroupBox14.Controls.Add(Me.txtUttakBlodAnsatt)
         Me.GroupBox14.Controls.Add(Me.Label39)
         Me.GroupBox14.Controls.Add(Me.BttnRegUttakBlod)
         Me.GroupBox14.Controls.Add(Me.GroupBox2)
@@ -1646,11 +1646,11 @@ Partial Class Blodbane
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.TabStop = False
         '
-        'TextBox3
+        'txtUttakBlodAnsatt
         '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.InactiveCaption
-        resources.ApplyResources(Me.TextBox3, "TextBox3")
-        Me.TextBox3.Name = "TextBox3"
+        Me.txtUttakBlodAnsatt.BackColor = System.Drawing.SystemColors.InactiveCaption
+        resources.ApplyResources(Me.txtUttakBlodAnsatt, "txtUttakBlodAnsatt")
+        Me.txtUttakBlodAnsatt.Name = "txtUttakBlodAnsatt"
         '
         'Label39
         '
@@ -1824,29 +1824,29 @@ Partial Class Blodbane
         '
         'ChartLegemer
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.ChartLegemer.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.ChartLegemer.Legends.Add(Legend5)
+        ChartArea3.Name = "ChartArea1"
+        Me.ChartLegemer.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.ChartLegemer.Legends.Add(Legend3)
         resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
         Me.ChartLegemer.Name = "ChartLegemer"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Blodlegemer"
-        Me.ChartLegemer.Series.Add(Series5)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Blodlegemer"
+        Me.ChartLegemer.Series.Add(Series3)
         '
         'ChartProdukt
         '
-        ChartArea6.Name = "ChartArea1"
-        Me.ChartProdukt.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.ChartProdukt.Legends.Add(Legend6)
+        ChartArea4.Name = "ChartArea1"
+        Me.ChartProdukt.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.ChartProdukt.Legends.Add(Legend4)
         resources.ApplyResources(Me.ChartProdukt, "ChartProdukt")
         Me.ChartProdukt.Name = "ChartProdukt"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Blodposer"
-        Me.ChartProdukt.Series.Add(Series6)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Blodposer"
+        Me.ChartProdukt.Series.Add(Series4)
         '
         'ToolTip1
         '
@@ -1867,9 +1867,9 @@ Partial Class Blodbane
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.PanelPåmelding)
         Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
+        Me.Controls.Add(Me.PanelPåmelding)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
@@ -2165,7 +2165,7 @@ Partial Class Blodbane
     Friend WithEvents Label32 As Label
     Friend WithEvents nudUttak0p As NumericUpDown
     Friend WithEvents Label31 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtUttakBlodAnsatt As TextBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label40 As Label
     Friend WithEvents lBxNyBGInnkalling As ListBox

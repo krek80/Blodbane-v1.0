@@ -1245,6 +1245,7 @@ Public Class Blodbane
     'Åpne blodlager
     Private Sub TabPage2_Enter(sender As Object, e As EventArgs) Handles TabPage2.Enter
         oppdaterBodlager()
+        txtUttakBlodAnsatt.Text = ansattObj.Epost1
     End Sub
 
     'Oppdater blodlager
