@@ -32,9 +32,7 @@
             MsgBox("Denne kombinasjonen av epost og passord eksisterer ikke", vbInformation)
             Exit Sub
         End If
-        Blodbane.påloggetAnsatt = pålogget
-        Blodbane.påloggetAepost = påloggetEpost
-        Blodbane.lblVelkommen.Text = $"Velkommen {pålogget}"
+        Blodbane.lblVelkommen.Text = $"Velkommen {Blodbane.ansattObj.Fornavn1}"
     End Sub
 
     Private Sub pålogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -32,12 +32,9 @@ Partial Class Blodbane
         Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LagreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoggPåansattToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoggAvToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AvsluttToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InstillingerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LagreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtBgInn_Land = New System.Windows.Forms.TextBox()
@@ -187,11 +184,8 @@ Partial Class Blodbane
         Me.gpBxHelseKontroll = New System.Windows.Forms.GroupBox()
         Me.btnHKtrlIntProfGjgått = New System.Windows.Forms.Button()
         Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
-        Me.rBtnHKtrlIkkeGodkjent = New System.Windows.Forms.RadioButton()
         Me.Label110 = New System.Windows.Forms.Label()
-        Me.rBtnHKtrlGodkjent = New System.Windows.Forms.RadioButton()
         Me.rTxtHKtrlKommentar = New System.Windows.Forms.RichTextBox()
-        Me.Label106 = New System.Windows.Forms.Label()
         Me.txtHKtrlEKDatoGjennomg = New System.Windows.Forms.TextBox()
         Me.Label101 = New System.Windows.Forms.Label()
         Me.txtHKtrlGjennomgAv = New System.Windows.Forms.TextBox()
@@ -263,8 +257,10 @@ Partial Class Blodbane
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.ChartLegemer = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.cbxHKblodtype = New System.Windows.Forms.ComboBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -319,19 +315,14 @@ Partial Class Blodbane
         '
         resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilToolStripMenuItem, Me.InstillingerToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilToolStripMenuItem})
         Me.MenuStrip1.Name = "MenuStrip1"
         '
         'FilToolStripMenuItem
         '
-        Me.FilToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LagreToolStripMenuItem, Me.LoggPåansattToolStripMenuItem, Me.LoggAvToolStripMenuItem, Me.AvsluttToolStripMenuItem})
+        Me.FilToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoggPåansattToolStripMenuItem, Me.LoggAvToolStripMenuItem, Me.AvsluttToolStripMenuItem})
         Me.FilToolStripMenuItem.Name = "FilToolStripMenuItem"
         resources.ApplyResources(Me.FilToolStripMenuItem, "FilToolStripMenuItem")
-        '
-        'LagreToolStripMenuItem
-        '
-        Me.LagreToolStripMenuItem.Name = "LagreToolStripMenuItem"
-        resources.ApplyResources(Me.LagreToolStripMenuItem, "LagreToolStripMenuItem")
         '
         'LoggPåansattToolStripMenuItem
         '
@@ -347,17 +338,6 @@ Partial Class Blodbane
         '
         Me.AvsluttToolStripMenuItem.Name = "AvsluttToolStripMenuItem"
         resources.ApplyResources(Me.AvsluttToolStripMenuItem, "AvsluttToolStripMenuItem")
-        '
-        'InstillingerToolStripMenuItem
-        '
-        Me.InstillingerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LagreToolStripMenuItem1})
-        Me.InstillingerToolStripMenuItem.Name = "InstillingerToolStripMenuItem"
-        resources.ApplyResources(Me.InstillingerToolStripMenuItem, "InstillingerToolStripMenuItem")
-        '
-        'LagreToolStripMenuItem1
-        '
-        Me.LagreToolStripMenuItem1.Name = "LagreToolStripMenuItem1"
-        resources.ApplyResources(Me.LagreToolStripMenuItem1, "LagreToolStripMenuItem1")
         '
         'Label1
         '
@@ -1320,6 +1300,8 @@ Partial Class Blodbane
         '
         'gpBxHelseKontroll
         '
+        Me.gpBxHelseKontroll.Controls.Add(Me.Label42)
+        Me.gpBxHelseKontroll.Controls.Add(Me.cbxHKblodtype)
         Me.gpBxHelseKontroll.Controls.Add(Me.btnHKtrlIntProfGjgått)
         Me.gpBxHelseKontroll.Controls.Add(Me.GroupBoxIntervju)
         Me.gpBxHelseKontroll.Controls.Add(Me.txtHKtrlEKDatoGjennomg)
@@ -1342,43 +1324,21 @@ Partial Class Blodbane
         '
         'GroupBoxIntervju
         '
-        Me.GroupBoxIntervju.Controls.Add(Me.rBtnHKtrlIkkeGodkjent)
         Me.GroupBoxIntervju.Controls.Add(Me.Label110)
-        Me.GroupBoxIntervju.Controls.Add(Me.rBtnHKtrlGodkjent)
         Me.GroupBoxIntervju.Controls.Add(Me.rTxtHKtrlKommentar)
-        Me.GroupBoxIntervju.Controls.Add(Me.Label106)
         resources.ApplyResources(Me.GroupBoxIntervju, "GroupBoxIntervju")
         Me.GroupBoxIntervju.Name = "GroupBoxIntervju"
         Me.GroupBoxIntervju.TabStop = False
-        '
-        'rBtnHKtrlIkkeGodkjent
-        '
-        resources.ApplyResources(Me.rBtnHKtrlIkkeGodkjent, "rBtnHKtrlIkkeGodkjent")
-        Me.rBtnHKtrlIkkeGodkjent.Checked = True
-        Me.rBtnHKtrlIkkeGodkjent.Name = "rBtnHKtrlIkkeGodkjent"
-        Me.rBtnHKtrlIkkeGodkjent.TabStop = True
-        Me.rBtnHKtrlIkkeGodkjent.UseVisualStyleBackColor = True
         '
         'Label110
         '
         resources.ApplyResources(Me.Label110, "Label110")
         Me.Label110.Name = "Label110"
         '
-        'rBtnHKtrlGodkjent
-        '
-        resources.ApplyResources(Me.rBtnHKtrlGodkjent, "rBtnHKtrlGodkjent")
-        Me.rBtnHKtrlGodkjent.Name = "rBtnHKtrlGodkjent"
-        Me.rBtnHKtrlGodkjent.UseVisualStyleBackColor = True
-        '
         'rTxtHKtrlKommentar
         '
         resources.ApplyResources(Me.rTxtHKtrlKommentar, "rTxtHKtrlKommentar")
         Me.rTxtHKtrlKommentar.Name = "rTxtHKtrlKommentar"
-        '
-        'Label106
-        '
-        resources.ApplyResources(Me.Label106, "Label106")
-        Me.Label106.Name = "Label106"
         '
         'txtHKtrlEKDatoGjennomg
         '
@@ -1796,6 +1756,7 @@ Partial Class Blodbane
         '
         'GroupBox13
         '
+        Me.GroupBox13.Controls.Add(Me.Button2)
         Me.GroupBox13.Controls.Add(Me.Label26)
         Me.GroupBox13.Controls.Add(Me.ListBoxKritiskBlod)
         resources.ApplyResources(Me.GroupBox13, "GroupBox13")
@@ -1848,17 +1809,27 @@ Partial Class Blodbane
         Series4.Name = "Blodposer"
         Me.ChartProdukt.Series.Add(Series4)
         '
-        'ToolTip1
-        '
-        Me.ToolTip1.AutoPopDelay = 5000
-        Me.ToolTip1.InitialDelay = 0
-        Me.ToolTip1.IsBalloon = True
-        Me.ToolTip1.ReshowDelay = 100
-        Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
         'Timer1
         '
         Me.Timer1.Interval = 2000
+        '
+        'cbxHKblodtype
+        '
+        Me.cbxHKblodtype.FormattingEnabled = True
+        Me.cbxHKblodtype.Items.AddRange(New Object() {resources.GetString("cbxHKblodtype.Items"), resources.GetString("cbxHKblodtype.Items1"), resources.GetString("cbxHKblodtype.Items2"), resources.GetString("cbxHKblodtype.Items3"), resources.GetString("cbxHKblodtype.Items4"), resources.GetString("cbxHKblodtype.Items5"), resources.GetString("cbxHKblodtype.Items6"), resources.GetString("cbxHKblodtype.Items7")})
+        resources.ApplyResources(Me.cbxHKblodtype, "cbxHKblodtype")
+        Me.cbxHKblodtype.Name = "cbxHKblodtype"
+        '
+        'Label42
+        '
+        resources.ApplyResources(Me.Label42, "Label42")
+        Me.Label42.Name = "Label42"
+        '
+        'Button2
+        '
+        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Name = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Blodbane
         '
@@ -1949,7 +1920,6 @@ Partial Class Blodbane
     Friend WithEvents FilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoggAvToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AvsluttToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InstillingerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents txtBgInn_fornavn As TextBox
@@ -2014,7 +1984,6 @@ Partial Class Blodbane
     Friend WithEvents TbCtrlBlodgiver As TabControl
     Friend WithEvents TabPagBGPersInfo As TabPage
     Friend WithEvents TabPage5 As TabPage
-    Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents CBxKontaktform As ComboBox
     Friend WithEvents GpBxSøk As GroupBox
     Friend WithEvents cBxSøkStatusbeskrivelse As ComboBox
@@ -2051,7 +2020,6 @@ Partial Class Blodbane
     Friend WithEvents BttnSøkGiver As Button
     Friend WithEvents rTxtValgtBlodgiverInternMrknd As RichTextBox
     Friend WithEvents Label112 As Label
-    Friend WithEvents LagreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents cBxValgtBlodgiverStatusTekst As ComboBox
     Friend WithEvents Label117 As Label
     Friend WithEvents rTxtValgBlodgiverTimepref As RichTextBox
@@ -2080,16 +2048,12 @@ Partial Class Blodbane
     Friend WithEvents Label89 As Label
     Friend WithEvents txtBgInn_passord1 As TextBox
     Friend WithEvents btnSøkTømSkjema As Button
-    Friend WithEvents LagreToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents btnHKtrlIntProfGjgått As Button
     Friend WithEvents txtHKtrlEKDatoGjennomg As TextBox
     Friend WithEvents Label101 As Label
     Friend WithEvents txtHKtrlGjennomgAv As TextBox
     Friend WithEvents Label97 As Label
-    Friend WithEvents rBtnHKtrlIkkeGodkjent As RadioButton
-    Friend WithEvents rBtnHKtrlGodkjent As RadioButton
     Friend WithEvents rTxtHKtrlKommentar As RichTextBox
-    Friend WithEvents Label106 As Label
     Friend WithEvents Label110 As Label
     Friend WithEvents GroupBoxIntervju As GroupBox
     Friend WithEvents txtBgInn_passord2 As TextBox
@@ -2180,4 +2144,7 @@ Partial Class Blodbane
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents txtVisBGInnkaltDato As TextBox
     Friend WithEvents lblVisBGInnkaltDato As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents cbxHKblodtype As ComboBox
+    Friend WithEvents Button2 As Button
 End Class

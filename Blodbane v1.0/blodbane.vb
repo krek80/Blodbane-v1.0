@@ -3,17 +3,14 @@ Imports System.Globalization
 Public Class Blodbane
     Const dagerFørNyInnkalling As Integer = 70
     Dim giversøk As New DataTable
-    Dim egenerklaering As New DataTable
     Dim innkalling As New DataTable
     Public ansatt As New DataTable
     Public statuser As New DataTable
     Dim Erklæringspørsmål As New DataTable
+    Dim interntabellRom As New DataTable
     Dim personstatusK As New Hashtable
     Dim personstatusB As New Hashtable
     Dim postnummer As New Hashtable
-    Dim blodgiverData As New Hashtable
-    Dim rommene As New ArrayList
-    Dim interntabellRom As New DataTable
     Dim antallRom As Integer
     Dim blodgiverObj As Blodgiver = New Blodgiver("", "", "", "", "", dummyDato, "", "", "", "", "", "", "", "", "")
     Dim timeavtaleObj As Romtime = New Romtime(dummyDato, "", 0)
@@ -23,9 +20,8 @@ Public Class Blodbane
     Dim dummyDato As Date = New Date(1800, 1, 1, 1, 1, 1)
     Dim dummyFodselsnr, aarstallet As String
     Dim dummyEpost As String = "@@.@...@..@."
-    Public påloggetAnsatt, påloggetAepost, påloggetBgiver As String
-    Dim egenerklæringID, SPMnr, SPMnrPresentert, erklæringSvar(100) As Integer
-    Dim presentertGiver, bgSøkParameter As String
+    Dim SPMnr, SPMnrPresentert, erklæringSvar(100) As Integer
+    Dim bgSøkParameter As String
     Dim tilkobling As New MySqlConnection("Server=mysql.stud.iie.ntnu.no;" & "Database=g_ioops_02;" & "Uid=g_ioops_02;" & "Pwd=LntL4Owl;")
 
     'Kjøres ved oppstart
@@ -137,12 +133,10 @@ Public Class Blodbane
         sql.Parameters.AddWithValue("@passordInn", txtAInn_passord.Text)
         Dim da As New MySqlDataAdapter
         Dim interntabell As New DataTable
-        'Objektet "da" utfører spørringen og legger resultatet i "interntabell"
         da.SelectCommand = sql
         da.Fill(interntabell)
         Dim rad() As DataRow
         Dim antallRader As Integer = interntabell.Rows.Count()
-
 
         If antallRader = 1 Then
             rad = interntabell.Select()
@@ -205,7 +199,6 @@ Public Class Blodbane
             PanelAnsatt.Hide()
             PanelGiver.Show()
             PanelGiver.BringToFront()
-            'TabPage5.Show()
             TbCtrlBlodgiver.SelectTab(0)
             btnEgenerklForrigeSpm.Enabled = False
             'Setter personinfo i tekstboksene
@@ -225,7 +218,6 @@ Public Class Blodbane
 
             CBxKontaktform.Text = blodgiverObj.Kontaktform1
             RTxtPrefInnkalling.Text = blodgiverObj.Timepreferanse1
-            påloggetBgiver = blodgiverObj.Postnr1
         Else
             MsgBox("Epostadressen eller passordet er feil.", MsgBoxStyle.Critical)
 
@@ -432,7 +424,6 @@ Public Class Blodbane
         sql2.Parameters.AddWithValue("@fnr", personnrInn)
         Dim da2 As New MySqlDataAdapter
         Dim interntabell2 As New DataTable
-        'Objektet "da" utfører spørringen og legger resultatet i "interntabell2"
         da2.SelectCommand = sql2
         da2.Fill(interntabell2)
 
@@ -496,7 +487,6 @@ Public Class Blodbane
         End If
 
         Return True
-
     End Function
 
     'Sjekker om to passord er like, ikke har mellomrom og er på minst 6 tegn
@@ -544,14 +534,12 @@ Public Class Blodbane
     Private Sub btnLagreNyttPassord_Click(sender As Object, e As EventArgs) Handles btnLagreNyttPassord.Click
         If txtGmlPassord.Text = blodgiverObj.Passord1 Then
             If passordSjekk(txtNyttPassord.Text, txtNyttPassordGjenta.Text) Then
-                'blodgiveren.Passord1 = txtNyttPassord.Text
                 Me.Cursor = Cursors.WaitCursor
                 tilkobling.Open()
                 Dim sqlSporring1 As String = $"SELECT kode FROM personstatus WHERE beskrivelse ='{txtPersDataGStatus.Text}'"
                 Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
                 Dim da1 As New MySqlDataAdapter
                 Dim interntabell1 As New DataTable
-                'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
                 da1.SelectCommand = sql1
                 da1.Fill(interntabell1)
                 tilkobling.Close()
@@ -585,8 +573,6 @@ Public Class Blodbane
         Else
             MsgBox("Du tastet inn feil gammelt passord. Prøv igjen!", MsgBoxStyle.Critical)
         End If
-
-
     End Sub
 
     'Lagrer ny personinformasjon satt av blodgiver
@@ -607,7 +593,6 @@ Public Class Blodbane
                 Dim sql1 As New MySqlCommand(sqlSporring1, tilkobling)
                 Dim da1 As New MySqlDataAdapter
                 Dim interntabell1 As New DataTable
-                'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
                 da1.SelectCommand = sql1
                 da1.Fill(interntabell1)
                 tilkobling.Close()
@@ -669,7 +654,6 @@ Public Class Blodbane
             LoggPåansattToolStripMenuItem.Visible = True
             LoggAvToolStripMenuItem.Visible = False
         End If
-
     End Sub
 
     'Knapp - Logg av ansatt
@@ -715,7 +699,6 @@ Public Class Blodbane
         TimeavtaleObjOppdat(0, dummyDato, "")
         EgenerklæringsObjOppdat(0, "", "", dummyDato, dummyDato, "", "")
         AnsattObjOppdat(0, "", "", "", "", "", "", "", "", 0)
-
     End Sub
 
     'Blodgiversøk knapp
@@ -750,7 +733,6 @@ Public Class Blodbane
         Else
             bgSøkParameter = " bl.blodtype = 'tulleblodtype'"
         End If
-        'MsgBox($"Søkedato: {dummyDato.AddDays(-1)}")
         bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
         Me.Cursor = Cursors.Default
         giverSøkTreff()
@@ -809,11 +791,6 @@ Public Class Blodbane
             sqlSpørring.Parameters.Add("datoParameter", MySqlDbType.DateTime).Value = søkeDato
             da.SelectCommand = sqlSpørring
             da.Fill(giversøk)
-
-            '   Dim sqlSpørring2 As New MySqlCommand("SELECT * FROM egenerklaering", tilkobling)
-            '  da.SelectCommand = sqlSpørring2
-            ' da.Fill(egenerklaering)
-
         Catch
             MsgBox("Får ikke kontakt med databasen")
             Exit Sub
@@ -831,7 +808,7 @@ Public Class Blodbane
         utput.text = personstatusB(kode)
     End Sub
 
-    'Endring av statusbeskirvelse - henter statuskode
+    'Endring av statusbeskrivelse - henter statuskode
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cBxSøkStatusbeskrivelse.SelectedIndexChanged
         Try
             statuskode(cBxSøkStatusbeskrivelse.SelectedItem, txtSøkStatuskode, cBxSøkStatusbeskrivelse)
@@ -860,11 +837,10 @@ Public Class Blodbane
 
     'Vis blodgiverdata til ansatt
     Private Sub visBG()
-        Dim index, i As Integer
-        Dim rad, rad1() As DataRow
-        Dim fNavn, eNavn, fnr, epost, adresse, postnummmer, tlf1, tlf2, intMerknad, preferanse, jasvar, erklaringLege As String
-        Dim status As Integer
-        Dim sistTapping, sistErklæring, gjennomgåttErklæring As Date
+        Dim index As Integer
+        Dim rad1() As DataRow
+        Dim jasvar As String
+        Dim sistErklæring As Date
         Dim dager As Long
         jasvar = ""
         sistErklæring = dummyDato
@@ -894,44 +870,6 @@ Public Class Blodbane
                            rad1(index)("telefon1"), rad1(index)("telefon2"), rad1(index)("statuskode"),
                            rad1(index)("fodselsnummer"), rad1(index)("blodtype"), rad1(index)("siste_blodtapping"),
                            rad1(index)("kontaktform"), rad1(index)("merknad"), rad1(index)("timepreferanse"))
-        '  For Each rad In giversøk.Rows
-        ' fNavn = rad("fornavn")
-        'eNavn = rad("etternavn")
-        'fnr = rad("fodselsnummer")
-        'epost = rad("epost")
-        'adresse = rad("adresse")
-        'tlf1 = rad("telefon1")
-        'tlf2 = rad("telefon2")
-        'postnummmer = rad("postnr")
-        'status = rad("statuskode")
-        'sistTapping = rad("siste_blodtapping")
-        'intMerknad = rad("merknad")
-        'preferanse = rad("timepreferanse")
-        'If i = index Then
-        'Exit For
-        'End If
-        'i = i + 1
-        'Next
-        'For Each rad In egenerklaering.Rows
-        'If rad("bgepost") = blodgiveren.Epost1 Then
-        'If rad("datotidbg") > sistErklæring Then
-        'sistErklæring = rad("datotidbg")
-        'jasvar = rad("skjema")
-        'egenerklæringID = rad("id")
-        'presentertGiver = rad("bgepost")
-        'If Not IsDBNull(rad("ansattepost")) Then
-        'erklaringLege = rad("ansattepost")
-        'Else
-        'erklaringLege = ""
-        'End If
-        'If Not IsDBNull(rad("datotidansatt")) Then
-        'gjennomgåttErklæring = rad("datotidansatt")
-        'Else
-        'gjennomgåttErklæring = Nothing
-        'End If
-        'End If
-        'End If
-        'Next
         tilkobling.Open()
         Dim sqlSpørring = $"SELECT * FROM egenerklaering WHERE bgepost='{blodgiverObj.Epost1}' ORDER BY datotidbg DESC"
         Dim sql1 As New MySqlCommand(sqlSpørring, tilkobling)
@@ -951,19 +889,6 @@ Public Class Blodbane
                                     rad2(0)("datotidbg"), rad2(0)("datotidansatt"),
                                     rad2(0)("skjema"), rad2(0)("kommentar"))
         End If
-        'jasvar = rad1(index)("skjema")
-        'egenerklæringID = rad1(index)("id")
-        'presentertGiver = blodgiveren.Epost1
-        'If Not IsDBNull(rad("ansattepost")) Then
-        ' erklaringLege = rad("ansattepost")
-        'Else
-        'erklaringLege = ""
-        'End If
-        'If Not IsDBNull(rad("datotidansatt")) Then
-        'gjennomgåttErklæring = rad("datotidansatt")
-        'Else
-        'gjennomgåttErklæring = Nothing
-        'End If
         GroupBoxIntervju.Visible = False
 
         dager = DateDiff(DateInterval.DayOfYear, blodgiverObj.Siste_blodtapping1, Today)
@@ -1026,7 +951,6 @@ Public Class Blodbane
             MsgBox($"{blodgiverObj.Fornavn1} {blodgiverObj.Etternavn1}, epostadresse {blodgiverObj.Epost1}, 
                 har ikke fylt ut noen egenerklæring ennå.", MsgBoxStyle.Exclamation)
         End If
-
     End Sub
 
     'Utleder Jasvar og presenterer i Listebox i giversøk
@@ -1162,7 +1086,6 @@ Public Class Blodbane
         Else
             If Weekday(DTPickerNyInnkalling.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DTPickerNyInnkalling.Value) Then
                 MsgBox("Blodbanken er stengt denne dagen. Velg en en ny dag.", MsgBoxStyle.Critical)
-                'DateTimePickerNyTime.Value = CDate(TxtNesteInnkalling.Text)
             Else
                 lBxNyInnkallingKlokkeslett.Items.Clear()
                 lblNyInnkallingVelgTime.Text = $"Velg en ledig time {DTPickerNyInnkalling.Text}"
@@ -1201,15 +1124,12 @@ Public Class Blodbane
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         Dim rad1, radRom As DataRow
-
-        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         tilkobling.Close()
         Me.Cursor = Cursors.Default
 
         Dim antallLedigeRom As Integer = antallRom - interntabell1.Rows.Count
-        'MsgBox($"Antall rom totalt: {antallRom}. Antall rader i spørringsresultat: {interntabell1.Rows.Count}")
         If antallLedigeRom = 0 Then
             MsgBox("Dessverre var ikke den valgte timen ledig likevel. Prøv en annen time.")
         Else
@@ -1239,7 +1159,6 @@ Public Class Blodbane
             btnNyBGInnkalling.Enabled = False
             MsgBox($"Ny time ble satt for {blodgiverObj.Fornavn1} {blodgiverObj.Etternavn1} {timeavtaleObj.Datotid1}")
         End If
-
     End Sub
 
     'Åpne blodlager
@@ -1386,7 +1305,6 @@ Public Class Blodbane
 
     'Henter ledige timer for valgt dato
     Private Sub hentLedigeTimer(ByVal aktuelldato As DateTime)
-
         Dim aktuelldatopluss1 = aktuelldato.AddDays(1)
         tilkobling.Open()
 
@@ -1400,7 +1318,6 @@ Public Class Blodbane
         Dim opptatt As Boolean = False
         Dim raddato1 As DateTime
         Dim radnr As Integer
-        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         tilkobling.Close()
@@ -1411,7 +1328,6 @@ Public Class Blodbane
             radnr = raddato1.Hour
             fulltimetabell.RemoveAt(radnr - 8)
         Next
-
     End Sub
 
     'Resetter fulltimetabellen
@@ -1428,7 +1344,7 @@ Public Class Blodbane
 
     'Kaller subrutinen "hentLedigeTimer", som plukker ut ledige timer når dato blir valgt.
     Private Sub DateTimePickerNyTime_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerNyTime.ValueChanged
-        If (DateTimePickerNyTime.Value - CDate(blodgiverData("siste_blodtapping"))).TotalDays < 90 Then
+        If (DateTimePickerNyTime.Value - CDate(blodgiverObj.Siste_blodtapping1)).TotalDays < 90 Then
             MsgBox("Det må være minst 90 dager siden siste blodtapping. Velg en ny dato.", MsgBoxStyle.Critical)
         Else
             If Weekday(DateTimePickerNyTime.Value, FirstDayOfWeek.Monday) > 5 Or fridag(DateTimePickerNyTime.Value) Then
@@ -1443,7 +1359,6 @@ Public Class Blodbane
                 Next
                 BtnBekreftEndretTime.Enabled = False
             End If
-
         End If
     End Sub
 
@@ -1474,72 +1389,24 @@ Public Class Blodbane
         Dim m As Integer
         Dim n As Integer
         Dim p As Integer
-
         If Year < 1583 Then
-
             MsgBox("Årstallet er feil.")
             Return Nothing
         Else
-
-            ' Step 1: Divide the year by 19 and store the
-            ' remainder in variable A.  Example: If the year
-            ' is 2000, then A is initialized to 5.
-
             a = Year Mod 19
-
-            ' Step 2: Divide the year by 100.  Store the integer
-            ' result in B and the remainder in C.
-
             b = Year \ 100
             c = Year Mod 100
-
-            ' Step 3: Divide B (calculated above).  Store the
-            ' integer result in D and the remainder in E.
-
             d = b \ 4
             e = b Mod 4
-
-            ' Step 4: Divide (b+8)/25 and store the integer
-            ' portion of the result in F.
-
             f = (b + 8) \ 25
-
-            ' Step 5: Divide (b-f+1)/3 and store the integer
-            ' portion of the result in G.
-
             g = (b - f + 1) \ 3
-
-            ' Step 6: Divide (19a+b-d-g+15)/30 and store the
-            ' remainder of the result in H.
-
             h = (19 * a + b - d - g + 15) Mod 30
-
-            ' Step 7: Divide C by 4.  Store the integer result
-            ' in I and the remainder in K.
-
             i = c \ 4
             k = c Mod 4
-
-            ' Step 8: Divide (32+2e+2i-h-k) by 7.  Store the
-            ' remainder of the result in L.
-
             l = (32 + 2 * e + 2 * i - h - k) Mod 7
-
-            ' Step 9: Divide (a + 11h + 22l) by 451 and
-            ' store the integer portion of the result in M.
-
             m = (a + 11 * h + 22 * l) \ 451
-
-            ' Step 10: Divide (h + l - 7m + 114) by 31.  Store
-            ' the integer portion of the result in N and the
-            ' remainder in P.
-
             n = (h + l - 7 * m + 114) \ 31
             p = (h + l - 7 * m + 114) Mod 31
-
-            ' At this point p+1 is the day on which Easter falls.
-            ' n is 3 for March or 4 for April.
-
             Return DateSerial(Year, n, p + 1)
         End If
     End Function
@@ -1623,7 +1490,6 @@ Public Class Blodbane
 
     'Bekrefter valg av nytt tidspunkt for neste innkalling og legger det inn i timeavtalen i databasen.
     Private Sub BtnBekreftEndretTime_Click(sender As Object, e As EventArgs) Handles BtnBekreftEndretTime.Click
-
         Dim time_DateTime As DateTime
         Try
             Dim provider As CultureInfo = CultureInfo.InvariantCulture
@@ -1642,14 +1508,11 @@ Public Class Blodbane
         Dim da1 As New MySqlDataAdapter
         Dim interntabell1 As New DataTable
         Dim rad1, radRom As DataRow
-
-        'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
         da1.SelectCommand = sql1
         da1.Fill(interntabell1)
         Me.Cursor = Cursors.Default
 
         Dim antallLedigeRom As Integer = antallRom - interntabell1.Rows.Count
-        'MsgBox($"Antall rom totalt: {antallRom}. Antall rader i spørringsresultat: {interntabell1.Rows.Count}")
         If antallLedigeRom = 0 Then
             MsgBox("Dessverre var ikke den valgte timen ledig likevel. Prøv en annen time.")
         Else
@@ -1673,7 +1536,6 @@ Public Class Blodbane
             Dim da2 As New MySqlDataAdapter
             Dim interntabell2 As New DataTable
             MsgBox($"Ny innkallingstime ble satt til {timeavtaleObj.Datotid1}")
-            'Objektet "da" utfører spørringen og legger resultatet i "interntabell1"
             da2.SelectCommand = sql2
             da2.Fill(interntabell2)
 
@@ -1827,6 +1689,11 @@ Public Class Blodbane
         TbCtrlBlodgiver.SelectTab(1)
     End Sub
 
+    'Hasteinnkallinger
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        MsgBox("Ønsket funksjon: Sender ut hasteinnkallinger for å dekke kritisk behov")
+    End Sub
+
     'Lagre svar i erklæring og vis neste spørsmål
     Private Sub btnNeste_Click(sender As Object, e As EventArgs) Handles btnEgenerklNesteSpm.Click
         Dim sisteindex, kjønn, spmID, i As Integer
@@ -1921,25 +1788,15 @@ Public Class Blodbane
 
     'Lagre intervju og eventuelle endringer i blodgiver
     Private Sub LagreIntervjuInfo_Click(sender As Object, e As EventArgs) Handles btnHKtrlIntProfGjgått.Click
-        Dim epost, adresse, preferanse, merknad, kommentar, spørring, spørring2 As String
-        Dim tlf1, tlf2, postnr, i, svar As Integer
+        Dim epost, spørring As String
+        Dim svar As Integer
         Dim statuskode As Integer = 0
         Dim da As New MySqlDataAdapter
 
-        'Skal eventuelle endringer i skjemaet lagres?
-        'If txtValgtBlodgiverAdresse.Text <> blodgiverObj.Adresse1 Or
-        'txtValgtBlodgiverEpost.Text <> blodgiverObj.Epost1 Or
-        'txtValgtBlodgiverPostnr.Text <> blodgiverObj.Postnr1 Or
-        'txtValgtBlodgiverTelefon1.Text <> blodgiverObj.Telefon11 Or
-        'txtValgtBlodgiverTelefon2.Text <> blodgiverObj.Telefon21 Or
-        'cBxValgtBlodgiverStatusTekst.Text <> blodgiverObj.Status1 Or
-        'rTxtValgBlodgiverTimepref.Text <> blodgiverObj.Timepreferanse1 Or
-        'rTxtValgtBlodgiverInternMrknd.Text <> blodgiverObj.Merknad1 Then
         If bgRegSkjemadata_OK(blodgiverObj.Fornavn1, blodgiverObj.Etternavn1, dummyFodselsnr,
                            postnummer(blodgiverObj.Postnr1), blodgiverObj.Telefon11, blodgiverObj.Telefon21, "tulleland",
                            dummyEpost, blodgiverObj.Passord1, blodgiverObj.Passord1, blodgiverObj.Kontaktform1) Then
 
-            'Sikker på at du ikke vil godkjenne/ikke godkjenne giver?
             statuskode = CInt(txtValgtBlodgiverStatusKode.Text)
             If personstatusB(statuskode) <> blodgiverObj.Status1 Then
 
@@ -1960,17 +1817,7 @@ Public Class Blodbane
                 MsgBox("Blodgiverstatusen er ikke endret.", MsgBoxStyle.Information)
             End If
 
-            'i = lBxSøkResultater.SelectedIndex
             epost = blodgiverObj.Epost1        '...for å holde på opprinnelig epost som trengs i WHERE-klausul lenger ned
-            'tlf1 = txtValgtBlodgiverTelefon1.Text
-            'tlf2 = txtValgtBlodgiverTelefon2.Text
-            'adresse = txtValgtBlodgiverAdresse.Text
-            'postnr = txtValgtBlodgiverPostnr.Text
-            'status = txtValgtBlodgiverStatusKode.Text
-            'preferanse = rTxtValgBlodgiverTimepref.Text
-            'merknad = rTxtValgtBlodgiverInternMrknd.Text
-            'kommentar = rTxtHKtrlKommentar.Text
-            'Oppdaterer tabell blodgiver og blodgiverobjektet først
             OppdaterBlodgiver(txtValgtBlodgiverEpost.Text, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
                                    blodgiverObj.Etternavn1, txtValgtBlodgiverAdresse.Text,
                                    txtValgtBlodgiverPostnr.Text, txtValgtBlodgiverTelefon1.Text,
@@ -1983,7 +1830,7 @@ Public Class Blodbane
             EgenerklæringsObjOppdat(egenerklaeringObj.Id1, blodgiverObj.Epost1, ansattObj.Epost1, egenerklaeringObj.DatotidBG1, Date.Now, egenerklaeringObj.Skjema1, rTxtHKtrlKommentar.Text)
 
             spørring = $"UPDATE egenerklaering SET ansattepost= '{ansattObj.Epost1}', datotidansatt=@datoen, kommentar= '{egenerklaeringObj.Kommentar1}' WHERE id= '{egenerklaeringObj.Id1}'"
-            'Try
+
             tilkobling.Open()
             'Oppdaterer tabellen egenerklaering
             If GroupBoxIntervju.Visible = True Then
@@ -1993,23 +1840,15 @@ Public Class Blodbane
             End If
 
             tilkobling.Close()
-            '    Catch
-            'MsgBox("Feil")
-            'End Try
             bgSøkParameter = $" bl.fodselsnummer = '{blodgiverObj.Fodselsnummer1}'"
             txtSøk.Text = blodgiverObj.Fodselsnummer1
             txtSøkStatuskode.Text = ""
             cBxSøkBlodtype.Text = ""
             bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
             giverSøkTreff()
-
         Else
             MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
         End If
-        ' End If
         MsgBox("Eventuelle endringer ble oppdatert i databasen.", MsgBoxStyle.Information)
-
     End Sub
-
-
 End Class
