@@ -24,12 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoggPåansattToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -1785,29 +1785,29 @@ Partial Class Blodbane
         '
         'ChartLegemer
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.ChartLegemer.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.ChartLegemer.Legends.Add(Legend3)
+        ChartArea5.Name = "ChartArea1"
+        Me.ChartLegemer.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.ChartLegemer.Legends.Add(Legend5)
         resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
         Me.ChartLegemer.Name = "ChartLegemer"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Blodlegemer"
-        Me.ChartLegemer.Series.Add(Series3)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Blodlegemer"
+        Me.ChartLegemer.Series.Add(Series5)
         '
         'ChartProdukt
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.ChartProdukt.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.ChartProdukt.Legends.Add(Legend4)
+        ChartArea6.Name = "ChartArea1"
+        Me.ChartProdukt.ChartAreas.Add(ChartArea6)
+        Legend6.Name = "Legend1"
+        Me.ChartProdukt.Legends.Add(Legend6)
         resources.ApplyResources(Me.ChartProdukt, "ChartProdukt")
         Me.ChartProdukt.Name = "ChartProdukt"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Blodposer"
-        Me.ChartProdukt.Series.Add(Series4)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Legend = "Legend1"
+        Series6.Name = "Blodposer"
+        Me.ChartProdukt.Series.Add(Series6)
         '
         'Timer1
         '
