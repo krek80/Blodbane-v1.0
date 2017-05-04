@@ -788,6 +788,9 @@ Public Class Blodbane
         txtHKtrlEKDatoGjennomg.Text = ""
         lbxHKtrlJasvar.Items.Clear()
         cbxHKblodtype.Text = ""
+        txtSøk.Text = ""
+        cBxSøkBlodtype.Text = ""
+        txtSøkStatuskode.Text = ""
     End Sub
 
     'SQL - søk frem blodgiver
@@ -1007,7 +1010,7 @@ Public Class Blodbane
     End Sub
 
     'Tøm giversøk
-    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles btnSøkTømSkjema.Click
+    Private Sub TømGiverSøk(sender As Object, e As EventArgs) Handles btnSøkTømSkjema.Click
         txtSøk.Text = ""
         cBxSøkBlodtype.Text = ""
         txtSøkStatuskode.Text = ""

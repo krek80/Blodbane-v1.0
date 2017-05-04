@@ -24,12 +24,12 @@ Partial Class Blodbane
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Blodbane))
-        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoggPåansattToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -182,6 +182,8 @@ Partial Class Blodbane
         Me.txtValgtBlodgiverNavn = New System.Windows.Forms.TextBox()
         Me.Label102 = New System.Windows.Forms.Label()
         Me.gpBxHelseKontroll = New System.Windows.Forms.GroupBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.cbxHKblodtype = New System.Windows.Forms.ComboBox()
         Me.btnHKtrlIntProfGjgått = New System.Windows.Forms.Button()
         Me.GroupBoxIntervju = New System.Windows.Forms.GroupBox()
         Me.Label110 = New System.Windows.Forms.Label()
@@ -252,15 +254,13 @@ Partial Class Blodbane
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.ListBoxKritiskBlod = New System.Windows.Forms.ListBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.ChartLegemer = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ChartProdukt = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.cbxHKblodtype = New System.Windows.Forms.ComboBox()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -1316,6 +1316,18 @@ Partial Class Blodbane
         Me.gpBxHelseKontroll.Name = "gpBxHelseKontroll"
         Me.gpBxHelseKontroll.TabStop = False
         '
+        'Label42
+        '
+        resources.ApplyResources(Me.Label42, "Label42")
+        Me.Label42.Name = "Label42"
+        '
+        'cbxHKblodtype
+        '
+        Me.cbxHKblodtype.FormattingEnabled = True
+        Me.cbxHKblodtype.Items.AddRange(New Object() {resources.GetString("cbxHKblodtype.Items"), resources.GetString("cbxHKblodtype.Items1"), resources.GetString("cbxHKblodtype.Items2"), resources.GetString("cbxHKblodtype.Items3"), resources.GetString("cbxHKblodtype.Items4"), resources.GetString("cbxHKblodtype.Items5"), resources.GetString("cbxHKblodtype.Items6"), resources.GetString("cbxHKblodtype.Items7")})
+        resources.ApplyResources(Me.cbxHKblodtype, "cbxHKblodtype")
+        Me.cbxHKblodtype.Name = "cbxHKblodtype"
+        '
         'btnHKtrlIntProfGjgått
         '
         resources.ApplyResources(Me.btnHKtrlIntProfGjgått, "btnHKtrlIntProfGjgått")
@@ -1763,6 +1775,12 @@ Partial Class Blodbane
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.TabStop = False
         '
+        'Button2
+        '
+        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Name = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Label26
         '
         resources.ApplyResources(Me.Label26, "Label26")
@@ -1785,51 +1803,33 @@ Partial Class Blodbane
         '
         'ChartLegemer
         '
-        ChartArea7.Name = "ChartArea1"
-        Me.ChartLegemer.ChartAreas.Add(ChartArea7)
-        Legend7.Name = "Legend1"
-        Me.ChartLegemer.Legends.Add(Legend7)
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartLegemer.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartLegemer.Legends.Add(Legend1)
         resources.ApplyResources(Me.ChartLegemer, "ChartLegemer")
         Me.ChartLegemer.Name = "ChartLegemer"
-        Series7.ChartArea = "ChartArea1"
-        Series7.Legend = "Legend1"
-        Series7.Name = "Blodlegemer"
-        Me.ChartLegemer.Series.Add(Series7)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Blodlegemer"
+        Me.ChartLegemer.Series.Add(Series1)
         '
         'ChartProdukt
         '
-        ChartArea8.Name = "ChartArea1"
-        Me.ChartProdukt.ChartAreas.Add(ChartArea8)
-        Legend8.Name = "Legend1"
-        Me.ChartProdukt.Legends.Add(Legend8)
+        ChartArea2.Name = "ChartArea1"
+        Me.ChartProdukt.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.ChartProdukt.Legends.Add(Legend2)
         resources.ApplyResources(Me.ChartProdukt, "ChartProdukt")
         Me.ChartProdukt.Name = "ChartProdukt"
-        Series8.ChartArea = "ChartArea1"
-        Series8.Legend = "Legend1"
-        Series8.Name = "Blodposer"
-        Me.ChartProdukt.Series.Add(Series8)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Blodposer"
+        Me.ChartProdukt.Series.Add(Series2)
         '
         'Timer1
         '
         Me.Timer1.Interval = 2000
-        '
-        'cbxHKblodtype
-        '
-        Me.cbxHKblodtype.FormattingEnabled = True
-        Me.cbxHKblodtype.Items.AddRange(New Object() {resources.GetString("cbxHKblodtype.Items"), resources.GetString("cbxHKblodtype.Items1"), resources.GetString("cbxHKblodtype.Items2"), resources.GetString("cbxHKblodtype.Items3"), resources.GetString("cbxHKblodtype.Items4"), resources.GetString("cbxHKblodtype.Items5"), resources.GetString("cbxHKblodtype.Items6"), resources.GetString("cbxHKblodtype.Items7")})
-        resources.ApplyResources(Me.cbxHKblodtype, "cbxHKblodtype")
-        Me.cbxHKblodtype.Name = "cbxHKblodtype"
-        '
-        'Label42
-        '
-        resources.ApplyResources(Me.Label42, "Label42")
-        Me.Label42.Name = "Label42"
-        '
-        'Button2
-        '
-        resources.ApplyResources(Me.Button2, "Button2")
-        Me.Button2.Name = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Blodbane
         '
@@ -1838,9 +1838,9 @@ Partial Class Blodbane
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PanelAnsatt)
         Me.Controls.Add(Me.PanelGiver)
         Me.Controls.Add(Me.PanelPåmelding)
-        Me.Controls.Add(Me.PanelAnsatt)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Blodbane"
