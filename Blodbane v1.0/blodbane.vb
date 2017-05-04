@@ -199,7 +199,11 @@ Public Class Blodbane
             PanelAnsatt.Hide()
             PanelGiver.Show()
             PanelGiver.BringToFront()
+            TbCtrlBlodgiver.TabPages(0).Enabled = True
             TbCtrlBlodgiver.SelectTab(0)
+            rBtnEgenerklNei.Checked = False
+            rBtnEgenerklJa.Checked = False
+            btnEgenerklNesteSpm.Enabled = True
             btnEgenerklForrigeSpm.Enabled = False
             'Setter personinfo i tekstboksene
             txtPersDataNavn.Text = $"{blodgiverObj.Fornavn1} {blodgiverObj.Etternavn1}"
@@ -1170,6 +1174,7 @@ Public Class Blodbane
     'Oppdater blodlager
     Private Sub oppdaterBodlager()
         Dim B_legemer0p, B_legemer0m, B_legemerAp, B_legemerAm, B_legemerABp, B_legemerABm, B_legemerBp, B_legemerBm, B_plater, B_plasma As Integer
+        Dim kastet As String = ""
         Dim blodlager As New DataTable
         Dim kritiskNiva As Integer = 10     'Hardkodet definisjon av kritisk nivå
 
@@ -1187,11 +1192,14 @@ Public Class Blodbane
             If (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 35) And (rad("produkttypeid") = "1") Then
                 Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt Set `statusid` = 3 WHERE `timeid` = {rad("timeid")} And `produkttypeid` = 1", tilkobling)
                 sqlSpørring2.ExecuteNonQuery()
+                kastet = kastet + $"{(rad("lopenr"))}, "
             ElseIf (DateDiff(DateInterval.DayOfYear, rad("datotid"), Today) > 7) And (rad("produkttypeid") = "2") Then
                 Dim sqlSpørring2 As New MySqlCommand($"UPDATE blodprodukt Set `statusid` = 3 WHERE `timeid` = {rad("timeid")} And `produkttypeid` = 2", tilkobling)
                 sqlSpørring2.ExecuteNonQuery()
+                kastet = kastet + $"{(rad("lopenr"))}, "
             End If
         Next
+        MsgBox($"Blod med hyllenummer: {kastet} har fått status ''destruert'' og må kasserers")
         tilkobling.Close()
 
         'Tell opp gyldig beholdning
@@ -1592,6 +1600,8 @@ Public Class Blodbane
                 Next
             Else
                 MsgBox("Denne personen har ikke gitt blod i dag")
+                tilkobling.Close()
+                Exit Sub
             End If
             tilkobling.Close()
             nudResBlodplater.Value = 0
@@ -1687,6 +1697,17 @@ Public Class Blodbane
         End Try
         btnEgenerklSendInn.Enabled = False
         TbCtrlBlodgiver.SelectTab(1)
+        TbCtrlBlodgiver.TabPages(0).Enabled = False
+
+        'Nullstill
+        Jasvar = ""
+        SPMnr = 0
+        SPMnrPresentert = 0
+        For i = 0 To siste - 1
+            erklæringSvar(i) = 0
+        Next
+        lblEgenerklSpmTekst.Text = Erklæringspørsmål.Rows(0).Item("spoersmaal")
+        lblEgenerklSpmNr.Text = $"Spørsmål {SPMnr + 1}"
     End Sub
 
     'Hasteinnkallinger
