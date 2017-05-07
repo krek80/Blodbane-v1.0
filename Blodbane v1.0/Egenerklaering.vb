@@ -3,6 +3,16 @@
     Private bgEpost, ansattEpost, skjema, kommentar As String
     Private datotidBG, datotidAnsatt As Date
 
+    Public Sub New(id As Integer, bgEpost As String, ansattEpost As String, skjema As String, kommentar As String, datotidBG As Date, datotidAnsatt As Date)
+        Me.id = id
+        Me.bgEpost = bgEpost
+        Me.ansattEpost = ansattEpost
+        Me.skjema = skjema
+        Me.kommentar = kommentar
+        Me.datotidBG = datotidBG
+        Me.datotidAnsatt = datotidAnsatt
+    End Sub
+
     Public Property Id1 As Integer
         Get
             Return id
@@ -66,13 +76,4 @@
         End Set
     End Property
 
-    Public Sub New(id As Integer, bgEpost As String, ansattEpost As String, skjema As String, kommentar As String, datotidBG As Date, datotidAnsatt As Date)
-        Me.id = id
-        Me.bgEpost = bgEpost
-        Me.ansattEpost = ansattEpost
-        Me.skjema = skjema
-        Me.kommentar = kommentar
-        Me.datotidBG = datotidBG
-        Me.datotidAnsatt = datotidAnsatt
-    End Sub
 End Class
