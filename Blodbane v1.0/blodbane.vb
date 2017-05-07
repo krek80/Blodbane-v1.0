@@ -738,7 +738,7 @@ Public Class Blodbane
         Else
             bgSøkParameter = " bl.blodtype = 'tulleblodtype'"
         End If
-        bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
+        bgSøk(bgSøkParameter, Today.AddDays(1))
         Me.Cursor = Cursors.Default
         giverSøkTreff()
     End Sub
@@ -801,7 +801,7 @@ Public Class Blodbane
         giversøk.Clear()
         tilkobling.Open()
         Try
-            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE bl.siste_blodtapping > @datoParameter AND"
+            sqlStreng = "SELECT * FROM bruker br INNER JOIN blodgiver bl ON br.epost = bl.epost INNER JOIN personstatus ps ON ps.kode = br.statuskode WHERE bl.siste_blodtapping < @datoParameter AND"
             Dim sqlSpørring As New MySqlCommand($"{sqlStreng}{streng}", tilkobling)
             sqlSpørring.Parameters.Add("datoParameter", MySqlDbType.DateTime).Value = søkeDato
             da.SelectCommand = sqlSpørring
@@ -1055,7 +1055,7 @@ Public Class Blodbane
     'Søker opp blodgivere som ikke har gitt blod de siste "dagerFørNyInnkalling" dager.
     Private Sub SøkBlodgivereTilNyInnkalling()
         Dim sisteDato As Date = Date.Today.AddDays(-dagerFørNyInnkalling)
-        Dim delSøkeStreng As String = $" br.statuskode < '30' OR br.statuskode BETWEEN 40 AND 49 ORDER BY bl.siste_blodtapping"
+        Dim delSøkeStreng As String = $" br.statuskode < 30 OR br.statuskode BETWEEN 40 AND 49 ORDER BY bl.siste_blodtapping"
         bgSøk(delSøkeStreng, sisteDato)
         lBxNyBGInnkalling.Items.Clear()
         For Each rad In giversøk.Rows
@@ -1173,6 +1173,7 @@ Public Class Blodbane
                               blodgiverObj.Merknad1, blodgiverObj.Timepreferanse1)
             SøkBlodgivereTilNyInnkalling()
             btnNyBGInnkalling.Enabled = False
+            TabPage3_Enter(sender, EventArgs.Empty)
             MsgBox($"Ny time ble satt for {blodgiverObj.Fornavn1} {blodgiverObj.Etternavn1} {timeavtaleObj.Datotid1}")
         End If
     End Sub
@@ -1573,6 +1574,7 @@ Public Class Blodbane
         Dim antallProdukt(2) As Integer
         Dim tabell As New DataTable
         Dim da As New MySqlDataAdapter
+
         timeID = ""
         ansatt = cbxAnsattUtførtTapping.Text
         bPlater = nudResBlodplater.Value
@@ -1619,6 +1621,17 @@ Public Class Blodbane
             nudResBlodplater.Value = 0
             nudResPlasma.Value = 0
             nudResRødeBlodl.Value = 0
+            OppdaterBlodgiver(blodgiverObj.Epost1, blodgiverObj.Passord1, blodgiverObj.Fornavn1,
+                              blodgiverObj.Etternavn1, blodgiverObj.Adresse1, blodgiverObj.Postnr1,
+                              blodgiverObj.Telefon11, blodgiverObj.Telefon21, 20,
+                              blodgiverObj.Fodselsnummer1, blodgiverObj.Blodtype1, blodgiverObj.Siste_blodtapping1,
+                              blodgiverObj.Kontaktform1, blodgiverObj.Merknad1, blodgiverObj.Timepreferanse1)
+            bgSøkParameter = $" bl.fodselsnummer = '{blodgiverObj.Fodselsnummer1}'"
+            txtSøk.Text = blodgiverObj.Fodselsnummer1
+            txtSøkStatuskode.Text = ""
+            cBxSøkBlodtype.Text = ""
+            bgSøk(bgSøkParameter, Today.AddDays(1))
+            giverSøkTreff()
             MsgBox("Blodlager oppdatert")
         Catch ex As Exception
             tilkobling.Close()
@@ -1844,13 +1857,13 @@ Public Class Blodbane
                         Exit Sub
                     End If
                 Else
-                    MsgBox($"Blodgiverstatusen blir nå satt til {personstatusB(statuskode)}, statuskode {statuskode}", MsgBoxStyle.Information)
+                    MsgBox($"Blodgiverstatusen blir nå satt til {personstatusB(CStr(statuskode))}, statuskode {statuskode}", MsgBoxStyle.Information)
                 End If
             Else
                 MsgBox("Blodgiverstatusen er ikke endret.", MsgBoxStyle.Information)
             End If
             If b <> blodgiverObj.Blodtype1 Then
-                If b = "A+" Or b = "A-" Or b = "B+" Or b = "B-" Or b = "AB+" Or b = "AB-" Or b = "O+" Or b = "O-" Then
+                If b = "A+" Or b = "A-" Or b = "B+" Or b = "B-" Or b = "AB+" Or b = "AB-" Or b = "0+" Or b = "0-" Then
                     MsgBox($"Blodtypen blir nå satt til {b}.", MsgBoxStyle.Information)
                 Else
                     MsgBox("Innholdet i feltet for blodtype ble ikke gjenkjent. Husk å velge fra nedtrekksmenyen!",
@@ -1885,8 +1898,8 @@ Public Class Blodbane
                 txtSøk.Text = blodgiverObj.Fodselsnummer1
                 txtSøkStatuskode.Text = ""
                 cBxSøkBlodtype.Text = ""
-                bgSøk(bgSøkParameter, dummyDato.AddDays(-1))
-                giverSøkTreff()
+            bgSøk(bgSøkParameter, Today.AddDays(1))
+            giverSøkTreff()
             Else
                 MsgBox("Det er en eller flere feil i skjemaet.", MsgBoxStyle.Critical)
         End If

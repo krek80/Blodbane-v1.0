@@ -4626,10 +4626,10 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>B-</value>
   </data>
   <data name="cbxHKblodtype.Items4" xml:space="preserve">
-    <value>O+</value>
+    <value>0+</value>
   </data>
   <data name="cbxHKblodtype.Items5" xml:space="preserve">
-    <value>O-</value>
+    <value>0-</value>
   </data>
   <data name="cbxHKblodtype.Items6" xml:space="preserve">
     <value>AB+</value>
@@ -5109,10 +5109,10 @@ Vennligst besvar spørsmålene nedenfor ærlig og oppriktig under forutsetning a
     <value>B-</value>
   </data>
   <data name="cBxSøkBlodtype.Items4" xml:space="preserve">
-    <value>O+</value>
+    <value>0+</value>
   </data>
   <data name="cBxSøkBlodtype.Items5" xml:space="preserve">
-    <value>O-</value>
+    <value>0-</value>
   </data>
   <data name="cBxSøkBlodtype.Items6" xml:space="preserve">
     <value>AB+</value>
